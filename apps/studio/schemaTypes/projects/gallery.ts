@@ -1,9 +1,11 @@
-import { defineField, defineType } from 'sanity'
+import {Images} from 'lucide-react'
+import {defineField, defineType} from 'sanity'
 
 export const gallery = defineType({
   name: 'gallery',
   title: 'Gallery',
   type: 'document',
+  icon: Images,
   fields: [
     defineField({
       name: 'title',
@@ -14,13 +16,13 @@ export const gallery = defineType({
       name: 'images',
       title: 'Images',
       type: 'array',
-      options: { layout: 'grid' },
+      options: {layout: 'grid'},
       of: [
         defineField({
           name: 'image',
           title: 'Image',
           type: 'image',
-          options: { hotspot: true },
+          options: {hotspot: true},
           fields: [
             defineField({
               name: 'alt',

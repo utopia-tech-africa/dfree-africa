@@ -1,9 +1,11 @@
-import { defineField, defineType } from 'sanity'
+import {Calendar} from 'lucide-react'
+import {defineField, defineType} from 'sanity'
 
 export const year = defineType({
   name: 'year',
   title: 'Year',
   type: 'document',
+  icon: Calendar,
   fields: [
     defineField({
       name: 'year',
@@ -15,7 +17,7 @@ export const year = defineType({
       name: 'projects',
       title: 'Projects',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'project' }] }],
+      of: [{type: 'reference', to: [{type: 'project'}]}],
     }),
   ],
   preview: {
