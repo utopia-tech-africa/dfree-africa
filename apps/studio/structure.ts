@@ -20,16 +20,16 @@ export const structure: StructureResolver = (S) =>
         ),
 
       // ---------------- Blogs ----------------
-      S.listItem()
-        .title('Blogs')
-        .icon(Book)
-        .child(
-          S.list()
-            .title('Blogs')
-            .items([S.documentTypeListItem('blog').title('All Blogs')]),
-        ),
+      // S.listItem()
+      //   .title('Blogs')
+      //   .icon(Book)
+      //   .child(
+      //     S.list()
+      //       .title('Blogs')
+      //       .items([S.documentTypeListItem('blog').title('All Blogs')]),
+      //   ),
       // ---------------- Other ----------------
       ...S.documentTypeListItems().filter(
-        (id) => !['project', 'gallery', 'year', 'blog'].includes(id.getId() ?? ''),
+        (id) => !['project', 'gallery', 'year'].includes(id.getId() ?? ''),
       ),
     ])
