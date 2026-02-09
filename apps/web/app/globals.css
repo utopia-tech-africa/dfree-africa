@@ -20,4 +20,31 @@
 
   /* optional default */
   --color-secondary: var(--color-secondary-400);
+
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #e8e8e8;
+  --color-neutral-300: #d2d2d2;
+  --color-neutral-400: #bbbbbb;
+  --color-neutral-500: #a4a4a4;
+  --color-neutral-600: #8e8e8e;
+  --color-neutral-700: #777777;
+  --color-neutral-800: #606060;
+  --color-neutral-900: #4a4a4a;
+  --color-neutral-1000: #333333;
+
+
+  /* optional default */
+  --color-neutral: var(--color-neutral-100);
+
+
+  --color-tertiary-100: #eca9cb;
+  --color-tertiary-200: #e27eb1;
+  --color-tertiary-300: #d85397;
+  --color-tertiary-400: #ca2d7d;
+  --color-tertiary-500: #9f2463;
+  --color-tertiary-600: #741a48;
+  --color-tertiary-700: #440f2a;
+
+  /* optional default */
+  --color-tertiary: var(--color-tertiary-400);
 }
