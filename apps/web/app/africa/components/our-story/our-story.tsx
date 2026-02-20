@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import ComponentLayout from "../component-layout";
-import { Title } from "../title-and-subtitle/title";
 import { Volume2, VolumeX } from "lucide-react";
+import ComponentLayout from "@/components/component-layout";
+import { Title } from "@/components/title-and-subtitle/title";
 
 export const OurStory = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -18,7 +18,7 @@ export const OurStory = () => {
 
   return (
     <ComponentLayout>
-      <section className="flex flex-col gap-8">
+      <section className="mt-8 md:mt-10 lg:mt-[66px] flex flex-col gap-8">
         <div className="flex flex-col items-center gap-4 justify-center text-center">
           <Title text="our story" />
           <p className="font-montserrat text-base md:text-lg lg:text-[22px] font-bold leading-[120%]">

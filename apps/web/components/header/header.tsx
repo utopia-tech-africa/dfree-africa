@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -97,15 +97,41 @@ export const Header = () => {
   const [expandedMobileSection, setExpandedMobileSection] = useState<
     string | null
   >("About us");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   const toggleMobileSection = (label: string) => {
     setExpandedMobileSection((prev) => (prev === label ? null : label));
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-transparent">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-300",
+        isScrolled ? "bg-black/10 backdrop-blur-md" : "bg-transparent",
+      )}
+    >
       <ComponentLayout className="flex h-16 items-center justify-between md:h-[72px]">
         <div className="flex justify-between w-full">
           {/* Logo */}
@@ -201,7 +227,7 @@ export const Header = () => {
       {/* Mobile sidebar backdrop */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-neutral-1000/60 md:hidden"
+          className="fixed inset-0 z-9998 bg-neutral-1000/60 md:hidden"
           onClick={() => setMobileMenuOpen(false)}
           aria-hidden
         />
@@ -210,7 +236,7 @@ export const Header = () => {
       {/* Mobile sidebar */}
       <aside
         className={cn(
-          "fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm bg-white shadow-xl transition-transform duration-300 ease-out md:hidden",
+          "fixed top-0 right-0 z-9999 h-screen w-[80%] max-w-sm bg-white shadow-xl transition-transform duration-300 ease-out md:hidden",
           mobileMenuOpen
             ? "translate-x-0"
             : "translate-x-full pointer-events-none",
@@ -260,18 +286,27 @@ export const Header = () => {
                       {item.label}
                     </Link>
                   )}
-                  {item.subItems && isExpanded && (
-                    <div className="flex flex-col gap-1 pb-2">
-                      {item.subItems.map((subItem) => (
-                        <Link
-                          key={subItem.label}
-                          href={subItem.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="max-w-[208px] py-2 text-sm font-medium leading-tight text-neutral-900"
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
+                  {item.subItems && (
+                    <div
+                      className={cn(
+                        "grid transition-[grid-template-rows] duration-300 ease-out",
+                        isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                      )}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="flex flex-col gap-1 pb-2 pt-1">
+                          {item.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.label}
+                              href={subItem.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="max-w-[208px] py-2 text-sm font-medium leading-tight text-neutral-900"
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>

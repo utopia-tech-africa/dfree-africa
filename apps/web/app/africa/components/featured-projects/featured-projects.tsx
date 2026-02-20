@@ -14,8 +14,8 @@ export const FeaturedProjects = () => {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <ComponentLayout>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full py-20">
+    <ComponentLayout className="mt-[90px] md:mt-25 lg:mt-[180px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
         {/* LEFT COLUMN — Sticky Content */}
         <div className="lg:sticky lg:top-24 h-fit flex flex-col gap-2">
           <Title text="Projects" />
