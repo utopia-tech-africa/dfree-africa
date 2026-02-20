@@ -18,19 +18,19 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/) t
 
 ## Allowed Types
 
-| Type       | Use for                                      |
-| ---------- | -------------------------------------------- |
-| `feat`     | New feature                                  |
-| `fix`      | Bug fix                                      |
-| `docs`     | Documentation only                           |
-| `style`    | Formatting, whitespace (no code change)      |
+| Type       | Use for                                     |
+| ---------- | ------------------------------------------- |
+| `feat`     | New feature                                 |
+| `fix`      | Bug fix                                     |
+| `docs`     | Documentation only                          |
+| `style`    | Formatting, whitespace (no code change)     |
 | `refactor` | Code change that doesn't fix or add feature |
-| `perf`     | Performance improvement                      |
-| `test`     | Adding or updating tests                     |
-| `build`    | Build system or dependencies                 |
-| `ci`       | CI config changes                            |
-| `chore`    | Other maintenance tasks                      |
-| `revert`   | Reverting a previous commit                  |
+| `perf`     | Performance improvement                     |
+| `test`     | Adding or updating tests                    |
+| `build`    | Build system or dependencies                |
+| `ci`       | CI config changes                           |
+| `chore`    | Other maintenance tasks                     |
+| `revert`   | Reverting a previous commit                 |
 
 ## Examples
 
