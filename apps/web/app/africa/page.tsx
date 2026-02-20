@@ -1,10 +1,11 @@
 import React from "react";
-import { Hero } from "./components";
+import { ContinentalImpact, Hero } from "./components";
 
 const AfricaPage = () => {
   return (
     <div>
       <Hero />
+      <ContinentalImpact />
     </div>
   );
 };
