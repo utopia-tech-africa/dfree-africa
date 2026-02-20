@@ -33,16 +33,14 @@ export const Hero = () => {
 
       {/* Background image - desktop */}
       <div className="absolute inset-0 hidden md:block">
-        <div className="relative grid h-full w-full grid-cols-3 grid-rows-2 gap-px bg-neutral-1000">
-          <Image
-            src={AfricaHeroImg}
-            alt=""
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
-        </div>
+        <Image
+          src={AfricaHeroImg}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority
+        />
       </div>
 
       {/* Dark overlay */}
@@ -63,7 +61,8 @@ export const Hero = () => {
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
               "text-base",
-            )}>
+            )}
+          >
             {HERO_CONTENT.cta.label}
           </Link>
         </div>

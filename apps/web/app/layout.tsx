@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
+import { Header } from "@/components/header";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${poppins.variable} font-poppins bg-white antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
