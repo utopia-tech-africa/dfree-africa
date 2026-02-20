@@ -5,8 +5,8 @@ export const projects = [
       "We continue to provide ongoing support for Mad. Evelina Tshabalala and Queenmother Nana Dokua in the form of cash and material donations.",
     country: "South Africa",
     previewMedia: {
-      type: "image",
-      url: "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce",
+      type: "video",
+      url: "https://res.cloudinary.com/dhsfafapt/video/upload/v1771599711/Evelyn_Queen_vf1l1v.mp4",
     },
     featured: false,
   },
@@ -17,7 +17,7 @@ export const projects = [
     country: "Uganda",
     previewMedia: {
       type: "video",
-      url: "https://www.w3schools.com/html/mov_bbb.mp4",
+      url: "https://res.cloudinary.com/dhsfafapt/video/upload/v1771599802/Uganda_k6vf7a.mp4",
     },
     featured: true,
   },
@@ -27,8 +27,8 @@ export const projects = [
       "DFREE® Global Foundation aids the Kyebi School for the Deaf by establishing a vocational training center.",
     country: "Ghana",
     previewMedia: {
-      type: "image",
-      url: "https://images.unsplash.com/photo-1588072432836-e10032774350",
+      type: "video",
+      url: "https://res.cloudinary.com/dhsfafapt/video/upload/v1771599849/Training_pqivun.mp4",
     },
     featured: false,
   },
@@ -39,7 +39,7 @@ export const projects = [
     country: "Ghana",
     previewMedia: {
       type: "image",
-      url: "https://images.unsplash.com/photo-1580281657521-47a2bfc8a1c6",
+      url: "https://res.cloudinary.com/dhsfafapt/image/upload/v1771599900/8597c3823fda55626ff388b482c3381a8b580b24_f9rceb.jpg",
     },
     featured: true,
   },
@@ -50,7 +50,7 @@ export const projects = [
     country: "Ghana",
     previewMedia: {
       type: "video",
-      url: "https://www.w3schools.com/html/movie.mp4",
+      url: "https://res.cloudinary.com/dhsfafapt/video/upload/v1771599711/Evelyn_Queen_vf1l1v.mp4",
     },
     featured: false,
   },
@@ -61,7 +61,7 @@ export const projects = [
     country: "South Africa",
     previewMedia: {
       type: "image",
-      url: "https://images.unsplash.com/photo-1542810634-71277d95dcbb",
+      url: "https://res.cloudinary.com/dhsfafapt/image/upload/v1771599984/9438076180364ef657ac274782e95857a10b561f_p9ulnq.jpg",
     },
     featured: true,
   },
@@ -71,7 +71,7 @@ export const projects = [
     country: "Kenya",
     previewMedia: {
       type: "image",
-      url: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854",
+      url: "https://res.cloudinary.com/dhsfafapt/image/upload/v1771599900/8597c3823fda55626ff388b482c3381a8b580b24_f9rceb.jpg",
     },
     featured: true,
   },
@@ -80,8 +80,8 @@ export const projects = [
     description: "Training and mentorship programs for young leaders.",
     country: "Nigeria",
     previewMedia: {
-      type: "image",
-      url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+      type: "video",
+      url: "https://res.cloudinary.com/dhsfafapt/video/upload/v1771599849/Training_pqivun.mp4",
     },
     featured: false,
   },
