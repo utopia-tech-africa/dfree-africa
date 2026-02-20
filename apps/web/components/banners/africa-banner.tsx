@@ -11,12 +11,8 @@ export const AfricaBanner = ({ classname }: { classname?: string }) => {
       backgroundImage={AfricaBannerBg}
       title="Let’s create financial empowerment"
       description="By investing in education, clean water for a village, or skills training for the youth, you make a significant contribution to empowering whole generations to be independent and to have better quality of life."
-      button={{
-        label: "Learn how you can support",
-        onClick: () => {
-          console.log("Banner button clicked!");
-        },
-      }}
+      href="#"
+      label="Learn how you can support"
     />
   );
 };

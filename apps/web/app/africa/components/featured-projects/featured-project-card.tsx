@@ -15,7 +15,7 @@ interface ProjectCardProps {
   className?: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   country,
@@ -25,7 +25,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       className={cn(
-        "relative w-full max-w-140 h-130 rounded-lg overflow-hidden",
+        "relative w-full h-150 rounded-lg overflow-hidden",
         className,
       )}
     >
@@ -59,7 +59,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Content */}
       <div className="absolute bottom-0 z-10 p-6 flex flex-col gap-2 text-white h-[60%] justify-end">
-        <h3 className="font-bold text-xl font-montserrat tracking-wide leading-6">
+        <h3 className="font-bold text-4xl font-montserrat tracking-wide ">
           {title}
         </h3>
 
