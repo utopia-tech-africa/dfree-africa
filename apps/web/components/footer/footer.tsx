@@ -2,6 +2,7 @@ import { footerItems } from "@/constants/footer-items";
 import ComponentLayout from "../component-layout";
 import { DfreeLogoWhite } from "@/assets/svg";
 import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 
 const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
 
@@ -79,14 +80,19 @@ const Footer = () => {
               </p>
 
               <div className="flex items-center gap-3 md:gap-4 w-full">
-                <input
+                <Input
                   type="email"
                   placeholder="Enter email address"
-                  className="md:flex-1 border border-neutral-100 bg-transparent px-2 md:px-5 py-3 rounded-md md:rounded-full placeholder:text-neutral-300 placeholder:text-sm focus:outline-none
+                  className="w-fit md:flex-1 border border-neutral-100 bg-transparent px-2 md:px-5 py-6 rounded-[100px] placeholder:text-neutral-300 placeholder:text-sm focus:outline-none
                md:w-auto"
                 />
 
-                <Button variant={"secondary"}>Submit</Button>
+                <Button
+                  className="font-bold py-6 rouned-[100px]"
+                  variant={"secondary"}
+                >
+                  Submit
+                </Button>
               </div>
 
               <p className="text-xs text-neutral-200">
