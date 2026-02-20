@@ -1,15 +1,15 @@
 import { cn } from "@/lib/utils";
 
-type SubtitleProps = {
+type PageTitleProps = {
   text: string;
   className?: string;
 };
 
-export function Subtitle({ text, className }: SubtitleProps) {
+export function PageTitle({ text, className }: PageTitleProps) {
   return (
     <h2
       className={cn(
-        "text-[26px] sm:text-[32px] font-bold text-neutral-1000",
+        "text-[26px] sm:text-[38px] font-bold text-neutral-1000 font-montserrat",
         className,
       )}
     >

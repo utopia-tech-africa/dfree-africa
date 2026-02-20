@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: ["500"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${poppins.variable} font-poppins antialiased`}>
+        className={`${montserrat.variable} ${poppins.variable} font-poppins antialiased`}
+      >
         {children}
       </body>
     </html>
