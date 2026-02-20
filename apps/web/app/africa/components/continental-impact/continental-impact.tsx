@@ -10,6 +10,7 @@ import {
 } from "@/assets";
 import ComponentLayout from "@/components/component-layout";
 import { ContinentalImpactCard } from "./continental-impact-card";
+import { Title } from "@/components/title-and-subtitle/title";
 
 const CONTINENTAL_IMPACT = {
   label: "Continental",
@@ -79,9 +80,8 @@ export const ContinentalImpact = () => {
       <ComponentLayout className="relative z-10">
         {/* Header */}
         <div className="mb-6 lg:mb-12 text-center md:mb-8">
-          <p className="mb-1 md:mb-2 font-poppins text-sm font-medium uppercase tracking-wider text-tertiary-600">
-            {CONTINENTAL_IMPACT.label}
-          </p>
+          <Title text={CONTINENTAL_IMPACT.label} />
+
           <h2 className="font-montserrat mb-2 md:mb-4 text-[22px] font-bold leading-tight text-neutral-1000 md:text-[32px]">
             {CONTINENTAL_IMPACT.title}
           </h2>
