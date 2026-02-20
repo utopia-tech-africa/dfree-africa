@@ -32,7 +32,7 @@ export const FeaturedProjects = () => {
             href="/africa/projects"
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
-              "w-fit mt-2",
+              "w-fit mt-2 hidden lg:flex",
             )}
           >
             View all projects
@@ -45,6 +45,16 @@ export const FeaturedProjects = () => {
             <FeaturedProjectCard className="h-140" key={index} {...project} />
           ))}
         </div>
+
+        <Link
+          href="/africa/projects"
+          className={cn(
+            buttonVariants({ variant: "default", size: "lg" }),
+            "w-fit mt-2 lg:hidden mx-auto",
+          )}
+        >
+          View all projects
+        </Link>
       </div>
     </ComponentLayout>
   );
