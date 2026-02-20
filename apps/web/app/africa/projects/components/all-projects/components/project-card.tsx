@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   title: string;
@@ -11,6 +12,7 @@ interface ProjectCardProps {
     type: string;
     url: string;
   };
+  className?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -18,9 +20,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   country,
   previewMedia,
+  className,
 }) => {
   return (
-    <div className="relative w-full max-w-105 h-125 rounded-lg overflow-hidden">
+    <div
+      className={cn(
+        "relative w-full max-w-140 h-130 rounded-lg overflow-hidden",
+        className,
+      )}
+    >
       {/* Background Media */}
       {previewMedia.type === "image" ? (
         <Image
@@ -59,14 +67,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
 
-        <Button variant="ghost" className="w-fit mt-3 font-normal">
+        <Button
+          icon={<MdKeyboardDoubleArrowRight className="size-7" />}
+          variant="ghost"
+          className="w-fit mt-3 font-normal"
+          size={"lg"}
+        >
           Read more
-          <span className="relative flex items-center overflow-hidden w-6 h-6">
-            <span className="flex -translate-x-1/2 transition-transform duration-300 group-hover:translate-x-0">
-              <MdKeyboardDoubleArrowRight className="size-7" />
-              <MdKeyboardDoubleArrowRight className="size-7" />
-            </span>
-          </span>
         </Button>
       </div>
     </div>

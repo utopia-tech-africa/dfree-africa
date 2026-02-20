@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
@@ -9,19 +9,17 @@ interface BannerProps {
   backgroundImage: string | StaticImageData;
   title: string;
   description: string;
+  label: string;
   className?: string;
-  button: {
-    label: string;
-    href?: string;
-    onClick?: () => void;
-  };
+  href: string;
 }
 
 export const Banner: React.FC<BannerProps> = ({
   backgroundImage,
   title,
   description,
-  button,
+  label,
+  href,
   className,
 }) => {
   return (
@@ -50,16 +48,16 @@ export const Banner: React.FC<BannerProps> = ({
               {description}
             </p>
 
-            {/* Button */}
-            <div className="mt-3">
-              {button.href ? (
-                <Link href={button.href}>
-                  <Button>{button.label}</Button>
-                </Link>
-              ) : (
-                <Button onClick={button.onClick}>{button.label}</Button>
+            {/* CTA */}
+            <Link
+              href={href}
+              className={cn(
+                buttonVariants({ variant: "default", size: "lg" }),
+                "w-fit",
               )}
-            </div>
+            >
+              {label}
+            </Link>
           </div>
         </div>
       </div>
