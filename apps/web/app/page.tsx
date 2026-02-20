@@ -13,7 +13,7 @@ const Home = () => {
 
         <div className="relative z-10 flex flex-col items-center gap-6">
           <PageTitle
-            text="Sample Text For Page Titles"
+            text="Sample Text For Page Titles and More"
             className="text-center"
           />
           <Title text="Welcome to the Home Page" />
