@@ -18,7 +18,7 @@ const HERO_CONTENT = {
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-[600px] h-[90dvh] flex flex-col items-center justify-end overflow-hidden">
+    <section className="relative w-full min-h-[600px] h-dvh flex flex-col items-center justify-end overflow-hidden">
       {/* Background image - mobile */}
       <div className="absolute inset-0 md:hidden">
         <Image

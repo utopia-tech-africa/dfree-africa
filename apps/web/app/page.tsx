@@ -2,8 +2,17 @@ import { PageTitle } from "@/components/page-title/page-title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Button } from "@/components/ui/button";
+import { createMetadata } from "@/lib/seo";
 import { ArrowBigRight } from "lucide-react";
+import type { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = createMetadata({
+  title: "Home",
+  description:
+    "DFREE Africa - Empowering communities with financial freedom and sustainable development across the African continent.",
+  path: "/",
+});
 
 const Home = () => {
   return (
