@@ -412,12 +412,3 @@ export type FeaturedProjectsQueryResult = Array<{
     videoUrl: string | null;
   } | null;
 }>;
-
-// Query TypeMap
-import "@sanity/client";
-declare module "@sanity/client" {
-  interface SanityQueries {
-    '*[_type == "project"] | order(_createdAt desc) {\n  _id,\n  title,\n  description,\n  country,\n  featured,\n  "previewMedia": previewMedia {\n    type,\n    "imageRef": image.asset->,\n    "videoUrl": video.asset->url\n  }\n}': ProjectsQueryResult;
-    '*[_type == "project" && featured == true] | order(_createdAt desc) {\n  _id,\n  title,\n  description,\n  country,\n  featured,\n  "previewMedia": previewMedia {\n    type,\n    "imageRef": image.asset->,\n    "videoUrl": video.asset->url\n  }\n}': FeaturedProjectsQueryResult;
-  }
-}
