@@ -5,6 +5,7 @@ import { Title } from "@/components/title-and-subtitle/title";
 import { Button } from "@/components/ui/button";
 import { ArrowBigRight } from "lucide-react";
 import React from "react";
+import Pillars from "./components/pillars/pillars";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
         </div>
       </div>
 
+      <Pillars />
       <Footer />
     </>
   );

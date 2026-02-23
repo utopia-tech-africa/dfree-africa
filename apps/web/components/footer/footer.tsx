@@ -9,7 +9,7 @@ const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
 const Footer = () => {
   return (
     <ComponentLayout className="bg-primary-500 text-neutral-100">
-      <footer className="py-12 lg:py-20">
+      <footer className="py-12 lg:py-20 w-full">
         <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]">
           <div className="h-7.25 md:h-11.25 w-fit object-cover">
             <DfreeLogoWhite />
