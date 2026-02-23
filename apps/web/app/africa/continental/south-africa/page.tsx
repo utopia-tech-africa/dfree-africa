@@ -1,4 +1,4 @@
-import { SouthAfricaPageBg } from "@/assets";
+import { SouthAfricanFlag } from "@/assets";
 import { Hero, PageInfo } from "../components";
 import { SectionCard } from "../components/section-card";
 import { SectionCardProps } from "../components";
@@ -25,7 +25,7 @@ Financial constraints of participants due to the high rate of job losses in 2020
 const SouthAfricaPage = () => {
   return (
     <div className="flex flex-col gap-5 w-full">
-      <Hero bgImage={SouthAfricaPageBg} />
+      <Hero bgImage={SouthAfricanFlag} />
 
       <PageInfo
         mainTitle="DFREE® in South Africa"
