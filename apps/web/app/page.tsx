@@ -1,4 +1,3 @@
-import Footer from "@/components/footer/footer";
 import { PageTitle } from "@/components/page-title/page-title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { Title } from "@/components/title-and-subtitle/title";
@@ -34,7 +33,7 @@ const Home = () => {
       </div>
 
       <Pillars />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

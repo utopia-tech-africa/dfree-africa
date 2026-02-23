@@ -1,8 +1,10 @@
 "use client";
 
+import { useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import gsap from "gsap";
 
 type PillarCardProps = {
   pillar: string;
@@ -19,19 +21,58 @@ export const PillarCard = ({
   bgImage,
   href,
 }: PillarCardProps) => {
+  const imageWrapperRef = useRef<HTMLDivElement | null>(null);
+
+  const handleMouseEnter = (): void => {
+    if (!imageWrapperRef.current) return;
+
+    gsap.to(imageWrapperRef.current, {
+      scale: 1.05,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  };
+
+  const handleMouseLeave = (): void => {
+    if (!imageWrapperRef.current) return;
+
+    gsap.to(imageWrapperRef.current, {
+      scale: 1,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  };
+
   return (
-    <div className="relative h-164 w-full overflow-hidden object-cover">
-      <Image
-        src={bgImage}
-        alt={pillar}
-        className="h-full w-full object-cover"
-        priority
+    <div
+      className="relativew-full overflow-hidden"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div
+        ref={imageWrapperRef}
+        className="absolute  h-125  inset-0 will-change-transform"
+      >
+        <Image
+          src={bgImage}
+          alt={pillar}
+          fill
+          className="object-cover w-full h-full"
+          priority
+        />
+      </div>
+
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 67.14%)",
+        }}
       />
 
-      <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/20" />
-
+      {/* Logo */}
       {logo && (
-        <div className="absolute left-6 top-6 z-20 bg-white">
+        <div className="absolute left-6 top-6 z-20 bg-white p-2">
           <Image
             src={logo}
             alt={`${pillar} logo`}
@@ -40,7 +81,8 @@ export const PillarCard = ({
         </div>
       )}
 
-      <div className="absolute bottom-6 left-6 z-20 max-w-xl text-white md:bottom-10 md:left-10">
+      {/* Content */}
+      <div className="absolute bottom-10 left-10 z-20 max-w-xl text-white">
         <h3 className="mb-4 text-2xl font-semibold md:text-3xl">{pillar}</h3>
 
         <p className="mb-6 text-sm leading-relaxed text-white/90 md:text-base">
@@ -48,8 +90,8 @@ export const PillarCard = ({
         </p>
 
         <Link href={href}>
-          <Button size="lg" className="rounded-full px-6">
-            <span>Discover more →</span>
+          <Button size="lg" className="px-6 shadow-lg">
+            Discover more →
           </Button>
         </Link>
       </div>
