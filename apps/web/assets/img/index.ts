@@ -14,4 +14,8 @@ export {
   AfricaBannerBg,
   GhanaPageBg,
   SouthAfricaPageBg,
+  GhanaFlag,
+  SouthAfricanFlag,
+  LiberianFlag,
+  UgandanFlag,
 };
