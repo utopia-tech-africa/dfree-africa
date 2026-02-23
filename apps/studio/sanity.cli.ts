@@ -16,5 +16,6 @@ export default defineCliConfig({
     path: '../web/lib/sanity/**/*.{ts,tsx}',
     schema: 'schema.json',
     generates: '../web/lib/sanity/sanity.types.ts',
+    overloadClientMethods: false,
   },
 })
