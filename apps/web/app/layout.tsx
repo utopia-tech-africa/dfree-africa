@@ -1,8 +1,5 @@
-import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
-import { Header } from "@/components/header";
-import Footer from "@/components/footer/footer";
-import { createMetadata } from "@/lib/seo";
+import { Metadata } from "next";
+import { Montserrat, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -13,6 +10,11 @@ const montserrat = Montserrat({
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
+  weight: ["400", "500"],
+});
+const roboto = Poppins({
+  subsets: ["latin"],
+  variable: "--font-roboto",
   weight: ["400", "500"],
 });
 
@@ -31,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${poppins.variable} font-poppins bg-white antialiased`}
+        className={`${montserrat.variable} ${poppins.variable}  ${roboto.variable} font-poppins antialiased`}
       >
         <Header />
         {children}
