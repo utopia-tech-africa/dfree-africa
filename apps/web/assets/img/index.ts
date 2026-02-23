@@ -5,13 +5,13 @@ import SouthAfricanFlag from "./south-africa-flag.webp";
 import LiberianFlag from "./liberia-flag.webp";
 import UgandanFlag from "./uganda-flag.webp";
 import AfricaBannerBg from "./africa-banner-bg.webp";
+import GhanaPageBg from "./ghana-page-bg.webp";
+import SouthAfricaPageBg from "./south-africa-page-bg.webp";
 
 export {
   AfricaHeroImg,
   AfricaHeroMobileImg,
   AfricaBannerBg,
-  GhanaFlag,
-  SouthAfricanFlag,
-  LiberianFlag,
-  UgandanFlag,
+  GhanaPageBg,
+  SouthAfricaPageBg,
 };

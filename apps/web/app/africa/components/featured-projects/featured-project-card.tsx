@@ -54,7 +54,7 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Country Badge */}
       <div className="absolute top-4 right-4 z-10">
-        <Button className="rounded px-3 py-5">{country}</Button>
+        <Button className=" px-3 py-5">{country}</Button>
       </div>
 
       {/* Content */}
