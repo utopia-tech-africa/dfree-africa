@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AfricaHeroImg, AfricaHeroMobileImg } from "@/assets";
+import { AfricaHeroImg, AfricaHeroMobileImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 
 const HERO_CONTENT = {
