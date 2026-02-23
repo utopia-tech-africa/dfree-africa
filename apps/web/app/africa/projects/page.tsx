@@ -1,6 +1,7 @@
 import ComponentLayout from "@/components/component-layout";
 import { PageTitle } from "@/components/page-title/page-title";
 import { createMetadata } from "@/lib/seo";
+import { getProjects } from "@/lib/sanity";
 import type { Metadata } from "next";
 import React from "react";
 import { AllProjects } from "./components";
@@ -12,12 +13,13 @@ export const metadata: Metadata = createMetadata({
   path: "/africa/projects",
 });
 
-const ProjectsPage = () => {
+const ProjectsPage = async () => {
+  const projects = await getProjects();
   return (
     <>
       <ComponentLayout className="sm:space-y-8">
         <PageTitle text="All Projects" />
-        <AllProjects />
+        <AllProjects projects={projects} />
       </ComponentLayout>
     </>
   );
