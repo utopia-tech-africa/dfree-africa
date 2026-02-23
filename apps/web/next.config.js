@@ -3,19 +3,12 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
         hostname: "res.cloudinary.com",
-        pathname: "/**",
+        protocol: "https",
       },
       {
-        protocol: "https",
         hostname: "cdn.sanity.io",
-        pathname: "/**",
+        protocol: "https",
       },
     ],
   },

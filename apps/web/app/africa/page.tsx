@@ -1,11 +1,25 @@
+import { createMetadata } from "@/lib/seo";
+import { getFeaturedProjects } from "@/lib/sanity";
+import type { Metadata } from "next";
 import React from "react";
-import { FeaturedProjects, Hero } from "./components";
+import { ContinentalImpact, FeaturedProjects, Hero } from "./components";
+import { OurStory } from "./components/our-story";
 
-const AfricaPage = () => {
+export const metadata: Metadata = createMetadata({
+  title: "Africa",
+  description:
+    "Empowering Africa - Driving financial freedom and sustainable community development through education, skills training, and economic programs.",
+  path: "/africa",
+});
+
+const AfricaPage = async () => {
+  const featuredProjects = await getFeaturedProjects();
   return (
     <div>
       <Hero />
-      <FeaturedProjects />
+      <OurStory />
+      <ContinentalImpact />
+      <FeaturedProjects projects={featuredProjects} />
     </div>
   );
 };

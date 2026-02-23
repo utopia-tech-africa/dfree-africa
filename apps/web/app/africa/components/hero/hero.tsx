@@ -18,7 +18,7 @@ const HERO_CONTENT = {
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-[600px] h-[90dvh] flex flex-col items-center justify-end overflow-hidden">
+    <section className="relative w-full min-h-[600px] h-dvh flex flex-col items-center justify-end overflow-hidden">
       {/* Background image - mobile */}
       <div className="absolute inset-0 md:hidden">
         <Image
@@ -33,16 +33,14 @@ export const Hero = () => {
 
       {/* Background image - desktop */}
       <div className="absolute inset-0 hidden md:block">
-        <div className="relative grid h-full w-full grid-cols-3 grid-rows-2 gap-px bg-neutral-1000">
-          <Image
-            src={AfricaHeroImg}
-            alt=""
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
-        </div>
+        <Image
+          src={AfricaHeroImg}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority
+        />
       </div>
 
       {/* Dark overlay */}
@@ -63,7 +61,8 @@ export const Hero = () => {
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
               "text-base",
-            )}>
+            )}
+          >
             {HERO_CONTENT.cta.label}
           </Link>
         </div>

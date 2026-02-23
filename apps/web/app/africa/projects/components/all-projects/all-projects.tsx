@@ -4,9 +4,15 @@ import { useState } from "react";
 import { ProjectsFilter } from "./components/projects-filter";
 import { ProjectCard } from "./components/project-card";
 import { Pagination } from "@/components/pagination/pagination";
-import { projects } from "../../data/projects";
+import { projects as staticProjects } from "../../data/projects";
+import type { ProjectForUI } from "@/lib/sanity";
 
-export const AllProjects = () => {
+type AllProjectsProps = {
+  projects?: ProjectForUI[];
+};
+
+export const AllProjects = ({ projects: cmsProjects }: AllProjectsProps) => {
+  const projects = cmsProjects ?? staticProjects;
   const itemsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -19,10 +25,19 @@ export const AllProjects = () => {
     <div className="flex flex-col gap-10 my-6">
       <ProjectsFilter />
 
-      {/* {Projects} */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+        {currentProjects.map((project) => (
+          <ProjectCard
+            key={
+              "_id" in project && typeof project._id === "string"
+                ? project._id
+                : String(project.title)
+            }
+            title={project.title}
+            description={project.description}
+            country={project.country}
+            previewMedia={project.previewMedia}
+          />
         ))}
       </div>
 

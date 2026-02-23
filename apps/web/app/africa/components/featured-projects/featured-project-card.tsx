@@ -59,7 +59,7 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Content */}
       <div className="absolute bottom-0 z-10 p-6 flex flex-col gap-2 text-white h-[60%] justify-end">
-        <h3 className="font-bold text-4xl font-montserrat tracking-wide ">
+        <h3 className="font-bold text-[22px] md:text-[26px] leading-[120%] lg:text-4xl font-montserrat tracking-wide ">
           {title}
         </h3>
 
