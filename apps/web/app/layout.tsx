@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import { Montserrat, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
+import { createMetadata } from "@/lib/seo";
+import { Header } from "@/components/header";
+import Footer from "@/components/footer/footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
