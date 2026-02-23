@@ -5,9 +5,8 @@ import {
   LiberianFlag,
   SouthAfricanFlag,
   UgandanFlag,
-  WorldMapMobileSvg,
-  WorldMapSvg,
-} from "@/assets";
+} from "@/assets/img";
+import { WorldMapMobileSvg, WorldMapSvg } from "@/assets/svg";
 import ComponentLayout from "@/components/component-layout";
 import { ContinentalImpactCard } from "./continental-impact-card";
 import { Title } from "@/components/title-and-subtitle/title";

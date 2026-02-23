@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Banner } from "./banner";
-import { AfricaBannerBg } from "@/assets";
+import { AfricaBannerBg } from "@/assets/img";
 
 export const AfricaBanner = ({ classname }: { classname?: string }) => {
   return (
