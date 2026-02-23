@@ -3,15 +3,24 @@
 import React from "react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import { projects } from "@/app/africa/projects/data/projects";
+import { projects as staticProjects } from "@/app/africa/projects/data/projects";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { cn } from "@/lib/utils";
+import type { ProjectForUI } from "@/lib/sanity";
 import { FeaturedProjectCard } from "./featured-project-card";
 
-export const FeaturedProjects = () => {
-  const featuredProjects = projects.filter((project) => project.featured);
+type FeaturedProjectsProps = {
+  projects?: ProjectForUI[];
+};
+
+export const FeaturedProjects = ({
+  projects: cmsProjects,
+}: FeaturedProjectsProps) => {
+  const featuredProjects =
+    cmsProjects?.filter((p) => p.featured) ??
+    staticProjects.filter((p) => p.featured);
 
   return (
     <ComponentLayout className="mt-[90px] md:mt-25 lg:mt-[180px]">
@@ -41,8 +50,19 @@ export const FeaturedProjects = () => {
 
         {/* RIGHT COLUMN — Scrollable Cards */}
         <div className="flex flex-col gap-10">
-          {featuredProjects.map((project, index) => (
-            <FeaturedProjectCard className="h-140" key={index} {...project} />
+          {featuredProjects.map((project) => (
+            <FeaturedProjectCard
+              className="h-140"
+              key={
+                "_id" in project && typeof project._id === "string"
+                  ? project._id
+                  : String(project.title)
+              }
+              title={project.title}
+              description={project.description}
+              country={project.country}
+              previewMedia={project.previewMedia}
+            />
           ))}
         </div>
 
