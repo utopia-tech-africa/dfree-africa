@@ -1,4 +1,5 @@
 import { createMetadata } from "@/lib/seo";
+import { getFeaturedProjects } from "@/lib/sanity";
 import type { Metadata } from "next";
 import React from "react";
 import { ContinentalImpact, FeaturedProjects, Hero } from "./components";
@@ -11,13 +12,14 @@ export const metadata: Metadata = createMetadata({
   path: "/africa",
 });
 
-const AfricaPage = () => {
+const AfricaPage = async () => {
+  const featuredProjects = await getFeaturedProjects();
   return (
     <div>
       <Hero />
       <OurStory />
       <ContinentalImpact />
-      <FeaturedProjects />
+      <FeaturedProjects projects={featuredProjects} />
     </div>
   );
 };
