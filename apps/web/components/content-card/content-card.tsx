@@ -21,6 +21,7 @@ export interface ContentCardProps {
     mode: string;
     year: string;
   };
+  padding?: boolean; // Add this prop
 }
 
 export const ContentCard = ({
@@ -33,8 +34,9 @@ export const ContentCard = ({
   readTime,
   link,
   date,
+  padding = false,
 }: ContentCardProps) => {
-  // Determine if this is an event card (has date) or blog card (has readTime in badge)
+  // determine if this is an event card (has date) or blog card (has readTime in badge)
   const isEvent = !!date;
 
   return (
@@ -63,11 +65,17 @@ export const ContentCard = ({
         )}
       </div>
 
-      <div className="mt-4 space-y-3 flex flex-col flex-1">
+      <div
+        className={cn(
+          "flex flex-col flex-1",
+          padding ? "p-6" : "mt-4 space-y-3",
+        )}
+      >
         {badge && (
           <span
             className={cn(
               "inline-block w-fit px-3 py-1 text-xs font-semibold",
+              padding ? "mb-3" : "",
               badgeVariant === "default"
                 ? "bg-tertiary-500 text-white"
                 : "bg-[#EEEEEE] text-black text-sm font-semibold",
@@ -77,28 +85,48 @@ export const ContentCard = ({
           </span>
         )}
 
-        <h5 className="text-xl font-semibold leading-snug line-clamp-2">
+        <h5
+          className={cn(
+            "text-xl font-semibold leading-snug line-clamp-2",
+            padding ? "mb-3" : "",
+          )}
+        >
           {title}
         </h5>
 
         {location && (
-          <div className="text-sm text-muted-foreground capitalize line-clamp-1">
+          <div
+            className={cn(
+              "text-sm text-muted-foreground capitalize line-clamp-1",
+              padding ? "mb-3" : "",
+            )}
+          >
             {location}
           </div>
         )}
 
         {readTime && (
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <div
+            className={cn(
+              "flex items-center gap-2 text-sm text-muted-foreground",
+              padding ? "mb-3" : "",
+            )}
+          >
             <Calendar size={16} />
             <span>{readTime}</span>
           </div>
         )}
 
-        <p className="text-neutral-900 font-medium text-lg leading-relaxed line-clamp-3">
+        <p
+          className={cn(
+            "text-neutral-900 font-medium text-lg leading-relaxed line-clamp-3",
+            padding ? "mb-3" : "",
+          )}
+        >
           {description}
         </p>
 
-        <Link href={link} className="mt-auto pt-2">
+        <Link href={link} className={padding ? "mt-auto" : "mt-auto pt-2"}>
           <Button
             variant="link"
             className="px-0 text-lg leading-[130%] font-semibold text-primary-600 gap-2 hover:no-underline"

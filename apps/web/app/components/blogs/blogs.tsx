@@ -67,7 +67,7 @@ export const Blogs = () => {
       </div>
 
       <div className="relative mt-10">
-        {/* Scroll Container */}
+        {/* scroll Container */}
         <div className="-mx-4 md:-mx-10 lg:-mx-20">
           <div
             ref={scrollContainerRef}
@@ -86,6 +86,7 @@ export const Blogs = () => {
                   title={post.title}
                   description={post.description}
                   link={post.link}
+                  padding={true}
                 />
               </div>
             ))}
