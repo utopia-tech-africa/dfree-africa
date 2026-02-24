@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${poppins.variable} font-poppins bg-white antialiased`}
       >
-        {/* <Header /> */}
+        <Header />
         {children}
       </body>
     </html>

@@ -2,10 +2,16 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+* {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-montserrat: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-montserrat:
+    var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
   --font-poppins: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 
   --color-primary-100: #c4d9ae;
