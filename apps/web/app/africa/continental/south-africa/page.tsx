@@ -1,8 +1,17 @@
 import { SouthAfricanFlag } from "@/assets";
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 import { Hero, PageInfo } from "../components";
 import { SectionCard } from "../components/section-card";
 import { SectionCardProps } from "../components";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = createMetadata({
+  title: "South Africa",
+  description:
+    "DFREE® in South Africa - Partnerships, financial literacy, and community development with the Baptist Convention of Southern Africa and local organizations.",
+  path: "/africa/continental/south-africa",
+});
 
 const southAfricaPageData: SectionCardProps = [
   {
