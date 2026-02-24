@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AfricaHeroImg, AfricaHeroMobileImg } from "@/assets";
+import { AfricaHeroImg, AfricaHeroMobileImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 
 const HERO_CONTENT = {
@@ -18,7 +18,7 @@ const HERO_CONTENT = {
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-[600px] h-[90dvh] flex flex-col items-center justify-end overflow-hidden">
+    <section className="relative w-full min-h-[600px] h-dvh flex flex-col items-center justify-end overflow-hidden">
       {/* Background image - mobile */}
       <div className="absolute inset-0 md:hidden">
         <Image
