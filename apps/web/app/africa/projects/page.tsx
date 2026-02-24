@@ -5,6 +5,7 @@ import { getProjects } from "@/lib/sanity";
 import type { Metadata } from "next";
 import React from "react";
 import { AllProjects } from "./components";
+import { PageLayout } from "@/components/page-layout";
 
 export const metadata: Metadata = createMetadata({
   title: "Projects",
@@ -16,12 +17,12 @@ export const metadata: Metadata = createMetadata({
 const ProjectsPage = async () => {
   const projects = await getProjects();
   return (
-    <>
+    <PageLayout>
       <ComponentLayout className="sm:space-y-8">
         <PageTitle text="All Projects" />
         <AllProjects projects={projects} />
       </ComponentLayout>
-    </>
+    </PageLayout>
   );
 };
 

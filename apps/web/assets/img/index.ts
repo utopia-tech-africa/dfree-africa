@@ -25,8 +25,6 @@ export {
   AfricaHeroImg,
   AfricaHeroMobileImg,
   AfricaBannerBg,
-  GhanaPageBg,
-  SouthAfricaPageBg,
   GhanaFlag,
   SouthAfricanFlag,
   LiberianFlag,

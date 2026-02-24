@@ -1,51 +1,92 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ComponentLayout from "@/components/component-layout";
 import { ContentCard } from "@/components/content-card/content-card";
 import { blogData } from "@/lib/blog";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const SCROLL_EDGE_THRESHOLD = 10;
+
 export const Blogs = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(true);
+  const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const handleScroll = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } =
-        scrollContainerRef.current;
+  const totalSlides = blogData.posts.length;
 
-      setShowLeftArrow(scrollLeft > 0);
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
+  const updateScrollArrows = useCallback(() => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    setCanScrollLeft(scrollLeft > SCROLL_EDGE_THRESHOLD);
+    setCanScrollRight(
+      scrollLeft < scrollWidth - clientWidth - SCROLL_EDGE_THRESHOLD,
+    );
 
-      const cardWidth = 320;
-      const gap = 24;
-      const newIndex = Math.round(scrollLeft / (cardWidth + gap));
-      setActiveIndex(Math.min(newIndex, blogData.posts.length - 1));
+    // Update active dot from scroll position (which card is most in view)
+    if (scrollLeft < SCROLL_EDGE_THRESHOLD) {
+      setActiveIndex(0);
+      return;
     }
-  };
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollContainerRef.current) {
-      const cardWidth = 320;
-      const gap = 24;
-      const scrollAmount = cardWidth + gap;
-
-      scrollContainerRef.current.scrollTo({
-        left:
-          scrollContainerRef.current.scrollLeft +
-          (direction === "left" ? -scrollAmount : scrollAmount),
-        behavior: "smooth",
-      });
+    const cards = cardRefsRef.current;
+    const viewportCenter = scrollLeft + clientWidth / 2;
+    let newIndex = 0;
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      if (card) {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        if (viewportCenter >= cardCenter) newIndex = i;
+      }
     }
-  };
+    setActiveIndex(newIndex);
+  }, []);
+
+  const scrollToIndex = useCallback((index: number) => {
+    const container = scrollContainerRef.current;
+    const card = cardRefsRef.current[index];
+    if (!container || !card) {
+      setActiveIndex(index);
+      return;
+    }
+    const paddingLeft =
+      parseFloat(getComputedStyle(container).paddingLeft) || 0;
+    const targetScroll = Math.max(0, card.offsetLeft - paddingLeft);
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    container.scrollTo({
+      left: Math.min(targetScroll, maxScroll),
+      behavior: "smooth",
+    });
+    setActiveIndex(index);
+  }, []);
+
+  const goPrev = useCallback(() => {
+    if (!canScrollLeft) return;
+    if (activeIndex <= 0) return;
+    scrollToIndex(activeIndex - 1);
+  }, [activeIndex, canScrollLeft, scrollToIndex]);
+
+  const goNext = useCallback(() => {
+    if (!canScrollRight) return;
+    if (activeIndex >= totalSlides - 1) return;
+    scrollToIndex(activeIndex + 1);
+  }, [activeIndex, canScrollRight, totalSlides, scrollToIndex]);
 
   useEffect(() => {
-    handleScroll();
-  }, []);
+    updateScrollArrows();
+    const el = scrollContainerRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(updateScrollArrows);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [updateScrollArrows]);
+
+  // Arrows disabled based on actual scroll content (blog cards), not dot index
+  const canGoPrev = canScrollLeft;
+  const canGoNext = canScrollRight;
 
   return (
     <ComponentLayout className="py-16 overflow-hidden">
@@ -67,17 +108,20 @@ export const Blogs = () => {
       </div>
 
       <div className="relative mt-10">
-        {/* scroll Container */}
-        <div className="-mx-4 md:-mx-10 lg:-mx-20">
+        <div className="-mx-4 md:-mx-10 lg:-mx-20 overflow-hidden">
           <div
             ref={scrollContainerRef}
-            onScroll={handleScroll}
-            className="flex gap-6 overflow-x-auto px-4 md:px-10 lg:px-20 pb-6 scrollbar-hide scroll-smooth"
+            onScroll={updateScrollArrows}
+            className="flex gap-6 overflow-x-auto overflow-y-hidden px-4 md:px-10 lg:px-20 pb-6 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            style={{ msOverflowStyle: "none" }}
           >
             {blogData.posts.map((post, index) => (
               <div
                 key={index}
-                className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 flex border border-[#E8E8E8] rounded"
+                ref={(el) => {
+                  cardRefsRef.current[index] = el;
+                }}
+                className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 shrink-0 flex border border-[#E8E8E8] rounded"
               >
                 <ContentCard
                   image={post.image}
@@ -98,16 +142,8 @@ export const Blogs = () => {
             {blogData.posts.map((_, index) => (
               <button
                 key={index}
-                onClick={() => {
-                  if (scrollContainerRef.current) {
-                    const cardWidth = 320;
-                    const gap = 24;
-                    scrollContainerRef.current.scrollTo({
-                      left: index * (cardWidth + gap),
-                      behavior: "smooth",
-                    });
-                  }
-                }}
+                type="button"
+                onClick={() => scrollToIndex(index)}
                 className={cn(
                   "h-2 w-2 rounded-full transition-all duration-300",
                   activeIndex === index
@@ -115,25 +151,30 @@ export const Blogs = () => {
                     : "bg-neutral-300 hover:bg-neutral-400",
                 )}
                 aria-label={`Go to slide ${index + 1}`}
+                aria-current={activeIndex === index ? "true" : undefined}
               />
             ))}
           </div>
 
           <div className="flex items-center gap-3">
             <button
-              onClick={() => scroll("left")}
-              disabled={!showLeftArrow}
-              className="p-2 text-neutral-1000 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-100 transition"
-              aria-label="Scroll left"
+              type="button"
+              onClick={goPrev}
+              disabled={!canGoPrev}
+              aria-disabled={!canGoPrev}
+              className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
+              aria-label="Previous slide"
             >
               <ArrowLeft size={25} />
             </button>
 
             <button
-              onClick={() => scroll("right")}
-              disabled={!showRightArrow}
-              className="p-2 text-neutral-1000 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-100 transition"
-              aria-label="Scroll right"
+              type="button"
+              onClick={goNext}
+              disabled={!canGoNext}
+              aria-disabled={!canGoNext}
+              className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
+              aria-label="Next slide"
             >
               <ArrowRight size={25} />
             </button>

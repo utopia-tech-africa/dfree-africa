@@ -1,8 +1,17 @@
-import { GhanaPageBg } from "@/assets";
+import { GhanaFlag } from "@/assets";
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 import { Hero, PageInfo } from "../components";
 import { SectionCard } from "../components/section-card";
 import { SectionCardProps } from "../components";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = createMetadata({
+  title: "Ghana",
+  description:
+    "DFREE® in Ghana - Financial freedom in the workplace and church, partnerships, and community development across Ghana.",
+  path: "/africa/continental/ghana",
+});
 
 const ghanaPageData: SectionCardProps = [
   {
@@ -37,7 +46,7 @@ const ghanaPageData: SectionCardProps = [
 const GhanaPage = () => {
   return (
     <div className="flex flex-col gap-5 w-full">
-      <Hero bgImage={GhanaPageBg} />
+      <Hero bgImage={GhanaFlag} />
 
       <PageInfo
         mainTitle="DFREE® in Ghana"
