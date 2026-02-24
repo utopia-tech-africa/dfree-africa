@@ -23,6 +23,10 @@ import BlogImg4 from "./blog4-img.webp";
 import HeadshotImg1 from "./headshot1-img.webp";
 import HeadshotImg2 from "./headshot2-img.webp";
 import HeadshotImg3 from "./headshot3-img.webp";
+import WhoWeAreImg1 from "./who-we-are1-img.webp";
+import WhoWeAreImg2 from "./who-we-are2-img.webp";
+import WhoWeAreImg3 from "./who-we-are3-img.webp";
+import WhoWeAreImg4 from "./who-we-are4-img.webp";
 
 export {
   AfricaHeroImg,
@@ -50,4 +54,8 @@ export {
   HeadshotImg1,
   HeadshotImg2,
   HeadshotImg3,
+  WhoWeAreImg1,
+  WhoWeAreImg2,
+  WhoWeAreImg3,
+  WhoWeAreImg4,
 };
