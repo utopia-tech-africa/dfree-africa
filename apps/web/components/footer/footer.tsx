@@ -9,13 +9,13 @@ const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
 const Footer = () => {
   return (
     <ComponentLayout className="bg-primary-500 mt-20 lg:mt-30 text-neutral-100">
-      <footer className="py-12 lg:py-20">
+      <footer className="py-10 lg:py-12">
         <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]">
           <div className="h-7.25 md:h-11.25 w-fit object-cover">
             <DfreeLogoWhite />
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             <h4 className="text-lg font-bold">About</h4>
             <div className="flex flex-col gap-4 text-sm lg:text-base">
               {footerAbout.map((item, i) => (
@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             <h4 className="text-lg font-bold">Our pillars</h4>
             <div className="flex flex-col gap-4 text-sm lg:text-base md:text-nowrap">
               {footerPillars.map((item, i) => (
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             <h4 className="text-lg font-bold">Get involved</h4>
             <div className="flex flex-col gap-4 text-sm lg:text-base">
               {getInvolved.map(
@@ -106,7 +106,7 @@ const Footer = () => {
           <hr className="border-white" />
         </div>
 
-        <div className="mt-6 flex gap-6 flex-col md:flex-row md:items-center justify-center text-sm">
+        <div className="mt-6 flex gap-5 flex-col md:flex-row md:items-center justify-center text-sm">
           <span className="text-center">
             © 2024 DFREE® Foundation. All rights reserved.
           </span>
