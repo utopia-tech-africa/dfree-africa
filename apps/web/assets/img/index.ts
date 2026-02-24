@@ -20,6 +20,7 @@ import BlogImg1 from "./blog1-img.webp";
 import BlogImg2 from "./blog2-img.webp";
 import BlogImg3 from "./blog3-img.webp";
 import BlogImg4 from "./blog4-img.webp";
+import defreeLogoBg from "./defree-logo-bg.webp";
 
 export {
   AfricaHeroImg,
@@ -44,4 +45,5 @@ export {
   BlogImg2,
   BlogImg3,
   BlogImg4,
+  defreeLogoBg,
 };
