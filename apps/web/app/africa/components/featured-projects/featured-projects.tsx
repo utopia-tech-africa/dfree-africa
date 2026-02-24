@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import type { ProjectForUI } from "@/lib/sanity";
 import { FeaturedProjectCard } from "./featured-project-card";
 import Image from "next/image";
-import { defreeLogoBg } from "@/assets";
+import { DefreeLogoBg } from "@/assets";
 
 type FeaturedProjectsProps = {
   projects?: ProjectForUI[];
@@ -40,7 +40,7 @@ export const FeaturedProjects = ({
           {/* Background image */}
           <div className="absolute -z-10 md:-left-10 w-full md:w-[60%]">
             <Image
-              src={defreeLogoBg}
+              src={DefreeLogoBg}
               alt="Hero background"
               className="object-left"
               priority
