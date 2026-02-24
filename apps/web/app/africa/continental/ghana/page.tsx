@@ -5,6 +5,8 @@ import { Hero, PageInfo } from "../components";
 import { SectionCard } from "../components/section-card";
 import { SectionCardProps } from "../components";
 import { cn } from "@/lib/utils";
+import { FeaturedProjects } from "../../components";
+import { getFeaturedProjects } from "@/lib/sanity";
 
 export const metadata: Metadata = createMetadata({
   title: "Ghana",
@@ -43,7 +45,9 @@ const ghanaPageData: SectionCardProps = [
   },
 ];
 
-const GhanaPage = () => {
+const GhanaPage = async () => {
+  const featuredProjects = await getFeaturedProjects("Ghana");
+
   return (
     <div className="flex flex-col gap-5 w-full">
       <Hero bgImage={GhanaFlag} />
@@ -65,6 +69,16 @@ const GhanaPage = () => {
           </div>
         );
       })}
+
+      {featuredProjects.length && (
+        <FeaturedProjects
+          projects={featuredProjects}
+          // title="Projects"
+          subtitle="Featured projects"
+          description="With the support of dedicated partners and community leaders, our initiatives drive measurable impact and create lasting change across Ghana."
+          href="/africa/projects"
+        />
+      )}
     </div>
   );
 };

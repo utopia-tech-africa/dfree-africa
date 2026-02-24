@@ -25,3 +25,16 @@ export const featuredProjectsQuery = groq`*[_type == "project" && featured == tr
     "videoUrl": video.asset->url
   }
 }`;
+
+export const featuredCountryProjectsQuery = groq`*[_type == "project" && country == $country && featured == true] | order(_createdAt desc) {
+  _id,
+  title,
+  description,
+  country,
+  featured,
+  "previewMedia": previewMedia {
+    type,
+    "imageRef": image.asset->,
+    "videoUrl": video.asset->url
+  }
+}`;

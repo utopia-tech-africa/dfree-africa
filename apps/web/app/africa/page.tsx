@@ -19,7 +19,13 @@ const AfricaPage = async () => {
       <Hero />
       <OurStory />
       <ContinentalImpact />
-      <FeaturedProjects projects={featuredProjects} />
+      <FeaturedProjects
+        projects={featuredProjects}
+        title="Projects"
+        subtitle="Featured projects"
+        description="With the support of committed partners and in collaboration with community leaders and local governments, our projects and initiatives continue to have direct, life-changing impact on communities, transforming lives across the continent."
+        href="/africa/projects"
+      />
     </div>
   );
 };
