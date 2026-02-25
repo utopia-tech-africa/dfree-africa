@@ -8,11 +8,12 @@ const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
 
 const Footer = () => {
   return (
-    <footer className="py-10 lg:py-12 w-full px-4 md:px-10 lg:px-20 mt-20 bg-primary-500 text-neutral-100">
-      <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]">
-        <div className="h-7.25 md:h-11.25 w-fit object-cover">
-          <DfreeLogoWhite />
-        </div>
+    <footer className="bg-primary-500 py-12 lg:py-20 mt-20 lg:mt-30">
+      <ComponentLayout className="text-neutral-100">
+        <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]">
+          <div className="h-7.25 md:h-11.25 w-fit object-cover">
+            <DfreeLogoWhite />
+          </div>
 
         <div className="flex flex-col gap-5">
           <h4 className="text-lg font-bold">About</h4>
@@ -99,29 +100,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="mt-8">
-        <hr className="border-white" />
-      </div>
-
-      <div className="mt-6 flex gap-5 flex-col md:flex-row md:items-center justify-center text-sm">
-        <span className="text-center">
-          © 2024 DFREE® Foundation. All rights reserved.
-        </span>
-
-        <div className="flex gap-3 items-center justify-center md:gap-8 underline text-xs">
-          <a href="" className="cursor-pointer text-nowrap">
-            Privacy policy
-          </a>
-          <a href="" className="cursor-pointer text-nowrap">
-            Terms of service
-          </a>
-          <a href="" className="cursor-pointer text-nowrap">
-            Cookies settings
-          </a>
-        </div>
-      </div>
+      </ComponentLayout>
     </footer>
   );
 };
