@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants } from "motion/react";
 import {
   WhoWeAreImg1,
   WhoWeAreImg2,

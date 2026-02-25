@@ -10,7 +10,6 @@ export {
   WorldMapMobileSvg,
   DfreeLogoWhite,
   DfreeLogo,
-  QuotationMarks,
   GalleryPattern,
-   QuotationMarks,
+  QuotationMarks,
 };

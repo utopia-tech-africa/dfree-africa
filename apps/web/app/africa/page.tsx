@@ -24,7 +24,7 @@ const AfricaPage = async () => {
       <Hero />
       <OurStory />
       <ContinentalImpact />
-         <FeaturedProjects
+      <FeaturedProjects
         projects={featuredProjects}
         title="Projects"
         subtitle="Featured projects"
