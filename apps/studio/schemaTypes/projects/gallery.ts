@@ -67,15 +67,27 @@ export const gallery = defineType({
               title: 'Caption',
               type: 'string',
             },
+
+            {
+              name: 'useAsThumbnail',
+              title: 'Use as thumbnail',
+              type: 'boolean',
+              initialValue: false,
+              description:
+                'Use this item as the gallery thumbnail. Only image items are used. If multiple are toggled, the first wins.',
+              hidden: ({parent}) => parent?.type !== 'image',
+            },
           ],
           preview: {
             select: {
               type: 'type',
               image: 'image',
+              useAsThumbnail: 'useAsThumbnail',
             },
-            prepare({type, image}) {
+            prepare({type, image, useAsThumbnail}) {
+              const title = type === 'image' ? 'Image' : 'Video'
               return {
-                title: type === 'image' ? 'Image' : 'Video',
+                title: useAsThumbnail ? `${title} (thumbnail)` : title,
                 media: image,
               }
             },
