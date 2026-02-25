@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
+  slug: string;
   description: string;
   country: string;
   previewMedia: {
@@ -17,6 +19,7 @@ interface ProjectCardProps {
 
 export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
   title,
+  slug,
   description,
   country,
   previewMedia,
@@ -67,14 +70,16 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
 
-        <Button
-          icon={<MdKeyboardDoubleArrowRight className="size-7" />}
-          variant="ghost"
-          className="w-fit mt-3 font-normal"
-          size={"lg"}
-        >
-          Read more
-        </Button>
+        <Link href={`/africa/projects/${slug}`}>
+          <Button
+            icon={<MdKeyboardDoubleArrowRight className="size-7" />}
+            variant="ghost"
+            className="w-fit mt-3 font-normal"
+            size={"lg"}
+          >
+            Read more
+          </Button>
+        </Link>
       </div>
     </div>
   );
