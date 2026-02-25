@@ -20,6 +20,9 @@ import BlogImg1 from "./blog1-img.webp";
 import BlogImg2 from "./blog2-img.webp";
 import BlogImg3 from "./blog3-img.webp";
 import BlogImg4 from "./blog4-img.webp";
+import HeadshotImg1 from "./headshot1-img.webp";
+import HeadshotImg2 from "./headshot2-img.webp";
+import HeadshotImg3 from "./headshot3-img.webp";
 import DefreeLogoBg from "./defree-logo-bg.webp";
 
 export {
@@ -45,5 +48,8 @@ export {
   BlogImg2,
   BlogImg3,
   BlogImg4,
-  DefreeLogoBg,
+  HeadshotImg1,
+  HeadshotImg2,
+  HeadshotImg3,
+  DefreeLogoBg
 };

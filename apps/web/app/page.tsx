@@ -1,7 +1,7 @@
 import { createMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import React from "react";
-import { Blogs } from "./components/blogs";
+import Testimonials from "./components/testimonials/testimonials";
 
 export const metadata: Metadata = createMetadata({
   title: "Home",
@@ -14,8 +14,7 @@ const Home = () => {
   return (
     <>
       <div className="grid h-screen place-items-center">
-        <Blogs />
-        {/* <Events /> */}
+        <Testimonials />
       </div>
     </>
   );
