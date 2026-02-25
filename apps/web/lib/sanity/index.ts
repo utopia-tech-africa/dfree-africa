@@ -3,7 +3,9 @@ export { urlFor } from "./image";
 export {
   getFeaturedProjects,
   getProjects,
+  getYearsWithProjectIds,
   type ProjectForUI,
+  type YearWithProjectIds,
 } from "./projects";
 export {
   getPhotoGallery,

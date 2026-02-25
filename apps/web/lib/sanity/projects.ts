@@ -9,6 +9,7 @@ import {
   featuredProjectsQuery,
   projectBySlugQuery,
   projectsQuery,
+  yearsWithProjectIdsQuery,
 } from "./queries/projects";
 
 export type ProjectForUI = {
@@ -113,9 +114,36 @@ function mapProjectDetailToUI(project: any): ProjectDetailForUI {
   };
 }
 
+export type YearWithProjectIds = {
+  year: number;
+  projectIds: string[];
+};
+
+type YearsWithProjectIdsQueryResult = Array<{
+  year?: number | null;
+  projectIds?: (string | null)[];
+}>;
+
 export async function getProjects(): Promise<ProjectForUI[]> {
   const data = await client.fetch<ProjectsQueryResult>(projectsQuery);
   return data.map(mapProjectToUI);
+}
+
+export async function getYearsWithProjectIds(): Promise<YearWithProjectIds[]> {
+  const data = await client.fetch<YearsWithProjectIdsQueryResult>(
+    yearsWithProjectIdsQuery,
+  );
+  return (data ?? [])
+    .filter(
+      (row): row is { year: number; projectIds: (string | null)[] } =>
+        row?.year != null,
+    )
+    .map((row) => ({
+      year: Number(row.year),
+      projectIds: (row.projectIds ?? []).filter(
+        (id): id is string => id != null && id !== "",
+      ),
+    }));
 }
 
 export async function getFeaturedProjects(
