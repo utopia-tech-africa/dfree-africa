@@ -12,4 +12,5 @@ export {
   DfreeLogo,
   QuotationMarks,
   GalleryPattern,
+   QuotationMarks,
 };

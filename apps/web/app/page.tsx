@@ -10,7 +10,13 @@ export const metadata: Metadata = createMetadata({
 });
 
 const Home = () => {
-  return <div>HOME</div>;
+  return (
+    <>
+      <div className="grid h-screen place-items-center">
+        <Testimonials />
+      </div>
+    </>
+  );
 };
 
 export default Home;
