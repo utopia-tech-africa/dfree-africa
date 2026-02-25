@@ -4,7 +4,11 @@ import type {
 } from "./sanity.types";
 import { client } from "./client";
 import { urlFor } from "./image";
-import { featuredProjectsQuery, projectsQuery } from "./queries/projects";
+import {
+  featuredCountryProjectsQuery,
+  featuredProjectsQuery,
+  projectsQuery,
+} from "./queries/projects";
 
 export type ProjectForUI = {
   _id: string;
@@ -48,9 +52,26 @@ export async function getProjects(): Promise<ProjectForUI[]> {
   return data.map(mapProjectToUI);
 }
 
-export async function getFeaturedProjects(): Promise<ProjectForUI[]> {
-  const data = await client.fetch<FeaturedProjectsQueryResult>(
-    featuredProjectsQuery,
-  );
-  return data.map(mapProjectToUI);
+export async function getFeaturedProjects(
+  country?: string,
+): Promise<ProjectForUI[]> {
+  if (country) {
+    const data = await client.fetch<FeaturedProjectsQueryResult>(
+      featuredCountryProjectsQuery,
+      {
+        country,
+      },
+    );
+
+    return data.map(mapProjectToUI);
+  } else {
+    const data = await client.fetch<FeaturedProjectsQueryResult>(
+      featuredProjectsQuery,
+      {
+        country,
+      },
+    );
+
+    return data.map(mapProjectToUI);
+  }
 }

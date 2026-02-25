@@ -8,8 +8,8 @@ const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
 
 const Footer = () => {
   return (
-    <ComponentLayout className="bg-primary-500 mt-20 lg:mt-30 text-neutral-100">
-      <footer className="py-10 lg:py-12">
+    <footer className="bg-primary-500 py-12 lg:py-20 mt-20 lg:mt-30">
+      <ComponentLayout className="text-neutral-100">
         <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]">
           <div className="h-7.25 md:h-11.25 w-fit object-cover">
             <DfreeLogoWhite />
@@ -123,8 +123,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </footer>
-    </ComponentLayout>
+      </ComponentLayout>
+    </footer>
   );
 };
 
