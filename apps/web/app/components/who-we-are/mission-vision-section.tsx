@@ -8,7 +8,7 @@ export const MissionVisionSection = () => {
         <p className="font-montserrat font-bold text-neutral-1000 text-base sm:text-lg md:text-xl lg:text-[24px] leading-[120%]">
           <span className="text-secondary-600">
             DFREE Global Foundation, Inc.
-          </span>{" "}
+          </span>
           is a national nonprofit advancing financial wellness, economic
           empowerment, and self-sufficiency in underserved communities by
           delivering free, community-centered initiatives that help families

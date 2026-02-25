@@ -103,9 +103,21 @@ export const Events = () => {
             </p>
           </div>
 
-          <Button className="flex text-lg items-center gap-2 px-6 py-3 shrink-0">
-            View all events
-            <ArrowRight size={16} />
+          <Button
+            size="lg"
+            className="group cursor-pointer flex items-center justify-between text-lg shrink-0 bg-primary-500 hover:bg-primary-600 transition-colors font-medium duration-300 font-montserrat px-4 py-3 overflow-hidden relative"
+          >
+            <span className="relative z-10">View all events</span>
+
+            <span className="relative w-6 h-6 overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full group-hover:translate-x-1.5">
+                <ArrowRight size={16} />
+              </div>
+
+              <div className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-300 group-hover:translate-y-0 group-hover:translate-x-1.5">
+                <ArrowRight size={16} />
+              </div>
+            </span>
           </Button>
         </div>
       </div>
@@ -168,7 +180,7 @@ export const Events = () => {
               className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
               aria-label="Previous slide"
             >
-              <ArrowLeft size={25} />
+              <ArrowLeft size={18} />
             </button>
 
             <button
@@ -179,7 +191,7 @@ export const Events = () => {
               className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
               aria-label="Next slide"
             >
-              <ArrowRight size={25} />
+              <ArrowRight size={18} />
             </button>
           </div>
         </div>
