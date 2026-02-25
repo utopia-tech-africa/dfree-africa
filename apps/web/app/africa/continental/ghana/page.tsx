@@ -70,13 +70,13 @@ const GhanaPage = async () => {
         );
       })}
 
-      {featuredProjects.length && (
+      {featuredProjects.length > 0 && (
         <FeaturedProjects
           projects={featuredProjects}
           // title="Projects"
           subtitle="Featured projects"
           description="With the support of dedicated partners and community leaders, our initiatives drive measurable impact and create lasting change across Ghana."
-          href="/africa/projects"
+          href="/africa/projects?country=ghana"
         />
       )}
     </div>

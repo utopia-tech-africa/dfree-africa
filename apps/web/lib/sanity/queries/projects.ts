@@ -42,6 +42,12 @@ export const featuredCountryProjectsQuery = groq`*[_type == "project" && country
   }
 }`;
 
+/** Years with project IDs for filtering the projects list. */
+export const yearsWithProjectIdsQuery = groq`*[_type == "year"] | order(year desc) {
+  year,
+  "projectIds": projects[]->_id
+}`;
+
 export const projectBySlugQuery = groq`
   *[_type == "project" && slug.current == $slug][0] {
     _id,
