@@ -4,15 +4,13 @@ import { useState } from "react";
 import { ProjectsFilter } from "./components/projects-filter";
 import { ProjectCard } from "./components/project-card";
 import { Pagination } from "@/components/pagination/pagination";
-import { projects as staticProjects } from "../../data/projects";
 import type { ProjectForUI } from "@/lib/sanity";
 
 type AllProjectsProps = {
-  projects?: ProjectForUI[];
+  projects: ProjectForUI[];
 };
 
-export const AllProjects = ({ projects: cmsProjects }: AllProjectsProps) => {
-  const projects = cmsProjects ?? staticProjects;
+export const AllProjects = ({ projects }: AllProjectsProps) => {
   const itemsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -37,6 +35,7 @@ export const AllProjects = ({ projects: cmsProjects }: AllProjectsProps) => {
             description={project.description}
             country={project.country}
             previewMedia={project.previewMedia}
+            slug={project.slug}
           />
         ))}
       </div>
