@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import { projects as staticProjects } from "@/app/africa/projects/data/projects";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
@@ -22,15 +21,13 @@ type FeaturedProjectsProps = {
 };
 
 export const FeaturedProjects = ({
-  projects: cmsProjects,
+  projects,
   title,
   subtitle,
   description,
   href,
 }: FeaturedProjectsProps) => {
-  const featuredProjects =
-    cmsProjects?.filter((p) => p.featured) ??
-    staticProjects.filter((p) => p.featured);
+  const featuredProjects = projects?.filter((p) => p.featured);
 
   return (
     <ComponentLayout className=" mt-[90px] md:mt-25 lg:mt-[180px]">
@@ -68,7 +65,7 @@ export const FeaturedProjects = ({
 
         {/* RIGHT COLUMN — Scrollable Cards */}
         <div className="flex flex-col gap-10">
-          {featuredProjects.map((project) => (
+          {featuredProjects?.map((project) => (
             <FeaturedProjectCard
               className="h-140"
               key={
@@ -80,6 +77,7 @@ export const FeaturedProjects = ({
               description={project.description}
               country={project.country}
               previewMedia={project.previewMedia}
+              slug={project.slug}
             />
           ))}
         </div>

@@ -11,5 +11,5 @@ export {
   DfreeLogoWhite,
   DfreeLogo,
   GalleryPattern,
-   QuotationMarks,
+  QuotationMarks,
 };

@@ -3,12 +3,12 @@ import Image from "next/image";
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
-    <div className="bg-white p-6 sm:p-8 flex flex-col items-center justify-center h-full text-center">
-      <p className="text-neutral-1000 text-base sm:text-lg md:text-[18px] font-bold leading-[140%] mb-8 sm:mb-10">
+    <div className="bg-white p-6 sm:p-8 flex flex-col items-center justify-between text-center min-w-full sm:min-w-[75%] md:min-w-0 md:flex-1 ">
+      <p className="text-neutral-1000 text-base md:text-[18px] font-bold leading-[140%] mb-8 sm:mb-10">
         {testimonial.text}
       </p>
 
-      <div className="flex items-center gap-4 mt-auto">
+      <div className="flex items-center gap-4 -mt-8 md:mt-auto">
         <div
           className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 overflow-hidden"
           style={{ background: "linear-gradient(to bottom, #7CDB17, #42750C)" }}
