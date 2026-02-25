@@ -20,7 +20,15 @@ import BlogImg1 from "./blog1-img.webp";
 import BlogImg2 from "./blog2-img.webp";
 import BlogImg3 from "./blog3-img.webp";
 import BlogImg4 from "./blog4-img.webp";
+import HeadshotImg1 from "./headshot1-img.webp";
+import HeadshotImg2 from "./headshot2-img.webp";
+import HeadshotImg3 from "./headshot3-img.webp";
+import WhoWeAreImg1 from "./who-we-are1-img.webp";
+import WhoWeAreImg2 from "./who-we-are2-img.webp";
+import WhoWeAreImg3 from "./who-we-are3-img.webp";
+import WhoWeAreImg4 from "./who-we-are4-img.webp";
 import DefreeLogoBg from "./defree-logo-bg.webp";
+
 
 export {
   AfricaHeroImg,
@@ -45,5 +53,13 @@ export {
   BlogImg2,
   BlogImg3,
   BlogImg4,
-  DefreeLogoBg,
+  HeadshotImg1,
+  HeadshotImg2,
+  HeadshotImg3,
+  WhoWeAreImg1,
+  WhoWeAreImg2,
+  WhoWeAreImg3,
+  WhoWeAreImg4,
+  DefreeLogoBg
 };
+

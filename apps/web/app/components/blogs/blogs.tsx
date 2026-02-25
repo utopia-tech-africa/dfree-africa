@@ -165,7 +165,7 @@ export const Blogs = () => {
               className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
               aria-label="Previous slide"
             >
-              <ArrowLeft size={25} />
+              <ArrowLeft size={18} />
             </button>
 
             <button
@@ -176,7 +176,7 @@ export const Blogs = () => {
               className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
               aria-label="Next slide"
             >
-              <ArrowRight size={25} />
+              <ArrowRight size={18} />
             </button>
           </div>
         </div>
