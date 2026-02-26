@@ -121,7 +121,7 @@ const Pillars = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-neutral-100 pb-16"
+      className="w-full bg-neutral-100 mb-20 md:mb-30  lg:mb-40"
       aria-labelledby="pillars-heading"
       style={
         {
