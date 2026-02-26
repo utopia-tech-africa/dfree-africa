@@ -89,7 +89,7 @@ export const Blogs = () => {
   const canGoNext = canScrollRight;
 
   return (
-    <ComponentLayout className="py-16 overflow-hidden">
+    <ComponentLayout className="overflow-hidden">
       <div className="space-y-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>

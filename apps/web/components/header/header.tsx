@@ -127,6 +127,7 @@ export const Header = () => {
 
   return (
     <header
+      data-global-header="true"
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-300",
         isScrolled ? "bg-black/10 backdrop-blur-md" : "bg-transparent",

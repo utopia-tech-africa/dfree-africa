@@ -5,7 +5,7 @@ import { ImagesSection } from "./images-section";
 
 const WhoWeAre = () => {
   return (
-    <ComponentLayout>
+    <ComponentLayout className="mb-8 md:mb-12 lg:mb-20">
       <MissionVisionSection />
       <ImagesSection />
     </ComponentLayout>

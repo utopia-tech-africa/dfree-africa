@@ -11,7 +11,7 @@ const HOME_HERO_CONTENT = {
 
 export const HomeHero = () => {
   return (
-    <section className="relative w-full h-dvh flex items-end overflow-hidden mb-100">
+    <section className="relative w-full h-dvh flex items-end overflow-hidden mb-[30px] md:mb-12 lg:mb-[92px]">
       <div className="absolute inset-0">
         <video
           className="w-full h-full object-cover"

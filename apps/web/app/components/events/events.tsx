@@ -88,7 +88,7 @@ export const Events = () => {
   const canGoNext = canScrollRight;
 
   return (
-    <ComponentLayout className="py-16 overflow-hidden">
+    <ComponentLayout className="overflow-hidden mb-20 md:mb-24 lg:mb-[160px]">
       <div className="space-y-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="flex flex-col gap-3 max-w-2xl">
