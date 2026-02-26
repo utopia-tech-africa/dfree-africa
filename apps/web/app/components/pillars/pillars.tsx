@@ -1,82 +1,166 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { OUR_PILLARS } from "@/lib/pillars";
-import { PillarCard } from "./pillar-card";
+import { useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { OUR_PILLARS } from "@/lib/pillars";
+import ComponentLayout from "@/components/component-layout";
+import { PillarCard } from "./pillar-card";
 
-const NAVBAR_OFFSET = 80;
+const NAVBAR_TOP = "var(--navbar-height)";
+const PILLAR_HEADER_HEIGHT_FALLBACK = 120;
+
+function PillarsHeader({
+  headerRef,
+}: {
+  headerRef: React.RefObject<HTMLElement | null>;
+}) {
+  return (
+    <header
+      ref={headerRef}
+      className="sticky z-40 bg-white"
+      style={{ top: NAVBAR_TOP }}
+    >
+      <ComponentLayout className="flex start justify-between py-4">
+        <h2
+          id="pillars-heading"
+          className="w-[125px] shrink-0 font-montserrat text-[26px] font-bold leading-none text-secondary-600 md:text-[32px]"
+        >
+          {OUR_PILLARS.title}
+        </h2>
+        <p className="w-[218px] shrink-0 text-right font-poppins text-xs font-normal leading-[1.2] text-neutral-1000 md:w-[503px] md:text-lg md:leading-[1.3]">
+          {OUR_PILLARS.subtitle}
+        </p>
+      </ComponentLayout>
+    </header>
+  );
+}
+
 const Pillars = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  const [layout, setLayout] = useState({
+    navbarHeight: 0,
+    pillarHeaderHeight: PILLAR_HEADER_HEIGHT_FALLBACK,
+    cardHeight: 0,
+    ready: false,
+  });
 
-    const ctx = gsap.context(() => {
-      const cards = cardsRef.current;
+  useLayoutEffect(() => {
+    const sectionEl = sectionRef.current;
+    const pillarHeaderEl = headerRef.current;
+    const globalHeaderEl = document.querySelector<HTMLElement>(
+      '[data-global-header="true"]',
+    );
+    if (!sectionEl || !pillarHeaderEl || !globalHeaderEl) return;
 
-      cards.forEach((card, index) => {
-        ScrollTrigger.create({
-          trigger: card,
-          start: `top top+=${NAVBAR_OFFSET}`,
-          end: "+=100%",
-          pin: true,
-          pinSpacing: false,
-        });
+    const measure = () => {
+      const navbarHeight = globalHeaderEl.getBoundingClientRect().height;
+      const pillarHeaderHeight = pillarHeaderEl.getBoundingClientRect().height;
+      const cardHeight = Math.max(
+        0,
+        Math.ceil(window.innerHeight - navbarHeight - pillarHeaderHeight),
+      );
 
-        if (index !== cards.length - 1) {
-          gsap.to(card, {
-            scale: 0.94,
-            ease: "none",
-            scrollTrigger: {
-              trigger: cards[index + 1],
-              start: `top center`,
-              end: `top top+=${NAVBAR_OFFSET}`,
-              scrub: true,
-            },
-          });
-        }
+      setLayout({
+        navbarHeight,
+        pillarHeaderHeight,
+        cardHeight,
+        ready: navbarHeight > 0 && pillarHeaderHeight > 0 && cardHeight > 0,
       });
-    }, containerRef);
+    };
 
-    return () => ctx.revert();
+    measure();
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(globalHeaderEl);
+    observer.observe(pillarHeaderEl);
+    window.addEventListener("resize", measure);
+    window.visualViewport?.addEventListener("resize", measure);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+      window.visualViewport?.removeEventListener("resize", measure);
+    };
   }, []);
 
-  return (
-    <section className="w-full bg-neutral-100 py-16">
-      <div className="">
-        <div className="sticky top-0 z-40 mb-16 bg-neutral-100 py-6">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <h2 className="text-3xl font-semibold text-primary-600">
-              {OUR_PILLARS.title}
-            </h2>
+  useLayoutEffect(() => {
+    if (!layout.ready) return;
 
-            <p className="max-w-xl text-sm text-muted-foreground md:text-base">
-              {OUR_PILLARS.subtitle}
-            </p>
+    const sectionEl = sectionRef.current;
+    const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
+    if (!sectionEl || cards.length === 0) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    const stickyOffset = layout.navbarHeight + layout.pillarHeaderHeight;
+
+    const ctx = gsap.context(() => {
+      cards.forEach((card, index) => {
+        const nextCard = cards[index + 1];
+
+        ScrollTrigger.create({
+          trigger: card,
+          start: `top top+=${stickyOffset}`,
+          endTrigger: nextCard ?? sectionEl,
+          end: nextCard ? `top top+=${stickyOffset}` : "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        });
+      });
+    }, sectionEl);
+
+    ScrollTrigger.refresh();
+    return () => ctx.revert();
+  }, [layout]);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="w-full bg-neutral-100 mb-20 md:mb-30  lg:mb-40"
+      aria-labelledby="pillars-heading"
+      style={
+        {
+          "--navbar-height": `${layout.navbarHeight}px`,
+          "--pillar-header-height": `${layout.pillarHeaderHeight}px`,
+          "--pillar-card-height": `${layout.cardHeight}px`,
+        } as CSSProperties
+      }
+    >
+      {/* Navbar underlay: keeps transparent global header from showing moving cards behind it */}
+      <div
+        className="sticky top-0 z-30 bg-neutral-100"
+        style={{ height: "var(--navbar-height)" }}
+        aria-hidden
+      />
+      <PillarsHeader headerRef={headerRef} />
+      <div
+        className={layout.ready ? "flex flex-col" : "flex flex-col opacity-0"}
+      >
+        {OUR_PILLARS.pillars.map((item, index) => (
+          <div
+            key={item.pillar}
+            ref={(el) => {
+              cardRefs.current[index] = el;
+            }}
+          >
+            <PillarCard
+              title={item.pillar}
+              description={item.description}
+              href={item.href}
+              backgroundImage={item.bgImage}
+              backgroundImageMobile={item.bgImageMobile}
+              logo={item.logo}
+              imagePositionClassName={item.imagePositionClassName}
+              buttonText="Discover more"
+              stackIndex={index}
+            />
           </div>
-        </div>
-        <div ref={containerRef} className="relative">
-          {OUR_PILLARS.pillars.map((pillarItem, index) => (
-            <div
-              key={pillarItem.pillar}
-              ref={(el) => {
-                if (el) cardsRef.current[index] = el;
-              }}
-              className="relative -mt-20 first:mt-0"
-            >
-              <PillarCard
-                pillar={pillarItem.pillar}
-                description={pillarItem.description}
-                bgImage={pillarItem.bgImage}
-                logo={pillarItem.logo}
-                href={pillarItem.href}
-              />
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
     </section>
   );
