@@ -28,6 +28,7 @@ import WhoWeAreImg2 from "./who-we-are2-img.webp";
 import WhoWeAreImg3 from "./who-we-are3-img.webp";
 import WhoWeAreImg4 from "./who-we-are4-img.webp";
 import DefreeLogoBg from "./defree-logo-bg.webp";
+import HomeHeroBookImg from "./home-hero-book-img.webp";
 
 export {
   AfricaHeroImg,
@@ -60,4 +61,5 @@ export {
   WhoWeAreImg3,
   WhoWeAreImg4,
   DefreeLogoBg,
+  HomeHeroBookImg,
 };
