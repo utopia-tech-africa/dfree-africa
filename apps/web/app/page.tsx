@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import React from "react";
 import Testimonials from "./components/testimonials/testimonials";
 import WhoWeAre from "./components/who-we-are/who-we-are";
+import Merch from "./components/merch/merch";
 
 export const metadata: Metadata = createMetadata({
   title: "Home",
@@ -13,12 +14,11 @@ export const metadata: Metadata = createMetadata({
 
 const Home = () => {
   return (
-    <>
-      <div className="grid h-screen place-items-center">
-        <WhoWeAre />
-        {/* <Testimonials /> */}
-      </div>
-    </>
+    <div className="flex flex-col gap-16 sm:gap-24 w-full">
+      <WhoWeAre />
+      {/* <Testimonials /> */}
+      <Merch />
+    </div>
   );
 };
 
