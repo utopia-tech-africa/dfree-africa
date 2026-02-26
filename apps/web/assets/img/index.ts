@@ -8,10 +8,15 @@ import AfricaBannerBg from "./africa-banner-bg.webp";
 import DfreeAfricaLogo from "./dfree-africa-logo.webp";
 import BillionDollarLogo from "./billion-dollar-logo.webp";
 import PillarImg1 from "./pillar1-img.webp";
+import PillarImg1Mobile from "./pillar1-mobile-img.webp";
 import PillarImg2 from "./pillar2-img.webp";
+import PillarImg2Mobile from "./pillar2-mobile-img.webp";
 import PillarImg3 from "./pillar3-img.webp";
+import PillarImg3Mobile from "./pillar3-mobile-img.webp";
 import PillarImg4 from "./pillar4-img.webp";
+import PillarImg4Mobile from "./pillar4-mobile-img.webp";
 import PillarImg5 from "./pillar5-img.webp";
+import PillarImg5Mobile from "./pillar5-mobile-img.webp";
 import EventImg1 from "./event1-img.webp";
 import EventImg2 from "./event2-img.webp";
 import EventImg3 from "./event3-img.webp";
@@ -40,10 +45,15 @@ export {
   DfreeAfricaLogo,
   BillionDollarLogo,
   PillarImg1,
+  PillarImg1Mobile,
   PillarImg2,
+  PillarImg2Mobile,
   PillarImg3,
+  PillarImg3Mobile,
   PillarImg4,
+  PillarImg4Mobile,
   PillarImg5,
+  PillarImg5Mobile,
   EventImg1,
   EventImg2,
   EventImg3,

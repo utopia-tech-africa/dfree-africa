@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import React from "react";
 import Testimonials from "./components/testimonials/testimonials";
 import WhoWeAre from "./components/who-we-are/who-we-are";
+import Pillars from "./components/pillars/pillars";
 
 export const metadata: Metadata = createMetadata({
   title: "Home",
@@ -14,9 +15,10 @@ export const metadata: Metadata = createMetadata({
 const Home = () => {
   return (
     <>
-      <div className="grid h-screen place-items-center">
-        <WhoWeAre />
-        {/* <Testimonials /> */}
+      <div className="grid min-h-screen ">
+        {/* <WhoWeAre /> */}
+        <Pillars />
+        <Testimonials />
       </div>
     </>
   );
