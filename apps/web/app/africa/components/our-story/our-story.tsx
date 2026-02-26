@@ -54,9 +54,9 @@ export const OurStory = () => {
             className="absolute top-4 right-4 p-2 bg-white rounded-full text-black shadow-md cursor-pointer"
           >
             {isMuted ? (
-              <VolumeX className="stroke-neutral-1000 fill-neutral-1000 w-8 h-8" />
+              <VolumeX className="stroke-neutral-1000 fill-neutral-1000 w-4 h-4" />
             ) : (
-              <Volume2 className="stroke-neutral-1000 fill-neutral-1000 w-8 h-8" />
+              <Volume2 className="stroke-neutral-1000 fill-neutral-1000 w-4 h-4" />
             )}
           </div>
         </div>
