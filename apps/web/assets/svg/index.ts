@@ -4,6 +4,7 @@ import DfreeLogoWhite from "./dfree-logo-white";
 import DfreeLogo from "./dfree-logo";
 import QuotationMarks from "./quotation-marks";
 import GalleryPattern from "./gallery-pattern.svg";
+import MerchBgPattern from "./merch-bg-pattern.svg";
 
 export {
   WorldMapSvg,
@@ -12,4 +13,5 @@ export {
   DfreeLogo,
   GalleryPattern,
   QuotationMarks,
+  MerchBgPattern,
 };

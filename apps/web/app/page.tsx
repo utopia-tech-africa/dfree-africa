@@ -5,7 +5,9 @@ import Testimonials from "./components/testimonials/testimonials";
 import WhoWeAre from "./components/who-we-are/who-we-are";
 import Pillars from "./components/pillars/pillars";
 import { HomeHero } from "./components/home-hero";
+import { OurImpact } from "./components/our-impact";
 import { Events } from "./components/events";
+import Merch from "./components/merch/merch";
 import { Blogs } from "./components/blogs";
 
 export const metadata: Metadata = createMetadata({
@@ -22,9 +24,10 @@ const Home = () => {
         <HomeHero />
         <WhoWeAre />
         <Pillars />
-        {/* <WhoWeAre /> */}
+        <OurImpact />
         <Testimonials />
         <Events />
+        <Merch />
         <Blogs />
       </div>
     </>
