@@ -319,7 +319,7 @@ export const Header = () => {
           </nav>
 
           {/* Visit store button */}
-          <div className="border-t border-neutral-200 p-6">
+          <div className="border-t border-neutral-200 p-6 pb-10">
             <Link
               href="#store"
               onClick={() => setMobileMenuOpen(false)}
