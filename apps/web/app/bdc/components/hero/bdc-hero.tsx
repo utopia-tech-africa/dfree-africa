@@ -38,7 +38,7 @@ export default function BDCHero() {
               {HERO_CONTENT.title}
             </h1>
 
-            <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-[600px] border ">
+            <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-[600px]">
               {HERO_CONTENT.subtitle}
             </p>
 
