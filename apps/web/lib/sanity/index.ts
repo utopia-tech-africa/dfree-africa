@@ -1,5 +1,6 @@
 export { client } from "./client";
 export { urlFor } from "./image";
+export { getFeaturedMerch, getAllMerch, type MerchItemForUI } from "./merch";
 export {
   getFeaturedProjects,
   getProjects,

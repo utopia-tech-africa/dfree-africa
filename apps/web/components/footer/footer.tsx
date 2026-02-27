@@ -7,7 +7,10 @@ const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
 
 const Footer = () => {
   return (
-    <footer className="py-10 lg:py-12 w-full px-4 md:px-10 lg:px-20 mt-20 bg-primary-500 text-neutral-100">
+    <footer
+      id="footer"
+      className="mt-20 w-full scroll-mt-24 bg-primary-500 px-4 py-10 text-neutral-100 md:px-10 md:scroll-mt-28 lg:px-20 lg:py-12"
+    >
       <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]">
         <div className="h-7.25 md:h-11.25 w-fit object-cover">
           <DfreeLogoWhite />

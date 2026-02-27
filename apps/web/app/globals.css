@@ -18,6 +18,8 @@
     var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
   --font-poppins: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-roboto: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --font-space-grotesk:
+    var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
   --color-primary-100: #c4d9ae;
   --color-primary-200: #a7c586;
@@ -206,5 +208,11 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+  .maplibregl-popup-content {
+    @apply bg-transparent! shadow-none! p-0! rounded-none!;
+  }
+  .maplibregl-popup-tip {
+    @apply hidden!;
   }
 }

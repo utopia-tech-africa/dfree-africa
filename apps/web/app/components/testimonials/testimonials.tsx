@@ -28,7 +28,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-neutral-100 py-24 md:py-20 lg:py-40">
+    <section className="relative overflow-hidden bg-neutral-100 py-24 md:py-20 lg:py-40 mb-10 lg:mb-16">
       <ComponentLayout>
         <div className="relative z-10 max-w-3xl mx-auto mb-10 md:mb-6 text-center flex flex-col gap-3 px-4 sm:px-0">
           <Title className="font-montserrat" text="Testimonials" />

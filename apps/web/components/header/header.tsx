@@ -26,34 +26,34 @@ const NAV_ITEMS: NavItem[] = [
     href: "#",
     subItems: [
       { label: "Our story", href: "#our-story" },
-      { label: "Our vision", href: "#our-vision" },
-      { label: "Our mission", href: "#our-mission" },
+      { label: "Our vision", href: "#our-story" },
+      { label: "Our mission", href: "#our-story" },
     ],
   },
   {
     label: "Impact",
     href: "#",
     subItems: [
-      { label: "Billion dollar challenge", href: "#billion-dollar-challenge" },
+      { label: "Billion dollar challenge", href: "#" },
       {
         label: "Global Foundation in Africa",
-        href: "#global-foundation-africa",
+        href: "/africa",
       },
-      { label: "Community campaigns", href: "#community-campaigns" },
+      { label: "Community campaigns", href: "#" },
       {
         label: "Foundation Scholarship Commitment",
-        href: "#foundation-scholarship-commitment",
+        href: "#",
       },
-      { label: "FinFe$t", href: "#finfest" },
+      { label: "FinFe$t", href: "#" },
     ],
   },
   {
     label: "Get involved",
     href: "#",
     subItems: [
-      { label: "Get merch", href: "#get-merch" },
-      { label: "Get Books", href: "#get-books" },
-      { label: "Contact us", href: "#contact" },
+      { label: "Get merch", href: "https://store.dfree.com/" },
+      { label: "Get Books", href: "https://store.dfree.com/" },
+      { label: "Contact us", href: "#footer" },
     ],
   },
 ];
@@ -195,7 +195,7 @@ export const Header = () => {
           </nav>
           <div className="flex gap-x-6 items-center">
             <Link
-              href="#contact"
+              href="#footer"
               className="text-sm font-medium text-neutral-100 hover:text-white hidden md:flex"
             >
               Contact us
