@@ -19,7 +19,7 @@ const HERO_CONTENT = {
   },
 };
 
-export default function BDCHero() {
+export function BDCHero() {
   return (
     <section className="relative w-full min-h-150 h-dvh flex flex-col overflow-hidden">
       <div className="absolute inset-0">
