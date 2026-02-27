@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
-import { DfreeLogoWhite } from "@/assets/svg";
+import { DfreeLogo, DfreeLogoWhite } from "@/assets/svg";
 
 type NavSubItem = {
   label: string;
@@ -92,6 +93,7 @@ function NavTrigger({
 }
 
 export const Header = () => {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<HoveredNavKey>(null);
   const [expandedMobileSection, setExpandedMobileSection] = useState<
@@ -100,6 +102,7 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
+  const useColoredLogo = pathname.startsWith("/africa/projects");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -141,7 +144,7 @@ export const Header = () => {
             className="flex shrink-0 items-center"
             aria-label="dfree home"
           >
-            <DfreeLogoWhite />
+            {useColoredLogo ? <DfreeLogo /> : <DfreeLogoWhite />}
           </Link>
 
           {/* Desktop nav */}
@@ -316,7 +319,7 @@ export const Header = () => {
           </nav>
 
           {/* Visit store button */}
-          <div className="border-t border-neutral-200 p-6">
+          <div className="border-t border-neutral-200 p-6 pb-10">
             <Link
               href="#store"
               onClick={() => setMobileMenuOpen(false)}

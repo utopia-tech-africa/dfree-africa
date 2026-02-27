@@ -8,7 +8,7 @@ export const Merch = async () => {
   const merch = await getFeaturedMerch();
 
   return (
-    <section className="relative w-full flex flex-col justify-center overflow-hidden bg-primary-500 py-12 md:py-2">
+    <section className="relative w-full flex flex-col justify-center overflow-hidden bg-primary-500 py-12 md:py-2 mb-10 md:mb-13 lg:mb-20">
       {/* Background pattern */}
       <div className="absolute inset-y-0 left-0 w-full pointer-events-none">
         <Image
