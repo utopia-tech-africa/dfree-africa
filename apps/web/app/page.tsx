@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
 const Home = () => {
   return (
     <>
-      <div className="grid min-h-screen">
+      <div className="grid min-h-dvh">
         <HomeHero />
         <WhoWeAre />
         <Pillars />
