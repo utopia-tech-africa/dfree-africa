@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { eventsData } from "@/lib/events";
 import { cn } from "@/lib/utils";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const SCROLL_EDGE_THRESHOLD = 10;
 
@@ -103,22 +104,31 @@ export const Events = () => {
             </p>
           </div>
 
-          <Button
-            size="lg"
-            className="group cursor-pointer flex items-center justify-between text-lg shrink-0 bg-primary-500 hover:bg-primary-600 transition-colors font-medium duration-300 font-montserrat px-4 py-3 overflow-hidden relative"
-          >
-            <span className="relative z-10">View all events</span>
+          <Link className="w-fit" href="">
+            <Button
+              variant="default"
+              size="default"
+              className="hidden md:flex h-auto gap-3 px-3 py-3 text-sm leading-[1.3] font-medium md:px-8 md:text-lg overflow-hidden relative"
+            >
+              <span className="relative z-10">View all events</span>
 
-            <span className="relative w-6 h-6 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full group-hover:translate-x-1.5">
-                <ArrowRight size={16} />
-              </div>
+              <span className="relative w-6 h-6 overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full group-hover:translate-x-1.5">
+                  <ArrowRight
+                    className="size-4.5 shrink-0 md:size-5"
+                    strokeWidth={2}
+                  />
+                </div>
 
-              <div className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-300 group-hover:translate-y-0 group-hover:translate-x-1.5">
-                <ArrowRight size={16} />
-              </div>
-            </span>
-          </Button>
+                <div className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-300 group-hover:translate-y-0 group-hover:translate-x-1.5">
+                  <ArrowRight
+                    className="size-4.5 shrink-0 md:size-5"
+                    strokeWidth={2}
+                  />
+                </div>
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -152,8 +162,8 @@ export const Events = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between mt-6">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mt-6 gap-6 md:gap-0">
+          <div className="flex md:flex-none justify-center items-center gap-2">
             {eventsData.events.map((_, index) => (
               <button
                 key={index}
@@ -171,7 +181,7 @@ export const Events = () => {
             ))}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3">
             <button
               type="button"
               onClick={goPrev}
@@ -194,6 +204,34 @@ export const Events = () => {
               <ArrowRight size={18} />
             </button>
           </div>
+        </div>
+
+        <div className="mt-4 md:hidden flex justify-center">
+          <Link className="mx-auto" href="">
+            <Button
+              variant="default"
+              size="default"
+              className="flex items-center justify-center h-auto text-sm py-2 leading-[1.3] font-medium md:px-8 md:text-lg overflow-hidden relative"
+            >
+              <span className="relative z-10">View all events</span>
+
+              <span className="relative w-6 h-6 overflow-hidden ms-2">
+                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full group-hover:translate-x-1.5">
+                  <ArrowRight
+                    className="size-4.5 shrink-0 md:size-5"
+                    strokeWidth={2}
+                  />
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-300 group-hover:translate-y-0 group-hover:translate-x-1.5">
+                  <ArrowRight
+                    className="size-4.5 shrink-0 md:size-5"
+                    strokeWidth={2}
+                  />
+                </div>
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
     </ComponentLayout>

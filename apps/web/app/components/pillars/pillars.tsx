@@ -1,8 +1,12 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState, type CSSProperties } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  useLayoutEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type RefObject,
+} from "react";
 import { OUR_PILLARS } from "@/lib/pillars";
 import ComponentLayout from "@/components/component-layout";
 import { PillarCard } from "./pillar-card";
@@ -13,7 +17,7 @@ const PILLAR_HEADER_HEIGHT_FALLBACK = 120;
 function PillarsHeader({
   headerRef,
 }: {
-  headerRef: React.RefObject<HTMLElement | null>;
+  headerRef: RefObject<HTMLElement | null>;
 }) {
   return (
     <header
@@ -36,39 +40,58 @@ function PillarsHeader({
   );
 }
 
+function PillarStackItem({
+  index,
+  children,
+}: {
+  index: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className="sticky top-(--pillar-sticky-offset)"
+      style={{
+        minHeight: "var(--pillar-card-height)",
+        zIndex: 20 + index,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 const Pillars = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLElement>(null);
-  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   const [layout, setLayout] = useState({
     navbarHeight: 0,
     pillarHeaderHeight: PILLAR_HEADER_HEIGHT_FALLBACK,
-    cardHeight: 0,
     ready: false,
   });
 
   useLayoutEffect(() => {
-    const sectionEl = sectionRef.current;
     const pillarHeaderEl = headerRef.current;
     const globalHeaderEl = document.querySelector<HTMLElement>(
       '[data-global-header="true"]',
     );
-    if (!sectionEl || !pillarHeaderEl || !globalHeaderEl) return;
+    if (!pillarHeaderEl || !globalHeaderEl) return;
 
     const measure = () => {
       const navbarHeight = globalHeaderEl.getBoundingClientRect().height;
       const pillarHeaderHeight = pillarHeaderEl.getBoundingClientRect().height;
-      const cardHeight = Math.max(
-        0,
-        Math.ceil(window.innerHeight - navbarHeight - pillarHeaderHeight),
-      );
+      setLayout((prev) => {
+        const next = {
+          navbarHeight,
+          pillarHeaderHeight,
+          ready: navbarHeight > 0 && pillarHeaderHeight > 0,
+        };
+        const didChange =
+          prev.navbarHeight !== next.navbarHeight ||
+          prev.pillarHeaderHeight !== next.pillarHeaderHeight ||
+          prev.ready !== next.ready;
 
-      setLayout({
-        navbarHeight,
-        pillarHeaderHeight,
-        cardHeight,
-        ready: navbarHeight > 0 && pillarHeaderHeight > 0 && cardHeight > 0,
+        return didChange ? next : prev;
       });
     };
 
@@ -78,57 +101,29 @@ const Pillars = () => {
     observer.observe(globalHeaderEl);
     observer.observe(pillarHeaderEl);
     window.addEventListener("resize", measure);
-    window.visualViewport?.addEventListener("resize", measure);
+    window.addEventListener("orientationchange", measure);
 
     return () => {
       observer.disconnect();
       window.removeEventListener("resize", measure);
-      window.visualViewport?.removeEventListener("resize", measure);
+      window.removeEventListener("orientationchange", measure);
     };
   }, []);
-
-  useLayoutEffect(() => {
-    if (!layout.ready) return;
-
-    const sectionEl = sectionRef.current;
-    const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
-    if (!sectionEl || cards.length === 0) return;
-
-    gsap.registerPlugin(ScrollTrigger);
-    const stickyOffset = layout.navbarHeight + layout.pillarHeaderHeight;
-
-    const ctx = gsap.context(() => {
-      cards.forEach((card, index) => {
-        const nextCard = cards[index + 1];
-
-        ScrollTrigger.create({
-          trigger: card,
-          start: `top top+=${stickyOffset}`,
-          endTrigger: nextCard ?? sectionEl,
-          end: nextCard ? `top top+=${stickyOffset}` : "bottom bottom",
-          pin: true,
-          pinSpacing: false,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        });
-      });
-    }, sectionEl);
-
-    ScrollTrigger.refresh();
-    return () => ctx.revert();
-  }, [layout]);
 
   return (
     <section
       id="pillars-section"
       ref={sectionRef}
-      className="w-full bg-neutral-100 mb-20 scroll-mt-24 md:mb-30 md:scroll-mt-28 lg:mb-40"
+      className="mb-20 w-full overflow-x-clip bg-neutral-100 scroll-mt-24 md:mb-30 md:scroll-mt-28 lg:mb-40"
       aria-labelledby="pillars-heading"
       style={
         {
           "--navbar-height": `${layout.navbarHeight}px`,
           "--pillar-header-height": `${layout.pillarHeaderHeight}px`,
-          "--pillar-card-height": `${layout.cardHeight}px`,
+          "--pillar-sticky-offset":
+            "calc(var(--navbar-height) + var(--pillar-header-height))",
+          "--pillar-card-height":
+            "calc(100svh - var(--navbar-height) - var(--pillar-header-height))",
         } as CSSProperties
       }
     >
@@ -143,12 +138,7 @@ const Pillars = () => {
         className={layout.ready ? "flex flex-col" : "flex flex-col opacity-0"}
       >
         {OUR_PILLARS.pillars.map((item, index) => (
-          <div
-            key={item.pillar}
-            ref={(el) => {
-              cardRefs.current[index] = el;
-            }}
-          >
+          <PillarStackItem key={item.pillar} index={index}>
             <PillarCard
               title={item.pillar}
               description={item.description}
@@ -160,7 +150,7 @@ const Pillars = () => {
               buttonText="Discover more"
               stackIndex={index}
             />
-          </div>
+          </PillarStackItem>
         ))}
       </div>
     </section>

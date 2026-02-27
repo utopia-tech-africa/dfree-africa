@@ -70,14 +70,14 @@ const Footer = () => {
             <p className="block md:hidden font-poppins text-sm leading-[120%] text-neutral-100">
               Stay connected with our latest updates and transformative work
             </p>
-            <div className="flex items-center gap-3 md:gap-4 w-full">
+            <div className="flex w-full flex-col gap-3 md:flex-row md:items-center md:gap-4">
               <Input
                 type="email"
                 placeholder="Enter email address"
-                className="w-fit md:flex-1 border border-neutral-100 bg-transparent px-2 md:px-5 py-6 rounded-[100px] placeholder:text-neutral-300 placeholder:text-sm focus:outline-none md:w-auto"
+                className="w-full rounded-[100px] border border-neutral-100 bg-transparent px-2 py-6 placeholder:text-sm placeholder:text-neutral-300 focus:outline-none md:min-w-[300px] md:flex-1 md:px-5 lg:min-w-[360px]"
               />
               <Button
-                className="font-bold py-6 rouned-[100px]"
+                className="w-full py-6 font-bold md:w-auto"
                 variant={"secondary"}
               >
                 Submit
