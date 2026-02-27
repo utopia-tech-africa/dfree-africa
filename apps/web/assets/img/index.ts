@@ -37,6 +37,7 @@ import HomeHeroBookImg from "./home-hero-book-img.webp";
 import CampaignsHeroImg from "./campaigns-hero-img.webp";
 import CampaignsWhatWeDoImg from "./campaigns-what-we-do-img.webp";
 import BDCHeroImg from "./bdc-hero-img.webp";
+import BDCAboutImg from "./bdc-about-img.webp";
 
 export {
   AfricaHeroImg,
@@ -78,4 +79,5 @@ export {
   CampaignsHeroImg,
   CampaignsWhatWeDoImg,
   BDCHeroImg,
+  BDCAboutImg,
 };
