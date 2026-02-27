@@ -56,7 +56,7 @@ export const HomeHero = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center justify-center relative shrink-0 border border-red-500">
+        <div className="hidden lg:flex items-center justify-center relative shrink-0">
           <div className="relative w-70 h-70 flex items-center justify-center">
             <div className="absolute inset-0 rounded-full border-4 border-[#537034] bg-white/20 backdrop-blur-[10px]" />
 
