@@ -6,14 +6,18 @@ import { BDCHeroImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 
 const HERO_CONTENT = {
-  title: "DFREE® Billion Dollar Challenge",
+  title: (
+    <>
+      DFREE<sup>®</sup> Billion Dollar Challenge
+    </>
+  ),
   subtitle:
     "Eliminate debt, build savings, and take control of your financial future through a digital platform built on community accountability.",
   cta: {
     label: "Join BDC today",
     href: "#",
   },
-} as const;
+};
 
 export default function BDCHero() {
   return (
