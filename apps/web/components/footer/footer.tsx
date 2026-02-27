@@ -71,7 +71,7 @@ const Footer = () => {
               <Input
                 type="email"
                 placeholder="Enter email address"
-                className="w-fit md:flex-1 border border-neutral-100 bg-transparent px-2 md:px-5 py-6 rounded-[100px] placeholder:text-neutral-300 placeholder:text-sm focus:outline-none md:w-auto"
+                className="w-fit md:flex-1 border border-neutral-100 bg-transparent px-2 md:px-5 py-6 rounded-[100px] placeholder:text-neutral-300 placeholder:text-sm  focus:outline-none md:w-auto"
               />
               <Button
                 className="font-bold py-6 rouned-[100px]"
