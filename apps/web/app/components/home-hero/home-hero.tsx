@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { HomeHeroBookImg } from "@/assets";
 import { ArrowRight } from "lucide-react";
 
@@ -36,13 +37,15 @@ export const HomeHero = () => {
           </p>
 
           <div className="flex flex-row items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
-            <Button
-              size="lg"
-              className="px-4 sm:px-6 lg:px-10 py-3 sm:py-4 lg:py-5 text-white text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"
-            >
-              Discover more
-              <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
-            </Button>
+            <Link href="#pillars-section" className="flex-1 sm:flex-none">
+              <Button
+                size="lg"
+                className="w-full px-4 sm:px-6 lg:px-10 py-3 sm:py-4 lg:py-5 text-white text-xs sm:text-sm lg:text-base font-medium"
+              >
+                Discover more
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
+              </Button>
+            </Link>
 
             <Button
               size="lg"

@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
-import { DfreeLogoWhite } from "@/assets/svg";
+import { DfreeLogo, DfreeLogoWhite } from "@/assets/svg";
 
 type NavSubItem = {
   label: string;
@@ -26,34 +27,34 @@ const NAV_ITEMS: NavItem[] = [
     href: "#",
     subItems: [
       { label: "Our story", href: "#our-story" },
-      { label: "Our vision", href: "#our-vision" },
-      { label: "Our mission", href: "#our-mission" },
+      { label: "Our vision", href: "#our-story" },
+      { label: "Our mission", href: "#our-story" },
     ],
   },
   {
     label: "Impact",
     href: "#",
     subItems: [
-      { label: "Billion dollar challenge", href: "#billion-dollar-challenge" },
+      { label: "Billion dollar challenge", href: "#" },
       {
         label: "Global Foundation in Africa",
-        href: "#global-foundation-africa",
+        href: "/africa",
       },
-      { label: "Community campaigns", href: "#community-campaigns" },
+      { label: "Community campaigns", href: "#" },
       {
         label: "Foundation Scholarship Commitment",
-        href: "#foundation-scholarship-commitment",
+        href: "#",
       },
-      { label: "FinFe$t", href: "#finfest" },
+      { label: "FinFe$t", href: "#" },
     ],
   },
   {
     label: "Get involved",
     href: "#",
     subItems: [
-      { label: "Get merch", href: "#get-merch" },
-      { label: "Get Books", href: "#get-books" },
-      { label: "Contact us", href: "#contact" },
+      { label: "Get merch", href: "https://store.dfree.com/" },
+      { label: "Get Books", href: "https://store.dfree.com/" },
+      { label: "Contact us", href: "#footer" },
     ],
   },
 ];
@@ -92,6 +93,7 @@ function NavTrigger({
 }
 
 export const Header = () => {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<HoveredNavKey>(null);
   const [expandedMobileSection, setExpandedMobileSection] = useState<
@@ -100,6 +102,7 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
+  const useColoredLogo = pathname.startsWith("/africa/projects");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -141,7 +144,7 @@ export const Header = () => {
             className="flex shrink-0 items-center"
             aria-label="dfree home"
           >
-            <DfreeLogoWhite />
+            {useColoredLogo ? <DfreeLogo /> : <DfreeLogoWhite />}
           </Link>
 
           {/* Desktop nav */}
@@ -195,7 +198,7 @@ export const Header = () => {
           </nav>
           <div className="flex gap-x-6 items-center">
             <Link
-              href="#contact"
+              href="#footer"
               className="text-sm font-medium text-neutral-100 hover:text-white hidden md:flex"
             >
               Contact us
@@ -316,7 +319,7 @@ export const Header = () => {
           </nav>
 
           {/* Visit store button */}
-          <div className="border-t border-neutral-200 p-6">
+          <div className="border-t border-neutral-200 p-6 pb-10">
             <Link
               href="#store"
               onClick={() => setMobileMenuOpen(false)}

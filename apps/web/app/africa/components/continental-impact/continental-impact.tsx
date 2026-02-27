@@ -24,14 +24,14 @@ const CONTINENTAL_IMPACT = {
       description:
         "Empowering communities with financial education and community development projects.",
       flag: GhanaFlag,
-      href: "#",
+      href: "/africa/continental/ghana",
     },
     {
       country: "South Africa",
       description:
         "Promoting financial freedom in partnership with the Baptist Convention of South Africa.",
       flag: SouthAfricanFlag,
-      href: "#",
+      href: "/africa/continental/south-africa",
     },
     {
       country: "Uganda",

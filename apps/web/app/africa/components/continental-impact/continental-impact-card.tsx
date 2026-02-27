@@ -52,7 +52,7 @@ export const ContinentalImpactCard = ({
           </div>
           <Link
             href={href}
-            className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+            className={cn(buttonVariants({ variant: "ghost", size: "lg" }))}
           >
             Learn more
           </Link>
