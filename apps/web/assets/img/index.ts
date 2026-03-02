@@ -48,6 +48,7 @@ import BDCPartnersLogo4 from "./bdc-partners-logo4.webp";
 import BDCPartnersLogo5 from "./bdc-partners-logo5.webp";
 import BDCPartnersLogo6 from "./bdc-partners-logo6.webp";
 import BDCBannerImg from "./bdc-banner-img.webp";
+import AccessSholarshipsHeroImg from "./access-sholarships-hero-img.webp";
 
 export {
   AfricaHeroImg,
@@ -100,4 +101,5 @@ export {
   BDCPartnersLogo5,
   BDCPartnersLogo6,
   BDCBannerImg,
+  AccessSholarshipsHeroImg,
 };
