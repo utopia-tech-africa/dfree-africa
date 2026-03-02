@@ -1,6 +1,13 @@
-import { BDCHero, AboutBdc, BDCImpact } from "./components";
-import Audience from "./components/audience/audience";
-import { HowItWorks } from "./components/how-it-works";
+import Testimonials from "../components/testimonials/testimonials";
+import {
+  BDCHero,
+  AboutBdc,
+  BDCImpact,
+  HowItWorks,
+  Partners,
+  Audience,
+  BDCBanner,
+} from "./components";
 
 export default function BDCPage() {
   return (
@@ -10,6 +17,9 @@ export default function BDCPage() {
       <BDCImpact />
       <HowItWorks />
       <Audience />
+      <Partners />
+      <Testimonials />
+      <BDCBanner />
     </div>
   );
 }
