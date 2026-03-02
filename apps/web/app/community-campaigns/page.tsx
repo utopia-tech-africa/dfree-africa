@@ -4,7 +4,7 @@ import { CampaignsHero } from "./components/campaigns-hero";
 
 const CommunityCampaignsPage = () => {
   return (
-    <div>
+    <div className="grid min-h-dvh">
       <CampaignsHero />
       <CampaignsWhatWeDo />
       <CampaignsFeatured />

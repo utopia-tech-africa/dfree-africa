@@ -27,7 +27,7 @@ export const CAMPAIGNS_FEATURED_CONTENT = {
 const CampaignsFeatured = () => {
   return (
     <ComponentLayout>
-      <section className="flex flex-col md:flex-row items-stretch">
+      <section className="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 items-stretch">
         <div className="flex-1 flex flex-col justify-center">
           <Title text="Featured Campaigns" />
           <h1 className="font-montserrat font-bold text-2xl md:text-3xl lg:text-[46px] leading-[120%] text-neutral-1000 my-4">
