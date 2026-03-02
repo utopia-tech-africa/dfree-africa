@@ -41,6 +41,12 @@ import BDCAboutImg from "./bdc-about-img.webp";
 import BDCAudienceImg1 from "./bdc-audience-img1.webp";
 import BDCAudienceImg2 from "./bdc-audience-img2.webp";
 import BDCAudienceImg3 from "./bdc-audience-img3.webp";
+import BDCPartnersLogo1 from "./bdc-partners-logo1.webp";
+import BDCPartnersLogo2 from "./bdc-partners-logo2.webp";
+import BDCPartnersLogo3 from "./bdc-partners-logo3.webp";
+import BDCPartnersLogo4 from "./bdc-partners-logo4.webp";
+import BDCPartnersLogo5 from "./bdc-partners-logo5.webp";
+import BDCPartnersLogo6 from "./bdc-partners-logo6.webp";
 
 export {
   AfricaHeroImg,
@@ -86,4 +92,10 @@ export {
   BDCAudienceImg1,
   BDCAudienceImg2,
   BDCAudienceImg3,
+  BDCPartnersLogo1,
+  BDCPartnersLogo2,
+  BDCPartnersLogo3,
+  BDCPartnersLogo4,
+  BDCPartnersLogo5,
+  BDCPartnersLogo6,
 };
