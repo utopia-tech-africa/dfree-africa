@@ -1,11 +1,13 @@
+import Testimonials from "../components/testimonials/testimonials";
 import {
   BDCHero,
   AboutBdc,
   BDCImpact,
   HowItWorks,
   Partners,
+  Audience,
+  BDCBanner,
 } from "./components";
-import Audience from "./components/audience/audience";
 
 export default function BDCPage() {
   return (
@@ -16,6 +18,8 @@ export default function BDCPage() {
       <HowItWorks />
       <Audience />
       <Partners />
+      <Testimonials />
+      <BDCBanner />
     </div>
   );
 }

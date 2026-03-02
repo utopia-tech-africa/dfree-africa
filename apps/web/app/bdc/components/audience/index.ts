@@ -1,1 +1,1 @@
-export * from "./audience";
+export { default as Audience } from "./audience";

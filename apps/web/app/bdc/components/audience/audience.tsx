@@ -27,7 +27,7 @@ const audiences = [
   },
 ];
 
-const Audience = () => {
+export default function Audience() {
   return (
     <ComponentLayout className="flex flex-col items-center text-center space-y-4 md:space-y-6">
       <div className="space-y-1 max-w-[800px]">
@@ -67,6 +67,4 @@ const Audience = () => {
       </div>
     </ComponentLayout>
   );
-};
-
-export default Audience;
+}
