@@ -38,6 +38,9 @@ import CampaignsHeroImg from "./campaigns-hero-img.webp";
 import CampaignsWhatWeDoImg from "./campaigns-what-we-do-img.webp";
 import BDCHeroImg from "./bdc-hero-img.webp";
 import BDCAboutImg from "./bdc-about-img.webp";
+import BDCAudienceImg1 from "./bdc-audience-img1.webp";
+import BDCAudienceImg2 from "./bdc-audience-img2.webp";
+import BDCAudienceImg3 from "./bdc-audience-img3.webp";
 
 export {
   AfricaHeroImg,
@@ -80,4 +83,7 @@ export {
   CampaignsWhatWeDoImg,
   BDCHeroImg,
   BDCAboutImg,
+  BDCAudienceImg1,
+  BDCAudienceImg2,
+  BDCAudienceImg3,
 };

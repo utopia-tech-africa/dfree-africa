@@ -1,4 +1,6 @@
 import { BDCHero, AboutBdc, BDCImpact } from "./components";
+import Audience from "./components/audience/audience";
+import { HowItWorks } from "./components/how-it-works";
 
 export default function BDCPage() {
   return (
@@ -6,6 +8,8 @@ export default function BDCPage() {
       <BDCHero />
       <AboutBdc />
       <BDCImpact />
+      <HowItWorks />
+      <Audience />
     </div>
   );
 }
