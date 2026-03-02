@@ -1,1 +1,1 @@
-export * from "./access-sholarships-hero";
+export * from "./asc-hero";

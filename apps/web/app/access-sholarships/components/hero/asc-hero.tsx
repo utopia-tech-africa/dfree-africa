@@ -23,7 +23,7 @@ const HERO_CONTENT = {
   ],
 };
 
-export function AccessSholarshipsHero() {
+export function ASCHero() {
   return (
     <section className="relative w-full min-h-150 h-dvh flex flex-col overflow-hidden">
       <div className="absolute inset-0">
@@ -37,7 +37,7 @@ export function AccessSholarshipsHero() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-[#000000]/50" aria-hidden />
+      <div className="absolute inset-0 bg-black/50" aria-hidden />
 
       <ComponentLayout className="w-full h-full z-10 flex flex-col justify-end pb-8 sm:pb-12 md:pb-16 lg:pb-20">
         <div className="w-full text-start">
@@ -50,7 +50,7 @@ export function AccessSholarshipsHero() {
               {HERO_CONTENT.subtitle}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex gap-4">
               {HERO_CONTENT.actions.map((action, index) => (
                 <Link
                   key={index}
