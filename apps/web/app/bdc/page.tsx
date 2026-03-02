@@ -1,3 +1,4 @@
+import Testimonials from "../components/testimonials/testimonials";
 import {
   BDCHero,
   AboutBdc,
@@ -17,6 +18,7 @@ export default function BDCPage() {
       <HowItWorks />
       <Audience />
       <Partners />
+      <Testimonials />
       <BDCBanner />
     </div>
   );
