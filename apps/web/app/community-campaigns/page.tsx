@@ -1,6 +1,7 @@
 import { CampaignsWhatWeDo } from "./components";
-import CampaignsFeatured from "./components/campaigns-featured/campaigns-featured";
+import { CampaignsFeatured } from "./components/campaigns-featured";
 import { CampaignsHero } from "./components/campaigns-hero";
+import { CampaignsResults } from "./components/campaigns-results";
 
 const CommunityCampaignsPage = () => {
   return (
@@ -8,6 +9,7 @@ const CommunityCampaignsPage = () => {
       <CampaignsHero />
       <CampaignsWhatWeDo />
       <CampaignsFeatured />
+      <CampaignsResults />
     </div>
   );
 };

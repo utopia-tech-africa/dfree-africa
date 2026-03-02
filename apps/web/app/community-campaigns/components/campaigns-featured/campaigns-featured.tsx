@@ -24,7 +24,7 @@ export const CAMPAIGNS_FEATURED_CONTENT = {
   href: "#",
 } as const;
 
-const CampaignsFeatured = () => {
+export const CampaignsFeatured = () => {
   return (
     <ComponentLayout>
       <section className="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 items-stretch">
@@ -82,5 +82,3 @@ const CampaignsFeatured = () => {
     </ComponentLayout>
   );
 };
-
-export default CampaignsFeatured;
