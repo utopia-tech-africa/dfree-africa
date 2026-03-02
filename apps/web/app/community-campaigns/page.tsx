@@ -1,4 +1,5 @@
 import { CampaignsWhatWeDo } from "./components";
+import CampaignsFeatured from "./components/campaigns-featured/campaigns-featured";
 import { CampaignsHero } from "./components/campaigns-hero";
 
 const CommunityCampaignsPage = () => {
@@ -6,6 +7,7 @@ const CommunityCampaignsPage = () => {
     <div>
       <CampaignsHero />
       <CampaignsWhatWeDo />
+      <CampaignsFeatured />
     </div>
   );
 };
