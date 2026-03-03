@@ -2,10 +2,11 @@ import Image from "next/image";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { ASCAboutImg } from "@/assets/img";
+import ComponentLayout from "@/components/component-layout";
 
 export function ASCAbout() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <ComponentLayout className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       {/* Left Column: Text Content */}
       <div className="space-y-4 md:space-y-6">
         <div className="space-y-2">
@@ -39,6 +40,6 @@ export function ASCAbout() {
           sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </div>
-    </div>
+    </ComponentLayout>
   );
 }
