@@ -1,8 +1,8 @@
-import ComponentLayout from "@/components/component-layout";
 import {
   ASCAbout,
   ASCAccessibilty,
   ASCHero,
+  AscHowItWorks,
   ASCWhatsCovered,
   ASCWhyScholarshipsMatterSection,
 } from "./components";
@@ -15,6 +15,7 @@ export default function AccessSholarships() {
       <ASCWhyScholarshipsMatterSection />
       <ASCWhatsCovered />
       <ASCAccessibilty />
+      <AscHowItWorks />
     </div>
   );
 }
