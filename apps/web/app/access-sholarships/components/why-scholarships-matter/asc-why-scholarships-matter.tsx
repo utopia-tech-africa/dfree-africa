@@ -4,7 +4,7 @@ import { ASCWhyScholarshipsMatterPattern } from "@/assets/svg";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 
-export const WhyScholarshipsMatterSection = () => {
+export const ASCWhyScholarshipsMatterSection = () => {
   const bulletPoints = [
     "Increase participation in DFREE® programming and services",
     "Support communities disproportionately impacted by debt",
@@ -19,7 +19,7 @@ export const WhyScholarshipsMatterSection = () => {
         {/* Left Content */}
         <div className="relative flex flex-col justify-center px-6 md:px-12 lg:px-20 xl:pl-48 xl:pr-24 py-16 md:py-24">
           {/* Pattern Background */}
-          <div className="absolute inset-0 opacity-15 pointer-events-none">
+          <div className="absolute inset-0 opacity-95 pointer-events-none">
             <Image
               src={ASCWhyScholarshipsMatterPattern}
               alt="Background Pattern"
