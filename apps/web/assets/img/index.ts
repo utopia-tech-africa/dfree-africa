@@ -53,6 +53,8 @@ import BDCBannerImg from "./bdc-banner-img.webp";
 import AccessSholarshipsHeroImg from "./access-sholarships-hero-img.webp";
 import ASCAboutImg from "./asc-about-img.webp";
 import ASCWhyScholarshipsMatterImg from "./asc-why-scholarships-matter-img.webp";
+import ASCWhatsCoveredImg1 from "./asc-whats-covered-img1.webp";
+import ASCWhatsCoveredImg2 from "./asc-whats-covered-img2.webp";
 
 export {
   AfricaHeroImg,
@@ -110,4 +112,6 @@ export {
   AccessSholarshipsHeroImg,
   ASCAboutImg,
   ASCWhyScholarshipsMatterImg,
+  ASCWhatsCoveredImg1,
+  ASCWhatsCoveredImg2,
 };
