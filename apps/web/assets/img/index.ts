@@ -32,7 +32,7 @@ import WhoWeAreImg1 from "./who-we-are1-img.webp";
 import WhoWeAreImg2 from "./who-we-are2-img.webp";
 import WhoWeAreImg3 from "./who-we-are3-img.webp";
 import WhoWeAreImg4 from "./who-we-are4-img.webp";
-import DefreeLogoBg from "./defree-logo-bg.webp";
+import DfreeLogoBg from "./defree-logo-bg.webp";
 import HomeHeroBookImg from "./home-hero-book-img.webp";
 import CampaignsHeroImg from "./campaigns-hero-img.webp";
 import FeaturedCampaignsImg from "./featured-campaigns-img.webp";
@@ -55,6 +55,7 @@ import ASCAboutImg from "./asc-about-img.webp";
 import ASCWhyScholarshipsMatterImg from "./asc-why-scholarships-matter-img.webp";
 import ASCWhatsCoveredImg1 from "./asc-whats-covered-img1.webp";
 import ASCWhatsCoveredImg2 from "./asc-whats-covered-img2.webp";
+import ASCAccessibiltyImg from "./asc-accessibilty-img.webp";
 
 export {
   AfricaHeroImg,
@@ -91,7 +92,7 @@ export {
   WhoWeAreImg2,
   WhoWeAreImg3,
   WhoWeAreImg4,
-  DefreeLogoBg,
+  DfreeLogoBg,
   HomeHeroBookImg,
   CampaignsHeroImg,
   CampaignsWhatWeDoImg,
@@ -114,4 +115,5 @@ export {
   ASCWhyScholarshipsMatterImg,
   ASCWhatsCoveredImg1,
   ASCWhatsCoveredImg2,
+  ASCAccessibiltyImg,
 };

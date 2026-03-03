@@ -1,6 +1,7 @@
 import ComponentLayout from "@/components/component-layout";
 import {
   ASCAbout,
+  ASCAccessibilty,
   ASCHero,
   ASCWhatsCovered,
   ASCWhyScholarshipsMatterSection,
@@ -8,11 +9,12 @@ import {
 
 export default function AccessSholarships() {
   return (
-    <div>
+    <div className="space-y-10">
       <ASCHero />
       <ASCAbout />
       <ASCWhyScholarshipsMatterSection />
       <ASCWhatsCovered />
+      <ASCAccessibilty />
     </div>
   );
 }
