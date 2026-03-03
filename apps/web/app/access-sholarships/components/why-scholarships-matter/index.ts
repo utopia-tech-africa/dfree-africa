@@ -1,1 +1,1 @@
-export * from "./why-scholarships-matter";
+export * from "./asc-why-scholarships-matter";
