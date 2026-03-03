@@ -6,6 +6,7 @@ import QuotationMarks from "./quotation-marks";
 import GalleryPattern from "./gallery-pattern.svg";
 import MerchBgPattern from "./merch-bg-pattern.svg";
 import BDCImpactPattern from "./bdc-impact-pattern.svg";
+import CampaignsResultsPattern from "./campaigns-results-pattern";
 import ASCWhyScholarshipsMatterPattern from "./asc-why-scholarships-matter-pattern.svg";
 
 export {
@@ -17,5 +18,6 @@ export {
   QuotationMarks,
   MerchBgPattern,
   BDCImpactPattern,
+  CampaignsResultsPattern,
   ASCWhyScholarshipsMatterPattern,
 };
