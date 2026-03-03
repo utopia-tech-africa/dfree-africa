@@ -4,7 +4,7 @@ import { ASCWhyScholarshipsMatterPattern } from "@/assets/svg";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 
-export const WhyScholarshipsMatterSection = () => {
+export const ASCWhyScholarshipsMatterSection = () => {
   const bulletPoints = [
     "Increase participation in DFREE® programming and services",
     "Support communities disproportionately impacted by debt",
