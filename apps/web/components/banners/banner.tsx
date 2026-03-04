@@ -12,6 +12,8 @@ interface BannerProps {
   label: string;
   className?: string;
   href: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 }
 
 export const Banner: React.FC<BannerProps> = ({
@@ -21,6 +23,8 @@ export const Banner: React.FC<BannerProps> = ({
   label,
   href,
   className,
+  secondaryLabel,
+  secondaryHref,
 }) => {
   return (
     <div className={cn("mb-3 lg:px-20 max-w-360 mx-auto", className)}>
@@ -48,16 +52,30 @@ export const Banner: React.FC<BannerProps> = ({
               {description}
             </p>
 
-            {/* CTA */}
-            <Link
-              href={href}
-              className={cn(
-                buttonVariants({ variant: "default", size: "lg" }),
-                "w-fit",
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href={href}
+                className={cn(
+                  buttonVariants({ variant: "default", size: "lg" }),
+                  "w-fit",
+                )}
+              >
+                {label}
+              </Link>
+
+              {secondaryLabel && secondaryHref && (
+                <Link
+                  href={secondaryHref}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "lg" }),
+                    "w-fit border border-white/30",
+                  )}
+                >
+                  {secondaryLabel}
+                </Link>
               )}
-            >
-              {label}
-            </Link>
+            </div>
           </div>
         </div>
       </div>
