@@ -7,6 +7,7 @@ import GalleryPattern from "./gallery-pattern.svg";
 import MerchBgPattern from "./merch-bg-pattern.svg";
 import BDCImpactPattern from "./bdc-impact-pattern.svg";
 import CampaignsResultsPattern from "./campaigns-results-pattern";
+import CampaignsCtaPattern from "./campaigns-results-pattern";
 
 export {
   WorldMapSvg,
@@ -18,4 +19,5 @@ export {
   MerchBgPattern,
   BDCImpactPattern,
   CampaignsResultsPattern,
+  CampaignsCtaPattern,
 };

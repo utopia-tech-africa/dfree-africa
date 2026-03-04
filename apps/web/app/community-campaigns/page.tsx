@@ -1,5 +1,6 @@
 import { CampaignsWhatWeDo } from "./components";
 import { CampaignsAbout } from "./components/campaigns-about";
+import { CampaignsCta } from "./components/campaigns-cta";
 import { CampaignsFeatured } from "./components/campaigns-featured";
 import { CampaignsHero } from "./components/campaigns-hero";
 import { CampaignsImpact } from "./components/campaigns-impact";
@@ -14,6 +15,7 @@ const CommunityCampaignsPage = () => {
       <CampaignsWhatWeDo />
       <CampaignsFeatured />
       <CampaignsResults />
+      <CampaignsCta />
     </div>
   );
 };

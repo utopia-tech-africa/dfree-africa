@@ -3,7 +3,7 @@ import { Montserrat, Poppins, Roboto, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { createMetadata } from "@/lib/seo";
 import { Header } from "@/components/header";
-import Footer from "@/components/footer/footer";
+import { Footer } from "@/components/footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
