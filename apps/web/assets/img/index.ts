@@ -56,6 +56,7 @@ import ASCWhyScholarshipsMatterImg from "./asc-why-scholarships-matter-img.webp"
 import ASCWhatsCoveredImg1 from "./asc-whats-covered-img1.webp";
 import ASCWhatsCoveredImg2 from "./asc-whats-covered-img2.webp";
 import ASCAccessibiltyImg from "./asc-accessibilty-img.webp";
+import ASCPartnerWithUsImg from "./asc-partner-with-us-img.webp";
 
 export {
   AfricaHeroImg,
@@ -116,4 +117,5 @@ export {
   ASCWhatsCoveredImg1,
   ASCWhatsCoveredImg2,
   ASCAccessibiltyImg,
+  ASCPartnerWithUsImg,
 };
