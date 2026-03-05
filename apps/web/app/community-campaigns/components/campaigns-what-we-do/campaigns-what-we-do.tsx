@@ -25,7 +25,7 @@ export const WHAT_WE_DO_CONTENT = {
 
 export const CampaignsWhatWeDo = () => {
   return (
-    <section className="flex flex-col lg:grid lg:grid-cols-2 my-20">
+    <section className="flex flex-col lg:grid lg:grid-cols-2">
       <ComponentLayout className="py-2 bg-primary-500 lg:h-full">
         <h4 className="font-montserrat font-bold text-base md:text-lg lg:text-2xl text-neutral-100">
           {WHAT_WE_DO_CONTENT.title}

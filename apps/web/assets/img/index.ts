@@ -35,7 +35,9 @@ import WhoWeAreImg4 from "./who-we-are4-img.webp";
 import DfreeLogoBg from "./defree-logo-bg.webp";
 import HomeHeroBookImg from "./home-hero-book-img.webp";
 import CampaignsHeroImg from "./campaigns-hero-img.webp";
+import FeaturedCampaignsImg from "./featured-campaigns-img.webp";
 import CampaignsWhatWeDoImg from "./campaigns-what-we-do-img.webp";
+import CampaignsImpactImg from "./campaigns-impact-img.webp";
 import BDCHeroImg from "./bdc-hero-img.webp";
 import BDCAboutImg from "./bdc-about-img.webp";
 import BDCAudienceImg1 from "./bdc-audience-img1.webp";
@@ -96,6 +98,8 @@ export {
   HomeHeroBookImg,
   CampaignsHeroImg,
   CampaignsWhatWeDoImg,
+  CampaignsImpactImg,
+  FeaturedCampaignsImg,
   BDCHeroImg,
   BDCAboutImg,
   BDCAudienceImg1,
