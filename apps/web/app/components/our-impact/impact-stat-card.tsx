@@ -20,7 +20,7 @@ export function ImpactStatCard({
           <span className="leading-[49.4px]">{value}</span>
           {suffix && <span className="leading-[49.4px]">{suffix}</span>}
         </div>
-        <p className="font-montserrat text-sm leading-[33px] text-[#404f4f] lg:text-[18px]">
+        <p className="font-montserrat text-sm  text-[#404f4f] lg:text-[18px] text-wrap">
           {label}
         </p>
       </div>

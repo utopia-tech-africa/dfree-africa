@@ -1,13 +1,25 @@
-import ComponentLayout from "@/components/component-layout";
-import { ASCAbout, ASCHero } from "./components";
+import {
+  ASCAbout,
+  ASCAccessibilty,
+  ASCHero,
+  AscHowItWorks,
+  ASCWhatsCovered,
+  ASCWhyScholarshipsMatterSection,
+  ASCPartnerWithUs,
+  AscBanner,
+} from "./components";
 
 export default function AccessSholarships() {
   return (
-    <div>
+    <div className="space-y-10">
       <ASCHero />
-      <ComponentLayout className="my-12 space-y-12 md:space-y-20 lg:space-y-32">
-        <ASCAbout />
-      </ComponentLayout>
+      <ASCAbout />
+      <ASCWhyScholarshipsMatterSection />
+      <ASCWhatsCovered />
+      <ASCAccessibilty />
+      <AscHowItWorks />
+      <ASCPartnerWithUs />
+      <AscBanner />
     </div>
   );
 }
