@@ -1,6 +1,7 @@
 "use client"; // this component is simple but may contain interactive elements in future
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const LeftPanel = () => {
   return (
@@ -20,13 +21,15 @@ const LeftPanel = () => {
         Empower your journey with meaningful products that drive change.
       </p>
 
-      <Button
-        variant="secondary"
-        size="lg"
-        className="p-6 mt-2 text-lg text-primary-500"
-      >
-        Visit store
-      </Button>
+      <Link href={"https://store.dfree.com/"}>
+        <Button
+          variant="secondary"
+          size="lg"
+          className="p-6 mt-2 text-lg text-primary-500"
+        >
+          Visit store
+        </Button>
+      </Link>
     </div>
   );
 };

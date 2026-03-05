@@ -38,6 +38,7 @@ import CampaignsHeroImg from "./campaigns-hero-img.webp";
 import FeaturedCampaignsImg from "./featured-campaigns-img.webp";
 import CampaignsWhatWeDoImg from "./campaigns-what-we-do-img.webp";
 import CampaignsImpactImg from "./campaigns-impact-img.webp";
+import CampaignsCtaImg from "./campaigns-cta-img.webp";
 import BDCHeroImg from "./bdc-hero-img.webp";
 import BDCAboutImg from "./bdc-about-img.webp";
 import BDCAudienceImg1 from "./bdc-audience-img1.webp";
@@ -56,6 +57,8 @@ import ASCWhyScholarshipsMatterImg from "./asc-why-scholarships-matter-img.webp"
 import ASCWhatsCoveredImg1 from "./asc-whats-covered-img1.webp";
 import ASCWhatsCoveredImg2 from "./asc-whats-covered-img2.webp";
 import ASCAccessibiltyImg from "./asc-accessibilty-img.webp";
+import ASCPartnerWithUsImg from "./asc-partner-with-us-img.webp";
+import ASCBannerImg from "./asc-banner-img.webp";
 
 export {
   AfricaHeroImg,
@@ -97,6 +100,7 @@ export {
   CampaignsHeroImg,
   CampaignsWhatWeDoImg,
   CampaignsImpactImg,
+  CampaignsCtaImg,
   FeaturedCampaignsImg,
   BDCHeroImg,
   BDCAboutImg,
@@ -116,4 +120,6 @@ export {
   ASCWhatsCoveredImg1,
   ASCWhatsCoveredImg2,
   ASCAccessibiltyImg,
+  ASCPartnerWithUsImg,
+  ASCBannerImg,
 };

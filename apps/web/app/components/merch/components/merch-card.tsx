@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { MerchItemForUI } from "@/lib/sanity";
+import Link from "next/link";
 
 type CardProps = {
   item: MerchItemForUI;
@@ -17,16 +18,19 @@ export function MerchCard({ item }: CardProps) {
       )}
     >
       {/* Cover image — 80% of card height */}
+
       <div className="relative flex-1 bg-gray-100">
         {item.coverImageUrl ? (
-          <Image
-            src={item.coverImageUrl}
-            alt={item.coverImageAlt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 260px, 340px"
-            draggable={false}
-          />
+          <Link target="_blank" href={item.storeUrl || ""}>
+            <Image
+              src={item.coverImageUrl}
+              alt={item.coverImageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 260px, 340px"
+              draggable={false}
+            />
+          </Link>
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-100 to-primary-300">
             <span className="text-5xl">📦</span>
@@ -35,17 +39,19 @@ export function MerchCard({ item }: CardProps) {
       </div>
 
       {/* Card info panel */}
-      <div className="bg-white p-3 shrink-0">
-        <p className="font-montserrat font-bold leading-snug text-lg sm:text-xl">
-          {item.title}
-        </p>
-        <p className="font-roboto text-xm text-gray-500 mt-1">
-          {item.category}
-        </p>
-        <p className="font-roboto font-semibold text-lg mt-2 text-neutral-900">
-          ${item.price.toFixed(2)}
-        </p>
-      </div>
+      <Link target="_blank" href={item.storeUrl || ""}>
+        <div className="bg-white p-3 shrink-0">
+          <p className="font-montserrat font-bold leading-snug text-lg sm:text-xl">
+            {item.title}
+          </p>
+          <p className="font-roboto text-xm text-gray-500 mt-1">
+            {item.category}
+          </p>
+          <p className="font-roboto font-semibold text-lg mt-2 text-neutral-900">
+            ${item.price.toFixed(2)}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 }

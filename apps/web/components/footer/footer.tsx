@@ -2,16 +2,17 @@ import { footerItems } from "@/constants/footer-items";
 import { DfreeLogoWhite } from "@/assets/svg";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import ComponentLayout from "../component-layout";
 
 const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer
+    <ComponentLayout
       id="footer"
-      className="mt-20 w-full scroll-mt-24 bg-primary-500 px-4 py-10 text-neutral-100 md:px-10 md:scroll-mt-28 lg:px-20 lg:py-12"
+      className="mt-20 lg:px-12 w-full scroll-mt-24 bg-primary-500 py-10 text-neutral-100 md:scroll-mt-28 lg:py-12"
     >
-      <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr]">
+      <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] min-w-0">
         <div className="h-7.25 md:h-11.25 w-fit object-cover">
           <DfreeLogoWhite />
         </div>
@@ -19,7 +20,7 @@ const Footer = () => {
           <h4 className="text-lg font-bold">About</h4>
           <div className="flex flex-col gap-4 text-sm lg:text-base">
             {footerAbout.map((item, i) => (
-              <a href="" key={i}>
+              <a href={""} key={i}>
                 {item}
               </a>
             ))}
@@ -27,9 +28,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-5">
           <h4 className="text-lg font-bold">Our pillars</h4>
-          <div className="flex flex-col gap-4 text-sm lg:text-base md:text-nowrap">
+          <div className="flex flex-col gap-4 text-sm lg:text-base">
             {footerPillars.map((item, i) => (
-              <a href="" key={i}>
+              <a href="" key={i} className="text-nowrap">
                 {item}
               </a>
             ))}
@@ -66,15 +67,17 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-4">
             <h4 className="text-lg hidden md:block font-bold"></h4>
-            <h4 className="text-lg block md:hidden font-bold">Subscribe</h4>
+            <h4 className="text-lg font-bold font-montserrat">
+              Subscribe to newsletter
+            </h4>
             <p className="block md:hidden font-poppins text-sm leading-[120%] text-neutral-100">
               Stay connected with our latest updates and transformative work
             </p>
-            <div className="flex w-full flex-col gap-3 md:flex-row md:items-center md:gap-4">
+            <div className="flex w-full flex-col gap-3 md:flex-row md:items-center">
               <Input
                 type="email"
                 placeholder="Enter email address"
-                className="w-full rounded-[100px] border border-neutral-100 bg-transparent px-2 py-6 placeholder:text-sm placeholder:text-neutral-300 focus:outline-none md:min-w-[300px] md:flex-1 md:px-5 lg:min-w-[360px]"
+                className="w-full rounded-[100px] border border-neutral-100 bg-transparent px-2 py-6 placeholder:text-sm placeholder:text-neutral-300 focus:outline-none md:min-w-75 md:flex-1 md:px-5 lg:min-w-62.5"
               />
               <Button
                 className="w-full py-6 font-bold md:w-auto"
@@ -108,8 +111,6 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </footer>
+    </ComponentLayout>
   );
 };
-
-export default Footer;

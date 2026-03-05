@@ -5,6 +5,8 @@ import {
   AscHowItWorks,
   ASCWhatsCovered,
   ASCWhyScholarshipsMatterSection,
+  ASCPartnerWithUs,
+  AscBanner,
 } from "./components";
 
 export default function AccessSholarships() {
@@ -16,6 +18,8 @@ export default function AccessSholarships() {
       <ASCWhatsCovered />
       <ASCAccessibilty />
       <AscHowItWorks />
+      <ASCPartnerWithUs />
+      <AscBanner />
     </div>
   );
 }

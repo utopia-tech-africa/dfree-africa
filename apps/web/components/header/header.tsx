@@ -26,24 +26,24 @@ const NAV_ITEMS: NavItem[] = [
     label: "About us",
     href: "#",
     subItems: [
-      { label: "Our story", href: "#our-story" },
-      { label: "Our vision", href: "#our-story" },
-      { label: "Our mission", href: "#our-story" },
+      { label: "Our story", href: "/#our-story" },
+      { label: "Our vision", href: "/#our-story" },
+      { label: "Our mission", href: "/#our-story" },
     ],
   },
   {
     label: "Impact",
     href: "#",
     subItems: [
-      { label: "Billion dollar challenge", href: "#" },
+      { label: "Billion dollar challenge", href: "/billion-dollar-challenge" },
       {
         label: "Global Foundation in Africa",
         href: "/africa",
       },
-      { label: "Community campaigns", href: "#" },
+      { label: "Community campaigns", href: "/community-campaigns" },
       {
         label: "Foundation Scholarship Commitment",
-        href: "#",
+        href: "/access-sholarships",
       },
       { label: "FinFe$t", href: "#" },
     ],
