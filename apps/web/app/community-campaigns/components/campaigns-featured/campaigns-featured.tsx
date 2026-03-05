@@ -26,59 +26,60 @@ export const CAMPAIGNS_FEATURED_CONTENT = {
 
 export const CampaignsFeatured = () => {
   return (
-    <ComponentLayout>
-      <section className="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 items-stretch">
-        <div className="flex-1 flex flex-col justify-center">
-          <Title text="Featured Campaigns" />
-          <h1 className="font-montserrat font-bold text-2xl md:text-3xl lg:text-[46px] leading-[120%] text-neutral-1000 my-4">
-            {CAMPAIGNS_FEATURED_CONTENT.title}
-          </h1>
-          <p className="text-neutral-800 mb-6">
-            {CAMPAIGNS_FEATURED_CONTENT.description}
-          </p>
+    <ComponentLayout className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-8">
+      {/* Content Section */}
+      <div className="flex-1 flex flex-col justify-center">
+        <Title text="Featured Campaigns" />
+        <h1 className="font-montserrat font-bold text-2xl md:text-3xl lg:text-[46px] leading-[120%] text-neutral-1000 my-4">
+          {CAMPAIGNS_FEATURED_CONTENT.title}
+        </h1>
+        <p className="text-neutral-800 mb-6">
+          {CAMPAIGNS_FEATURED_CONTENT.description}
+        </p>
 
-          <div className="flex flex-col md:flex-row md:gap-10 gap-6">
-            {CAMPAIGNS_FEATURED_CONTENT.subtexts.map((item, index) => (
-              <div key={index} className="flex-1 flex flex-col gap-2">
-                <h3 className="text-neutral-1000 font-bold leading-[120%] text-lg md:text-xl lg:text-[22px]">
-                  {item.text}
-                </h3>
-                <p className="text-neutral-900 text-base md:text-lg">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <Link href={CAMPAIGNS_FEATURED_CONTENT.href} className="w-fit mt-8">
-            <Button
-              variant="default"
-              size="default"
-              className="h-auto gap-3 px-3 py-3 text-sm leading-[1.3] font-medium md:px-8 md:text-lg"
-              icon={
-                <ArrowRight
-                  className="size-4.5 shrink-0 md:size-5"
-                  strokeWidth={2}
-                />
-              }
-            >
-              Discover More
-            </Button>
-          </Link>
+        <div className="flex flex-col md:flex-row md:gap-10 gap-6">
+          {CAMPAIGNS_FEATURED_CONTENT.subtexts.map((item, index) => (
+            <div key={index} className="flex-1 flex flex-col gap-2">
+              <h3 className="text-neutral-1000 font-bold leading-[120%] text-lg md:text-xl lg:text-[22px]">
+                {item.text}
+              </h3>
+              <p className="text-neutral-900 text-base md:text-lg">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
-        <div className="flex-1 w-full flex">
-          <div className="relative flex-1 min-h-75 md:min-h-0">
-            <Image
-              src={CAMPAIGNS_FEATURED_CONTENT.image}
-              alt="Featured Campaigns Image"
-              className="object-cover rounded-lg"
-              fill
-              priority
-            />
-          </div>
+        <Link href={CAMPAIGNS_FEATURED_CONTENT.href} className="w-fit mt-8">
+          <Button
+            variant="default"
+            size="default"
+            className="h-auto gap-3 px-3 py-3 text-sm leading-[1.3] font-medium md:px-8 md:text-lg"
+            icon={
+              <ArrowRight
+                className="size-4.5 shrink-0 md:size-5"
+                strokeWidth={2}
+              />
+            }
+          >
+            Discover More
+          </Button>
+        </Link>
+      </div>
+
+      {/* Image Section - Fixed */}
+      <div className="flex-1 w-full">
+        <div className="relative w-full h-75 md:h-100 lg:h-full rounded-lg overflow-hidden">
+          <Image
+            src={CAMPAIGNS_FEATURED_CONTENT.image}
+            alt="Featured Campaigns Image"
+            className="object-cover"
+            fill
+            priority
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+          />
         </div>
-      </section>
+      </div>
     </ComponentLayout>
   );
 };
