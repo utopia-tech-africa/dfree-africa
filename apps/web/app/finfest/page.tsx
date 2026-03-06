@@ -1,3 +1,4 @@
+import { getFinfestGallery } from "@/lib/sanity";
 import {
   FinFestBanner,
   FinfestGallerySection,
