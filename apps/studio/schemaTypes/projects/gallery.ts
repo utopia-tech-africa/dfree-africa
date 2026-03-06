@@ -24,6 +24,15 @@ export const gallery = defineType({
     }),
 
     defineField({
+      name: 'year',
+      title: 'Year',
+      type: 'number',
+      description:
+        'Optional. Used for Finfest gallery: one gallery per year (e.g. slug "finfest-2024", year 2024). Enables grouping and ordering by year.',
+      validation: (rule) => rule.min(2000).max(2100).integer(),
+    }),
+
+    defineField({
       name: 'items',
       title: 'Gallery Items',
       type: 'array',
