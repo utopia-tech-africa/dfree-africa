@@ -36,7 +36,9 @@ import DfreeLogoBg from "./defree-logo-bg.webp";
 import HomeHeroBookImg from "./home-hero-book-img.webp";
 import CampaignsHeroImg from "./campaigns-hero-img.webp";
 import FeaturedCampaignsImg from "./featured-campaigns-img.webp";
-import CampaignsWhatWeDoImg from "./campaigns-what-we-do-img.webp";
+import CampaignsWhatWeDoImg1 from "./campaigns-what-we-do-img1.webp";
+import CampaignsWhatWeDoImg2 from "./campaigns-what-we-do-img2.webp";
+import CampaignsWhatWeDoImg3 from "./campaigns-what-we-do-img3.webp";
 import CampaignsImpactImg from "./campaigns-impact-img.webp";
 import CampaignsCtaImg from "./campaigns-cta-img.webp";
 import BDCHeroImg from "./bdc-hero-img.webp";
@@ -60,6 +62,7 @@ import ASCAccessibiltyImg from "./asc-accessibilty-img.webp";
 import ASCPartnerWithUsImg from "./asc-partner-with-us-img.webp";
 import ASCBannerImg from "./asc-banner-img.webp";
 import FinFestBannerImg from "./finfest-banner-img.webp";
+import FinfestHeroImg from "./finfest-hero-img.webp";
 import DrDeforestImg from "./dr-deforest.webp";
 import KarenHunterImg from "./karen-hunter.webp";
 import JackiePTaylorImg from "./jackie-taylor.webp";
@@ -111,7 +114,9 @@ export {
   DfreeLogoBg,
   HomeHeroBookImg,
   CampaignsHeroImg,
-  CampaignsWhatWeDoImg,
+  CampaignsWhatWeDoImg1,
+  CampaignsWhatWeDoImg2,
+  CampaignsWhatWeDoImg3,
   CampaignsImpactImg,
   CampaignsCtaImg,
   FeaturedCampaignsImg,
