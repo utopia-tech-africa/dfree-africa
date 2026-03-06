@@ -1,9 +1,10 @@
 import { FinFestBanner } from "./components";
+import { FinfestHero } from "./components/finfest-hero";
 
 export default function FinFestPage() {
   return (
     <div>
-      <h1>FinFest</h1>
+      <FinfestHero />
       <FinFestBanner />
     </div>
   );

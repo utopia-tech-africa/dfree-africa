@@ -39,7 +39,6 @@ import FeaturedCampaignsImg from "./featured-campaigns-img.webp";
 import CampaignsWhatWeDoImg1 from "./campaigns-what-we-do-img1.webp";
 import CampaignsWhatWeDoImg2 from "./campaigns-what-we-do-img2.webp";
 import CampaignsWhatWeDoImg3 from "./campaigns-what-we-do-img3.webp";
-
 import CampaignsImpactImg from "./campaigns-impact-img.webp";
 import CampaignsCtaImg from "./campaigns-cta-img.webp";
 import BDCHeroImg from "./bdc-hero-img.webp";
@@ -63,6 +62,7 @@ import ASCAccessibiltyImg from "./asc-accessibilty-img.webp";
 import ASCPartnerWithUsImg from "./asc-partner-with-us-img.webp";
 import ASCBannerImg from "./asc-banner-img.webp";
 import FinFestBannerImg from "./finfest-banner-img.webp";
+import FinfestHeroImg from "./finfest-hero-img.webp";
 
 export {
   AfricaHeroImg,
@@ -129,4 +129,5 @@ export {
   ASCPartnerWithUsImg,
   ASCBannerImg,
   FinFestBannerImg,
+  FinfestHeroImg,
 };
