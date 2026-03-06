@@ -1,9 +1,20 @@
-import { FinFestBanner } from "./components";
+import { getFinfestGallery } from "@/lib/sanity";
+import { FinFestBanner, FinfestGallerySection } from "./components";
 
-export default function FinFestPage() {
+export default async function FinFestPage() {
+  const gallery = await getFinfestGallery();
+
   return (
     <div>
-      <h1>FinFest</h1>
+      {" "}
+      {gallery && gallery.years.length > 0 && (
+        <FinfestGallerySection
+          gallery={gallery}
+          label="Gallery"
+          title={gallery.title}
+          subtitle="Click a year to view its gallery."
+        />
+      )}
       <FinFestBanner />
     </div>
   );
