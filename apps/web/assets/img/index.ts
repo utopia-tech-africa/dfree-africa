@@ -62,6 +62,7 @@ import ASCWhatsCoveredImg2 from "./asc-whats-covered-img2.webp";
 import ASCAccessibiltyImg from "./asc-accessibilty-img.webp";
 import ASCPartnerWithUsImg from "./asc-partner-with-us-img.webp";
 import ASCBannerImg from "./asc-banner-img.webp";
+import FinFestBannerImg from "./finfest-banner-img.webp";
 
 export {
   AfricaHeroImg,
@@ -127,4 +128,5 @@ export {
   ASCAccessibiltyImg,
   ASCPartnerWithUsImg,
   ASCBannerImg,
+  FinFestBannerImg,
 };
