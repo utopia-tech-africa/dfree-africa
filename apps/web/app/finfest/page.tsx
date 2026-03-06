@@ -2,15 +2,16 @@ import { getFinfestGallery } from "@/lib/sanity";
 import {
   FinFestBanner,
   FinfestGallerySection,
+  FinFestPastSpeakers,
   FinFestTestimonials,
 } from "./components";
 
-export default async function FinFestPage() {
-  const gallery = await getFinfestGallery();
+export default function FinFestPage() {
   return (
-    <div>
+    <div className="space-y-10">
+      <FinFestPastSpeakers />
       <FinFestTestimonials />
-      {gallery && gallery.years.length > 0 && (
+        {gallery && gallery.years.length > 0 && (
         <FinfestGallerySection
           gallery={gallery}
           label="Gallery"
