@@ -47,7 +47,7 @@ import { Carousel } from "@/components/carousel";
 
 export const FinFestTestimonials = () => {
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
+    <section className="py-4 bg-white overflow-hidden">
       <ComponentLayout className="space-y-8">
         {/* Header */}
         <div className="flex flex-col items-center text-center  max-w-[800px] mx-auto">

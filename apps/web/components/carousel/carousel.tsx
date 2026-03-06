@@ -83,7 +83,7 @@ export const Carousel = ({
         <div className="flex items-center justify-between">
           {/* Dots */}
           <div className="flex gap-2">
-            {scrollSnaps.map((_, index) => (
+            {children.map((_, index) => (
               <button
                 key={index}
                 className={cn(
