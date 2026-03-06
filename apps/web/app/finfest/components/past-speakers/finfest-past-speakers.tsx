@@ -40,7 +40,7 @@ const speakers: Speaker[] = [
   },
 ];
 
-export const FinFestPastSpeakers = () => {
+export const FinfestPastSpeakers = () => {
   return (
     <section className="py-4 bg-white overflow-hidden">
       <ComponentLayout className="space-y-8">

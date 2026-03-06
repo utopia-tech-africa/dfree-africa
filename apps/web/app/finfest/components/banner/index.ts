@@ -1,1 +1,1 @@
-export { default as FinFestBanner } from "./finfest-banner";
+export { default as FinfestBanner } from "./finfest-banner";

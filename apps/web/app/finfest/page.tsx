@@ -1,15 +1,17 @@
 import {
-  FinFestBanner,
-  FinFestPastSpeakers,
-  FinFestTestimonials,
+  FinfestBanner,
+  FinfestPastSpeakers,
+  FinfestSponsors,
+  FinfestTestimonials,
 } from "./components";
 
 export default function FinFestPage() {
   return (
     <div className="space-y-10">
-      <FinFestPastSpeakers />
-      <FinFestTestimonials />
-      <FinFestBanner />
+      <FinfestPastSpeakers />
+      <FinfestSponsors />
+      <FinfestTestimonials />
+      <FinfestBanner />
     </div>
   );
 }

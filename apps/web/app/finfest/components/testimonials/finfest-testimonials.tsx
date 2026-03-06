@@ -45,7 +45,7 @@ const testimonials: Testimonial[] = [
 
 import { Carousel } from "@/components/carousel";
 
-export const FinFestTestimonials = () => {
+export const FinfestTestimonials = () => {
   return (
     <section className="py-4 bg-white overflow-hidden">
       <ComponentLayout className="space-y-8">
