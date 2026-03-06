@@ -1,9 +1,9 @@
-import { FinFestBanner } from "./components";
+import { FinFestBanner, FinFestTestimonials } from "./components";
 
 export default function FinFestPage() {
   return (
     <div>
-      <h1>FinFest</h1>
+      <FinFestTestimonials />
       <FinFestBanner />
     </div>
   );
