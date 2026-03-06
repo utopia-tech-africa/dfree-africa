@@ -45,7 +45,7 @@ const NAV_ITEMS: NavItem[] = [
         label: "Foundation Scholarship Commitment",
         href: "/access-sholarships",
       },
-      { label: "FinFe$t", href: "#" },
+      { label: "FinFe$t", href: "/finfest" },
     ],
   },
   {
