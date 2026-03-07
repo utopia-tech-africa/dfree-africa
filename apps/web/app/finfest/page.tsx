@@ -6,12 +6,13 @@ import {
   FinFestTestimonials,
 } from "./components";
 
-export default function FinFestPage() {
+export default async function FinFestPage() {
+  const gallery = await getFinfestGallery();
   return (
     <div className="space-y-10">
       <FinFestPastSpeakers />
       <FinFestTestimonials />
-        {gallery && gallery.years.length > 0 && (
+      {gallery && gallery.years.length > 0 && (
         <FinfestGallerySection
           gallery={gallery}
           label="Gallery"

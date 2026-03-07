@@ -10,6 +10,7 @@ import CampaignsResultsPattern from "./campaigns-results-pattern";
 import CampaignsCtaPattern from "./campaigns-results-pattern";
 import ASCWhyScholarshipsMatterPattern from "./asc-why-scholarships-matter-pattern.svg";
 import ASCHowItWorksPattern from "./asc-how-it-works-pattern.svg";
+import { FinfestObjectivePattern } from "./finfest-objective-pattern";
 
 export {
   WorldMapSvg,
@@ -24,4 +25,5 @@ export {
   CampaignsCtaPattern,
   ASCWhyScholarshipsMatterPattern,
   ASCHowItWorksPattern,
+  FinfestObjectivePattern,
 };
