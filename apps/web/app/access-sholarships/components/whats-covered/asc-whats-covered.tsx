@@ -28,7 +28,7 @@ export const ASCWhatsCovered = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20  bg-white">
+    <section className="bg-white">
       <ComponentLayout className="space-y-2 md:space-y-6">
         <div className="text-center">
           <Subtitle text="What's covered" className="text-neutral-1000" />
@@ -42,7 +42,7 @@ export const ASCWhatsCovered = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="relative group h-[400px] md:h-[420px] w-full md:w-[620px]  rounded-md overflow-hidden shadow-lg"
+              className="relative group h-[400px] md:h-[420px] w-full  rounded-md overflow-hidden shadow-lg"
             >
               {/* Card Background Image */}
               <Image

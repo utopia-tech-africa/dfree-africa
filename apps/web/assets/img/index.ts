@@ -63,6 +63,18 @@ import ASCPartnerWithUsImg from "./asc-partner-with-us-img.webp";
 import ASCBannerImg from "./asc-banner-img.webp";
 import FinFestBannerImg from "./finfest-banner-img.webp";
 import FinfestHeroImg from "./finfest-hero-img.webp";
+import DrDeforestImg from "./dr-deforest.webp";
+import KarenHunterImg from "./karen-hunter.webp";
+import JackiePTaylorImg from "./jackie-taylor.webp";
+import TiffanyAlicheImg from "./tiffany-aliche.webp";
+import DeborahReynoldsImg from "./deborah-reynolds.webp";
+
+import OnityLogo from "./onity-logo.webp";
+import IndependenceRealtyTrustLogo from "./independence-realty-trust-logo.webp";
+import PrudentialLogo from "./prudential-logo.webp";
+import NJIDAlogo from "./njida-logo.webp";
+import RWJBarnabasHealthLogo from "./rwj-barnabas-health-logo.webp";
+import ValleyLogo from "./valley-logo.webp";
 
 export {
   AfricaHeroImg,
@@ -129,5 +141,16 @@ export {
   ASCPartnerWithUsImg,
   ASCBannerImg,
   FinFestBannerImg,
+  DrDeforestImg,
+  KarenHunterImg,
+  JackiePTaylorImg,
+  TiffanyAlicheImg,
+  DeborahReynoldsImg,
+  OnityLogo,
+  IndependenceRealtyTrustLogo,
+  PrudentialLogo,
+  NJIDAlogo,
+  RWJBarnabasHealthLogo,
+  ValleyLogo,
   FinfestHeroImg,
 };

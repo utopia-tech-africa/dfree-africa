@@ -10,7 +10,7 @@ export function ASCAbout() {
       {/* Left Column: Text Content */}
       <div className="space-y-4 md:space-y-6">
         <div className="space-y-2">
-          <Title text="What is Access Sholarships?" />
+          <Title text="What are Access Sholarships?" />
           <Subtitle text="About the Program" />
         </div>
 

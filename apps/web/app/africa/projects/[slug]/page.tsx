@@ -1,6 +1,8 @@
 import ComponentLayout from "@/components/component-layout";
 import { PageLayout } from "@/components/page-layout";
+import { createMetadata } from "@/lib/seo";
 import { getProjectBySlug } from "@/lib/sanity/projects";
+import type { Metadata } from "next";
 import { ProjectBody, ProjectHeader, ProjectImages } from "./components";
 
 type Props = {
@@ -8,6 +10,25 @@ type Props = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const project = await getProjectBySlug(slug);
+  if (!project) {
+    return createMetadata({
+      title: "Project",
+      path: `/africa/projects/${slug}`,
+    });
+  }
+  const description =
+    project.description?.slice(0, 160) ||
+    `Learn more about ${project.title}, a DFREE® project${project.country ? ` in ${project.country}` : ""}.`;
+  return createMetadata({
+    title: project.title,
+    description,
+    path: `/africa/projects/${slug}`,
+  });
+}
 
 const ProjectDetailPage = async ({ params }: Props) => {
   const { slug } = await params;

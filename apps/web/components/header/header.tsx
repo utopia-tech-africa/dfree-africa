@@ -102,7 +102,8 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
-  const useColoredLogo = pathname.startsWith("/africa/projects");
+  const useColoredLogo =
+    pathname.startsWith("/africa/projects") || pathname.startsWith("/finfest");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -199,7 +200,10 @@ export const Header = () => {
           <div className="flex gap-x-6 items-center">
             <Link
               href="#footer"
-              className="text-sm font-medium text-neutral-100 hover:text-white hidden md:flex"
+              className={cn(
+                buttonVariants({ variant: "ghost", size: "lg" }),
+                "hidden md:flex",
+              )}
             >
               Contact us
             </Link>

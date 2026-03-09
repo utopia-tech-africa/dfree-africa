@@ -1,7 +1,7 @@
 import { Banner } from "@/components/banners";
 import { FinFestBannerImg } from "@/assets";
 
-export default function FinFestBanner() {
+export default function FinfestBanner() {
   return (
     <Banner
       backgroundImage={FinFestBannerImg}
