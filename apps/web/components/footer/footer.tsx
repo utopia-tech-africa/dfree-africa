@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <ComponentLayout
       id="footer"
-      className="mt-20 lg:px-12 w-full scroll-mt-24 bg-primary-500 py-10 text-neutral-100 md:scroll-mt-28 lg:py-12"
+      className="mt-20 lg:px-12 w-full max-w-none scroll-mt-24 bg-primary-500 py-10 text-neutral-100 md:scroll-mt-28 lg:py-12"
     >
       <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] min-w-0">
         <div className="h-7.25 md:h-11.25 w-fit object-cover">

@@ -140,4 +140,5 @@ export {
   JackiePTaylorImg,
   TiffanyAlicheImg,
   DeborahReynoldsImg,
+  FinfestHeroImg,
 };
