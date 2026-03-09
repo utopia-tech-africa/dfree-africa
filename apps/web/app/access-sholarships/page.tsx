@@ -20,7 +20,7 @@ export const metadata: Metadata = createMetadata({
 
 export default function AccessSholarships() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-20 sm:space-y-30">
       <ASCHero />
       <ASCAbout />
       <ASCWhyScholarshipsMatterSection />

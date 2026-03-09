@@ -3,6 +3,7 @@ import { ASCWhyScholarshipsMatterImg } from "@/assets/img";
 import { ASCWhyScholarshipsMatterPattern } from "@/assets/svg";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
+import ComponentLayout from "@/components/component-layout";
 
 export const ASCWhyScholarshipsMatterSection = () => {
   const bulletPoints = [
@@ -17,7 +18,7 @@ export const ASCWhyScholarshipsMatterSection = () => {
     <section className="relative w-full overflow-hidden bg-primary-500">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] lg:min-h-[800px]">
         {/* Left Content */}
-        <div className="relative flex flex-col justify-center px-6 md:px-12 lg:px-20 xl:pl-48 xl:pr-24 py-16 md:py-24">
+        <ComponentLayout className="relative flex flex-col justify-center ">
           {/* Pattern Background */}
           <div className="absolute inset-0 opacity-95 pointer-events-none">
             <Image
@@ -56,7 +57,7 @@ export const ASCWhyScholarshipsMatterSection = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </ComponentLayout>
 
         {/* Right Image */}
         <div className="relative h-[450px] lg:h-auto overflow-hidden">
