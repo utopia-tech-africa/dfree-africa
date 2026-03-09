@@ -1,9 +1,10 @@
 import { getFinfestGallery } from "@/lib/sanity";
 import {
-  FinFestBanner,
+  FinfestBanner,
+  FinfestPastSpeakers,
+  FinfestTestimonials,
   FinfestGallerySection,
-  FinFestPastSpeakers,
-  FinFestTestimonials,
+  FinfestSponsors,
 } from "./components";
 import { FinfestHero } from "./components/finfest-hero";
 import { FinfestObjective } from "./components/finfest-objective";
@@ -12,12 +13,13 @@ import FinfestMovement from "./components/finfest-objective/finfest-movement";
 export default async function FinFestPage() {
   const gallery = await getFinfestGallery();
   return (
-    <div className="space-y-10">
+    <div className="space-y-20 sm:space-y-30">
       <FinfestHero />
       <FinfestObjective />
       <FinfestMovement />
-      <FinFestPastSpeakers />
-      <FinFestTestimonials />
+      <FinfestPastSpeakers />
+      <FinfestSponsors />
+      <FinfestTestimonials />
       {gallery && gallery.years.length > 0 && (
         <FinfestGallerySection
           gallery={gallery}
@@ -26,7 +28,7 @@ export default async function FinFestPage() {
           subtitle="Click a year to view its gallery."
         />
       )}
-      <FinFestBanner />
+      <FinfestBanner />
     </div>
   );
 }
