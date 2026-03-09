@@ -47,7 +47,7 @@ export const ContentCard = ({
           alt={title}
           width={405}
           height={275}
-          className="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-60 w-full object-cover transition-transform duration-400 group-hover:scale-110 ease-out"
         />
 
         {date && (
@@ -132,10 +132,7 @@ export const ContentCard = ({
             className="px-0 text-lg leading-[130%] font-semibold text-primary-600 gap-2 hover:no-underline"
           >
             {isEvent ? "View event" : "Read more"}
-            <ChevronRight
-              size={16}
-              className="transition-transform group-hover:translate-x-1"
-            />
+            <ChevronRight size={16} />
           </Button>
         </Link>
       </div>

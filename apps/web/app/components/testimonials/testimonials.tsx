@@ -28,8 +28,11 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-neutral-100 py-24 md:py-20 lg:py-40 mb-10 lg:mb-16">
-      <ComponentLayout>
+    <section className="relative overflow-hidden bg-neutral-100 py-24 md:py-40 mb-10 lg:mb-16">
+      <ComponentLayout className="relative">
+        <QuotationMarks className="absolute -top-10 left-0 w-20 h-20 sm:-top-16 md:-top-40 md:w-47.5 md:h-47.5 pointer-events-none z-10" />
+
+        <QuotationMarks className="absolute -bottom-10 right-0 w-20 h-20 md:-bottom-40 md:w-47.5 md:h-47.5 rotate-180 pointer-events-none z-10" />
         <div className="relative z-10 max-w-3xl mx-auto mb-10 md:mb-6 text-center flex flex-col gap-3 px-4 sm:px-0">
           <Title className="font-montserrat" text="Testimonials" />
 
@@ -43,10 +46,6 @@ const Testimonials = () => {
         </div>
 
         <div className="relative z-10">
-          <QuotationMarks className="absolute -top-57 -left-5 w-24 h-24 md:-top-42 md:-left-20 md:w-47.5 md:h-47.5 pointer-events-none z-10" />
-
-          <QuotationMarks className="absolute -bottom-10 -right-6 w-24 h-24 md:-bottom-40 md:-right-20 md:w-47.5 md:h-47.5 rotate-180 pointer-events-none z-10" />
-
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto md:overflow-visible scrollbar-hide px-4 md:px-0"

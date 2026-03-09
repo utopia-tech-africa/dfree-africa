@@ -4,7 +4,7 @@ import React from "react";
 
 const FinfestMovement = () => {
   return (
-    <ComponentLayout className="flex flex-col items-center justify-center gap-6 text-center my-20 ">
+    <ComponentLayout className="flex flex-col md:items-center md:justify-center gap-6 md:text-center my-20 ">
       <Title text="Movement" />
       <p className="font-poppins text-2xl text-neutral-1000 md:text-3xl lg:text-[32px]  font-bold leading-[120%]">
         FinFE$T is the event that offers you real-time access to various
