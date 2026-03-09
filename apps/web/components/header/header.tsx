@@ -2,12 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
-import { DfreeLogo, DfreeLogoWhite } from "@/assets/svg";
+import { DfreeLogo } from "@/assets/svg";
 
 type NavSubItem = {
   label: string;
@@ -93,7 +92,6 @@ function NavTrigger({
 }
 
 export const Header = () => {
-  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<HoveredNavKey>(null);
   const [expandedMobileSection, setExpandedMobileSection] = useState<
@@ -102,8 +100,6 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
-  const useColoredLogo =
-    pathname.startsWith("/africa/projects") || pathname.startsWith("/finfest");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -132,10 +128,20 @@ export const Header = () => {
   return (
     <header
       data-global-header="true"
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-300",
-        isScrolled ? "bg-black/10 backdrop-blur-md" : "bg-transparent",
-      )}
+      className="fixed top-0 left-0 right-0 z-50 w-full transition-[background,backdrop-filter] duration-300"
+      style={
+        isScrolled
+          ? {
+              background: "#00000033",
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
+            }
+          : {
+              background: "transparent",
+              backdropFilter: "none",
+              WebkitBackdropFilter: "none",
+            }
+      }
     >
       <ComponentLayout className="flex h-16 items-center justify-between md:h-[72px]">
         <div className="flex justify-between w-full">
@@ -145,7 +151,7 @@ export const Header = () => {
             className="flex shrink-0 items-center"
             aria-label="dfree home"
           >
-            {useColoredLogo ? <DfreeLogo /> : <DfreeLogoWhite />}
+            <DfreeLogo />
           </Link>
 
           {/* Desktop nav */}
@@ -154,12 +160,17 @@ export const Header = () => {
             onMouseLeave={() => setHoveredNav(null)}
           >
             <div
-              className="flex items-center gap-4 rounded-full px-4 py-2"
-              style={{
-                background: "#00000033",
-                backdropFilter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
-              }}
+              className={cn(
+                "flex items-center gap-4 rounded-full px-4 py-2 transition-[background,backdrop-filter] duration-300",
+                !isScrolled && "bg-[#00000033] backdrop-blur-[20px]",
+              )}
+              style={
+                !isScrolled
+                  ? {
+                      WebkitBackdropFilter: "blur(20px)",
+                    }
+                  : undefined
+              }
             >
               {NAV_ITEMS.map((item) => (
                 <NavTrigger
@@ -198,16 +209,6 @@ export const Header = () => {
             )}
           </nav>
           <div className="flex gap-x-6 items-center">
-            <Link
-              href="#footer"
-              className={cn(
-                buttonVariants({ variant: "ghost", size: "lg" }),
-                "hidden md:flex",
-              )}
-            >
-              Contact us
-            </Link>
-
             <Link
               href="#donate"
               className={cn(

@@ -25,6 +25,8 @@ export type MetadataParams = {
   description?: string;
   path?: string;
   image?: string;
+  /** Page-specific keywords (replaces site keywords when provided). Use a string or array of strings. */
+  keywords?: string | string[];
   noIndex?: boolean;
 };
 
@@ -33,15 +35,22 @@ export function createMetadata({
   description = siteConfig.description,
   path = "",
   image = siteConfig.ogImage,
+  keywords: keywordsParam,
   noIndex = false,
 }: MetadataParams = {}) {
   const url = `${siteConfig.url}${path}`;
   const fullTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
+  const keywords =
+    keywordsParam !== undefined
+      ? Array.isArray(keywordsParam)
+        ? keywordsParam
+        : [keywordsParam]
+      : Array.from(siteConfig.keywords);
 
   return {
     title: fullTitle,
     description,
-    keywords: Array.from(siteConfig.keywords),
+    keywords,
     authors: [{ name: siteConfig.creator, url: siteConfig.url }],
     creator: siteConfig.creator,
     alternates: { canonical: url },
