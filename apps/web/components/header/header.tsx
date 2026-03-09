@@ -102,7 +102,8 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
-  const useColoredLogo = pathname.startsWith("/africa/projects");
+  const useColoredLogo =
+    pathname.startsWith("/africa/projects") || pathname.startsWith("/finfest");
 
   useEffect(() => {
     const handleScroll = () => {
