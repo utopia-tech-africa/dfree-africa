@@ -6,7 +6,7 @@ import ComponentLayout from "@/components/component-layout";
 
 export const FinfestHero = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative flex h-screen max-h-screen flex-col overflow-hidden">
       {/* patterns */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-120px] top-24 opacity-70 sm:left-[-80px] md:left-0 md:top-0">
@@ -18,14 +18,14 @@ export const FinfestHero = () => {
         </div>
       </div>
 
-      <ComponentLayout className="relative pt-16 pb-12 md:pb-16">
-        {/* text */}
-        <div className="mx-auto  text-center">
+      <ComponentLayout className="relative flex flex-1 flex-col pt-16 pb-12 md:pb-16">
+        {/* text - takes only what it needs */}
+        <div className="mx-auto shrink-0 text-center">
           <h1 className="font-montserrat leading-[120%] font-bold text-neutral-1000 text-3xl md:text-4xl lg:text-[42px]">
             FinFE$T financial festival for everyone
           </h1>
 
-          <p className="mt-4 max-w-[720px]  text-center mx-auto text-sm md:text-base lg:text-lg text-neutral-900 leading-[130%]">
+          <p className="mt-4 max-w-[720px] mx-auto text-center text-sm leading-[130%] text-neutral-900 md:text-base lg:text-lg">
             Learn how to make, manage, and build wealth from industry
             professionals. Join our free community event designed to empower
             your financial future.
@@ -38,14 +38,14 @@ export const FinfestHero = () => {
           </div>
         </div>
 
-        {/* hero img */}
-        <div className="mt-12">
-          <div className="w-full overflow-hidden rounded-lg">
+        {/* hero img - takes the rest of the height */}
+        <div className="mt-12 min-h-0 flex-1">
+          <div className="h-full w-full overflow-hidden rounded-lg">
             <Image
               src={FinfestHeroImg}
               alt="FinFest Financial Festival"
               priority
-              className="w-full h-[320px] md:h-[420px] lg:h-[485px] object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>

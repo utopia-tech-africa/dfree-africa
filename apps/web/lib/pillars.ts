@@ -27,7 +27,7 @@ export const OUR_PILLARS = {
       bgImageMobile: PillarImg1Mobile,
       logo: BillionDollarLogo,
       imagePositionClassName: "object-[center_34%] md:object-center",
-      href: "",
+      href: "/billion-dollar-challenge",
     },
     {
       pillar: "DFREE® Global Foundation in Africa",
@@ -46,7 +46,7 @@ export const OUR_PILLARS = {
       bgImage: PillarImg3,
       bgImageMobile: PillarImg3Mobile,
       imagePositionClassName: "object-[center_42%] md:object-center",
-      href: "",
+      href: "/community-campaigns",
     },
     {
       pillar: "FinFe$t®: Where Wealth Meets Wellness",
@@ -55,7 +55,7 @@ export const OUR_PILLARS = {
       bgImage: PillarImg4,
       bgImageMobile: PillarImg4Mobile,
       imagePositionClassName: "object-[center_26%] md:object-center",
-      href: "",
+      href: "/finfest",
     },
     {
       pillar: "DFREE® Access Sholarships",
@@ -64,7 +64,7 @@ export const OUR_PILLARS = {
       bgImage: PillarImg5,
       bgImageMobile: PillarImg5Mobile,
       imagePositionClassName: "object-[center_24%] md:object-center",
-      href: "",
+      href: "/access-sholarships",
     },
   ],
 };

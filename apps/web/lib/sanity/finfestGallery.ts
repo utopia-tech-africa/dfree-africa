@@ -98,7 +98,7 @@ export async function getFinfestGallery(): Promise<FinfestGalleryForUI | null> {
   if (years.length === 0) return null;
 
   return {
-    title: "Gallery",
+    title: "FinFE$T over the years",
     years,
   };
 }
