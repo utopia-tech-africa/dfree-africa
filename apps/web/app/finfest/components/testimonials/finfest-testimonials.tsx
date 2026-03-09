@@ -45,9 +45,9 @@ const testimonials: Testimonial[] = [
 
 import { Carousel } from "@/components/carousel";
 
-export const FinFestTestimonials = () => {
+export const FinfestTestimonials = () => {
   return (
-    <section className="py-4 bg-white overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <ComponentLayout className="space-y-8">
         {/* Header */}
         <div className="flex flex-col items-center text-center  max-w-[800px] mx-auto">
@@ -70,7 +70,7 @@ export const FinFestTestimonials = () => {
               "(min-width: 1024px)": { slidesToScroll: 3 },
             },
           }}
-          viewportClassName="-mr-4 md:-mr-10 lg:-mr-20 xl:-mr-[50vw] overflow-hidden max-w-[1430px]"
+          viewportClassName="-mr-4 md:-mr-10 lg:-mr-20 xl:-mr-[50vw] overflow-hidden"
           slideClassName="basis-[300px]"
         >
           {testimonials.map((item, index) => (

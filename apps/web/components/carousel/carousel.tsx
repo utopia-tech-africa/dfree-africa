@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { PiArrowLeft, PiArrowRight } from "react-icons/pi";
@@ -15,6 +17,9 @@ interface CarouselProps {
   slideClassName?: string;
   viewportClassName?: string;
   navigationClassName?: string;
+  showNavigation?: boolean;
+  autoplay?: boolean;
+  autoplayInterval?: number;
 }
 
 export const Carousel = ({
@@ -25,11 +30,15 @@ export const Carousel = ({
   slideClassName,
   viewportClassName,
   navigationClassName,
+  showNavigation = true,
+  autoplay = false,
+  autoplayInterval = 3000,
 }: CarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     containScroll: "trimSnaps",
     slidesToScroll: 1,
+    loop: autoplay, // Enable loop if autoplay is on
     ...options,
   });
 
@@ -55,7 +64,21 @@ export const Carousel = ({
     setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
-  }, [emblaApi, onSelect]);
+
+    // Manual Autoplay
+    let interval: NodeJS.Timeout;
+    if (autoplay) {
+      interval = setInterval(() => {
+        if (emblaApi.canScrollNext()) {
+          emblaApi.scrollNext();
+        } else {
+          emblaApi.scrollTo(0);
+        }
+      }, autoplayInterval);
+    }
+
+    return () => clearInterval(interval);
+  }, [emblaApi, onSelect, autoplay, autoplayInterval]);
 
   return (
     <div className={cn("space-y-4", className)}>
@@ -79,42 +102,46 @@ export const Carousel = ({
       </div>
 
       {/* Navigation */}
-      <div className={cn("pt-4", navigationClassName)}>
-        <div className="flex items-center justify-between">
-          {/* Dots */}
-          <div className="flex gap-2">
-            {children.map((_, index) => (
-              <button
-                key={index}
-                className={cn(
-                  "size-2.5 rounded-full transition-all duration-300 cursor-pointer",
-                  index === selectedIndex ? "bg-neutral-900" : "bg-neutral-300",
-                )}
-                onClick={() => emblaApi?.scrollTo(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+      {showNavigation && (
+        <div className={cn("pt-4", navigationClassName)}>
+          <div className="flex items-center justify-between">
+            {/* Dots */}
+            <div className="flex gap-2">
+              {children.map((_, index) => (
+                <button
+                  key={index}
+                  className={cn(
+                    "size-2.5 rounded-full transition-all duration-300 cursor-pointer",
+                    index === selectedIndex
+                      ? "bg-neutral-900"
+                      : "bg-neutral-300",
+                  )}
+                  onClick={() => emblaApi?.scrollTo(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
 
-          {/* Arrows */}
-          <div className="flex gap-4">
-            <button
-              onClick={scrollPrev}
-              className="p-3transition-colors"
-              aria-label="Previous slide"
-            >
-              <FaArrowLeft className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
-            </button>
-            <button
-              onClick={scrollNext}
-              className="p-3 transition-colors"
-              aria-label="Next slide"
-            >
-              <FaArrowRight className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
-            </button>
+            {/* Arrows */}
+            <div className="flex gap-4">
+              <button
+                onClick={scrollPrev}
+                className="p-3transition-colors"
+                aria-label="Previous slide"
+              >
+                <FaArrowLeft className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
+              </button>
+              <button
+                onClick={scrollNext}
+                className="p-3 transition-colors"
+                aria-label="Next slide"
+              >
+                <FaArrowRight className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

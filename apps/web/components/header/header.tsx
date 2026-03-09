@@ -199,7 +199,10 @@ export const Header = () => {
           <div className="flex gap-x-6 items-center">
             <Link
               href="#footer"
-              className="text-sm font-medium text-neutral-100 hover:text-white hidden md:flex"
+              className={cn(
+                buttonVariants({ variant: "ghost", size: "lg" }),
+                "hidden md:flex",
+              )}
             >
               Contact us
             </Link>

@@ -40,9 +40,9 @@ const speakers: Speaker[] = [
   },
 ];
 
-export const FinFestPastSpeakers = () => {
+export const FinfestPastSpeakers = () => {
   return (
-    <section className="py-4 bg-white overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <ComponentLayout className="space-y-8">
         {/* Header */}
         <div className="flex flex-col space-y-2 ">
@@ -65,7 +65,7 @@ export const FinFestPastSpeakers = () => {
               "(min-width: 1024px)": { slidesToScroll: 3 },
             },
           }}
-          viewportClassName="-mr-4 md:-mr-10 lg:-mr-20 xl:-mr-[50vw] overflow-hidden max-w-[1430px]"
+          viewportClassName="-mr-4 md:-mr-10 lg:-mr-20 xl:-mr-[50vw] overflow-hidden"
           slideClassName="basis-[300px]"
         >
           {speakers.map((speaker, index) => (
