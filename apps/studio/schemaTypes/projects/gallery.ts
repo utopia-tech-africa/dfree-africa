@@ -21,6 +21,17 @@ export const gallery = defineType({
         maxLength: 96,
       },
       validation: (rule) => rule.required(),
+      description:
+        'Use "finfest" (or e.g. "finfest-2024") for galleries that appear on the Finfest gallery page.',
+    }),
+
+    defineField({
+      name: 'year',
+      title: 'Year',
+      type: 'number',
+      description:
+        'Optional. For Finfest galleries: set this to the event year (e.g. 2024). Used for ordering and filtering on the Finfest gallery page.',
+      validation: (rule) => rule.min(2000).max(2100).integer().warning('Use a 4-digit year'),
     }),
 
     defineField({
