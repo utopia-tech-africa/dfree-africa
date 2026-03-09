@@ -15,7 +15,7 @@ export const ASCAccessibilty = () => {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-16 md:py-24 lg:py-32 bg-white">
+    <section className="relative w-full overflow-hidden bg-white">
       {/* Background Watermark */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] md:w-[700px] md:h-[700px] pointer-events-none select-none">
         <Image
