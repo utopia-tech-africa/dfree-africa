@@ -8,11 +8,11 @@ export const FinfestHero = () => {
   return (
     <div className="relative overflow-hidden my-20">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-120px] top-30 opacity-70 sm:left-[-80px] md:left-0 md:top-0 overflow-hidden">
+        <div className="absolute -left-30 top-30 opacity-70 sm:-left-20 md:left-0 md:top-0 overflow-hidden">
           <FinfestHeroPattern />
         </div>
 
-        <div className="absolute right-[-120px] top-30 scale-x-[-1] opacity-60 sm:right-[-80px] md:right-0 md:top-0">
+        <div className="absolute -right-30 top-30 scale-x-[-1] opacity-60 sm:-right-20 md:right-0 md:top-0">
           <FinfestHeroPattern />
         </div>
       </div>
@@ -23,7 +23,7 @@ export const FinfestHero = () => {
             FinFE$T financial festival for everyone
           </h1>
 
-          <p className="mt-1 max-w-[720px]  text-center mx-auto text-sm md:text-base lg:text-lg text-neutral-900 leading-[130%]">
+          <p className="mt-1 max-w-180  text-center mx-auto text-sm md:text-base lg:text-lg text-neutral-900 leading-[130%]">
             Learn how to make, manage, and build wealth from industry
             professionals. Join our free community event designed to empower
             your financial future.
@@ -37,7 +37,7 @@ export const FinfestHero = () => {
         </div>
 
         <div className="mt-12">
-          <div className="w-full overflow-hidden rounded-lg relative h-[229px] md:h-[420px] lg:h-[570px]">
+          <div className="w-full overflow-hidden rounded-lg relative h-57.25 md:h-105 lg:h-142.5">
             <Image
               src={FinfestHeroImg}
               alt="FinFest Financial Festival"
