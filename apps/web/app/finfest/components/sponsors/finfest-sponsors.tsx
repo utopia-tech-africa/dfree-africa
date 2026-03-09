@@ -26,7 +26,7 @@ export const FinfestSponsors = () => {
   ];
 
   return (
-    <section className="py-12 bg-white overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <div className="flex flex-col items-center space-y-12">
         {/* Header */}
         <div className="flex flex-col items-center text-center space-y-2 relative w-full">

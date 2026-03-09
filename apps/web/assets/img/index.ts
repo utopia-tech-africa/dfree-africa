@@ -152,4 +152,5 @@ export {
   NJIDAlogo,
   RWJBarnabasHealthLogo,
   ValleyLogo,
+  FinfestHeroImg,
 };

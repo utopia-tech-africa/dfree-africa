@@ -32,7 +32,6 @@ export const ASCAccessibilty = () => {
           {/* Left Content */}
           <div className="flex flex-col">
             <div className="space-y-4">
-              <Title text="Accessibility" />
               <Subtitle
                 text="Who can apply for the scholarship"
                 className="leading-tight"

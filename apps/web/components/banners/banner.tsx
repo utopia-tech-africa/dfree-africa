@@ -27,7 +27,7 @@ export const Banner: React.FC<BannerProps> = ({
   secondaryHref,
 }) => {
   return (
-    <div className={cn("mb-3 lg:px-20 max-w-360 mx-auto", className)}>
+    <div className={cn("mb-3 lg:px-20 mx-auto", className)}>
       <div className="relative w-full min-h-101 border flex items-end md:items-center  md:rounded-lg overflow-hidden">
         {/* Background */}
         <Image
