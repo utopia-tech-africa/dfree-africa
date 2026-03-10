@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { Montserrat, Poppins, Roboto, Space_Grotesk } from "next/font/google";
+import { Montserrat, Poppins, Space_Grotesk } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import "./globals.css";
 import { createMetadata } from "@/lib/seo";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -13,11 +13,6 @@ const montserrat = Montserrat({
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  weight: ["400", "500"],
-});
-const roboto = Poppins({
-  subsets: ["latin"],
-  variable: "--font-roboto",
   weight: ["400", "500"],
 });
 const spaceGrotesk = Space_Grotesk({
@@ -33,19 +28,21 @@ export const metadata: Metadata = {
   ...createMetadata(),
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const messages = await getMessages();
+
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${poppins.variable} ${roboto.variable} ${spaceGrotesk.variable} font-poppins antialiased`}
+        className={`${montserrat.variable} ${poppins.variable} ${spaceGrotesk.variable} font-poppins antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

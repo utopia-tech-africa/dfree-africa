@@ -21,46 +21,52 @@ export const Events = () => {
   const totalSlides = eventsData.events.length;
 
   const updateScrollArrows = useCallback(() => {
-    const el = scrollContainerRef.current;
-    if (!el) return;
-    const { scrollLeft, scrollWidth, clientWidth } = el;
+    const container = scrollContainerRef.current;
+    const cards = cardRefsRef.current;
+    if (!container || !cards.length) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+
+    // Update arrow states
     setCanScrollLeft(scrollLeft > SCROLL_EDGE_THRESHOLD);
     setCanScrollRight(
       scrollLeft < scrollWidth - clientWidth - SCROLL_EDGE_THRESHOLD,
     );
 
-    if (scrollLeft < SCROLL_EDGE_THRESHOLD) {
-      setActiveIndex(0);
+    // If scrolled to the very end, force last index
+    if (scrollLeft >= scrollWidth - clientWidth - SCROLL_EDGE_THRESHOLD) {
+      setActiveIndex(cards.length - 1);
       return;
     }
-    const cards = cardRefsRef.current;
-    const viewportCenter = scrollLeft + clientWidth / 2;
-    let newIndex = 0;
-    for (let i = 0; i < cards.length; i++) {
-      const card = cards[i];
-      if (card) {
-        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-        if (viewportCenter >= cardCenter) newIndex = i;
-      }
-    }
-    setActiveIndex(newIndex);
+
+    // Otherwise calculate normally
+    const containerPaddingLeft =
+      parseFloat(getComputedStyle(container).paddingLeft) || 0;
+    const cardWidth = cards[0]?.offsetWidth || 1;
+    const gap = 24; // Tailwind gap-6
+
+    const rawIndex = (scrollLeft + containerPaddingLeft) / (cardWidth + gap);
+    const index = Math.round(rawIndex);
+
+    setActiveIndex(Math.min(index, cards.length - 1));
   }, []);
 
   const scrollToIndex = useCallback((index: number) => {
     const container = scrollContainerRef.current;
-    const card = cardRefsRef.current[index];
-    if (!container || !card) {
-      setActiveIndex(index);
-      return;
-    }
-    const paddingLeft =
-      parseFloat(getComputedStyle(container).paddingLeft) || 0;
-    const targetScroll = Math.max(0, card.offsetLeft - paddingLeft);
+    const cards = cardRefsRef.current;
+    if (!container || !cards[index]) return;
+
+    const cardWidth = cards[0]?.offsetWidth || 1;
+    const gap = 20;
+
     const maxScroll = container.scrollWidth - container.clientWidth;
+    const targetScroll = Math.min(index * (cardWidth + gap), maxScroll);
+
     container.scrollTo({
-      left: Math.min(targetScroll, maxScroll),
+      left: targetScroll,
       behavior: "smooth",
     });
+
     setActiveIndex(index);
   }, []);
 
@@ -89,7 +95,7 @@ export const Events = () => {
   const canGoNext = canScrollRight;
 
   return (
-    <ComponentLayout className="overflow-hidden mb-20 md:mb-24 lg:mb-[160px]">
+    <ComponentLayout className="overflow-hidden mb-20 md:mb-24 lg:mb-40">
       <div className="space-y-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="flex flex-col gap-3 max-w-2xl">
@@ -103,30 +109,19 @@ export const Events = () => {
               {eventsData.subtitle}
             </p>
           </div>
-
-          <Link className="w-fit" href="">
+          <Link href={""} className="w-fit">
             <Button
               variant="default"
               size="default"
-              className="hidden md:flex h-auto gap-3 px-3 py-3 text-sm leading-[1.3] font-medium md:px-8 md:text-lg overflow-hidden relative"
+              className="h-auto gap-3 px-3 py-3 text-sm leading-[1.3] font-medium md:px-8 md:text-lg"
+              icon={
+                <ArrowRight
+                  className="size-4.5 shrink-0 md:size-5"
+                  strokeWidth={2}
+                />
+              }
             >
-              <span className="relative z-10">View all events</span>
-
-              <span className="relative w-6 h-6 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full group-hover:translate-x-1.5">
-                  <ArrowRight
-                    className="size-4.5 shrink-0 md:size-5"
-                    strokeWidth={2}
-                  />
-                </div>
-
-                <div className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-300 group-hover:translate-y-0 group-hover:translate-x-1.5">
-                  <ArrowRight
-                    className="size-4.5 shrink-0 md:size-5"
-                    strokeWidth={2}
-                  />
-                </div>
-              </span>
+              View all events
             </Button>
           </Link>
         </div>
@@ -165,14 +160,12 @@ export const Events = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mt-6 gap-6 md:gap-0">
           <div className="flex md:flex-none justify-center items-center gap-2">
             {eventsData.events.map((_, index) => (
-              <button
+              <span
                 key={index}
-                type="button"
-                onClick={() => scrollToIndex(index)}
                 className={cn(
                   "h-2 w-2 rounded-full transition-all duration-300",
                   activeIndex === index
-                    ? "bg-neutral-900 scale-110"
+                    ? "bg-neutral-900 scale-120"
                     : "bg-neutral-300 hover:bg-neutral-400",
                 )}
                 aria-label={`Go to slide ${index + 1}`}
@@ -207,29 +200,19 @@ export const Events = () => {
         </div>
 
         <div className="mt-4 md:hidden flex justify-center">
-          <Link className="mx-auto" href="">
+          <Link href={""} className="w-fit">
             <Button
               variant="default"
               size="default"
-              className="flex items-center justify-center h-auto text-sm py-2 leading-[1.3] font-medium md:px-8 md:text-lg overflow-hidden relative"
+              className="h-auto gap-3 px-3 py-3 text-sm leading-[1.3] font-medium md:px-8 md:text-lg"
+              icon={
+                <ArrowRight
+                  className="size-4.5 shrink-0 md:size-5"
+                  strokeWidth={2}
+                />
+              }
             >
-              <span className="relative z-10">View all events</span>
-
-              <span className="relative w-6 h-6 overflow-hidden ms-2">
-                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-full group-hover:translate-x-1.5">
-                  <ArrowRight
-                    className="size-4.5 shrink-0 md:size-5"
-                    strokeWidth={2}
-                  />
-                </div>
-
-                <div className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-300 group-hover:translate-y-0 group-hover:translate-x-1.5">
-                  <ArrowRight
-                    className="size-4.5 shrink-0 md:size-5"
-                    strokeWidth={2}
-                  />
-                </div>
-              </span>
+              View all events
             </Button>
           </Link>
         </div>

@@ -1,71 +1,72 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
 import { DfreeLogo } from "@/assets/svg";
+import { Link } from "@/i18n/navigation";
 
-type NavSubItem = {
-  label: string;
+type NavSubItemConfig = {
+  labelKey: string;
   href: string;
-  active?: boolean;
 };
 
-type NavItem = {
-  label: string;
+type NavItemConfig = {
+  id: string;
+  labelKey: string;
   href: string;
-  subItems?: NavSubItem[];
+  subItems?: NavSubItemConfig[];
 };
 
-const NAV_ITEMS: NavItem[] = [
+const NAV_CONFIG: NavItemConfig[] = [
   {
-    label: "About us",
+    id: "about",
+    labelKey: "aboutUs",
     href: "#",
     subItems: [
-      { label: "Our story", href: "/#our-story" },
-      { label: "Our vision", href: "/#our-story" },
-      { label: "Our mission", href: "/#our-story" },
+      { labelKey: "ourStory", href: "/#our-story" },
+      { labelKey: "ourVision", href: "/#our-story" },
+      { labelKey: "ourMission", href: "/#our-story" },
     ],
   },
   {
-    label: "Impact",
+    id: "impact",
+    labelKey: "impact",
     href: "#",
     subItems: [
-      { label: "Billion dollar challenge", href: "/billion-dollar-challenge" },
+      { labelKey: "billionDollarChallenge", href: "/billion-dollar-challenge" },
+      { labelKey: "globalFoundationInAfrica", href: "/africa" },
+      { labelKey: "communityCampaigns", href: "/community-campaigns" },
       {
-        label: "Global Foundation in Africa",
-        href: "/africa",
-      },
-      { label: "Community campaigns", href: "/community-campaigns" },
-      {
-        label: "Foundation Scholarship Commitment",
+        labelKey: "foundationScholarshipCommitment",
         href: "/access-sholarships",
       },
-      { label: "FinFe$t", href: "/finfest" },
+      { labelKey: "finfest", href: "/finfest" },
     ],
   },
   {
-    label: "Get involved",
+    id: "getInvolved",
+    labelKey: "getInvolved",
     href: "#",
     subItems: [
-      { label: "Get merch", href: "https://store.dfree.com/" },
-      { label: "Get Books", href: "https://store.dfree.com/" },
-      { label: "Contact us", href: "#footer" },
+      { labelKey: "getMerch", href: "https://store.dfree.com/" },
+      { labelKey: "getBooks", href: "https://store.dfree.com/" },
+      { labelKey: "contactUs", href: "#footer" },
     ],
   },
 ];
 
-type HoveredNavKey = "About us" | "Impact" | "Get involved" | null;
-
 function NavTrigger({
   item,
   onMouseEnter,
+  label,
 }: {
-  item: NavItem;
+  item: NavItemConfig;
   onMouseEnter: () => void;
+  label: string;
 }) {
   if (!item.subItems?.length) {
     return (
@@ -73,7 +74,7 @@ function NavTrigger({
         href={item.href}
         className="flex items-center gap-1 text-sm font-medium text-neutral-100 hover:text-white"
       >
-        {item.label}
+        {label}
       </Link>
     );
   }
@@ -84,7 +85,7 @@ function NavTrigger({
       className="flex cursor-pointer items-center gap-1 text-sm font-medium text-neutral-100 hover:text-white"
     >
       <span className="flex items-center gap-1">
-        {item.label}
+        {label}
         <ChevronDown className="size-4 shrink-0" aria-hidden />
       </span>
     </div>
@@ -92,14 +93,16 @@ function NavTrigger({
 }
 
 export const Header = () => {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [hoveredNav, setHoveredNav] = useState<HoveredNavKey>(null);
-  const [expandedMobileSection, setExpandedMobileSection] = useState<
+  const [hoveredNavId, setHoveredNavId] = useState<string | null>(null);
+  const [expandedMobileSectionId, setExpandedMobileSectionId] = useState<
     string | null
-  >("About us");
+  >("about");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
+  const hoveredItem = NAV_CONFIG.find((i) => i.id === hoveredNavId);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,8 +124,8 @@ export const Header = () => {
     };
   }, [mobileMenuOpen]);
 
-  const toggleMobileSection = (label: string) => {
-    setExpandedMobileSection((prev) => (prev === label ? null : label));
+  const toggleMobileSection = (id: string) => {
+    setExpandedMobileSectionId((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -145,7 +148,6 @@ export const Header = () => {
     >
       <ComponentLayout className="flex h-16 items-center justify-between md:h-[72px]">
         <div className="flex justify-between w-full">
-          {/* Logo */}
           <Link
             href="/"
             className="flex shrink-0 items-center"
@@ -154,10 +156,9 @@ export const Header = () => {
             <DfreeLogo />
           </Link>
 
-          {/* Desktop nav */}
           <nav
             className="relative hidden md:block"
-            onMouseLeave={() => setHoveredNav(null)}
+            onMouseLeave={() => setHoveredNavId(null)}
           >
             <div
               className={cn(
@@ -172,20 +173,20 @@ export const Header = () => {
                   : undefined
               }
             >
-              {NAV_ITEMS.map((item) => (
+              {NAV_CONFIG.map((item) => (
                 <NavTrigger
-                  key={item.label}
+                  key={item.id}
                   item={item}
+                  label={t(item.labelKey)}
                   onMouseEnter={() => {
                     if (item.subItems?.length) {
-                      setHoveredNav(item.label as HoveredNavKey);
+                      setHoveredNavId(item.id);
                     }
                   }}
                 />
               ))}
             </div>
 
-            {/* Single dropdown panel - same position for all items */}
             {hoveredItem?.subItems && (
               <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
                 <div
@@ -194,14 +195,13 @@ export const Header = () => {
                 >
                   {hoveredItem.subItems.map((subItem) => (
                     <Link
-                      key={subItem.label}
+                      key={subItem.labelKey}
                       href={subItem.href}
                       className={cn(
                         "w-fit max-w-[208px] rounded-full px-4 py-2 text-center text-sm font-bold leading-tight text-neutral-1000",
-                        subItem.active && "bg-neutral-200",
                       )}
                     >
-                      {subItem.label}
+                      {t(subItem.labelKey)}
                     </Link>
                   ))}
                 </div>
@@ -216,12 +216,11 @@ export const Header = () => {
                 "font-medium",
               )}
             >
-              Donate
+              {tCommon("donate")}
             </Link>
           </div>
         </div>
 
-        {/* Mobile menu button */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -233,7 +232,6 @@ export const Header = () => {
         </button>
       </ComponentLayout>
 
-      {/* Mobile sidebar backdrop */}
       {mobileMenuOpen && (
         <div
           className="fixed inset-0 z-9998 bg-neutral-1000/60 md:hidden"
@@ -242,7 +240,6 @@ export const Header = () => {
         />
       )}
 
-      {/* Mobile sidebar */}
       <aside
         className={cn(
           "fixed top-0 right-0 z-9999 h-screen w-[80%] max-w-sm bg-white shadow-xl transition-transform duration-300 ease-out md:hidden",
@@ -252,7 +249,6 @@ export const Header = () => {
         )}
       >
         <div className="flex h-full flex-col">
-          {/* Close button */}
           <div className="flex justify-end p-4">
             <button
               type="button"
@@ -264,22 +260,22 @@ export const Header = () => {
             </button>
           </div>
 
-          {/* Nav sections */}
           <nav className="flex flex-1 flex-col overflow-y-auto px-6 pb-6">
-            {NAV_ITEMS.map((item, index) => {
-              const isExpanded = expandedMobileSection === item.label;
+            {NAV_CONFIG.map((item, index) => {
+              const isExpanded = expandedMobileSectionId === item.id;
+              const label = t(item.labelKey);
               return (
-                <div key={item.label}>
+                <div key={item.id}>
                   {index > 0 && (
                     <hr className="my-4 border-neutral-200" aria-hidden />
                   )}
                   {item.subItems?.length ? (
                     <button
                       type="button"
-                      onClick={() => toggleMobileSection(item.label)}
+                      onClick={() => toggleMobileSection(item.id)}
                       className="flex w-full items-center justify-between py-3 text-left text-base font-bold text-neutral-1000"
                     >
-                      {item.label}
+                      {label}
                       {isExpanded ? (
                         <ChevronUp className="size-5 shrink-0" />
                       ) : (
@@ -292,7 +288,7 @@ export const Header = () => {
                       onClick={() => setMobileMenuOpen(false)}
                       className="flex w-full items-center justify-between py-3 text-base font-bold text-neutral-1000"
                     >
-                      {item.label}
+                      {label}
                     </Link>
                   )}
                   {item.subItems && (
@@ -306,12 +302,12 @@ export const Header = () => {
                         <div className="flex flex-col gap-1 pb-2 pt-1">
                           {item.subItems.map((subItem) => (
                             <Link
-                              key={subItem.label}
+                              key={subItem.labelKey}
                               href={subItem.href}
                               onClick={() => setMobileMenuOpen(false)}
                               className="max-w-[208px] py-2 text-sm font-medium leading-tight text-neutral-900"
                             >
-                              {subItem.label}
+                              {t(subItem.labelKey)}
                             </Link>
                           ))}
                         </div>
@@ -323,7 +319,6 @@ export const Header = () => {
             })}
           </nav>
 
-          {/* Visit store button */}
           <div className="border-t border-neutral-200 p-6 pb-10">
             <Link
               href="#store"
@@ -333,7 +328,7 @@ export const Header = () => {
                 "flex w-full justify-center rounded-full font-medium",
               )}
             >
-              Visit store
+              {tCommon("visitStore")}
             </Link>
           </div>
         </div>

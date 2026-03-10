@@ -1,17 +1,23 @@
 import { createMetadata } from "@/lib/seo";
 import { getFeaturedProjects, getPhotoGallery } from "@/lib/sanity";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import React from "react";
 import { ContinentalImpact, FeaturedProjects, Hero } from "./components";
 import { OurStory } from "./components/our-story";
 import { PhotoGallery } from "./continental/components";
 
-export const metadata: Metadata = createMetadata({
-  title: "Africa",
-  description:
-    "Empowering Africa - Driving financial freedom and sustainable community development through education, skills training, and economic programs.",
-  path: "/africa",
-});
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return createMetadata({
+    title: t("africa.title"),
+    description: t("africa.description"),
+    path: `/${locale}/africa`,
+  });
+}
 
 const AfricaPage = async () => {
   const [featuredProjects, photoGallery] = await Promise.all([

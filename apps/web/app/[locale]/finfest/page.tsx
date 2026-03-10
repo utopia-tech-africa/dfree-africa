@@ -1,5 +1,6 @@
 import { createMetadata } from "@/lib/seo";
 import { getFinfestGallery } from "@/lib/sanity";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import {
   FinfestBanner,
@@ -12,12 +13,17 @@ import { FinfestHero } from "./components/finfest-hero";
 import { FinfestObjective } from "./components/finfest-objective";
 import FinfestMovement from "./components/finfest-objective/finfest-movement";
 
-export const metadata: Metadata = createMetadata({
-  title: "FinFE$T",
-  description:
-    "FinFE$T is DFREE's free financial festival for everyone. Learn how to make, manage, and build wealth from industry professionals at our community event.",
-  path: "/finfest",
-});
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return createMetadata({
+    title: t("finfest.title"),
+    description: t("finfest.description"),
+    path: `/${locale}/finfest`,
+  });
+}
 
 export default async function FinFestPage() {
   const gallery = await getFinfestGallery();
