@@ -1,4 +1,5 @@
 import { createMetadata } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { CampaignsWhatWeDo } from "./components";
 import { CampaignsAbout } from "./components/campaigns-about";
@@ -8,12 +9,17 @@ import { CampaignsHero } from "./components/campaigns-hero";
 import { CampaignsImpact } from "./components/campaigns-impact";
 import { CampaignsResults } from "./components/campaigns-results";
 
-export const metadata: Metadata = createMetadata({
-  title: "Community Campaigns",
-  description:
-    "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs.",
-  path: "/community-campaigns",
-});
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return createMetadata({
+    title: t("communityCampaigns.title"),
+    description: t("communityCampaigns.description"),
+    path: `/${locale}/community-campaigns`,
+  });
+}
 
 const CommunityCampaignsPage = () => {
   return (

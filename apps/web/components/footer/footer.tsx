@@ -1,12 +1,47 @@
-import { footerItems } from "@/constants/footer-items";
+import { getTranslations } from "next-intl/server";
 import { DfreeLogoWhite } from "@/assets/svg";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import ComponentLayout from "../component-layout";
+import {
+  Facebook,
+  Instagram,
+  Mail,
+  Phone,
+  X,
+  Youtube,
+  Linkedin,
+} from "lucide-react";
 
-const { footerAbout, footerPillars, getInvolved, connectWithUs } = footerItems;
+const FOOTER_ABOUT_KEYS = [
+  "whoWeAre",
+  "ourMission",
+  "ourStory",
+  "team",
+] as const;
+const FOOTER_PILLARS_KEYS = [
+  "billionDollarChallenge",
+  "dfreeAfrica",
+  "communityCampaigns",
+  "finfest",
+  "dfreeAccessScholarships",
+] as const;
+const GET_INVOLVED_KEYS = [
+  "support",
+  "partner",
+  "travelWithUs",
+  "volunteer",
+] as const;
 
-export const Footer = () => {
+const CONNECT_WITH_US = [
+  { icons: [Phone], text: "(844) 693-3733" },
+  { icons: [Mail], text: "info@dfree.com" },
+  { icons: [Facebook, Instagram, X, Linkedin, Youtube] },
+];
+
+export const Footer = async () => {
+  const t = await getTranslations("footer");
+
   return (
     <ComponentLayout
       id="footer"
@@ -17,42 +52,39 @@ export const Footer = () => {
           <DfreeLogoWhite />
         </div>
         <div className="flex flex-col gap-5">
-          <h4 className="text-lg font-bold">About</h4>
+          <h4 className="text-lg font-bold">{t("about")}</h4>
           <div className="flex flex-col gap-4 text-sm lg:text-base">
-            {footerAbout.map((item, i) => (
-              <a href={""} key={i}>
-                {item}
+            {FOOTER_ABOUT_KEYS.map((key) => (
+              <a href="" key={key}>
+                {t(key)}
               </a>
             ))}
           </div>
         </div>
         <div className="flex flex-col gap-5">
-          <h4 className="text-lg font-bold">Our pillars</h4>
+          <h4 className="text-lg font-bold">{t("ourPillars")}</h4>
           <div className="flex flex-col gap-4 text-sm lg:text-base">
-            {footerPillars.map((item, i) => (
-              <a href="" key={i} className="text-nowrap">
-                {item}
+            {FOOTER_PILLARS_KEYS.map((key) => (
+              <a href="" key={key} className="text-nowrap">
+                {t(key)}
               </a>
             ))}
           </div>
         </div>
         <div className="flex flex-col gap-5">
-          <h4 className="text-lg font-bold">Get involved</h4>
+          <h4 className="text-lg font-bold">{t("getInvolved")}</h4>
           <div className="flex flex-col gap-4 text-sm lg:text-base">
-            {getInvolved.map(
-              (item, i) =>
-                item && (
-                  <a href="" key={i}>
-                    {item}
-                  </a>
-                ),
-            )}
+            {GET_INVOLVED_KEYS.map((key) => (
+              <a href="" key={key}>
+                {t(key)}
+              </a>
+            ))}
           </div>
         </div>
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-5">
-            <h4 className="text-lg font-bold">Connect with us</h4>
-            {connectWithUs.map((connect, idx) => (
+            <h4 className="text-lg font-bold">{t("connectWithUs")}</h4>
+            {CONNECT_WITH_US.map((connect, idx) => (
               <div key={idx} className="flex items-center gap-3">
                 {connect.icons?.map((Icon) => (
                   <a href="" key={Icon.displayName || Icon.name}>
@@ -68,27 +100,25 @@ export const Footer = () => {
           <div className="flex flex-col gap-4">
             <h4 className="text-lg hidden md:block font-bold"></h4>
             <h4 className="text-lg font-bold font-montserrat">
-              Subscribe to newsletter
+              {t("subscribeToNewsletter")}
             </h4>
             <p className="block md:hidden font-poppins text-sm leading-[120%] text-neutral-100">
-              Stay connected with our latest updates and transformative work
+              {t("stayConnected")}
             </p>
             <div className="flex w-full flex-col gap-3 md:flex-row md:items-center">
               <Input
                 type="email"
-                placeholder="Enter email address"
+                placeholder={t("enterEmail")}
                 className="w-full rounded-[100px] border border-neutral-100 bg-transparent px-2 py-6 placeholder:text-sm placeholder:text-neutral-300 focus:outline-none md:min-w-75 md:flex-1 md:px-5 lg:min-w-62.5"
               />
               <Button
                 className="w-full py-6 font-bold md:w-auto"
                 variant={"secondary"}
               >
-                Submit
+                {t("submit")}
               </Button>
             </div>
-            <p className="text-xs text-neutral-200">
-              By subscribing, you agree to our privacy policy
-            </p>
+            <p className="text-xs text-neutral-200">{t("privacyNote")}</p>
           </div>
         </div>
       </div>
@@ -96,18 +126,16 @@ export const Footer = () => {
         <hr className="border-white" />
       </div>
       <div className="mt-6 flex gap-5 flex-col md:flex-row md:items-center justify-center text-sm">
-        <span className="text-center">
-          © 2024 DFREE® Foundation. All rights reserved.
-        </span>
+        <span className="text-center">{t("copyright")}</span>
         <div className="flex gap-3 items-center justify-center md:gap-8 underline text-xs">
           <a href="" className="cursor-pointer text-nowrap">
-            Privacy policy
+            {t("privacyPolicy")}
           </a>
           <a href="" className="cursor-pointer text-nowrap">
-            Terms of service
+            {t("termsOfService")}
           </a>
           <a href="" className="cursor-pointer text-nowrap">
-            Cookies settings
+            {t("cookiesSettings")}
           </a>
         </div>
       </div>

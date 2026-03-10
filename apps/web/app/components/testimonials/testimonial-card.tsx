@@ -11,7 +11,9 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
       <div className="flex items-center gap-4 -mt-8 md:mt-auto">
         <div
           className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 overflow-hidden"
-          style={{ background: "linear-gradient(to bottom, #7CDB17, #42750C)" }}
+          style={{
+            background: "linear-gradient(to bottom, #7CDB17, #42750C)",
+          }}
         >
           <Image
             src={testimonial.image}
