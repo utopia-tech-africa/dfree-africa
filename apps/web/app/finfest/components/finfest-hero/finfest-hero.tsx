@@ -6,40 +6,40 @@ import ComponentLayout from "@/components/component-layout";
 
 export const FinfestHero = () => {
   return (
-    <div className="relative overflow-hidden my-20 xl:min-h-screen xl:flex xl:flex-col">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-30 top-30 opacity-70 sm:-left-20 md:left-0 md:top-0 max-w-[50vw]">
+    <div className="relative flex min-h-screen flex-col overflow-hidden">
+      {/* patterns */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-30 top-24 opacity-70 sm:-left-20 md:left-0 md:top-0">
           <FinfestHeroPattern />
         </div>
-        <div className="absolute -right-30 top-30 scale-x-[-1] opacity-60 sm:-right-20 md:right-0 md:top-0 max-w-[50vw]">
+
+        <div className="absolute -right-30 top-24 scale-x-[-1] opacity-60 sm:-right-20 md:right-0 md:top-0">
           <FinfestHeroPattern />
         </div>
       </div>
 
-      <ComponentLayout className="relative pt-16 pb-12 md:pb-16">
-        <div className="mx-auto text-center max-w-4xl px-4 sm:px-6">
-          <h1 className="font-montserrat leading-[120%] font-bold text-neutral-1000 text-3xl sm:text-4xl md:text-[40px] lg:text-[42px]">
+      <ComponentLayout className="relative flex flex-1 flex-col pt-16 pb-12 md:pb-16">
+        {/* text - takes only what it needs */}
+        <div className="mx-auto shrink-0 text-center">
+          <h1 className="font-montserrat leading-[120%] font-bold text-neutral-1000 text-3xl md:text-4xl lg:text-[42px]">
             FinFE$T financial festival for everyone
           </h1>
 
-          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-900 leading-[130%]">
+          <p className="mt-4 max-w-180 mx-auto text-center text-sm leading-[130%] text-neutral-900 md:text-base lg:text-lg">
             Learn how to make, manage, and build wealth from industry
             professionals. Join our free community event designed to empower
             your financial future.
           </p>
 
-          <div className="mt-8 flex justify-center">
-            <Button
-              variant="default"
-              size="lg"
-              className="rounded-full px-6 sm:px-8"
-            >
+          <div className="mt-6 flex justify-center">
+            <Button variant="default" size="lg" className="rounded-full px-8">
               Register now
             </Button>
           </div>
         </div>
 
-        <div className="mt-12 px-4 sm:px-6">
+        {/* hero img - takes the rest of the height */}
+        <div className="mt-12 min-h-0 flex-1">
           <div className="w-full overflow-hidden rounded-lg relative h-56 sm:h-80 md:h-96 lg:h-123">
             <Image
               src={FinfestHeroImg}
