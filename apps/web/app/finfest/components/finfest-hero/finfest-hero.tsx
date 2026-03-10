@@ -9,11 +9,11 @@ export const FinfestHero = () => {
     <div className="relative flex min-h-screen flex-col overflow-hidden">
       {/* patterns */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-30 top-24 opacity-70 sm:-left-20 md:left-0 md:top-0">
+        <div className="absolute left-[-120px] top-24 opacity-70 sm:left-[-80px] md:left-0 md:top-0">
           <FinfestHeroPattern />
         </div>
 
-        <div className="absolute -right-30 top-24 scale-x-[-1] opacity-60 sm:-right-20 md:right-0 md:top-0">
+        <div className="absolute right-[-120px] top-24 scale-x-[-1] opacity-60 sm:right-[-80px] md:right-0 md:top-0">
           <FinfestHeroPattern />
         </div>
       </div>
@@ -25,7 +25,7 @@ export const FinfestHero = () => {
             FinFE$T financial festival for everyone
           </h1>
 
-          <p className="mt-4 max-w-180 mx-auto text-center text-sm leading-[130%] text-neutral-900 md:text-base lg:text-lg">
+          <p className="mt-4 max-w-[720px] mx-auto text-center text-sm leading-[130%] text-neutral-900 md:text-base lg:text-lg">
             Learn how to make, manage, and build wealth from industry
             professionals. Join our free community event designed to empower
             your financial future.
@@ -40,14 +40,12 @@ export const FinfestHero = () => {
 
         {/* hero img - takes the rest of the height */}
         <div className="mt-12 min-h-0 flex-1">
-          <div className="w-full overflow-hidden rounded-lg relative h-56 sm:h-80 md:h-96 lg:h-123">
+          <div className=" w-full overflow-hidden rounded-lg">
             <Image
               src={FinfestHeroImg}
               alt="FinFest Financial Festival"
               priority
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1200px) 80vw, 1200px"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
