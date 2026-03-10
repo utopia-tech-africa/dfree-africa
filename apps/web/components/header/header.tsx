@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
 import { DfreeLogo } from "@/assets/svg";
-import { Link } from "@/i18n/navigation";
 
 type NavSubItemConfig = {
   labelKey: string;
@@ -93,8 +93,6 @@ function NavTrigger({
 }
 
 export const Header = () => {
-  const t = useTranslations("nav");
-  const tCommon = useTranslations("common");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredNavId, setHoveredNavId] = useState<string | null>(null);
   const [expandedMobileSectionId, setExpandedMobileSectionId] = useState<
@@ -102,7 +100,7 @@ export const Header = () => {
   >("about");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const hoveredItem = NAV_CONFIG.find((i) => i.id === hoveredNavId);
+  const hoveredItem = NAV_ITEMS.find((i) => i.label === hoveredNav);
 
   useEffect(() => {
     const handleScroll = () => {
