@@ -1,11 +1,16 @@
-export const FinfestObjectivePattern = () => {
+export const FinfestObjectivePattern = ({
+  className,
+  ...props
+}: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
+      className={className}
       width="1288"
       height="459"
       viewBox="0 0 1288 459"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g filter="url(#filter0_f_1504_2109)">
         <path

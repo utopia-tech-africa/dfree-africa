@@ -25,7 +25,8 @@ const OBJECTIVE_CONTENT = [
 export const FinfestObjective = () => {
   return (
     <ComponentLayout className="relative overflow-hidden bg-primary-500 py-10">
-      <div className="absolute inset-0 w-full h-full pointer-events-none">
+      <div className="absolute top-0 bottom-0 -left-50 md:-left-20 w-full h-full pointer-events-none">
+        <FinfestObjectivePattern />
         <FinfestObjectivePattern />
       </div>
 

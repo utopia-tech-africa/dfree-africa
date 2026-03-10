@@ -84,7 +84,6 @@ export const Blogs = () => {
     return () => ro.disconnect();
   }, [updateScrollArrows]);
 
-  // Arrows disabled based on actual scroll content (blog cards), not dot index
   const canGoPrev = canScrollLeft;
   const canGoNext = canScrollRight;
 

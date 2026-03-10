@@ -6,7 +6,7 @@ import ComponentLayout from "@/components/component-layout";
 
 export const FinfestHero = () => {
   return (
-    <div className="relative flex h-screen max-h-screen flex-col overflow-hidden">
+    <div className="relative flex min-h-screen flex-col overflow-hidden">
       {/* patterns */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-120px] top-24 opacity-70 sm:left-[-80px] md:left-0 md:top-0">
@@ -40,7 +40,7 @@ export const FinfestHero = () => {
 
         {/* hero img - takes the rest of the height */}
         <div className="mt-12 min-h-0 flex-1">
-          <div className="h-full w-full overflow-hidden rounded-lg">
+          <div className=" w-full overflow-hidden rounded-lg">
             <Image
               src={FinfestHeroImg}
               alt="FinFest Financial Festival"
