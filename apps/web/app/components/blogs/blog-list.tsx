@@ -7,6 +7,7 @@ import { groq } from "next-sanity";
 import { BlogCard } from "./blog-card";
 import ComponentLayout from "@/components/component-layout";
 import { cn } from "@/lib/utils";
+import { blogsQuery } from "@/lib/sanity/queries/blogs";
 
 const SCROLL_EDGE_THRESHOLD = 10;
 
@@ -29,18 +30,11 @@ export const BlogList = ({
   const [canScrollRight, setCanScrollRight] = useState(true);
 
   const totalSlides = blogs.length;
-
   useEffect(() => {
-    const query = groq`*[_type == "blog"] | order(publishedDate desc){
-      title,
-      "slug": slug.current,
-      "mainImage": mainImage.asset->url,
-      excerpt,
-      readTime
-    }`;
+    const params = { currentSlug: currentSlug ?? null };
 
-    client.fetch(query).then((data) => setBlogs(data));
-  }, []);
+    client.fetch(blogsQuery, params).then((data) => setBlogs(data));
+  }, [currentSlug]);
 
   const updateScrollArrows = useCallback(() => {
     const el = scrollContainerRef.current;

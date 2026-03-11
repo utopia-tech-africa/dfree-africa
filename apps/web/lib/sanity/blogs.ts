@@ -29,8 +29,8 @@ function mapBlogToUI(blog: any): BlogForUI {
     imageUrl: blog.mainImage ?? "",
   };
 }
-export async function getBlogs(): Promise<BlogForUI[]> {
-  const data = await client.fetch(blogsQuery);
+export async function getBlogs(currentSlug?: string): Promise<BlogForUI[]> {
+  const data = await client.fetch(blogsQuery, { currentSlug });
   return data.map(mapBlogToUI);
 }
 

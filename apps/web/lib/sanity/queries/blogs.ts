@@ -1,15 +1,15 @@
 import { groq } from "next-sanity";
 
 export const blogsQuery = groq`
-*[_type == "blog"] | order(publishedDate desc) {
-  _id,
-  title,
-  "slug": slug.current,
-  excerpt,
-  readTime,
-  publishedDate,
-  "mainImage": mainImage.asset->url
-}
+  *[_type == "blog" && (!defined($currentSlug) || slug.current != $currentSlug)] | order(publishedDate desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    readTime,
+    publishedDate,
+    "mainImage": mainImage.asset->url
+  }
 `;
 
 export const blogBySlugQuery = groq`
