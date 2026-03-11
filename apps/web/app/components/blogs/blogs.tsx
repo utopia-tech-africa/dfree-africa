@@ -1,22 +1,24 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import ComponentLayout from "@/components/component-layout";
 import { ContentCard } from "@/components/content-card/content-card";
-import { blogData } from "@/lib/blog";
+import { BLOG_KEYS, BLOG_POSTS_META } from "@/lib/blog";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SCROLL_EDGE_THRESHOLD = 10;
 
 export const Blogs = () => {
+  const t = useTranslations("home.blogs");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const totalSlides = blogData.posts.length;
+  const totalSlides = BLOG_KEYS.length;
 
   const updateScrollArrows = useCallback(() => {
     const el = scrollContainerRef.current;
@@ -93,15 +95,15 @@ export const Blogs = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-tertiary-500 font-bold text-base leading-[150%]">
-              {blogData.label}
+              {t("label")}
             </p>
             <h2 className="text-black text-[18px] md:text-[26px] lg:text-[32px] font-bold leading-[120%] mt-2">
-              {blogData.title}
+              {t("title")}
             </h2>
           </div>
 
           <p className="text-black font-medium text-lg max-w-md">
-            {blogData.subtitle}
+            {t("subtitle")}
           </p>
         </div>
       </div>
@@ -114,31 +116,38 @@ export const Blogs = () => {
             className="flex gap-6 overflow-x-auto overflow-y-hidden px-4 md:px-10 lg:px-20 pb-6 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             style={{ msOverflowStyle: "none" }}
           >
-            {blogData.posts.map((post, index) => (
-              <div
-                key={index}
-                ref={(el) => {
-                  cardRefsRef.current[index] = el;
-                }}
-                className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 shrink-0 flex border border-[#E8E8E8] rounded"
-              >
-                <ContentCard
-                  image={post.image}
-                  badge={post.readTime}
-                  badgeVariant="secondary"
-                  title={post.title}
-                  description={post.description}
-                  link={post.link}
-                  padding={true}
-                />
-              </div>
-            ))}
+            {BLOG_KEYS.map((key, index) => {
+              const meta = BLOG_POSTS_META.find((post) => post.id === key);
+              if (!meta) return null;
+
+              const baseKey = `posts.${key}`;
+
+              return (
+                <div
+                  key={key}
+                  ref={(el) => {
+                    cardRefsRef.current[index] = el;
+                  }}
+                  className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 shrink-0 flex border border-[#E8E8E8] rounded"
+                >
+                  <ContentCard
+                    image={meta.image}
+                    badge={t(`${baseKey}.readTime`)}
+                    badgeVariant="secondary"
+                    title={t(`${baseKey}.title`)}
+                    description={t(`${baseKey}.description`)}
+                    link={meta.link}
+                    padding={true}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
 
         <div className="flex items-center justify-between mt-6">
           <div className="flex items-center gap-2">
-            {blogData.posts.map((_, index) => (
+            {BLOG_KEYS.map((_, index) => (
               <button
                 key={index}
                 type="button"

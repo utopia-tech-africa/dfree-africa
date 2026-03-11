@@ -91,5 +91,194 @@
     "travelWithUs": "Viaja con nosotros",
     "volunteer": "Voluntariado",
     "submit": "Enviar"
+  },
+  "home": {
+    "hero": {
+      "title": "Libérate de las limitaciones financieras",
+      "subtitle": "Empodérate con herramientas prácticas y estrategias impulsadas por la comunidad. Transforma tu futuro económico mediante educación, apoyo y acción colectiva.",
+      "discoverMoreCta": "Descubrir más",
+      "donateNowCta": "Donar ahora",
+      "freshOffThePress": "RECIÉN PUBLICADO",
+      "buyNowCta": "Comprar ahora"
+    },
+    "whoWeAre": {
+      "title": "Quiénes somos",
+      "introHighlight": "DFREE Global Foundation, Inc.",
+      "introRest": " es una organización sin fines de lucro que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desatendidas mediante iniciativas gratuitas y centradas en la comunidad que ayudan a las familias a construir una confianza y libertad financieras duraderas.",
+      "missionTitle": "Misión",
+      "mission": "Promover el bienestar financiero en comunidades desatendidas mediante programas y herramientas gratuitos que ayudan a construir una confianza financiera duradera.",
+      "visionTitle": "Visión",
+      "vision": "Un futuro donde cada comunidad tenga los recursos y la confianza para alcanzar la libertad financiera y el progreso generacional.",
+      "imageGalleryAlt": "Galería de imágenes Quiénes somos"
+    },
+    "pillars": {
+      "title": "Pilares",
+      "subtitle": "Soluciones creativas para hacer frente a los obstáculos financieros. Nuestro objetivo es superar tus desafíos monetarios.",
+      "discoverMoreCta": "Descubrir más",
+      "pillars": {
+        "billionDollarChallenge": {
+          "name": "Desafío del billón de dólares",
+          "description": "El Desafío del billón de dólares (BDC) es una iniciativa digital de la Fundación Global DFREE® que ayuda a personas y organizaciones a reducir la deuda y ahorrar mediante el seguimiento de metas, motivación conductual y responsabilidad comunitaria, ofreciendo a los socios un impacto medible y basado en datos."
+        },
+        "dfreeAfrica": {
+          "name": "Fundación Global DFREE® en África",
+          "description": "La Fundación Global DFREE® está profundamente comprometida con el avance de la educación financiera, el desarrollo de liderazgo y el empoderamiento comunitario en el continente africano mediante alianzas estratégicas e inversiones dirigidas."
+        },
+        "communityCampaigns": {
+          "name": "Campañas comunitarias",
+          "description": "La Fundación Global DFREE® lidera campañas comunitarias que unen iglesias, grupos cívicos y organizaciones locales para ofrecer programas coordinados de empoderamiento financiero, fomentando el aprendizaje compartido, la responsabilidad y la celebración colectiva mediante lanzamientos estructurados, sesiones semanales y eventos de graduación."
+        },
+        "finfest": {
+          "name": "FinFe$t®: Donde la riqueza se encuentra con el bienestar",
+          "description": "FinFe$t® es el evento comunitario gratuito emblemático de la Fundación Global DFREE® que combina educación financiera, salud y bienestar a través de experiencias atractivas, equipando a las familias con herramientas prácticas para el bienestar holístico y la prosperidad a largo plazo."
+        },
+        "accessScholarships": {
+          "name": "Becas de acceso DFREE®",
+          "description": "El Programa de becas DFREE® ofrece apoyo basado en necesidades que elimina las barreras financieras para participar en el recorrido DFREE®, brindando acceso a recursos educativos, aprendizaje digital, formación en vivo y asistencia de emergencia limitada para ayudar a las personas a lograr la reducción de deudas y una libertad financiera duradera."
+        }
+      }
+    },
+    "ourImpact": {
+      "label": "Nuestro impacto",
+      "title": "Mapeando nuestro impacto en las comunidades",
+      "description": "Cada hito representa vidas transformadas y esperanza restaurada.",
+      "stats": {
+        "completedProjects": {
+          "value": "1900",
+          "suffix": "+",
+          "label": "Proyectos completados"
+        },
+        "livesImpacted": {
+          "value": "3400",
+          "suffix": "+",
+          "label": "Vidas impactadas"
+        },
+        "debtCleared": {
+          "value": "2500",
+          "suffix": "$",
+          "label": "Deuda saldada"
+        },
+        "youngPeopleTrained": {
+          "value": "2500",
+          "suffix": "+",
+          "label": "Jóvenes formados"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "heading": "Historias reales de cambio",
+      "subtitle": "Voces que revelan el poder de la transformación financiera",
+      "items": {
+        "marcus": {
+          "name": "Marcus Rodriguez",
+          "title": "Propietario de pequeña empresa",
+          "text": "Mi familia ha podido pagar más de 260 000 $ de deuda. El camino ha sido transformador, una bendición y una fuente de comunión en la fe."
+        },
+        "elena": {
+          "name": "Elena Thompson",
+          "title": "Líder comunitaria",
+          "text": "He podido pagar al menos 65 000 $ y ahorrar 5 000 $, lo que me ha ayudado a recuperar el hábito de ahorrar."
+        },
+        "david": {
+          "name": "David Chen",
+          "title": "Emprendedor tecnológico",
+          "text": "Pagué 5 tarjetas de crédito, ya no estoy esclavizado por las deudas y me he vuelto mucho más independiente financieramente."
+        }
+      }
+    },
+    "events": {
+      "label": "Eventos",
+      "title": "Próximos encuentros",
+      "subtitle": "Únete a nuestra misión de transformar las realidades financieras.",
+      "viewAllCta": "Ver todos los eventos",
+      "items": {
+        "workshop": {
+          "badge": "Taller",
+          "title": "Masterclass de libertad financiera",
+          "location": "en línea",
+          "description": "Aprende estrategias prácticas para gestionar y reducir las deudas personales.",
+          "date": {
+            "day": "Vie. 09 feb. 2024",
+            "dated": "06",
+            "mode": "en línea",
+            "year": "2024"
+          }
+        },
+        "seminar": {
+          "badge": "Seminario",
+          "title": "Empoderamiento económico comunitario",
+          "location": "Houston",
+          "description": "Descubre enfoques colaborativos para construir resiliencia financiera.",
+          "date": {
+            "day": "Vie. 09 feb. 2024",
+            "dated": "06",
+            "mode": "en línea",
+            "year": "2024"
+          }
+        },
+        "conference": {
+          "badge": "Conferencia",
+          "title": "Estrategias de reducción de deudas",
+          "location": "Los Ángeles",
+          "description": "Explora técnicas innovadoras para superar los desafíos financieros.",
+          "date": {
+            "day": "Vie. 09 feb. 2024",
+            "dated": "06",
+            "mode": "en línea",
+            "year": "2024"
+          }
+        },
+        "donation": {
+          "badge": "Donación",
+          "title": "Devolver a la tierra madre",
+          "location": "Ghana",
+          "description": "Domina métodos prácticos para enfrentar los retos financieros.",
+          "date": {
+            "day": "Vie. 09 feb. 2024",
+            "dated": "06",
+            "mode": "en línea",
+            "year": "2024"
+          }
+        }
+      }
+    },
+    "merch": {
+      "eyebrow": "Merch",
+      "titleLine1": "Explora nuestra",
+      "titleLine2": "librería",
+      "description": "Impulsa tu camino con productos significativos que generan cambio.",
+      "visitStoreCta": "Visitar tienda"
+    },
+    "blogs": {
+      "label": "Blog",
+      "title": "Ideas y perspectivas",
+      "subtitle": "Abraza la belleza de la vida y valora tus relaciones.",
+      "posts": {
+        "realEstateWealth": {
+          "title": "Construyendo riqueza generacional a través de bienes raíces",
+          "description": "Explora estrategias para generar riqueza a través de inversiones inmobiliarias.",
+          "readTime": "Lectura de 5 min"
+        },
+        "collectiveEconomics": {
+          "title": "El poder de la economía colectiva en las comunidades urbanas",
+          "description": "Conoce el poder transformador de la economía colectiva en las comunidades urbanas.",
+          "readTime": "Lectura de 5 min"
+        },
+        "faithBasedInvesting": {
+          "title": "Inversión basada en la fe: alineando valores y crecimiento financiero",
+          "description": "Descubre cómo la inversión basada en la fe alinea tus valores con el crecimiento financiero.",
+          "readTime": "Lectura de 5 min"
+        },
+        "investingWithPurpose": {
+          "title": "Invertir con propósito: armonizar creencias y éxito financiero",
+          "description": "Invertir con propósito: armonizar creencias profundas y éxito financiero.",
+          "readTime": "Lectura de 5 min"
+        }
+      }
+    }
+  },
+  "about": {
+    "hero": {}
   }
 }
