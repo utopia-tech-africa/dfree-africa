@@ -280,5 +280,86 @@
   },
   "about": {
     "hero": {}
+  },
+  "communityCampaigns": {
+    "hero": {
+      "title": "Campañas comunitarias",
+      "subtitle": "Campañas comunitarias dinámicas que unen iglesias, grupos cívicos y organizaciones locales para implementar programas de empoderamiento financiero DFREE® sincronizados. Estas campañas están diseñadas para crear un impacto colectivo promoviendo el aprendizaje compartido, la responsabilidad mutua y la celebración comunitaria.",
+      "ctaLabel": "Únete al movimiento",
+      "ctaHref": "#",
+      "imageAlt": "Fondo de campañas comunitarias"
+    },
+    "about": {
+      "title": "Qué son las campañas comunitarias",
+      "description": "Las campañas comunitarias reúnen a barrios enteros para abordar los desafíos financieros como uno solo. A diferencia de programas aislados, estos esfuerzos coordinados crean impulso, responsabilidad y una transformación duradera."
+    },
+    "impact": {
+      "title": "Día de impacto DFREE®",
+      "subtitle": "Un modelo de activación comunitaria para la libertad financiera, la colaboración y la acción colectiva",
+      "description": "El Día de impacto DFREE® es una nueva iniciativa que presenta una experiencia de participación comunitaria de un día y múltiples contactos, diseñada para dar a conocer DFREE® en una comunidad local, profundizar relaciones con líderes clave y sembrar una colaboración a largo plazo que conduzca a resultados medibles de empoderamiento financiero. Reúne a organizaciones sin fines de lucro, líderes religiosos, actores cívicos, emprendedores y residentes en el lanzamiento de un ecosistema DFREE continuo en la comunidad anfitriona.",
+      "buttonText": "Saber más",
+      "imageAlt": "Día de impacto DFREE"
+    },
+    "whatWeDo": {
+      "title": "Qué hacemos",
+      "items": {
+        "unifiedCollaboration": {
+          "title": "Colaboración unificada",
+          "description": "Varias organizaciones trabajan al unísono, compartiendo recursos y aprendiendo unas de otras. Esto crea un efecto de red que fortalece a cada participante."
+        },
+        "sharedAccountability": {
+          "title": "Responsabilidad compartida",
+          "description": "Los puntos de contacto semanales y las sesiones de aprendizaje en grupo mantienen a los participantes comprometidos y motivados. Los avances se celebran juntos, haciendo el camino menos solitario."
+        },
+        "measurableImpact": {
+          "title": "Impacto medible",
+          "description": "Las campañas registran resultados reales en la comunidad. La reducción de deudas, el ahorro y el cambio de comportamiento se convierten en pruebas visibles de lo que es posible."
+        }
+      }
+    },
+    "featured": {
+      "sectionTitle": "Campañas destacadas",
+      "title": "NEWARK WOMEN MOVING FORWARD",
+      "description": "En 2024, Newark lanzó su campaña inaugural bajo el liderazgo de la First Lady Linda Baraka. Las mujeres de la ciudad están recuperando el control financiero, reduciendo deudas y construyendo la resiliencia económica que sus familias merecen.",
+      "subtexts": {
+        "faithRooted": {
+          "text": "Ancladas en la fe",
+          "desc": "Las iglesias y organizaciones comunitarias anclan el trabajo con confianza y fundamento espiritual."
+        },
+        "realChange": {
+          "text": "Cambio real",
+          "desc": "Las mujeres pasan del estrés financiero a la estabilidad y la construcción de riqueza a largo plazo."
+        }
+      },
+      "discoverMore": "Descubrir más",
+      "imageAlt": "Imagen de campañas destacadas",
+      "href": "#"
+    },
+    "results": {
+      "title": "Resultados",
+      "subtitle": "El poder de avanzar juntos",
+      "description": "Cuando las personas actúan al unísono, el cambio es rápido. Las comunidades que hacen campaña juntas ven cambios reales en cómo las familias gestionan el dinero y construyen su futuro.",
+      "subtexts": {
+        "grassroots": {
+          "text": "Los movimientos nacen en la base",
+          "desc": "Líderes locales y vecinos llevan el trabajo adelante con autenticidad y confianza."
+        },
+        "habitsTakeRoot": {
+          "text": "Los hábitos financieros echan raíces y perduran",
+          "desc": "El compromiso semanal y el apoyo entre pares convierten el conocimiento en acción duradera."
+        },
+        "economicStrength": {
+          "text": "La fortaleza económica se extiende por los barrios",
+          "desc": "A medida que las personas ganan estabilidad, las comunidades construyen las bases de una prosperidad compartida."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para unirte a la comunidad?",
+      "descriptionLine1": "Cuéntanos tus metas y desafíos,",
+      "descriptionLine2": "te guiaremos hacia el apoyo que mejor sirva tu camino.",
+      "buttonText": "Únete al movimiento",
+      "imageAlt": "Comunidad celebrando juntos"
+    }
   }
 }

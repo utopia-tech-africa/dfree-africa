@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 import ComponentLayout from "@/components/component-layout";
 import Image from "next/image";
@@ -10,37 +11,26 @@ import {
   CampaignsWhatWeDoImg3,
 } from "@/assets";
 
-export const WHAT_WE_DO_CONTENT = {
-  title: "What we do",
-  items: [
-    {
-      title: "Unified collaboration",
-      description:
-        "Multiple organizations work in concert, sharing resources and learning from one another. This creates a network effect that strengthens every participant.",
-      image: CampaignsWhatWeDoImg1,
-    },
-    {
-      title: "Shared accountability",
-      description:
-        "Weekly touchpoints and group learning sessions keep participants engaged and motivated. Progress is celebrated together, making the journey feel less isolating.",
-      image: CampaignsWhatWeDoImg2,
-    },
-    {
-      title: "Measurable impact",
-      description:
-        "Campaigns track real outcomes across the community. Debt reduction, savings growth, and behavioral change become visible proof of what's possible.",
-      image: CampaignsWhatWeDoImg3,
-    },
-  ],
-} as const;
+const WHAT_WE_DO_ITEM_KEYS = [
+  "unifiedCollaboration",
+  "sharedAccountability",
+  "measurableImpact",
+] as const;
+
+const WHAT_WE_DO_IMAGES = [
+  CampaignsWhatWeDoImg1,
+  CampaignsWhatWeDoImg2,
+  CampaignsWhatWeDoImg3,
+] as const;
 
 export const CampaignsWhatWeDo = () => {
+  const t = useTranslations("communityCampaigns.whatWeDo");
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) =>
-        prev === WHAT_WE_DO_CONTENT.items.length - 1 ? 0 : prev + 1,
+        prev === WHAT_WE_DO_ITEM_KEYS.length - 1 ? 0 : prev + 1,
       );
     }, 2000);
 
@@ -51,21 +41,21 @@ export const CampaignsWhatWeDo = () => {
     <section className="flex flex-col lg:grid lg:grid-cols-2">
       <ComponentLayout className="py-2 bg-primary-500 lg:h-full">
         <h4 className="font-montserrat font-bold text-base md:text-lg lg:text-2xl text-neutral-100">
-          {WHAT_WE_DO_CONTENT.title}
+          {t("title")}
         </h4>
 
         <div className="flex flex-col py-6 gap-6">
-          {WHAT_WE_DO_CONTENT.items.map((item, index) => {
+          {WHAT_WE_DO_ITEM_KEYS.map((key, index) => {
             const isActive = index === activeIndex;
 
             return (
-              <div key={index}>
+              <div key={key}>
                 <h3
                   className={`font-montserrat font-bold text-lg md:text-2xl lg:text-[30px] transition-colors duration-500 ${
                     isActive ? "text-neutral-100" : "text-neutral-400"
                   }`}
                 >
-                  {item.title}
+                  {t(`items.${key}.title`)}
                 </h3>
 
                 <p
@@ -73,7 +63,7 @@ export const CampaignsWhatWeDo = () => {
                     isActive ? "text-neutral-100" : "text-neutral-400"
                   }`}
                 >
-                  {item.description}
+                  {t(`items.${key}.description`)}
                 </p>
               </div>
             );
@@ -82,11 +72,11 @@ export const CampaignsWhatWeDo = () => {
       </ComponentLayout>
 
       <div className="relative w-full h-75 sm:h-100 lg:h-auto lg:min-h-full overflow-hidden">
-        {WHAT_WE_DO_CONTENT.items.map((item, index) => (
+        {WHAT_WE_DO_ITEM_KEYS.map((key, index) => (
           <Image
-            key={index}
-            src={item.image}
-            alt={item.title}
+            key={key}
+            src={WHAT_WE_DO_IMAGES[index]!}
+            alt={t(`items.${key}.title`)}
             fill
             priority={index === 0}
             className={`object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${

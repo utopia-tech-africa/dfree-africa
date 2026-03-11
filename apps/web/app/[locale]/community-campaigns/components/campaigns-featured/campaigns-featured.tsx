@@ -1,56 +1,41 @@
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { FeaturedCampaignsImg } from "@/assets";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
-export const CAMPAIGNS_FEATURED_CONTENT = {
-  title: "NEWARK WOMEN MOVING FORWARD",
-  description:
-    "In 2024, Newark launched its inaugural campaign under the leadership of First Lady Linda Baraka. Women across the city are reclaiming financial control, reducing debt, and building the economic resilience their families deserve.",
-  subtexts: [
-    {
-      text: "Faith rooted",
-      desc: "Churches and community organizations anchor the work with trust and spiritual grounding.",
-    },
-    {
-      text: "Real change",
-      desc: "Women are moving from financial stress toward stability and long-term wealth building.",
-    },
-  ],
-  image: FeaturedCampaignsImg,
-  href: "#",
-} as const;
+const FEATURED_SUBTEXT_KEYS = ["faithRooted", "realChange"] as const;
 
-export const CampaignsFeatured = () => {
+export const CampaignsFeatured = async () => {
+  const t = await getTranslations("communityCampaigns.featured");
+
   return (
     <ComponentLayout className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-8">
       {/* Content Section */}
       <div className="flex-1 flex flex-col justify-center">
-        <Title text="Featured Campaigns" />
+        <Title text={t("sectionTitle")} />
         <h1 className="font-montserrat font-bold text-2xl md:text-3xl lg:text-[46px] leading-[120%] text-neutral-1000 my-4">
-          {CAMPAIGNS_FEATURED_CONTENT.title}
+          {t("title")}
         </h1>
-        <p className="text-neutral-800 mb-6">
-          {CAMPAIGNS_FEATURED_CONTENT.description}
-        </p>
+        <p className="text-neutral-800 mb-6">{t("description")}</p>
 
         <div className="flex flex-col md:flex-row md:gap-10 gap-6">
-          {CAMPAIGNS_FEATURED_CONTENT.subtexts.map((item, index) => (
-            <div key={index} className="flex-1 flex flex-col gap-2">
+          {FEATURED_SUBTEXT_KEYS.map((key) => (
+            <div key={key} className="flex-1 flex flex-col gap-2">
               <h3 className="text-neutral-1000 font-bold leading-[120%] text-lg md:text-xl lg:text-[22px]">
-                {item.text}
+                {t(`subtexts.${key}.text`)}
               </h3>
               <p className="text-neutral-900 text-base md:text-lg">
-                {item.desc}
+                {t(`subtexts.${key}.desc`)}
               </p>
             </div>
           ))}
         </div>
 
-        <Link href={CAMPAIGNS_FEATURED_CONTENT.href} className="w-fit mt-8">
+        <Link href={t("href")} className="w-fit mt-8">
           <Button
             variant="default"
             size="default"
@@ -62,7 +47,7 @@ export const CampaignsFeatured = () => {
               />
             }
           >
-            Discover More
+            {t("discoverMore")}
           </Button>
         </Link>
       </div>
@@ -71,8 +56,8 @@ export const CampaignsFeatured = () => {
       <div className="flex-1 w-full">
         <div className="relative w-full h-75 md:h-100 lg:h-full rounded-lg overflow-hidden">
           <Image
-            src={CAMPAIGNS_FEATURED_CONTENT.image}
-            alt="Featured Campaigns Image"
+            src={FeaturedCampaignsImg}
+            alt={t("imageAlt")}
             className="object-cover"
             fill
             priority
