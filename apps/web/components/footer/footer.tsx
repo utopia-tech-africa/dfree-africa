@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { DfreeLogoWhite } from "@/assets/svg";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -55,9 +56,9 @@ export const Footer = async () => {
           <h4 className="text-lg font-bold">{t("about")}</h4>
           <div className="flex flex-col gap-4 text-sm lg:text-base">
             {FOOTER_ABOUT_KEYS.map((key) => (
-              <a href="" key={key}>
+              <Link href="#" key={key}>
                 {t(key)}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -65,9 +66,9 @@ export const Footer = async () => {
           <h4 className="text-lg font-bold">{t("ourPillars")}</h4>
           <div className="flex flex-col gap-4 text-sm lg:text-base">
             {FOOTER_PILLARS_KEYS.map((key) => (
-              <a href="" key={key} className="text-nowrap">
+              <Link href="#" key={key} className="text-nowrap">
                 {t(key)}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -75,9 +76,9 @@ export const Footer = async () => {
           <h4 className="text-lg font-bold">{t("getInvolved")}</h4>
           <div className="flex flex-col gap-4 text-sm lg:text-base">
             {GET_INVOLVED_KEYS.map((key) => (
-              <a href="" key={key}>
+              <Link href="#" key={key}>
                 {t(key)}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -87,9 +88,9 @@ export const Footer = async () => {
             {CONNECT_WITH_US.map((connect, idx) => (
               <div key={idx} className="flex items-center gap-3">
                 {connect.icons?.map((Icon) => (
-                  <a href="" key={Icon.displayName || Icon.name}>
+                  <Link href="#" key={Icon.displayName || Icon.name}>
                     <Icon size={20} />
-                  </a>
+                  </Link>
                 ))}
                 {connect.text && (
                   <span className="text-sm lg:text-base">{connect.text}</span>
@@ -125,18 +126,18 @@ export const Footer = async () => {
       <div className="mt-8">
         <hr className="border-white" />
       </div>
-      <div className="mt-6 flex gap-5 flex-col md:flex-row md:items-center justify-center text-sm">
+      <div className="mt-6 flex gap-5 w-full flex-col md:flex-row md:items-center justify-center text-sm">
         <span className="text-center">{t("copyright")}</span>
-        <div className="flex gap-3 items-center justify-center md:gap-8 underline text-xs">
-          <a href="" className="cursor-pointer text-nowrap">
+        <div className="flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-8 underline text-xs">
+          <Link href="#" className="cursor-pointer">
             {t("privacyPolicy")}
-          </a>
-          <a href="" className="cursor-pointer text-nowrap">
+          </Link>
+          <Link href="#" className="cursor-pointer">
             {t("termsOfService")}
-          </a>
-          <a href="" className="cursor-pointer text-nowrap">
+          </Link>
+          <Link href="#" className="cursor-pointer">
             {t("cookiesSettings")}
-          </a>
+          </Link>
         </div>
       </div>
     </ComponentLayout>
