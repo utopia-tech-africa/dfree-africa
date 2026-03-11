@@ -1,12 +1,8 @@
-export const IMPACT_CONTENT = {
-  label: "Our impact",
-  title: "Mapping our impact across communities",
-  description:
-    "Every milestone represents lives transformed and hope restored.",
-  stats: [
-    { value: "1900", suffix: "+", label: "Completed projects" },
-    { value: "3400", suffix: "+", label: "Lives impacted" },
-    { value: "2500", suffix: "$", label: "Debt cleared" },
-    { value: "2500", suffix: "+", label: "Young people trained" },
-  ],
-} as const;
+export const IMPACT_STAT_KEYS = [
+  "completedProjects",
+  "livesImpacted",
+  "debtCleared",
+  "youngPeopleTrained",
+] as const;
+
+export type ImpactStatKey = (typeof IMPACT_STAT_KEYS)[number];

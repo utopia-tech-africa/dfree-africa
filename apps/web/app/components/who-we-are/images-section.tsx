@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { motion, Variants } from "motion/react";
 
 export const ImagesSection = () => {
+  const t = useTranslations("home.whoWeAre");
   const curtainVariant: Variants = {
     hidden: { y: "-100%" },
     visible: {
@@ -37,7 +39,7 @@ export const ImagesSection = () => {
             <motion.div className="absolute inset-0" variants={curtainVariant}>
               <Image
                 src={img}
-                alt="Who We Are Image Gallery"
+                alt={t("imageGalleryAlt")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 48vw, 25vw"

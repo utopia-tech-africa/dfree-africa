@@ -28,3 +28,10 @@ export type {
   FeaturedProjectsQueryResult,
   AllSanitySchemaTypes,
 } from "./sanity.types";
+
+export {
+  getBlogs,
+  getBlogBySlug,
+  type BlogForUI,
+  type BlogDetailForUI,
+} from "./blogs";

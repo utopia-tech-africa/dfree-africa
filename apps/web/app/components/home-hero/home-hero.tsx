@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const HOME_HERO_CONTENT = {
-  title: "Break free from financial constraints",
-  subtitle:
-    "Empower yourself with practical tools and community-driven strategies. Transform your economic future through education, support, and collective action.",
-} as const;
+export const HomeHero = async () => {
+  const t = await getTranslations("home.hero");
 
-export const HomeHero = () => {
   return (
     <section className="relative w-full h-dvh flex items-end overflow-hidden mb-[30px] md:mb-12 lg:mb-[92px]">
       <div className="absolute inset-0">
@@ -28,11 +25,11 @@ export const HomeHero = () => {
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-20 pb-16.5 flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-8">
         <div className="w-full lg:max-w-180 flex flex-col items-start gap-4 lg:gap-8 text-left">
           <h1 className="text-white text-3xl lg:text-[56px] font-bold leading-[110%] lg:leading-[100%] font-montserrat max-w-180">
-            {HOME_HERO_CONTENT.title}
+            {t("title")}
           </h1>
 
           <p className="text-white text-sm sm:text-base lg:text-lg font-light leading-[140%] lg:leading-[130%] font-poppins max-w-160">
-            {HOME_HERO_CONTENT.subtitle}
+            {t("subtitle")}
           </p>
 
           <div className="flex flex-row items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
@@ -41,7 +38,7 @@ export const HomeHero = () => {
                 size="lg"
                 className="w-full px-4 sm:px-6 lg:px-10 py-3 sm:py-4 lg:py-5 text-white text-xs sm:text-sm lg:text-base font-medium"
               >
-                Discover more
+                {t("discoverMoreCta")}
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
               </Button>
             </Link>
@@ -50,7 +47,7 @@ export const HomeHero = () => {
               size="lg"
               className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-full bg-white/29 backdrop-blur-[10px] border border-white/20 text-white hover:bg-white/20 text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"
             >
-              Donate now
+              {t("donateNowCta")}
             </Button>
           </div>
         </div>
@@ -86,7 +83,7 @@ export const HomeHero = () => {
                   startOffset="50%"
                   textAnchor="middle"
                 >
-                  FRESH OFF THE PRESS
+                  {t("freshOffThePress")}
                 </textPath>
               </text>
             </svg>
@@ -109,7 +106,7 @@ export const HomeHero = () => {
                 size="lg"
                 className="hover-bg-primary-600 px-12 py-6 font-poppins font-medium text-lg"
               >
-                Buy now
+                {t("buyNowCta")}
               </Button>
             </div>
           </div>
