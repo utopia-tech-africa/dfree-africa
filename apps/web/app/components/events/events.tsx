@@ -7,8 +7,9 @@ import { ContentCard } from "@/components/content-card/content-card";
 import { Button } from "@/components/ui/button";
 import { EVENT_KEYS, EVENTS_META } from "@/lib/events";
 import { cn } from "@/lib/utils";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const SCROLL_EDGE_THRESHOLD = 10;
 
@@ -197,7 +198,7 @@ export const Events = () => {
               className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
               aria-label="Previous slide"
             >
-              <ArrowLeft size={18} />
+              <FaArrowLeft className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
             </button>
 
             <button
@@ -208,7 +209,7 @@ export const Events = () => {
               className="p-2 text-neutral-1000 cursor-pointer transition disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 hover:bg-neutral-100"
               aria-label="Next slide"
             >
-              <ArrowRight size={18} />
+              <FaArrowRight className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
             </button>
           </div>
         </div>

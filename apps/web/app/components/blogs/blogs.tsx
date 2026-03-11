@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { client } from "@/lib/sanity";
 import { groq } from "next-sanity";
 import { BlogCard } from "./blog-card";
 import ComponentLayout from "@/components/component-layout";
 import { cn } from "@/lib/utils";
 import { blogsQuery } from "@/lib/sanity/queries/blogs";
+import { Title } from "@/components/title-and-subtitle/title";
+import { Subtitle } from "@/components/title-and-subtitle/subtitle";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const SCROLL_EDGE_THRESHOLD = 10;
 
@@ -108,6 +110,16 @@ export const BlogList = ({
   return (
     <ComponentLayout className="overflow-hidden">
       <div className="space-y-10">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div>
+            <Title text="Blog" />
+            <Subtitle text="Insights and perspectives" />
+          </div>
+
+          <p className="text-black font-medium text-lg max-w-md">
+            Embrace life&apos;s beauty and cherish connections.
+          </p>
+        </div>
         {/* Cards */}
         <div className="relative mt-10">
           <div className="-mx-4 md:-mx-10 lg:-mx-20 overflow-hidden">
@@ -156,7 +168,7 @@ export const BlogList = ({
                 disabled={!canScrollLeft}
                 className="p-2 transition disabled:pointer-events-none disabled:opacity-40 hover:bg-neutral-100"
               >
-                <ArrowLeft size={18} />
+                <FaArrowLeft className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
               </button>
 
               <button
@@ -164,7 +176,8 @@ export const BlogList = ({
                 disabled={!canScrollRight}
                 className="p-2 transition disabled:pointer-events-none disabled:opacity-40 hover:bg-neutral-100"
               >
-                <ArrowRight size={18} />
+                {" "}
+                <FaArrowRight className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
               </button>
             </div>
           </div>
