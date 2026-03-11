@@ -1,5 +1,6 @@
 import { GhanaFlag } from "@/assets";
 import { createMetadata } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Hero, PageInfo } from "../components";
 import { SectionCard } from "../components/section-card";
@@ -8,12 +9,17 @@ import { cn } from "@/lib/utils";
 import { FeaturedProjects } from "../../components";
 import { getFeaturedProjects } from "@/lib/sanity";
 
-export const metadata: Metadata = createMetadata({
-  title: "Ghana",
-  description:
-    "DFREE® in Ghana - Financial freedom in the workplace and church, partnerships, and community development across Ghana.",
-  path: "/africa/continental/ghana",
-});
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return createMetadata({
+    title: t("ghana.title"),
+    description: t("ghana.description"),
+    path: `/${locale}/africa/continental/ghana`,
+  });
+}
 
 const ghanaPageData: SectionCardProps = [
   {

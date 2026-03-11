@@ -1,5 +1,6 @@
 import { SouthAfricanFlag } from "@/assets";
 import { createMetadata } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Hero, PageInfo } from "../components";
 import { SectionCard } from "../components/section-card";
@@ -8,12 +9,17 @@ import { cn } from "@/lib/utils";
 import { FeaturedProjects } from "../../components";
 import { getFeaturedProjects } from "@/lib/sanity";
 
-export const metadata: Metadata = createMetadata({
-  title: "South Africa",
-  description:
-    "DFREE® in South Africa - Partnerships, financial literacy, and community development with the Baptist Convention of Southern Africa and local organizations.",
-  path: "/africa/continental/south-africa",
-});
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return createMetadata({
+    title: t("southAfrica.title"),
+    description: t("southAfrica.description"),
+    path: `/${locale}/africa/continental/south-africa`,
+  });
+}
 
 const southAfricaPageData: SectionCardProps = [
   {

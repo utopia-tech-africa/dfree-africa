@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Accueil",
+      "description": "DFREE Africa - Renforcer les communautés par la liberté financière et le développement durable à travers le continent africain."
+    },
+    "finfest": {
+      "title": "FinFE$T",
+      "description": "FinFE$T est le festival financier gratuit de DFREE pour tous. Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels lors de notre événement communautaire."
+    },
+    "africa": {
+      "title": "Afrique",
+      "description": "Renforcer l'Afrique - Liberté financière et développement communautaire durable par l'éducation, la formation et les programmes économiques."
+    },
+    "projects": {
+      "title": "Projets",
+      "description": "Découvrez les projets transformateurs de DFREE Africa au Ghana, en Afrique du Sud, en Ouganda et au Liberia."
+    },
+    "project": {
+      "title": "Projet",
+      "descriptionFallback": "En savoir plus sur ce projet DFREE®."
+    },
+    "ghana": {
+      "title": "Ghana",
+      "description": "DFREE® au Ghana - Liberté financière au travail et à l'église, partenariats et développement communautaire à travers le Ghana."
+    },
+    "southAfrica": {
+      "title": "Afrique du Sud",
+      "description": "DFREE® en Afrique du Sud - Partenariats, littératie financière et développement communautaire avec la Convention baptiste d'Afrique australe et les organisations locales."
+    },
+    "billionDollarChallenge": {
+      "title": "Défi du milliard de dollars",
+      "description": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier avec le Défi du milliard de dollars DFREE®—une plateforme numérique fondée sur la responsabilité communautaire."
+    },
+    "communityCampaigns": {
+      "title": "Campagnes communautaires",
+      "description": "Des campagnes communautaires dynamiques qui rassemblent églises, groupes civiques et organisations locales pour des programmes DFREE® de renforcement financier synchronisés."
+    },
+    "accessScholarships": {
+      "title": "Bourses d'accès",
+      "description": "La Bourse d'accès DFREE® offre un accès gratuit aux cours, supports, coaching et événements pour aider les participants à atteindre la stabilité et l'autonomisation financières."
+    }
+  },
+  "common": {
+    "donate": "Faire un don",
+    "contactUs": "Nous contacter",
+    "learnMore": "En savoir plus",
+    "visitStore": "Visiter la boutique",
+    "submit": "Envoyer"
+  },
+  "nav": {
+    "aboutUs": "À propos",
+    "impact": "Impact",
+    "getInvolved": "S'impliquer",
+    "ourStory": "Notre histoire",
+    "ourVision": "Notre vision",
+    "ourMission": "Notre mission",
+    "billionDollarChallenge": "Défi du milliard de dollars",
+    "globalFoundationInAfrica": "Fondation mondiale en Afrique",
+    "communityCampaigns": "Campagnes communautaires",
+    "foundationScholarshipCommitment": "Engagement de bourses de la fondation",
+    "finfest": "FinFe$t",
+    "getMerch": "Boutique",
+    "getBooks": "Livres",
+    "contactUs": "Nous contacter"
+  },
+  "footer": {
+    "about": "À propos",
+    "ourPillars": "Nos piliers",
+    "getInvolved": "S'impliquer",
+    "connectWithUs": "Restez connectés",
+    "subscribeToNewsletter": "Abonnez-vous à la newsletter",
+    "stayConnected": "Restez connecté avec nos dernières actualités et notre travail transformateur",
+    "enterEmail": "Entrez votre adresse e-mail",
+    "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité",
+    "copyright": "© 2024 Fondation DFREE®. Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "cookiesSettings": "Paramètres des cookies",
+    "whoWeAre": "Qui nous sommes",
+    "ourMission": "Notre mission",
+    "ourStory": "Notre histoire",
+    "team": "Équipe",
+    "billionDollarChallenge": "Défi du milliard de dollars",
+    "dfreeAfrica": "DFREE Afrique",
+    "communityCampaigns": "Campagnes communautaires",
+    "finfest": "FinFe$t",
+    "dfreeAccessScholarships": "Bourses d'accès DFREE",
+    "support": "Soutenir",
+    "partner": "Partenariat",
+    "travelWithUs": "Voyagez avec nous",
+    "volunteer": "Bénévolat",
+    "submit": "Envoyer"
+  }
+}

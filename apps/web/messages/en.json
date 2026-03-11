@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Home",
+      "description": "DFREE Africa - Empowering communities with financial freedom and sustainable development across the African continent."
+    },
+    "finfest": {
+      "title": "FinFE$T",
+      "description": "FinFE$T is DFREE's free financial festival for everyone. Learn how to make, manage, and build wealth from industry professionals at our community event."
+    },
+    "africa": {
+      "title": "Africa",
+      "description": "Empowering Africa - Driving financial freedom and sustainable community development through education, skills training, and economic programs."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explore DFREE Africa's transformative projects across Ghana, South Africa, Uganda, and Liberia."
+    },
+    "project": {
+      "title": "Project",
+      "descriptionFallback": "Learn more about this DFREE® project."
+    },
+    "ghana": {
+      "title": "Ghana",
+      "description": "DFREE® in Ghana - Financial freedom in the workplace and church, partnerships, and community development across Ghana."
+    },
+    "southAfrica": {
+      "title": "South Africa",
+      "description": "DFREE® in South Africa - Partnerships, financial literacy, and community development with the Baptist Convention of Southern Africa and local organizations."
+    },
+    "billionDollarChallenge": {
+      "title": "Billion Dollar Challenge",
+      "description": "Eliminate debt, build savings, and take control of your financial future through the DFREE® Billion Dollar Challenge—a digital platform built on community accountability."
+    },
+    "communityCampaigns": {
+      "title": "Community Campaigns",
+      "description": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs."
+    },
+    "accessScholarships": {
+      "title": "Access Scholarships",
+      "description": "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment."
+    }
+  },
+  "common": {
+    "donate": "Donate",
+    "contactUs": "Contact us",
+    "learnMore": "Learn more",
+    "visitStore": "Visit store",
+    "submit": "Submit"
+  },
+  "nav": {
+    "aboutUs": "About us",
+    "impact": "Impact",
+    "getInvolved": "Get involved",
+    "ourStory": "Our story",
+    "ourVision": "Our vision",
+    "ourMission": "Our mission",
+    "billionDollarChallenge": "Billion dollar challenge",
+    "globalFoundationInAfrica": "Global Foundation in Africa",
+    "communityCampaigns": "Community campaigns",
+    "foundationScholarshipCommitment": "Foundation Scholarship Commitment",
+    "finfest": "FinFe$t",
+    "getMerch": "Get merch",
+    "getBooks": "Get Books",
+    "contactUs": "Contact us"
+  },
+  "footer": {
+    "about": "About",
+    "ourPillars": "Our pillars",
+    "getInvolved": "Get involved",
+    "connectWithUs": "Connect with us",
+    "subscribeToNewsletter": "Subscribe to newsletter",
+    "stayConnected": "Stay connected with our latest updates and transformative work",
+    "enterEmail": "Enter email address",
+    "privacyNote": "By subscribing, you agree to our privacy policy",
+    "copyright": "© 2024 DFREE® Foundation. All rights reserved.",
+    "privacyPolicy": "Privacy policy",
+    "termsOfService": "Terms of service",
+    "cookiesSettings": "Cookies settings",
+    "whoWeAre": "Who we are",
+    "ourMission": "Our mission",
+    "ourStory": "Our story",
+    "team": "Team",
+    "billionDollarChallenge": "Billion Dollar Challenge",
+    "dfreeAfrica": "DFREE Africa",
+    "communityCampaigns": "Community Campaigns",
+    "finfest": "FinFe$t",
+    "dfreeAccessScholarships": "DFREE Access Scholarships",
+    "support": "Support",
+    "partner": "Partner",
+    "travelWithUs": "Travel with Us",
+    "volunteer": "Volunteer",
+    "submit": "Submit"
+  }
+}

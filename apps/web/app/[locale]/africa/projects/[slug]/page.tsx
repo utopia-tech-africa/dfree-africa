@@ -2,31 +2,31 @@ import ComponentLayout from "@/components/component-layout";
 import { PageLayout } from "@/components/page-layout";
 import { createMetadata } from "@/lib/seo";
 import { getProjectBySlug } from "@/lib/sanity/projects";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { ProjectBody, ProjectHeader, ProjectImages } from "./components";
 
 type Props = {
-  params: Promise<{
-    slug: string;
-  }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
   const project = await getProjectBySlug(slug);
   if (!project) {
     return createMetadata({
-      title: "Project",
-      path: `/africa/projects/${slug}`,
+      title: t("project.title"),
+      description: t("project.descriptionFallback"),
+      path: `/${locale}/africa/projects/${slug}`,
     });
   }
   const description =
-    project.description?.slice(0, 160) ||
-    `Learn more about ${project.title}, a DFREE® project${project.country ? ` in ${project.country}` : ""}.`;
+    project.description?.slice(0, 160) || t("project.descriptionFallback");
   return createMetadata({
     title: project.title,
     description,
-    path: `/africa/projects/${slug}`,
+    path: `/${locale}/africa/projects/${slug}`,
   });
 }
 

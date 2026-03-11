@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Inicio",
+      "description": "DFREE Africa - Empoderando comunidades con libertad financiera y desarrollo sostenible en el continente africano."
+    },
+    "finfest": {
+      "title": "FinFE$T",
+      "description": "FinFE$T es el festival financiero gratuito de DFREE para todos. Aprende a ganar, gestionar y construir riqueza con profesionales en nuestro evento comunitario."
+    },
+    "africa": {
+      "title": "África",
+      "description": "Empoderando África - Impulsando la libertad financiera y el desarrollo comunitario sostenible mediante educación, formación y programas económicos."
+    },
+    "projects": {
+      "title": "Proyectos",
+      "description": "Explora los proyectos transformadores de DFREE Africa en Ghana, Sudáfrica, Uganda y Liberia."
+    },
+    "project": {
+      "title": "Proyecto",
+      "descriptionFallback": "Conoce más sobre este proyecto DFREE®."
+    },
+    "ghana": {
+      "title": "Ghana",
+      "description": "DFREE® en Ghana - Libertad financiera en el trabajo y la iglesia, alianzas y desarrollo comunitario en Ghana."
+    },
+    "southAfrica": {
+      "title": "Sudáfrica",
+      "description": "DFREE® en Sudáfrica - Alianzas, educación financiera y desarrollo comunitario con la Convención Bautista del Sur de África y organizaciones locales."
+    },
+    "billionDollarChallenge": {
+      "title": "Desafío del billón de dólares",
+      "description": "Elimina deudas, ahorra y toma el control de tu futuro financiero con el Desafío del billón de dólares DFREE®—una plataforma digital basada en la responsabilidad comunitaria."
+    },
+    "communityCampaigns": {
+      "title": "Campañas comunitarias",
+      "description": "Campañas comunitarias dinámicas que unen iglesias, grupos cívicos y organizaciones locales para programas de empoderamiento financiero DFREE® sincronizados."
+    },
+    "accessScholarships": {
+      "title": "Becas de acceso",
+      "description": "La Beca de acceso DFREE® ofrece acceso gratuito a cursos, materiales, coaching y eventos para lograr estabilidad y empoderamiento financiero."
+    }
+  },
+  "common": {
+    "donate": "Donar",
+    "contactUs": "Contáctenos",
+    "learnMore": "Saber más",
+    "visitStore": "Visitar tienda",
+    "submit": "Enviar"
+  },
+  "nav": {
+    "aboutUs": "Sobre nosotros",
+    "impact": "Impacto",
+    "getInvolved": "Involucrarse",
+    "ourStory": "Nuestra historia",
+    "ourVision": "Nuestra visión",
+    "ourMission": "Nuestra misión",
+    "billionDollarChallenge": "Desafío del billón de dólares",
+    "globalFoundationInAfrica": "Fundación global en África",
+    "communityCampaigns": "Campañas comunitarias",
+    "foundationScholarshipCommitment": "Compromiso de becas de la fundación",
+    "finfest": "FinFe$t",
+    "getMerch": "Tienda",
+    "getBooks": "Libros",
+    "contactUs": "Contáctenos"
+  },
+  "footer": {
+    "about": "Acerca de",
+    "ourPillars": "Nuestros pilares",
+    "getInvolved": "Involucrarse",
+    "connectWithUs": "Conéctate con nosotros",
+    "subscribeToNewsletter": "Suscríbete al boletín",
+    "stayConnected": "Mantente conectado con nuestras últimas actualizaciones y trabajo transformador",
+    "enterEmail": "Ingresa tu correo electrónico",
+    "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad",
+    "copyright": "© 2024 Fundación DFREE®. Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "cookiesSettings": "Configuración de cookies",
+    "whoWeAre": "Quiénes somos",
+    "ourMission": "Nuestra misión",
+    "ourStory": "Nuestra historia",
+    "team": "Equipo",
+    "billionDollarChallenge": "Desafío del billón de dólares",
+    "dfreeAfrica": "DFREE África",
+    "communityCampaigns": "Campañas comunitarias",
+    "finfest": "FinFe$t",
+    "dfreeAccessScholarships": "Becas de acceso DFREE",
+    "support": "Apoyar",
+    "partner": "Asociarse",
+    "travelWithUs": "Viaja con nosotros",
+    "volunteer": "Voluntariado",
+    "submit": "Enviar"
+  }
+}
