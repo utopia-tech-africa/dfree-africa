@@ -1,11 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
 import ComponentLayout from "@/components/component-layout";
 import { ContentCard } from "@/components/content-card/content-card";
 import { Button } from "@/components/ui/button";
-import { EVENT_KEYS, EVENTS_META } from "@/lib/events";
+import { eventsData } from "@/lib/events";
 import { cn } from "@/lib/utils";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -13,14 +12,13 @@ import Link from "next/link";
 const SCROLL_EDGE_THRESHOLD = 10;
 
 export const Events = () => {
-  const t = useTranslations("home.events");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const totalSlides = EVENTS_META.length;
+  const totalSlides = eventsData.events.length;
 
   const updateScrollArrows = useCallback(() => {
     const container = scrollContainerRef.current;
@@ -102,13 +100,13 @@ export const Events = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="flex flex-col gap-3 max-w-2xl">
             <p className="text-tertiary-500 font-bold text-base leading-[150%]">
-              {t("label")}
+              {eventsData.label}
             </p>
             <h2 className="text-neutral-1000 text-[28px] md:text-[36px] lg:text-[48px] font-bold leading-[120%]">
-              {t("title")}
+              {eventsData.title}
             </h2>
             <p className="text-neutral-900 leading-[150%] font-normal">
-              {t("subtitle")}
+              {eventsData.subtitle}
             </p>
           </div>
           <Link href={""} className="w-fit">
@@ -123,7 +121,7 @@ export const Events = () => {
                 />
               }
             >
-              {t("viewAllCta")}
+              View all events
             </Button>
           </Link>
         </div>
@@ -137,43 +135,31 @@ export const Events = () => {
             className="flex gap-6 overflow-x-auto overflow-y-hidden px-4 md:px-10 lg:px-20 pb-6 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             style={{ msOverflowStyle: "none" }}
           >
-            {EVENT_KEYS.map((key, index) => {
-              const meta = EVENTS_META.find((e) => e.id === key);
-              if (!meta) return null;
-
-              const baseKey = `items.${key}`;
-
-              return (
-                <div
-                  key={key}
-                  ref={(el) => {
-                    cardRefsRef.current[index] = el;
-                  }}
-                  className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 shrink-0 flex"
-                >
-                  <ContentCard
-                    image={meta.image}
-                    badge={t(`${baseKey}.badge`)}
-                    title={t(`${baseKey}.title`)}
-                    description={t(`${baseKey}.description`)}
-                    location={t(`${baseKey}.location`)}
-                    link={meta.link}
-                    date={{
-                      day: t(`${baseKey}.date.day`),
-                      dated: t(`${baseKey}.date.dated`),
-                      mode: t(`${baseKey}.date.mode`),
-                      year: t(`${baseKey}.date.year`),
-                    }}
-                  />
-                </div>
-              );
-            })}
+            {eventsData.events.map((event, index) => (
+              <div
+                key={index}
+                ref={(el) => {
+                  cardRefsRef.current[index] = el;
+                }}
+                className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 shrink-0 flex"
+              >
+                <ContentCard
+                  image={event.image}
+                  badge={event.event}
+                  title={event.eventTitle}
+                  description={event.description}
+                  location={event.location}
+                  link={event.link}
+                  date={event.date}
+                />
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mt-6 gap-6 md:gap-0">
           <div className="flex md:flex-none justify-center items-center gap-2">
-            {EVENT_KEYS.map((_, index) => (
+            {eventsData.events.map((_, index) => (
               <span
                 key={index}
                 className={cn(
@@ -226,7 +212,7 @@ export const Events = () => {
                 />
               }
             >
-              {t("viewAllCta")}
+              View all events
             </Button>
           </Link>
         </div>

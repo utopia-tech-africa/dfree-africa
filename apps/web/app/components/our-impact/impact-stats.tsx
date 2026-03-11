@@ -1,18 +1,15 @@
-import { getTranslations } from "next-intl/server";
-import { IMPACT_STAT_KEYS } from "@/lib/impact";
+import { IMPACT_CONTENT } from "@/lib/impact";
 import { ImpactStatCard } from "./impact-stat-card";
 
-export async function ImpactStats() {
-  const t = await getTranslations("home.ourImpact");
-
+export function ImpactStats() {
   return (
     <div className="grid w-full max-w-[343px] grid-cols-2 gap-x-6 gap-y-8 md:h-[321px] md:max-w-[408px] md:grid-rows-2 md:gap-0">
-      {IMPACT_STAT_KEYS.map((key) => (
+      {IMPACT_CONTENT.stats.map((stat) => (
         <ImpactStatCard
-          key={key}
-          value={t(`stats.${key}.value`)}
-          suffix={t(`stats.${key}.suffix`)}
-          label={t(`stats.${key}.label`)}
+          key={stat.label}
+          value={stat.value}
+          suffix={stat.suffix}
+          label={stat.label}
         />
       ))}
     </div>
