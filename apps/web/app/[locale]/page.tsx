@@ -9,7 +9,7 @@ import { HomeHero } from "../components/home-hero";
 import { OurImpact } from "../components/our-impact";
 import { Events } from "../components/events";
 import Merch from "../components/merch/merch";
-import { Blogs } from "../components/blogs";
+import { BlogList, Blogs } from "../components/blogs";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -35,6 +35,7 @@ const Home = () => {
         <Events />
         <Merch />
         <Blogs />
+        <BlogList />
       </div>
     </>
   );
