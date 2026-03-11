@@ -1,4 +1,3 @@
-import { FeaturedCampaignsImg } from "@/assets";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Button } from "@/components/ui/button";
@@ -20,7 +19,8 @@ export const CAMPAIGNS_FEATURED_CONTENT = {
       desc: "Women are moving from financial stress toward stability and long-term wealth building.",
     },
   ],
-  image: FeaturedCampaignsImg,
+  image:
+    "https://res.cloudinary.com/dan9camhs/image/upload/v1773225930/f4b3fae2-1a9b-4a63-8314-7f9a982c2bae.webp",
   href: "#",
 } as const;
 

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export interface ContentCardProps {
-  image: StaticImageData;
+  image: string | StaticImageData;
   badge?: string;
   badgeVariant?: "default" | "secondary";
   title: string;

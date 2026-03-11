@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ASCWhyScholarshipsMatterImg } from "@/assets/img";
 import { ASCWhyScholarshipsMatterPattern } from "@/assets/svg";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
@@ -62,7 +61,9 @@ export const ASCWhyScholarshipsMatterSection = () => {
         {/* Right Image */}
         <div className="relative h-[450px] lg:h-auto overflow-hidden">
           <Image
-            src={ASCWhyScholarshipsMatterImg}
+            src={
+              "https://res.cloudinary.com/dan9camhs/image/upload/v1773228881/47760dae-a65c-447d-bf32-6b26c13a200f.webp"
+            }
             alt="Person working on a laptop"
             fill
             className="object-cover object-center grayscale-20 hover:grayscale-0 transition-all duration-700 hover:scale-105"

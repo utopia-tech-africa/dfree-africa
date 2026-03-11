@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FinfestHeroPattern } from "@/assets/svg/finfest-hero-pattern";
-import { FinfestHeroImg } from "@/assets";
 import { Button } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
 
@@ -42,7 +41,11 @@ export const FinfestHero = () => {
         <div className="mt-12 min-h-0 flex-1">
           <div className=" w-full overflow-hidden rounded-lg">
             <Image
-              src={FinfestHeroImg}
+              src={
+                "https://res.cloudinary.com/dan9camhs/image/upload/v1773236329/7d47e665-0efa-4358-9b62-3ce55a050c4d.webp"
+              }
+              height={600}
+              width={900}
               alt="FinFest Financial Festival"
               priority
               className="h-full w-full object-cover"

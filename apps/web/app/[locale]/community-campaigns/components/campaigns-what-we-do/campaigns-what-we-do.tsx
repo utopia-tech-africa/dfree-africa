@@ -4,11 +4,6 @@ import { useEffect, useState } from "react";
 
 import ComponentLayout from "@/components/component-layout";
 import Image from "next/image";
-import {
-  CampaignsWhatWeDoImg1,
-  CampaignsWhatWeDoImg2,
-  CampaignsWhatWeDoImg3,
-} from "@/assets";
 
 export const WHAT_WE_DO_CONTENT = {
   title: "What we do",
@@ -17,19 +12,22 @@ export const WHAT_WE_DO_CONTENT = {
       title: "Unified collaboration",
       description:
         "Multiple organizations work in concert, sharing resources and learning from one another. This creates a network effect that strengthens every participant.",
-      image: CampaignsWhatWeDoImg1,
+      image:
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773226259/image_ln68b0.webp",
     },
     {
       title: "Shared accountability",
       description:
         "Weekly touchpoints and group learning sessions keep participants engaged and motivated. Progress is celebrated together, making the journey feel less isolating.",
-      image: CampaignsWhatWeDoImg2,
+      image:
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773226394/image_qr08pn.webp",
     },
     {
       title: "Measurable impact",
       description:
         "Campaigns track real outcomes across the community. Debt reduction, savings growth, and behavioral change become visible proof of what's possible.",
-      image: CampaignsWhatWeDoImg3,
+      image:
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773226487/image_idzdsd.webp",
     },
   ],
 } as const;

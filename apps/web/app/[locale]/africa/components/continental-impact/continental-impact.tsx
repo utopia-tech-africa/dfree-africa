@@ -7,12 +7,6 @@ import { WorldMapMobileSvg, WorldMapSvg } from "@/assets/svg";
 import ComponentLayout from "@/components/component-layout";
 import { ContinentalImpactCard } from "./continental-impact-card";
 import { Title } from "@/components/title-and-subtitle/title";
-import {
-  GhanaFlag,
-  LiberianFlag,
-  SouthAfricanFlag,
-  UgandanFlag,
-} from "@/assets";
 
 const CONTINENTAL_IMPACT = {
   label: "Continental",
@@ -23,28 +17,28 @@ const CONTINENTAL_IMPACT = {
       country: "Ghana",
       description:
         "Empowering communities with financial education and community development projects.",
-      flag: GhanaFlag,
+      flag: "https://res.cloudinary.com/dan9camhs/image/upload/v1773145980/8c40374f-96b4-452c-801d-b20c258fa69f.webp",
       href: "/africa/continental/ghana",
     },
     {
       country: "South Africa",
       description:
         "Promoting financial freedom in partnership with the Baptist Convention of South Africa.",
-      flag: SouthAfricanFlag,
+      flag: "https://res.cloudinary.com/dan9camhs/image/upload/v1773146514/5c184ee3-66f3-4c20-8a5a-1e4f18f775f7.webp",
       href: "/africa/continental/south-africa",
     },
     {
       country: "Uganda",
       description:
         "Creating opportunities to improve standards of living through economic development programs",
-      flag: UgandanFlag,
+      flag: "https://res.cloudinary.com/dan9camhs/image/upload/v1773146855/aff4a462-8fa5-4ef2-8a8b-bed650e90ca5.webp",
       href: "#",
     },
     {
       country: "Liberia",
       description:
         "Enhancing global access and educational opportunities with the leadership of the Baptist Convention",
-      flag: LiberianFlag,
+      flag: "https://res.cloudinary.com/dan9camhs/image/upload/v1773146720/35ec826a-a1f8-4947-9476-76737c0cb988.webp",
       href: "#",
     },
   ],

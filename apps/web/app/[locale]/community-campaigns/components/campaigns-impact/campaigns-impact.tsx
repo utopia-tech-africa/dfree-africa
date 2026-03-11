@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
-import { CampaignsImpactImg } from "@/assets";
 import Link from "next/link";
 
 const IMPACT_CONTENT = {
@@ -53,7 +52,9 @@ export const CampaignsImpact = () => {
           <div className="relative lg:col-span-3 w-full aspect-[4/3] lg:aspect-auto lg:h-auto">
             {" "}
             <Image
-              src={CampaignsImpactImg}
+              src={
+                "https://res.cloudinary.com/dan9camhs/image/upload/v1773226697/71042cb3-075a-40e4-a352-b9807e51561a.webp"
+              }
               alt="DFREE Day of Impact"
               fill
               priority

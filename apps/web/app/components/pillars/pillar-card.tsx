@@ -21,7 +21,7 @@ export type PillarCardProps = {
   /** Alt text for background image */
   backgroundImageAlt?: string;
   /** Optional logo shown top-left on white background */
-  logo?: StaticImageData;
+  logo?: string | StaticImageData;
   /** Alt text for logo */
   logoAlt?: string;
   /** CTA button label */
@@ -105,6 +105,8 @@ export function PillarCard({
             src={logo}
             alt={logoAlt || `${title} logo`}
             className="h-10 w-auto md:h-14"
+            height={100}
+            width={100}
           />
         </div>
       )}
