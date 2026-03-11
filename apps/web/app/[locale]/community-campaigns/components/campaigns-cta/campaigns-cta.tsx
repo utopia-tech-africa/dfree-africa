@@ -1,6 +1,7 @@
 import { CampaignsCtaImg } from "@/assets";
 import { CampaignsCtaPattern } from "@/assets/svg/campaigns-cta-pattern";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,14 +27,13 @@ export const CampaignsCta = () => {
               We&apos;ll help guide you to the support that best serves your
               journey.
             </p>
-            <Link href={"#"} className="w-fit">
-              <Button
-                variant="default"
-                size="default"
-                className="h-auto font-montserrat bg-white text-neutral-1000 font-semibold gap-3 px-3 py-3 leading-[1.3] md:px-8 text-sm md:text-base transition-colors ease-in-out duration-300"
-              >
-                Join the movement
-              </Button>
+            <Link
+              href={"#"}
+              className={cn(
+                buttonVariants({ size: "default", variant: "secondary" }),
+              )}
+            >
+              Join the movement
             </Link>
           </div>
 
