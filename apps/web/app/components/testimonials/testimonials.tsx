@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { QuotationMarks } from "@/assets";
 import ComponentLayout from "@/components/component-layout";
-import { testimonials } from "@/lib/testimonials";
+import { TESTIMONIALS } from "@/lib/testimonials";
 import TestimonialCard from "./testimonial-card";
 import { Title } from "@/components/title-and-subtitle/title";
 
 const Testimonials = () => {
+  const t = useTranslations("home.testimonials");
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -34,14 +36,14 @@ const Testimonials = () => {
 
         <QuotationMarks className="absolute -bottom-10 right-0 w-20 h-20 md:-bottom-40 md:w-47.5 md:h-47.5 rotate-180 pointer-events-none z-10" />
         <div className="relative z-10 max-w-3xl mx-auto mb-10 md:mb-6 text-center flex flex-col gap-3 px-4 sm:px-0">
-          <Title className="font-montserrat" text="Testimonials" />
+          <Title className="font-montserrat" text={t("title")} />
 
           <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-extrabold text-secondary-600 leading-tight font-montserrat">
-            Real stories of change
+            {t("heading")}
           </h2>
 
           <p className="font-normal leading-[120%] font-poppins text-neutral-1000 text-base sm:text-lg">
-            Voices that reveal the power of financial transformation
+            {t("subtitle")}
           </p>
         </div>
 
@@ -50,13 +52,13 @@ const Testimonials = () => {
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto md:overflow-visible scrollbar-hide px-4 md:px-0"
           >
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} testimonial={testimonial} />
+            {TESTIMONIALS.map((testimonial) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
           </div>
 
           <div className="flex justify-center mt-6 gap-2 md:hidden">
-            {testimonials.map((_, index) => (
+            {TESTIMONIALS.map((_, index) => (
               <div
                 key={index}
                 className={`h-2 w-2 rounded-full transition-all duration-300 ${

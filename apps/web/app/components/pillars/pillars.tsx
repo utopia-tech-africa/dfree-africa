@@ -7,7 +7,8 @@ import {
   type CSSProperties,
   type RefObject,
 } from "react";
-import { OUR_PILLARS } from "@/lib/pillars";
+import { useTranslations } from "next-intl";
+import { PILLAR_KEYS, PILLARS_DATA } from "@/lib/pillars";
 import ComponentLayout from "@/components/component-layout";
 import { PillarCard } from "./pillar-card";
 
@@ -16,8 +17,12 @@ const PILLAR_HEADER_HEIGHT_FALLBACK = 120;
 
 function PillarsHeader({
   headerRef,
+  title,
+  subtitle,
 }: {
   headerRef: RefObject<HTMLElement | null>;
+  title: string;
+  subtitle: string;
 }) {
   return (
     <header
@@ -30,10 +35,10 @@ function PillarsHeader({
           id="pillars-heading"
           className="w-[125px] shrink-0 font-montserrat text-[26px] font-bold leading-none text-secondary-600 md:text-[32px]"
         >
-          {OUR_PILLARS.title}
+          {title}
         </h2>
         <p className="w-[218px] shrink-0 text-right font-poppins text-xs font-normal leading-[1.2] text-neutral-1000 md:w-[503px] md:text-lg md:leading-[1.3]">
-          {OUR_PILLARS.subtitle}
+          {subtitle}
         </p>
       </ComponentLayout>
     </header>
@@ -61,6 +66,7 @@ function PillarStackItem({
 }
 
 const Pillars = () => {
+  const t = useTranslations("home.pillars");
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLElement>(null);
 
@@ -133,25 +139,32 @@ const Pillars = () => {
         style={{ height: "var(--navbar-height)" }}
         aria-hidden
       />
-      <PillarsHeader headerRef={headerRef} />
+      <PillarsHeader
+        headerRef={headerRef}
+        title={t("title")}
+        subtitle={t("subtitle")}
+      />
       <div
         className={layout.ready ? "flex flex-col" : "flex flex-col opacity-0"}
       >
-        {OUR_PILLARS.pillars.map((item, index) => (
-          <PillarStackItem key={item.pillar} index={index}>
-            <PillarCard
-              title={item.pillar}
-              description={item.description}
-              href={item.href}
-              backgroundImage={item.bgImage}
-              backgroundImageMobile={item.bgImageMobile}
-              logo={item.logo}
-              imagePositionClassName={item.imagePositionClassName}
-              buttonText="Discover more"
-              stackIndex={index}
-            />
-          </PillarStackItem>
-        ))}
+        {PILLAR_KEYS.map((key, index) => {
+          const data = PILLARS_DATA[key];
+          return (
+            <PillarStackItem key={key} index={index}>
+              <PillarCard
+                title={t(`pillars.${key}.name`)}
+                description={t(`pillars.${key}.description`)}
+                href={data.href}
+                backgroundImage={data.bgImage}
+                backgroundImageMobile={data.bgImageMobile}
+                logo={data.logo}
+                imagePositionClassName={data.imagePositionClassName}
+                buttonText={t("discoverMoreCta")}
+                stackIndex={index}
+              />
+            </PillarStackItem>
+          );
+        })}
       </div>
     </section>
   );

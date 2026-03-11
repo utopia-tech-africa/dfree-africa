@@ -1,42 +1,40 @@
+import type { StaticImageData } from "next/image";
 import { BlogImg1, BlogImg2, BlogImg3, BlogImg4 } from "@/assets";
 
-export const blogData = {
-  label: "Blog",
-  title: "Insights and perspectives",
-  subtitle: "Embrace life's beauty and cherish connections.",
-  posts: [
-    {
-      title: "Building Generational Wealth Through Real Estate",
-      description:
-        "Explore strategies for building wealth through real estate investments.",
-      image: BlogImg1,
-      readTime: "5 min read",
-      link: "#",
-    },
-    {
-      title: "The Power of Collective Economics in Urban Communities",
-      description:
-        "Learn about the transformative power of collective economics in urban communities.",
-      image: BlogImg2,
-      readTime: "5 min read",
-      link: "#",
-    },
-    {
-      title: "Faith-Based Investing: Aligning Values with Financial Growth",
-      description:
-        "Discover how faith-based investing aligns your values with financial growth.",
-      image: BlogImg3,
-      readTime: "5 min read",
-      link: "#",
-    },
-    {
-      title:
-        "Investing with Purpose: Harmonizing Beliefs and Financial Success",
-      description:
-        "Investing with Purpose: Harmonizing Beliefs and Financial Success.",
-      image: BlogImg4,
-      readTime: "5 min read",
-      link: "#",
-    },
-  ],
+export const BLOG_KEYS = [
+  "realEstateWealth",
+  "collectiveEconomics",
+  "faithBasedInvesting",
+  "investingWithPurpose",
+] as const;
+
+export type BlogKey = (typeof BLOG_KEYS)[number];
+
+export type BlogMeta = {
+  id: BlogKey;
+  image: StaticImageData;
+  link: string;
 };
+
+export const BLOG_POSTS_META: BlogMeta[] = [
+  {
+    id: "realEstateWealth",
+    image: BlogImg1,
+    link: "#",
+  },
+  {
+    id: "collectiveEconomics",
+    image: BlogImg2,
+    link: "#",
+  },
+  {
+    id: "faithBasedInvesting",
+    image: BlogImg3,
+    link: "#",
+  },
+  {
+    id: "investingWithPurpose",
+    image: BlogImg4,
+    link: "#",
+  },
+];

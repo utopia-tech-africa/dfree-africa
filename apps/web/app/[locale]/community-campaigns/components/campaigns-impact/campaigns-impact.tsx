@@ -1,36 +1,31 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { CampaignsImpactImg } from "@/assets";
-import Link from "next/link";
 
-const IMPACT_CONTENT = {
-  title: "DFREE® Day of Impact",
-  subtitle:
-    "A Community Activation Model for Financial Freedom, Collaboration and Collective Action",
-  description: `The DFREE® Day of Impact is a new initiative that features a one-day, multi-touch community engagement experience designed to introduce DFREE® to a local community, deepen relationships with key leaders, and seed long-term collaboration that leads to measurable financial empowerment outcomes. It brings together nonprofits, faith leaders, civic stakeholders, entrepreneurs, and residents into the launch of an ongoing DFREE ecosystem in the host community.`,
-  buttonText: "Learn more",
-} as const;
+export const CampaignsImpact = async () => {
+  const t = await getTranslations("communityCampaigns.impact");
 
-export const CampaignsImpact = () => {
   return (
     <ComponentLayout>
       <div className="relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           <div className="lg:col-span-2 flex flex-col justify-center">
             <Title
-              text={IMPACT_CONTENT.title}
+              text={t("title")}
               className="mb-4 leading-[130%] font-montserrat"
             />
 
             <h2 className="text-lg md:text-2xl lg:text-[26px] font-bold font-montserrat leading-[120%] text-neutral-1000 mb-4">
-              {IMPACT_CONTENT.subtitle}
+              {t("subtitle")}
             </h2>
 
             <p className="text-neutral-900 text-base md:text-lg leading-[130%] mb-4">
-              {IMPACT_CONTENT.description}
+              {t("description")}
             </p>
 
             <Link href="#" className="w-fit mt-2">
@@ -45,16 +40,15 @@ export const CampaignsImpact = () => {
                   />
                 }
               >
-                {IMPACT_CONTENT.buttonText}
+                {t("buttonText")}
               </Button>
             </Link>
           </div>
 
           <div className="relative lg:col-span-3 w-full aspect-[4/3] lg:aspect-auto lg:h-auto">
-            {" "}
             <Image
               src={CampaignsImpactImg}
-              alt="DFREE Day of Impact"
+              alt={t("imageAlt")}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 60vw"
