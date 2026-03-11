@@ -96,7 +96,12 @@ export default async function BlogPage({ params }: BlogPageProps) {
         <h2 className="text-xl font-bold">Read more</h2>
       </ComponentLayout>
       <div>
-        <BlogList className="px-0" currentSlug={slug} compact />
+        <BlogList
+          className="px-0"
+          currentSlug={slug}
+          compact
+          showHeader={false}
+        />
       </div>
     </>
   );

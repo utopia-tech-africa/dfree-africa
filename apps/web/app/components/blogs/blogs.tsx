@@ -17,12 +17,14 @@ interface BlogListProps {
   currentSlug?: string;
   compact?: boolean;
   className?: string;
+  showHeader?: boolean;
 }
 
 export const BlogList = ({
   currentSlug,
   compact,
   className,
+  showHeader = true,
 }: BlogListProps) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -110,16 +112,18 @@ export const BlogList = ({
   return (
     <ComponentLayout className="overflow-hidden">
       <div className="space-y-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div>
-            <Title text="Blog" />
-            <Subtitle text="Insights and perspectives" />
-          </div>
+        {showHeader && (
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <Title text="Blog" />
+              <Subtitle text="Insights and perspectives" />
+            </div>
 
-          <p className="text-black font-medium text-lg max-w-md">
-            Embrace life&apos;s beauty and cherish connections.
-          </p>
-        </div>
+            <p className="text-black font-medium text-lg max-w-md">
+              Embrace life&apos;s beauty and cherish connections.
+            </p>
+          </div>
+        )}
         {/* Cards */}
         <div className="relative mt-10">
           <div className="-mx-4 md:-mx-10 lg:-mx-20 overflow-hidden">
