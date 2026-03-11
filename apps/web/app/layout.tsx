@@ -38,7 +38,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${poppins.variable} ${spaceGrotesk.variable} font-poppins antialiased overflow-x-hidden`}
+        className={`${montserrat.variable} ${poppins.variable} ${spaceGrotesk.variable} font-poppins antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
