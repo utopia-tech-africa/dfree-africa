@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import type { ProjectForUI } from "@/lib/sanity";
 import { FeaturedProjectCard } from "./featured-project-card";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type FeaturedProjectsProps = {
   projects?: ProjectForUI[];
@@ -26,6 +27,7 @@ export const FeaturedProjects = ({
   description,
   href,
 }: FeaturedProjectsProps) => {
+  const t = useTranslations("africa.projects");
   const featuredProjects = projects?.filter((p) => p.featured);
 
   return (
@@ -62,7 +64,7 @@ export const FeaturedProjects = ({
               "w-fit mt-2 hidden lg:flex",
             )}
           >
-            View all projects
+            {t("viewAllProjects")}
           </Link>
         </div>
 
@@ -92,7 +94,7 @@ export const FeaturedProjects = ({
             "w-fit mt-2 lg:hidden mx-auto",
           )}
         >
-          View all projects
+          {t("viewAllProjects")}
         </Link>
       </div>
     </ComponentLayout>

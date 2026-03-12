@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import { ProjectsFilter } from "./components/projects-filter";
 import { ProjectCard } from "./components/project-card";
 import { Pagination } from "@/components/pagination/pagination";
@@ -46,6 +47,7 @@ export const AllProjects = ({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const t = useTranslations("africa.projects");
 
   const yearFromUrl = parseYear(searchParams.get(PARAM_YEAR));
   const pageFromUrl = parsePage(searchParams.get(PARAM_PAGE));
@@ -179,7 +181,7 @@ export const AllProjects = ({
             onClick={clearCountryFilter}
             className="text-primary-600 hover:underline font-medium"
           >
-            Show all countries
+            {t("showAllCountries")}
           </button>
         </div>
       )}

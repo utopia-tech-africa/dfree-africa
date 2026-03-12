@@ -28,10 +28,12 @@ const ProjectsPage = async () => {
     getProjects(),
     getYearsWithProjectIds(),
   ]);
+  const t = await getTranslations("africa.projects");
+
   return (
     <PageLayout>
       <ComponentLayout className="sm:space-y-8">
-        <PageTitle text="All Projects" />
+        <PageTitle text={t("pageTitle")} />
         <Suspense fallback={<ProjectsSkeleton />}>
           <AllProjects
             projects={projects}

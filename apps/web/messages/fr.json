@@ -361,5 +361,67 @@
       "buttonText": "Rejoindre le mouvement",
       "imageAlt": "Communauté en célébration"
     }
+  },
+  "africa": {
+    "hero": {
+      "title": "Renforcer l'Afrique",
+      "subtitle": "Favoriser la liberté financière et le développement communautaire durable par l'éducation, la formation et les programmes économiques.",
+      "cta": {
+        "label": "Faire un don au mouvement",
+        "href": "#"
+      }
+    },
+    "ourStory": {
+      "title": "notre histoire",
+      "description": "Animé par une vision d'autonomiser la diaspora africaine, le Dr DeForest B. Soaries Jr. a fondé la Dfree Global Foundation, qui a donné naissance à DFREE® Afrique, pour remplacer le cycle de la pauvreté par un état d'esprit de richesse et d'autosuffisance. Cette mission est profondément ancrée dans le lien de longue date du Dr Soaries avec le continent, qui a commencé lors de sa première visite en Afrique du Sud en 1990. Depuis, il a passé des décennies à forger des partenariats continentaux qui promeuvent la croissance économique, sociale et spirituelle, consacrant son leadership à établir des connexions stratégiques à travers le continent, notamment au Ghana, au Liberia, en Ouganda, au Botswana, en Afrique du Sud et dans plusieurs autres pays. Son travail se concentre sur l'intégration du développement économique avec le progrès éducatif, spirituel et social pour créer des standards de vie durables et plus élevés pour tous."
+    },
+    "featuredProjects": {
+      "title": "Projets",
+      "subtitle": "Projets en vedette",
+      "description": "Avec le soutien de partenaires engagés et en collaboration avec les leaders communautaires et les gouvernements locaux, nos projets et initiatives continuent d'avoir un impact direct qui change la vie des communautés, transformant des vies à travers le continent.",
+      "href": "/africa/projects"
+    },
+    "continentalImpact": {
+      "label": "Continental",
+      "title": "Impact continental",
+      "subtitle": "Transformation des paysages financiers à travers les communautés africaines",
+      "learnMore": "En savoir plus",
+      "countries": {
+        "ghana": {
+          "name": "Ghana",
+          "description": "Autonomiser les communautés par l'éducation financière et les projets de développement communautaire."
+        },
+        "southAfrica": {
+          "name": "Afrique du Sud",
+          "description": "Promouvoir la liberté financière en partenariat avec la Convention baptiste d'Afrique du Sud."
+        },
+        "uganda": {
+          "name": "Ouganda",
+          "description": "Créer des opportunités pour améliorer les standards de vie grâce aux programmes de développement économique"
+        },
+        "liberia": {
+          "name": "Libéria",
+          "description": "Améliorer l'accès mondial et les opportunités éducatives avec le leadership de la Convention baptiste"
+        }
+      }
+    },
+    "projects": {
+      "pageTitle": "Tous les projets",
+      "showAllCountries": "Afficher tous les pays",
+      "readMore": "Lire plus",
+      "viewAllProjects": "Voir tous les projets"
+    },
+    "photoGallery": {
+      "label": "Galerie de photos",
+      "title": "Moments d'impact",
+      "subtitle": "Capturant des histoires de transformation à travers les communautés",
+      "chooseProject": "Choisir un projet à voir",
+      "back": "Retour"
+    },
+    "banner": {
+      "title": "Créons l'autonomie financière",
+      "description": "En investissant dans l'éducation, l'eau potable pour un village, ou la formation des jeunes, vous apportez une contribution significative à l'autonomisation de générations entières pour qu'elles soient indépendantes et aient une meilleure qualité de vie.",
+      "label": "Apprenez comment vous pouvez soutenir"
+    }
   }
 }

@@ -11,6 +11,7 @@ import type {
 } from "@/lib/sanity";
 import Image from "next/image";
 import { GalleryPattern } from "@/assets/svg";
+import { useTranslations } from "next-intl";
 
 const ROTATIONS = [
   "rotate-[1.31deg]",
@@ -134,6 +135,7 @@ function ProjectPickerModal({
   onClose: () => void;
   onSelectProject: (project: ProjectForGalleryPicker) => void;
 }) {
+  const t = useTranslations("africa.photoGallery");
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85"
@@ -148,7 +150,7 @@ function ProjectPickerModal({
             id="project-picker-title"
             className="font-montserrat text-xl md:text-2xl lg:text-[32px] font-bold text-white pr-2"
           >
-            Choose a project to view
+            {t("chooseProject")}
           </h2>
           <button
             type="button"
@@ -295,6 +297,7 @@ function ProjectGalleryViewer({
   onBack: () => void;
   onClose: () => void;
 }) {
+  const t = useTranslations("africa.photoGallery");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const items = project.galleryItems;
   const hasMultiple = items.length > 1;
@@ -324,7 +327,7 @@ function ProjectGalleryViewer({
             onClick={onBack}
             className="absolute left-7 top-4 z-10 flex cursor-pointer items-center gap-2 font-montserrat text-lg font-bold text-white hover:opacity-90"
           >
-            <ArrowLeft className="size-6" /> Back
+            <ArrowLeft className="size-6" /> {t("back")}
           </button>
           <button
             type="button"
@@ -353,7 +356,7 @@ function ProjectGalleryViewer({
           aria-label="Back"
         >
           <ArrowLeft className="size-5 md:size-6" />{" "}
-          <span className="hidden sm:inline">Back</span>
+          <span className="hidden sm:inline">{t("back")}</span>
         </button>
         {/* Close: top right — smaller on mobile */}
         <button
@@ -443,11 +446,12 @@ type PhotoGalleryProps = {
 
 export function PhotoGallery({
   years,
-  label = "Photo Gallery",
-  title = "Moments of impact",
-  subtitle = "Capturing stories of transformation across communities",
+  label,
+  title,
+  subtitle,
   className,
 }: PhotoGalleryProps) {
+  const t = useTranslations("africa.photoGallery");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] =
