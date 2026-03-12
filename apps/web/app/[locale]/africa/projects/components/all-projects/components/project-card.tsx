@@ -4,6 +4,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
   title: string;
@@ -25,6 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   previewMedia,
   className,
 }) => {
+  const t = useTranslations("africa.projects");
   return (
     <div
       className={cn(
@@ -77,7 +79,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             className="w-fit mt-3 font-normal"
             size={"lg"}
           >
-            Read more
+            {t("readMore")}
           </Button>
         </Link>
       </div>

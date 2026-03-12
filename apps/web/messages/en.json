@@ -270,96 +270,293 @@
           "description": "Discover how faith-based investing aligns your values with financial growth.",
           "readTime": "5 min read"
         },
-        "investingWithPurpose": {
-          "title": "Investing with Purpose: Harmonizing Beliefs and Financial Success",
-          "description": "Investing with Purpose: Harmonizing Beliefs and Financial Success.",
-          "readTime": "5 min read"
-        }
-      }
-    }
-  },
-  "about": {
-    "hero": {}
-  },
-  "communityCampaigns": {
-    "hero": {
-      "title": "Community Campaigns",
-      "subtitle": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs. These campaigns are designed to create a collective impact by promoting shared learning, mutual accountability, and community celebration.",
-      "ctaLabel": "Join the movement",
-      "ctaHref": "#",
-      "imageAlt": "Community campaigns background"
-    },
-    "about": {
-      "title": "What are community campaigns",
-      "description": "Community campaigns bring together entire neighborhoods to tackle financial challenges as one. Unlike isolated programs, these coordinated efforts create momentum, accountability, and lasting transformation."
-    },
-    "impact": {
-      "title": "DFREE® Day of Impact",
-      "subtitle": "A Community Activation Model for Financial Freedom, Collaboration and Collective Action",
-      "description": "The DFREE® Day of Impact is a new initiative that features a one-day, multi-touch community engagement experience designed to introduce DFREE® to a local community, deepen relationships with key leaders, and seed long-term collaboration that leads to measurable financial empowerment outcomes. It brings together nonprofits, faith leaders, civic stakeholders, entrepreneurs, and residents into the launch of an ongoing DFREE ecosystem in the host community.",
-      "buttonText": "Learn more",
-      "imageAlt": "DFREE Day of Impact"
-    },
-    "whatWeDo": {
-      "title": "What we do",
-      "items": {
-        "unifiedCollaboration": {
-          "title": "Unified collaboration",
-          "description": "Multiple organizations work in concert, sharing resources and learning from one another. This creates a network effect that strengthens every participant."
-        },
-        "sharedAccountability": {
-          "title": "Shared accountability",
-          "description": "Weekly touchpoints and group learning sessions keep participants engaged and motivated. Progress is celebrated together, making the journey feel less isolating."
-        },
-        "measurableImpact": {
-          "title": "Measurable impact",
-          "description": "Campaigns track real outcomes across the community. Debt reduction, savings growth, and behavioral change become visible proof of what's possible."
-        }
-      }
-    },
-    "featured": {
-      "sectionTitle": "Featured Campaigns",
-      "title": "NEWARK WOMEN MOVING FORWARD",
-      "description": "In 2024, Newark launched its inaugural campaign under the leadership of First Lady Linda Baraka. Women across the city are reclaiming financial control, reducing debt, and building the economic resilience their families deserve.",
-      "subtexts": {
-        "faithRooted": {
-          "text": "Faith rooted",
-          "desc": "Churches and community organizations anchor the work with trust and spiritual grounding."
-        },
-        "realChange": {
-          "text": "Real change",
-          "desc": "Women are moving from financial stress toward stability and long-term wealth building."
+        "investingWithPurpose": {}
+      },
+      "ourImpact": {
+        "label": "Our impact",
+        "title": "Mapping our impact across communities",
+        "description": "Every milestone represents lives transformed and hope restored.",
+        "stats": {
+          "completedProjects": {
+            "value": "1900",
+            "suffix": "+",
+            "label": "Completed projects"
+          },
+          "livesImpacted": {
+            "value": "3400",
+            "suffix": "+",
+            "label": "Lives impacted"
+          },
+          "debtCleared": {
+            "value": "2500",
+            "suffix": "$",
+            "label": "Debt cleared"
+          },
+          "youngPeopleTrained": {
+            "value": "2500",
+            "suffix": "+",
+            "label": "Young people trained"
+          }
         }
       },
-      "discoverMore": "Discover More",
-      "imageAlt": "Featured Campaigns Image",
-      "href": "#"
-    },
-    "results": {
-      "title": "Results",
-      "subtitle": "The power of moving together",
-      "description": "When people act in concert, change happens fast. Communities that campaign together see real shifts in how families manage money and build futures.",
-      "subtexts": {
-        "grassroots": {
-          "text": "Movements start at the grassroots",
-          "desc": "Local leaders and neighbors carry the work forward with authenticity and trust."
-        },
-        "habitsTakeRoot": {
-          "text": "Financial habits take root and hold",
-          "desc": "Weekly engagement and peer support turn knowledge into action that lasts."
-        },
-        "economicStrength": {
-          "text": "Economic strength spreads through neighborhoods",
-          "desc": "As individuals gain stability, entire communities build the foundation for shared prosperity."
+      "testimonials": {
+        "title": "Testimonials",
+        "heading": "Real stories of change",
+        "subtitle": "Voices that reveal the power of financial transformation",
+        "items": {
+          "marcus": {
+            "name": "Marcus Rodriguez",
+            "title": "Small business owner",
+            "text": "My family has been able to pay off more than $260,000 in debt. The journey has been transformational, a blessing and a source of communion in fellowship."
+          },
+          "elena": {
+            "name": "Elena Thompson",
+            "title": "Community leader",
+            "text": "I’ve been able to pay at least $65,000 off and save $5,000, which has helped me get back into the saving habit."
+          },
+          "david": {
+            "name": "David Chen",
+            "title": "Tech entrepreneur",
+            "text": "Paid off 5 credit cards, no longer enslaved to debts and have become much more financially independent."
+          }
+        }
+      },
+      "events": {
+        "label": "Events",
+        "title": "Upcoming gatherings",
+        "subtitle": "Join us in our mission to transform financial landscapes.",
+        "viewAllCta": "View all events",
+        "items": {
+          "workshop": {
+            "badge": "Workshop",
+            "title": "Financial freedom masterclass",
+            "location": "online",
+            "description": "Learn practical strategies for managing and reducing personal debt.",
+            "date": {
+              "day": "Fri 09 Feb 2024",
+              "dated": "06",
+              "mode": "online",
+              "year": "2024"
+            }
+          },
+          "seminar": {
+            "badge": "Seminar",
+            "title": "Community economic empowerment",
+            "location": "Houston",
+            "description": "Discover collaborative approaches to building financial resilience.",
+            "date": {
+              "day": "Fri 09 Feb 2024",
+              "dated": "06",
+              "mode": "online",
+              "year": "2024"
+            }
+          },
+          "conference": {
+            "badge": "Conference",
+            "title": "Debt reduction strategies",
+            "location": "Los Angeles",
+            "description": "Explore innovative techniques for overcoming financial challenges.",
+            "date": {
+              "day": "Fri 09 Feb 2024",
+              "dated": "06",
+              "mode": "online",
+              "year": "2024"
+            }
+          },
+          "donation": {
+            "badge": "Donation",
+            "title": "Giving back to the motherland",
+            "location": "Ghana",
+            "description": "Master practical methods for navigating monetary obstacles.",
+            "date": {
+              "day": "Fri 09 Feb 2024",
+              "dated": "06",
+              "mode": "online",
+              "year": "2024"
+            }
+          }
+        }
+      },
+      "merch": {
+        "eyebrow": "Merch",
+        "titleLine1": "Browse our",
+        "titleLine2": "bookstore",
+        "description": "Empower your journey with meaningful products that drive change.",
+        "visitStoreCta": "Visit store"
+      },
+      "blogs": {
+        "label": "Blog",
+        "title": "Insights and perspectives",
+        "subtitle": "Embrace life's beauty and cherish connections.",
+        "posts": {
+          "realEstateWealth": {
+            "title": "Building Generational Wealth Through Real Estate",
+            "description": "Explore strategies for building wealth through real estate investments.",
+            "readTime": "5 min read"
+          },
+          "collectiveEconomics": {
+            "title": "The Power of Collective Economics in Urban Communities",
+            "description": "Learn about the transformative power of collective economics in urban communities.",
+            "readTime": "5 min read"
+          },
+          "faithBasedInvesting": {
+            "title": "Faith-Based Investing: Aligning Values with Financial Growth",
+            "description": "Discover how faith-based investing aligns your values with financial growth.",
+            "readTime": "5 min read"
+          },
+          "investingWithPurpose": {
+            "title": "Investing with Purpose: Harmonizing Beliefs and Financial Success",
+            "description": "Investing with Purpose: Harmonizing Beliefs and Financial Success",
+            "readTime": "5 min read"
+          }
         }
       }
     },
-    "cta": {
-      "title": "Ready to join the community?",
-      "descriptionLine1": "Tell us about your goals and challenges,",
-      "descriptionLine2": "We'll help guide you to the support that best serves your journey.",
-      "buttonText": "Join the movement",
-      "imageAlt": "Community celebrating together"
+    "about": {
+      "hero": {}
+    },
+    "communityCampaigns": {
+      "hero": {
+        "title": "Community Campaigns",
+        "subtitle": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs. These campaigns are designed to create a collective impact by promoting shared learning, mutual accountability, and community celebration.",
+        "ctaLabel": "Join the movement",
+        "ctaHref": "#",
+        "imageAlt": "Community campaigns background"
+      },
+      "about": {
+        "title": "What are community campaigns",
+        "description": "Community campaigns bring together entire neighborhoods to tackle financial challenges as one. Unlike isolated programs, these coordinated efforts create momentum, accountability, and lasting transformation."
+      },
+      "impact": {
+        "title": "DFREE® Day of Impact",
+        "subtitle": "A Community Activation Model for Financial Freedom, Collaboration and Collective Action",
+        "description": "The DFREE® Day of Impact is a new initiative that features a one-day, multi-touch community engagement experience designed to introduce DFREE® to a local community, deepen relationships with key leaders, and seed long-term collaboration that leads to measurable financial empowerment outcomes. It brings together nonprofits, faith leaders, civic stakeholders, entrepreneurs, and residents into the launch of an ongoing DFREE ecosystem in the host community.",
+        "buttonText": "Learn more",
+        "imageAlt": "DFREE Day of Impact"
+      },
+      "whatWeDo": {
+        "title": "What we do",
+        "items": {
+          "unifiedCollaboration": {
+            "title": "Unified collaboration",
+            "description": "Multiple organizations work in concert, sharing resources and learning from one another. This creates a network effect that strengthens every participant."
+          },
+          "sharedAccountability": {
+            "title": "Shared accountability",
+            "description": "Weekly touchpoints and group learning sessions keep participants engaged and motivated. Progress is celebrated together, making the journey feel less isolating."
+          },
+          "measurableImpact": {
+            "title": "Measurable impact",
+            "description": "Campaigns track real outcomes across the community. Debt reduction, savings growth, and behavioral change become visible proof of what's possible."
+          }
+        }
+      },
+      "featured": {
+        "sectionTitle": "Featured Campaigns",
+        "title": "NEWARK WOMEN MOVING FORWARD",
+        "description": "In 2024, Newark launched its inaugural campaign under the leadership of First Lady Linda Baraka. Women across the city are reclaiming financial control, reducing debt, and building the economic resilience their families deserve.",
+        "subtexts": {
+          "faithRooted": {
+            "text": "Faith rooted",
+            "desc": "Churches and community organizations anchor the work with trust and spiritual grounding."
+          },
+          "realChange": {
+            "text": "Real change",
+            "desc": "Women are moving from financial stress toward stability and long-term wealth building."
+          }
+        },
+        "discoverMore": "Discover More",
+        "imageAlt": "Featured Campaigns Image",
+        "href": "#"
+      },
+      "results": {
+        "title": "Results",
+        "subtitle": "The power of moving together",
+        "description": "When people act in concert, change happens fast. Communities that campaign together see real shifts in how families manage money and build futures.",
+        "subtexts": {
+          "grassroots": {
+            "text": "Movements start at the grassroots",
+            "desc": "Local leaders and neighbors carry the work forward with authenticity and trust."
+          },
+          "habitsTakeRoot": {
+            "text": "Financial habits take root and hold",
+            "desc": "Weekly engagement and peer support turn knowledge into action that lasts."
+          },
+          "economicStrength": {
+            "text": "Economic strength spreads through neighborhoods",
+            "desc": "As individuals gain stability, entire communities build the foundation for shared prosperity."
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to join the community?",
+        "descriptionLine1": "Tell us about your goals and challenges,",
+        "descriptionLine2": "We'll help guide you to the support that best serves your journey.",
+        "buttonText": "Join the movement",
+        "imageAlt": "Community celebrating together"
+      }
+    },
+    "africa": {
+      "hero": {
+        "title": "Empowering Africa",
+        "subtitle": "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
+        "cta": {
+          "label": "Donate to the movement",
+          "href": "#"
+        }
+      },
+      "ourStory": {
+        "title": "our story",
+        "description": "Driven by a vision to empower the African diaspora, Dr. DeForest B. Soaries, Jr. founded Dfree Global Foundation, which birthed DFREE® Africa, to replace the cycle of poverty with a mindset of wealth and self-sufficiency. This mission is deeply rooted in Dr. Soaries' long-standing connection to the continent, beginning with his first visit to South Africa in 1990. He has since spent decades forging continental partnerships that champion economic, social, and spiritual growth, dedicating his leadership to building strategic connections across the continent, especially in Ghana, Liberia, Uganda, Botswana, South Africa and several other countries. His work focuses on integrating economic development with educational, spiritual and social progress to create sustainable, higher standards of living for all."
+      },
+      "featuredProjects": {
+        "title": "Projects",
+        "subtitle": "Featured projects",
+        "description": "With the support of committed partners and in collaboration with community leaders and local governments, our projects and initiatives continue to have direct, life-changing impact on communities, transforming lives across the continent.",
+        "href": "/africa/projects"
+      },
+      "continentalImpact": {
+        "label": "Continental",
+        "title": "Continental Impact",
+        "subtitle": "Transforming financial landscapes across African communities",
+        "learnMore": "Learn more",
+        "countries": {
+          "ghana": {
+            "name": "Ghana",
+            "description": "Empowering communities with financial education and community development projects."
+          },
+          "southAfrica": {
+            "name": "South Africa",
+            "description": "Promoting financial freedom in partnership with the Baptist Convention of South Africa."
+          },
+          "uganda": {
+            "name": "Uganda",
+            "description": "Creating opportunities to improve standards of living through economic development programs"
+          },
+          "liberia": {
+            "name": "Liberia",
+            "description": "Enhancing global access and educational opportunities with leadership of Baptist Convention"
+          }
+        }
+      },
+      "projects": {
+        "pageTitle": "All Projects",
+        "showAllCountries": "Show all countries",
+        "readMore": "Read more",
+        "viewAllProjects": "View all projects"
+      },
+      "photoGallery": {
+        "label": "Photo Gallery",
+        "title": "Moments of impact",
+        "subtitle": "Capturing stories of transformation across communities",
+        "chooseProject": "Choose a project to view",
+        "back": "Back"
+      },
+      "banner": {
+        "title": "Let's create financial empowerment",
+        "description": "By investing in education, clean water for a village, or skills training for the youth, you make a significant contribution to empowering whole generations to be independent and to have better quality of life.",
+        "label": "Learn how you can support"
+      }
     }
   }
 }

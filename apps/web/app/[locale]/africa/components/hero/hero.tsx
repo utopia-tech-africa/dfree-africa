@@ -5,18 +5,11 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AfricaHeroImg, AfricaHeroMobileImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
+import { getTranslations } from "next-intl/server";
 
-const HERO_CONTENT = {
-  title: "Empowering Africa",
-  subtitle:
-    "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
-  cta: {
-    label: "Donate to the movement",
-    href: "#",
-  },
-} as const;
+export const Hero = async () => {
+  const t = await getTranslations("africa.hero");
 
-export const Hero = () => {
   return (
     <section className="relative w-full min-h-[600px] h-dvh flex flex-col items-center justify-end overflow-hidden">
       {/* Background image - mobile */}
@@ -50,20 +43,20 @@ export const Hero = () => {
       <ComponentLayout className="w-full z-10 flex flex-col items-center justify-center py-[94px] md:py-[156px]">
         <div className="text-center max-w-[343px] md:max-w-[708px]">
           <h1 className="font-montserrat w-full mb-3 text-[26px] font-bold leading-none tracking-tight text-neutral-100 md:text-[66px] lg:text-[70px] px-3">
-            {HERO_CONTENT.title}
+            {t("title")}
           </h1>
           <p className="mb-6 w-full md:mb-8 text-sm md:text-lg md:font-medium leading-[1.3] text-neutral-200">
-            {HERO_CONTENT.subtitle}
+            {t("subtitle")}
           </p>
 
           <Link
-            href={HERO_CONTENT.cta.href}
+            href={t("cta.href")}
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
               "text-base",
             )}
           >
-            {HERO_CONTENT.cta.label}
+            {t("cta.label")}
           </Link>
         </div>
       </ComponentLayout>

@@ -24,6 +24,8 @@ const AfricaPage = async () => {
     getFeaturedProjects(),
     getPhotoGallery(),
   ]);
+  const t = await getTranslations("africa.featuredProjects");
+  const galleryT = await getTranslations("africa.photoGallery");
 
   return (
     <div>
@@ -32,17 +34,17 @@ const AfricaPage = async () => {
       <ContinentalImpact />
       <FeaturedProjects
         projects={featuredProjects}
-        title="Projects"
-        subtitle="Featured projects"
-        description="With the support of committed partners and in collaboration with community leaders and local governments, our projects and initiatives continue to have direct, life-changing impact on communities, transforming lives across the continent."
-        href="/africa/projects"
+        title={t("title")}
+        subtitle={t("subtitle")}
+        description={t("description")}
+        href={t("href")}
       />
       {photoGallery && photoGallery.years.length > 0 && (
         <PhotoGallery
           className="mt-[155px]"
-          label={photoGallery.label}
-          title={photoGallery.title}
-          subtitle={photoGallery.subtitle}
+          label={galleryT("label")}
+          title={galleryT("title")}
+          subtitle={galleryT("subtitle")}
           years={photoGallery.years}
         />
       )}
