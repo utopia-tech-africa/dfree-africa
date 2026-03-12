@@ -44,7 +44,7 @@ const ghanaPageData: SectionCardProps = [
                   In this new phase, the  emphasis on working through the church, hopefully, changes the  narrative.  Support in the form of books and funding to host events,  educate market traders and reach more beneficiaries would be welcome.`,
   },
   {
-    title: "SUCESSES",
+    title: "SUCCESSES",
     description: `DFREE® Club, Ghana has  chalked some successes.  Over 100 individuals have successfully  completed the program since inception. Apart from the debt paid down,  group members have also saved over 60,000 cedis ($8,000) collectively in about 3 years through the Billion Dollar Challenge.
                   The Club continues to lead  the charge of helping individuals pay down debt, save to create wealth,  and learn to invest and grow their incomes for better standards of  living.`,
   },
