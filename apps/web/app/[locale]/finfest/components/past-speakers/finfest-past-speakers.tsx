@@ -53,19 +53,7 @@ export const FinfestPastSpeakers = () => {
         </div>
 
         {/* Carousel Slider with right bleed */}
-        <Carousel
-          options={{
-            align: "start",
-            containScroll: "trimSnaps",
-            slidesToScroll: 1,
-            breakpoints: {
-              "(min-width: 768px)": { slidesToScroll: 2 },
-              "(min-width: 1024px)": { slidesToScroll: 3 },
-            },
-          }}
-          viewportClassName="-mr-4 md:-mr-10 lg:-mr-20 xl:-mr-[50vw] overflow-hidden"
-          slideClassName="basis-[300px]"
-        >
+        <Carousel slideClassName="w-[300px]">
           {speakers.map((speaker, index) => (
             <SpeakerCard key={index} speaker={speaker} />
           ))}
