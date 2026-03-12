@@ -11,7 +11,7 @@ export const AfricaBanner = ({ classname }: { classname?: string }) => {
   return (
     <Banner
       className={classname}
-      backgroundImage={AfricaBannerBg}
+      backgroundImage="https://res.cloudinary.com/dan9camhs/image/upload/v1773146939/afa2bc68-190b-4408-a424-8e57d7718d67.webp"
       title={t("title")}
       description={t("description")}
       href="#"

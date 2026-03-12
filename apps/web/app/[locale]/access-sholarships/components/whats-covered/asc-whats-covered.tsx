@@ -1,13 +1,13 @@
 import Image from "next/image";
 import ComponentLayout from "@/components/component-layout";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
-import { ASCWhatsCoveredImg1, ASCWhatsCoveredImg2 } from "@/assets/img";
 
 export const ASCWhatsCovered = () => {
   const cards = [
     {
       title: "Program Access",
-      image: ASCWhatsCoveredImg1,
+      image:
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773230065/image_a0e4u7.webp",
       bullets: [
         "DFREE® Wealth Lab",
         "DFREE® Community",
@@ -18,7 +18,8 @@ export const ASCWhatsCovered = () => {
     },
     {
       title: "Event Participation",
-      image: ASCWhatsCoveredImg2,
+      image:
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773230115/7a103e47-883a-41ac-a958-03ce000b3850.webp",
       bullets: [
         "Registration fees",
         "Workbooks and materials",

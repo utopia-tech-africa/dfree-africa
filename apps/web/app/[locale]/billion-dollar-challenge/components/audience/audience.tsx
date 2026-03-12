@@ -3,25 +3,23 @@ import Image from "next/image";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
-import {
-  BDCAudienceImg1,
-  BDCAudienceImg2,
-  BDCAudienceImg3,
-} from "@/assets/img";
 
 const audiences = [
   {
-    image: BDCAudienceImg1,
+    image:
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1773227325/b5c5a330-0e6a-4df9-bc29-8e8ba8161896.webp",
     label: "Solo",
     title: "Take control of your financial story.",
   },
   {
-    image: BDCAudienceImg2,
+    image:
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1773227411/image_qqjpk7.webp",
     label: "As a group",
     title: "Peers seeking financial growth.",
   },
   {
-    image: BDCAudienceImg3,
+    image:
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1773227517/image_1_o8rgbx.webp",
     label: "Communities",
     title: "Build this movement in your region.",
   },

@@ -1,4 +1,3 @@
-import { SouthAfricanFlag } from "@/assets";
 import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
@@ -44,7 +43,11 @@ const SouthAfricaPage = async () => {
 
   return (
     <div className="flex flex-col gap-5 w-full">
-      <Hero bgImage={SouthAfricanFlag} />
+      <Hero
+        bgImage={
+          "https://res.cloudinary.com/dan9camhs/image/upload/v1773146514/5c184ee3-66f3-4c20-8a5a-1e4f18f775f7.webp"
+        }
+      />
 
       <PageInfo
         mainTitle="DFREE® in South Africa"

@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { ASCAccessibiltyImg, DfreeLogoBg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
-import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { Button } from "@/components/ui/button";
 
@@ -19,7 +17,9 @@ export const ASCAccessibilty = () => {
       {/* Background Watermark */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] md:w-[700px] md:h-[700px] pointer-events-none select-none">
         <Image
-          src={DfreeLogoBg}
+          src={
+            "https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
+          }
           alt="DFREE Pattern Background"
           fill
           className="object-contain"
@@ -65,7 +65,9 @@ export const ASCAccessibilty = () => {
           {/* Right Image */}
           <div className="relative w-full aspect-4/3 md:aspect-square lg:aspect-5/4 rounded-md overflow-hidden">
             <Image
-              src={ASCAccessibiltyImg}
+              src={
+                "https://res.cloudinary.com/dan9camhs/image/upload/v1773232228/image_1_guy2fb.webp"
+              }
               alt="Two women working together on a laptop"
               fill
               className="object-cover"

@@ -31,6 +31,20 @@ export const blog = defineType({
     }),
 
     defineField({
+      name: 'authorImage',
+      title: 'Author Image',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [defineField({name: 'alt', title: 'Alternative Text', type: 'string'})],
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'authorName',
+      title: 'Author Name',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'text',

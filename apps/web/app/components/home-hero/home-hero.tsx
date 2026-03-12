@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
-import { HomeHeroBookImg } from "@/assets";
 import { ArrowRight } from "lucide-react";
 
 export const HomeHero = async () => {
@@ -91,7 +90,9 @@ export const HomeHero = async () => {
 
             <div className="relative z-10 mt-8">
               <Image
-                src={HomeHeroBookImg}
+                src={
+                  "https://res.cloudinary.com/dan9camhs/image/upload/v1773225508/22c51328-5a60-4b0b-9281-53025c2bc8b8.webp"
+                }
                 width={108}
                 height={140}
                 alt="Book"

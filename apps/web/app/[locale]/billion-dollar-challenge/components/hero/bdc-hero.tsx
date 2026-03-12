@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { BDCHeroImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 
 const HERO_CONTENT = {
@@ -24,7 +23,9 @@ export function BDCHero() {
     <section className="relative w-full min-h-150 h-dvh flex flex-col overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={BDCHeroImg}
+          src={
+            "https://res.cloudinary.com/dan9camhs/image/upload/v1773227016/image_1_fsziuv.webp"
+          }
           alt="BDC Hero background"
           fill
           className="object-cover"

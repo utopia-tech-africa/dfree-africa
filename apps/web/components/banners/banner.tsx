@@ -33,6 +33,7 @@ export const Banner: React.FC<BannerProps> = ({
         <Image
           src={backgroundImage}
           alt={title}
+          fill
           className="absolute inset-0 w-full h-full object-cover"
         />
 
