@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AfricaHeroImg, AfricaHeroMobileImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 
 const HERO_CONTENT = {
@@ -22,7 +21,9 @@ export const Hero = () => {
       {/* Background image - mobile */}
       <div className="absolute inset-0 md:hidden">
         <Image
-          src={AfricaHeroMobileImg}
+          src={
+            "https://res.cloudinary.com/dan9camhs/image/upload/v1773145601/e6308848-6b5b-424c-b9c0-de4f3d434460.webp"
+          }
           alt=""
           fill
           className="object-cover"
@@ -34,7 +35,9 @@ export const Hero = () => {
       {/* Background image - desktop */}
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src={AfricaHeroImg}
+          src={
+            "https://res.cloudinary.com/dan9camhs/image/upload/v1773145296/598147d8-bd38-4ac1-9157-8c726a58017c.webp"
+          }
           alt=""
           fill
           className="object-cover"

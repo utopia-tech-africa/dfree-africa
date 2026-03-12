@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { FeaturedCampaignsImg } from "@/assets";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Button } from "@/components/ui/button";
@@ -56,7 +55,9 @@ export const CampaignsFeatured = async () => {
       <div className="flex-1 w-full">
         <div className="relative w-full h-75 md:h-100 lg:h-full rounded-lg overflow-hidden">
           <Image
-            src={FeaturedCampaignsImg}
+            src={
+              "https://res.cloudinary.com/dan9camhs/image/upload/v1773225930/f4b3fae2-1a9b-4a63-8314-7f9a982c2bae.webp"
+            }
             alt={t("imageAlt")}
             className="object-cover"
             fill

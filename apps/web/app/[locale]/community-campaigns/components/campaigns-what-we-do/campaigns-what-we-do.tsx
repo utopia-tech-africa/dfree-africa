@@ -1,15 +1,8 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-
 import ComponentLayout from "@/components/component-layout";
 import Image from "next/image";
-import {
-  CampaignsWhatWeDoImg1,
-  CampaignsWhatWeDoImg2,
-  CampaignsWhatWeDoImg3,
-} from "@/assets";
 
 const WHAT_WE_DO_ITEM_KEYS = [
   "unifiedCollaboration",
@@ -18,9 +11,10 @@ const WHAT_WE_DO_ITEM_KEYS = [
 ] as const;
 
 const WHAT_WE_DO_IMAGES = [
-  CampaignsWhatWeDoImg1,
-  CampaignsWhatWeDoImg2,
-  CampaignsWhatWeDoImg3,
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226259/image_ln68b0.webp",
+
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226394/image_qr08pn.webp",
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226487/image_idzdsd.webp",
 ] as const;
 
 export const CampaignsWhatWeDo = () => {

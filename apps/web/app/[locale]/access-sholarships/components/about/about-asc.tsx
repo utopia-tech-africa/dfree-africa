@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
-import { ASCAboutImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 
 export function ASCAbout() {
@@ -33,7 +32,9 @@ export function ASCAbout() {
       {/* Right Column: Image */}
       <div className="relative w-full aspect-4/3 sm:aspect-video lg:aspect-square rounded-md overflow-hidden shadow-sm">
         <Image
-          src={ASCAboutImg}
+          src={
+            "https://res.cloudinary.com/dan9camhs/image/upload/v1773228676/7b6d07bd-2b41-46ef-a94b-52f2cc767d77.webp"
+          }
           alt="About the Program"
           fill
           className="object-cover"

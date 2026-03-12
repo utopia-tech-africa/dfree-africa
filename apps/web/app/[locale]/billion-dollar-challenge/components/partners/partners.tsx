@@ -1,22 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import {
-  BDCPartnersLogo1,
-  BDCPartnersLogo2,
-  BDCPartnersLogo3,
-  BDCPartnersLogo4,
-  BDCPartnersLogo5,
-  BDCPartnersLogo6,
-} from "@/assets/img";
-import ComponentLayout from "@/components/component-layout";
 
 const logos = [
-  BDCPartnersLogo1,
-  BDCPartnersLogo2,
-  BDCPartnersLogo3,
-  BDCPartnersLogo4,
-  BDCPartnersLogo5,
-  BDCPartnersLogo6,
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773228117/01a9f7d0-d9d9-4aa5-8138-2f2ff5334e87.webp",
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773228175/2ebc0b88-766e-4d69-b61b-1f84d17243f0.webp",
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773228218/b3ee389a-c29e-41c1-b227-53901c434399.webp",
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773228288/cc199dbd-15b7-4305-bbc3-c8c3dcc5735e.webp",
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773228340/62022153-31e6-4847-a744-d7c55d4a68ff.webp",
+  "https://res.cloudinary.com/dan9camhs/image/upload/v1773228434/a0a01107-8c87-4558-9ea1-a5f89ed993a9.webp",
 ];
 
 export const Partners = () => {
@@ -40,6 +31,8 @@ export const Partners = () => {
               <Image
                 src={logo}
                 alt={`Partner Logo ${index + 1}`}
+                width={500}
+                height={600}
                 className="w-full h-auto object-contain"
               />
             </div>

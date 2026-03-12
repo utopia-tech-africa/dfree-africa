@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BDCAboutImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
@@ -42,9 +41,13 @@ export function AboutBdc() {
       {/* Bottom Container: Featured Image */}
       <div className="w-full overflow-hidden">
         <Image
-          src={BDCAboutImg}
+          src={
+            "https://res.cloudinary.com/dan9camhs/image/upload/v1773227130/5a53b2d4-97ca-4e19-92ff-eeff3330a9db.webp"
+          }
           alt="BDC Platform Preview"
           sizes="100vw"
+          height={720}
+          width={1000}
           className="w-full h-auto"
           style={{ width: "100%", height: "auto" }}
         />

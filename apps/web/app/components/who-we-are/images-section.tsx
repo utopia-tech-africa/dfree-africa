@@ -3,12 +3,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion, Variants } from "motion/react";
-import {
-  WhoWeAreImg1,
-  WhoWeAreImg2,
-  WhoWeAreImg3,
-  WhoWeAreImg4,
-} from "@/assets";
 
 export const ImagesSection = () => {
   const t = useTranslations("home.whoWeAre");
@@ -25,35 +19,35 @@ export const ImagesSection = () => {
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-10 sm:mt-16 md:mt-20">
-      {[WhoWeAreImg1, WhoWeAreImg2, WhoWeAreImg3, WhoWeAreImg4].map(
-        (img, index) => (
-          <div
-            key={index}
-            className="relative w-full aspect-[4/3] even:mt-8 md:even:mt-16"
+      {[
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773224314/4d13dd61-d288-497b-b26f-b99883c910a7.webp",
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773224395/f1f4147b-70ad-4df5-8def-ec96977616de.webp",
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773224630/image_himdrp.webp",
+        "https://res.cloudinary.com/dan9camhs/image/upload/v1773224706/7105d8da-2e21-4c96-a79f-6b1f89612175.webp",
+      ].map((img, index) => (
+        <div
+          key={index}
+          className="relative w-full aspect-[4/3] even:mt-8 md:even:mt-16"
+        >
+          <motion.div
+            className="absolute inset-0 overflow-hidden"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: index * 0.15 }}
           >
-            <motion.div
-              className="absolute inset-0 overflow-hidden"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: index * 0.15 }}
-            >
-              <motion.div
-                className="absolute inset-0"
-                variants={curtainVariant}
-              >
-                <Image
-                  src={img}
-                  alt={t("imageGalleryAlt")}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 48vw, 25vw"
-                />
-              </motion.div>
+            <motion.div className="absolute inset-0" variants={curtainVariant}>
+              <Image
+                src={img}
+                alt={t("imageGalleryAlt")}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 48vw, 25vw"
+              />
             </motion.div>
-          </div>
-        ),
-      )}
+          </motion.div>
+        </div>
+      ))}
     </div>
   );
 };
