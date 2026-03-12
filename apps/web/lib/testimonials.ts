@@ -1,5 +1,4 @@
 import type { StaticImageData } from "next/image";
-import { HeadshotImg1, HeadshotImg2, HeadshotImg3 } from "@/assets";
 
 export const TESTIMONIAL_KEYS = ["marcus", "elena", "david"] as const;
 
@@ -7,20 +6,23 @@ export type TestimonialKey = (typeof TESTIMONIAL_KEYS)[number];
 
 export type TestimonialMeta = {
   id: TestimonialKey;
-  image: StaticImageData;
+  image: StaticImageData | string;
 };
 
 export const TESTIMONIALS: TestimonialMeta[] = [
   {
     id: "marcus",
-    image: HeadshotImg1,
+    image:
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1773224011/ebafd8d7-907a-4536-a18f-d2f6a92270a1.webp",
   },
   {
     id: "elena",
-    image: HeadshotImg2,
+    image:
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1773224100/0872fc0e-5eb0-4c5a-becf-8c00fc4423c7.webp",
   },
   {
     id: "david",
-    image: HeadshotImg3,
+    image:
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1773224197/6fe5cad9-aae6-451a-b381-ba4e7c20382e.webp",
   },
 ];

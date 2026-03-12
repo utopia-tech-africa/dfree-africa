@@ -1,28 +1,37 @@
 import React from "react";
 import Image from "next/image";
-import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import {
-  IndependenceRealtyTrustLogo,
-  PrudentialLogo,
-  NJIDAlogo,
-  RWJBarnabasHealthLogo,
-  ValleyLogo,
-  OnityLogo,
-} from "@/assets/img";
 
 export const FinfestSponsors = () => {
   const sponsors = [
-    { name: "Independence Realty Trust", logo: IndependenceRealtyTrustLogo },
-    { name: "Prudential", logo: PrudentialLogo },
-    { name: "NJIDA", logo: NJIDAlogo },
-    { name: "RWJBarnabas Health", logo: RWJBarnabasHealthLogo },
-    { name: "Valley", logo: ValleyLogo },
-    { name: "Onity", logo: OnityLogo },
+    {
+      name: "Independence Realty Trust",
+      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238090/7ed995e5-39e3-45e5-be98-a40662f863ff.webp",
+    },
+    {
+      name: "Prudential",
+      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238234/d1570521-d65f-4a54-a455-12f3008bffff.webp",
+    },
+    {
+      name: "NJIDA",
+      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238298/f53b1159-3f54-4190-9f15-776464abe2da.webp",
+    },
+    {
+      name: "RWJBarnabas Health",
+      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238376/41f22c93-268a-4c2b-9c77-f51339179b35.webp",
+    },
+    {
+      name: "Valley",
+      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238528/0546e2fb-6d47-4aa7-a155-23490c97d75f.webp",
+    },
+    {
+      name: "Onity",
+      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773237529/76b925f2-45d4-4a87-9306-775dcf55f686.webp",
+    },
   ];
 
   return (
@@ -50,6 +59,8 @@ export const FinfestSponsors = () => {
                   <Image
                     src={sponsor.logo}
                     alt={sponsor.name}
+                    height={500}
+                    width={500}
                     className="w-full h-full object-contain pointer-events-none px-2"
                   />
                 </div>
@@ -65,6 +76,8 @@ export const FinfestSponsors = () => {
                   <Image
                     src={sponsor.logo}
                     alt={sponsor.name}
+                    height={500}
+                    width={500}
                     className="w-full h-full object-contain pointer-events-none px-2"
                   />
                 </div>

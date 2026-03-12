@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import type { ProjectForUI } from "@/lib/sanity";
 import { FeaturedProjectCard } from "./featured-project-card";
 import Image from "next/image";
-import { DfreeLogoBg } from "@/assets";
+import { useTranslations } from "next-intl";
 
 type FeaturedProjectsProps = {
   projects?: ProjectForUI[];
@@ -27,6 +27,7 @@ export const FeaturedProjects = ({
   description,
   href,
 }: FeaturedProjectsProps) => {
+  const t = useTranslations("africa.projects");
   const featuredProjects = projects?.filter((p) => p.featured);
 
   return (
@@ -37,9 +38,13 @@ export const FeaturedProjects = ({
           {/* Background image */}
           <div className="absolute -z-10 md:-left-10 w-full md:w-[60%]">
             <Image
-              src={DfreeLogoBg}
+              src={
+                "https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
+              }
               alt="Hero background"
               className="object-left"
+              height={900}
+              width={900}
               priority
             />
           </div>
@@ -59,7 +64,7 @@ export const FeaturedProjects = ({
               "w-fit mt-2 hidden lg:flex",
             )}
           >
-            View all projects
+            {t("viewAllProjects")}
           </Link>
         </div>
 
@@ -89,7 +94,7 @@ export const FeaturedProjects = ({
             "w-fit mt-2 lg:hidden mx-auto",
           )}
         >
-          View all projects
+          {t("viewAllProjects")}
         </Link>
       </div>
     </ComponentLayout>

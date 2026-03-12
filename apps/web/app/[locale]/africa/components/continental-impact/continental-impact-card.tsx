@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export type ContinentalImpactCardProps = {
   country: string;
@@ -18,6 +19,8 @@ export const ContinentalImpactCard = ({
   flag,
   href,
 }: ContinentalImpactCardProps) => {
+  const t = useTranslations("africa.continentalImpact");
+
   return (
     <article
       className="group relative w-full min-w-0 aspect-3/4 rounded-sm md:rounded-lg p-px md:aspect-auto md:h-[415px]"
@@ -54,7 +57,7 @@ export const ContinentalImpactCard = ({
             href={href}
             className={cn(buttonVariants({ variant: "ghost", size: "lg" }))}
           >
-            Learn more
+            {t("learnMore")}
           </Link>
         </div>
       </div>

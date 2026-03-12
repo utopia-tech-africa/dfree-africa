@@ -1,4 +1,3 @@
-import { GhanaFlag } from "@/assets";
 import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
@@ -56,7 +55,11 @@ const GhanaPage = async () => {
 
   return (
     <div className="flex flex-col gap-5 w-full">
-      <Hero bgImage={GhanaFlag} />
+      <Hero
+        bgImage={
+          "https://res.cloudinary.com/dan9camhs/image/upload/v1773145980/8c40374f-96b4-452c-801d-b20c258fa69f.webp"
+        }
+      />
 
       <PageInfo
         mainTitle="DFREE® in Ghana"

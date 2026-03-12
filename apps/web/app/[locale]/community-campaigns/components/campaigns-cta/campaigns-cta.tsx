@@ -1,14 +1,12 @@
-import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
-import { CampaignsCtaImg } from "@/assets";
 import { CampaignsCtaPattern } from "@/assets/svg/campaigns-cta-pattern";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 export const CampaignsCta = async () => {
   const t = await getTranslations("communityCampaigns.cta");
-
   return (
     <div className="relative">
       <div className=" absolute top-30 w-full h-full overflow-hidden">
@@ -43,8 +41,10 @@ export const CampaignsCta = async () => {
           <div className="relative w-full mt-10 lg:mt-0 lg:absolute lg:right-0 lg:-top-21.5 lg:w-[50%] lg:max-w-160 lg:h-126.5 lg:rounded-lg pointer-events-none z-10 overflow-hidden ">
             <div className="relative w-full aspect-640/506 lg:aspect-auto lg:h-full">
               <Image
-                src={CampaignsCtaImg}
-                alt={t("imageAlt")}
+                src={
+                  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226832/45eb08a3-7898-428e-a400-f2e2989808e7.webp"
+                }
+                alt="Community celebrating together"
                 fill
                 priority
                 className="object-cover"

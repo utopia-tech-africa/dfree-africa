@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ASCPartnerWithUsImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
@@ -33,7 +32,9 @@ export const ASCPartnerWithUs = () => {
         {/* Left Image */}
         <div className="relative size-full rounded-md overflow-hidden">
           <Image
-            src={ASCPartnerWithUsImg}
+            src={
+              "https://res.cloudinary.com/dan9camhs/image/upload/v1773232437/87620744-6963-4cb5-abe9-e0b33f9ce31c.webp"
+            }
             alt="People joining hands"
             fill
             className="object-cover"

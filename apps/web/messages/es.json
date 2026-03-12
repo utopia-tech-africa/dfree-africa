@@ -361,5 +361,67 @@
       "buttonText": "Únete al movimiento",
       "imageAlt": "Comunidad celebrando juntos"
     }
+  },
+  "africa": {
+    "hero": {
+      "title": "Empoderar África",
+      "subtitle": "Impulsando la libertad financiera y el desarrollo comunitario sostenible mediante educación, formación y programas económicos.",
+      "cta": {
+        "label": "Donar al movimiento",
+        "href": "#"
+      }
+    },
+    "ourStory": {
+      "title": "nuestra historia",
+      "description": "Impulsado por una visión de empoderar a la diáspora africana, el Dr. DeForest B. Soaries Jr. fundó la Dfree Global Foundation, que dio origen a DFREE® África, para reemplazar el ciclo de pobreza con una mentalidad de riqueza y autosuficiencia. Esta misión está profundamente arraigada en la larga conexión del Dr. Soaries con el continente, que comenzó con su primera visita a Sudáfrica en 1990. Desde entonces, ha pasado décadas forjando alianzas continentales que promueven el crecimiento económico, social y espiritual, dedicando su liderazgo a construir conexiones estratégicas en todo el continente, especialmente en Ghana, Liberia, Uganda, Botsuana, Sudáfrica y varios otros países. Su trabajo se centra en integrar el desarrollo económico con el progreso educativo, espiritual y social para crear estándares de vida sostenibles y más altos para todos."
+    },
+    "featuredProjects": {
+      "title": "Proyectos",
+      "subtitle": "Proyectos destacados",
+      "description": "Con el apoyo de socios comprometidos y en colaboración con líderes comunitarios y gobiernos locales, nuestros proyectos e iniciativas continúan teniendo un impacto directo que cambia la vida de las comunidades, transformando vidas en todo el continente.",
+      "href": "/africa/projects"
+    },
+    "continentalImpact": {
+      "label": "Continental",
+      "title": "Impacto continental",
+      "subtitle": "Transformando los paisajes financieros en las comunidades africanas",
+      "learnMore": "Saber más",
+      "countries": {
+        "ghana": {
+          "name": "Ghana",
+          "description": "Empoderando comunidades con educación financiera y proyectos de desarrollo comunitario."
+        },
+        "southAfrica": {
+          "name": "Sudáfrica",
+          "description": "Promoviendo la libertad financiera en asociación con la Convención Bautista del Sur de África."
+        },
+        "uganda": {
+          "name": "Uganda",
+          "description": "Creando oportunidades para mejorar los estándares de vida a través de programas de desarrollo económico"
+        },
+        "liberia": {
+          "name": "Liberia",
+          "description": "Mejorando el acceso global y las oportunidades educativas con el liderazgo de la Convención Bautista"
+        }
+      }
+    },
+    "projects": {
+      "pageTitle": "Todos los proyectos",
+      "showAllCountries": "Mostrar todos los países",
+      "readMore": "Leer más",
+      "viewAllProjects": "Ver todos los proyectos"
+    },
+    "photoGallery": {
+      "label": "Galería de fotos",
+      "title": "Momentos de impacto",
+      "subtitle": "Capturando historias de transformación en las comunidades",
+      "chooseProject": "Elegir un proyecto para ver",
+      "back": "Volver"
+    },
+    "banner": {
+      "title": "Creemos empoderamiento financiero",
+      "description": "Al invertir en educación, agua limpia para una aldea, o capacitación para los jóvenes, haces una contribución significativa para empoderar a generaciones enteras para que sean independientes y tengan mejor calidad de vida.",
+      "label": "Aprende cómo puedes apoyar"
+    }
   }
 }

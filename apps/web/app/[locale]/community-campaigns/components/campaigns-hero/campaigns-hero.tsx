@@ -3,7 +3,6 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { CampaignsHeroImg } from "@/assets/img";
 import ComponentLayout from "@/components/component-layout";
 
 export const CampaignsHero = async () => {
@@ -21,7 +20,9 @@ export const CampaignsHero = async () => {
     <section className="relative w-full min-h-150 h-dvh flex flex-col overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={CampaignsHeroImg}
+          src={
+            "https://res.cloudinary.com/dan9camhs/image/upload/v1773147892/57b6d58e-b3d4-4a96-bb5d-58341b71c924.webp"
+          }
           alt={t("imageAlt")}
           fill
           className="object-cover"
