@@ -42,7 +42,7 @@ const NAV_CONFIG: NavItemConfig[] = [
       { labelKey: "communityCampaigns", href: "/community-campaigns" },
       {
         labelKey: "foundationScholarshipCommitment",
-        href: "/access-sholarships",
+        href: "/access-scholarships",
       },
       { labelKey: "finfest", href: "/finfest" },
     ],
