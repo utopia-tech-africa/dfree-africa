@@ -12,6 +12,7 @@ import {
 import { FinfestHero } from "./components/finfest-hero";
 import { FinfestObjective } from "./components/finfest-objective";
 import FinfestMovement from "./components/finfest-objective/finfest-movement";
+import { CampaignsImpact } from "../community-campaigns/components/campaigns-impact";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -38,6 +39,7 @@ export default async function FinFestPage({
       <FinfestObjective />
       <FinfestMovement />
       <FinfestPastSpeakers />
+      <CampaignsImpact />
       <FinfestSponsors />
       <FinfestTestimonials />
       {gallery && gallery.years.length > 0 && (
