@@ -11,6 +11,7 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@google/genai": "^1.45.0",
     "@repo/ui": "workspace:*",
     "@sanity/image-url": "^1.1.0",
     "@tailwindcss/postcss": "^4.1.18",

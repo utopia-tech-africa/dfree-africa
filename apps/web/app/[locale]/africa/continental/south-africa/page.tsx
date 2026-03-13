@@ -20,8 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-const SouthAfricaPage = async () => {
-  const featuredProjects = await getFeaturedProjects("South Africa");
+const SouthAfricaPage = async ({ params }: Props) => {
+  const { locale } = await params;
+  const featuredProjects = await getFeaturedProjects(
+    "South Africa",
+    locale as "en" | "fr" | "es",
+  );
   const t = await getTranslations("africa.southAfrica");
 
   const southAfricaPageData: SectionCardProps = [

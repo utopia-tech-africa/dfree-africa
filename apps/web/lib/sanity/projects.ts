@@ -1,3 +1,4 @@
+import { translateText, translatePortableText } from "@/lib/translation";
 import type {
   FeaturedProjectsQueryResult,
   ProjectsQueryResult,
@@ -124,9 +125,23 @@ type YearsWithProjectIdsQueryResult = Array<{
   projectIds?: (string | null)[];
 }>;
 
-export async function getProjects(): Promise<ProjectForUI[]> {
+export type LocaleForTranslation = "en" | "fr" | "es";
+
+export async function getProjects(
+  locale?: LocaleForTranslation,
+): Promise<ProjectForUI[]> {
   const data = await client.fetch<ProjectsQueryResult>(projectsQuery);
-  return data.map(mapProjectToUI);
+  const list = data.map(mapProjectToUI);
+
+  if (!locale || locale === "en") return list;
+
+  return Promise.all(
+    list.map(async (project) => ({
+      ...project,
+      title: await translateText(project.title, locale),
+      description: await translateText(project.description, locale),
+    })),
+  );
 }
 
 export async function getYearsWithProjectIds(): Promise<YearWithProjectIds[]> {
@@ -148,34 +163,63 @@ export async function getYearsWithProjectIds(): Promise<YearWithProjectIds[]> {
 
 export async function getFeaturedProjects(
   country?: string,
+  locale?: LocaleForTranslation,
 ): Promise<ProjectForUI[]> {
+  let list: ProjectForUI[];
+
   if (country) {
     const data = await client.fetch<FeaturedProjectsQueryResult>(
       featuredCountryProjectsQuery,
-      {
-        country,
-      },
+      { country },
     );
-
-    return data.map(mapProjectToUI);
+    list = data.map(mapProjectToUI);
   } else {
     const data = await client.fetch<FeaturedProjectsQueryResult>(
       featuredProjectsQuery,
-      {
-        country,
-      },
+      { country },
     );
-
-    return data.map(mapProjectToUI);
+    list = data.map(mapProjectToUI);
   }
+
+  if (!locale || locale === "en") return list;
+
+  return Promise.all(
+    list.map(async (project) => ({
+      ...project,
+      title: await translateText(project.title, locale),
+      description: await translateText(project.description, locale),
+    })),
+  );
 }
 
 export async function getProjectBySlug(
   slug: string,
+  locale?: LocaleForTranslation,
 ): Promise<ProjectDetailForUI | null> {
   const data = await client.fetch(projectBySlugQuery, { slug });
 
   if (!data) return null;
 
-  return mapProjectDetailToUI(data);
+  const base = mapProjectDetailToUI(data);
+
+  if (!locale || locale === "en") return base;
+
+  const [title, description, details, galleryTitle] = await Promise.all([
+    translateText(base.title, locale),
+    translateText(base.description, locale),
+    translatePortableText(base.details, locale),
+    base.gallery?.title
+      ? translateText(base.gallery.title, locale)
+      : Promise.resolve(undefined),
+  ]);
+
+  return {
+    ...base,
+    title,
+    description,
+    details,
+    gallery: base.gallery
+      ? { ...base.gallery, title: galleryTitle ?? base.gallery.title }
+      : null,
+  };
 }

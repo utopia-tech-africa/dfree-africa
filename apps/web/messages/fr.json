@@ -192,6 +192,7 @@
       "title": "Rencontres à venir",
       "subtitle": "Rejoignez-nous dans notre mission de transformer les réalités financières.",
       "viewAllCta": "Voir tous les événements",
+      "viewEventCta": "Voir l’événement",
       "items": {
         "workshop": {
           "badge": "Atelier",
@@ -254,6 +255,7 @@
       "label": "Blog",
       "title": "Analyses et perspectives",
       "subtitle": "Accueillez la beauté de la vie et chérissez vos relations.",
+      "readMoreCta": "Lire plus",
       "posts": {
         "realEstateWealth": {
           "title": "Construire un patrimoine générationnel grâce à l’immobilier",
