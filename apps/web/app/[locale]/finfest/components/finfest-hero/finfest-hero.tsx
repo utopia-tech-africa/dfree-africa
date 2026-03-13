@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { FinfestHeroPattern } from "@/assets/svg/finfest-hero-pattern";
 import { Button } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
 
-export const FinfestHero = () => {
+export const FinfestHero = async () => {
+  const t = await getTranslations("finfest.hero");
   return (
     <div className="relative flex min-h-dvh flex-col overflow-hidden mt-6">
       {/* patterns */}
@@ -21,18 +23,16 @@ export const FinfestHero = () => {
         {/* text - takes only what it needs */}
         <div className="mx-auto shrink-0 text-center">
           <h1 className="font-montserrat leading-[120%] font-bold text-neutral-1000 text-3xl md:text-4xl lg:text-[42px]">
-            FinFE$T financial festival for everyone
+            {t("mainTitle")}
           </h1>
 
           <p className="mt-4 max-w-180 mx-auto text-center text-sm leading-[130%] text-neutral-900 md:text-base lg:text-lg">
-            Learn how to make, manage, and build wealth from industry
-            professionals. Join our free community event designed to empower
-            your financial future.
+            {t("subtitle")}
           </p>
 
           <div className="mt-6 flex justify-center">
             <Button variant="default" size="lg" className="rounded-full px-8">
-              Register now
+              {t("registerNow")}
             </Button>
           </div>
         </div>
@@ -44,7 +44,7 @@ export const FinfestHero = () => {
               src="https://res.cloudinary.com/dan9camhs/image/upload/v1773236329/7d47e665-0efa-4358-9b62-3ce55a050c4d.webp"
               height={600}
               width={900}
-              alt="FinFest Financial Festival"
+              alt={t("imageAlt")}
               priority
               className="w-full h-auto object-cover sm:h-[55vh] md:h-[65vh] lg:h-[80vh] xl:h-[90vh]"
             />

@@ -1,4 +1,5 @@
 import React from "react";
+import { getTranslations } from "next-intl/server";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
@@ -38,17 +39,17 @@ const speakers: Speaker[] = [
   },
 ];
 
-export const FinfestPastSpeakers = () => {
+export const FinfestPastSpeakers = async () => {
+  const t = await getTranslations("finfest.pastSpeakers");
   return (
     <section className="bg-white overflow-hidden">
       <ComponentLayout className="space-y-8">
         {/* Header */}
         <div className="flex flex-col space-y-2 ">
-          <Title text="Past Speakers" />
-          <Subtitle text="Learn from the experts" />
+          <Title text={t("title")} />
+          <Subtitle text={t("subtitle")} />
           <p className="text-base md:text-lg text-neutral-900 font-poppins opacity-80">
-            These professionals have shaped conversations around financial
-            freedom and shared their knowledge at FinFe$T
+            {t("description")}
           </p>
         </div>
 

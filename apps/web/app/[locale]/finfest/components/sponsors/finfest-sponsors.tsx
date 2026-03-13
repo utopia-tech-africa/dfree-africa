@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { buttonVariants } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-export const FinfestSponsors = () => {
+export const FinfestSponsors = async () => {
+  const t = await getTranslations("finfest.sponsors");
   const sponsors = [
     {
       name: "Independence Realty Trust",
@@ -41,8 +43,8 @@ export const FinfestSponsors = () => {
       <div className="flex flex-col items-center space-y-12">
         {/* Header */}
         <div className="flex flex-col items-center text-center space-y-2 relative w-full">
-          <Title text="Our sponsors" />
-          <Subtitle text="Together we've done great things" />
+          <Title text={t("title")} />
+          <Subtitle text={t("subtitle")} />
 
           {/* Decorative Gradient Line */}
           <div className="mt-6 mx-auto w-full max-w-[800px] h-[2px] bg-linear-to-r from-transparent via-primary-500/40 to-transparent" />
@@ -79,7 +81,7 @@ export const FinfestSponsors = () => {
             "w-fit",
           )}
         >
-          Become a sponsor
+          {t("cta")}
         </Link>
       </div>
     </section>
