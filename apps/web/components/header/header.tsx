@@ -210,7 +210,9 @@ export const Header = () => {
             )}
           </nav>
           <div className="flex gap-x-4 md:gap-x-6 items-center">
-            <LocaleSwitcher variant="desktop" />
+            <div className="hidden md:block">
+              <LocaleSwitcher variant="desktop" />
+            </div>
             <Link
               href="#donate"
               className={cn(
