@@ -192,6 +192,7 @@
       "title": "Próximos encuentros",
       "subtitle": "Únete a nuestra misión de transformar las realidades financieras.",
       "viewAllCta": "Ver todos los eventos",
+      "viewEventCta": "Ver evento",
       "items": {
         "workshop": {
           "badge": "Taller",
@@ -254,6 +255,7 @@
       "label": "Blog",
       "title": "Ideas y perspectivas",
       "subtitle": "Abraza la belleza de la vida y valora tus relaciones.",
+      "readMoreCta": "Leer más",
       "posts": {
         "realEstateWealth": {
           "title": "Construyendo riqueza generacional a través de bienes raíces",

@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { useTranslations } from "next-intl";
-import { client } from "@/lib/sanity";
+import { useLocale, useTranslations } from "next-intl";
+import type { BlogCardProps } from "./blog-card";
 import { BlogCard } from "./blog-card";
 import ComponentLayout from "@/components/component-layout";
 import { cn } from "@/lib/utils";
-import { blogsQuery } from "@/lib/sanity/queries/blogs";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
@@ -22,24 +21,40 @@ interface BlogListProps {
 
 export const BlogList = ({
   currentSlug,
-  compact,
-  className,
+  // compact and className reserved for future layout tweaks
   showHeader = true,
 }: BlogListProps) => {
   const t = useTranslations("home.blogs");
+  const locale = useLocale();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [blogs, setBlogs] = useState<any[]>([]);
+  const [blogs, setBlogs] = useState<BlogCardProps[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
   const totalSlides = blogs.length;
   useEffect(() => {
-    const params = { currentSlug: currentSlug ?? null };
+    const controller = new AbortController();
+    const params = new URLSearchParams();
+    if (currentSlug) params.set("currentSlug", currentSlug);
+    params.set("locale", locale);
 
-    client.fetch(blogsQuery, params).then((data) => setBlogs(data));
-  }, [currentSlug]);
+    fetch(`/api/blogs?${params.toString()}`, {
+      signal: controller.signal,
+      cache: "no-store",
+    })
+      .then(async (res) => {
+        if (!res.ok) return;
+        const data: BlogCardProps[] = await res.json();
+        setBlogs(data);
+      })
+      .catch(() => {
+        // Silently ignore in production; blogs section just won't render.
+      });
+
+    return () => controller.abort();
+  }, [currentSlug, locale]);
 
   const updateScrollArrows = useCallback(() => {
     const el = scrollContainerRef.current;

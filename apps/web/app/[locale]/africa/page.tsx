@@ -19,9 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-const AfricaPage = async () => {
+const AfricaPage = async ({ params }: Props) => {
+  const { locale } = await params;
   const [featuredProjects, photoGallery] = await Promise.all([
-    getFeaturedProjects(),
+    getFeaturedProjects(undefined, locale as "en" | "fr" | "es"),
     getPhotoGallery(),
   ]);
   const t = await getTranslations("africa.featuredProjects");

@@ -192,6 +192,7 @@
       "title": "Upcoming gatherings",
       "subtitle": "Join us in our mission to transform financial landscapes.",
       "viewAllCta": "View all events",
+      "viewEventCta": "View event",
       "items": {
         "workshop": {
           "badge": "Workshop",
@@ -254,6 +255,7 @@
       "label": "Blog",
       "title": "Insights and perspectives",
       "subtitle": "Embrace life's beauty and cherish connections.",
+      "readMoreCta": "Read more",
       "posts": {
         "realEstateWealth": {
           "title": "Building Generational Wealth Through Real Estate",
