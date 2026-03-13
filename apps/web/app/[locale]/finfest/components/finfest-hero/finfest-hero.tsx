@@ -5,7 +5,7 @@ import ComponentLayout from "@/components/component-layout";
 
 export const FinfestHero = () => {
   return (
-    <div className="relative flex min-h-dvh flex-col overflow-hidden">
+    <div className="relative flex min-h-dvh flex-col overflow-hidden mt-6">
       {/* patterns */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-30 top-24 opacity-70 sm:-left-20 md:left-0 md:top-0">
