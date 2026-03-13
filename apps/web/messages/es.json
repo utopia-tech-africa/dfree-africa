@@ -408,6 +408,114 @@
       "label": "Únete al BDC hoy"
     }
   },
+  "accessScholarships": {
+    "hero": {
+      "title": "Desbloquea tu camino hacia la libertad financiera",
+      "subtitle": "La Beca de acceso DFREE® ofrece acceso gratuito a cursos, materiales, coaching y eventos, ayudando a los participantes a lograr estabilidad y empoderamiento financiero.",
+      "applyCta": "Solicitar beca",
+      "becomeSponsorCta": "Ser patrocinador",
+      "imageAlt": "Fondo hero Becas de acceso"
+    },
+    "about": {
+      "title": "¿Qué son las becas de acceso?",
+      "subtitle": "Sobre el programa",
+      "description": "El programa de Becas de acceso DFREE® elimina las barreras financieras que impiden a personas y familias participar en la educación DFREE® para la libertad financiera. Las becas de acceso son exenciones de tasas o ayuda financiera que cubren los costes de programas, herramientas, eventos DFREE® y el acceso a profesionales financieros.\n\nLos programas incluyen la Academia en línea DFREE®, el currículo 12 Steps to Financial Freedom, libros y cuadernos Say Yes to No Debt, podcasts y webinars. La ayuda con las tasas cuenta con el apoyo de socios corporativos (o patrocinadores).",
+      "imageAlt": "Sobre el programa"
+    },
+    "whyScholarshipsMatter": {
+      "title": "¿Por qué importan las becas?",
+      "subtitle": "Ampliando oportunidades. Fortaleciendo el impacto.",
+      "description": "Las becas mejoran el acceso a la educación financiera para quienes enfrentan barreras, apoyando a comunidades afectadas por la deuda.",
+      "bullets": {
+        "increaseParticipation": "Aumentar la participación en programas y servicios DFREE®",
+        "supportCommunities": "Apoyar a comunidades afectadas de forma desproporcionada por la deuda",
+        "strengthenEducation": "Fortalecer la educación financiera y el cambio de comportamiento a largo plazo",
+        "boostBdc": "Impulsar la participación en el Desafío del billón de dólares",
+        "advanceMission": "Avanzar la misión del Movimiento financiero DFREE®"
+      },
+      "patternAlt": "Patrón de fondo",
+      "imageAlt": "Persona trabajando en un portátil"
+    },
+    "whatsCovered": {
+      "subtitle": "Qué está cubierto",
+      "description": "Accede por completo a cursos, coaching experto y nuestra comunidad.",
+      "programAccess": {
+        "title": "Acceso al programa",
+        "bullets": {
+          "wealthLab": "DFREE® Wealth Lab",
+          "community": "DFREE® Community",
+          "coaching": "Cohortes de coaching DFREE®",
+          "twelveSteps": "DFREE® 12 Steps to Financial Freedom",
+          "certification": "Certificación DFREE® para líderes y facilitadores"
+        }
+      },
+      "eventParticipation": {
+        "title": "Participación en eventos",
+        "bullets": {
+          "registration": "Tasas de inscripción",
+          "materials": "Cuadernos y materiales",
+          "technology": "Acceso a tecnología (según necesidad)"
+        }
+      }
+    },
+    "accessibility": {
+      "title": "Quién puede solicitar la beca",
+      "description": "Diseñado para todas las personas dispuestas a transformar su futuro financiero",
+      "criteria": {
+        "financialNeed": "Necesidad o dificultad financiera",
+        "commitment": "Compromiso de completar los cursos DFREE®",
+        "desire": "Deseo de mejorar hábitos financieros y reducir la deuda",
+        "individualEnrollment": "Inscripción individual en el Hub digital de la Comunidad DFREE®",
+        "partnerEnrollment": "Inscripción a través de una organización asociada (iglesia, ONG, empleador, escuela)"
+      },
+      "applyCta": "Solicitar beca",
+      "patternAlt": "Patrón de fondo DFREE",
+      "imageAlt": "Dos mujeres trabajando juntas en un portátil"
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "subtitle": "Un proceso simple y de apoyo",
+      "description": "Un proceso que te lleva de la solicitud a la participación. Cuatro pasos claros te guían hacia la libertad financiera.",
+      "steps": {
+        "apply": {
+          "title": "Solicitar",
+          "description": "Envía una breve solicitud describiendo tu necesidad financiera y tus objetivos para el programa."
+        },
+        "review": {
+          "title": "Revisión",
+          "description": "El personal de DFREE® o las organizaciones asociadas revisan las solicitudes con una rúbrica estandarizada."
+        },
+        "award": {
+          "title": "Concesión",
+          "description": "Los solicitantes aprobados reciben confirmación de beca e instrucciones de acceso al programa."
+        },
+        "participate": {
+          "title": "Participar",
+          "description": "Los beneficiarios completan los cursos y encuestas para medir el impacto."
+        }
+      },
+      "patternAlt": "Patrón de cuadrícula de fondo"
+    },
+    "partnerWithUs": {
+      "title": "Asóciate con nosotros",
+      "subtitle": "Únete a nosotros para ampliar el acceso a la libertad financiera",
+      "description": "Las becas se financian mediante socios corporativos, filantrópicos y comunitarios.",
+      "tiers": {
+        "oneParticipant": "Apoya a un participante",
+        "cohort": "Apoya a una cohorte de 10 personas",
+        "site": "Apoya a un sitio de socio comunitario",
+        "fullYear": "Apoya un fondo de becas de un año completo"
+      },
+      "becomeSponsorCta": "Ser patrocinador",
+      "imageAlt": "Personas uniendo manos"
+    },
+    "banner": {
+      "title": "Comienza tu camino hoy",
+      "description": "La libertad financiera está al alcance. Ya sea que quieras transformar tu futuro financiero o ayudar a otros a hacerlo, el siguiente paso es tuyo.",
+      "label": "Solicitar beca",
+      "secondaryLabel": "Ser patrocinador"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Campañas comunitarias",

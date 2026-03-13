@@ -1,17 +1,19 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import ComponentLayout from "@/components/component-layout";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { Button } from "@/components/ui/button";
 
-export const ASCAccessibilty = () => {
-  const criteria = [
-    "Financial need or hardship",
-    "Commitment to completing DFREE® coursework",
-    "Desire to improve financial habits and reduce debt",
-    "Individual enrollment into the DFREE® Community Digital Hub",
-    "Enrollment through a partner organization (church, nonprofit, employer, school)",
-  ];
+const CRITERIA_KEYS = [
+  "financialNeed",
+  "commitment",
+  "desire",
+  "individualEnrollment",
+  "partnerEnrollment",
+] as const;
 
+export const ASCAccessibilty = async () => {
+  const t = await getTranslations("accessScholarships.accessibility");
   return (
     <section className="relative w-full overflow-hidden bg-white">
       {/* Background Watermark */}
@@ -20,7 +22,7 @@ export const ASCAccessibilty = () => {
           src={
             "https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
           }
-          alt="DFREE Pattern Background"
+          alt={t("patternAlt")}
           fill
           className="object-contain"
           priority
@@ -32,32 +34,28 @@ export const ASCAccessibilty = () => {
           {/* Left Content */}
           <div className="flex flex-col">
             <div className="space-y-4">
-              <Subtitle
-                text="Who can apply for the scholarship"
-                className="leading-tight"
-              />
+              <Subtitle text={t("title")} className="leading-tight" />
             </div>
 
             <p className="text-base my-4 text-neutral-800 font-poppins font-medium">
-              Designed for All Individuals Ready to Transform Their Financial
-              Future
+              {t("description")}
             </p>
 
             <ul className="space-y-4 pt-2">
-              {criteria.map((item, index) => (
+              {CRITERIA_KEYS.map((key) => (
                 <li
-                  key={index}
+                  key={key}
                   className="flex items-start gap-3 text-sm md:text-base text-neutral-1000 font-poppins opacity-90"
                 >
                   <span className="mt-2 w-1.5 h-1.5 rounded-full bg-neutral-1000 shrink-0" />
-                  <span className="leading-snug">{item}</span>
+                  <span className="leading-snug">{t(`criteria.${key}`)}</span>
                 </li>
               ))}
             </ul>
 
             <div className="pt-4">
               <Button size="lg" className="px-8 py-6 text-base">
-                Apply for Scholarship
+                {t("applyCta")}
               </Button>
             </div>
           </div>
@@ -68,7 +66,7 @@ export const ASCAccessibilty = () => {
               src={
                 "https://res.cloudinary.com/dan9camhs/image/upload/v1773232228/image_1_guy2fb.webp"
               }
-              alt="Two women working together on a laptop"
+              alt={t("imageAlt")}
               fill
               className="object-cover"
             />

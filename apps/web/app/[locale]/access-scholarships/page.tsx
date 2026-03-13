@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createMetadata({
     title: t("accessScholarships.title"),
     description: t("accessScholarships.description"),
-    path: `/${locale}/access-sholarships`,
+    path: `/${locale}/access-scholarships`,
   });
 }
 
