@@ -25,8 +25,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default async function FinFestPage() {
+export default async function FinFestPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const gallery = await getFinfestGallery();
+  const t = await getTranslations("finfest.gallery");
   return (
     <div className="space-y-20 sm:space-y-30">
       <FinfestHero />
@@ -38,9 +43,9 @@ export default async function FinFestPage() {
       {gallery && gallery.years.length > 0 && (
         <FinfestGallerySection
           gallery={gallery}
-          label="Photo Gallery"
-          title={gallery.title}
-          subtitle="Our favourite memories  from past  events"
+          label={t("label")}
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
       )}
       <FinfestBanner />

@@ -281,6 +281,61 @@
   "about": {
     "hero": {}
   },
+  "finfest": {
+    "hero": {
+      "mainTitle": "FinFE$T, le festival financier pour tous",
+      "subtitle": "Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels. Rejoignez notre événement communautaire gratuit conçu pour renforcer votre avenir financier.",
+      "registerNow": "S'inscrire maintenant",
+      "imageAlt": "Festival financier FinFest"
+    },
+    "objective": {
+      "title": "L'objectif FinFE$T",
+      "description": "FinFE$T vous permet de passer à l'action sur la voie de la liberté financière grâce à du contenu, un programme, des formations et des outils.",
+      "items": {
+        "makeMoney": {
+          "title": "Comment gagner de l'argent",
+          "description": "Découvrez des méthodes éprouvées pour augmenter vos revenus et créer plusieurs sources de revenus."
+        },
+        "moneyManagement": {
+          "title": "Gestion de l'argent",
+          "description": "Prenez le contrôle de vos finances grâce à des décisions et habitudes qui tiennent la route."
+        },
+        "buildWealth": {
+          "title": "Comment construire un patrimoine",
+          "description": "Transformez vos revenus en actifs qui travaillent pour vous sur le long terme."
+        }
+      }
+    },
+    "movement": {
+      "title": "Mouvement",
+      "description": "FinFE$T est l'événement qui vous donne un accès en temps réel à divers professionnels qui vous apportent des solutions et des outils économiques. Des foires aux ressources, masterclasses et ateliers aux forums de l'emploi, FinFE$T vous aide à passer à l'action vers la liberté financière."
+    },
+    "pastSpeakers": {
+      "title": "Intervenants passés",
+      "subtitle": "Apprenez des experts",
+      "description": "Ces professionnels ont façonné les conversations sur la liberté financière et partagé leur savoir lors de FinFe$T."
+    },
+    "sponsors": {
+      "title": "Nos partenaires",
+      "subtitle": "Ensemble nous avons accompli de grandes choses",
+      "cta": "Devenir partenaire"
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "subtitle": "Ce que disent nos participants",
+      "description": "Ne nous croyez pas sur parole : voici ce que les participants passés ont dit de FinFe$t."
+    },
+    "banner": {
+      "title": "Rejoignez-nous au prochain Finfe$t",
+      "description": "Votre chemin vers la liberté financière commence par un choix simple. Commencez à préparer votre avenir dès aujourd'hui.",
+      "label": "S'inscrire aujourd'hui"
+    },
+    "gallery": {
+      "title": "FinFE$T au fil des années",
+      "label": "Galerie photo",
+      "subtitle": "Nos plus beaux souvenirs des éditions passées"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Campagnes communautaires",

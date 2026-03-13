@@ -1,4 +1,5 @@
 import React from "react";
+import { getTranslations } from "next-intl/server";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
@@ -45,17 +46,17 @@ const testimonials: Testimonial[] = [
 
 import { Carousel } from "@/components/carousel";
 
-export const FinfestTestimonials = () => {
+export const FinfestTestimonials = async () => {
+  const t = await getTranslations("finfest.testimonials");
   return (
     <section className="bg-white overflow-hidden">
       <ComponentLayout className="space-y-8">
         {/* Header */}
         <div className="flex flex-col items-center text-center  max-w-[800px] mx-auto">
-          <Title text="Testimonials" />
-          <Subtitle text="What Our Clients Are Saying" />
+          <Title text={t("title")} />
+          <Subtitle text={t("subtitle")} />
           <p className="text-base md:text-lg text-neutral-900 font-poppins opacity-80">
-            Don't just take our word for it; here's what past attendees said
-            about FinFe$t.
+            {t("description")}
           </p>
         </div>
 
