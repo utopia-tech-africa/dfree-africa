@@ -12,7 +12,7 @@ const PROGRAM_BULLET_KEYS = [
 ] as const;
 const EVENT_BULLET_KEYS = ["registration", "materials", "technology"] as const;
 
-const CARD_IMAGES = [
+const CARD_IMAGES: [string, string] = [
   "https://res.cloudinary.com/dan9camhs/image/upload/v1773230065/image_a0e4u7.webp",
   "https://res.cloudinary.com/dan9camhs/image/upload/v1773230115/7a103e47-883a-41ac-a958-03ce000b3850.webp",
 ];
