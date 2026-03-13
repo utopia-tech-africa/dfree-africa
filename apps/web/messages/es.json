@@ -336,6 +336,78 @@
       "subtitle": "Nuestros recuerdos favoritos de eventos pasados"
     }
   },
+  "bdc": {
+    "hero": {
+      "title": "Desafío del billón de dólares DFREE®",
+      "subtitle": "Elimina deudas, ahorra y toma el control de tu futuro financiero a través de una plataforma digital basada en la responsabilidad comunitaria.",
+      "ctaLabel": "Únete al BDC hoy",
+      "ctaHref": "#",
+      "imageAlt": "Fondo hero BDC"
+    },
+    "about": {
+      "title": "Qué es",
+      "subtitle": "Una plataforma interactiva para el cambio financiero",
+      "description": "El Desafío del billón de dólares es una plataforma digital donde fijas metas financieras claras, sigues tu progreso real y te mantienes motivado con el apoyo de la comunidad.",
+      "ctaLabel": "Explorar la app",
+      "imageAlt": "Vista previa de la plataforma BDC"
+    },
+    "impact": {
+      "title": "Impacto hasta ahora",
+      "subtitle": "Deuda pagada hasta la fecha",
+      "tagline": "Personas reales logrando juntas una libertad financiera real.",
+      "patternAlt": "Patrón de fondo"
+    },
+    "howItWorks": {
+      "subtitle": "Cómo funciona este desafío",
+      "description": "Fijarás metas medibles, verás cómo avanza tu progreso y te apoyarás en otros que recorren el mismo camino.",
+      "steps": {
+        "buildCommunity": {
+          "title": "Construye tu comunidad",
+          "description": "Ahorra junto a otros, mantente motivado y paga deudas paso a paso."
+        },
+        "setGoal": {
+          "title": "Fija tu meta",
+          "description": "Establece tu meta financiera, crea un calendario y sigue tu progreso."
+        },
+        "trackProgress": {
+          "title": "Sigue tu progreso",
+          "description": "Sigue tu progreso, mantente motivado y celebra los logros con otros."
+        },
+        "stayAccountable": {
+          "title": "Mantente responsable",
+          "description": "Mantente responsable compartiendo tus metas con personas que te apoyen."
+        }
+      }
+    },
+    "audience": {
+      "title": "Público",
+      "subtitle": "Este desafío es para todos.",
+      "description": "Ya sea que empieces desde cero o que te acerques a la meta, hay un lugar para ti aquí.",
+      "items": {
+        "solo": {
+          "label": "Solo",
+          "title": "Toma el control de tu historia financiera."
+        },
+        "group": {
+          "label": "En grupo",
+          "title": "Compañeros que buscan crecimiento financiero."
+        },
+        "communities": {
+          "label": "Comunidades",
+          "title": "Construye este movimiento en tu región."
+        }
+      }
+    },
+    "partners": {
+      "title": "Socios comunitarios\ne institucionales",
+      "logoAlt": "Logo de socio"
+    },
+    "banner": {
+      "title": "Toma el control de tus metas ahora",
+      "description": "Tu camino hacia la libertad financiera comienza con una elección simple. Empieza a planificar tu futuro hoy.",
+      "label": "Únete al BDC hoy"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Campañas comunitarias",

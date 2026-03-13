@@ -471,6 +471,78 @@
       "subtitle": "Our favourite memories from past events"
     }
   },
+  "bdc": {
+    "hero": {
+      "title": "DFREE® Billion Dollar Challenge",
+      "subtitle": "Eliminate debt, build savings, and take control of your financial future through a digital platform built on community accountability.",
+      "ctaLabel": "Join BDC today",
+      "ctaHref": "#",
+      "imageAlt": "BDC Hero background"
+    },
+    "about": {
+      "title": "What it is",
+      "subtitle": "An interactive platform for financial change",
+      "description": "The Billion Dollar Challenge is a digital platform where you set clear financial goals, track real progress, and stay motivated through the strength of community support.",
+      "ctaLabel": "Explore the app",
+      "imageAlt": "BDC Platform Preview"
+    },
+    "impact": {
+      "title": "Impact so far",
+      "subtitle": "Debt paid off to date",
+      "tagline": "Real people achieving real financial freedom together.",
+      "patternAlt": "Background pattern"
+    },
+    "howItWorks": {
+      "subtitle": "How this challenge works",
+      "description": "You'll set measurable targets, watch your progress unfold, and draw strength from others walking the same path.",
+      "steps": {
+        "buildCommunity": {
+          "title": "Build your community",
+          "description": "Save together, stay motivated, and pay off debt one step at a time."
+        },
+        "setGoal": {
+          "title": "Set your goal",
+          "description": "Set your financial goal, create a timeline, and track your progress."
+        },
+        "trackProgress": {
+          "title": "Track your progress",
+          "description": "Track progress, stay motivated, and celebrate achievements with others."
+        },
+        "stayAccountable": {
+          "title": "Stay accountable",
+          "description": "Stay accountable by sharing your goals with supportive people."
+        }
+      }
+    },
+    "audience": {
+      "title": "Audience",
+      "subtitle": "This challenge is for all.",
+      "description": "Whether you're starting from scratch or pushing toward the finish line, there's a place for you here.",
+      "items": {
+        "solo": {
+          "label": "Solo",
+          "title": "Take control of your financial story."
+        },
+        "group": {
+          "label": "As a group",
+          "title": "Peers seeking financial growth."
+        },
+        "communities": {
+          "label": "Communities",
+          "title": "Build this movement in your region."
+        }
+      }
+    },
+    "partners": {
+      "title": "Community &\nInstitutional Partners",
+      "logoAlt": "Partner Logo"
+    },
+    "banner": {
+      "title": "Take Control of your goals now",
+      "description": "Your journey to financial freedom begins with a simple choice. Start planning your future today.",
+      "label": "Join BDC today"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Community Campaigns",

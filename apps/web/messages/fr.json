@@ -336,6 +336,78 @@
       "subtitle": "Nos plus beaux souvenirs des éditions passées"
     }
   },
+  "bdc": {
+    "hero": {
+      "title": "Défi du milliard de dollars DFREE®",
+      "subtitle": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier grâce à une plateforme numérique fondée sur la responsabilité communautaire.",
+      "ctaLabel": "Rejoindre le BDC",
+      "ctaHref": "#",
+      "imageAlt": "Arrière-plan hero BDC"
+    },
+    "about": {
+      "title": "De quoi il s'agit",
+      "subtitle": "Une plateforme interactive pour le changement financier",
+      "description": "Le Défi du milliard de dollars est une plateforme numérique où vous fixez des objectifs financiers clairs, suivez vos progrès réels et restez motivé grâce à la force du soutien communautaire.",
+      "ctaLabel": "Découvrir l'application",
+      "imageAlt": "Aperçu de la plateforme BDC"
+    },
+    "impact": {
+      "title": "Impact à ce jour",
+      "subtitle": "Dettes remboursées à ce jour",
+      "tagline": "Des personnes réelles qui accèdent ensemble à une vraie liberté financière.",
+      "patternAlt": "Motif de fond"
+    },
+    "howItWorks": {
+      "subtitle": "Comment fonctionne ce défi",
+      "description": "Vous fixerez des objectifs mesurables, suivrez l'évolution de vos progrès et puiserez de la force auprès d'autres qui avancent sur le même chemin.",
+      "steps": {
+        "buildCommunity": {
+          "title": "Construisez votre communauté",
+          "description": "Épargnez ensemble, restez motivés et remboursez vos dettes étape par étape."
+        },
+        "setGoal": {
+          "title": "Fixez votre objectif",
+          "description": "Définissez votre objectif financier, créez un calendrier et suivez vos progrès."
+        },
+        "trackProgress": {
+          "title": "Suivez vos progrès",
+          "description": "Suivez vos progrès, restez motivé et célébrez vos réussites avec les autres."
+        },
+        "stayAccountable": {
+          "title": "Restez responsable",
+          "description": "Restez responsable en partageant vos objectifs avec des personnes bienveillantes."
+        }
+      }
+    },
+    "audience": {
+      "title": "Public",
+      "subtitle": "Ce défi s'adresse à tous.",
+      "description": "Que vous partiez de zéro ou que vous approchiez de la ligne d'arrivée, il y a une place pour vous ici.",
+      "items": {
+        "solo": {
+          "label": "Solo",
+          "title": "Prenez le contrôle de votre histoire financière."
+        },
+        "group": {
+          "label": "En groupe",
+          "title": "Des pairs en quête de croissance financière."
+        },
+        "communities": {
+          "label": "Communautés",
+          "title": "Construisez ce mouvement dans votre région."
+        }
+      }
+    },
+    "partners": {
+      "title": "Partenaires communautaires\net institutionnels",
+      "logoAlt": "Logo partenaire"
+    },
+    "banner": {
+      "title": "Prenez le contrôle de vos objectifs maintenant",
+      "description": "Votre chemin vers la liberté financière commence par un choix simple. Commencez à préparer votre avenir dès aujourd'hui.",
+      "label": "Rejoindre le BDC"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Campagnes communautaires",
