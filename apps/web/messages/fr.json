@@ -408,6 +408,114 @@
       "label": "Rejoindre le BDC"
     }
   },
+  "accessScholarships": {
+    "hero": {
+      "title": "Débloquez votre parcours vers la liberté financière",
+      "subtitle": "La Bourse d'accès DFREE® offre un accès gratuit aux cours, supports, coaching et événements, aidant les participants à atteindre stabilité financière et autonomisation.",
+      "applyCta": "Postuler pour une bourse",
+      "becomeSponsorCta": "Devenir partenaire",
+      "imageAlt": "Arrière-plan hero Bourses d'accès"
+    },
+    "about": {
+      "title": "Que sont les bourses d'accès ?",
+      "subtitle": "À propos du programme",
+      "description": "Le programme de Bourses d'accès DFREE® lève les barrières financières qui empêchent les personnes et les familles de participer à l'éducation DFREE® à la liberté financière. Les bourses d'accès sont des exonérations de frais ou une aide financière qui couvrent les coûts des programmes, outils, événements DFREE® et l'accès aux professionnels financiers.\n\nLes programmes comprennent l'Académie en ligne DFREE®, le curriculum 12 Steps to Financial Freedom, les livres et cahiers Say Yes to No Debt, podcasts et webinaires. L'aide aux frais est soutenue par des partenaires entreprises (ou sponsors).",
+      "imageAlt": "À propos du programme"
+    },
+    "whyScholarshipsMatter": {
+      "title": "Pourquoi les bourses comptent ?",
+      "subtitle": "Élargir les opportunités. Renforcer l'impact.",
+      "description": "Les bourses améliorent l'accès à l'éducation financière pour ceux qui font face à des barrières, en soutenant les communautés touchées par la dette.",
+      "bullets": {
+        "increaseParticipation": "Accroître la participation aux programmes et services DFREE®",
+        "supportCommunities": "Soutenir les communautés touchées de manière disproportionnée par la dette",
+        "strengthenEducation": "Renforcer l'éducation financière et le changement de comportement à long terme",
+        "boostBdc": "Stimuler la participation au Défi du milliard de dollars",
+        "advanceMission": "Faire avancer la mission du Mouvement financier DFREE®"
+      },
+      "patternAlt": "Motif de fond",
+      "imageAlt": "Personne travaillant sur un ordinateur portable"
+    },
+    "whatsCovered": {
+      "subtitle": "Ce qui est couvert",
+      "description": "Accédez en totalité aux cours, au coaching d'experts et à notre communauté.",
+      "programAccess": {
+        "title": "Accès au programme",
+        "bullets": {
+          "wealthLab": "DFREE® Wealth Lab",
+          "community": "DFREE® Community",
+          "coaching": "Cohortes de coaching DFREE®",
+          "twelveSteps": "DFREE® 12 Steps to Financial Freedom",
+          "certification": "Certification DFREE® pour leaders et facilitateurs"
+        }
+      },
+      "eventParticipation": {
+        "title": "Participation aux événements",
+        "bullets": {
+          "registration": "Frais d'inscription",
+          "materials": "Cahiers et supports",
+          "technology": "Accès technologie (si besoin)"
+        }
+      }
+    },
+    "accessibility": {
+      "title": "Qui peut postuler pour la bourse",
+      "description": "Conçu pour toute personne prête à transformer son avenir financier",
+      "criteria": {
+        "financialNeed": "Besoin ou difficulté financière",
+        "commitment": "Engagement à suivre les cours DFREE®",
+        "desire": "Volonté d'améliorer ses habitudes financières et réduire la dette",
+        "individualEnrollment": "Inscription individuelle au Hub digital Communauté DFREE®",
+        "partnerEnrollment": "Inscription via une organisation partenaire (église, association, employeur, école)"
+      },
+      "applyCta": "Postuler pour une bourse",
+      "patternAlt": "Motif de fond DFREE",
+      "imageAlt": "Deux femmes travaillant ensemble sur un ordinateur portable"
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "subtitle": "Un processus simple et bienveillant",
+      "description": "Un processus qui vous mène de la candidature à la participation. Quatre étapes simples vous guident vers la liberté financière.",
+      "steps": {
+        "apply": {
+          "title": "Postuler",
+          "description": "Soumettez une courte candidature décrivant votre besoin financier et vos objectifs pour le programme."
+        },
+        "review": {
+          "title": "Examen",
+          "description": "L'équipe DFREE® ou les organisations partenaires examinent les candidatures selon une grille standardisée."
+        },
+        "award": {
+          "title": "Attribution",
+          "description": "Les candidats retenus reçoivent la confirmation de bourse et les instructions d'accès au programme."
+        },
+        "participate": {
+          "title": "Participer",
+          "description": "Les bénéficiaires suivent les cours et remplissent les enquêtes pour mesurer l'impact."
+        }
+      },
+      "patternAlt": "Motif de grille de fond"
+    },
+    "partnerWithUs": {
+      "title": "Partenariat avec nous",
+      "subtitle": "Rejoignez-nous pour élargir l'accès à la liberté financière",
+      "description": "Les bourses sont financées par des partenaires entreprises, philanthropiques et communautaires.",
+      "tiers": {
+        "oneParticipant": "Soutient un participant",
+        "cohort": "Soutient une cohorte de 10 personnes",
+        "site": "Soutient un site partenaire communautaire",
+        "fullYear": "Soutient un fonds de bourses sur une année"
+      },
+      "becomeSponsorCta": "Devenir partenaire",
+      "imageAlt": "Personnes qui se serrent la main"
+    },
+    "banner": {
+      "title": "Commencez votre parcours aujourd'hui",
+      "description": "La liberté financière est à portée de main. Que vous soyez prêt à transformer votre avenir financier ou à aider d'autres à le faire, la prochaine étape vous appartient.",
+      "label": "Postuler pour une bourse",
+      "secondaryLabel": "Devenir partenaire"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Campagnes communautaires",

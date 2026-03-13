@@ -1,28 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { buttonVariants } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import ComponentLayout from "@/components/component-layout";
 
-const HERO_CONTENT = {
-  title: "Unlock Your Financial Freedom Journey",
-  subtitle:
-    "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment.",
-  actions: [
-    {
-      label: "Apply for Scholarship",
-      href: "#",
-      variant: "default" as const,
-    },
-    {
-      label: "Become a Sponsor",
-      href: "#",
-      variant: "ghost" as const,
-    },
-  ],
-};
-
-export function ASCHero() {
+export async function ASCHero() {
+  const t = await getTranslations("accessScholarships.hero");
   return (
     <section className="relative w-full min-h-150 h-dvh flex flex-col overflow-hidden">
       <div className="absolute inset-0">
@@ -30,7 +14,7 @@ export function ASCHero() {
           src={
             "https://res.cloudinary.com/dan9camhs/image/upload/v1773064823/9f747dbf-ee51-42ca-a5b4-174d21b3a21d.webp"
           }
-          alt="Access Scholarships Hero background"
+          alt={t("imageAlt")}
           fill
           className="object-cover"
           sizes="100vw"
@@ -44,26 +28,32 @@ export function ASCHero() {
         <div className="w-full text-start">
           <div className="max-w-[90%] xs:max-w-[400px] sm:max-w-125 md:max-w-150 lg:max-w-190">
             <h1 className="font-montserrat mb-2 sm:mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold leading-[1.2] text-white">
-              {HERO_CONTENT.title}
+              {t("title")}
             </h1>
 
             <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-[700px]">
-              {HERO_CONTENT.subtitle}
+              {t("subtitle")}
             </p>
 
             <div className="flex gap-4">
-              {HERO_CONTENT.actions.map((action, index) => (
-                <Link
-                  key={index}
-                  href={action.href}
-                  className={cn(
-                    buttonVariants({ variant: action.variant, size: "lg" }),
-                    "text-sm sm:text-base inline-flex",
-                  )}
-                >
-                  {action.label}
-                </Link>
-              ))}
+              <Link
+                href="#"
+                className={cn(
+                  buttonVariants({ variant: "default", size: "lg" }),
+                  "text-sm sm:text-base inline-flex",
+                )}
+              >
+                {t("applyCta")}
+              </Link>
+              <Link
+                href="#"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "lg" }),
+                  "text-sm sm:text-base inline-flex",
+                )}
+              >
+                {t("becomeSponsorCta")}
+              </Link>
             </div>
           </div>
         </div>

@@ -543,6 +543,114 @@
       "label": "Join BDC today"
     }
   },
+  "accessScholarships": {
+    "hero": {
+      "title": "Unlock Your Financial Freedom Journey",
+      "subtitle": "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment.",
+      "applyCta": "Apply for Scholarship",
+      "becomeSponsorCta": "Become a Sponsor",
+      "imageAlt": "Access Scholarships Hero background"
+    },
+    "about": {
+      "title": "What are Access Scholarships?",
+      "subtitle": "About the Program",
+      "description": "The DFREE® Access Scholarship program removes financial barriers that prevent individuals and families from participating in DFREE® financial freedom education. Access scholarships are essentially fee waivers or financial assistance that cover the costs of DFREE® programs, tools, events, and access to financial professionals.\n\nProgramming includes the DFREE® Online Academy, 12 Steps to Financial Freedom curriculum, Say Yes to No Debt books and workbooks, podcasts and webinars. Fee assistance is supported by corporate partners (or sponsors).",
+      "imageAlt": "About the Program"
+    },
+    "whyScholarshipsMatter": {
+      "title": "Why Scholarships Matter?",
+      "subtitle": "Expanding Opportunity. Strengthening Impact.",
+      "description": "Scholarships enhance financial education access for those facing barriers, supporting communities impacted by debt.",
+      "bullets": {
+        "increaseParticipation": "Increase participation in DFREE® programming and services",
+        "supportCommunities": "Support communities disproportionately impacted by debt",
+        "strengthenEducation": "Strengthen financial education and long-term behavior change",
+        "boostBdc": "Boost participation in the Billion Dollar Challenge",
+        "advanceMission": "Advance the mission of the DFREE® Financial Movement"
+      },
+      "patternAlt": "Background Pattern",
+      "imageAlt": "Person working on a laptop"
+    },
+    "whatsCovered": {
+      "subtitle": "What's covered",
+      "description": "Get total access to courses, expert coaching, and our thriving community.",
+      "programAccess": {
+        "title": "Program Access",
+        "bullets": {
+          "wealthLab": "DFREE® Wealth Lab",
+          "community": "DFREE® Community",
+          "coaching": "DFREE® Coaching cohorts",
+          "twelveSteps": "DFREE® 12 Steps to Financial Freedom",
+          "certification": "DFREE® Certification for leaders and facilitators"
+        }
+      },
+      "eventParticipation": {
+        "title": "Event Participation",
+        "bullets": {
+          "registration": "Registration fees",
+          "materials": "Workbooks and materials",
+          "technology": "Technology access (as needed)"
+        }
+      }
+    },
+    "accessibility": {
+      "title": "Who can apply for the scholarship",
+      "description": "Designed for All Individuals Ready to Transform Their Financial Future",
+      "criteria": {
+        "financialNeed": "Financial need or hardship",
+        "commitment": "Commitment to completing DFREE® coursework",
+        "desire": "Desire to improve financial habits and reduce debt",
+        "individualEnrollment": "Individual enrollment into the DFREE® Community Digital Hub",
+        "partnerEnrollment": "Enrollment through a partner organization (church, nonprofit, employer, school)"
+      },
+      "applyCta": "Apply for Scholarship",
+      "patternAlt": "DFREE Pattern Background",
+      "imageAlt": "Two women working together on a laptop"
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "A Simple, Supportive Process",
+      "description": "A process that gets you from application to participation. Four straightforward steps guide you toward financial freedom.",
+      "steps": {
+        "apply": {
+          "title": "Apply",
+          "description": "Submit a brief application outlining your financial need and goals for the programme."
+        },
+        "review": {
+          "title": "Review",
+          "description": "DFREE® staff or partner organisations review applications using a standardised rubric."
+        },
+        "award": {
+          "title": "Award",
+          "description": "Approved applicants receive scholarship confirmation and programme access instructions."
+        },
+        "participate": {
+          "title": "Participate",
+          "description": "Recipients complete coursework and surveys for impact measurement."
+        }
+      },
+      "patternAlt": "Background grid pattern"
+    },
+    "partnerWithUs": {
+      "title": "Partner with us",
+      "subtitle": "Join Us in Expanding Access to Financial Freedom",
+      "description": "Scholarships are funded through corporate, philanthropic, and community partners.",
+      "tiers": {
+        "oneParticipant": "Supports one participant",
+        "cohort": "Supports a 10-person cohort",
+        "site": "Supports a community partner site",
+        "fullYear": "Supports a full-year scholarship fund"
+      },
+      "becomeSponsorCta": "Become a sponsor",
+      "imageAlt": "People joining hands"
+    },
+    "banner": {
+      "title": "Start Your Journey Today",
+      "description": "Financial freedom is within reach. Whether you're ready to transform your own financial future or help others do the same, the next step is yours to take.",
+      "label": "Apply for Scholarship",
+      "secondaryLabel": "Become a Sponsor"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Community Campaigns",
