@@ -8,6 +8,7 @@ import { buttonVariants } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
 import { DfreeLogo } from "@/assets/svg";
 import { Link } from "@/i18n/navigation";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 
 type NavSubItemConfig = {
   labelKey: string;
@@ -208,7 +209,8 @@ export const Header = () => {
               </div>
             )}
           </nav>
-          <div className="flex gap-x-6 items-center">
+          <div className="flex gap-x-4 md:gap-x-6 items-center">
+            <LocaleSwitcher variant="desktop" />
             <Link
               href="#donate"
               className={cn(
@@ -319,7 +321,16 @@ export const Header = () => {
             })}
           </nav>
 
-          <div className="border-t border-neutral-200 p-6 pb-10">
+          <div className="border-t border-neutral-200 p-6 pb-10 space-y-4">
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-sm font-medium text-neutral-600">
+                Language
+              </span>
+              <LocaleSwitcher
+                variant="mobile"
+                onSelect={() => setMobileMenuOpen(false)}
+              />
+            </div>
             <Link
               href="#store"
               onClick={() => setMobileMenuOpen(false)}
