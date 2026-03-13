@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { BDCImpactPattern } from "@/assets/svg";
 
-export function BDCImpact() {
+export async function BDCImpact() {
+  const t = await getTranslations("bdc.impact");
   const amount = "$21,937,662";
 
   return (
@@ -13,7 +15,7 @@ export function BDCImpact() {
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src={BDCImpactPattern}
-          alt="Background pattern"
+          alt={t("patternAlt")}
           fill
           className="object-cover"
         />
@@ -22,11 +24,8 @@ export function BDCImpact() {
       <section className="relative z-10 flex flex-col items-center text-center space-y-4 md:space-y-12">
         <ComponentLayout>
           <div className="space-y-2 md:space-y-4">
-            <Title text="Impact so far" className="text-neutral-100" />
-            <Subtitle
-              text="Debt paid off to date"
-              className="text-neutral-100"
-            />
+            <Title text={t("title")} className="text-neutral-100" />
+            <Subtitle text={t("subtitle")} className="text-neutral-100" />
           </div>
         </ComponentLayout>
         {/* Counter Container - Full Width Borders */}
@@ -46,7 +45,7 @@ export function BDCImpact() {
         </div>
 
         <p className="text-lg sm:text-[32px] sm:font-bold text-neutral-100 font-montserrat max-w-[800px]">
-          Real people achieving real financial freedom together.
+          {t("tagline")}
         </p>
       </section>
     </section>

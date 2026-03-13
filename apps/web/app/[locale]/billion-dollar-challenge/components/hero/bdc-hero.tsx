@@ -1,24 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { buttonVariants } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import ComponentLayout from "@/components/component-layout";
 
-const HERO_CONTENT = {
-  title: (
-    <>
-      DFREE<sup>®</sup> Billion Dollar Challenge
-    </>
-  ),
-  subtitle:
-    "Eliminate debt, build savings, and take control of your financial future through a digital platform built on community accountability.",
-  cta: {
-    label: "Join BDC today",
-    href: "#",
-  },
-};
-
-export function BDCHero() {
+export async function BDCHero() {
+  const t = await getTranslations("bdc.hero");
   return (
     <section className="relative w-full min-h-150 h-dvh flex flex-col overflow-hidden">
       <div className="absolute inset-0">
@@ -26,7 +14,7 @@ export function BDCHero() {
           src={
             "https://res.cloudinary.com/dan9camhs/image/upload/v1773227016/image_1_fsziuv.webp"
           }
-          alt="BDC Hero background"
+          alt={t("imageAlt")}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
@@ -40,21 +28,21 @@ export function BDCHero() {
         <div className="w-full text-start">
           <div className="max-w-[90%] xs:max-w-[400px] sm:max-w-125 md:max-w-150 lg:max-w-190">
             <h1 className="font-montserrat mb-2 sm:mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold leading-[1.2] text-white">
-              {HERO_CONTENT.title}
+              {t("title")}
             </h1>
 
             <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-[600px]">
-              {HERO_CONTENT.subtitle}
+              {t("subtitle")}
             </p>
 
             <Link
-              href={HERO_CONTENT.cta.href}
+              href={t("ctaHref")}
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
                 "text-sm sm:text-base inline-flex",
               )}
             >
-              {HERO_CONTENT.cta.label}
+              {t("ctaLabel")}
             </Link>
           </div>
         </div>
