@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { client } from "@/lib/sanity";
-import { groq } from "next-sanity";
 import { BlogCard } from "./blog-card";
 import ComponentLayout from "@/components/component-layout";
 import { cn } from "@/lib/utils";
@@ -26,6 +26,7 @@ export const BlogList = ({
   className,
   showHeader = true,
 }: BlogListProps) => {
+  const t = useTranslations("home.blogs");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [blogs, setBlogs] = useState<any[]>([]);
@@ -115,12 +116,12 @@ export const BlogList = ({
         {showHeader && (
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <Title text="Blog" />
-              <Subtitle text="Insights and perspectives" />
+              <Title text={t("label")} />
+              <Subtitle text={t("title")} />
             </div>
 
             <p className="text-black font-medium text-lg max-w-md">
-              Embrace life&apos;s beauty and cherish connections.
+              {t("subtitle")}
             </p>
           </div>
         )}

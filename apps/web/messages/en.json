@@ -416,6 +416,241 @@
   "about": {
     "hero": {}
   },
+  "finfest": {
+    "hero": {
+      "mainTitle": "FinFE$T financial festival for everyone",
+      "subtitle": "Learn how to make, manage, and build wealth from industry professionals. Join our free community event designed to empower your financial future.",
+      "registerNow": "Register now",
+      "imageAlt": "FinFest Financial Festival"
+    },
+    "objective": {
+      "title": "The FinFE$T Objective",
+      "description": "FinFE$T empowers you to take actionable steps towards the path to financial freedom by providing content, curriculum, training, and tools.",
+      "items": {
+        "makeMoney": {
+          "title": "How to make Money",
+          "description": "Discover proven methods to increase your income and create multiple revenue streams."
+        },
+        "moneyManagement": {
+          "title": "Money Management",
+          "description": "Take control of your money through smart decisions and habits that actually stick."
+        },
+        "buildWealth": {
+          "title": "How to build Wealth",
+          "description": "Turn your earnings into assets that work for you over time."
+        }
+      }
+    },
+    "movement": {
+      "title": "Movement",
+      "description": "FinFE$T is the event that offers you real-time access to various industry professionals who provide you with economic solutions and tools. From resource fairs, masterclasses and workshops to job fairs, FinFE$T empowers you to take actionable steps towards financial freedom."
+    },
+    "pastSpeakers": {
+      "title": "Past Speakers",
+      "subtitle": "Learn from the experts",
+      "description": "These professionals have shaped conversations around financial freedom and shared their knowledge at FinFe$T"
+    },
+    "sponsors": {
+      "title": "Our sponsors",
+      "subtitle": "Together we've done great things",
+      "cta": "Become a sponsor"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "subtitle": "What Our Clients Are Saying",
+      "description": "Don't just take our word for it; here's what past attendees said about FinFe$t."
+    },
+    "banner": {
+      "title": "Join us at the next Finfe$t",
+      "description": "Your journey to financial freedom begins with a simple choice. Start planning your future today.",
+      "label": "Register today"
+    },
+    "gallery": {
+      "title": "FinFE$T over the years",
+      "label": "Photo Gallery",
+      "subtitle": "Our favourite memories from past events"
+    }
+  },
+  "bdc": {
+    "hero": {
+      "title": "DFREE® Billion Dollar Challenge",
+      "subtitle": "Eliminate debt, build savings, and take control of your financial future through a digital platform built on community accountability.",
+      "ctaLabel": "Join BDC today",
+      "ctaHref": "#",
+      "imageAlt": "BDC Hero background"
+    },
+    "about": {
+      "title": "What it is",
+      "subtitle": "An interactive platform for financial change",
+      "description": "The Billion Dollar Challenge is a digital platform where you set clear financial goals, track real progress, and stay motivated through the strength of community support.",
+      "ctaLabel": "Explore the app",
+      "imageAlt": "BDC Platform Preview"
+    },
+    "impact": {
+      "title": "Impact so far",
+      "subtitle": "Debt paid off to date",
+      "tagline": "Real people achieving real financial freedom together.",
+      "patternAlt": "Background pattern"
+    },
+    "howItWorks": {
+      "subtitle": "How this challenge works",
+      "description": "You'll set measurable targets, watch your progress unfold, and draw strength from others walking the same path.",
+      "steps": {
+        "buildCommunity": {
+          "title": "Build your community",
+          "description": "Save together, stay motivated, and pay off debt one step at a time."
+        },
+        "setGoal": {
+          "title": "Set your goal",
+          "description": "Set your financial goal, create a timeline, and track your progress."
+        },
+        "trackProgress": {
+          "title": "Track your progress",
+          "description": "Track progress, stay motivated, and celebrate achievements with others."
+        },
+        "stayAccountable": {
+          "title": "Stay accountable",
+          "description": "Stay accountable by sharing your goals with supportive people."
+        }
+      }
+    },
+    "audience": {
+      "title": "Audience",
+      "subtitle": "This challenge is for all.",
+      "description": "Whether you're starting from scratch or pushing toward the finish line, there's a place for you here.",
+      "items": {
+        "solo": {
+          "label": "Solo",
+          "title": "Take control of your financial story."
+        },
+        "group": {
+          "label": "As a group",
+          "title": "Peers seeking financial growth."
+        },
+        "communities": {
+          "label": "Communities",
+          "title": "Build this movement in your region."
+        }
+      }
+    },
+    "partners": {
+      "title": "Community &\nInstitutional Partners",
+      "logoAlt": "Partner Logo"
+    },
+    "banner": {
+      "title": "Take Control of your goals now",
+      "description": "Your journey to financial freedom begins with a simple choice. Start planning your future today.",
+      "label": "Join BDC today"
+    }
+  },
+  "accessScholarships": {
+    "hero": {
+      "title": "Unlock Your Financial Freedom Journey",
+      "subtitle": "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment.",
+      "applyCta": "Apply for Scholarship",
+      "becomeSponsorCta": "Become a Sponsor",
+      "imageAlt": "Access Scholarships Hero background"
+    },
+    "about": {
+      "title": "What are Access Scholarships?",
+      "subtitle": "About the Program",
+      "description": "The DFREE® Access Scholarship program removes financial barriers that prevent individuals and families from participating in DFREE® financial freedom education. Access scholarships are essentially fee waivers or financial assistance that cover the costs of DFREE® programs, tools, events, and access to financial professionals.\n\nProgramming includes the DFREE® Online Academy, 12 Steps to Financial Freedom curriculum, Say Yes to No Debt books and workbooks, podcasts and webinars. Fee assistance is supported by corporate partners (or sponsors).",
+      "imageAlt": "About the Program"
+    },
+    "whyScholarshipsMatter": {
+      "title": "Why Scholarships Matter?",
+      "subtitle": "Expanding Opportunity. Strengthening Impact.",
+      "description": "Scholarships enhance financial education access for those facing barriers, supporting communities impacted by debt.",
+      "bullets": {
+        "increaseParticipation": "Increase participation in DFREE® programming and services",
+        "supportCommunities": "Support communities disproportionately impacted by debt",
+        "strengthenEducation": "Strengthen financial education and long-term behavior change",
+        "boostBdc": "Boost participation in the Billion Dollar Challenge",
+        "advanceMission": "Advance the mission of the DFREE® Financial Movement"
+      },
+      "patternAlt": "Background Pattern",
+      "imageAlt": "Person working on a laptop"
+    },
+    "whatsCovered": {
+      "subtitle": "What's covered",
+      "description": "Get total access to courses, expert coaching, and our thriving community.",
+      "programAccess": {
+        "title": "Program Access",
+        "bullets": {
+          "wealthLab": "DFREE® Wealth Lab",
+          "community": "DFREE® Community",
+          "coaching": "DFREE® Coaching cohorts",
+          "twelveSteps": "DFREE® 12 Steps to Financial Freedom",
+          "certification": "DFREE® Certification for leaders and facilitators"
+        }
+      },
+      "eventParticipation": {
+        "title": "Event Participation",
+        "bullets": {
+          "registration": "Registration fees",
+          "materials": "Workbooks and materials",
+          "technology": "Technology access (as needed)"
+        }
+      }
+    },
+    "accessibility": {
+      "title": "Who can apply for the scholarship",
+      "description": "Designed for All Individuals Ready to Transform Their Financial Future",
+      "criteria": {
+        "financialNeed": "Financial need or hardship",
+        "commitment": "Commitment to completing DFREE® coursework",
+        "desire": "Desire to improve financial habits and reduce debt",
+        "individualEnrollment": "Individual enrollment into the DFREE® Community Digital Hub",
+        "partnerEnrollment": "Enrollment through a partner organization (church, nonprofit, employer, school)"
+      },
+      "applyCta": "Apply for Scholarship",
+      "patternAlt": "DFREE Pattern Background",
+      "imageAlt": "Two women working together on a laptop"
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "A Simple, Supportive Process",
+      "description": "A process that gets you from application to participation. Four straightforward steps guide you toward financial freedom.",
+      "steps": {
+        "apply": {
+          "title": "Apply",
+          "description": "Submit a brief application outlining your financial need and goals for the programme."
+        },
+        "review": {
+          "title": "Review",
+          "description": "DFREE® staff or partner organisations review applications using a standardised rubric."
+        },
+        "award": {
+          "title": "Award",
+          "description": "Approved applicants receive scholarship confirmation and programme access instructions."
+        },
+        "participate": {
+          "title": "Participate",
+          "description": "Recipients complete coursework and surveys for impact measurement."
+        }
+      },
+      "patternAlt": "Background grid pattern"
+    },
+    "partnerWithUs": {
+      "title": "Partner with us",
+      "subtitle": "Join Us in Expanding Access to Financial Freedom",
+      "description": "Scholarships are funded through corporate, philanthropic, and community partners.",
+      "tiers": {
+        "oneParticipant": "Supports one participant",
+        "cohort": "Supports a 10-person cohort",
+        "site": "Supports a community partner site",
+        "fullYear": "Supports a full-year scholarship fund"
+      },
+      "becomeSponsorCta": "Become a sponsor",
+      "imageAlt": "People joining hands"
+    },
+    "banner": {
+      "title": "Start Your Journey Today",
+      "description": "Financial freedom is within reach. Whether you're ready to transform your own financial future or help others do the same, the next step is yours to take.",
+      "label": "Apply for Scholarship",
+      "secondaryLabel": "Become a Sponsor"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Community Campaigns",

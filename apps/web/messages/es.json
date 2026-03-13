@@ -281,6 +281,241 @@
   "about": {
     "hero": {}
   },
+  "finfest": {
+    "hero": {
+      "mainTitle": "FinFE$T, el festival financiero para todos",
+      "subtitle": "Aprende a ganar, gestionar y construir riqueza con profesionales. Únete a nuestro evento comunitario gratuito diseñado para impulsar tu futuro financiero.",
+      "registerNow": "Registrarse ahora",
+      "imageAlt": "Festival financiero FinFest"
+    },
+    "objective": {
+      "title": "El objetivo de FinFE$T",
+      "description": "FinFE$T te empodera para dar pasos concretos hacia la libertad financiera con contenido, currículo, formación y herramientas.",
+      "items": {
+        "makeMoney": {
+          "title": "Cómo ganar dinero",
+          "description": "Descubre métodos probados para aumentar tus ingresos y crear múltiples fuentes de renta."
+        },
+        "moneyManagement": {
+          "title": "Gestión del dinero",
+          "description": "Toma el control de tu dinero con decisiones y hábitos que realmente perduran."
+        },
+        "buildWealth": {
+          "title": "Cómo construir riqueza",
+          "description": "Convierte tus ingresos en activos que trabajen por ti con el tiempo."
+        }
+      }
+    },
+    "movement": {
+      "title": "Movimiento",
+      "description": "FinFE$T es el evento que te ofrece acceso en tiempo real a diversos profesionales que te brindan soluciones y herramientas económicas. Desde ferias de recursos, masterclasses y talleres hasta ferias de empleo, FinFE$T te empodera para dar pasos concretos hacia la libertad financiera."
+    },
+    "pastSpeakers": {
+      "title": "Ponentes anteriores",
+      "subtitle": "Aprende de los expertos",
+      "description": "Estos profesionales han moldeado las conversaciones sobre libertad financiera y compartido su conocimiento en FinFe$T."
+    },
+    "sponsors": {
+      "title": "Nuestros patrocinadores",
+      "subtitle": "Juntos hemos logrado grandes cosas",
+      "cta": "Ser patrocinador"
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "subtitle": "Lo que dicen nuestros participantes",
+      "description": "No te quedes con nuestra palabra; esto es lo que asistentes pasados dijeron sobre FinFe$t."
+    },
+    "banner": {
+      "title": "Únete al próximo Finfe$t",
+      "description": "Tu camino hacia la libertad financiera comienza con una elección simple. Empieza a planificar tu futuro hoy.",
+      "label": "Registrarse hoy"
+    },
+    "gallery": {
+      "title": "FinFE$T a través de los años",
+      "label": "Galería de fotos",
+      "subtitle": "Nuestros recuerdos favoritos de eventos pasados"
+    }
+  },
+  "bdc": {
+    "hero": {
+      "title": "Desafío del billón de dólares DFREE®",
+      "subtitle": "Elimina deudas, ahorra y toma el control de tu futuro financiero a través de una plataforma digital basada en la responsabilidad comunitaria.",
+      "ctaLabel": "Únete al BDC hoy",
+      "ctaHref": "#",
+      "imageAlt": "Fondo hero BDC"
+    },
+    "about": {
+      "title": "Qué es",
+      "subtitle": "Una plataforma interactiva para el cambio financiero",
+      "description": "El Desafío del billón de dólares es una plataforma digital donde fijas metas financieras claras, sigues tu progreso real y te mantienes motivado con el apoyo de la comunidad.",
+      "ctaLabel": "Explorar la app",
+      "imageAlt": "Vista previa de la plataforma BDC"
+    },
+    "impact": {
+      "title": "Impacto hasta ahora",
+      "subtitle": "Deuda pagada hasta la fecha",
+      "tagline": "Personas reales logrando juntas una libertad financiera real.",
+      "patternAlt": "Patrón de fondo"
+    },
+    "howItWorks": {
+      "subtitle": "Cómo funciona este desafío",
+      "description": "Fijarás metas medibles, verás cómo avanza tu progreso y te apoyarás en otros que recorren el mismo camino.",
+      "steps": {
+        "buildCommunity": {
+          "title": "Construye tu comunidad",
+          "description": "Ahorra junto a otros, mantente motivado y paga deudas paso a paso."
+        },
+        "setGoal": {
+          "title": "Fija tu meta",
+          "description": "Establece tu meta financiera, crea un calendario y sigue tu progreso."
+        },
+        "trackProgress": {
+          "title": "Sigue tu progreso",
+          "description": "Sigue tu progreso, mantente motivado y celebra los logros con otros."
+        },
+        "stayAccountable": {
+          "title": "Mantente responsable",
+          "description": "Mantente responsable compartiendo tus metas con personas que te apoyen."
+        }
+      }
+    },
+    "audience": {
+      "title": "Público",
+      "subtitle": "Este desafío es para todos.",
+      "description": "Ya sea que empieces desde cero o que te acerques a la meta, hay un lugar para ti aquí.",
+      "items": {
+        "solo": {
+          "label": "Solo",
+          "title": "Toma el control de tu historia financiera."
+        },
+        "group": {
+          "label": "En grupo",
+          "title": "Compañeros que buscan crecimiento financiero."
+        },
+        "communities": {
+          "label": "Comunidades",
+          "title": "Construye este movimiento en tu región."
+        }
+      }
+    },
+    "partners": {
+      "title": "Socios comunitarios\ne institucionales",
+      "logoAlt": "Logo de socio"
+    },
+    "banner": {
+      "title": "Toma el control de tus metas ahora",
+      "description": "Tu camino hacia la libertad financiera comienza con una elección simple. Empieza a planificar tu futuro hoy.",
+      "label": "Únete al BDC hoy"
+    }
+  },
+  "accessScholarships": {
+    "hero": {
+      "title": "Desbloquea tu camino hacia la libertad financiera",
+      "subtitle": "La Beca de acceso DFREE® ofrece acceso gratuito a cursos, materiales, coaching y eventos, ayudando a los participantes a lograr estabilidad y empoderamiento financiero.",
+      "applyCta": "Solicitar beca",
+      "becomeSponsorCta": "Ser patrocinador",
+      "imageAlt": "Fondo hero Becas de acceso"
+    },
+    "about": {
+      "title": "¿Qué son las becas de acceso?",
+      "subtitle": "Sobre el programa",
+      "description": "El programa de Becas de acceso DFREE® elimina las barreras financieras que impiden a personas y familias participar en la educación DFREE® para la libertad financiera. Las becas de acceso son exenciones de tasas o ayuda financiera que cubren los costes de programas, herramientas, eventos DFREE® y el acceso a profesionales financieros.\n\nLos programas incluyen la Academia en línea DFREE®, el currículo 12 Steps to Financial Freedom, libros y cuadernos Say Yes to No Debt, podcasts y webinars. La ayuda con las tasas cuenta con el apoyo de socios corporativos (o patrocinadores).",
+      "imageAlt": "Sobre el programa"
+    },
+    "whyScholarshipsMatter": {
+      "title": "¿Por qué importan las becas?",
+      "subtitle": "Ampliando oportunidades. Fortaleciendo el impacto.",
+      "description": "Las becas mejoran el acceso a la educación financiera para quienes enfrentan barreras, apoyando a comunidades afectadas por la deuda.",
+      "bullets": {
+        "increaseParticipation": "Aumentar la participación en programas y servicios DFREE®",
+        "supportCommunities": "Apoyar a comunidades afectadas de forma desproporcionada por la deuda",
+        "strengthenEducation": "Fortalecer la educación financiera y el cambio de comportamiento a largo plazo",
+        "boostBdc": "Impulsar la participación en el Desafío del billón de dólares",
+        "advanceMission": "Avanzar la misión del Movimiento financiero DFREE®"
+      },
+      "patternAlt": "Patrón de fondo",
+      "imageAlt": "Persona trabajando en un portátil"
+    },
+    "whatsCovered": {
+      "subtitle": "Qué está cubierto",
+      "description": "Accede por completo a cursos, coaching experto y nuestra comunidad.",
+      "programAccess": {
+        "title": "Acceso al programa",
+        "bullets": {
+          "wealthLab": "DFREE® Wealth Lab",
+          "community": "DFREE® Community",
+          "coaching": "Cohortes de coaching DFREE®",
+          "twelveSteps": "DFREE® 12 Steps to Financial Freedom",
+          "certification": "Certificación DFREE® para líderes y facilitadores"
+        }
+      },
+      "eventParticipation": {
+        "title": "Participación en eventos",
+        "bullets": {
+          "registration": "Tasas de inscripción",
+          "materials": "Cuadernos y materiales",
+          "technology": "Acceso a tecnología (según necesidad)"
+        }
+      }
+    },
+    "accessibility": {
+      "title": "Quién puede solicitar la beca",
+      "description": "Diseñado para todas las personas dispuestas a transformar su futuro financiero",
+      "criteria": {
+        "financialNeed": "Necesidad o dificultad financiera",
+        "commitment": "Compromiso de completar los cursos DFREE®",
+        "desire": "Deseo de mejorar hábitos financieros y reducir la deuda",
+        "individualEnrollment": "Inscripción individual en el Hub digital de la Comunidad DFREE®",
+        "partnerEnrollment": "Inscripción a través de una organización asociada (iglesia, ONG, empleador, escuela)"
+      },
+      "applyCta": "Solicitar beca",
+      "patternAlt": "Patrón de fondo DFREE",
+      "imageAlt": "Dos mujeres trabajando juntas en un portátil"
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "subtitle": "Un proceso simple y de apoyo",
+      "description": "Un proceso que te lleva de la solicitud a la participación. Cuatro pasos claros te guían hacia la libertad financiera.",
+      "steps": {
+        "apply": {
+          "title": "Solicitar",
+          "description": "Envía una breve solicitud describiendo tu necesidad financiera y tus objetivos para el programa."
+        },
+        "review": {
+          "title": "Revisión",
+          "description": "El personal de DFREE® o las organizaciones asociadas revisan las solicitudes con una rúbrica estandarizada."
+        },
+        "award": {
+          "title": "Concesión",
+          "description": "Los solicitantes aprobados reciben confirmación de beca e instrucciones de acceso al programa."
+        },
+        "participate": {
+          "title": "Participar",
+          "description": "Los beneficiarios completan los cursos y encuestas para medir el impacto."
+        }
+      },
+      "patternAlt": "Patrón de cuadrícula de fondo"
+    },
+    "partnerWithUs": {
+      "title": "Asóciate con nosotros",
+      "subtitle": "Únete a nosotros para ampliar el acceso a la libertad financiera",
+      "description": "Las becas se financian mediante socios corporativos, filantrópicos y comunitarios.",
+      "tiers": {
+        "oneParticipant": "Apoya a un participante",
+        "cohort": "Apoya a una cohorte de 10 personas",
+        "site": "Apoya a un sitio de socio comunitario",
+        "fullYear": "Apoya un fondo de becas de un año completo"
+      },
+      "becomeSponsorCta": "Ser patrocinador",
+      "imageAlt": "Personas uniendo manos"
+    },
+    "banner": {
+      "title": "Comienza tu camino hoy",
+      "description": "La libertad financiera está al alcance. Ya sea que quieras transformar tu futuro financiero o ayudar a otros a hacerlo, el siguiente paso es tuyo.",
+      "label": "Solicitar beca",
+      "secondaryLabel": "Ser patrocinador"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Campañas comunitarias",

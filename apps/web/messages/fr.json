@@ -281,6 +281,241 @@
   "about": {
     "hero": {}
   },
+  "finfest": {
+    "hero": {
+      "mainTitle": "FinFE$T, le festival financier pour tous",
+      "subtitle": "Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels. Rejoignez notre événement communautaire gratuit conçu pour renforcer votre avenir financier.",
+      "registerNow": "S'inscrire maintenant",
+      "imageAlt": "Festival financier FinFest"
+    },
+    "objective": {
+      "title": "L'objectif FinFE$T",
+      "description": "FinFE$T vous permet de passer à l'action sur la voie de la liberté financière grâce à du contenu, un programme, des formations et des outils.",
+      "items": {
+        "makeMoney": {
+          "title": "Comment gagner de l'argent",
+          "description": "Découvrez des méthodes éprouvées pour augmenter vos revenus et créer plusieurs sources de revenus."
+        },
+        "moneyManagement": {
+          "title": "Gestion de l'argent",
+          "description": "Prenez le contrôle de vos finances grâce à des décisions et habitudes qui tiennent la route."
+        },
+        "buildWealth": {
+          "title": "Comment construire un patrimoine",
+          "description": "Transformez vos revenus en actifs qui travaillent pour vous sur le long terme."
+        }
+      }
+    },
+    "movement": {
+      "title": "Mouvement",
+      "description": "FinFE$T est l'événement qui vous donne un accès en temps réel à divers professionnels qui vous apportent des solutions et des outils économiques. Des foires aux ressources, masterclasses et ateliers aux forums de l'emploi, FinFE$T vous aide à passer à l'action vers la liberté financière."
+    },
+    "pastSpeakers": {
+      "title": "Intervenants passés",
+      "subtitle": "Apprenez des experts",
+      "description": "Ces professionnels ont façonné les conversations sur la liberté financière et partagé leur savoir lors de FinFe$T."
+    },
+    "sponsors": {
+      "title": "Nos partenaires",
+      "subtitle": "Ensemble nous avons accompli de grandes choses",
+      "cta": "Devenir partenaire"
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "subtitle": "Ce que disent nos participants",
+      "description": "Ne nous croyez pas sur parole : voici ce que les participants passés ont dit de FinFe$t."
+    },
+    "banner": {
+      "title": "Rejoignez-nous au prochain Finfe$t",
+      "description": "Votre chemin vers la liberté financière commence par un choix simple. Commencez à préparer votre avenir dès aujourd'hui.",
+      "label": "S'inscrire aujourd'hui"
+    },
+    "gallery": {
+      "title": "FinFE$T au fil des années",
+      "label": "Galerie photo",
+      "subtitle": "Nos plus beaux souvenirs des éditions passées"
+    }
+  },
+  "bdc": {
+    "hero": {
+      "title": "Défi du milliard de dollars DFREE®",
+      "subtitle": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier grâce à une plateforme numérique fondée sur la responsabilité communautaire.",
+      "ctaLabel": "Rejoindre le BDC",
+      "ctaHref": "#",
+      "imageAlt": "Arrière-plan hero BDC"
+    },
+    "about": {
+      "title": "De quoi il s'agit",
+      "subtitle": "Une plateforme interactive pour le changement financier",
+      "description": "Le Défi du milliard de dollars est une plateforme numérique où vous fixez des objectifs financiers clairs, suivez vos progrès réels et restez motivé grâce à la force du soutien communautaire.",
+      "ctaLabel": "Découvrir l'application",
+      "imageAlt": "Aperçu de la plateforme BDC"
+    },
+    "impact": {
+      "title": "Impact à ce jour",
+      "subtitle": "Dettes remboursées à ce jour",
+      "tagline": "Des personnes réelles qui accèdent ensemble à une vraie liberté financière.",
+      "patternAlt": "Motif de fond"
+    },
+    "howItWorks": {
+      "subtitle": "Comment fonctionne ce défi",
+      "description": "Vous fixerez des objectifs mesurables, suivrez l'évolution de vos progrès et puiserez de la force auprès d'autres qui avancent sur le même chemin.",
+      "steps": {
+        "buildCommunity": {
+          "title": "Construisez votre communauté",
+          "description": "Épargnez ensemble, restez motivés et remboursez vos dettes étape par étape."
+        },
+        "setGoal": {
+          "title": "Fixez votre objectif",
+          "description": "Définissez votre objectif financier, créez un calendrier et suivez vos progrès."
+        },
+        "trackProgress": {
+          "title": "Suivez vos progrès",
+          "description": "Suivez vos progrès, restez motivé et célébrez vos réussites avec les autres."
+        },
+        "stayAccountable": {
+          "title": "Restez responsable",
+          "description": "Restez responsable en partageant vos objectifs avec des personnes bienveillantes."
+        }
+      }
+    },
+    "audience": {
+      "title": "Public",
+      "subtitle": "Ce défi s'adresse à tous.",
+      "description": "Que vous partiez de zéro ou que vous approchiez de la ligne d'arrivée, il y a une place pour vous ici.",
+      "items": {
+        "solo": {
+          "label": "Solo",
+          "title": "Prenez le contrôle de votre histoire financière."
+        },
+        "group": {
+          "label": "En groupe",
+          "title": "Des pairs en quête de croissance financière."
+        },
+        "communities": {
+          "label": "Communautés",
+          "title": "Construisez ce mouvement dans votre région."
+        }
+      }
+    },
+    "partners": {
+      "title": "Partenaires communautaires\net institutionnels",
+      "logoAlt": "Logo partenaire"
+    },
+    "banner": {
+      "title": "Prenez le contrôle de vos objectifs maintenant",
+      "description": "Votre chemin vers la liberté financière commence par un choix simple. Commencez à préparer votre avenir dès aujourd'hui.",
+      "label": "Rejoindre le BDC"
+    }
+  },
+  "accessScholarships": {
+    "hero": {
+      "title": "Débloquez votre parcours vers la liberté financière",
+      "subtitle": "La Bourse d'accès DFREE® offre un accès gratuit aux cours, supports, coaching et événements, aidant les participants à atteindre stabilité financière et autonomisation.",
+      "applyCta": "Postuler pour une bourse",
+      "becomeSponsorCta": "Devenir partenaire",
+      "imageAlt": "Arrière-plan hero Bourses d'accès"
+    },
+    "about": {
+      "title": "Que sont les bourses d'accès ?",
+      "subtitle": "À propos du programme",
+      "description": "Le programme de Bourses d'accès DFREE® lève les barrières financières qui empêchent les personnes et les familles de participer à l'éducation DFREE® à la liberté financière. Les bourses d'accès sont des exonérations de frais ou une aide financière qui couvrent les coûts des programmes, outils, événements DFREE® et l'accès aux professionnels financiers.\n\nLes programmes comprennent l'Académie en ligne DFREE®, le curriculum 12 Steps to Financial Freedom, les livres et cahiers Say Yes to No Debt, podcasts et webinaires. L'aide aux frais est soutenue par des partenaires entreprises (ou sponsors).",
+      "imageAlt": "À propos du programme"
+    },
+    "whyScholarshipsMatter": {
+      "title": "Pourquoi les bourses comptent ?",
+      "subtitle": "Élargir les opportunités. Renforcer l'impact.",
+      "description": "Les bourses améliorent l'accès à l'éducation financière pour ceux qui font face à des barrières, en soutenant les communautés touchées par la dette.",
+      "bullets": {
+        "increaseParticipation": "Accroître la participation aux programmes et services DFREE®",
+        "supportCommunities": "Soutenir les communautés touchées de manière disproportionnée par la dette",
+        "strengthenEducation": "Renforcer l'éducation financière et le changement de comportement à long terme",
+        "boostBdc": "Stimuler la participation au Défi du milliard de dollars",
+        "advanceMission": "Faire avancer la mission du Mouvement financier DFREE®"
+      },
+      "patternAlt": "Motif de fond",
+      "imageAlt": "Personne travaillant sur un ordinateur portable"
+    },
+    "whatsCovered": {
+      "subtitle": "Ce qui est couvert",
+      "description": "Accédez en totalité aux cours, au coaching d'experts et à notre communauté.",
+      "programAccess": {
+        "title": "Accès au programme",
+        "bullets": {
+          "wealthLab": "DFREE® Wealth Lab",
+          "community": "DFREE® Community",
+          "coaching": "Cohortes de coaching DFREE®",
+          "twelveSteps": "DFREE® 12 Steps to Financial Freedom",
+          "certification": "Certification DFREE® pour leaders et facilitateurs"
+        }
+      },
+      "eventParticipation": {
+        "title": "Participation aux événements",
+        "bullets": {
+          "registration": "Frais d'inscription",
+          "materials": "Cahiers et supports",
+          "technology": "Accès technologie (si besoin)"
+        }
+      }
+    },
+    "accessibility": {
+      "title": "Qui peut postuler pour la bourse",
+      "description": "Conçu pour toute personne prête à transformer son avenir financier",
+      "criteria": {
+        "financialNeed": "Besoin ou difficulté financière",
+        "commitment": "Engagement à suivre les cours DFREE®",
+        "desire": "Volonté d'améliorer ses habitudes financières et réduire la dette",
+        "individualEnrollment": "Inscription individuelle au Hub digital Communauté DFREE®",
+        "partnerEnrollment": "Inscription via une organisation partenaire (église, association, employeur, école)"
+      },
+      "applyCta": "Postuler pour une bourse",
+      "patternAlt": "Motif de fond DFREE",
+      "imageAlt": "Deux femmes travaillant ensemble sur un ordinateur portable"
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "subtitle": "Un processus simple et bienveillant",
+      "description": "Un processus qui vous mène de la candidature à la participation. Quatre étapes simples vous guident vers la liberté financière.",
+      "steps": {
+        "apply": {
+          "title": "Postuler",
+          "description": "Soumettez une courte candidature décrivant votre besoin financier et vos objectifs pour le programme."
+        },
+        "review": {
+          "title": "Examen",
+          "description": "L'équipe DFREE® ou les organisations partenaires examinent les candidatures selon une grille standardisée."
+        },
+        "award": {
+          "title": "Attribution",
+          "description": "Les candidats retenus reçoivent la confirmation de bourse et les instructions d'accès au programme."
+        },
+        "participate": {
+          "title": "Participer",
+          "description": "Les bénéficiaires suivent les cours et remplissent les enquêtes pour mesurer l'impact."
+        }
+      },
+      "patternAlt": "Motif de grille de fond"
+    },
+    "partnerWithUs": {
+      "title": "Partenariat avec nous",
+      "subtitle": "Rejoignez-nous pour élargir l'accès à la liberté financière",
+      "description": "Les bourses sont financées par des partenaires entreprises, philanthropiques et communautaires.",
+      "tiers": {
+        "oneParticipant": "Soutient un participant",
+        "cohort": "Soutient une cohorte de 10 personnes",
+        "site": "Soutient un site partenaire communautaire",
+        "fullYear": "Soutient un fonds de bourses sur une année"
+      },
+      "becomeSponsorCta": "Devenir partenaire",
+      "imageAlt": "Personnes qui se serrent la main"
+    },
+    "banner": {
+      "title": "Commencez votre parcours aujourd'hui",
+      "description": "La liberté financière est à portée de main. Que vous soyez prêt à transformer votre avenir financier ou à aider d'autres à le faire, la prochaine étape vous appartient.",
+      "label": "Postuler pour une bourse",
+      "secondaryLabel": "Devenir partenaire"
+    }
+  },
   "communityCampaigns": {
     "hero": {
       "title": "Campagnes communautaires",
