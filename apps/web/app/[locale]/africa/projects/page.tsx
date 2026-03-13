@@ -23,9 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /** Opt out of static prerender so Sanity fetch and useSearchParams work at build time. */
 export const dynamic = "force-dynamic";
 
-const ProjectsPage = async () => {
+const ProjectsPage = async ({ params }: Props) => {
+  const { locale } = await params;
   const [projects, yearsWithProjectIds] = await Promise.all([
-    getProjects(),
+    getProjects(locale as "en" | "fr" | "es"),
     getYearsWithProjectIds(),
   ]);
   const t = await getTranslations("africa.projects");

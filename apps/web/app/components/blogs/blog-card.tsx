@@ -6,11 +6,12 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Calendar, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
-interface BlogCardProps {
+export interface BlogCardProps {
   title: string;
   excerpt: string;
-  mainImage: string;
+  imageUrl: string;
   slug: string;
   readTime?: number;
 }
@@ -18,21 +19,24 @@ interface BlogCardProps {
 export const BlogCard: FC<BlogCardProps> = ({
   title,
   excerpt,
-  mainImage,
+  imageUrl,
   slug,
   readTime,
 }) => {
+  const t = useTranslations("home.blogs");
   return (
     <div className="group w-full h-full flex flex-col">
-      <div className="relative overflow-hidden">
-        <Image
-          src={mainImage}
-          alt={title}
-          width={405}
-          height={275}
-          className="h-60 w-full object-cover transition-transform duration-400 group-hover:scale-110 ease-out"
-        />
-      </div>
+      {imageUrl && (
+        <div className="relative overflow-hidden">
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={405}
+            height={275}
+            className="h-60 w-full object-cover transition-transform duration-400 group-hover:scale-110 ease-out"
+          />
+        </div>
+      )}
       <div className="p-4 flex flex-col gap-2">
         {readTime && (
           <div
@@ -53,7 +57,7 @@ export const BlogCard: FC<BlogCardProps> = ({
             variant="link"
             className="px-0 text-lg leading-[130%] font-semibold text-primary-600 gap-2 hover:no-underline"
           >
-            Read more
+            {t("readMoreCta")}
             <ChevronRight size={16} />
           </Button>
         </Link>

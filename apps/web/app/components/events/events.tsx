@@ -174,6 +174,7 @@ export const Events = ({
                     description={t(`${baseKey}.description`)}
                     location={t(`${baseKey}.location`)}
                     link={meta.link}
+                    ctaLabel={t("viewEventCta")}
                     date={{
                       day: t(`${baseKey}.date.day`),
                       dated: t(`${baseKey}.date.dated`),
@@ -264,6 +265,7 @@ export const Events = ({
                 description={t(`${baseKey}.description`)}
                 location={t(`${baseKey}.location`)}
                 link={meta.link}
+                ctaLabel={t("viewEventCta")}
                 date={{
                   day: t(`${baseKey}.date.day`),
                   dated: t(`${baseKey}.date.dated`),

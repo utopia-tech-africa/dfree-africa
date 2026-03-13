@@ -1,6 +1,9 @@
+import { translateText, translatePortableText } from "@/lib/translation";
 import { client } from "./client";
 import { urlFor } from "./image";
 import { blogsQuery, blogBySlugQuery } from "./queries/blogs";
+
+export type LocaleForTranslation = "en" | "fr" | "es";
 
 export type BlogForUI = {
   _id: string;
@@ -29,22 +32,57 @@ function mapBlogToUI(blog: any): BlogForUI {
     imageUrl: blog.mainImage ?? "",
   };
 }
-export async function getBlogs(currentSlug?: string): Promise<BlogForUI[]> {
-  const data = await client.fetch(blogsQuery, { currentSlug });
-  return data.map(mapBlogToUI);
+export async function getBlogs(
+  currentSlug?: string,
+  locale?: LocaleForTranslation,
+): Promise<BlogForUI[]> {
+  const data = await client.fetch(blogsQuery, {
+    currentSlug: currentSlug ?? null,
+  });
+  const list = data.map(mapBlogToUI);
+
+  if (!locale || locale === "en") return list;
+
+  return Promise.all(
+    list.map(async (blog: BlogForUI) => ({
+      ...blog,
+      title: await translateText(blog.title, locale),
+      excerpt: await translateText(blog.excerpt, locale),
+    })),
+  );
 }
 
 export async function getBlogBySlug(
   slug: string,
+  locale?: LocaleForTranslation,
 ): Promise<BlogDetailForUI | null> {
   const blog = await client.fetch(blogBySlugQuery, { slug });
 
   if (!blog) return null;
 
-  return {
+  const base = {
     ...mapBlogToUI(blog),
     body: blog.body ?? [],
     authorName: blog.authorName ?? undefined,
     authorImage: blog.authorImage ?? undefined,
+  };
+
+  if (!locale || locale === "en") return base;
+
+  const [title, excerpt, body, authorName] = await Promise.all([
+    translateText(base.title, locale),
+    translateText(base.excerpt, locale),
+    translatePortableText(base.body, locale),
+    base.authorName
+      ? translateText(base.authorName, locale)
+      : Promise.resolve(undefined),
+  ]);
+
+  return {
+    ...base,
+    title,
+    excerpt,
+    body,
+    authorName: authorName ?? base.authorName,
   };
 }

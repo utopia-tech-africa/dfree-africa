@@ -1,5 +1,6 @@
-import { groq, PortableText } from "next-sanity";
-import { client } from "@/lib/sanity";
+import { PortableText } from "next-sanity";
+import { getBlogBySlug } from "@/lib/sanity/blogs";
+import type { Locale } from "@/i18n/routing";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BlogList } from "@/app/components/blogs";
@@ -15,22 +16,9 @@ interface BlogPageProps {
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
 
-  const query = groq`
-  *[_type == "blog" && slug.current == $slug][0] {
-    title,
-    "mainImage": mainImage.asset->url,
-    body,
-    excerpt,
-    readTime,
-    publishedDate,
-    authorName,
-    "authorImage": authorImage.asset->url
-  }
-`;
-
-  const blog = await client.fetch(query, { slug });
+  const blog = await getBlogBySlug(slug, locale as Locale);
 
   if (!blog) return notFound();
 
@@ -45,10 +33,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
           {blog.excerpt}
         </p>
 
-        {blog.mainImage && (
+        {blog.imageUrl && (
           <div className="relative w-full h-65 md:h-95 lg:h-140.75 mb-8">
             <Image
-              src={blog.mainImage}
+              src={blog.imageUrl}
               alt={blog.title}
               fill
               className="object-cover rounded-xl"

@@ -20,8 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-const GhanaPage = async () => {
-  const featuredProjects = await getFeaturedProjects("Ghana");
+const GhanaPage = async ({ params }: Props) => {
+  const { locale } = await params;
+  const featuredProjects = await getFeaturedProjects(
+    "Ghana",
+    locale as "en" | "fr" | "es",
+  );
   const t = await getTranslations("africa.ghana");
 
   const ghanaPageData = [

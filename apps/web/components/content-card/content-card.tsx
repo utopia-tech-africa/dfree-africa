@@ -15,6 +15,7 @@ export interface ContentCardProps {
   location?: string;
   readTime?: string;
   link: string;
+  ctaLabel?: string;
   date?: {
     day: string;
     dated: string;
@@ -33,6 +34,7 @@ export const ContentCard = ({
   location,
   readTime,
   link,
+  ctaLabel,
   date,
   padding = false,
 }: ContentCardProps) => {
@@ -41,29 +43,31 @@ export const ContentCard = ({
 
   return (
     <div className="group w-full h-full flex flex-col">
-      <div className="relative overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          width={405}
-          height={275}
-          className="h-60 w-full object-cover transition-transform duration-400 group-hover:scale-110 ease-out"
-        />
+      {(typeof image !== "string" || image) && (
+        <div className="relative overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            width={405}
+            height={275}
+            className="h-60 w-full object-cover transition-transform duration-400 group-hover:scale-110 ease-out"
+          />
 
-        {date && (
-          <div className="absolute right-4 top-4 bg-white px-1 py-3 text-center shadow-md">
-            <p className="text-sm font-normal leading-[130%] text-black">
-              {date.day}
-            </p>
-            <p className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[130%]">
-              {date.dated}
-            </p>
-            <p className="text-sm font-normal leading-[130%] text-black">
-              {date.mode}
-            </p>
-          </div>
-        )}
-      </div>
+          {date && (
+            <div className="absolute right-4 top-4 bg-white px-1 py-3 text-center shadow-md">
+              <p className="text-sm font-normal leading-[130%] text-black">
+                {date.day}
+              </p>
+              <p className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[130%]">
+                {date.dated}
+              </p>
+              <p className="text-sm font-normal leading-[130%] text-black">
+                {date.mode}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
 
       <div
         className={cn(
@@ -131,7 +135,7 @@ export const ContentCard = ({
             variant="link"
             className="px-0 text-lg leading-[130%] font-semibold text-primary-600 gap-2 hover:no-underline"
           >
-            {isEvent ? "View event" : "Read more"}
+            {ctaLabel ?? (isEvent ? "View event" : "Read more")}
             <ChevronRight size={16} />
           </Button>
         </Link>
