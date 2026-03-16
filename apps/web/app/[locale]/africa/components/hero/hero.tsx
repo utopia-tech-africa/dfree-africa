@@ -54,6 +54,7 @@ export const Hero = async () => {
 
           <Link
             href={t("cta.href")}
+            target="_blank"
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
               "text-base",

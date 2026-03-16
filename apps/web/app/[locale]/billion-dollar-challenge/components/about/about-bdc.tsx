@@ -22,7 +22,7 @@ export async function AboutBdc() {
           <p className="text-sm md:text-base lg:text-lg  text-neutral-1000 font-normal">
             {t("description")}
           </p>
-          <Link href="#">
+          <Link href="https://bdc.dfreefoundation.org" target="_blank">
             <Button
               variant="default"
               size="lg"

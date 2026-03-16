@@ -54,7 +54,7 @@ export const PILLARS_DATA: Record<PillarKey, PillarData> = {
     imagePositionClassName: "object-[center_26%] md:object-center",
   },
   accessScholarships: {
-    href: "/access-sholarships",
+    href: "/access-scholarships",
     bgImage:
       "https://res.cloudinary.com/dan9camhs/image/upload/v1773148133/b2ac3b5c-b8c1-4b50-a3ba-11c5dff89925.webp",
     bgImageMobile:
