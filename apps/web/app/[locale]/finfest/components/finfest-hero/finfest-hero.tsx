@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { FinfestHeroPattern } from "@/assets/svg/finfest-hero-pattern";
 import { Button } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
+import Link from "next/link";
 
 export const FinfestHero = async () => {
   const t = await getTranslations("finfest.hero");
@@ -31,9 +32,11 @@ export const FinfestHero = async () => {
           </p>
 
           <div className="mt-6 flex justify-center">
-            <Button variant="default" size="lg" className="rounded-full px-8">
-              {t("registerNow")}
-            </Button>
+            <Link href="https://dfree.com/finfest/" target="_blank">
+              <Button variant="default" size="lg" className="rounded-full px-8">
+                {t("registerNow")}
+              </Button>
+            </Link>
           </div>
         </div>
 

@@ -214,7 +214,8 @@ export const Header = () => {
               <LocaleSwitcher variant="desktop" />
             </div>
             <Link
-              href="#donate"
+              href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
+              target="_blank"
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
                 "font-medium",
