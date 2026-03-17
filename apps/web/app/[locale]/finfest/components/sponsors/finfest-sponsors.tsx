@@ -75,7 +75,8 @@ export const FinfestSponsors = async () => {
 
         {/* CTA */}
         <Link
-          href="#"
+          href="https://dfree.com/finfest/"
+          target="_blank"
           className={cn(
             buttonVariants({ variant: "default", size: "lg" }),
             "w-fit",

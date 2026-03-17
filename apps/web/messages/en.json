@@ -478,7 +478,7 @@
       "title": "DFREE® Billion Dollar Challenge",
       "subtitle": "Eliminate debt, build savings, and take control of your financial future through a digital platform built on community accountability.",
       "ctaLabel": "Join BDC today",
-      "ctaHref": "#",
+      "ctaHref": "https://bdc.dfreefoundation.org",
       "imageAlt": "BDC Hero background"
     },
     "about": {
@@ -740,7 +740,7 @@
       "subtitle": "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
       "cta": {
         "label": "Donate to the movement",
-        "href": "#"
+        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       }
     },
     "ourStory": {
@@ -846,7 +846,8 @@
     "banner": {
       "title": "Let's create financial empowerment",
       "description": "By investing in education, clean water for a village, or skills training for the youth, you make a significant contribution to empowering whole generations to be independent and to have better quality of life.",
-      "label": "Learn how you can support"
+      "label": "Learn how you can support",
+      "ctaRef": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
     }
   },
   "ghana": {

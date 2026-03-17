@@ -37,6 +37,7 @@ export async function BDCHero() {
 
             <Link
               href={t("ctaHref")}
+              target="_blank"
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
                 "text-sm sm:text-base inline-flex",

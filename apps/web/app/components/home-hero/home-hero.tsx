@@ -8,7 +8,7 @@ export const HomeHero = async () => {
   const t = await getTranslations("home.hero");
 
   return (
-    <section className="relative w-full h-dvh flex items-end overflow-hidden mb-[30px] md:mb-12 lg:mb-[92px]">
+    <section className="relative w-full h-dvh flex items-end overflow-hidden mb-7.5 md:mb-12 lg:mb-23">
       <div className="absolute inset-0">
         <video
           className="w-full h-full object-cover"
@@ -42,13 +42,17 @@ export const HomeHero = async () => {
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
               </Button>
             </Link>
-
-            <Button
-              size="lg"
-              className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-full bg-white/29 backdrop-blur-[10px] border border-white/20 text-white hover:bg-white/20 text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"
+            <Link
+              href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
+              target="_blank"
             >
-              {t("donateNowCta")}
-            </Button>
+              <Button
+                size="lg"
+                className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-full bg-white/29 backdrop-blur-[10px] border border-white/20 text-white hover:bg-white/20 text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"
+              >
+                {t("donateNowCta")}
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -102,12 +106,14 @@ export const HomeHero = async () => {
             </div>
 
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-10">
-              <Button
-                size="lg"
-                className="hover-bg-primary-600 px-12 py-6 font-poppins font-medium text-lg"
-              >
-                {t("buyNowCta")}
-              </Button>
+              <Link href={"https://store.dfree.com/"} target="_blank">
+                <Button
+                  size="lg"
+                  className="hover-bg-primary-600 px-12 py-6 font-poppins font-medium text-lg"
+                >
+                  {t("buyNowCta")}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

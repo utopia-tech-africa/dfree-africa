@@ -11,7 +11,7 @@ export default async function BDCBanner() {
       title={t("title")}
       description={t("description")}
       label={t("label")}
-      href="#"
+      href="https://bdc.dfreefoundation.org"
     />
   );
 }
