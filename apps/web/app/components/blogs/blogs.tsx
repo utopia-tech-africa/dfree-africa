@@ -28,6 +28,7 @@ export const BlogList = ({
   const locale = useLocale();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const responseCacheRef = useRef<Map<string, BlogCardProps[]>>(new Map());
   const [blogs, setBlogs] = useState<BlogCardProps[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -39,14 +40,22 @@ export const BlogList = ({
     const params = new URLSearchParams();
     if (currentSlug) params.set("currentSlug", currentSlug);
     params.set("locale", locale);
+    const cacheKey = `${locale}:${currentSlug ?? ""}`;
+
+    const cached = responseCacheRef.current.get(cacheKey);
+    if (cached) {
+      setBlogs(cached);
+      return () => controller.abort();
+    }
 
     fetch(`/api/blogs?${params.toString()}`, {
       signal: controller.signal,
-      cache: "no-store",
+      cache: "default",
     })
       .then(async (res) => {
         if (!res.ok) return;
         const data: BlogCardProps[] = await res.json();
+        responseCacheRef.current.set(cacheKey, data);
         setBlogs(data);
       })
       .catch(() => {

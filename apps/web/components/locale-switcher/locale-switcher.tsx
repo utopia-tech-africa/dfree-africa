@@ -93,7 +93,10 @@ export function LocaleSwitcher({
       setOptimisticLocale(newLocale);
       sessionStorage.setItem(PENDING_KEY, newLocale);
       const path = pathWithoutLocale(pathname);
-      router.replace(path, { locale: newLocale });
+      router.replace(path, { locale: newLocale, scroll: false });
+      // Ensure server-fetched dynamic sections re-render for the new locale
+      // immediately after locale navigation.
+      router.refresh();
       onSelect?.();
     },
     [locale, pathname, router, onSelect],

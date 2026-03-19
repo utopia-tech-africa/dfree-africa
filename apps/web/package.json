@@ -15,6 +15,7 @@
     "@repo/ui": "workspace:*",
     "@sanity/image-url": "^1.1.0",
     "@tailwindcss/postcss": "^4.1.18",
+    "@vercel/kv": "^3.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-auto-scroll": "^8.6.0",
