@@ -18,5 +18,10 @@ export async function GET(request: NextRequest) {
     safeLocale,
   );
 
-  return NextResponse.json(blogs);
+  return NextResponse.json(blogs, {
+    headers: {
+      // Short browser cache + SWR for snappier locale toggles.
+      "Cache-Control": "public, max-age=60, stale-while-revalidate=300",
+    },
+  });
 }

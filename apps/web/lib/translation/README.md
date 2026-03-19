@@ -2,6 +2,30 @@
 
 Auto-translation of Sanity CMS content to French and Spanish using the Gemini API.
 
+## Performance cache
+
+Translation lookups use:
+
+- **L1:** in-memory cache (fast, resets on restart)
+- **L2:** **Vercel KV** (persistent across restarts/cold starts)
+
+To enable persistent cache in `apps/web/.env.local`, provide **any one** of:
+
+```bash
+# Option 1: Vercel KV REST
+KV_REST_API_URL=...
+KV_REST_API_TOKEN=...
+
+# Option 2: Upstash REST
+UPSTASH_REDIS_REST_URL=...
+UPSTASH_REDIS_REST_TOKEN=...
+
+# Option 3: Redis URL integration
+REDIS_URL=...
+```
+
+If KV is not configured, translation still works using in-memory cache only.
+
 ## Make sure it’s working
 
 1. **Set the API key**
@@ -35,3 +59,7 @@ Auto-translation of Sanity CMS content to French and Spanish using the Gemini AP
 
 - `GOOGLE_API_KEY` is used if `GEMINI_API_KEY` is not set.
 - Without either, the app still runs; CMS content is shown in the source language (no translation).
+- Any of these enables persistent translation cache:
+  - `KV_REST_API_URL` + `KV_REST_API_TOKEN`
+  - `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN`
+  - `REDIS_URL`

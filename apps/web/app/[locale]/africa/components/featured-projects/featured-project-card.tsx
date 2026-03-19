@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
@@ -27,6 +28,12 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
   className,
 }) => {
   const t = useTranslations("africa.projects");
+  const router = useRouter();
+  const href = `/africa/projects/${slug}`;
+  const prefetchDetail = useCallback(() => {
+    router.prefetch(href);
+  }, [router, href]);
+
   return (
     <div
       className={cn(
@@ -72,7 +79,12 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
 
-        <Link href={`/africa/projects/${slug}`}>
+        <Link
+          href={href}
+          prefetch
+          onMouseEnter={prefetchDetail}
+          onFocus={prefetchDetail}
+        >
           <Button
             icon={<MdKeyboardDoubleArrowRight className="size-7" />}
             variant="ghost"
