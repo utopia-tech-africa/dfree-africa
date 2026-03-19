@@ -35,13 +35,13 @@ export const HowItWorks = async () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full group/how-it-works">
           {STEP_KEYS.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="flex flex-col items-start p-4 rounded-md border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-shadow text-left space-y-2 h-full"
+                className="flex flex-col items-start p-4 rounded-md border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 text-left space-y-2 h-full group-hover/how-it-works:blur-[2px] group-hover/how-it-works:bg-neutral-200 hover:blur-none! hover:bg-white! hover:opacity-100!"
               >
                 <div className="p-2">
                   <Icon

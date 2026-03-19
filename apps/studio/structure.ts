@@ -1,5 +1,5 @@
 import type {StructureResolver} from 'sanity/structure'
-import {Folder, ShoppingBag} from 'lucide-react' // optional icons for sections
+import {Folder, ReceiptCent, ShoppingBag, User2} from 'lucide-react' // optional icons for sections
 
 export const structure: StructureResolver = (S) =>
   S.list()
@@ -39,8 +39,18 @@ export const structure: StructureResolver = (S) =>
             .items([S.documentTypeListItem('merch').title('All Products')]),
         ),
 
+      // ---------------- FinFest ----------------
+      S.listItem()
+        .title('FinFest')
+        .icon(ReceiptCent)
+        .child(
+          S.list()
+            .title('FinFest')
+            .items([S.documentTypeListItem('pastSpeaker').title('Past Speakers')]),
+        ),
+
       // ---------------- Other ----------------
       ...S.documentTypeListItems().filter(
-        (id) => !['project', 'gallery', 'year', 'merch'].includes(id.getId() ?? ''),
+        (id) => !['project', 'gallery', 'year', 'merch', 'pastSpeaker'].includes(id.getId() ?? ''),
       ),
     ])
