@@ -15,11 +15,11 @@ export async function translateText(
   if (!t) return text;
 
   const key = cacheKey(t, targetLocale);
-  const cached = getCachedTranslation(key);
+  const cached = await getCachedTranslation(key);
   if (cached != null) return cached;
 
   const translated = await translateWithGemini(t, targetLocale);
-  setCachedTranslation(key, translated);
+  await setCachedTranslation(key, translated);
   return translated;
 }
 
@@ -49,31 +49,26 @@ export async function translatePortableText(
 ): Promise<PortableTextBlock[]> {
   if (targetLocale === SOURCE_LOCALE || !blocks?.length) return blocks ?? [];
 
-  const out: PortableTextBlock[] = [];
+  return Promise.all(
+    blocks.map(async (block) => {
+      if (!block || typeof block !== "object") return block;
 
-  for (const block of blocks) {
-    if (!block || typeof block !== "object") {
-      out.push(block);
-      continue;
-    }
+      const newBlock = { ...block } as PortableTextBlock;
 
-    const newBlock = { ...block } as PortableTextBlock;
-
-    if (Array.isArray(block.children) && block.children.length > 0) {
-      const newChildren: PortableTextChild[] = [];
-      for (const child of block.children) {
-        if (child && typeof child.text === "string" && child.text.trim()) {
-          const translated = await translateText(child.text, targetLocale);
-          newChildren.push({ ...child, text: translated });
-        } else {
-          newChildren.push({ ...child });
-        }
+      if (Array.isArray(block.children) && block.children.length > 0) {
+        const newChildren = await Promise.all(
+          block.children.map(async (child) => {
+            if (child && typeof child.text === "string" && child.text.trim()) {
+              const translated = await translateText(child.text, targetLocale);
+              return { ...child, text: translated } as PortableTextChild;
+            }
+            return { ...child } as PortableTextChild;
+          }),
+        );
+        newBlock.children = newChildren;
       }
-      newBlock.children = newChildren;
-    }
 
-    out.push(newBlock);
-  }
-
-  return out;
+      return newBlock;
+    }),
+  );
 }

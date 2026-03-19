@@ -1,8 +1,9 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Calendar, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,13 @@ export const BlogCard: FC<BlogCardProps> = ({
   readTime,
 }) => {
   const t = useTranslations("home.blogs");
+  const router = useRouter();
+  const href = `/blog/${slug}`;
+
+  const prefetchDetail = useCallback(() => {
+    router.prefetch(href);
+  }, [router, href]);
+
   return (
     <div className="group w-full h-full flex flex-col">
       {imageUrl && (
@@ -52,7 +60,12 @@ export const BlogCard: FC<BlogCardProps> = ({
           {excerpt}
         </p>
 
-        <Link href={`/blog/${slug}`}>
+        <Link
+          href={href}
+          prefetch
+          onMouseEnter={prefetchDetail}
+          onFocus={prefetchDetail}
+        >
           <Button
             variant="link"
             className="px-0 text-lg leading-[130%] font-semibold text-primary-600 gap-2 hover:no-underline"
