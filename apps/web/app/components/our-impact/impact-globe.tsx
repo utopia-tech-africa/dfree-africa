@@ -35,13 +35,13 @@ export function ImpactGlobe({ className }: { className?: string }) {
       height: height * 2,
       phi: 0,
       theta,
-      dark: 0,
+      dark: 0.14,
       diffuse: 1.2,
       mapSamples: 12000,
-      mapBrightness: 6,
-      baseColor: [1, 1, 1],
+      mapBrightness: 5.4,
+      baseColor: [0.95, 0.95, 0.95],
       scale: 1.32,
-      markerColor: [0.302, 0.404, 0.192], // primary-500
+      markerColor: [0.118, 0.157, 0.075], // primary-700
       glowColor: [1, 1, 1],
       markerElevation: 0.01,
       markers: IMPACT_PINS.flatMap((pin) => [
@@ -49,13 +49,13 @@ export function ImpactGlobe({ className }: { className?: string }) {
           // Outer static halo
           location: [pin.lat, pin.lng] as [number, number],
           size: 0.068,
-          color: [0.64, 0.78, 0.56] as [number, number, number],
+          color: [0.29, 0.4, 0.2] as [number, number, number], // deeper halo
         },
         {
           // Core marker
           location: [pin.lat, pin.lng] as [number, number],
           size: 0.038,
-          color: [0.302, 0.404, 0.192] as [number, number, number],
+          color: [0.118, 0.157, 0.075] as [number, number, number], // primary-700 core
           id: pin.label.toLowerCase().replace(/\s+/g, "-"),
         },
       ]),
@@ -78,7 +78,7 @@ export function ImpactGlobe({ className }: { className?: string }) {
             {
               location: [pin.lat, pin.lng] as [number, number],
               size: 0.038, // static core
-              color: [0.302, 0.404, 0.192] as [number, number, number],
+              color: [0.118, 0.157, 0.075] as [number, number, number],
               id: pin.label.toLowerCase().replace(/\s+/g, "-"),
             },
             {
@@ -86,8 +86,8 @@ export function ImpactGlobe({ className }: { className?: string }) {
               size: 0.065 + pulse * 0.05, // animated outer pulse ring
               color:
                 pulse > 0.5
-                  ? ([0.75, 0.86, 0.69] as [number, number, number])
-                  : ([0.64, 0.78, 0.56] as [number, number, number]),
+                  ? ([0.36, 0.5, 0.26] as [number, number, number])
+                  : ([0.29, 0.4, 0.2] as [number, number, number]),
             },
           ];
         }),
