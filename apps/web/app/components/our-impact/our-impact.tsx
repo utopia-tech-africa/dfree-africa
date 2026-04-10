@@ -11,8 +11,8 @@ export function OurImpact() {
     >
       <ComponentLayout className="grid gap-8 lg:grid-cols-[408px_520px] lg:items-start lg:justify-between lg:gap-y-8">
         <ImpactHeader />
-        <div className="relative flex w-full items-center justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:w-auto lg:shrink-0">
-          <ImpactGlobe className="max-w-[343px] md:max-w-[420px] lg:max-w-[520px]" />
+        <div className="relative flex size-[343px] items-center justify-center md:size-[420px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:size-[520px] lg:shrink-0">
+          <ImpactGlobe className="h-full w-full" />
         </div>
         <ImpactStats />
       </ComponentLayout>
