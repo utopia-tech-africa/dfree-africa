@@ -2,8 +2,15 @@ import { GoogleGenAI } from "@google/genai";
 
 const MODEL = "gemini-2.5-flash";
 const isDev = process.env.NODE_ENV === "development";
+const MAX_CONCURRENT_REQUESTS = 2;
+const MIN_REQUEST_INTERVAL_MS = 250;
+const RETRY_DELAY_MS = 1200;
+const RETRYABLE_CODE_PATTERN = /429|quota|resource_exhausted|rate/i;
 
 let client: GoogleGenAI | null = null;
+let activeRequests = 0;
+let lastRequestStartedAt = 0;
+const waitQueue: Array<() => void> = [];
 
 function getClient(): GoogleGenAI | null {
   if (client) return client;
@@ -47,33 +54,32 @@ export async function translateWithGemini(
 Text to translate:
 ${trimmed}`;
 
-  try {
-    const response = await ai.models.generateContent({
-      model: MODEL,
-      contents: prompt,
-    });
+  return runLimited(async () => {
+    try {
+      return await requestTranslation(ai, prompt, text, trimmed);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      if (RETRYABLE_CODE_PATTERN.test(message)) {
+        await sleep(RETRY_DELAY_MS);
+        try {
+          return await requestTranslation(ai, prompt, text, trimmed);
+        } catch (retryErr) {
+          if (isDev) {
+            console.error(
+              "[translation] Gemini retry failed:",
+              retryErr instanceof Error ? retryErr.message : retryErr,
+            );
+          }
+          return text;
+        }
+      }
 
-    const translated =
-      typeof (response as { text?: string })?.text === "string"
-        ? (response as { text: string }).text.trim()
-        : extractTextFromResponse(response);
-
-    if (!translated && isDev) {
-      console.warn(
-        "[translation] Gemini returned empty text for:",
-        trimmed.slice(0, 50) + "...",
-      );
+      if (isDev) {
+        console.error("[translation] Gemini error:", message);
+      }
+      return text;
     }
-    return translated || text;
-  } catch (err) {
-    if (isDev) {
-      console.error(
-        "[translation] Gemini error:",
-        err instanceof Error ? err.message : err,
-      );
-    }
-    return text;
-  }
+  });
 }
 
 interface GeminiPart {
@@ -93,4 +99,64 @@ function extractTextFromResponse(response: unknown): string {
   } catch {
     return "";
   }
+}
+
+async function requestTranslation(
+  ai: GoogleGenAI,
+  prompt: string,
+  fallback: string,
+  debugSample: string,
+): Promise<string> {
+  const response = await ai.models.generateContent({
+    model: MODEL,
+    contents: prompt,
+  });
+
+  const translated =
+    typeof (response as { text?: string })?.text === "string"
+      ? (response as { text: string }).text.trim()
+      : extractTextFromResponse(response);
+
+  if (!translated && isDev) {
+    console.warn(
+      "[translation] Gemini returned empty text for:",
+      debugSample.slice(0, 50) + "...",
+    );
+  }
+
+  return translated || fallback;
+}
+
+async function runLimited<T>(task: () => Promise<T>): Promise<T> {
+  await acquireSlot();
+  try {
+    return await task();
+  } finally {
+    releaseSlot();
+  }
+}
+
+async function acquireSlot(): Promise<void> {
+  if (activeRequests >= MAX_CONCURRENT_REQUESTS) {
+    await new Promise<void>((resolve) => waitQueue.push(resolve));
+  }
+
+  activeRequests += 1;
+  const now = Date.now();
+  const waitMs = Math.max(
+    0,
+    MIN_REQUEST_INTERVAL_MS - (now - lastRequestStartedAt),
+  );
+  if (waitMs > 0) await sleep(waitMs);
+  lastRequestStartedAt = Date.now();
+}
+
+function releaseSlot(): void {
+  activeRequests = Math.max(0, activeRequests - 1);
+  const next = waitQueue.shift();
+  if (next) next();
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

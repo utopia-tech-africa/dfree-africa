@@ -2,6 +2,17 @@ import { getCachedTranslation, setCachedTranslation, cacheKey } from "./cache";
 import { translateWithGemini } from "./gemini";
 
 const SOURCE_LOCALE = "en";
+const REFRESH_INTERVAL_MS = 1000 * 60 * 60 * 6; // 6 hours
+
+/**
+ * Tracks last background refresh per key to avoid hammering Gemini.
+ */
+const refreshMetadata = new Map<string, number>();
+
+/**
+ * Deduplicates in-flight translation requests for identical key+locale.
+ */
+const inFlight = new Map<string, Promise<string>>();
 
 /**
  * Translate plain text. Uses in-memory cache. Returns original if target is source locale or translation is disabled.
@@ -16,11 +27,12 @@ export async function translateText(
 
   const key = cacheKey(t, targetLocale);
   const cached = await getCachedTranslation(key);
-  if (cached != null) return cached;
+  if (cached != null) {
+    maybeRefreshInBackground(key, t, targetLocale, cached);
+    return cached;
+  }
 
-  const translated = await translateWithGemini(t, targetLocale);
-  await setCachedTranslation(key, translated);
-  return translated;
+  return translateAndCache(key, t, targetLocale, text);
 }
 
 /** Portable Text block child (span with text). */
@@ -71,4 +83,42 @@ export async function translatePortableText(
       return newBlock;
     }),
   );
+}
+
+function maybeRefreshInBackground(
+  key: string,
+  text: string,
+  targetLocale: string,
+  fallback: string,
+): void {
+  const lastRefreshAt = refreshMetadata.get(key) ?? 0;
+  const isStale = Date.now() - lastRefreshAt > REFRESH_INTERVAL_MS;
+  if (!isStale) return;
+  // Fire-and-forget stale refresh.
+  void translateAndCache(key, text, targetLocale, fallback);
+}
+
+async function translateAndCache(
+  key: string,
+  text: string,
+  targetLocale: string,
+  fallback: string,
+): Promise<string> {
+  const existing = inFlight.get(key);
+  if (existing) return existing;
+
+  const promise = (async () => {
+    const translated = await translateWithGemini(text, targetLocale);
+    const safeValue = translated || fallback;
+    await setCachedTranslation(key, safeValue);
+    refreshMetadata.set(key, Date.now());
+    return safeValue;
+  })();
+
+  inFlight.set(key, promise);
+  try {
+    return await promise;
+  } finally {
+    inFlight.delete(key);
+  }
 }

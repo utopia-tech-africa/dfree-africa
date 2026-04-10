@@ -6,7 +6,7 @@ export async function ImpactStats() {
   const t = await getTranslations("home.ourImpact");
 
   return (
-    <div className="grid w-full max-w-[343px] grid-cols-2 gap-x-6 gap-y-8 md:h-[321px] md:max-w-[408px] md:grid-rows-2 md:gap-0">
+    <div className="grid w-full max-w-[343px] grid-cols-2 gap-x-10 gap-y-8 md:h-[321px] md:max-w-[408px] md:grid-rows-2 md:gap-x-12 md:gap-y-0">
       {IMPACT_STAT_KEYS.map((key) => (
         <ImpactStatCard
           key={key}
