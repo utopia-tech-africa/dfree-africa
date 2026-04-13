@@ -58,8 +58,8 @@
     "billionDollarChallenge": "Billion dollar challenge",
     "globalFoundationInAfrica": "Global Foundation in Africa",
     "communityCampaigns": "Community campaigns",
-    "foundationScholarshipCommitment": "Foundation Scholarship Commitment",
     "finfest": "FinFE$T",
+    "dfreeAccessScholarships": "DFREE® Access Scholarships",
     "getMerch": "Get merch",
     "getBooks": "Get Books",
     "contactUs": "Contact us"
@@ -170,20 +170,45 @@
       "heading": "Real stories of change",
       "subtitle": "Voices that reveal the power of financial transformation",
       "items": {
-        "marcus": {
-          "name": "Marcus Rodriguez",
-          "title": "Small business owner",
-          "text": "My family has been able to pay off more than $260,000 in debt. The journey has been transformational, a blessing and a source of communion in fellowship."
+        "shirley": {
+          "name": "Shirley Richard",
+          "title": "Delta Sigma Theta Sorority, Inc",
+          "text": "I am retired, however, as a result of the class, I connected with a Financial Advisor to invest for generational wealth for my grandchildren."
         },
-        "elena": {
-          "name": "Elena Thompson",
-          "title": "Community leader",
-          "text": "I’ve been able to pay at least $65,000 off and save $5,000, which has helped me get back into the saving habit."
+        "michele": {
+          "name": "Michele Bailey",
+          "title": "Behind Every Door",
+          "text": "DFREE ® helped me realize that I was living above my means and now I have been able to downsize, pay off major debts and increase my credit score."
         },
-        "david": {
-          "name": "David Chen",
-          "title": "Tech entrepreneur",
-          "text": "Paid off 5 credit cards, no longer enslaved to debts and have become much more financially independent."
+        "lloyd": {
+          "name": "Lloyd Branch",
+          "title": "",
+          "text": "I paid off my car and HVAC system bills using methods from DFREE ®."
+        },
+        "gregory": {
+          "name": "Gregory Lawrence",
+          "title": "",
+          "text": "I have paid down my credit cards with the snowball effect and I am currently in the process of buying a house by myself."
+        },
+        "diana": {
+          "name": "Diana Belle",
+          "title": "Clear View Baptist Church",
+          "text": "I am a better Steward of my finances having gone through this process. I am now working on leaving a legacy for my daughters."
+        },
+        "dee": {
+          "name": "Alesia Boone",
+          "title": "",
+          "text": "Watch how Alesia shares her financial transformation journey."
+        },
+        "alesia": {
+          "name": "Aimy Steele",
+          "title": "",
+          "text": "Aimy talks about how DFREE® helped her take control of her finances."
+        },
+        "aimy": {
+          "name": "Testimonial",
+          "title": "",
+          "text": "A real story of financial transformation through DFREE®."
         }
       }
     },
@@ -306,18 +331,18 @@
         "heading": "Real stories of change",
         "subtitle": "Voices that reveal the power of financial transformation",
         "items": {
-          "marcus": {
-            "name": "Marcus Rodriguez",
+          "shirley": {
+            "name": "Shirley Richard",
             "title": "Small business owner",
             "text": "My family has been able to pay off more than $260,000 in debt. The journey has been transformational, a blessing and a source of communion in fellowship."
           },
-          "elena": {
-            "name": "Elena Thompson",
+          "michele": {
+            "name": "Michele Bailey",
             "title": "Community leader",
             "text": "I’ve been able to pay at least $65,000 off and save $5,000, which has helped me get back into the saving habit."
           },
-          "david": {
-            "name": "David Chen",
+          "lloyd": {
+            "name": "Lloyd Branch",
             "title": "Tech entrepreneur",
             "text": "Paid off 5 credit cards, no longer enslaved to debts and have become much more financially independent."
           }

@@ -10,8 +10,21 @@ const TestimonialCard = ({ testimonial }: Props) => {
   const t = useTranslations("home.testimonials");
   const baseKey = `items.${testimonial.id}`;
 
+  const isVideo = !!testimonial.videoUrl;
+
+  const handleClick = () => {
+    if (testimonial.videoUrl) {
+      window.open(testimonial.videoUrl, "_blank");
+    }
+  };
+
   return (
-    <div className="bg-white p-6 sm:p-8 flex flex-col items-center justify-between text-center min-w-full sm:min-w-[75%] md:min-w-0 md:flex-1 ">
+    <div
+      onClick={handleClick}
+      className={`bg-white p-6 sm:p-8 flex flex-col items-center justify-between text-center 
+      min-w-[85%] sm:min-w-[60%] md:min-w-[400px] lg:min-w-[450px]
+      ${isVideo ? "cursor-pointer transition" : ""}`}
+    >
       <p className="text-neutral-900 text-base md:text-lg font-bold leading-[140%] mb-8 sm:mb-10">
         {t(`${baseKey}.text`)}
       </p>
@@ -26,12 +39,19 @@ const TestimonialCard = ({ testimonial }: Props) => {
           <Image
             src={testimonial.image}
             alt={t(`${baseKey}.name`)}
-            width={60}
-            height={60}
+            width={58}
+            height={58}
             className="object-cover w-full h-full rounded-full"
           />
+
+          {isVideo && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-full">
+              <span className="text-white text-xs">▶</span>
+            </div>
+          )}
         </div>
 
+        {/* Name + Title */}
         <div className="flex flex-col items-center justify-center text-center">
           <span className="text-neutral-900 font-semibold text-sm sm:text-base">
             {t(`${baseKey}.name`)}
