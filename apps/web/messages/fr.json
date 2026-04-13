@@ -59,7 +59,7 @@
     "globalFoundationInAfrica": "Fondation mondiale en Afrique",
     "communityCampaigns": "Campagnes communautaires",
     "foundationScholarshipCommitment": "Engagement de bourses de la fondation",
-    "finfest": "FinFe$t",
+    "finfest": "FinFE$T",
     "getMerch": "Boutique",
     "getBooks": "Livres",
     "contactUs": "Nous contacter"
@@ -84,7 +84,7 @@
     "billionDollarChallenge": "Défi du milliard de dollars",
     "dfreeAfrica": "DFREE Afrique",
     "communityCampaigns": "Campagnes communautaires",
-    "finfest": "FinFe$t",
+    "finfest": "FinFE$T",
     "dfreeAccessScholarships": "Bourses d'accès DFREE",
     "support": "Soutenir",
     "partner": "Partenariat",
@@ -129,8 +129,8 @@
           "description": "La Fondation mondiale DFREE® mène des campagnes communautaires qui rassemblent églises, groupes civiques et organisations locales pour des programmes coordonnés d'autonomisation financière, favorisant l'apprentissage partagé, la responsabilité et une célébration collective lors de lancements structurés, de sessions hebdomadaires et d'événements de remise de diplômes."
         },
         "finfest": {
-          "name": "FinFe$t® : où la richesse rencontre le bien-être",
-          "description": "FinFe$t® est l'événement communautaire gratuit phare de la Fondation mondiale DFREE® qui allie éducation financière, santé et bien-être à travers des expériences engageantes, dotant les familles d'outils pratiques pour un bien-être holistique et une prospérité durable."
+          "name": "FinFE$T® : où la richesse rencontre le bien-être",
+          "description": "FinFE$T® est l'événement communautaire gratuit phare de la Fondation mondiale DFREE® qui allie éducation financière, santé et bien-être à travers des expériences engageantes, dotant les familles d'outils pratiques pour un bien-être holistique et une prospérité durable."
         },
         "accessScholarships": {
           "name": "Bourses d'accès DFREE®",
@@ -315,7 +315,7 @@
     "pastSpeakers": {
       "title": "Intervenants passés",
       "subtitle": "Apprenez des experts",
-      "description": "Ces professionnels ont façonné les conversations sur la liberté financière et partagé leur savoir lors de FinFe$T."
+      "description": "Ces professionnels ont façonné les conversations sur la liberté financière et partagé leur savoir lors de FinFE$T."
     },
     "sponsors": {
       "title": "Nos partenaires",
@@ -325,10 +325,10 @@
     "testimonials": {
       "title": "Témoignages",
       "subtitle": "Ce que disent nos participants",
-      "description": "Ne nous croyez pas sur parole : voici ce que les participants passés ont dit de FinFe$t."
+      "description": "Ne nous croyez pas sur parole : voici ce que les participants passés ont dit de FinFE$T."
     },
     "banner": {
-      "title": "Rejoignez-nous au prochain Finfe$t",
+      "title": "Rejoignez-nous au prochain FinFE$T",
       "description": "Votre chemin vers la liberté financière commence par un choix simple. Commencez à préparer votre avenir dès aujourd'hui.",
       "label": "S'inscrire aujourd'hui"
     },
