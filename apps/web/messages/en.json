@@ -59,7 +59,7 @@
     "globalFoundationInAfrica": "Global Foundation in Africa",
     "communityCampaigns": "Community campaigns",
     "foundationScholarshipCommitment": "Foundation Scholarship Commitment",
-    "finfest": "FinFe$t",
+    "finfest": "FinFE$T",
     "getMerch": "Get merch",
     "getBooks": "Get Books",
     "contactUs": "Contact us"
@@ -84,7 +84,7 @@
     "billionDollarChallenge": "Billion Dollar Challenge",
     "dfreeAfrica": "DFREE Africa",
     "communityCampaigns": "Community campaigns",
-    "finfest": "FinFe$t",
+    "finfest": "FinFE$T",
     "dfreeAccessScholarships": "DFREE Access Scholarships",
     "support": "Support",
     "partner": "Partner",
@@ -129,8 +129,8 @@
           "description": "The DFREE® Global Foundation leads community-wide campaigns that unite churches, civic groups, and local organizations to deliver coordinated financial empowerment programs, fostering shared learning, accountability, and collective celebration through structured launches, weekly sessions, and culminating graduation events."
         },
         "finfest": {
-          "name": "FinFe$t®: Where Wealth Meets Wellness",
-          "description": "FinFe$t® is the DFREE® Global Foundation's signature free community event that blends financial education, health, and wellness through engaging experiences, equipping families with practical tools to drive holistic well-being and long-term prosperity."
+          "name": "FinFE$T®: Where Wealth Meets Wellness",
+          "description": "FinFE$T® is the DFREE® Global Foundation's signature free community event that blends financial education, health, and wellness through engaging experiences, equipping families with practical tools to drive holistic well-being and long-term prosperity."
         },
         "accessScholarships": {
           "name": "DFREE® Access Scholarships",
@@ -450,7 +450,7 @@
     "pastSpeakers": {
       "title": "Past Speakers",
       "subtitle": "Learn from the experts",
-      "description": "These professionals have shaped conversations around financial freedom and shared their knowledge at FinFe$T"
+      "description": "These professionals have shaped conversations around financial freedom and shared their knowledge at FinFE$T"
     },
     "sponsors": {
       "title": "Our sponsors",
@@ -460,10 +460,10 @@
     "testimonials": {
       "title": "Testimonials",
       "subtitle": "What Our Clients Are Saying",
-      "description": "Don't just take our word for it; here's what past attendees said about FinFe$t."
+      "description": "Don't just take our word for it; here's what past attendees said about FinFE$T."
     },
     "banner": {
-      "title": "Join us at the next Finfe$t",
+      "title": "Join us at the next FinFE$T",
       "description": "Your journey to financial freedom begins with a simple choice. Start planning your future today.",
       "label": "Register today"
     },
