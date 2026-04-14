@@ -172,12 +172,12 @@
       "items": {
         "shirley": {
           "name": "Shirley Richard",
-          "title": "Delta Sigma Theta Sorority, Inc",
+          "title": "Sororité Delta Sigma Theta, Inc.",
           "text": "Je suis à la retraite, mais grâce à ce cours, j'ai pris contact avec un conseiller financier afin d'investir pour constituer un patrimoine pour mes petits-enfants."
         },
         "michele": {
           "name": "Michele Bailey",
-          "title": "Behind Every Door",
+          "title": "Derrière Chaque Porte",
           "text": "DFREE® m'a aidé à prendre conscience que je vivais au-dessus de mes moyens et j'ai maintenant pu réduire mon train de vie, rembourser mes principales dettes et améliorer ma cote de crédit."
         },
         "lloyd": {
@@ -192,23 +192,23 @@
         },
         "diana": {
           "name": "Diana Belle",
-          "title": "Clear View Baptist Church",
+          "title": "Église Baptiste Clear View",
           "text": "Ce processus m'a permis de mieux gérer mes finances. Je travaille maintenant à constituer un héritage pour mes filles."
         },
         "dee": {
           "name": "Dee Marshall",
           "title": "",
-          "text": "Watch how Alesia shares her financial transformation journey."
+          "text": ""
         },
         "alesia": {
           "name": "Alesia Boone",
           "title": "",
-          "text": "Aimy talks about how DFREE® helped her take control of her finances."
+          "text": ""
         },
         "aimy": {
           "name": "Aimy Steele",
           "title": "",
-          "text": "A real story of financial transformation through DFREE®."
+          "text": ""
         }
       }
     },
