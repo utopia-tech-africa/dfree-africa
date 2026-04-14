@@ -58,7 +58,7 @@
     "billionDollarChallenge": "Desafío del billón de dólares",
     "globalFoundationInAfrica": "Fundación global en África",
     "communityCampaigns": "Campañas comunitarias",
-    "foundationScholarshipCommitment": "Compromiso de becas de la fundación",
+    "dfreeAccessScholarships": "Becas de acceso DFREE",
     "finfest": "FinFE$Ts",
     "getMerch": "Tienda",
     "getBooks": "Libros",
@@ -170,20 +170,45 @@
       "heading": "Historias reales de cambio",
       "subtitle": "Voces que revelan el poder de la transformación financiera",
       "items": {
-        "marcus": {
-          "name": "Marcus Rodriguez",
-          "title": "Propietario de pequeña empresa",
-          "text": "Mi familia ha podido pagar más de 260 000 $ de deuda. El camino ha sido transformador, una bendición y una fuente de comunión en la fe."
+        "shirley": {
+          "name": "Shirley Richard",
+          "title": "Hermandad Delta Sigma Theta, Inc.",
+          "text": "Estoy jubilado, sin embargo, gracias al curso, contacté con un asesor financiero para invertir y crear un patrimonio generacional para mis nietos."
         },
-        "elena": {
-          "name": "Elena Thompson",
-          "title": "Líder comunitaria",
-          "text": "He podido pagar al menos 65 000 $ y ahorrar 5 000 $, lo que me ha ayudado a recuperar el hábito de ahorrar."
+        "michele": {
+          "name": "Michele Bailey",
+          "title": "Detrás de Cada Puerta",
+          "text": "DFREE ® me ayudó a darme cuenta de que estaba viviendo por encima de mis posibilidades y ahora he podido reducir mis gastos, saldar mis deudas importantes y mejorar mi puntaje crediticio."
         },
-        "david": {
-          "name": "David Chen",
-          "title": "Emprendedor tecnológico",
-          "text": "Pagué 5 tarjetas de crédito, ya no estoy esclavizado por las deudas y me he vuelto mucho más independiente financieramente."
+        "lloyd": {
+          "name": "Lloyd Branch",
+          "title": "",
+          "text": "Pagué las facturas de mi coche y del sistema de climatización utilizando los métodos de DFREE ®."
+        },
+        "gregory": {
+          "name": "Gregory Lawrence",
+          "title": "",
+          "text": "He pagado mis tarjetas de crédito con el método de la bola de nieve y actualmente estoy en proceso de comprar una casa por mi cuenta."
+        },
+        "diana": {
+          "name": "Diana Belle",
+          "title": "Iglesia Bautista Clear View",
+          "text": "Ahora administro mejor mis finanzas tras haber pasado por este proceso. Estoy trabajando para dejar un legado a mis hijas."
+        },
+        "dee": {
+          "name": "Dee Marshall",
+          "title": "",
+          "text": ""
+        },
+        "alesia": {
+          "name": "Alesia Boone",
+          "title": "",
+          "text": ""
+        },
+        "aimy": {
+          "name": "Aimy Steele",
+          "title": "",
+          "text": ""
         }
       }
     },
