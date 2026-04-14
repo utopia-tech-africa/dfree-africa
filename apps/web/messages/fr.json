@@ -58,7 +58,7 @@
     "billionDollarChallenge": "Défi du milliard de dollars",
     "globalFoundationInAfrica": "Fondation mondiale en Afrique",
     "communityCampaigns": "Campagnes communautaires",
-    "foundationScholarshipCommitment": "Engagement de bourses de la fondation",
+    "dfreeAccessScholarships": "Bourses d'accès DFREE",
     "finfest": "FinFE$T",
     "getMerch": "Boutique",
     "getBooks": "Livres",
@@ -170,20 +170,45 @@
       "heading": "Des histoires de changement bien réelles",
       "subtitle": "Des voix qui révèlent la puissance de la transformation financière",
       "items": {
-        "marcus": {
-          "name": "Marcus Rodriguez",
-          "title": "Propriétaire de petite entreprise",
-          "text": "Ma famille a pu rembourser plus de 260 000 $ de dettes. Ce parcours a été une transformation, une bénédiction et une source de communion dans la fraternité."
+        "shirley": {
+          "name": "Shirley Richard",
+          "title": "Sororité Delta Sigma Theta, Inc.",
+          "text": "Je suis à la retraite, mais grâce à ce cours, j'ai pris contact avec un conseiller financier afin d'investir pour constituer un patrimoine pour mes petits-enfants."
         },
-        "elena": {
-          "name": "Elena Thompson",
-          "title": "Leader communautaire",
-          "text": "J’ai pu rembourser au moins 65 000 $ et économiser 5 000 $, ce qui m’a aidée à reprendre l’habitude d’épargner."
+        "michele": {
+          "name": "Michele Bailey",
+          "title": "Derrière Chaque Porte",
+          "text": "DFREE® m'a aidé à prendre conscience que je vivais au-dessus de mes moyens et j'ai maintenant pu réduire mon train de vie, rembourser mes principales dettes et améliorer ma cote de crédit."
         },
-        "david": {
-          "name": "David Chen",
-          "title": "Entrepreneur technologique",
-          "text": "J’ai remboursé 5 cartes de crédit, je ne suis plus esclave des dettes et je suis devenu beaucoup plus indépendant financièrement."
+        "lloyd": {
+          "name": "Lloyd Branch",
+          "title": "",
+          "text": "J'ai remboursé mes factures de voiture et de système de chauffage, ventilation et climatisation grâce aux méthodes de DFREE ®."
+        },
+        "gregory": {
+          "name": "Gregory Lawrence",
+          "title": "",
+          "text": "J'ai remboursé mes cartes de crédit grâce à l'effet boule de neige et je suis actuellement en train d'acheter une maison par moi-même."
+        },
+        "diana": {
+          "name": "Diana Belle",
+          "title": "Église Baptiste Clear View",
+          "text": "Ce processus m'a permis de mieux gérer mes finances. Je travaille maintenant à constituer un héritage pour mes filles."
+        },
+        "dee": {
+          "name": "Dee Marshall",
+          "title": "",
+          "text": ""
+        },
+        "alesia": {
+          "name": "Alesia Boone",
+          "title": "",
+          "text": ""
+        },
+        "aimy": {
+          "name": "Aimy Steele",
+          "title": "",
+          "text": ""
         }
       }
     },
