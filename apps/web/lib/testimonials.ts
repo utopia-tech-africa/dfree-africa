@@ -15,7 +15,7 @@ export type TestimonialKey = (typeof TESTIMONIAL_KEYS)[number];
 
 export type TestimonialMeta = {
   id: TestimonialKey;
-  image: StaticImageData | string;
+  image?: StaticImageData | string;
   videoUrl?: string;
 };
 
@@ -47,20 +47,17 @@ export const TESTIMONIALS: TestimonialMeta[] = [
   },
   {
     id: "dee",
-    image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1776081385/Richard_Shirley_ikm6v2.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=3fduSDDo8ZA",
+    videoUrl:
+      "https://res.cloudinary.com/dan9camhs/video/upload/v1776166046/i_am_dfree_Dee_Marshall_wodjae.mp4",
   },
   {
     id: "alesia",
-    image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1776081385/Richard_Shirley_ikm6v2.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=Z4vdh7Gin6c",
+    videoUrl:
+      "https://res.cloudinary.com/dan9camhs/video/upload/v1776166044/dfree_Testimonial_-_Alesia_Boone_zyfzyv.mp4",
   },
   {
     id: "aimy",
-    image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1776081385/Richard_Shirley_ikm6v2.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=vDmmUx2f7ts",
+    videoUrl:
+      "https://res.cloudinary.com/dan9camhs/video/upload/v1776166045/dfree_Testimonial_-_Aimy_Steele_aqhwqu.mp4",
   },
 ];
