@@ -64,7 +64,7 @@ const TestimonialCard = ({ testimonial }: Props) => {
       className="bg-white p-6 sm:p-8 flex flex-col items-center justify-between text-center 
       min-w-[85%] sm:min-w-[60%] md:min-w-100 lg:min-w-112.5"
     >
-      <p className="text-neutral-900 text-base md:text-lg font-bold leading-[140%] mb-8 sm:mb-10">
+      <p className="text-neutral-900 text-base md:text-lg font-bold leading-[140%] mb-2 sm:mb-3">
         {t(`${baseKey}.text`)}
       </p>
 
