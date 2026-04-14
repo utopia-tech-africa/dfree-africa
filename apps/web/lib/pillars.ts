@@ -31,7 +31,7 @@ export const PILLARS_DATA: Record<PillarKey, PillarData> = {
   dfreeAfrica: {
     href: "/africa",
     bgImage:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1773147771/ad1ec257-068e-4f60-9141-7744d69d897a.webp",
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1776182122/4a78e47474569357f6bcf5de958ef8f31159175b_ulgt5a.jpg",
     bgImageMobile:
       "https://res.cloudinary.com/dan9camhs/image/upload/v1773147830/bb0ffce1-62df-48d1-a6d2-28ff3807bbcf.webp",
     logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773147090/5a53b87a-0019-4653-b832-7db0069659fc.webp",
@@ -56,7 +56,7 @@ export const PILLARS_DATA: Record<PillarKey, PillarData> = {
   accessScholarships: {
     href: "/access-scholarships",
     bgImage:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1773148133/b2ac3b5c-b8c1-4b50-a3ba-11c5dff89925.webp",
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1776182346/baa58ff9d2a36004894d1316d3d5698a16f38671_m6n11w.jpg",
     bgImageMobile:
       "https://res.cloudinary.com/dan9camhs/image/upload/v1773148188/88d34c7a-1893-415b-b188-6014cf91c1b6.webp",
     imagePositionClassName: "object-[center_24%] md:object-center",

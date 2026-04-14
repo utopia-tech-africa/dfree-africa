@@ -60,8 +60,8 @@
     "communityCampaigns": "Campagnes communautaires",
     "dfreeAccessScholarships": "Bourses d'accès DFREE",
     "finfest": "FinFE$T",
-    "getMerch": "Boutique",
-    "getBooks": "Livres",
+    "booksMerch": "Livres et marchandises",
+    "attendEvents": "Participez aux événements",
     "contactUs": "Nous contacter"
   },
   "footer": {
@@ -106,9 +106,9 @@
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " est un organisme à but non lucratif qui promeut le bien-être financier, l'autonomisation économique et l'autosuffisance dans les communautés mal desservies en offrant des initiatives gratuites et centrées sur la communauté qui aident les familles à bâtir une confiance et une liberté financières durables.",
       "missionTitle": "Mission",
-      "mission": "Promouvoir le bien-être financier dans les communautés mal desservies par des programmes et des outils gratuits qui aident à bâtir une confiance financière durable.",
+      "mission": "Le mouvement DFREE® pour la liberté financière promeut une approche du bien-être financier fondée sur des valeurs, encourageant la discipline, la responsabilité et la stabilité à long terme grâce à des stratégies pratiques et à un changement de comportement.",
       "visionTitle": "Vision",
-      "vision": "Un avenir où chaque communauté dispose des ressources et de la confiance nécessaires pour atteindre la liberté financière et le progrès générationnel.",
+      "vision": "En tant que bras philanthropique du Mouvement, la Fondation mondiale DFREE s'engage à élargir l'accès et l'impact en atteignant les communautés mal desservies, en supprimant les obstacles à l'éducation financière et en connectant les individus aux ressources et au soutien nécessaires pour construire une autonomisation financière durable.",
       "imageGalleryAlt": "Galerie d'images Qui nous sommes"
     },
     "pillars": {
@@ -130,11 +130,11 @@
         },
         "finfest": {
           "name": "FinFE$T® : où la richesse rencontre le bien-être",
-          "description": "FinFE$T® est l'événement communautaire gratuit phare de la Fondation mondiale DFREE® qui allie éducation financière, santé et bien-être à travers des expériences engageantes, dotant les familles d'outils pratiques pour un bien-être holistique et une prospérité durable."
+          "description": "FinFe$t® est l'événement phare de la communauté DFREE®. Il allie éducation financière, santé et bien-être à travers des expériences interactives afin de fournir aux participants des outils pratiques pour favoriser un bien-être global et une prospérité durable. C'est 100 % gratuit."
         },
         "accessScholarships": {
           "name": "Bourses d'accès DFREE®",
-          "description": "Le Programme de bourses DFREE® offre un soutien basé sur les besoins qui supprime les barrières financières à la participation au parcours DFREE®, en donnant accès aux ressources éducatives, à l'apprentissage numérique, à la formation en direct et à une aide d'urgence limitée pour aider les personnes à poursuivre la réduction de la dette et une liberté financière durable."
+          "description": "Le programme de bourses DFREE® offre un soutien basé sur les besoins afin de supprimer les obstacles financiers à l'accès au contenu DFREE® – ressources éducatives, apprentissage numérique, formations en direct, conseils financiers gratuits et aide d'urgence limitée – pour aider les membres de notre communauté à réduire leurs dettes et à atteindre une liberté financière durable."
         }
       }
     },
@@ -365,7 +365,7 @@
   },
   "bdc": {
     "hero": {
-      "title": "Défi du milliard de dollars DFREE®",
+      "title": "Le Défi du Milliard de Dollars",
       "subtitle": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier grâce à une plateforme numérique fondée sur la responsabilité communautaire.",
       "ctaLabel": "Rejoindre le BDC",
       "ctaHref": "#",

@@ -60,8 +60,8 @@
     "communityCampaigns": "Community campaigns",
     "finfest": "FinFE$T",
     "dfreeAccessScholarships": "DFREE® Access Scholarships",
-    "getMerch": "Get merch",
-    "getBooks": "Get Books",
+    "booksMerch": "Books & Merch",
+    "attendEvents": "Attend Events",
     "contactUs": "Contact us"
   },
   "footer": {
@@ -94,11 +94,11 @@
   },
   "home": {
     "hero": {
-      "title": "Break free from financial constraints",
+      "title": "Welcome to your financial freedom",
       "subtitle": "Empower yourself with practical tools and community-driven strategies. Transform your economic future through education, support, and collective action.",
       "discoverMoreCta": "Discover more",
-      "donateNowCta": "Donate now",
-      "freshOffThePress": "FRESH OFF THE PRESS",
+      "donateNowCta": "Donate to the movement",
+      "freshOffThePress": "HOT OFF THE PRESS",
       "buyNowCta": "Buy now"
     },
     "whoWeAre": {
@@ -106,9 +106,9 @@
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " is a national nonprofit advancing financial wellness, economic empowerment, and self-sufficiency in underserved communities by delivering free, community-centered initiatives that help families build lasting financial confidence and freedom.",
       "missionTitle": "Mission",
-      "mission": "Advance financial wellness in underserved communities through free programs and tools that help build lasting financial confidence.",
+      "mission": "The DFREE® Financial Freedom Movement advances a values-based approach to financial wellness, promoting discipline, responsibility, and long-term stability through practical strategies and behavioral change.",
       "visionTitle": "Vision",
-      "vision": "A future where every community has the resources and confidence to achieve financial freedom and generational progress.",
+      "vision": "As the philanthropic arm of the Movement, the DFREE Global Foundation is committed to expanding access and impact by reaching underserved communities, removing barriers to financial education, and connecting individuals to the resources and support necessary to build lasting financial empowerment.",
       "imageGalleryAlt": "Who We Are Image Gallery"
     },
     "pillars": {
@@ -130,11 +130,11 @@
         },
         "finfest": {
           "name": "FinFE$T®: Where Wealth Meets Wellness",
-          "description": "FinFE$T® is the DFREE® Global Foundation's signature free community event that blends financial education, health, and wellness through engaging experiences, equipping families with practical tools to drive holistic well-being and long-term prosperity."
+          "description": "FinFe$t® is DFREE®'s flagship community event that blends financial education, health, and wellness through engaging experiences to equip participants with practical tools to drive holistic well-being and long-term prosperity. It’s 100% free."
         },
         "accessScholarships": {
           "name": "DFREE® Access Scholarships",
-          "description": "The DFREE® Scholarship Program provides need-based support that removes financial barriers to participation in the DFREE® journey, offering access to educational resources, digital learning, live training, and limited emergency assistance to help individuals pursue debt reduction and lasting financial freedom."
+          "description": " The DFREE® Scholarship program provides need-based support to remove financial barriers to accessing DFREE® content – educational resources, digital learning, live training, free financial counseling and limited emergency assistance to help members of our community pursue debt reduction and lasting financial freedom."
         }
       }
     },
@@ -500,7 +500,7 @@
   },
   "bdc": {
     "hero": {
-      "title": "DFREE® Billion Dollar Challenge",
+      "title": "The Billion Dollar Challenge",
       "subtitle": "Eliminate debt, build savings, and take control of your financial future through a digital platform built on community accountability.",
       "ctaLabel": "Join BDC today",
       "ctaHref": "https://bdc.dfreefoundation.org",
@@ -728,7 +728,7 @@
           "desc": "Women are moving from financial stress toward stability and long-term wealth building."
         }
       },
-      "discoverMore": "Discover More",
+      "discoverMore": "Connect with Us",
       "imageAlt": "Featured Campaigns Image",
       "href": "#"
     },
