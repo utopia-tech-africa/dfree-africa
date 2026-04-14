@@ -49,7 +49,7 @@ const TestimonialCard = ({ testimonial }: Props) => {
 
           <button
             onClick={toggleMute}
-            className="absolute top-2 right-2 bg-black/60 text-white p-2 rounded-full hover:bg-black/80 transition z-10"
+            className="absolute top-2 right-2 bg-[#AFAFAF40] text-white p-2 rounded-full"
           >
             {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
           </button>
