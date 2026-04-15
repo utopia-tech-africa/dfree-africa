@@ -105,7 +105,7 @@
       "title": "Who we are",
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " is a national nonprofit advancing financial wellness, economic empowerment, and self-sufficiency in underserved communities by delivering free, community-centered initiatives that help families build lasting financial confidence and freedom.",
-      "missionTitle": "Mission",
+      "missionTitle": "Assignment",
       "mission": "The DFREE® Financial Freedom Movement advances a values-based approach to financial wellness, promoting discipline, responsibility, and long-term stability through practical strategies and behavioral change.",
       "visionTitle": "Vision",
       "vision": "As the philanthropic arm of the Movement, the DFREE Global Foundation is committed to expanding access and impact by reaching underserved communities, removing barriers to financial education, and connecting individuals to the resources and support necessary to build lasting financial empowerment.",
@@ -141,27 +141,28 @@
     "ourImpact": {
       "label": "Our impact",
       "title": "Mapping our impact across communities",
-      "description": "Every milestone represents lives transformed and hope restored.",
+      "description": " Every milestone represents lives transformed and a step closer to financial freedom.",
+      "text": "Several community projects undertaken",
       "stats": {
         "completedProjects": {
           "value": "1900",
           "suffix": "+",
-          "label": "Completed projects"
+          "label": "Churches & Organizations"
         },
         "livesImpacted": {
           "value": "3400",
           "suffix": "+",
-          "label": "Lives impacted"
+          "label": "Academy graduates"
         },
         "debtCleared": {
           "value": "2500",
           "suffix": "$",
-          "label": "Debt cleared"
+          "label": "Collectively debt paid"
         },
         "youngPeopleTrained": {
           "value": "2500",
           "suffix": "+",
-          "label": "Young people trained"
+          "label": "Collectively saved"
         }
       }
     },
@@ -764,7 +765,7 @@
       "title": "Empowering Africa",
       "subtitle": "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
       "cta": {
-        "label": "Donate to the movement",
+        "label": "Donate to a project",
         "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       }
     },

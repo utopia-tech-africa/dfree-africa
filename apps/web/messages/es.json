@@ -105,7 +105,7 @@
       "title": "Quiénes somos",
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " es una organización sin fines de lucro que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desatendidas mediante iniciativas gratuitas y centradas en la comunidad que ayudan a las familias a construir una confianza y libertad financieras duraderas.",
-      "missionTitle": "Misión",
+      "missionTitle": "Asignación",
       "mission": "El Movimiento de Libertad Financiera DFREE® promueve un enfoque basado en valores para el bienestar financiero, fomentando la disciplina, la responsabilidad y la estabilidad a largo plazo a través de estrategias prácticas y cambios de comportamiento.",
       "visionTitle": "Visión",
       "vision": "Como brazo filantrópico del Movimiento, la Fundación Global DFREE está comprometida con la ampliación del acceso y el impacto, llegando a las comunidades desatendidas, eliminando las barreras a la educación financiera y conectando a las personas con los recursos y el apoyo necesarios para lograr un empoderamiento financiero duradero.",
@@ -140,28 +140,29 @@
     },
     "ourImpact": {
       "label": "Nuestro impacto",
-      "title": "Mapeando nuestro impacto en las comunidades",
-      "description": "Cada hito representa vidas transformadas y esperanza restaurada.",
+      "title": "Visualizar nuestro impacto en las comunidades",
+      "description": "Cada logro representa una transformación en la vida de las personas y un paso más cerca de la libertad financiera.",
+      "text": "Se han emprendido varios proyectos comunitarios",
       "stats": {
         "completedProjects": {
           "value": "1900",
           "suffix": "+",
-          "label": "Proyectos completados"
+          "label": "Iglesias y organizaciones"
         },
         "livesImpacted": {
           "value": "3400",
           "suffix": "+",
-          "label": "Vidas impactadas"
+          "label": "Graduados de la academia"
         },
         "debtCleared": {
           "value": "2500",
           "suffix": "$",
-          "label": "Deuda saldada"
+          "label": "Deuda pagada colectivamente"
         },
         "youngPeopleTrained": {
           "value": "2500",
           "suffix": "+",
-          "label": "Jóvenes formados"
+          "label": "Ahorrados colectivamente"
         }
       }
     },
@@ -629,7 +630,7 @@
       "title": "Empoderar África",
       "subtitle": "Impulsando la libertad financiera y el desarrollo comunitario sostenible mediante educación, formación y programas económicos.",
       "cta": {
-        "label": "Donar al movimiento",
+        "label": "Dona a un proyecto",
         "href": "#"
       }
     },
