@@ -97,7 +97,7 @@
       "title": "Libérate de las limitaciones financieras",
       "subtitle": "Empodérate con herramientas prácticas y estrategias impulsadas por la comunidad. Transforma tu futuro económico mediante educación, apoyo y acción colectiva.",
       "discoverMoreCta": "Descubrir más",
-      "donateNowCta": "Donar ahora",
+      "donateNowCta": "Dona al movimiento",
       "freshOffThePress": "RECIÉN PUBLICADO",
       "buyNowCta": "Comprar ahora"
     },
@@ -391,7 +391,7 @@
           "title": "Toma el control de tu historia financiera."
         },
         "group": {
-          "label": "En grupo",
+          "label": "Grupo",
           "title": "Compañeros que buscan crecimiento financiero."
         },
         "communities": {
@@ -522,7 +522,7 @@
     "hero": {
       "title": "Campañas comunitarias",
       "subtitle": "Campañas comunitarias dinámicas que unen iglesias, grupos cívicos y organizaciones locales para implementar programas de empoderamiento financiero DFREE® sincronizados. Estas campañas están diseñadas para crear un impacto colectivo promoviendo el aprendizaje compartido, la responsabilidad mutua y la celebración comunitaria.",
-      "ctaLabel": "Únete al movimiento",
+      "ctaLabel": "Conecta con nosotras",
       "ctaHref": "#",
       "imageAlt": "Fondo de campañas comunitarias"
     },
@@ -595,7 +595,7 @@
       "title": "¿Listo para unirte a la comunidad?",
       "descriptionLine1": "Cuéntanos tus metas y desafíos,",
       "descriptionLine2": "te guiaremos hacia el apoyo que mejor sirva tu camino.",
-      "buttonText": "Únete al movimiento",
+      "buttonText": "Conecta con nosotras",
       "imageAlt": "Comunidad celebrando juntos"
     }
   },

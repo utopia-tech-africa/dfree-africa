@@ -44,7 +44,7 @@ export async function BDCImpact() {
           </div>
         </div>
 
-        <p className="text-lg sm:text-[32px] sm:font-bold text-neutral-100 font-montserrat max-w-[800px]">
+        <p className="text-lg sm:text-[32px] sm:font-bold text-neutral-100 font-montserrat">
           {t("tagline")}
         </p>
       </section>

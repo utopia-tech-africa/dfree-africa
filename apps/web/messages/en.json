@@ -97,7 +97,7 @@
       "title": "Break free from financial constraints",
       "subtitle": "Empower yourself with practical tools and community-driven strategies. Transform your economic future through education, support, and collective action.",
       "discoverMoreCta": "Discover more",
-      "donateNowCta": "Donate now",
+      "donateNowCta": "Donate to the movement",
       "freshOffThePress": "FRESH OFF THE PRESS",
       "buyNowCta": "Buy now"
     },
@@ -526,7 +526,7 @@
           "title": "Take control of your financial story."
         },
         "group": {
-          "label": "As a group",
+          "label": "Group",
           "title": "Peers seeking financial growth."
         },
         "communities": {
@@ -657,7 +657,7 @@
     "hero": {
       "title": "Community Campaigns",
       "subtitle": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs. These campaigns are designed to create a collective impact by promoting shared learning, mutual accountability, and community celebration.",
-      "ctaLabel": "Join the movement",
+      "ctaLabel": "Connect with us",
       "ctaHref": "#",
       "imageAlt": "Community campaigns background"
     },
@@ -730,7 +730,7 @@
       "title": "Ready to join the community?",
       "descriptionLine1": "Tell us about your goals and challenges,",
       "descriptionLine2": "We'll help guide you to the support that best serves your journey.",
-      "buttonText": "Join the movement",
+      "buttonText": "Connect with us",
       "imageAlt": "Community celebrating together"
     }
   },

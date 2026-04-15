@@ -7,9 +7,9 @@ import { PiTargetLight, PiUsersThree } from "react-icons/pi";
 import { BsBarChartLine } from "react-icons/bs";
 
 const STEP_KEYS = [
-  { icon: PiUsersThree, key: "buildCommunity" as const },
   { icon: PiTargetLight, key: "setGoal" as const },
   { icon: BsBarChartLine, key: "trackProgress" as const },
+  { icon: PiUsersThree, key: "buildCommunity" as const },
   { icon: GoShieldCheck, key: "stayAccountable" as const },
 ];
 

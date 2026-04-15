@@ -97,7 +97,7 @@
       "title": "Libérez-vous des contraintes financières",
       "subtitle": "Donnez-vous les moyens d'agir grâce à des outils pratiques et des stratégies portées par la communauté. Transformez votre avenir économique par l'éducation, le soutien et l'action collective.",
       "discoverMoreCta": "Découvrir plus",
-      "donateNowCta": "Faire un don maintenant",
+      "donateNowCta": "Faites un don au mouvement",
       "freshOffThePress": "FRAÎCHEMENT PARU",
       "buyNowCta": "Acheter maintenant"
     },
@@ -391,7 +391,7 @@
           "title": "Prenez le contrôle de votre histoire financière."
         },
         "group": {
-          "label": "En groupe",
+          "label": "Groupe",
           "title": "Des pairs en quête de croissance financière."
         },
         "communities": {
@@ -522,7 +522,7 @@
     "hero": {
       "title": "Campagnes communautaires",
       "subtitle": "Des campagnes communautaires dynamiques qui rassemblent églises, groupes civiques et organisations locales pour mettre en œuvre des programmes DFREE® d'autonomisation financière synchronisés. Ces campagnes visent à créer un impact collectif en favorisant l'apprentissage partagé, la responsabilité mutuelle et la célébration communautaire.",
-      "ctaLabel": "Rejoindre le mouvement",
+      "ctaLabel": "Connectez-vous avec nous",
       "ctaHref": "#",
       "imageAlt": "Arrière-plan des campagnes communautaires"
     },
@@ -595,7 +595,7 @@
       "title": "Prêt à rejoindre la communauté ?",
       "descriptionLine1": "Parlez-nous de vos objectifs et défis,",
       "descriptionLine2": "nous vous orienterons vers le soutien qui sert le mieux votre parcours.",
-      "buttonText": "Rejoindre le mouvement",
+      "buttonText": "Connectez-vous avec nous",
       "imageAlt": "Communauté en célébration"
     }
   },

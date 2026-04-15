@@ -25,7 +25,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
           <h3 className="font-roboto uppercase font-bold text-3xl">{title}</h3>
         </div>
         <div>
-          <p className="font-medium text-lg ">{description}</p>
+          <p className="text-lg ">{description}</p>
         </div>
       </div>
     </ComponentLayout>
