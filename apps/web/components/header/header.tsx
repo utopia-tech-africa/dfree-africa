@@ -41,11 +41,11 @@ const NAV_CONFIG: NavItemConfig[] = [
       { labelKey: "billionDollarChallenge", href: "/billion-dollar-challenge" },
       { labelKey: "globalFoundationInAfrica", href: "/africa" },
       { labelKey: "communityCampaigns", href: "/community-campaigns" },
+      { labelKey: "finfest", href: "/finfest" },
       {
-        labelKey: "foundationScholarshipCommitment",
+        labelKey: "dfreeAccessScholarships",
         href: "/access-scholarships",
       },
-      { labelKey: "finfest", href: "/finfest" },
     ],
   },
   {
@@ -53,8 +53,8 @@ const NAV_CONFIG: NavItemConfig[] = [
     labelKey: "getInvolved",
     href: "#",
     subItems: [
-      { labelKey: "getMerch", href: "https://store.dfree.com/" },
-      { labelKey: "getBooks", href: "https://store.dfree.com/" },
+      { labelKey: "booksMerch", href: "https://store.dfree.com/" },
+      { labelKey: "attendEvents", href: "" },
       { labelKey: "contactUs", href: "#footer" },
     ],
   },

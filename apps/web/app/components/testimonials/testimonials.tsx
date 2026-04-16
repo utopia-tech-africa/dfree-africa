@@ -47,10 +47,10 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="relative z-10">
+        <div className="relative z-10 -mx-4 md:-mx-10 lg:-mx-20 overflow-hidden">
           <div
             ref={scrollRef}
-            className="flex gap-4 overflow-x-auto md:overflow-visible scrollbar-hide px-4 md:px-0"
+            className="flex gap-4 overflow-x-auto px-4 md:px-10 lg:px-20 scrollbar-hide"
           >
             {TESTIMONIALS.map((testimonial) => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} />

@@ -48,6 +48,15 @@
     "visitStore": "Visitar tienda",
     "submit": "Enviar"
   },
+  "contactUs": {
+    "text": "¿Tienes preguntas? ¡Hablemos!",
+    "subtext": "¡Siempre nos encanta saber de ti! No dudes en contactarnos y te responderemos lo antes posible.",
+    "contactCta": "Contáctanos",
+    "newsletterCta": "Suscribirse al boletín",
+    "placeholderText": "Introduce tu correo electrónico",
+    "buttonText": "Enviar",
+    "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad"
+  },
   "nav": {
     "aboutUs": "Sobre nosotros",
     "impact": "Impacto",
@@ -58,10 +67,10 @@
     "billionDollarChallenge": "Desafío del billón de dólares",
     "globalFoundationInAfrica": "Fundación global en África",
     "communityCampaigns": "Campañas comunitarias",
-    "foundationScholarshipCommitment": "Compromiso de becas de la fundación",
-    "finfest": "FinFE$Ts",
-    "getMerch": "Tienda",
-    "getBooks": "Libros",
+    "dfreeAccessScholarships": "Becas de acceso DFREE",
+    "finfest": "FinFE$T",
+    "booksMerch": "Libros y mercancía",
+    "attendEvents": "Asiste a eventos",
     "contactUs": "Contáctenos"
   },
   "footer": {
@@ -105,10 +114,10 @@
       "title": "Quiénes somos",
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " es una organización sin fines de lucro que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desatendidas mediante iniciativas gratuitas y centradas en la comunidad que ayudan a las familias a construir una confianza y libertad financieras duraderas.",
-      "missionTitle": "Misión",
-      "mission": "Promover el bienestar financiero en comunidades desatendidas mediante programas y herramientas gratuitos que ayudan a construir una confianza financiera duradera.",
+      "missionTitle": "Asignación",
+      "mission": "El Movimiento de Libertad Financiera DFREE® promueve un enfoque basado en valores para el bienestar financiero, fomentando la disciplina, la responsabilidad y la estabilidad a largo plazo a través de estrategias prácticas y cambios de comportamiento.",
       "visionTitle": "Visión",
-      "vision": "Un futuro donde cada comunidad tenga los recursos y la confianza para alcanzar la libertad financiera y el progreso generacional.",
+      "vision": "Como brazo filantrópico del Movimiento, la Fundación Global DFREE está comprometida con la ampliación del acceso y el impacto, llegando a las comunidades desatendidas, eliminando las barreras a la educación financiera y conectando a las personas con los recursos y el apoyo necesarios para lograr un empoderamiento financiero duradero.",
       "imageGalleryAlt": "Galería de imágenes Quiénes somos"
     },
     "pillars": {
@@ -130,38 +139,39 @@
         },
         "finfest": {
           "name": "FinFE$T®: Donde la riqueza se encuentra con el bienestar",
-          "description": "FinFE$T® es el evento comunitario gratuito emblemático de la Fundación Global DFREE® que combina educación financiera, salud y bienestar a través de experiencias atractivas, equipando a las familias con herramientas prácticas para el bienestar holístico y la prosperidad a largo plazo."
+          "description": "FinFe$t® es el evento comunitario insignia de DFREE® que combina educación financiera, salud y bienestar a través de experiencias participativas para brindar a los participantes herramientas prácticas que impulsen el bienestar integral y la prosperidad a largo plazo. Es 100% gratuito."
         },
         "accessScholarships": {
           "name": "Becas de acceso DFREE®",
-          "description": "El Programa de becas DFREE® ofrece apoyo basado en necesidades que elimina las barreras financieras para participar en el recorrido DFREE®, brindando acceso a recursos educativos, aprendizaje digital, formación en vivo y asistencia de emergencia limitada para ayudar a las personas a lograr la reducción de deudas y una libertad financiera duradera."
+          "description": "El programa de becas DFREE® proporciona apoyo basado en las necesidades para eliminar las barreras financieras que impiden el acceso al contenido de DFREE®: recursos educativos, aprendizaje digital, formación en directo, asesoramiento financiero gratuito y asistencia de emergencia limitada para ayudar a los miembros de nuestra comunidad a reducir sus deudas y lograr una libertad financiera duradera."
         }
       }
     },
     "ourImpact": {
       "label": "Nuestro impacto",
-      "title": "Mapeando nuestro impacto en las comunidades",
-      "description": "Cada hito representa vidas transformadas y esperanza restaurada.",
+      "title": "Visualizar nuestro impacto en las comunidades",
+      "description": "Cada logro representa una transformación en la vida de las personas y un paso más cerca de la libertad financiera.",
+      "text": "Se han emprendido varios proyectos comunitarios",
       "stats": {
         "completedProjects": {
           "value": "1900",
           "suffix": "+",
-          "label": "Proyectos completados"
+          "label": "Iglesias y organizaciones"
         },
         "livesImpacted": {
           "value": "3400",
           "suffix": "+",
-          "label": "Vidas impactadas"
+          "label": "Graduados de la academia"
         },
         "debtCleared": {
           "value": "2500",
           "suffix": "$",
-          "label": "Deuda saldada"
+          "label": "Deuda pagada colectivamente"
         },
         "youngPeopleTrained": {
           "value": "2500",
           "suffix": "+",
-          "label": "Jóvenes formados"
+          "label": "Ahorrados colectivamente"
         }
       }
     },
@@ -170,20 +180,45 @@
       "heading": "Historias reales de cambio",
       "subtitle": "Voces que revelan el poder de la transformación financiera",
       "items": {
-        "marcus": {
-          "name": "Marcus Rodriguez",
-          "title": "Propietario de pequeña empresa",
-          "text": "Mi familia ha podido pagar más de 260 000 $ de deuda. El camino ha sido transformador, una bendición y una fuente de comunión en la fe."
+        "shirley": {
+          "name": "Shirley Richard",
+          "title": "Hermandad Delta Sigma Theta, Inc.",
+          "text": "Estoy jubilado, sin embargo, gracias al curso, contacté con un asesor financiero para invertir y crear un patrimonio generacional para mis nietos."
         },
-        "elena": {
-          "name": "Elena Thompson",
-          "title": "Líder comunitaria",
-          "text": "He podido pagar al menos 65 000 $ y ahorrar 5 000 $, lo que me ha ayudado a recuperar el hábito de ahorrar."
+        "michele": {
+          "name": "Michele Bailey",
+          "title": "Detrás de Cada Puerta",
+          "text": "DFREE ® me ayudó a darme cuenta de que estaba viviendo por encima de mis posibilidades y ahora he podido reducir mis gastos, saldar mis deudas importantes y mejorar mi puntaje crediticio."
         },
-        "david": {
-          "name": "David Chen",
-          "title": "Emprendedor tecnológico",
-          "text": "Pagué 5 tarjetas de crédito, ya no estoy esclavizado por las deudas y me he vuelto mucho más independiente financieramente."
+        "lloyd": {
+          "name": "Lloyd Branch",
+          "title": "",
+          "text": "Pagué las facturas de mi coche y del sistema de climatización utilizando los métodos de DFREE ®."
+        },
+        "gregory": {
+          "name": "Gregory Lawrence",
+          "title": "",
+          "text": "He pagado mis tarjetas de crédito con el método de la bola de nieve y actualmente estoy en proceso de comprar una casa por mi cuenta."
+        },
+        "diana": {
+          "name": "Diana Belle",
+          "title": "Iglesia Bautista Clear View",
+          "text": "Ahora administro mejor mis finanzas tras haber pasado por este proceso. Estoy trabajando para dejar un legado a mis hijas."
+        },
+        "dee": {
+          "name": "Dee Marshall",
+          "title": "",
+          "text": ""
+        },
+        "alesia": {
+          "name": "Alesia Boone",
+          "title": "",
+          "text": ""
+        },
+        "aimy": {
+          "name": "Aimy Steele",
+          "title": "",
+          "text": ""
         }
       }
     },
@@ -340,7 +375,7 @@
   },
   "bdc": {
     "hero": {
-      "title": "Desafío del billón de dólares DFREE®",
+      "title": "El Desafío de los Mil Millones de Dólares",
       "subtitle": "Elimina deudas, ahorra y toma el control de tu futuro financiero a través de una plataforma digital basada en la responsabilidad comunitaria.",
       "ctaLabel": "Únete al BDC hoy",
       "ctaHref": "#",
@@ -604,12 +639,13 @@
       "title": "Empoderar África",
       "subtitle": "Impulsando la libertad financiera y el desarrollo comunitario sostenible mediante educación, formación y programas económicos.",
       "cta": {
-        "label": "Donar al movimiento",
+        "label": "Dona a un proyecto",
         "href": "#"
       }
     },
     "ourStory": {
       "title": "nuestra historia",
+      "subtitle": "Transformando los paisajes financieros en las comunidades africanas",
       "description": "Impulsado por una visión de empoderar a la diáspora africana, el Dr. DeForest B. Soaries Jr. fundó la Dfree Global Foundation, que dio origen a DFREE® África, para reemplazar el ciclo de pobreza con una mentalidad de riqueza y autosuficiencia. Esta misión está profundamente arraigada en la larga conexión del Dr. Soaries con el continente, que comenzó con su primera visita a Sudáfrica en 1990. Desde entonces, ha pasado décadas forjando alianzas continentales que promueven el crecimiento económico, social y espiritual, dedicando su liderazgo a construir conexiones estratégicas en todo el continente, especialmente en Ghana, Liberia, Uganda, Botsuana, Sudáfrica y varios otros países. Su trabajo se centra en integrar el desarrollo económico con el progreso educativo, espiritual y social para crear estándares de vida sostenibles y más altos para todos."
     },
     "featuredProjects": {
@@ -642,59 +678,6 @@
         }
       }
     },
-    "ghana": {
-      "title": "DFREE® en Ghana",
-      "aboutTitle": "Acerca de",
-      "aboutText": "Para marcar el 10º aniversario de su primera visita a Ghana, el Dr. Soaries fue entronizado como jefe por Su Majestad el Rey de Akyem Abuakwa, en reconocimiento a su trabajo de desarrollo en todo el reino y el país. Como Nkosuorhene (jefe de desarrollo), continúa impulsando proyectos que abordan directamente a la comunidad, especialmente en educación y medios de vida para niños y jóvenes.",
-      "featuredProjects": {
-        "subtitle": "Proyectos destacados",
-        "description": "Con el apoyo de socios dedicados y líderes comunitarios, nuestras iniciativas generan un impacto medible y crean un cambio duradero en todo Ghana."
-      },
-      "sections": {
-        "workplace": {
-          "title": "DFREE® EN EL LUGAR DE TRABAJO",
-          "description": "El programa DFREE® fue piloteado en Ghana dentro de una organización donde los préstamos laborales eran una práctica común. Sin un límite en la capacidad de préstamo de los empleados, los empleadores capitalizaron esta práctica para dejar a la mayoría de los empleados en déficit de salarios al final del ciclo de pago. Bajo el liderazgo de Mark, varios miembros del personal de la organización se unieron al club y establecieron objetivos individuales y comunitarios para pagar deudas utilizando estrategias como el método de bola de nieve enseñado en el programa. Esto se inició y se convirtió en una campaña incluso sin el acceso de los participantes a los libros de trabajo. Más importante aún, formaron un grupo de apoyo que motivó y animó a unos a otros compartiendo historias de éxito y enfoques personales para la autodisciplina. En resumen, nació un cambio de estilo de vida y mentalidad alrededor del dinero y los gastos."
-        },
-        "church": {
-          "title": "DFREE® EN LA IGLESIA",
-          "description": "El programa DFREE® fue piloteado en Ghana dentro de una organización donde los préstamos laborales eran una práctica común. Sin un límite en la capacidad de préstamo de los empleados, los empleadores capitalizaron esta práctica para dejar a la mayoría de los empleados en déficit de salarios al final del ciclo de pago. Bajo el liderazgo de Mark, varios miembros del personal de la organización se unieron al club y establecieron objetivos individuales y comunitarios para pagar deudas utilizando estrategias como el método de bola de nieve enseñado en el programa. Esto se inició y se convirtió en una campaña incluso sin el acceso de los participantes a los libros de trabajo. Más importante aún, formaron un grupo de apoyo que motivó y animó a unos a otros compartiendo historias de éxito y enfoques personales para la autodisciplina. En resumen, nació un cambio de estilo de vida y mentalidad alrededor del dinero y los gastos."
-        },
-        "partnerships": {
-          "title": "ASOCIACIONES",
-          "description": "El DFREE® Club, Ghana se ha asociado con el capítulo Gamma Alpha Sigma Zeta de la hermandad Zeta Phi Beta, Inc. (A.K.A. Ghana Zetas) para promover la alfabetización financiera entre grupos específicos de consumidores. Esto incluye principalmente a mujeres y niñas en refugios y hogares de transición a menudo rescatadas o escapando de hogares abusivos. También trabajan con pescadores y agricultores en comunidades rurales, y vendedores ambulantes en áreas urbanas. Trabajando a través del Santuario Agape de la Iglesia Bíblica de la Victoria, el compromiso de los jóvenes en el BDC y la extensión a los comerciantes del mercado han sido campañas extremadamente exitosas que solo pueden agruparse a través de otros santuarios de la iglesia."
-        },
-        "challenges": {
-          "title": "DESAFÍOS",
-          "description": "El DFREE® Club, Ghana ha luchado con la sostenibilidad a lo largo de los años. La financiación para viajes, el acceso a recursos como libros y servicio de internet son algunos de los factores que afectan a los pocos voluntarios que se han comprometido a impulsar la causa. En esta nueva fase, el énfasis en trabajar a través de la iglesia, con suerte, cambia la narrativa. El apoyo en forma de libros y financiación para organizar eventos, educar a los comerciantes del mercado y llegar a más beneficiarios sería bienvenido."
-        },
-        "successes": {
-          "title": "ÉXITOS",
-          "description": "El DFREE® Club, Ghana ha obtenido algunos éxitos. Más de 100 individuos han completado exitosamente el programa desde su creación. Además de la deuda pagada, los miembros del grupo también han ahorrado colectivamente más de 60,000 cedis ($8,000) en aproximadamente 3 años a través del Billion Dollar Challenge. El Club continúa liderando la carga de ayudar a los individuos a pagar sus deudas, ahorrar para crear riqueza, y aprender a invertir y crecer sus ingresos para mejores estándares de vida."
-        }
-      }
-    },
-    "southAfrica": {
-      "title": "DFREE® en Sudáfrica",
-      "aboutText": "Nuestras vidas continúan siendo bendecidas por el trabajo que hacemos en DFREE®. Es un honor que atesoramos grandemente que Dios pueda usarnos para tan gran mandato de ayudar a las personas a vivir en libertad financiera. Landi y Mali, DFREE® SA.",
-      "featuredProjects": {
-        "subtitle": "Proyectos destacados",
-        "description": "Con el apoyo de socios dedicados y líderes comunitarios, nuestras iniciativas generan un impacto medible y crean un cambio duradero en toda Sudáfrica."
-      },
-      "sections": {
-        "partnerships": {
-          "title": "ASOCIACIONES",
-          "description": "Karani Leadership – Esta es una empresa negra exitosa que ofrece coaching empresarial y de fortalezas para emprendedores, y coaching ejecutivo para la alta gerencia. La asociación dio lugar a la incorporación de un curso DFREE® de 4 semanas en su programa de emprendedores. Lucha Lunako – dfree® Sudáfrica se asoció con esta prominente organización de desarrollo juvenil sin fines de lucro para mejorar su división de Mejora del Comportamiento Financiero, basándose en el currículo DFREE® Young Money. Pastora Debbie Bruce y la Convención Bautista de Sudáfrica (BCSA) – La Sra. Bruce es la vicepresidenta de la Convención que ha fomentado una relación para capacitar a pastores y líderes de la iglesia en la Convención. A través de la asociación, también se realizan sesiones de capacitación de capacitadores para la Fraternidad de Ministros George East para que a su vez puedan capacitar a otros líderes para lanzar el programa dfree® en sus iglesias."
-        },
-        "challenges": {
-          "title": "DESAFÍOS",
-          "description": "Las capacitaciones en persona fueron reducidas debido al confinamiento por COVID-19 y las restricciones impuestas por el gobierno, que limitaron el número de personas y la duración de cada reunión. Las limitaciones financieras de los participantes debido a la alta tasa de pérdidas de empleo en 2020/2021 significaron que las personas tenían necesidades competentes en sus ingresos de estímulo gubernamental. El servicio de internet no era una prioridad en la lista de necesidades, lo que significó baja asistencia en nuestras reuniones virtuales. Lamentablemente, los más afectados también eran el grupo de personas muy endeudadas a prestamistas y tiendas minoristas."
-        },
-        "successes": {
-          "title": "ÉXITOS",
-          "description": "Algunos hitos notables alcanzados por DFREE® Sudáfrica incluyen el inicio de clubes de ahorro, el fomento de emprendedores de subsistencia y cooperativas en comunidades sudafricanas desatendidas que han surgido. Creemos en la investigación continua y extensiva de la alfabetización financiera conductual."
-        }
-      }
-    },
     "projects": {
       "pageTitle": "Todos los proyectos",
       "showAllCountries": "Mostrar todos los países",
@@ -712,6 +695,65 @@
       "title": "Creemos empoderamiento financiero",
       "description": "Al invertir en educación, agua limpia para una aldea, o capacitación para los jóvenes, haces una contribución significativa para empoderar a generaciones enteras para que sean independientes y tengan mejor calidad de vida.",
       "label": "Aprende cómo puedes apoyar"
+    }
+  },
+  "ghana": {
+    "pageInfo": {
+      "mainTitle": "DFREE® en Ghana",
+      "descTitle": "Acerca de",
+      "descText": "Para marcar el 10º aniversario de su primera visita a Ghana, el Dr. Soaries fue entronizado como jefe por Su Majestad el Rey de Akyem Abuakwa, en reconocimiento a su trabajo de desarrollo en todo el reino y el país. Como Nkosuorhene (jefe de desarrollo), continúa impulsando proyectos que abordan directamente a la comunidad, especialmente en educación, medios de vida para niños y jóvenes y desarrollo comunitario."
+    },
+    "sections": {
+      "workplace": {
+        "title": "DFREE® EN EL LUGAR DE TRABAJO",
+        "description": "A través de una iglesia local, el Club DFREE® inició una iniciativa para inscribir a los jóvenes en el Desafío del Billón de Dólares (BDC). Este grupo estaba compuesto principalmente por estudiantes universitarios y recién graduados con empleos de nivel inicial y algunos préstamos estudiantiles. Solo en su primer año, el primer grupo reclutó a más de 20 miembros que pagaron alrededor de veintisiete mil cedis en deuda (unos 4.200 dólares), una cantidad sustantiva para los estándares ghaneses.\n Las actividades de DFREE® basadas en la iglesia también llegaron a los comerciantes de los mercados locales, principalmente mujeres que comercian con bienes de consumo rápido. A través de compromisos mensuales en sus lugares de trabajo, el objetivo del Club era ayudarlos a comprender la contabilidad básica y animarlos a ahorrar en instituciones bancarias para hacer crecer sus negocios y mejorar sus niveles de vida."
+      },
+      "church": {
+        "title": "DFREE® EN LA IGLESIA",
+        "description": "El programa DFREE® se puso a prueba en Ghana dentro de una organización donde los préstamos en el lugar de trabajo eran una práctica común. Sin un límite en el poder de endeudamiento de los empleados, los empleadores capitalizaban esta práctica para dejar a la mayoría de los empleados en déficit salarial al final del ciclo de pago.\n Bajo el liderazgo de Mark, varios empleados de la organización se unieron al club y establecieron metas tanto individuales como comunitarias para pagar deudas utilizando estrategias como el método de la bola de nieve enseñado en el programa. Esto inició y se convirtió en una campaña incluso sin que los participantes tuvieran acceso a los libros de trabajo.\n Más importante aún, formaron un grupo de apoyo que se motivó y alentó mutuamente compartiendo historias de éxito y enfoques personales para la autodisciplina. En resumen, nació un cambio de estilo de vida y de mentalidad en torno al dinero y los gastos."
+      },
+      "partnerships": {
+        "title": "ASOCIACIONES",
+        "description": "El Club DFREE® Ghana se ha asociado con el capítulo Gamma Alpha Sigma Zeta de la sororidad Zeta Phi Beta, Inc. (alias Ghana Zetas) para promover la alfabetización financiera entre grupos específicos de consumidores. Esto incluye principalmente a mujeres y niñas en refugios y hogares de transición, a menudo rescatadas o que huyen de hogares abusivos. También trabajan con pescadores y agricultores en comunidades rurales, y vendedores ambulantes en zonas urbanas.\n Trabajando a través del Santuario Ágape de la Victory Bible Church, el mecanismo de participación de los jóvenes en el Desafío del Billón de Dólares y el alcance a los comerciantes del mercado han sido campañas extremadamente exitosas que solo pueden crecer a través de otros santuarios de la iglesia."
+      },
+      "challenges": {
+        "title": "DESAFÍOS",
+        "description": "El Club DFREE® Ghana ha luchado con la sostenibilidad a lo largo de los años. El financiamiento para viajes, el acceso a recursos como libros y el servicio de internet son algunos de los factores que afectan a los pocos voluntarios que se han comprometido a impulsar la causa.\n En esta nueva fase, el énfasis en trabajar a través de la iglesia, con suerte, cambia la narrativa. Sería bienvenido el apoyo en forma de libros y financiamiento para organizar eventos, educar a los comerciantes del mercado y llegar a más beneficiarios."
+      },
+      "successes": {
+        "title": "ÉXITOS",
+        "description": "Más de 100 personas han completado con éxito el programa desde su inicio. Además de la deuda pagada, los miembros del grupo también han ahorrado colectivamente más de 60.000 cedis (8.000 dólares) en unos 3 años a través del Desafío del Billón de Dólares.\n El Club continúa liderando la misión de ayudar a las personas a pagar deudas, ahorrar para crear riqueza y aprender a invertir y aumentar sus ingresos para mejorar sus niveles de vida."
+      }
+    },
+    "featuredProjects": {
+      "subtitle": "Proyectos destacados",
+      "description": "Con el apoyo de socios dedicados y líderes comunitarios, nuestras iniciativas generan un impacto medible y crean un cambio duradero en todo Ghana."
+    }
+  },
+  "southAfrica": {
+    "pageInfo": {
+      "mainTitle": "DFREE® en Sudáfrica",
+      "descText_Quote": "“Nuestras vidas continúan siendo bendecidas por el trabajo que hacemos en DFREE®. Es un honor que atesoramos grandemente que Dios pueda usarnos para tan gran mandato de ayudar a las personas a vivir en libertad financiera.” ",
+      "descText_Quote_Author": "Landi y Mali, DFREE® SA."
+    },
+    "sections": {
+      "partnerships": {
+        "title": "ASOCIACIONES",
+        "description": "Karani Leadership – Esta es una exitosa empresa de propiedad negra que ofrece coaching empresarial y de fortalezas para emprendedores, y coaching ejecutivo para la alta dirección. La asociación dio lugar a la incorporación de un curso DFREE® de 4 semanas en su programa de emprendedores.\n\nLucha Lunako – dfree® Sudáfrica se asoció con esta destacada organización sin fines de lucro para el desarrollo juvenil para mejorar su división de Mejora del Comportamiento Financiero, basándose en el currículo DFREE® Young Money.\n\nPastora Debbie Bruce y la Convención Bautista de Sudáfrica (BCSA) – La Sra. Bruce es la vicepresidenta de la Convención que ha fomentado una relación para capacitar a pastores y líderes de iglesias en la Convención. A través de la asociación, también se realizan sesiones de capacitación de capacitadores para la Fraternidad de Ministros George East para que, a su vez, puedan capacitar a otros líderes para lanzar el programa dfree® en sus iglesias."
+      },
+      "challenges": {
+        "title": "DESAFÍOS",
+        "description": "Las sesiones de capacitación en persona se redujeron debido a las restricciones de COVID-19 y ha sido difícil reactivarlas. Las limitaciones financieras de los participantes debido a la alta tasa de pérdida de empleos desde 2020/2021 se traducen en necesidades que compiten por sus ingresos de estímulo del gobierno. El servicio de internet no es una prioridad en la lista de necesidades, lo que significa que la asistencia a eventos virtuales también es baja. Lamentablemente, los más afectados son también el grupo de personas muy endeudadas que más necesitan DFREE®.",
+        "videoLabel": "Ver: Evelyn Tshabalala"
+      },
+      "successes": {
+        "title": "ÉXITOS",
+        "description": "Algunos hitos notables alcanzados por DFREE® Sudáfrica incluyen el inicio de clubes de ahorro, el fomento de emprendedores de subsistencia y cooperativas en comunidades sudafricanas desatendidas que han surgido. Creemos en la investigación continua y extensiva de la alfabetización financiera conductual."
+      }
+    },
+    "featuredProjects": {
+      "subtitle": "Proyectos destacados",
+      "description": "Con el apoyo de socios dedicados y líderes comunitarios, nuestras iniciativas generan un impacto medible y crean un cambio duradero en toda Sudáfrica."
     }
   }
 }
