@@ -48,6 +48,15 @@
     "visitStore": "Visitar tienda",
     "submit": "Enviar"
   },
+  "contactUs": {
+    "text": "¿Tienes preguntas? ¡Hablemos!",
+    "subtext": "¡Siempre nos encanta saber de ti! No dudes en contactarnos y te responderemos lo antes posible.",
+    "contactCta": "Contáctanos",
+    "newsletterCta": "Suscribirse al boletín",
+    "placeholderText": "Introduce tu correo electrónico",
+    "buttonText": "Enviar",
+    "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad"
+  },
   "nav": {
     "aboutUs": "Sobre nosotros",
     "impact": "Impacto",
