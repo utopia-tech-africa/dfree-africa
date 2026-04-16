@@ -48,6 +48,15 @@
     "visitStore": "Visiter la boutique",
     "submit": "Envoyer"
   },
+  "contactUs": {
+    "text": "Vous avez des questions ? Parlons-en !",
+    "subtext": "Nous sommes toujours ravis de vous lire ! N'hésitez pas à nous contacter et nous vous répondrons dans les plus brefs délais.",
+    "contactCta": "Contactez-nous",
+    "newsletterCta": "S'abonner à la newsletter",
+    "placeholderText": "Entrez votre adresse e-mail",
+    "buttonText": "Envoyer",
+    "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité"
+  },
   "nav": {
     "aboutUs": "À propos",
     "impact": "Impact",

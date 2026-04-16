@@ -48,6 +48,15 @@
     "visitStore": "Visit store",
     "submit": "Submit"
   },
+  "contactUs": {
+    "text": "Got questions? Let's talk!",
+    "subtext": "We always want to hear from you! Feel free to reach out to us and we will get back to you as soon as possible.",
+    "contactCta": "Connect with us",
+    "newsletterCta": "Subscribe to newsletter",
+    "placeholderText": "Enter email address",
+    "buttonText": "Submit",
+    "privacyNote": "By subscribing, you agree to our privacy policy"
+  },
   "nav": {
     "aboutUs": "About us",
     "impact": "Impact",
