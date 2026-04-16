@@ -59,9 +59,9 @@
     "globalFoundationInAfrica": "Fundación global en África",
     "communityCampaigns": "Campañas comunitarias",
     "dfreeAccessScholarships": "Becas de acceso DFREE",
-    "finfest": "FinFE$Ts",
-    "getMerch": "Tienda",
-    "getBooks": "Libros",
+    "finfest": "FinFE$T",
+    "booksMerch": "Libros y mercancía",
+    "attendEvents": "Asiste a eventos",
     "contactUs": "Contáctenos"
   },
   "footer": {
@@ -105,10 +105,10 @@
       "title": "Quiénes somos",
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " es una organización sin fines de lucro que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desatendidas mediante iniciativas gratuitas y centradas en la comunidad que ayudan a las familias a construir una confianza y libertad financieras duraderas.",
-      "missionTitle": "Misión",
-      "mission": "Promover el bienestar financiero en comunidades desatendidas mediante programas y herramientas gratuitos que ayudan a construir una confianza financiera duradera.",
+      "missionTitle": "Asignación",
+      "mission": "El Movimiento de Libertad Financiera DFREE® promueve un enfoque basado en valores para el bienestar financiero, fomentando la disciplina, la responsabilidad y la estabilidad a largo plazo a través de estrategias prácticas y cambios de comportamiento.",
       "visionTitle": "Visión",
-      "vision": "Un futuro donde cada comunidad tenga los recursos y la confianza para alcanzar la libertad financiera y el progreso generacional.",
+      "vision": "Como brazo filantrópico del Movimiento, la Fundación Global DFREE está comprometida con la ampliación del acceso y el impacto, llegando a las comunidades desatendidas, eliminando las barreras a la educación financiera y conectando a las personas con los recursos y el apoyo necesarios para lograr un empoderamiento financiero duradero.",
       "imageGalleryAlt": "Galería de imágenes Quiénes somos"
     },
     "pillars": {
@@ -130,38 +130,39 @@
         },
         "finfest": {
           "name": "FinFE$T®: Donde la riqueza se encuentra con el bienestar",
-          "description": "FinFE$T® es el evento comunitario gratuito emblemático de la Fundación Global DFREE® que combina educación financiera, salud y bienestar a través de experiencias atractivas, equipando a las familias con herramientas prácticas para el bienestar holístico y la prosperidad a largo plazo."
+          "description": "FinFe$t® es el evento comunitario insignia de DFREE® que combina educación financiera, salud y bienestar a través de experiencias participativas para brindar a los participantes herramientas prácticas que impulsen el bienestar integral y la prosperidad a largo plazo. Es 100% gratuito."
         },
         "accessScholarships": {
           "name": "Becas de acceso DFREE®",
-          "description": "El Programa de becas DFREE® ofrece apoyo basado en necesidades que elimina las barreras financieras para participar en el recorrido DFREE®, brindando acceso a recursos educativos, aprendizaje digital, formación en vivo y asistencia de emergencia limitada para ayudar a las personas a lograr la reducción de deudas y una libertad financiera duradera."
+          "description": "El programa de becas DFREE® proporciona apoyo basado en las necesidades para eliminar las barreras financieras que impiden el acceso al contenido de DFREE®: recursos educativos, aprendizaje digital, formación en directo, asesoramiento financiero gratuito y asistencia de emergencia limitada para ayudar a los miembros de nuestra comunidad a reducir sus deudas y lograr una libertad financiera duradera."
         }
       }
     },
     "ourImpact": {
       "label": "Nuestro impacto",
-      "title": "Mapeando nuestro impacto en las comunidades",
-      "description": "Cada hito representa vidas transformadas y esperanza restaurada.",
+      "title": "Visualizar nuestro impacto en las comunidades",
+      "description": "Cada logro representa una transformación en la vida de las personas y un paso más cerca de la libertad financiera.",
+      "text": "Se han emprendido varios proyectos comunitarios",
       "stats": {
         "completedProjects": {
           "value": "1900",
           "suffix": "+",
-          "label": "Proyectos completados"
+          "label": "Iglesias y organizaciones"
         },
         "livesImpacted": {
           "value": "3400",
           "suffix": "+",
-          "label": "Vidas impactadas"
+          "label": "Graduados de la academia"
         },
         "debtCleared": {
           "value": "2500",
           "suffix": "$",
-          "label": "Deuda saldada"
+          "label": "Deuda pagada colectivamente"
         },
         "youngPeopleTrained": {
           "value": "2500",
           "suffix": "+",
-          "label": "Jóvenes formados"
+          "label": "Ahorrados colectivamente"
         }
       }
     },
@@ -365,7 +366,7 @@
   },
   "bdc": {
     "hero": {
-      "title": "Desafío del billón de dólares DFREE®",
+      "title": "El Desafío de los Mil Millones de Dólares",
       "subtitle": "Elimina deudas, ahorra y toma el control de tu futuro financiero a través de una plataforma digital basada en la responsabilidad comunitaria.",
       "ctaLabel": "Únete al BDC hoy",
       "ctaHref": "#",
@@ -629,7 +630,7 @@
       "title": "Empoderar África",
       "subtitle": "Impulsando la libertad financiera y el desarrollo comunitario sostenible mediante educación, formación y programas económicos.",
       "cta": {
-        "label": "Donar al movimiento",
+        "label": "Dona a un proyecto",
         "href": "#"
       }
     },

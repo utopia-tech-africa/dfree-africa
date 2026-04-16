@@ -47,12 +47,12 @@ export function ImpactStatCard({
 
   return (
     <div className={cn("flex flex-col items-start", className)}>
-      <div className="flex flex-col items-start font-bold leading-none whitespace-nowrap">
-        <div className="flex items-center font-montserrat text-[38px] text-primary-500 lg:text-[56px]">
+      <div className="flex flex-col gap-2 items-start font-bold leading-none">
+        <div className="flex items-center font-montserrat text-[38px] text-primary-400 lg:text-[56px]">
           <span className="leading-[49.4px]">{displayValue}</span>
           {suffix && <span className="leading-[49.4px]">{suffix}</span>}
         </div>
-        <p className="font-montserrat text-sm text-[#404f4f] lg:text-[18px] whitespace-nowrap">
+        <p className="font-montserrat text-sm text-[#404f4f] lg:text-[18px] ">
           {label}
         </p>
       </div>
