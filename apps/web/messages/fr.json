@@ -223,7 +223,9 @@
       }
     },
     "events": {
-      "label": "Événements",
+      "label": "Réunions communautaires et sociales",
+      "pageTitle": "Rassemblements communautaires",
+      "sublabel": "Explorez les événements et ateliers à venir. Découvrez des occasions de vous connecter, d'apprendre et de progresser avec DFREE®.",
       "title": "Rencontres à venir",
       "subtitle": "Rejoignez-nous dans notre mission de transformer les réalités financières.",
       "viewAllCta": "Voir tous les événements",
@@ -232,10 +234,10 @@
         "workshop": {
           "badge": "Atelier",
           "title": "Masterclass sur la liberté financière",
-          "location": "en ligne",
+          "location": "New Brunswick, New Jersey",
           "description": "Découvrez des stratégies concrètes pour gérer et réduire vos dettes personnelles.",
           "date": {
-            "day": "Ven. 09 fév. 2024",
+            "day": "23 Avril '26",
             "dated": "06",
             "mode": "en ligne",
             "year": "2024"
@@ -247,7 +249,7 @@
           "location": "Houston",
           "description": "Découvrez des approches collaboratives pour renforcer la résilience financière.",
           "date": {
-            "day": "Ven. 09 fév. 2024",
+            "day": "23 Avril '26",
             "dated": "06",
             "mode": "en ligne",
             "year": "2024"
@@ -259,7 +261,7 @@
           "location": "Los Angeles",
           "description": "Explorez des techniques innovantes pour surmonter les défis financiers.",
           "date": {
-            "day": "Ven. 09 fév. 2024",
+            "day": "23 Avril '26",
             "dated": "06",
             "mode": "en ligne",
             "year": "2024"
@@ -271,7 +273,7 @@
           "location": "Ghana",
           "description": "Maîtrisez des méthodes pratiques pour faire face aux défis financiers.",
           "date": {
-            "day": "Ven. 09 fév. 2024",
+            "day": "23 Avril '26",
             "dated": "06",
             "mode": "en ligne",
             "year": "2024"

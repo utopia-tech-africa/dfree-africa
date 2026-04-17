@@ -223,7 +223,9 @@
       }
     },
     "events": {
-      "label": "Eventos",
+      "label": "Reuniones comunitarias y sociales",
+      "pageTitle": "Reuniones comunitarias",
+      "sublabel": "Explora los próximos eventos y talleres. Descubre oportunidades para conectar, aprender y crecer con DFREE®.",
       "title": "Próximos encuentros",
       "subtitle": "Únete a nuestra misión de transformar las realidades financieras.",
       "viewAllCta": "Ver todos los eventos",
@@ -232,10 +234,10 @@
         "workshop": {
           "badge": "Taller",
           "title": "Masterclass de libertad financiera",
-          "location": "en línea",
+          "location": "New Brunswick, New Jersey",
           "description": "Aprende estrategias prácticas para gestionar y reducir las deudas personales.",
           "date": {
-            "day": "Vie. 09 feb. 2024",
+            "day": "23 Abril '26",
             "dated": "06",
             "mode": "en línea",
             "year": "2024"
@@ -247,7 +249,7 @@
           "location": "Houston",
           "description": "Descubre enfoques colaborativos para construir resiliencia financiera.",
           "date": {
-            "day": "Vie. 09 feb. 2024",
+            "day": "23 Abril '26",
             "dated": "06",
             "mode": "en línea",
             "year": "2024"
@@ -259,7 +261,7 @@
           "location": "Los Ángeles",
           "description": "Explora técnicas innovadoras para superar los desafíos financieros.",
           "date": {
-            "day": "Vie. 09 feb. 2024",
+            "day": "23 Abril '26",
             "dated": "06",
             "mode": "en línea",
             "year": "2024"
@@ -271,7 +273,7 @@
           "location": "Ghana",
           "description": "Domina métodos prácticos para enfrentar los retos financieros.",
           "date": {
-            "day": "Vie. 09 feb. 2024",
+            "day": "23 Abril '26",
             "dated": "06",
             "mode": "en línea",
             "year": "2024"
