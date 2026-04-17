@@ -318,6 +318,32 @@ function ProjectGalleryViewer({
     };
   }, [emblaApi]);
 
+  // Auto-advance slides every 5 seconds
+  useEffect(() => {
+    if (!emblaApi || !hasMultiple) return;
+
+    let timer: ReturnType<typeof setInterval>;
+
+    const startAutoplay = () => {
+      timer = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 5000);
+    };
+
+    const resetAutoplay = () => {
+      clearInterval(timer);
+      startAutoplay();
+    };
+
+    startAutoplay();
+    emblaApi.on("select", resetAutoplay);
+
+    return () => {
+      clearInterval(timer);
+      emblaApi.off("select", resetAutoplay);
+    };
+  }, [emblaApi, hasMultiple]);
+
   if (items.length === 0) {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85">
@@ -408,9 +434,9 @@ function ProjectGalleryViewer({
             </div>
           </div>
         </div>
-        {/* Bottom bar: dots left, "Swipe to view more" right (Figma H-7 22px) */}
+        {/* Bottom bar: dots */}
         {hasMultiple && (
-          <div className="flex w-full max-w-[1280px] shrink-0 items-center justify-between gap-2 px-0">
+          <div className="flex w-full max-w-[1280px] shrink-0 items-center justify-center gap-2 px-0">
             <div className="flex gap-1 md:gap-1.5 shrink-0">
               {items.map((_, i) => (
                 <button
@@ -425,9 +451,6 @@ function ProjectGalleryViewer({
                 />
               ))}
             </div>
-            <p className="font-montserrat text-base md:text-[22px] font-bold leading-tight text-white text-right">
-              Swipe to view more
-            </p>
           </div>
         )}
       </div>
@@ -456,6 +479,10 @@ export function PhotoGallery({
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] =
     useState<ProjectForGalleryPicker | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const AUTOPLAY_INTERVAL = 4000;
+  const SCROLL_EDGE_THRESHOLD = 10;
 
   const scroll = useCallback((direction: "left" | "right") => {
     const el = scrollContainerRef.current;
@@ -465,6 +492,30 @@ export function PhotoGallery({
       behavior: "smooth",
     });
   }, []);
+
+  // Auto-scroll: advance right every AUTOPLAY_INTERVAL ms, loop back at end
+  useEffect(() => {
+    // Pause when a modal is open or when user hovers
+    if (isHovered || selectedYear != null || selectedProject != null) return;
+
+    const interval = setInterval(() => {
+      const el = scrollContainerRef.current;
+      if (!el) return;
+
+      const atEnd =
+        el.scrollLeft >=
+        el.scrollWidth - el.clientWidth - SCROLL_EDGE_THRESHOLD;
+
+      if (atEnd) {
+        // Loop back to start
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollBy({ left: el.clientWidth * 0.6, behavior: "smooth" });
+      }
+    }, AUTOPLAY_INTERVAL);
+
+    return () => clearInterval(interval);
+  }, [isHovered, selectedYear, selectedProject]);
 
   const selectedYearData =
     selectedYear != null ? years.find((y) => y.year === selectedYear) : null;
@@ -538,6 +589,8 @@ export function PhotoGallery({
 
           <div
             ref={scrollContainerRef}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             className="h-[237px] md:h-[449px] w-full overflow-x-auto overflow-y-hidden scroll-smooth [scrollbar-width:none]"
           >
             <div className="flex gap-6 items-center h-full pb-4 min-w-max  ">
