@@ -28,6 +28,10 @@
       "title": "South Africa",
       "description": "DFREE® in South Africa - Partnerships, financial literacy, and community development with the Baptist Convention of Southern Africa and local organizations."
     },
+    "uganda": {
+      "title": "Uganda",
+      "description": "DFREE® in Uganda - Delivering clean water, financial literacy, and community development through strategic partnerships."
+    },
     "billionDollarChallenge": {
       "title": "Billion Dollar Challenge",
       "description": "Eliminate debt, build savings, and take control of your financial future through the DFREE® Billion Dollar Challenge—a digital platform built on community accountability."
@@ -495,7 +499,42 @@
     "testimonials": {
       "title": "Testimonials",
       "subtitle": "What Our Clients Are Saying",
-      "description": "Don't just take our word for it; here's what past attendees said about FinFE$T."
+      "description": "Don't just take our word for it; here's what past attendees said about FinFE$T.",
+      "items": [
+        {
+          "type": "video",
+          "name": "Reginal",
+          "thumbnail": "/videos/finfest/reginald-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Zakiyya Jordan",
+          "organization": "Zeta Ph Beta Sorority, Inc.",
+          "content": "\"DFREE® has definitely given me confidence in how to manage my finances and great insight into unhealthy spending behaviors and attitudes.\""
+        },
+        {
+          "type": "video",
+          "name": "Tamara",
+          "thumbnail": "/videos/finfest/tamara-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Diana Belle",
+          "organization": "Clear View Baptist Church",
+          "content": "\"I am a better steward of my finances having gone through this process. I am now working on leaving a legacy for my daughters.\""
+        },
+        {
+          "type": "video",
+          "name": "Ruth",
+          "thumbnail": "/videos/finfest/ruth-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Jackie Jackson",
+          "organization": "Community Partner",
+          "content": "\"This DFREE® course helped me organize my finances, find the leaks and paid off my credit card debt, none of which I could have done on my own!\""
+        }
+      ]
     },
     "banner": {
       "title": "Join us at the next FinFE$T",
@@ -890,6 +929,33 @@
     "featuredProjects": {
       "subtitle": "Featured projects",
       "description": "With the support of dedicated partners and community leaders, our initiatives drive measurable impact and create lasting change across South Africa."
+    }
+  },
+  "uganda": {
+    "pageInfo": {
+      "mainTitle": "DFREE® in Uganda",
+      "descTitle": "About",
+      "descText": "DFREE®’s initiatives in Uganda started in 2019 when Dr. Soaries was the guest of His Highness Bishop John Chrisostom Wayabire, king of the Bugwere kingdom, and the first known African traditional ruler who is also the Bishop of a Christian church. At the 5th coronation anniversary of His Highness Wayabire, Dr. Soaries had the opportunity to meet the president of the country and hold council with members of the community, especially the Queen’s special women’s initiative that was providing skills training and livelihoods to women and girls in deprived communities.\nDFREE® has developed an even stronger working relationship with King Geoffrey Wayabire, who succeeded his father as king in 2023. The partnership has birthed 2 key projects:"
+    },
+    "sections": {
+      "theCommitment": {
+        "title": "THE COMMITMENT",
+        "description": "Dr. Soaries pledged to raise funds for 10 borehole wells for 10 communities. Unlike ponds, the wells tap into a deep underground aquifer hundreds of feet underground, protected from surface contaminants."
+      },
+      "theImpact": {
+        "title": "THE IMPACT - A RIPPLE EFFECT",
+        "description": "In December 2025, the first 2 wells pumped clean water in two villages, marking the transition from a livestock-shared pond to a dedicated well that represented more than just health; it represented dignity. The benefits of the well reached far beyond just quenching thirst:\nHealth: Incidence of ailments are expected to drop dramatically within a few months.",
+        "points": {
+          "point1": "Education: Children, particularly girls, who were previously tasked with hauling water from the pond, will now be able to attend school consistently.",
+          "point2": "Economic Time-Savings: What used to be a two-hour daily chore of trekking to fetch water and boil it is now a five-minute walk to a reliable pump.",
+          "point3": "Hygiene: All household chores, including laundry, are also done with clean water, thereby reducing the instance of contamination from livestock activity."
+        },
+        "cta": "Help support this cause to provide clean drinking water to the villages of Bugwere."
+      }
+    },
+    "featuredProjects": {
+      "subtitle": "Featured projects",
+      "description": "With the support of dedicated partners and community leaders, our initiatives drive measurable impact and create lasting change across Uganda."
     }
   }
 }

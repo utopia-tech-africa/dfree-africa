@@ -28,6 +28,10 @@
       "title": "Afrique du Sud",
       "description": "DFREE® en Afrique du Sud - Partenariats, littératie financière et développement communautaire avec la Convention baptiste d'Afrique australe et les organisations locales."
     },
+    "uganda": {
+      "title": "Ouganda",
+      "description": "DFREE® en Ouganda : fourniture d'eau potable, littératie financière et développement communautaire grâce à des partenariats stratégiques."
+    },
     "billionDollarChallenge": {
       "title": "Défi du milliard de dollars",
       "description": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier avec le Défi du milliard de dollars DFREE®—une plateforme numérique fondée sur la responsabilité communautaire."
@@ -360,7 +364,42 @@
     "testimonials": {
       "title": "Témoignages",
       "subtitle": "Ce que disent nos participants",
-      "description": "Ne nous croyez pas sur parole : voici ce que les participants passés ont dit de FinFE$T."
+      "description": "Ne nous croyez pas sur parole : voici ce que les participants passés ont dit de FinFE$T.",
+      "items": [
+        {
+          "type": "video",
+          "name": "Reginal",
+          "thumbnail": "/videos/finfest/reginald-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Zakiyya Jordan",
+          "organization": "Zeta Ph Beta Sorority, Inc.",
+          "content": "\"DFREE® m'a définitivement donné confiance dans la gestion de mes finances et m'a permis de mieux comprendre mes comportements et attitudes de dépenses malsains.\""
+        },
+        {
+          "type": "video",
+          "name": "Tamara",
+          "thumbnail": "/videos/finfest/tamara-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Diana Belle",
+          "organization": "Clear View Baptist Church",
+          "content": "\"Je gère mieux mes finances après avoir suivi ce processus. Je travaille maintenant à laisser un héritage à mes filles.\""
+        },
+        {
+          "type": "video",
+          "name": "Ruth",
+          "thumbnail": "/videos/finfest/ruth-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Jackie Jackson",
+          "organization": "Partenaire communautaire",
+          "content": "\"Ce cours DFREE® m'a aidée à organiser mes finances, à trouver les fuites et à rembourser mes dettes de carte de crédit, ce que je n'aurais jamais pu faire seule !\""
+        }
+      ]
     },
     "banner": {
       "title": "Rejoignez-nous au prochain FinFE$T",
@@ -754,6 +793,33 @@
     "featuredProjects": {
       "subtitle": "Projets présentés",
       "description": "Avec le soutien de partenaires dévoués et de leaders communautaires, nos initiatives génèrent un impact mesurable et créent un changement durable dans toute l'Afrique du Sud."
+    }
+  },
+  "uganda": {
+    "pageInfo": {
+      "mainTitle": "DFREE® en Ouganda",
+      "descTitle": "À propos",
+      "descText": "Les initiatives de DFREE® en Ouganda ont débuté en 2019 lorsque le Dr Soaries était l'invité de Son Altesse l'évêque John Chrisostom Wayabire, roi du royaume de Bugwere, et le premier souverain traditionnel africain connu qui est également évêque d'une église chrétienne. Lors du 5e anniversaire du couronnement de Son Altesse Wayabire, le Dr Soaries a eu l'occasion de rencontrer le président du pays et de tenir conseil avec des membres de la communauté, en particulier l'initiative spéciale des femmes de la Reine qui offrait une formation professionnelle et des moyens de subsistance aux femmes et aux filles des communautés défavorisées.\nDFREE® a développé une relation de travail encore plus forte avec le roi Geoffrey Wayabire, qui a succédé à son père en tant que roi en 2023. Le partenariat a donné naissance à 2 projets clés :"
+    },
+    "sections": {
+      "theCommitment": {
+        "title": "L'ENGAGEMENT",
+        "description": "Le Dr Soaries s'est engagé à collecter des fonds pour 10 puits de forage pour 10 communautés. Contrairement aux étangs, les puits puisent dans un aquifère souterrain profond situé à des centaines de pieds sous terre, à l'abri des contaminants de surface."
+      },
+      "theImpact": {
+        "title": "L'IMPACT - UN EFFET D'ENTRAÎNEMENT",
+        "description": "En décembre 2025, les deux premiers puits ont pompé de l'eau propre dans deux villages, marquant la transition d'un étang partagé avec le bétail vers un puits dédié qui représentait bien plus que la santé ; cela représentait la dignité. Les avantages du puits allaient bien au-delà de la simple satisfaction de la soif :\nSanté : L'incidence des maladies devrait chuter de façon spectaculaire d'ici quelques mois.",
+        "points": {
+          "point1": "Éducation : Les enfants, en particulier les filles, qui étaient auparavant chargées de transporter l'eau de l'étang, pourront désormais fréquenter l'école régulièrement.",
+          "point2": "Gain de temps économique : Ce qui était auparavant une corvée quotidienne de deux heures de marche pour aller chercher de l'eau et la faire bouillir est désormais une promenade de cinq minutes jusqu'à une pompe fiable.",
+          "point3": "Hygiène : Toutes les tâches ménagères, y compris la lessive, sont également effectuées avec de l'eau propre, réduisant ainsi les risques de contamination par les activités d'élevage."
+        },
+        "cta": "Aidez à soutenir cette cause pour fournir de l'eau potable aux villages de Bugwere."
+      }
+    },
+    "featuredProjects": {
+      "subtitle": "Projets en vedette",
+      "description": "Avec le soutien de partenaires dévoués et de leaders communautaires, nos initiatives génèrent un impact mesurable et créent un changement durable dans tout l'Ouganda."
     }
   }
 }
