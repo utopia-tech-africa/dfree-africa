@@ -227,8 +227,10 @@
       }
     },
     "events": {
-      "label": "Events",
-      "title": "Upcoming gatherings",
+      "label": "Community & social gatherings",
+      "pageTitle": "All events",
+      "sublabel": "Explore upcoming events and workshops. Discover opportunities to connect, learn, and grow with DFREE®.",
+      "title": "Community gatherings",
       "subtitle": "Join us in our mission to transform financial landscapes.",
       "viewAllCta": "View all events",
       "viewEventCta": "View event",
@@ -236,10 +238,10 @@
         "workshop": {
           "badge": "Workshop",
           "title": "Financial freedom masterclass",
-          "location": "online",
+          "location": "New Brunswick, New Jersey",
           "description": "Learn practical strategies for managing and reducing personal debt.",
           "date": {
-            "day": "Fri 09 Feb 2024",
+            "day": "23rd April '26",
             "dated": "06",
             "mode": "online",
             "year": "2024"
@@ -248,10 +250,10 @@
         "seminar": {
           "badge": "Seminar",
           "title": "Community economic empowerment",
-          "location": "Houston",
+          "location": "New Brunswick, New Jersey",
           "description": "Discover collaborative approaches to building financial resilience.",
           "date": {
-            "day": "Fri 09 Feb 2024",
+            "day": "23rd April '26",
             "dated": "06",
             "mode": "online",
             "year": "2024"
@@ -260,10 +262,10 @@
         "conference": {
           "badge": "Conference",
           "title": "Debt reduction strategies",
-          "location": "Los Angeles",
+          "location": "New Brunswick, New Jersey",
           "description": "Explore innovative techniques for overcoming financial challenges.",
           "date": {
-            "day": "Fri 09 Feb 2024",
+            "day": "23rd April '26",
             "dated": "06",
             "mode": "online",
             "year": "2024"
@@ -272,10 +274,10 @@
         "donation": {
           "badge": "Donation",
           "title": "Giving back to the motherland",
-          "location": "Ghana",
+          "location": "New Brunswick, New Jersey",
           "description": "Master practical methods for navigating monetary obstacles.",
           "date": {
-            "day": "Fri 09 Feb 2024",
+            "day": "23rd April '26",
             "dated": "06",
             "mode": "online",
             "year": "2024"
@@ -364,6 +366,7 @@
       },
       "events": {
         "label": "Events",
+        "sublabel": "Explore upcoming events and workshops. Discover opportunities to connect, learn, and grow with DFREE®.",
         "title": "Upcoming gatherings",
         "subtitle": "Join us in our mission to transform financial landscapes.",
         "viewAllCta": "View all events",
