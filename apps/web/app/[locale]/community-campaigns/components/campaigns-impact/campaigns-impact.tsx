@@ -44,7 +44,7 @@ export const CampaignsImpact = async () => {
             </Link>
           </div>
 
-          <div className="relative lg:col-span-3 w-full aspect-[4/3] lg:aspect-auto lg:h-auto">
+          <div className="relative lg:col-span-3 w-full aspect-[4/3] lg:aspect-auto lg:h-auto rounded-lg overflow-hidden">
             <Image
               src={
                 "https://res.cloudinary.com/dan9camhs/image/upload/v1773226697/71042cb3-075a-40e4-a352-b9807e51561a.webp"

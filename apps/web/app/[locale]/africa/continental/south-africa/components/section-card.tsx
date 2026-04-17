@@ -41,7 +41,7 @@ export const SectionCard: React.FC<SectionCardSingleProps> = ({
     <ComponentLayout>
       <div
         className={cn(
-          "grid grid-cols-1 lg:grid-cols-2 gap-6 py-12 ",
+          "grid grid-cols-1 lg:grid-cols-2 gap-6 py-12 min-h-[300px]",
           className,
         )}
       >
