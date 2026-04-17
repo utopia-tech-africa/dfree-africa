@@ -5,6 +5,7 @@ import { Volume2, VolumeX } from "lucide-react";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { useTranslations } from "next-intl";
+import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 
 export const OurStory = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -21,9 +22,10 @@ export const OurStory = () => {
   return (
     <ComponentLayout>
       <section className="mt-8 md:mt-10 lg:mt-[66px] flex flex-col gap-8">
-        <div className="flex flex-col items-center gap-4 justify-center text-center">
+        <div className="flex flex-col items-center gap-2 justify-center text-center">
           <Title text={t("title")} />
-          <p className="font-montserrat text-base md:text-lg lg:text-[22px] font-bold leading-[120%]">
+          <Subtitle text={t("subtitle")} />
+          <p className="text-base md:text-lg lg:text-[22px] leading-[130%]">
             {t("description")}
           </p>
         </div>

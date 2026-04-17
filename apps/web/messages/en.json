@@ -561,7 +561,7 @@
           "title": "Take control of your financial story."
         },
         "group": {
-          "label": "As a group",
+          "label": "Group",
           "title": "Peers seeking financial growth."
         },
         "communities": {
@@ -692,7 +692,7 @@
     "hero": {
       "title": "Community Campaigns",
       "subtitle": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs. These campaigns are designed to create a collective impact by promoting shared learning, mutual accountability, and community celebration.",
-      "ctaLabel": "Join the movement",
+      "ctaLabel": "Connect with us",
       "ctaHref": "#",
       "imageAlt": "Community campaigns background"
     },
@@ -765,7 +765,7 @@
       "title": "Ready to join the community?",
       "descriptionLine1": "Tell us about your goals and challenges,",
       "descriptionLine2": "We'll help guide you to the support that best serves your journey.",
-      "buttonText": "Join the movement",
+      "buttonText": "Connect with us",
       "imageAlt": "Community celebrating together"
     }
   },
@@ -780,7 +780,8 @@
     },
     "ourStory": {
       "title": "our story",
-      "description": "Driven by a vision to empower the African diaspora, Dr. DeForest B. Soaries, Jr. founded Dfree Global Foundation, which birthed DFREE® Africa, to replace the cycle of poverty with a mindset of wealth and self-sufficiency. This mission is deeply rooted in Dr. Soaries' long-standing connection to the continent, beginning with his first visit to South Africa in 1990. He has since spent decades forging continental partnerships that champion economic, social, and spiritual growth, dedicating his leadership to building strategic connections across the continent, especially in Ghana, Liberia, Uganda, Botswana, South Africa and several other countries. His work focuses on integrating economic development with educational, spiritual and social progress to create sustainable, higher standards of living for all."
+      "subtitle": "Transforming financial landscapes across African communities",
+      "description": "Driven by a vision to empower the African diaspora, Dr. DeForest B. Soaries, Jr. founded Dfree Global Foundation, which birthed DFREE® Africa, to replace the cycle of poverty with a mindset of wealth and self-sufficiency. This mission is deeply rooted in Dr. Soaries’ long-standing connection to the continent, beginning with his first visit to South Africa in 1990. He has since spent decades forging continental partnerships that champion economic, social, and spiritual growth, dedicating his leadership to building strategic connections across the continent, especially in Ghana, Liberia, Uganda, Botswana, South Africa and several other countries. His work focuses on integrating economic development with educational, spiritual and social progress to create sustainable, higher standards of living for all."
     },
     "featuredProjects": {
       "title": "Projects",
@@ -812,59 +813,6 @@
         }
       }
     },
-    "ghana": {
-      "title": "DFREE® in Ghana",
-      "aboutTitle": "About",
-      "aboutText": "To mark the 10th anniversary of his first visit to Ghana, Dr. Soaries was enstooled a chief by His Majesty the King of Akyem Abuakwa, in recognition of his work towards development throughout the kingdom and the country. As Nkosuorhene (chief of development), he continues to drive projects that directly address community especially in education and livelihoods for children and youth.",
-      "featuredProjects": {
-        "subtitle": "Featured projects",
-        "description": "With the support of dedicated partners and community leaders, our initiatives drive measurable impact and create lasting change across Ghana."
-      },
-      "sections": {
-        "workplace": {
-          "title": "DFREE®IN THE WORKPLACE",
-          "description": "The DFREE® program was piloted in Ghana within an organization where workplace loans were common practice. Without a cap on borrowing power of employees, employers capitalized on this practice to leave most employees in wage deficit at the end of the pay cycle. Under the leadership of Mark, several staff of the organization joined the club and set individual as well as communal goals to pay off debt using such strategies such as the snowball method taught in the program. This kicked off and spiraled into a campaign even without the participants' access to workbooks. More importantly, they formed a support group that motivated and encouraged one another by sharing success stories and personal approaches to self-discipline. In short, a lifestyle and mindset change around money and spending was born."
-        },
-        "church": {
-          "title": "DFREE® IN THE CHURCH",
-          "description": "The DFREE® program was piloted in Ghana within an organization where workplace loans were common practice. Without a cap on borrowing power of employees, employers capitalized on this practice to leave most employees in wage deficit at the end of the pay cycle. Under the leadership of Mark, several staff of the organization joined the club and set individual as well as communal goals to pay off debt using such strategies such as the snowball method taught in the program. This kicked off and spiraled into a campaign even without the participants' access to workbooks. More importantly, they formed a support group that motivated and encouraged one another by sharing success stories and personal approaches to self-discipline. In short, a lifestyle and mindset change around money and spending was born."
-        },
-        "partnerships": {
-          "title": "PARTNERSHIPS",
-          "description": "DFREE® Club, Ghana has partnered with Gamma Alpha Sigma Zeta chapter of Zeta Phi Beta Sorority, Inc. (A.K.A. Ghana Zetas) to promote financial literary among specific groups of consumers. This mostly includes women and girls in shelters and halfway homes often rescued or escaping from abusive homes. They also work with fisherfolks and farmers in rural communities, and street hawkers in urban areas. Working through the Agape Sanctuary of Victory Bible Church, the engagement of youth in the BDC and outreach to market traders have been extremely successful campaigns that can only group through other sanctuaries of the church."
-        },
-        "challenges": {
-          "title": "CHALLENGES",
-          "description": "DFREE® Club, Ghana has struggled with sustainability over the years. Funding for travel, access to resources like books and internet service are some of the factors affecting the few volunteers who have committed to driving the cause. In this new phase, the emphasis on working through the church, hopefully, changes the narrative. Support in the form of books and funding to host events, educate market traders and reach more beneficiaries would be welcome."
-        },
-        "successes": {
-          "title": "SUCCESSES",
-          "description": "DFREE® Club, Ghana has chalked some successes. Over 100 individuals have successfully completed the program since inception. Apart from the debt paid down, group members have also saved over 60,000 cedis ($8,000) collectively in about 3 years through the Billion Dollar Challenge. The Club continues to lead the charge of helping individuals pay down debt, save to create wealth, and learn to invest and grow their incomes for better standards of living."
-        }
-      }
-    },
-    "southAfrica": {
-      "title": "DFREE® in South Africa",
-      "aboutText": "Our lives continue to be blessed by the work we do at DFREE®. It is an honor we cherish greatly that God can use us for such a big mandate of helping people live in financial freedom. Landi and Mali, DFREE® SA.",
-      "featuredProjects": {
-        "subtitle": "Featured projects",
-        "description": "With the support of dedicated partners and community leaders, our initiatives drive measurable impact and create lasting change across South Africa."
-      },
-      "sections": {
-        "partnerships": {
-          "title": "PARTNERSHIPS",
-          "description": "Karani Leadership – This is a successful black-owned company offering business and strengths coaching for entrepreneurs, and executive coaching for senior management. The partnership gave birth to the incorporation of a 4-week DFREE® course in their entrepreneurs' program. Lucha Lunako – dfree® South Africa teamed up this prominent youth development not-for-profit organization to enhance their Financial Behavior Improvement division, drawing from the DFREE® Young Money curriculum. Pastor Debbie Bruce and the Baptist Convention of Southern Africa (BCSA) – Ps. Bruce is the vice president of the Convention who has fostered a relationship to train pastors and church leaders in the Convention. Through the partnership, train-the-trainer sessions are also held for George East Ministers Fraternity so they can in turn train other leaders to launch the dfree® program in their churches."
-        },
-        "challenges": {
-          "title": "CHALLENGES",
-          "description": "In-person trainings were curtailed due to the COVID-19 lockdown and restrictions imposed by government, which limited the number of people and the duration of each gathering. Financial constraints of participants due to the high rate of job losses in 2020/2021 meant that people had competing necessities on their stimulus income government. Internet service was not a priority on the needs list, which meant attendance was low on our virtual meetings. Sadly, those most affected were also the bracket of people highly indebted to loan sharks and retail shops."
-        },
-        "successes": {
-          "title": "SUCESSES",
-          "description": "Some notable milestones achieved by DFREE® South Africa include starting savings clubs, nurturing subsistence entrepreneurs and cooperatives in underserved South African communities that have emerged. We believe in continued and extensive behavioral financial literacy research."
-        }
-      }
-    },
     "projects": {
       "pageTitle": "All Projects",
       "showAllCountries": "Show all countries",
@@ -889,28 +837,28 @@
     "pageInfo": {
       "mainTitle": "DFREE® in Ghana",
       "descTitle": "About",
-      "descText": "To mark the 10th anniversary of his first visit to Ghana, Dr. Soaries was enstooled a chief by His Majesty the King of Akyem Abuakwa, in recognition of his work towards development throughout the kingdom and the country. As Nkosuorhene (chief of development), he continues to drive projects that directly address community especially in education and livelihoods for children and youth."
+      "descText": "To mark the 10th anniversary of his first visit to Ghana, Dr. Soaries was enstooled a chief by His Majesty the King of Akyem Abuakwa, in recognition of his work towards development throughout the kingdom and the country. As Nkosuorhene (chief of development), he continues to drive projects that directly address community especially in education, livelihoods for children and youth and community development."
     },
     "sections": {
       "workplace": {
-        "title": "DFREE®IN THE WORKPLACE",
-        "description": "The DFREE® program was piloted in Ghana within an organization where workplace loans were common practice. Without a cap on borrowing power of employees, employers capitalized on this practice to leave most employees in wage deficit at the end of the pay cycle. Under the leadership of Mark, several staff of the organization joined the club and set individual as well as communal goals to pay off debt using such strategies such as the snowball method taught in the program. This kicked off and spiraled into a campaign even without the participants' access to workbooks. More importantly, they formed a support group that motivated and encouraged one another by sharing success stories and personal approaches to self-discipline. In short, a lifestyle and mindset change around money and spending was born."
+        "title": "DFREE® IN THE WORKPLACE",
+        "description": "Through a local church, the DFREE® Club started an outreach to enroll the youth in the Billion Dollar challenge (BDC).  This comprised mostly college students and new graduates with entry level jobs and some student loans. In its first year alone, the first group recruited over 20 members who paid down about twenty-seven thousand cedis in debt (about $4,200) – a substantial amount by Ghanaian standard.\n The church-based DFREE® activities also outreached to traders in local markets, mostly women who trade in fast moving consumable goods. Through monthly engagements at their places of business, the Club’s objective was to help them understand basic bookkeeping and encourage them to save in banking institutions in order to grow their business and improve their standards of living."
       },
       "church": {
         "title": "DFREE® IN THE CHURCH",
-        "description": "The DFREE® program was piloted in Ghana within an organization where workplace loans were common practice. Without a cap on borrowing power of employees, employers capitalized on this practice to leave most employees in wage deficit at the end of the pay cycle. Under the leadership of Mark, several staff of the organization joined the club and set individual as well as communal goals to pay off debt using such strategies such as the snowball method taught in the program. This kicked off and spiraled into a campaign even without the participants' access to workbooks. More importantly, they formed a support group that motivated and encouraged one another by sharing success stories and personal approaches to self-discipline. In short, a lifestyle and mindset change around money and spending was born."
+        "description": "The DFREE® program was  piloted in Ghana within an organization where workplace loans were  common practice.  Without a cap on borrowing power of employees,  employers capitalized on this practice to leave most employees in wage  deficit at the end of the pay cycle.\n Under the leadership of  Mark, several staff of the organization joined the club and set  individual as well as communal goals to pay off debt using such  strategies such as the snowball method taught in the program. This  kicked off and spiraled into a campaign even without the participants’  access to workbooks.\n More importantly, they  formed a support group that motivated and encouraged one another by  sharing success stories and personal approaches to self-discipline.  In  short, a lifestyle and mindset change around money and spending was  born."
       },
       "partnerships": {
         "title": "PARTNERSHIPS",
-        "description": "DFREE® Club, Ghana has partnered with Gamma Alpha Sigma Zeta chapter of Zeta Phi Beta Sorority, Inc. (A.K.A. Ghana Zetas) to promote financial literary among specific groups of consumers. This mostly includes women and girls in shelters and halfway homes often rescued or escaping from abusive homes. They also work with fisherfolks and farmers in rural communities, and street hawkers in urban areas. Working through the Agape Sanctuary of Victory Bible Church, the engagement of youth in the BDC and outreach to market traders have been extremely successful campaigns that can only group through other sanctuaries of the church."
+        "description": "The DFREE® Club, Ghana has partnered with Gamma Alpha Sigma Zeta chapter of Zeta Phi Beta Sorority, Inc. (A.K.A. Ghana Zetas) to promote financial literary among specific groups of  consumers.  This mostly includes women and girls in shelters and halfway homes often rescued or escaping from abusive homes. They also work with fisherfolks and farmers in rural communities, and street hawkers in  urban areas. \nWorking through the Agape  Sanctuary of Victory Bible Church, the engagement of youth in the Billion Dolla Challenge  and outreach to market traders have been extremely successful campaigns  that can only group through other sanctuaries of the church."
       },
       "challenges": {
         "title": "CHALLENGES",
-        "description": "DFREE® Club, Ghana has struggled with sustainability over the years. Funding for travel, access to resources like books and internet service are some of the factors affecting the few volunteers who have committed to driving the cause. In this new phase, the emphasis on working through the church, hopefully, changes the narrative. Support in the form of books and funding to host events, educate market traders and reach more beneficiaries would be welcome."
+        "description": "The DFREE® Club, Ghana has  struggled with sustainability over the years.  Funding for travel,  access to resources like books and internet service are some of the  factors affecting the few volunteers who have committed to driving the  cause.  \nIn this new phase, the  emphasis on working through the church, hopefully, changes the  narrative.  Support in the form of books and funding to host events,  educate market traders and reach more beneficiaries would be welcome."
       },
       "successes": {
         "title": "SUCCESSES",
-        "description": "DFREE® Club, Ghana has chalked some successes. Over 100 individuals have successfully completed the program since inception. Apart from the debt paid down, group members have also saved over 60,000 cedis ($8,000) collectively in about 3 years through the Billion Dollar Challenge. The Club continues to lead the charge of helping individuals pay down debt, save to create wealth, and learn to invest and grow their incomes for better standards of living."
+        "description": "Over 100 individuals have successfully  completed the program since inception. Apart from the debt paid down,  group members have also saved over 60,000 cedis ($8,000) collectively in about 3 years through the Billion Dollar Challenge. \nThe Club continues to lead  the charge of helping individuals pay down debt, save to create wealth,  and learn to invest and grow their incomes for better standards of  living."
       }
     },
     "featuredProjects": {
@@ -921,20 +869,22 @@
   "southAfrica": {
     "pageInfo": {
       "mainTitle": "DFREE® in South Africa",
-      "descText": "“Our lives continue to be blessed by the work we do at DFREE®. It is an honor we cherish greatly that God can use us for such a big mandate of helping people live in financial freedom.” Landi and Mali, DFREE® SA."
+      "descText_Quote": "“Our lives continue to be  blessed by the work we do at DFREE®. It is an honor we cherish greatly  that God can use us for such a big mandate of helping people live in  financial freedom.” ",
+      "descText_Quote_Author": "Landi and Mali, DFREE® SA."
     },
     "sections": {
       "partnerships": {
         "title": "PARTNERSHIPS",
-        "description": "Karani Leadership – This is a successful black-owned company offering business and strengths coaching for entrepreneurs, and executive coaching for senior management. The partnership gave birth to the incorporation of a 4-week DFREE® course in their entrepreneurs' program. Lucha Lunako – dfree® South Africa teamed up this prominent youth development not-for-profit organization to enhance their Financial Behavior Improvement division, drawing from the DFREE® Young Money curriculum. Pastor Debbie Bruce and the Baptist Convention of Southern Africa (BCSA) – Ps. Bruce is the vice president of the Convention who has fostered a relationship to train pastors and church leaders in the Convention. Through the partnership, train-the-trainer sessions are also held for George East Ministers Fraternity so they can in turn train other leaders to launch the dfree® program in their churches."
+        "description": "Karani Leadership – This is a successful black-owned company offering business and strengths  coaching for entrepreneurs, and executive coaching for senior  management. The partnership gave birth to the incorporation of a 4-week  DFREE® course in their entrepreneurs’ program. \n\nLucha Lunako – dfree® South Africa teamed up this prominent youth development not-for-profit  organization to enhance their Financial Behavior Improvement division,  drawing from the DFREE® Young Money curriculum.\n\nPastor Debbie Bruce and the Baptist Convention of Southern Africa (BCSA) – Ps. Bruce is the vice president of the Convention who has fostered a  relationship to train pastors and church leaders in the Convention.  Through the partnership, train-the-trainer sessions are also held for  George East Ministers Fraternity so they can in turn train other leaders to launch the dfree® program in their churches."
       },
       "challenges": {
         "title": "CHALLENGES",
-        "description": "In-person trainings were curtailed due to the COVID-19 lockdown and restrictions imposed by government, which limited the number of people and the duration of each gathering. Financial constraints of participants due to the high rate of job losses in 2020/2021 meant that people had competing necessities on their stimulus income government. Internet service was not a priority on the needs list, which meant attendance was low on our virtual meetings. Sadly, those most affected were also the bracket of people highly indebted to loan sharks and retail shops."
+        "description": "In-person training sessions were curtailed due to the COVID-19 restrictions, and it has been hard to reactivate. Financial constraints on participants due to the high rate of job losses since 2020/2021 translates to competing necessities on their stimulus income from government. Internet service is not a priority on the needs list, meaning attendance at virtual events are also low. Sadly, those most affected are also the bracket of people highly indebted who need DFREE® the most.",
+        "videoLabel": "Watch: Evelyn Tshabalala"
       },
       "successes": {
         "title": "SUCCESSES",
-        "description": "Some notable milestones achieved by DFREE® South Africa include starting savings clubs, nurturing subsistence entrepreneurs and cooperatives in underserved South African communities that have emerged. We believe in continued and extensive behavioral financial literacy research."
+        "description": "Some notable milestones achieved by  DFREE® South Africa include starting savings clubs, nurturing  subsistence entrepreneurs and cooperatives in underserved South African  communities that have emerged. We believe in continued and extensive  behavioral financial literacy research."
       }
     },
     "featuredProjects": {

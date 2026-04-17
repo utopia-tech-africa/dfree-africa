@@ -1,9 +1,7 @@
 import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import { Hero, PageInfo } from "../components";
-import { SectionCard } from "../components/section-card";
-import { SectionCardProps } from "../components";
+import { Hero, PageInfo, SectionCard, SectionCardProps } from "./components";
 import { cn } from "@/lib/utils";
 import { FeaturedProjects } from "../../components";
 import { getFeaturedProjects } from "@/lib/sanity";
@@ -26,9 +24,9 @@ const GhanaPage = async ({ params }: Props) => {
     "Ghana",
     locale as "en" | "fr" | "es",
   );
-  const t = await getTranslations("africa.ghana");
+  const t = await getTranslations("ghana");
 
-  const ghanaPageData = [
+  const ghanaPageData: SectionCardProps = [
     {
       title: t("sections.workplace.title"),
       description: t("sections.workplace.description"),
@@ -60,9 +58,9 @@ const GhanaPage = async ({ params }: Props) => {
       />
 
       <PageInfo
-        mainTitle={t("title")}
-        descTitle={t("aboutTitle")}
-        descText={t("aboutText")}
+        mainTitle={t("pageInfo.mainTitle")}
+        descTitle={t("pageInfo.descTitle")}
+        descText={t("pageInfo.descText")}
       />
 
       {ghanaPageData.map((data, index: number) => {

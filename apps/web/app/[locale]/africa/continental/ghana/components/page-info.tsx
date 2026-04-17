@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { PageTitle } from "@/components/page-title/page-title";
 import { cn } from "@/lib/utils";
 import ComponentLayout from "@/components/component-layout";
@@ -29,7 +29,7 @@ export const PageInfo: React.FC<PageInfoProps> = ({
         {(descTitle || descText) && (
           <div className="flex flex-col gap-2 items-center">
             {descTitle && <Title text={descTitle} />}
-            <p className="text-neutral-1000 text-center text-2xl font-bold tracking-wide leading-relaxed ">
+            <p className="text-neutral-1000 text-center text-2xl font-bold tracking-wide leading-relaxed whitespace-pre-line">
               {descText}
             </p>
           </div>

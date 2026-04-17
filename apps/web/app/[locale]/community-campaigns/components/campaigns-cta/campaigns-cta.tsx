@@ -33,7 +33,7 @@ export const CampaignsCta = async () => {
                 buttonVariants({ size: "default", variant: "secondary" }),
               )}
             >
-              Join the movement
+              {t("buttonText")}
             </Link>
           </div>
 
