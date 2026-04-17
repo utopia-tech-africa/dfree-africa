@@ -31,7 +31,6 @@ export const Events = ({
 
   const totalSlides = EVENTS_META.length;
 
-  // Only relevant for horizontal scrolling
   const updateScrollArrows = useCallback(() => {
     if (layout !== "scroll") return;
 

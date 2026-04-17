@@ -14,8 +14,8 @@ export interface ContentCardProps {
   link: string;
   ctaLabel?: string;
   date?: {
-    day: string; // e.g. "April '26"
-    dated: string; // e.g. "23rd"
+    day: string;
+    dated: string;
     mode: string;
     year: string;
   };
@@ -57,7 +57,7 @@ export const ContentCard = ({
   };
 
   return (
-    <div className="group flex flex-col h-full rounded-2xl border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-all overflow-hidden">
+    <div className="group flex flex-col h-full rounded-[8px] border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-all overflow-hidden">
       {/* IMAGE */}
       <div className="relative">
         <Image
@@ -65,7 +65,7 @@ export const ContentCard = ({
           alt={title}
           width={405}
           height={275}
-          className="h-[240px] w-full object-cover rounded-t-2xl"
+          className="h-[240px] w-full object-cover"
         />
 
         {isEvent && date && (
