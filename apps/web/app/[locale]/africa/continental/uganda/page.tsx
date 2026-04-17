@@ -12,40 +12,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
   return createMetadata({
-    title: t("ghana.title"),
-    description: t("ghana.description"),
-    path: `/${locale}/africa/continental/ghana`,
+    title: t("uganda.title"),
+    description: t("uganda.description"),
+    path: `/${locale}/africa/continental/uganda`,
   });
 }
 
-const GhanaPage = async ({ params }: Props) => {
+const UgandaPage = async ({ params }: Props) => {
   const { locale } = await params;
   const featuredProjects = await getFeaturedProjects(
-    "Ghana",
+    "Uganda",
     locale as "en" | "fr" | "es",
   );
-  const t = await getTranslations("ghana");
+  const t = await getTranslations("uganda");
 
-  const ghanaPageData: SectionCardProps = [
+  const ugandaPageData: SectionCardProps = [
     {
-      title: t("sections.workplace.title"),
-      description: t("sections.workplace.description"),
+      title: t("sections.theCommitment.title"),
+      description: t("sections.theCommitment.description"),
     },
     {
-      title: t("sections.church.title"),
-      description: t("sections.church.description"),
-    },
-    {
-      title: t("sections.partnerships.title"),
-      description: t("sections.partnerships.description"),
-    },
-    {
-      title: t("sections.challenges.title"),
-      description: t("sections.challenges.description"),
-    },
-    {
-      title: t("sections.successes.title"),
-      description: t("sections.successes.description"),
+      title: t("sections.theImpact.title"),
+      description: t("sections.theImpact.description"),
+      points: [
+        t("sections.theImpact.points.point1"),
+        t("sections.theImpact.points.point2"),
+        t("sections.theImpact.points.point3"),
+      ],
+      cta: t("sections.theImpact.cta"),
     },
   ];
 
@@ -53,24 +47,25 @@ const GhanaPage = async ({ params }: Props) => {
     <div className="flex flex-col gap-5 w-full">
       <Hero
         bgImage={
-          "https://res.cloudinary.com/dan9camhs/image/upload/v1773145980/8c40374f-96b4-452c-801d-b20c258fa69f.webp"
+          "https://res.cloudinary.com/dan9camhs/image/upload/v1776422905/Uganda_flag_uv1aee.webp"
         }
       />
 
-      <PageInfo
-        mainTitle={t("pageInfo.mainTitle")}
-        descTitle={t("pageInfo.descTitle")}
-        descText={t("pageInfo.descText")}
-      />
+      <PageInfo />
 
-      {ghanaPageData.map((data, index: number) => {
+      {ugandaPageData.map((data, index: number) => {
         const isLast = index % 2 === 0;
 
         const className = `${isLast ? "bg-primary-500 text-neutral-100" : ""}`;
 
         return (
           <div className={cn(className, "")} key={index}>
-            <SectionCard title={data.title} description={data.description} />
+            <SectionCard
+              title={data.title}
+              description={data.description}
+              points={data.points}
+              cta={data.cta}
+            />
           </div>
         );
       })}
@@ -81,10 +76,10 @@ const GhanaPage = async ({ params }: Props) => {
           // title="Projects"
           subtitle={t("featuredProjects.subtitle")}
           description={t("featuredProjects.description")}
-          href="/africa/projects?country=ghana"
+          href="/africa/projects?country=uganda"
         />
       )}
     </div>
   );
 };
-export default GhanaPage;
+export default UgandaPage;

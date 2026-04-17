@@ -1,9 +1,7 @@
 import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import { Hero, PageInfo } from "../components";
-import { SectionCard } from "../components/section-card";
-import { SectionCardProps } from "../components";
+import { Hero, PageInfo, SectionCard, SectionCardProps } from "./components";
 import { cn } from "@/lib/utils";
 import { FeaturedProjects } from "../../components";
 import { getFeaturedProjects } from "@/lib/sanity";
@@ -26,7 +24,7 @@ const SouthAfricaPage = async ({ params }: Props) => {
     "South Africa",
     locale as "en" | "fr" | "es",
   );
-  const t = await getTranslations("africa.southAfrica");
+  const t = await getTranslations("southAfrica");
 
   const southAfricaPageData: SectionCardProps = [
     {
@@ -36,6 +34,13 @@ const SouthAfricaPage = async ({ params }: Props) => {
     {
       title: t("sections.challenges.title"),
       description: t("sections.challenges.description"),
+      video: {
+        label: t("sections.challenges.videoLabel"),
+        href: "https://drive.google.com/file/d/16DhkQHupkLPNWiAnOW2tis_VHyKFrKSI/preview",
+        // logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1776345929/yt_logo_zarb2n.webp",
+        thumbnail:
+          "https://res.cloudinary.com/dan9camhs/image/upload/v1776346397/south_africa_yt_thumbnail_wd70qc.webp",
+      },
     },
     {
       title: t("sections.successes.title"),
@@ -51,7 +56,7 @@ const SouthAfricaPage = async ({ params }: Props) => {
         }
       />
 
-      <PageInfo mainTitle={t("title")} descText={t("aboutText")} />
+      <PageInfo />
 
       {southAfricaPageData.map(
         (data: SectionCardProps[number], index: number) => {
@@ -61,7 +66,11 @@ const SouthAfricaPage = async ({ params }: Props) => {
 
           return (
             <div className={cn(className, "")} key={index}>
-              <SectionCard title={data.title} description={data.description} />
+              <SectionCard
+                title={data.title}
+                description={data.description}
+                video={data.video}
+              />
             </div>
           );
         },

@@ -8,7 +8,6 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ bgImage, className }) => {
-  // If bgImage is an object (StaticImageData), use bgImage.src
   const bgUrl = typeof bgImage === "string" ? bgImage : bgImage.src;
 
   return (
@@ -16,7 +15,6 @@ export const Hero: React.FC<HeroProps> = ({ bgImage, className }) => {
       className={cn("relative w-full h-[50vh] bg-cover bg-center", className)}
       style={{ backgroundImage: `url(${bgUrl})` }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/20" />
     </div>
   );
