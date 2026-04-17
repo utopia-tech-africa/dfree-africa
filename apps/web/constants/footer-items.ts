@@ -23,10 +23,14 @@ export const FOOTER_SECTIONS = [
   {
     title: "getInvolved",
     items: [
-      { key: "support", href: "#" },
+      {
+        key: "support",
+        href: "https://dfree.com/sponsorship-inquiry/",
+        target: "_blank",
+      },
       {
         key: "partner",
-        href: "https://dfreefoundation.org/partners/",
+        href: "https://dfree.com/partner-with-us/",
         target: "_blank",
       },
       {
@@ -55,7 +59,7 @@ export const SOCIAL_LINKS = [
   },
   {
     icon: X,
-    href: "https://www.linkedin.com/company/dfreemovement/posts/?feedView=all",
+    href: "https://x.com/dfreemovement?s=11",
     target: "_blank",
   },
   {

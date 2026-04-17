@@ -117,7 +117,7 @@ export function PillarCard({
           <h2 className="font-montserrat text-[22px] font-bold leading-[1.2] md:text-[32px]">
             {title}
           </h2>
-          <p className="font-poppins text-sm leading-[1.2] text-white/95 md:text-lg md:leading-[1.3]">
+          <p className="text-justify font-poppins text-sm leading-[1.2] text-white/95 md:text-lg md:leading-[1.3]">
             {description}
           </p>
         </div>
