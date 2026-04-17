@@ -48,17 +48,22 @@ export const Carousel = ({
     );
 
     const slides = slideRefs.current;
-    const viewportCenter = scrollLeft + clientWidth / 2;
+    const paddingLeft = parseFloat(getComputedStyle(el).paddingLeft) || 0;
 
-    let newIndex = 0;
+    let closestIndex = 0;
+    let minDistance = Infinity;
+
     for (let i = 0; i < slides.length; i++) {
       const slide = slides[i];
       if (slide) {
-        const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-        if (viewportCenter >= slideCenter) newIndex = i;
+        const distance = Math.abs(slide.offsetLeft - paddingLeft - scrollLeft);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = i;
+        }
       }
     }
-    setActiveIndex(newIndex);
+    setActiveIndex(closestIndex);
   }, []);
 
   const scrollToIndex = useCallback((index: number) => {
@@ -151,19 +156,30 @@ export const Carousel = ({
         <div className="flex items-center justify-between mt-6">
           {/* Dots */}
           <div className="flex items-center gap-2">
-            {React.Children.map(children, (_, index) => (
-              <button
-                key={index}
-                onClick={() => scrollToIndex(index)}
-                className={cn(
-                  "h-2 w-2 rounded-full transition-all duration-300",
-                  activeIndex === index
-                    ? "bg-neutral-900 scale-110"
-                    : "bg-neutral-300 hover:bg-neutral-400",
-                )}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+            {(() => {
+              const numDots = Math.min(5, totalSlides);
+              let startDot = Math.max(0, activeIndex - 2);
+              if (startDot + numDots > totalSlides) {
+                startDot = Math.max(0, totalSlides - numDots);
+              }
+              const visibleDots = Array.from({ length: numDots }).map(
+                (_, i) => startDot + i,
+              );
+
+              return visibleDots.map((slideIndex) => (
+                <button
+                  key={slideIndex}
+                  onClick={() => scrollToIndex(slideIndex)}
+                  className={cn(
+                    "h-2 w-2 rounded-full transition-all duration-300",
+                    activeIndex === slideIndex
+                      ? "bg-neutral-900 scale-110"
+                      : "bg-neutral-300 hover:bg-neutral-400",
+                  )}
+                  aria-label={`Go to slide ${slideIndex + 1}`}
+                />
+              ));
+            })()}
           </div>
 
           {/* Arrows */}

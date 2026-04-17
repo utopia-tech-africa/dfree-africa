@@ -28,6 +28,10 @@
       "title": "Sudáfrica",
       "description": "DFREE® en Sudáfrica - Alianzas, educación financiera y desarrollo comunitario con la Convención Bautista del Sur de África y organizaciones locales."
     },
+    "uganda": {
+      "title": "Uganda",
+      "description": "DFREE® en Uganda: entrega de agua potable, alfabetización financiera y desarrollo comunitario a través de alianzas estratégicas."
+    },
     "billionDollarChallenge": {
       "title": "Desafío del billón de dólares",
       "description": "Elimina deudas, ahorra y toma el control de tu futuro financiero con el Desafío del billón de dólares DFREE®—una plataforma digital basada en la responsabilidad comunitaria."
@@ -360,7 +364,42 @@
     "testimonials": {
       "title": "Testimonios",
       "subtitle": "Lo que dicen nuestros participantes",
-      "description": "No te quedes con nuestra palabra; esto es lo que asistentes pasados dijeron sobre FinFE$T."
+      "description": "No te quedes con nuestra palabra; esto es lo que asistentes pasados dijeron sobre FinFE$T.",
+      "items": [
+        {
+          "type": "video",
+          "name": "Reginal",
+          "thumbnail": "/videos/finfest/reginald-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Zakiyya Jordan",
+          "organization": "Zeta Ph Beta Sorority, Inc.",
+          "content": "\"DFREE® definitivamente me ha dado confianza sobre cómo manejar mis finanzas y una gran perspectiva sobre comportamientos y actitudes de gasto no saludables.\""
+        },
+        {
+          "type": "video",
+          "name": "Tamara",
+          "thumbnail": "/videos/finfest/tamara-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Diana Belle",
+          "organization": "Clear View Baptist Church",
+          "content": "\"Soy una mejor administradora de mis finanzas después de haber pasado por este proceso. Ahora estoy trabajando en dejar un legado para mis hijas.\""
+        },
+        {
+          "type": "video",
+          "name": "Ruth",
+          "thumbnail": "/videos/finfest/ruth-testimonial.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Jackie Jackson",
+          "organization": "Socia comunitaria",
+          "content": "\"Este curso de DFREE® me ayudó a organizar mis finanzas, encontrar las fugas y pagar la deuda de mi tarjeta de crédito, ¡nada de lo cual podría haber hecho por mi cuenta!\""
+        }
+      ]
     },
     "banner": {
       "title": "Únete al próximo FinFE$T",
@@ -754,6 +793,33 @@
     "featuredProjects": {
       "subtitle": "Proyectos destacados",
       "description": "Con el apoyo de socios dedicados y líderes comunitarios, nuestras iniciativas generan un impacto medible y crean un cambio duradero en toda Sudáfrica."
+    }
+  },
+  "uganda": {
+    "pageInfo": {
+      "mainTitle": "DFREE® en Uganda",
+      "descTitle": "Acerca de",
+      "descText": "Las iniciativas de DFREE® en Uganda comenzaron en 2019 cuando el Dr. Soaries fue invitado de Su Alteza el Obispo John Chrisostom Wayabire, rey del reino de Bugwere, y el primer gobernante tradicional africano conocido que también es obispo de una iglesia cristiana. En el quinto aniversario de la coronación de Su Alteza Wayabire, el Dr. Soaries tuvo la oportunidad de reunirse con el presidente del país y celebrar consejo con miembros de la comunidad, especialmente con la iniciativa especial de mujeres de la Reina que brindaba capacitación en habilidades y medios de vida a mujeres y niñas de comunidades desfavorecidas.\nDFREE® ha desarrollado una relación de trabajo aún más sólida con el rey Geoffrey Wayabire, quien sucedió a su padre como rey en 2023. La asociación ha dado lugar a 2 proyectos clave:"
+    },
+    "sections": {
+      "theCommitment": {
+        "title": "EL COMPROMISO",
+        "description": "El Dr. Soaries se comprometió a recaudar fondos para 10 pozos de agua para 10 comunidades. A diferencia de los estanques, los pozos acceden a un acuífero subterráneo profundo a cientos de pies bajo la superficie, protegidos de los contaminantes superficiales."
+      },
+      "theImpact": {
+        "title": "EL IMPACTO - UN EFECTO DOMINÓ",
+        "description": "En diciembre de 2025, los dos primeros pozos bombearon agua limpia en dos aldeas, marcando la transición de un estanque compartido con el ganado a un pozo dedicado que representó más que salud; representó dignidad. Los beneficios del pozo llegaron mucho más allá de simplemente saciar la sed:\nSalud: Se espera que la incidencia de dolencias disminuya drásticamente en unos pocos meses.",
+        "points": {
+          "point1": "Educación: Los niños, en particular las niñas, que anteriormente tenían la tarea de transportar agua desde el estanque, ahora podrán asistir a la escuela de manera constante.",
+          "point2": "Ahorro de tiempo económico: Lo que solía ser una tarea diaria de dos horas de caminata para buscar agua y hervirla es ahora una caminata de cinco minutos hasta una bomba confiable.",
+          "point3": "Higiene: Todas las tareas domésticas, incluida la lavandería, también se realizan con agua limpia, lo que reduce la instancia de contaminación por la actividad del ganado."
+        },
+        "cta": "Ayude a apoyar esta causa para proporcionar agua potable a las aldeas de Bugwere."
+      }
+    },
+    "featuredProjects": {
+      "subtitle": "Proyectos destacados",
+      "description": "Con el apoyo de socios dedicados y líderes comunitarios, nuestras iniciativas generan un impacto medible y crean un cambio duradero en toda Uganda."
     }
   }
 }

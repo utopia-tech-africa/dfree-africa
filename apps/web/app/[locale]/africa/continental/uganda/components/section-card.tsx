@@ -1,18 +1,15 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import ComponentLayout from "@/components/component-layout";
+import { SectionCardProps } from "./index";
 
-export interface SectionCardSingleProps {
-  title: string;
-  description: string;
-  className?: string;
-}
-
-export const SectionCard: React.FC<SectionCardSingleProps> = ({
+export const SectionCard = ({
   title,
   description,
+  points,
+  cta,
   className,
-}) => {
+}: SectionCardProps[number]) => {
   return (
     <ComponentLayout>
       <div
@@ -28,6 +25,13 @@ export const SectionCard: React.FC<SectionCardSingleProps> = ({
         </div>
         <div>
           <p className="text-lg whitespace-pre-line">{description}</p>
+          {points &&
+            Object.values(points).map((point, index) => (
+              <ul className="list-disc pl-5" key={index}>
+                <li className="text-lg whitespace-pre-line">{point}</li>
+              </ul>
+            ))}
+          {cta && <p className="text-lg whitespace-pre-line mt-4">{cta}</p>}
         </div>
       </div>
     </ComponentLayout>

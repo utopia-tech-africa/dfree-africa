@@ -29,7 +29,7 @@ export const PageInfo: React.FC<PageInfoProps> = ({
         {(descTitle || descText) && (
           <div className="flex flex-col gap-2 items-center">
             {descTitle && <Title text={descTitle} />}
-            <p className="text-neutral-1000 text-center text-2xl font-bold tracking-wide leading-relaxed whitespace-pre-line">
+            <p className="text-neutral-1000 text-center text-lg md:text-2xl font-bold tracking-wide leading-relaxed whitespace-pre-line">
               {descText}
             </p>
           </div>
