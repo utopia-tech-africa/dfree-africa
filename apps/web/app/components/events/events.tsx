@@ -31,7 +31,6 @@ export const Events = ({
 
   const totalSlides = EVENTS_META.length;
 
-  // Only relevant for horizontal scrolling
   const updateScrollArrows = useCallback(() => {
     if (layout !== "scroll") return;
 
@@ -168,6 +167,7 @@ export const Events = ({
                   className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 shrink-0 flex"
                 >
                   <ContentCard
+                    variant="event"
                     image={meta.image}
                     badge={t(`${baseKey}.badge`)}
                     title={t(`${baseKey}.title`)}
@@ -259,6 +259,7 @@ export const Events = ({
             return (
               <ContentCard
                 key={key}
+                variant="event"
                 image={meta.image}
                 badge={t(`${baseKey}.badge`)}
                 title={t(`${baseKey}.title`)}
