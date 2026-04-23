@@ -204,6 +204,7 @@ export const AllProjects = ({
             country={project.country}
             previewMedia={project.previewMedia}
             slug={project.slug}
+            isOngoing={project.isOngoing}
           />
         ))}
       </div>

@@ -287,8 +287,7 @@
     },
     "merch": {
       "eyebrow": "Merch",
-      "titleLine1": "Browse our",
-      "titleLine2": "bookstore",
+      "titleLine": "Browse our bookstore",
       "description": "Empower your journey with meaningful products that drive change.",
       "visitStoreCta": "Visit store"
     },
