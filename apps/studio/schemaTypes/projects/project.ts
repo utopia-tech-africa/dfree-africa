@@ -100,6 +100,12 @@ export const project = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'isOngoing',
+      title: 'Ongoing Project',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
       name: 'featured',
       title: 'Featured Project',
       type: 'boolean',

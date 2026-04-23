@@ -17,7 +17,7 @@ const LeftPanel = () => {
         className="font-montserrat font-bold text-neutral-100 leading-tight"
         style={{ fontSize: "clamp(22px, 3vw, 32px)" }}
       >
-        {t("titleLine1")} <br /> {t("titleLine2")}
+        {t("titleLine")}
       </h2>
 
       <p className="text-neutral-400 leading-relaxed">{t("description")}</p>

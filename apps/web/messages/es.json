@@ -287,8 +287,7 @@
     },
     "merch": {
       "eyebrow": "Merch",
-      "titleLine1": "Explora nuestra",
-      "titleLine2": "librería",
+      "titleLine": "Explora nuestra librería",
       "description": "Impulsa tu camino con productos significativos que generan cambio.",
       "visitStoreCta": "Visitar tienda"
     },
