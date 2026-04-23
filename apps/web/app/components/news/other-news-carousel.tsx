@@ -1,69 +1,26 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
-import { useLocale, useTranslations } from "next-intl";
-import type { BlogCardProps } from "./blog-card";
-import { BlogCard } from "./blog-card";
+import { useRef, useState, useCallback, useEffect } from "react";
+import type { NewsCardProps } from "./news-card";
+import { NewsCard } from "./news-card";
 import ComponentLayout from "@/components/component-layout";
 import { cn } from "@/lib/utils";
-import { Title } from "@/components/title-and-subtitle/title";
-import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const SCROLL_EDGE_THRESHOLD = 10;
 
-interface BlogListProps {
-  currentSlug?: string;
-  compact?: boolean;
-  className?: string;
-  showHeader?: boolean;
+interface OtherNewsCarouselProps {
+  news: NewsCardProps[];
 }
 
-export const BlogList = ({
-  currentSlug,
-  // compact and className reserved for future layout tweaks
-  showHeader = true,
-}: BlogListProps) => {
-  const t = useTranslations("home.blogs");
-  const locale = useLocale();
+export const OtherNewsCarousel = ({ news }: OtherNewsCarouselProps) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const responseCacheRef = useRef<Map<string, BlogCardProps[]>>(new Map());
-  const [blogs, setBlogs] = useState<BlogCardProps[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const totalSlides = blogs.length;
-  useEffect(() => {
-    const controller = new AbortController();
-    const params = new URLSearchParams();
-    if (currentSlug) params.set("currentSlug", currentSlug);
-    params.set("locale", locale);
-    const cacheKey = `${locale}:${currentSlug ?? ""}`;
-
-    const cached = responseCacheRef.current.get(cacheKey);
-    if (cached) {
-      setBlogs(cached);
-      return () => controller.abort();
-    }
-
-    fetch(`/api/blogs?${params.toString()}`, {
-      signal: controller.signal,
-      cache: "default",
-    })
-      .then(async (res) => {
-        if (!res.ok) return;
-        const data: BlogCardProps[] = await res.json();
-        responseCacheRef.current.set(cacheKey, data);
-        setBlogs(data);
-      })
-      .catch(() => {
-        // Silently ignore in production; blogs section just won't render.
-      });
-
-    return () => controller.abort();
-  }, [currentSlug, locale]);
+  const totalSlides = news.length;
 
   const updateScrollArrows = useCallback(() => {
     const el = scrollContainerRef.current;
@@ -80,17 +37,13 @@ export const BlogList = ({
     const viewportCenter = scrollLeft + clientWidth / 2;
 
     let newIndex = 0;
-
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
-
       if (card) {
         const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-
         if (viewportCenter >= cardCenter) newIndex = i;
       }
     }
-
     setActiveIndex(newIndex);
   }, []);
 
@@ -120,37 +73,19 @@ export const BlogList = ({
 
   useEffect(() => {
     updateScrollArrows();
-
     const el = scrollContainerRef.current;
-
     if (!el) return;
-
     const ro = new ResizeObserver(updateScrollArrows);
-
     ro.observe(el);
-
     return () => ro.disconnect();
-  }, [updateScrollArrows, blogs]);
-
-  if (!blogs.length) return null;
+  }, [updateScrollArrows, news]);
 
   return (
-    <ComponentLayout className="overflow-hidden">
-      <div className="space-y-10">
-        {showHeader && (
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <div>
-              <Title text={t("label")} />
-              <Subtitle text={t("title")} />
-            </div>
+    <ComponentLayout className="overflow-hidden mb-20">
+      <div className="space-y-4">
+        <h2 className="text-xl font-bold mb-4">Read more</h2>
 
-            <p className="text-black font-medium text-lg max-w-md">
-              {t("subtitle")}
-            </p>
-          </div>
-        )}
-        {/* Cards */}
-        <div className="relative mt-10">
+        <div className="relative">
           <div className="-mx-4 md:-mx-10 lg:-mx-20 overflow-hidden">
             <div
               ref={scrollContainerRef}
@@ -158,25 +93,24 @@ export const BlogList = ({
               className="flex gap-6 overflow-x-auto overflow-y-hidden px-4 md:px-10 lg:px-20 pb-6 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               style={{ msOverflowStyle: "none" }}
             >
-              {blogs.map((blog, idx) => (
+              {news.map((newsItem, idx) => (
                 <div
                   key={idx}
                   ref={(el) => {
                     cardRefsRef.current[idx] = el;
                   }}
-                  className="min-w-[320px] md:min-w-[360px] lg:min-w-[405px] w-[320px] md:w-[360px] lg:w-[405px] shrink-0 border border-[#E8E8E8] rounded"
+                  className="min-w-[320px] md:min-w-[360px] lg:min-w-[405px] w-[320px] md:w-[360px] lg:w-[405px] shrink-0"
                 >
-                  <BlogCard {...blog} />
+                  <NewsCard {...newsItem} />
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Bottom controls */}
           <div className="flex items-center justify-between mt-6">
             {/* Dots */}
             <div className="flex items-center gap-2">
-              {blogs.map((_, index) => (
+              {news.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToIndex(index)}
@@ -205,7 +139,6 @@ export const BlogList = ({
                 disabled={!canScrollRight}
                 className="p-2 transition disabled:pointer-events-none disabled:opacity-40 hover:bg-neutral-100"
               >
-                {" "}
                 <FaArrowRight className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
               </button>
             </div>

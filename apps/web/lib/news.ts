@@ -1,21 +1,21 @@
 import type { StaticImageData } from "next/image";
 
-export const BLOG_KEYS = [
+export const NEWS_KEYS = [
   "realEstateWealth",
   "collectiveEconomics",
   "faithBasedInvesting",
   "investingWithPurpose",
 ] as const;
 
-export type BlogKey = (typeof BLOG_KEYS)[number];
+export type NewsKey = (typeof NEWS_KEYS)[number];
 
-export type BlogMeta = {
-  id: BlogKey;
+export type NewsMeta = {
+  id: NewsKey;
   image: StaticImageData | string;
   link: string;
 };
 
-export const BLOG_POSTS_META: BlogMeta[] = [
+export const NEWS_POSTS_META: NewsMeta[] = [
   {
     id: "realEstateWealth",
     image:

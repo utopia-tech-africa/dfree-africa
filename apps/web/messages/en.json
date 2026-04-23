@@ -292,167 +292,19 @@
       "description": "Empower your journey with meaningful products that drive change.",
       "visitStoreCta": "Visit store"
     },
-    "blogs": {
-      "label": "Blog",
-      "title": "Insights and perspectives",
-      "subtitle": "Embrace life's beauty and cherish connections.",
+    "news": {
+      "title": "News and Media",
+      "description": "Stay informed with insightful articles and breaking news. Explore diverse perspectives and in-depth analysis on the topics that matter most.",
+      "viewAllNewsCta": "View all news",
       "readMoreCta": "Read more",
-      "posts": {
-        "realEstateWealth": {
-          "title": "Building Generational Wealth Through Real Estate",
-          "description": "Explore strategies for building wealth through real estate investments.",
-          "readTime": "5 min read"
-        },
-        "collectiveEconomics": {
-          "title": "The Power of Collective Economics in Urban Communities",
-          "description": "Learn about the transformative power of collective economics in urban communities.",
-          "readTime": "5 min read"
-        },
-        "faithBasedInvesting": {
-          "title": "Faith-Based Investing: Aligning Values with Financial Growth",
-          "description": "Discover how faith-based investing aligns your values with financial growth.",
-          "readTime": "5 min read"
-        },
-        "investingWithPurpose": {}
-      },
-      "ourImpact": {
-        "label": "Our impact",
-        "title": "Mapping our impact across communities",
-        "description": "Every milestone represents lives transformed and hope restored.",
-        "stats": {
-          "completedProjects": {
-            "value": "1900",
-            "suffix": "+",
-            "label": "Completed projects"
-          },
-          "livesImpacted": {
-            "value": "3400",
-            "suffix": "+",
-            "label": "Lives impacted"
-          },
-          "debtCleared": {
-            "value": "2500",
-            "suffix": "$",
-            "label": "Debt cleared"
-          },
-          "youngPeopleTrained": {
-            "value": "2500",
-            "suffix": "+",
-            "label": "Young people trained"
-          }
-        }
-      },
-      "testimonials": {
-        "title": "Testimonials",
-        "heading": "Real stories of change",
-        "subtitle": "Voices that reveal the power of financial transformation",
-        "items": {
-          "shirley": {
-            "name": "Shirley Richard",
-            "title": "Small business owner",
-            "text": "My family has been able to pay off more than $260,000 in debt. The journey has been transformational, a blessing and a source of communion in fellowship."
-          },
-          "michele": {
-            "name": "Michele Bailey",
-            "title": "Community leader",
-            "text": "I’ve been able to pay at least $65,000 off and save $5,000, which has helped me get back into the saving habit."
-          },
-          "lloyd": {
-            "name": "Lloyd Branch",
-            "title": "Tech entrepreneur",
-            "text": "Paid off 5 credit cards, no longer enslaved to debts and have become much more financially independent."
-          }
-        }
-      },
-      "events": {
-        "label": "Events",
-        "sublabel": "Explore upcoming events and workshops. Discover opportunities to connect, learn, and grow with DFREE®.",
-        "title": "Upcoming gatherings",
-        "subtitle": "Join us in our mission to transform financial landscapes.",
-        "viewAllCta": "View all events",
-        "items": {
-          "workshop": {
-            "badge": "Workshop",
-            "title": "Financial freedom masterclass",
-            "location": "online",
-            "description": "Learn practical strategies for managing and reducing personal debt.",
-            "date": {
-              "day": "Fri 09 Feb 2024",
-              "dated": "06",
-              "mode": "online",
-              "year": "2024"
-            }
-          },
-          "seminar": {
-            "badge": "Seminar",
-            "title": "Community economic empowerment",
-            "location": "Houston",
-            "description": "Discover collaborative approaches to building financial resilience.",
-            "date": {
-              "day": "Fri 09 Feb 2024",
-              "dated": "06",
-              "mode": "online",
-              "year": "2024"
-            }
-          },
-          "conference": {
-            "badge": "Conference",
-            "title": "Debt reduction strategies",
-            "location": "Los Angeles",
-            "description": "Explore innovative techniques for overcoming financial challenges.",
-            "date": {
-              "day": "Fri 09 Feb 2024",
-              "dated": "06",
-              "mode": "online",
-              "year": "2024"
-            }
-          },
-          "donation": {
-            "badge": "Donation",
-            "title": "Giving back to the motherland",
-            "location": "Ghana",
-            "description": "Master practical methods for navigating monetary obstacles.",
-            "date": {
-              "day": "Fri 09 Feb 2024",
-              "dated": "06",
-              "mode": "online",
-              "year": "2024"
-            }
-          }
-        }
-      },
-      "merch": {
-        "eyebrow": "Merch",
-        "titleLine1": "Browse our",
-        "titleLine2": "bookstore",
-        "description": "Empower your journey with meaningful products that drive change.",
-        "visitStoreCta": "Visit store"
-      },
-      "blogs": {
-        "label": "Blog",
-        "title": "Insights and perspectives",
-        "subtitle": "Embrace life's beauty and cherish connections.",
-        "posts": {
-          "realEstateWealth": {
-            "title": "Building Generational Wealth Through Real Estate",
-            "description": "Explore strategies for building wealth through real estate investments.",
-            "readTime": "5 min read"
-          },
-          "collectiveEconomics": {
-            "title": "The Power of Collective Economics in Urban Communities",
-            "description": "Learn about the transformative power of collective economics in urban communities.",
-            "readTime": "5 min read"
-          },
-          "faithBasedInvesting": {
-            "title": "Faith-Based Investing: Aligning Values with Financial Growth",
-            "description": "Discover how faith-based investing aligns your values with financial growth.",
-            "readTime": "5 min read"
-          },
-          "investingWithPurpose": {
-            "title": "Investing with Purpose: Harmonizing Beliefs and Financial Success",
-            "description": "Investing with Purpose: Harmonizing Beliefs and Financial Success",
-            "readTime": "5 min read"
-          }
+      "featuredNews": {
+        "title": "News & Media",
+        "subtitle": "The latest from the DFREE world.",
+        "viewAllNewsCta": "View all news",
+        "readMoreCta": "Read more",
+        "emptyState": {
+          "title": "Coming Soon",
+          "description": "We are currently gathering the latest stories and updates. Check back soon for fresh news from our community."
         }
       }
     }

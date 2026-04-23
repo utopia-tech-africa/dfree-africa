@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
 
 interface PaginationProps {
   currentPage: number;
@@ -15,7 +16,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   siblingCount = 1,
 }) => {
   const range = (start: number, end: number) => {
-    const length = end - start + 1;
+    const length = Math.max(end - start + 1, 0);
     return Array.from({ length }, (_, i) => start + i);
   };
 
@@ -57,7 +58,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 
   const pages = generatePagination();
 
-  if (!pages) return null;
+  if (!pages || pages.length <= 0) return null;
 
   return (
     <div className="flex items-center justify-center gap-2 flex-wrap">
@@ -66,23 +67,26 @@ export const Pagination: React.FC<PaginationProps> = ({
         variant="outline"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="rounded-md px-4"
+        className="rounded-[8px] px-5 h-11 border-neutral-300 text-neutral-900 hover:bg-neutral-50 hover:ring-1 hover:ring-primary-400 transition-all duration-200"
       >
         Prev
       </Button>
 
       {pages.map((page, index) =>
         page === "..." ? (
-          <span key={index} className="px-2">
+          <span key={index} className="px-2 text-neutral-400">
             ...
           </span>
         ) : (
           <Button
             key={index}
+            variant="outline"
             onClick={() => onPageChange(Number(page))}
-            className={`px-3 py-1 border rounded ${
-              currentPage === page && "bg-white text-black"
-            }`}
+            className={cn(
+              "rounded-[8px] font-medium min-w-[44px] h-11 border-neutral-300 text-neutral-900 hover:bg-neutral-50 hover:ring-1 hover:ring-primary-400 transition-all duration-200",
+              currentPage === page &&
+                "ring-2 ring-primary-400 border-primary-400 bg-neutral-50 shadow-inner",
+            )}
           >
             {page}
           </Button>
@@ -94,7 +98,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         variant="outline"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="rounded-md px-4"
+        className="rounded-[8px] px-5 h-11 border-neutral-300 text-neutral-900 hover:bg-neutral-50 hover:ring-1 hover:ring-primary-400 transition-all duration-200"
       >
         Next
       </Button>
