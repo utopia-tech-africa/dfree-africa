@@ -55,9 +55,9 @@ export type SanityImageHotspot = {
   width?: number;
 };
 
-export type Merch = {
+export type Store = {
   _id: string;
-  _type: "merch";
+  _type: "store";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -377,7 +377,7 @@ export type AllSanitySchemaTypes =
   | PastSpeaker
   | SanityImageCrop
   | SanityImageHotspot
-  | Merch
+  | Store
   | Slug
   | Blog
   | ProjectReference
@@ -497,10 +497,10 @@ export type FinfestGalleryQueryResult = Array<{
   }> | null;
 }>;
 
-// Source: ../web/lib/sanity/queries/merch.ts
-// Variable: featuredMerchQuery
-// Query: *[_type == "merch" && featured == true] | order(_createdAt desc)[0...6] {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
-export type FeaturedMerchQueryResult = Array<{
+// Source: ../web/lib/sanity/queries/store.ts
+// Variable: featuredStoreQuery
+// Query: *[_type == "store" && featured == true] | order(_createdAt desc)[0...6] {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
+export type FeaturedStoreQueryResult = Array<{
   _id: string;
   title: string | null;
   slug: string | null;
@@ -535,10 +535,10 @@ export type FeaturedMerchQueryResult = Array<{
   storeUrl: string | null;
 }>;
 
-// Source: ../web/lib/sanity/queries/merch.ts
-// Variable: allMerchQuery
-// Query: *[_type == "merch"] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
-export type AllMerchQueryResult = Array<{
+// Source: ../web/lib/sanity/queries/store.ts
+// Variable: allStoreQuery
+// Query: *[_type == "store"] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
+export type AllStoreQueryResult = Array<{
   _id: string;
   title: string | null;
   slug: string | null;

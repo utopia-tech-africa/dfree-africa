@@ -73,7 +73,7 @@
     "communityCampaigns": "Campagnes communautaires",
     "dfreeAccessScholarships": "Bourses d'accès DFREE",
     "finfest": "FinFE$T",
-    "booksMerch": "Livres et marchandises",
+    "booksStore": "Livres et Boutique",
     "attendEvents": "Participez aux événements",
     "contactUs": "Nous contacter"
   },
@@ -285,8 +285,8 @@
         }
       }
     },
-    "merch": {
-      "eyebrow": "Produits",
+    "store": {
+      "eyebrow": "Boutique",
       "titleLine": "Parcourez notre librairie",
       "description": "Donnez de la force à votre parcours avec des produits porteurs de sens qui favorisent le changement.",
       "visitStoreCta": "Visiter la boutique"
