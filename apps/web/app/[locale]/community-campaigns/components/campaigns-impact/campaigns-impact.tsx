@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
+import Link from "next/link";
 
 export const CampaignsImpact = async () => {
   const t = await getTranslations("communityCampaigns.impact");
@@ -27,7 +27,12 @@ export const CampaignsImpact = async () => {
               {t("description")}
             </p>
 
-            <Link href="#" className="w-fit mt-2">
+            <Link
+              href="/docs/the-dfree-day-of-impact-deck.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 w-fit"
+            >
               <Button
                 variant="default"
                 size="default"
@@ -44,7 +49,7 @@ export const CampaignsImpact = async () => {
             </Link>
           </div>
 
-          <div className="relative lg:col-span-3 w-full aspect-[4/3] lg:aspect-auto lg:h-auto rounded-lg overflow-hidden">
+          <div className="relative lg:col-span-3 w-full aspect-4/3 lg:aspect-auto lg:h-auto rounded-lg overflow-hidden">
             <Image
               src={
                 "https://res.cloudinary.com/dan9camhs/image/upload/v1773226697/71042cb3-075a-40e4-a352-b9807e51561a.webp"

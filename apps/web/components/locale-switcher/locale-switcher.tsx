@@ -10,17 +10,20 @@ export type Locale = (typeof routing.locales)[number];
 
 const LOCALE_LABELS: Record<Locale, string> = {
   en: "EN",
+  es: "ES",
   fr: "FR",
-  es: "ESP",
 };
 
 const LOCALE_NAMES: Record<Locale, string> = {
   en: "English",
-  fr: "French",
   es: "Spanish",
+  fr: "French",
 };
 
 const LOCALES = routing.locales as readonly Locale[];
+const DISPLAY_LOCALES = ["en", "es", "fr"].filter((loc): loc is Locale =>
+  LOCALES.includes(loc as Locale),
+);
 const PENDING_KEY = "locale-switcher-pending";
 
 /** Pages with white/light backgrounds where desktop nav needs dark text. */
@@ -106,15 +109,15 @@ export function LocaleSwitcher({
     (e: React.KeyboardEvent, index: number) => {
       if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
         e.preventDefault();
-        const next = index > 0 ? index - 1 : LOCALES.length - 1;
+        const next = index > 0 ? index - 1 : DISPLAY_LOCALES.length - 1;
         (groupRef.current?.children[next] as HTMLElement)?.focus();
       } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
         e.preventDefault();
-        const next = index < LOCALES.length - 1 ? index + 1 : 0;
+        const next = index < DISPLAY_LOCALES.length - 1 ? index + 1 : 0;
         (groupRef.current?.children[next] as HTMLElement)?.focus();
       } else if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
-        const loc = LOCALES[index];
+        const loc = DISPLAY_LOCALES[index];
         if (loc) switchTo(loc);
       }
     },
@@ -132,7 +135,7 @@ export function LocaleSwitcher({
         aria-label="Language"
         className="flex items-center gap-8"
       >
-        {LOCALES.map((loc, index) => {
+        {DISPLAY_LOCALES.map((loc, index) => {
           const isActive = loc === locale;
           return (
             <button

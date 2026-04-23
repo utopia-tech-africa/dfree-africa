@@ -199,7 +199,7 @@ export const Header = () => {
                       key={subItem.labelKey}
                       href={subItem.href}
                       className={cn(
-                        "w-fit max-w-[208px] rounded-full px-4 py-2 text-center text-sm font-bold leading-tight text-neutral-1000",
+                        "inline-flex w-fit max-w-[240px] min-h-12 items-center justify-center rounded-full px-5 py-2 text-center text-sm font-bold leading-snug whitespace-normal text-neutral-1000",
                       )}
                     >
                       {t(subItem.labelKey)}
