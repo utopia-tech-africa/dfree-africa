@@ -186,8 +186,8 @@ function MediaGalleryViewer({
 
   if (items.length === 0) {
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85">
-        <div className="relative flex h-full w-full max-w-[1280px] flex-col items-center justify-center gap-10 rounded-lg bg-neutral-1000 pt-[60px] pb-10 px-[60px]">
+      <div className="fixed inset-0 z-50 grid h-dvh place-items-center bg-black/85 p-4">
+        <div className="relative flex h-[85dvh] max-h-[85dvh] w-full max-w-[1280px] flex-col items-center justify-center gap-10 rounded-lg bg-neutral-1000 px-[60px] pt-[60px] pb-10">
           <button
             type="button"
             onClick={onClose}
@@ -206,8 +206,8 @@ function MediaGalleryViewer({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85">
-      <div className="relative flex h-[90vh] max-h-[90vh] md:h-full md:max-h-none w-full max-w-[1280px] flex-col items-center gap-4 md:gap-10 overflow-hidden rounded-lg bg-neutral-1000 pt-4 pb-4 px-4 md:pt-[60px] md:pb-10 md:px-[60px]">
+    <div className="fixed inset-0 z-50 grid h-dvh place-items-center bg-black/85 p-4">
+      <div className="relative flex h-[85dvh] max-h-[85dvh] w-full max-w-[1280px] flex-col items-center gap-4 overflow-hidden rounded-lg bg-neutral-1000 px-4 pt-4 pb-4 md:gap-10 md:px-[60px] md:pt-[60px] md:pb-10">
         <button
           type="button"
           onClick={onClose}

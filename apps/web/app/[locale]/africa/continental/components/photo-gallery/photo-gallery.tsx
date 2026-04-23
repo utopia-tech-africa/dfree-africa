@@ -373,7 +373,7 @@ function ProjectGalleryViewer({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85">
-      <div className="relative flex h-[90vh] max-h-[90vh] md:h-full md:max-h-none w-full max-w-[1280px] flex-col items-center gap-4 md:gap-10 overflow-hidden rounded-lg bg-neutral-1000 pt-4 pb-4 px-4 md:pt-[60px] md:pb-10 md:px-[60px]">
+      <div className="relative flex h-[90vh] max-h-[90vh] w-full max-w-[1280px] flex-col items-center gap-4 md:gap-10 overflow-hidden rounded-lg bg-neutral-1000 pt-4 pb-4 px-4 md:pt-[60px] md:pb-10 md:px-[60px]">
         {/* Back: top left — smaller on mobile */}
         <button
           type="button"
