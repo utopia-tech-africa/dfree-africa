@@ -83,6 +83,7 @@ export const FeaturedProjects = ({
               country={project.country}
               previewMedia={project.previewMedia}
               slug={project.slug}
+              isOngoing={project.isOngoing}
             />
           ))}
         </div>
