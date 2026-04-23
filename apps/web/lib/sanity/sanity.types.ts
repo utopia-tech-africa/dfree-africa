@@ -240,6 +240,7 @@ export type Project = {
   }>;
   country?: string;
   featured?: boolean;
+  isOngoing?: boolean;
   gallery?: GalleryReference;
 };
 
@@ -660,6 +661,7 @@ export type ProjectsQueryResult = Array<{
   description: string | null;
   country: string | null;
   featured: boolean | null;
+  isOngoing: boolean | null;
   previewMedia: {
     type: "image" | "video" | null;
     imageRef: {
@@ -698,6 +700,7 @@ export type FeaturedProjectsQueryResult = Array<{
   description: string | null;
   country: string | null;
   featured: true;
+  isOngoing: boolean | null;
   previewMedia: {
     type: "image" | "video" | null;
     imageRef: {
@@ -736,6 +739,7 @@ export type FeaturedCountryProjectsQueryResult = Array<{
   description: string | null;
   country: string | null;
   featured: boolean | null;
+  isOngoing: boolean | null;
   previewMedia: {
     type: "image" | "video" | null;
     imageRef: {
@@ -782,6 +786,7 @@ export type ProjectBySlugQueryResult = {
   description: string | null;
   country: string | null;
   featured: boolean | null;
+  isOngoing: boolean | null;
   previewMedia: {
     type: "image" | "video" | null;
     imageRef: {

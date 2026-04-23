@@ -20,6 +20,7 @@ export type ProjectForUI = {
   description: string;
   country: string;
   featured: boolean;
+  isOngoing: boolean;
   previewMedia: {
     type: "image" | "video";
     url: string;
@@ -32,6 +33,7 @@ export type ProjectDetailForUI = {
   description: string;
   country: string;
   featured: boolean;
+  isOngoing: boolean;
   previewMedia: {
     type: "image" | "video";
     url: string;
@@ -64,6 +66,7 @@ function mapProjectToUI(project: ProjectQueryItem): ProjectForUI {
     description: project.description ?? "",
     country: project.country ?? "",
     featured: project.featured ?? false,
+    isOngoing: project.isOngoing ?? false,
     previewMedia: {
       type: (preview?.type ?? "image") as "image" | "video",
       url,
@@ -99,6 +102,7 @@ function mapProjectDetailToUI(project: any): ProjectDetailForUI {
     description: project.description ?? "",
     country: project.country ?? "",
     featured: project.featured ?? false,
+    isOngoing: project.isOngoing ?? false,
     previewMedia: {
       type: (preview?.type ?? "image") as "image" | "video",
       url: previewUrl,

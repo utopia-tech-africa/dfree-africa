@@ -16,6 +16,7 @@ interface ProjectCardProps {
     type: string;
     url: string;
   };
+  isOngoing: boolean;
   className?: string;
 }
 
@@ -25,6 +26,7 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
   description,
   country,
   previewMedia,
+  isOngoing,
   className,
 }) => {
   const t = useTranslations("africa.projects");
@@ -63,6 +65,22 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Bottom Gradient Overlay */}
       <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent h-1/2 bottom-0 top-auto" />
+
+      {/* Ongoing Badge */}
+      {isOngoing && (
+        <div className="absolute top-4 left-4 z-10">
+          <Button
+            variant={"secondary"}
+            className="rounded-sm px-4 py-6 uppercase text-primary-500 text-lg font-bold tracking-wide ring-2 ring-primary-100"
+          >
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-primary-500/50"></span>
+            </span>
+            Ongoing
+          </Button>
+        </div>
+      )}
 
       {/* Country Badge */}
       <div className="absolute top-4 right-4 z-10">

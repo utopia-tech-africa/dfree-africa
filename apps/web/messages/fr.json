@@ -287,8 +287,7 @@
     },
     "merch": {
       "eyebrow": "Produits",
-      "titleLine1": "Parcourez notre",
-      "titleLine2": "librairie",
+      "titleLine": "Parcourez notre librairie",
       "description": "Donnez de la force à votre parcours avec des produits porteurs de sens qui favorisent le changement.",
       "visitStoreCta": "Visiter la boutique"
     },

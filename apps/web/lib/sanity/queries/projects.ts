@@ -7,6 +7,7 @@ export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc)
   description,
   country,
   featured,
+  isOngoing,
   "previewMedia": previewMedia {
     type,
     "imageRef": image.asset->,
@@ -21,6 +22,7 @@ export const featuredProjectsQuery = groq`*[_type == "project" && featured == tr
   description,
   country,
   featured,
+  isOngoing,
   "previewMedia": previewMedia {
     type,
     "imageRef": image.asset->,
@@ -35,6 +37,7 @@ export const featuredCountryProjectsQuery = groq`*[_type == "project" && country
   description,
   country,
   featured,
+  isOngoing,
   "previewMedia": previewMedia {
     type,
     "imageRef": image.asset->,
@@ -56,6 +59,7 @@ export const projectBySlugQuery = groq`
     description,
     country,
     featured,
+    isOngoing,
 
     "previewMedia": previewMedia {
       type,
