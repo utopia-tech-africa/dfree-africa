@@ -19,14 +19,14 @@ export const structure: StructureResolver = (S) =>
             ]),
         ),
 
-      // ---------------- Blogs ----------------
+      // ---------------- News ----------------
       // S.listItem()
-      //   .title('Blogs')
+      //   .title('News')
       //   .icon(Book)
       //   .child(
       //     S.list()
-      //       .title('Blogs')
-      //       .items([S.documentTypeListItem('blog').title('All Blogs')]),
+      //       .title('News')
+      //       .items([S.documentTypeListItem('news').title('All News')]),
       //   ),
 
       // ---------------- Merch ----------------

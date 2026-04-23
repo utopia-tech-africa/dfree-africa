@@ -1,11 +1,11 @@
 import {defineType, defineField} from 'sanity'
-import {BookOpen} from 'lucide-react'
+import {Newspaper} from 'lucide-react'
 
-export const blog = defineType({
-  name: 'blog',
-  title: 'Blog',
+export const news = defineType({
+  name: 'news',
+  title: 'News',
   type: 'document',
-  icon: BookOpen,
+  icon: Newspaper,
   fields: [
     defineField({
       name: 'title',
@@ -56,7 +56,7 @@ export const blog = defineType({
       name: 'body',
       title: 'Body',
       type: 'array',
-      description: 'Main content of the blog post',
+      description: 'Main content of the news article',
       of: [
         {
           type: 'block',
@@ -82,6 +82,21 @@ export const blog = defineType({
       title: 'Read Time (minutes)',
       type: 'number',
       description: 'Estimated reading time in minutes',
+    }),
+
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'BDC', value: 'BDC'},
+          {title: 'Africa', value: 'Africa'},
+          {title: 'FinFE$T', value: 'FinFE$T'},
+          {title: 'Scholarships', value: 'Scholarships'},
+          {title: 'Community Campaigns', value: 'Community Campaigns'},
+        ],
+      },
     }),
 
     defineField({

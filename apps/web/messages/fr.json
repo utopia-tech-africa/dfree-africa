@@ -292,31 +292,19 @@
       "description": "Donnez de la force à votre parcours avec des produits porteurs de sens qui favorisent le changement.",
       "visitStoreCta": "Visiter la boutique"
     },
-    "blogs": {
-      "label": "Blog",
-      "title": "Analyses et perspectives",
-      "subtitle": "Accueillez la beauté de la vie et chérissez vos relations.",
+    "news": {
+      "title": "Actualités et médias",
+      "description": "Restez informé grâce à des articles stimulants et à l'actualité de dernière minute. Explorez des perspectives diverses et des analyses approfondies sur les sujets qui comptent le plus.",
+      "viewAllNewsCta": "Voir toutes les actualités",
       "readMoreCta": "Lire plus",
-      "posts": {
-        "realEstateWealth": {
-          "title": "Construire un patrimoine générationnel grâce à l’immobilier",
-          "description": "Découvrez des stratégies pour bâtir un patrimoine à travers l’investissement immobilier.",
-          "readTime": "Lecture de 5 min"
-        },
-        "collectiveEconomics": {
-          "title": "La puissance de l’économie collective dans les communautés urbaines",
-          "description": "Apprenez-en davantage sur le pouvoir transformateur de l’économie collective dans les communautés urbaines.",
-          "readTime": "Lecture de 5 min"
-        },
-        "faithBasedInvesting": {
-          "title": "Investissement fondé sur la foi : aligner valeurs et croissance financière",
-          "description": "Découvrez comment l’investissement fondé sur la foi aligne vos valeurs avec votre croissance financière.",
-          "readTime": "Lecture de 5 min"
-        },
-        "investingWithPurpose": {
-          "title": "Investir avec intention : harmoniser convictions et succès financier",
-          "description": "Investir avec intention : harmoniser convictions profondes et réussite financière.",
-          "readTime": "Lecture de 5 min"
+      "featuredNews": {
+        "title": "Actualités et Médias",
+        "subtitle": "Les dernières nouvelles du monde DFREE.",
+        "viewAllNewsCta": "Voir toutes les actualités",
+        "readMoreCta": "Lire plus",
+        "emptyState": {
+          "title": "Bientôt disponible",
+          "description": "Nous rassemblons actuellement les dernières histoires et mises à jour. Revenez bientôt pour les nouvelles de notre communauté."
         }
       }
     }
