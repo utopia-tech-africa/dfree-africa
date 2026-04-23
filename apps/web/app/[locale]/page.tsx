@@ -8,7 +8,7 @@ import Pillars from "../components/pillars/pillars";
 import { HomeHero } from "../components/home-hero";
 import { OurImpact } from "../components/our-impact";
 import { Events } from "../components/events";
-import Merch from "../components/merch/merch";
+import Store from "../components/store";
 import { FeaturedNews } from "../components/news";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -33,7 +33,7 @@ const Home = () => {
         <OurImpact />
         <Testimonials />
         <Events />
-        <Merch />
+        <Store />
         <FeaturedNews compact featured={true} />
       </div>
     </>

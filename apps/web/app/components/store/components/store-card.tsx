@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import type { MerchItemForUI } from "@/lib/sanity";
+import type { StoreItemForUI } from "@/lib/sanity";
 import Link from "next/link";
 
 type CardProps = {
-  item: MerchItemForUI;
+  item: StoreItemForUI;
 };
 
-export function MerchCard({ item }: CardProps) {
+export function StoreCard({ item }: CardProps) {
   return (
     <div
       className={cn(
@@ -44,7 +44,7 @@ export function MerchCard({ item }: CardProps) {
           <p className="font-montserrat font-bold leading-snug text-lg sm:text-xl">
             {item.title}
           </p>
-          <p className="font-roboto text-xm text-gray-500 mt-1">
+          <p className="font-roboto text-xm text-gray-800 mt-0.5 italic">
             {item.category}
           </p>
           <p className="font-roboto font-semibold text-lg mt-2 text-neutral-900">

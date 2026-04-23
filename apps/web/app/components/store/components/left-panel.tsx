@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const LeftPanel = () => {
-  const t = useTranslations("home.merch");
+  const t = useTranslations("home.store");
 
   return (
     <div className="flex flex-col items-start gap-5 md:w-[30%] shrink-0">

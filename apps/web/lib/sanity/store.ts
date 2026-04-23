@@ -1,8 +1,8 @@
 import { client } from "./client";
 import { urlFor } from "./image";
-import { featuredMerchQuery, allMerchQuery } from "./queries/merch";
+import { featuredStoreQuery, allStoreQuery } from "./queries/store";
 
-export type MerchItemForUI = {
+export type StoreItemForUI = {
   _id: string;
   title: string;
   slug: string;
@@ -15,7 +15,7 @@ export type MerchItemForUI = {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function mapMerchToUI(item: any): MerchItemForUI {
+function mapStoreToUI(item: any): StoreItemForUI {
   const asset = item?.coverImage?.asset;
   const coverImageUrl = asset ? urlFor(asset).width(600).height(750).url() : "";
   const coverImageAlt = item?.coverImage?.alt ?? item?.title ?? "";
@@ -33,14 +33,14 @@ function mapMerchToUI(item: any): MerchItemForUI {
   };
 }
 
-export async function getFeaturedMerch(): Promise<MerchItemForUI[]> {
+export async function getFeaturedStore(): Promise<StoreItemForUI[]> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const data = await client.fetch<any[]>(featuredMerchQuery);
-  return (data ?? []).map(mapMerchToUI);
+  const data = await client.fetch<any[]>(featuredStoreQuery);
+  return (data ?? []).map(mapStoreToUI);
 }
 
-export async function getAllMerch(): Promise<MerchItemForUI[]> {
+export async function getAllStore(): Promise<StoreItemForUI[]> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const data = await client.fetch<any[]>(allMerchQuery);
-  return (data ?? []).map(mapMerchToUI);
+  const data = await client.fetch<any[]>(allStoreQuery);
+  return (data ?? []).map(mapStoreToUI);
 }

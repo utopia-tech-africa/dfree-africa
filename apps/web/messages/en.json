@@ -73,7 +73,7 @@
     "communityCampaigns": "Community campaigns",
     "finfest": "FinFE$T",
     "dfreeAccessScholarships": "DFREE® Access Scholarships",
-    "booksMerch": "Books & Merch",
+    "booksStore": "Books & Store",
     "attendEvents": "Attend Events",
     "contactUs": "Contact us"
   },
@@ -285,8 +285,8 @@
         }
       }
     },
-    "merch": {
-      "eyebrow": "Merch",
+    "store": {
+      "eyebrow": "Store",
       "titleLine": "Browse our bookstore",
       "description": "Empower your journey with meaningful products that drive change.",
       "visitStoreCta": "Visit store"

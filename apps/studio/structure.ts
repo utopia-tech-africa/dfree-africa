@@ -29,14 +29,14 @@ export const structure: StructureResolver = (S) =>
       //       .items([S.documentTypeListItem('news').title('All News')]),
       //   ),
 
-      // ---------------- Merch ----------------
+      // ---------------- Store ----------------
       S.listItem()
-        .title('Merch')
+        .title('Store')
         .icon(ShoppingBag)
         .child(
           S.list()
-            .title('Merch')
-            .items([S.documentTypeListItem('merch').title('All Products')]),
+            .title('Store')
+            .items([S.documentTypeListItem('store').title('All Products')]),
         ),
 
       // ---------------- FinFest ----------------
@@ -51,6 +51,6 @@ export const structure: StructureResolver = (S) =>
 
       // ---------------- Other ----------------
       ...S.documentTypeListItems().filter(
-        (id) => !['project', 'gallery', 'year', 'merch', 'pastSpeaker'].includes(id.getId() ?? ''),
+        (id) => !['project', 'gallery', 'year', 'store', 'pastSpeaker'].includes(id.getId() ?? ''),
       ),
     ])

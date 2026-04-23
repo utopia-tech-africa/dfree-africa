@@ -1,9 +1,9 @@
 import {defineType, defineField} from 'sanity'
 import {ShoppingBag} from 'lucide-react'
 
-export const merch = defineType({
-  name: 'merch',
-  title: 'Merch',
+export const store = defineType({
+  name: 'store',
+  title: 'Store',
   type: 'document',
   icon: ShoppingBag,
   fields: [
@@ -50,7 +50,7 @@ export const merch = defineType({
       name: 'category',
       title: 'Category',
       type: 'string',
-      description: 'e.g. Book, Apparel, Accessory',
+      description: '',
       validation: (Rule) => Rule.required(),
     }),
 
@@ -65,7 +65,7 @@ export const merch = defineType({
       name: 'featured',
       title: 'Featured',
       type: 'boolean',
-      description: 'Show this product in the homepage merch section.',
+      description: 'Show this product in the homepage store section.',
       initialValue: false,
     }),
 

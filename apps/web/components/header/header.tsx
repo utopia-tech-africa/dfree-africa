@@ -53,7 +53,7 @@ const NAV_CONFIG: NavItemConfig[] = [
     labelKey: "getInvolved",
     href: "#",
     subItems: [
-      { labelKey: "booksMerch", href: "https://store.dfree.com/" },
+      { labelKey: "booksStore", href: "https://store.dfree.com/" },
       { labelKey: "attendEvents", href: "" },
       { labelKey: "contactUs", href: "#footer" },
     ],

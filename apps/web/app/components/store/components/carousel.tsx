@@ -3,17 +3,17 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
-import type { MerchItemForUI } from "@/lib/sanity";
-import { MerchCard } from "./merch-card";
+import type { StoreItemForUI } from "@/lib/sanity";
+import { StoreCard } from "./store-card";
 
 type CarouselProps = {
-  items?: MerchItemForUI[];
+  items?: StoreItemForUI[];
 };
 
 export const Carousel = ({ items }: CarouselProps) => {
-  const merch = items;
+  const store = items;
   const [current, setCurrent] = useState(1); // Center index
-  const total = merch?.length || 0;
+  const total = store?.length || 0;
 
   const handlePrev = useCallback(() => {
     if (total === 0) return;
@@ -80,7 +80,7 @@ export const Carousel = ({ items }: CarouselProps) => {
     >
       {/* Cards stacked in a fan */}
       <div className="relative flex items-center justify-center w-full h-full touch-pan-x">
-        {merch?.map((item, index) => (
+        {store?.map((item, index) => (
           <div
             key={item._id}
             onClick={() => setCurrent(index)}
@@ -89,7 +89,7 @@ export const Carousel = ({ items }: CarouselProps) => {
               getPosition(index),
             )}
           >
-            <MerchCard item={item} />
+            <StoreCard item={item} />
           </div>
         ))}
       </div>
@@ -123,7 +123,7 @@ export const Carousel = ({ items }: CarouselProps) => {
 
       {/* Dot indicators */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2">
-        {merch?.map((_, i) => (
+        {store?.map((_, i) => (
           <button
             key={i}
             type="button"
