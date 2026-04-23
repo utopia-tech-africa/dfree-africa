@@ -1,18 +1,18 @@
 import Image from "next/image";
-import { MerchBgPattern } from "@/assets/svg";
+import { StoreBgPattern } from "@/assets/svg";
 import ComponentLayout from "@/components/component-layout";
 import { LeftPanel, Carousel } from "./components";
-import { getFeaturedMerch } from "@/lib/sanity";
+import { getFeaturedStore } from "@/lib/sanity";
 
-export const Merch = async () => {
-  const merch = await getFeaturedMerch();
+export const Store = async () => {
+  const store = await getFeaturedStore();
 
   return (
     <section className="relative w-full flex flex-col justify-center overflow-hidden bg-primary-500 py-12 md:py-2 mb-10 md:mb-13 lg:mb-20">
       {/* Background pattern */}
       <div className="absolute inset-y-0 left-0 w-full pointer-events-none">
         <Image
-          src={MerchBgPattern}
+          src={StoreBgPattern}
           alt=""
           fill
           className="object-contain object-left"
@@ -24,10 +24,10 @@ export const Merch = async () => {
         <LeftPanel />
 
         {/* carousel lives in a client component */}
-        <Carousel items={merch} />
+        <Carousel items={store} />
       </ComponentLayout>
     </section>
   );
 };
 
-export default Merch;
+export default Store;

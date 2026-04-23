@@ -4,7 +4,7 @@ import DfreeLogoWhite from "./dfree-logo-white";
 import DfreeLogo from "./dfree-logo";
 import QuotationMarks from "./quotation-marks";
 import GalleryPattern from "./gallery-pattern.svg";
-import MerchBgPattern from "./merch-bg-pattern.svg";
+import StoreBgPattern from "./store-bg-pattern.svg";
 import BDCImpactPattern from "./bdc-impact-pattern.svg";
 import CampaignsResultsPattern from "./campaigns-results-pattern";
 import CampaignsCtaPattern from "./campaigns-results-pattern";
@@ -19,7 +19,7 @@ export {
   DfreeLogo,
   GalleryPattern,
   QuotationMarks,
-  MerchBgPattern,
+  StoreBgPattern,
   BDCImpactPattern,
   CampaignsResultsPattern,
   CampaignsCtaPattern,
