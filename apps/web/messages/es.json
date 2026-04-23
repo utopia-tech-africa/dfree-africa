@@ -292,31 +292,19 @@
       "description": "Impulsa tu camino con productos significativos que generan cambio.",
       "visitStoreCta": "Visitar tienda"
     },
-    "blogs": {
-      "label": "Blog",
-      "title": "Ideas y perspectivas",
-      "subtitle": "Abraza la belleza de la vida y valora tus relaciones.",
+    "news": {
+      "title": "Noticias y medios",
+      "description": "Mantente informado con artículos interesantes y noticias de última hora. Explora diversas perspectivas y análisis profundos sobre los temas que más importan.",
+      "viewAllNewsCta": "Ver todas las noticias",
       "readMoreCta": "Leer más",
-      "posts": {
-        "realEstateWealth": {
-          "title": "Construyendo riqueza generacional a través de bienes raíces",
-          "description": "Explora estrategias para generar riqueza a través de inversiones inmobiliarias.",
-          "readTime": "Lectura de 5 min"
-        },
-        "collectiveEconomics": {
-          "title": "El poder de la economía colectiva en las comunidades urbanas",
-          "description": "Conoce el poder transformador de la economía colectiva en las comunidades urbanas.",
-          "readTime": "Lectura de 5 min"
-        },
-        "faithBasedInvesting": {
-          "title": "Inversión basada en la fe: alineando valores y crecimiento financiero",
-          "description": "Descubre cómo la inversión basada en la fe alinea tus valores con el crecimiento financiero.",
-          "readTime": "Lectura de 5 min"
-        },
-        "investingWithPurpose": {
-          "title": "Invertir con propósito: armonizar creencias y éxito financiero",
-          "description": "Invertir con propósito: armonizar creencias profundas y éxito financiero.",
-          "readTime": "Lectura de 5 min"
+      "featuredNews": {
+        "title": "Noticias y Medios",
+        "subtitle": "Lo último del mundo DFREE.",
+        "viewAllNewsCta": "Ver todas las noticias",
+        "readMoreCta": "Leer más",
+        "emptyState": {
+          "title": "Próximamente",
+          "description": "Estamos recopilando las últimas historias y noticias. Vuelve pronto para ver novedades frescas de nuestra comunidad."
         }
       }
     }

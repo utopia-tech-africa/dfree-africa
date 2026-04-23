@@ -30,8 +30,12 @@ export type {
 } from "./sanity.types";
 
 export {
-  getBlogs,
-  getBlogBySlug,
-  type BlogForUI,
-  type BlogDetailForUI,
-} from "./blogs";
+  getNews,
+  getFeaturedNews,
+  getNewsBySlug,
+  getNewsCategories,
+  getNewsCount,
+  type NewsForUI,
+  type NewsDetailForUI,
+  type LocaleForTranslation,
+} from "./news";
