@@ -28,7 +28,7 @@ export const IMPACT_PINS = [
     lat: 1.3733,
     lng: 32.2903,
     label: "Uganda",
-    route: "/africa/projects?country=uganda",
+    route: "/africa/continental/uganda",
   },
   {
     lat: 6.4281,
