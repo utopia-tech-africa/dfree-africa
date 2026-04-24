@@ -32,7 +32,7 @@ export const ContinentalImpact = () => {
         country: t("countries.uganda.name"),
         description: t("countries.uganda.description"),
         flag: "https://res.cloudinary.com/dan9camhs/image/upload/v1773146855/aff4a462-8fa5-4ef2-8a8b-bed650e90ca5.webp",
-        href: "#",
+        href: "/africa/continental/uganda",
       },
       {
         country: t("countries.liberia.name"),
