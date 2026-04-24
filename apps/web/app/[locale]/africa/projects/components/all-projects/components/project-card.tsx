@@ -48,7 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="absolute top-4 left-4 z-10">
           <Button
             variant={"secondary"}
-            className="rounded-sm px-4 py-6 uppercase text-primary-500 text-lg font-bold tracking-wide ring-2 ring-primary-100"
+            className="rounded-sm px-3 py-4 uppercase text-primary-500 text-base font-bold tracking-wide ring-2 ring-primary-100"
           >
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-500 opacity-75"></span>
@@ -84,7 +84,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Country Badge */}
       <div className="absolute top-4 right-4 z-10">
-        <Button className="px-3 py-5">{country}</Button>
+        <Button className="px-2 py-3">{country}</Button>
       </div>
 
       {/* Content */}
