@@ -35,7 +35,7 @@ const NAV_CONFIG: NavItemConfig[] = [
   },
   {
     id: "impact",
-    labelKey: "impact",
+    labelKey: "ourPillars",
     href: "#",
     subItems: [
       { labelKey: "billionDollarChallenge", href: "/billion-dollar-challenge" },
@@ -50,10 +50,10 @@ const NAV_CONFIG: NavItemConfig[] = [
   },
   {
     id: "getInvolved",
-    labelKey: "getInvolved",
+    labelKey: "getStarted",
     href: "#",
     subItems: [
-      { labelKey: "booksStore", href: "https://store.dfree.com/" },
+      { labelKey: "booksMerch", href: "https://store.dfree.com/" },
       { labelKey: "attendEvents", href: "" },
       { labelKey: "contactUs", href: "#footer" },
     ],
