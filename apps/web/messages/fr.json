@@ -63,8 +63,8 @@
   },
   "nav": {
     "aboutUs": "À propos",
-    "impact": "Impact",
-    "getInvolved": "S'impliquer",
+    "ourPillars": "Nos piliers",
+    "getStarted": "Commencer",
     "ourStory": "Notre histoire",
     "ourVision": "Notre vision",
     "ourMission": "Notre mission",
@@ -73,7 +73,7 @@
     "communityCampaigns": "Campagnes communautaires",
     "dfreeAccessScholarships": "Bourses d'accès DFREE",
     "finfest": "FinFE$T",
-    "booksStore": "Livres et Boutique",
+    "booksMerch": "Livres et Articles",
     "attendEvents": "Participez aux événements",
     "contactUs": "Nous contacter"
   },
@@ -111,7 +111,7 @@
       "subtitle": "Donnez-vous les moyens d'agir grâce à des outils pratiques et des stratégies portées par la communauté. Transformez votre avenir économique par l'éducation, le soutien et l'action collective.",
       "discoverMoreCta": "Découvrir plus",
       "donateNowCta": "Faites un don au mouvement",
-      "freshOffThePress": "FRAÎCHEMENT PARU",
+      "freshOffThePress": "Tout juste publié",
       "buyNowCta": "Acheter maintenant"
     },
     "whoWeAre": {
