@@ -91,7 +91,7 @@ function NavTrigger({
     return (
       <Link
         href={item.href}
-        className="flex items-center gap-1 text-sm font-medium text-neutral-100 hover:text-white"
+        className="flex items-center gap-1 text-sm lg:text-base font-medium text-neutral-100 hover:text-white"
       >
         {label}
       </Link>
@@ -101,7 +101,7 @@ function NavTrigger({
   return (
     <div
       onMouseEnter={onMouseEnter}
-      className="flex cursor-pointer items-center gap-1 text-sm font-medium text-neutral-100 hover:text-white"
+      className="flex cursor-pointer items-center gap-1 text-sm lg:text-base font-medium text-neutral-100 hover:text-white"
     >
       <span className="flex items-center gap-1">
         {label}
@@ -154,7 +154,7 @@ export const Header = () => {
       style={
         isScrolled
           ? {
-              background: "#00000033",
+              background: "rgba(0, 0, 0, 0.5)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
             }
@@ -182,7 +182,7 @@ export const Header = () => {
             <div
               className={cn(
                 "flex items-center gap-4 rounded-full px-4 py-2 transition-[background,backdrop-filter] duration-300",
-                !isScrolled && "bg-[#00000033] backdrop-blur-[20px]",
+                !isScrolled && "bg-[rgba(0,0,0,0.5)] backdrop-blur-[20px]",
               )}
               style={
                 !isScrolled
