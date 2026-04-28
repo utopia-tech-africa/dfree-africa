@@ -81,12 +81,7 @@ export const HomeHero = async () => {
                 fontWeight="700"
                 fontFamily="montserrat"
               >
-                <textPath
-                  className="italic"
-                  href="#topArc"
-                  startOffset="50%"
-                  textAnchor="middle"
-                >
+                <textPath href="#topArc" startOffset="50%" textAnchor="middle">
                   {t("freshOffThePress")}
                 </textPath>
               </text>
