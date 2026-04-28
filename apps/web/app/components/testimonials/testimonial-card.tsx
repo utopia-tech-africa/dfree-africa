@@ -43,7 +43,7 @@ const TestimonialCard = ({ testimonial }: Props) => {
 
           <div className="absolute inset-0 rounded-lg pointer-events-none bg-[linear-gradient(180deg,rgba(102,102,102,0)_64.65%,rgba(0,0,0,0.52)_85.58%)]" />
 
-          <div className="absolute bottom-2 left-2 text-white text-lg md:text-[20px] font-extrabold z-10">
+          <div className="absolute bottom-2 left-3 text-white text-lg md:text-[20px] font-extrabold z-10">
             {t(`${baseKey}.name`)}
           </div>
 
@@ -61,14 +61,14 @@ const TestimonialCard = ({ testimonial }: Props) => {
   // text testimonial
   return (
     <div
-      className="bg-white p-6 sm:p-8 flex flex-col items-center justify-between text-center 
+      className="bg-white p-6 sm:p-8 flex flex-col items-center justify-between gap-y-6 text-center 
       min-w-[85%] sm:min-w-[60%] md:min-w-100 lg:min-w-112.5"
     >
-      <p className="text-neutral-900 text-base md:text-lg font-bold leading-[140%] mb-2 sm:mb-3">
+      <p className="text-neutral-900 text-base md:text-lg font-bold leading-[140%]">
         {t(`${baseKey}.text`)}
       </p>
 
-      <div className="flex items-center gap-4 -mt-8 md:mt-auto">
+      <div className="flex items-center gap-4 md:mt-auto">
         <div
           className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full p-1 overflow-hidden"
           style={{
@@ -84,7 +84,7 @@ const TestimonialCard = ({ testimonial }: Props) => {
           />
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-start">
           <span className="text-neutral-900 font-semibold text-sm sm:text-base">
             {t(`${baseKey}.name`)}
           </span>

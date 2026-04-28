@@ -13,6 +13,7 @@ import { LocaleSwitcher } from "@/components/locale-switcher";
 type NavSubItemConfig = {
   labelKey: string;
   href: string;
+  width?: string;
 };
 
 type NavItemConfig = {
@@ -28,34 +29,51 @@ const NAV_CONFIG: NavItemConfig[] = [
     labelKey: "aboutUs",
     href: "#",
     subItems: [
-      { labelKey: "ourStory", href: "/#our-story" },
-      { labelKey: "ourVision", href: "/#our-story" },
-      { labelKey: "ourMission", href: "/#our-story" },
+      { labelKey: "ourStory", href: "/#our-story", width: "w-[90px]" },
+      { labelKey: "ourVision", href: "/#our-story", width: "w-[95px]" },
+      { labelKey: "ourMission", href: "/#our-story", width: "w-[110px]" },
     ],
   },
   {
     id: "impact",
-    labelKey: "impact",
+    labelKey: "ourPillars",
     href: "#",
     subItems: [
-      { labelKey: "billionDollarChallenge", href: "/billion-dollar-challenge" },
-      { labelKey: "globalFoundationInAfrica", href: "/africa" },
-      { labelKey: "communityCampaigns", href: "/community-campaigns" },
-      { labelKey: "finfest", href: "/finfest" },
+      {
+        labelKey: "billionDollarChallenge",
+        href: "/billion-dollar-challenge",
+        width: "w-[110px]",
+      },
+      {
+        labelKey: "globalFoundationInAfrica",
+        href: "/africa",
+        width: "w-[154px]",
+      },
+      {
+        labelKey: "communityCampaigns",
+        href: "/community-campaigns",
+        width: "w-[120px]",
+      },
+      { labelKey: "finfest", href: "/finfest", width: "w-[70px]" },
       {
         labelKey: "dfreeAccessScholarships",
         href: "/access-scholarships",
+        width: "w-[126px]",
       },
     ],
   },
   {
     id: "getInvolved",
-    labelKey: "getInvolved",
+    labelKey: "getStarted",
     href: "#",
     subItems: [
-      { labelKey: "booksStore", href: "https://store.dfree.com/" },
-      { labelKey: "attendEvents", href: "" },
-      { labelKey: "contactUs", href: "#footer" },
+      {
+        labelKey: "booksMerch",
+        href: "https://store.dfree.com/",
+        width: "w-[130px]",
+      },
+      { labelKey: "attendEvents", href: "", width: "w-[125px]" },
+      { labelKey: "contactUs", href: "#footer", width: "w-[105px]" },
     ],
   },
 ];
@@ -191,7 +209,7 @@ export const Header = () => {
             {hoveredItem?.subItems && (
               <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
                 <div
-                  className="flex w-fit gap-2 rounded-xl bg-white px-2 pb-2 pt-2 shadow-lg animate-[slide-down-from-nav_0.2s_ease-out]"
+                  className="flex w-fit rounded-xl bg-white px-2 pb-2 pt-2 shadow-lg animate-[slide-down-from-nav_0.2s_ease-out]"
                   style={{ animationFillMode: "both" }}
                 >
                   {hoveredItem.subItems.map((subItem) => (
@@ -199,7 +217,8 @@ export const Header = () => {
                       key={subItem.labelKey}
                       href={subItem.href}
                       className={cn(
-                        "inline-flex w-fit max-w-[240px] min-h-12 items-center justify-center rounded-full px-5 py-2 text-center text-sm font-bold leading-snug whitespace-normal text-neutral-1000",
+                        "inline-flex min-h-12 items-center justify-center rounded-sm px-3 py-2 text-center text-sm font-bold leading-snug whitespace-normal text-neutral-1000 transition-colors hover:bg-neutral-200",
+                        subItem.width || "w-[130px]",
                       )}
                     >
                       {t(subItem.labelKey)}
@@ -310,7 +329,7 @@ export const Header = () => {
                               key={subItem.labelKey}
                               href={subItem.href}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="max-w-[208px] py-2 text-sm font-medium leading-tight text-neutral-900"
+                              className="max-w-full py-2 text-sm font-medium leading-tight text-neutral-900"
                             >
                               {t(subItem.labelKey)}
                             </Link>

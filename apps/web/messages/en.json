@@ -63,8 +63,8 @@
   },
   "nav": {
     "aboutUs": "About us",
-    "impact": "Impact",
-    "getInvolved": "Get involved",
+    "ourPillars": "Our pillars",
+    "getStarted": "Get started",
     "ourStory": "Our story",
     "ourVision": "Our vision",
     "ourMission": "Our mission",
@@ -73,7 +73,7 @@
     "communityCampaigns": "Community campaigns",
     "finfest": "FinFE$T",
     "dfreeAccessScholarships": "DFREE® Access Scholarships",
-    "booksStore": "Books & Store",
+    "booksMerch": "Books & Merch",
     "attendEvents": "Attend Events",
     "contactUs": "Contact us"
   },
