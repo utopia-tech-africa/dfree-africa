@@ -2,7 +2,7 @@
 export const COUNTRY_ROUTES: Record<string, string> = {
   Ghana: "/africa/continental/ghana",
   "South Africa": "/africa/continental/south-africa",
-  Uganda: "/africa/projects?country=uganda",
+  Uganda: "/africa/continental/uganda",
   Liberia: "/africa/projects?country=liberia",
 };
 

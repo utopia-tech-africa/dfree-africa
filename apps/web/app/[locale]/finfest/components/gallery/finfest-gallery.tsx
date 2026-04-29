@@ -158,31 +158,9 @@ function MediaGalleryViewer({
     };
   }, [emblaApi]);
 
-  // Auto-advance slides every 5 seconds
-  useEffect(() => {
-    if (!emblaApi || !hasMultiple) return;
-
-    let timer: ReturnType<typeof setInterval>;
-
-    const startAutoplay = () => {
-      timer = setInterval(() => {
-        emblaApi.scrollNext();
-      }, 5000);
-    };
-
-    const resetAutoplay = () => {
-      clearInterval(timer);
-      startAutoplay();
-    };
-
-    startAutoplay();
-    emblaApi.on("select", resetAutoplay);
-
-    return () => {
-      clearInterval(timer);
-      emblaApi.off("select", resetAutoplay);
-    };
-  }, [emblaApi, hasMultiple]);
+  // Previous and Next handlers
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   if (items.length === 0) {
     return (
@@ -221,7 +199,7 @@ function MediaGalleryViewer({
         </button>
 
         <div className="flex flex-1 min-h-0 w-full max-w-[1160px] overflow-hidden">
-          <div className="relative aspect-video w-full min-h-0 overflow-hidden rounded-lg">
+          <div className="relative aspect-video w-full min-h-0 overflow-hidden rounded-lg group/carousel">
             <div
               ref={emblaRef}
               className="embla__viewport relative z-0 h-full w-full overflow-hidden touch-pan-y pinch-zoom"
@@ -230,7 +208,7 @@ function MediaGalleryViewer({
                 {items.map((slideItem, i) => (
                   <div
                     key={`${i}-${slideItem.url}`}
-                    className="embla__slide flex min-w-0 flex-[0_0_90%] md:flex-[0_0_100%] items-center justify-center overflow-hidden"
+                    className="embla__slide flex min-w-0 flex-[0_0_100%] items-center justify-center overflow-hidden"
                   >
                     {slideItem.type === "video" ? (
                       <video
@@ -255,6 +233,27 @@ function MediaGalleryViewer({
                 ))}
               </div>
             </div>
+
+            {hasMultiple && (
+              <>
+                <button
+                  type="button"
+                  onClick={scrollPrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 size-10 md:size-12 flex items-center justify-center rounded-full bg-black/40 text-white hover:bg-black/60 transition-colors"
+                  aria-label="Previous slide"
+                >
+                  <ArrowLeft className="size-6 md:size-8" />
+                </button>
+                <button
+                  type="button"
+                  onClick={scrollNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 size-10 md:size-12 flex items-center justify-center rounded-full bg-black/40 text-white hover:bg-black/60 transition-colors"
+                  aria-label="Next slide"
+                >
+                  <ArrowRight className="size-6 md:size-8" />
+                </button>
+              </>
+            )}
           </div>
         </div>
 
@@ -312,28 +311,6 @@ export function FinfestGallerySection({
       behavior: "smooth",
     });
   }, []);
-
-  // Auto-scroll: advance right every AUTOPLAY_INTERVAL ms, loop back at end
-  useEffect(() => {
-    if (isHovered || selectedYearData != null) return;
-
-    const interval = setInterval(() => {
-      const el = scrollContainerRef.current;
-      if (!el) return;
-
-      const atEnd =
-        el.scrollLeft >=
-        el.scrollWidth - el.clientWidth - SCROLL_EDGE_THRESHOLD;
-
-      if (atEnd) {
-        el.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        el.scrollBy({ left: el.clientWidth * 0.6, behavior: "smooth" });
-      }
-    }, AUTOPLAY_INTERVAL);
-
-    return () => clearInterval(interval);
-  }, [isHovered, selectedYearData]);
 
   const displayTitle = title ?? gallery.title;
   const displaySubtitle = subtitle ?? "Click a year to view its gallery.";
