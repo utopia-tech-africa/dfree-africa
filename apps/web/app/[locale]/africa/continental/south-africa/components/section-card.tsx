@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import ComponentLayout from "@/components/component-layout";
 import { Play, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 const getEmbedUrl = (url: string) => {
   if (url.includes("drive.google.com")) {
