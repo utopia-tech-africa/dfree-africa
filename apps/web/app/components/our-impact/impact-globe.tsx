@@ -38,6 +38,55 @@ export function ImpactGlobe({ className }: { className?: string }) {
 
     mapRef.current = map;
 
+    let animationFrameId: number;
+    let userInteracting = false;
+    let interactionTimeoutId: ReturnType<typeof setTimeout>;
+
+    const spinGlobe = () => {
+      if (!userInteracting && mapRef.current) {
+        const center = map.getCenter();
+        // Adjust the rotation speed here (degrees per frame)
+        map.setCenter([center.lng + 0.15, center.lat]);
+      }
+      animationFrameId = requestAnimationFrame(spinGlobe);
+    };
+
+    const handleInteractStart = () => {
+      userInteracting = true;
+      if (interactionTimeoutId) {
+        clearTimeout(interactionTimeoutId);
+      }
+    };
+
+    const handleInteractEnd = () => {
+      if (interactionTimeoutId) {
+        clearTimeout(interactionTimeoutId);
+      }
+      interactionTimeoutId = setTimeout(() => {
+        userInteracting = false;
+      }, 2000); // 2 seconds delay before resuming
+    };
+
+    const handleClick = () => {
+      handleInteractStart();
+      handleInteractEnd();
+    };
+
+    map.on("mousedown", handleInteractStart);
+    map.on("dragstart", handleInteractStart);
+    map.on("zoomstart", handleInteractStart);
+    map.on("touchstart", handleInteractStart);
+
+    map.on("mouseup", handleInteractEnd);
+    map.on("dragend", handleInteractEnd);
+    map.on("zoomend", handleInteractEnd);
+    map.on("touchend", handleInteractEnd);
+    map.on("click", handleClick);
+
+    // Also pause when hovering over the map container
+    container.addEventListener("mouseenter", handleInteractStart);
+    container.addEventListener("mouseleave", handleInteractEnd);
+
     const applyGlobeProjection = () => {
       // MapLibre supports globe projection; some TS versions don't type it in MapOptions.
       if ("setProjection" in map) {
@@ -89,6 +138,8 @@ export function ImpactGlobe({ className }: { className?: string }) {
           .setLngLat([pin.lng, pin.lat])
           .addTo(map);
       });
+
+      spinGlobe();
     });
     // Re-apply projection when style updates to avoid fallback to flat mercator.
     const handleStyleData = () => {
@@ -103,6 +154,14 @@ export function ImpactGlobe({ className }: { className?: string }) {
     resizeObserver.observe(container);
 
     return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      if (interactionTimeoutId) {
+        clearTimeout(interactionTimeoutId);
+      }
+      container.removeEventListener("mouseenter", handleInteractStart);
+      container.removeEventListener("mouseleave", handleInteractEnd);
       resizeObserver.disconnect();
       map.off("styledata", handleStyleData);
       map.remove();
