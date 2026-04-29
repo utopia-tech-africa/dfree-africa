@@ -42,7 +42,7 @@ const NAV_CONFIG: NavItemConfig[] = [
       {
         labelKey: "billionDollarChallenge",
         href: "/billion-dollar-challenge",
-        width: "w-[110px]",
+        width: "w-[115px]",
       },
       {
         labelKey: "globalFoundationInAfrica",
