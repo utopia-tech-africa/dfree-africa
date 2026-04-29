@@ -274,9 +274,6 @@ function ProjectPickerModal({
                       {titleLine2}
                     </h3>
                   </div>
-                  <p className="font-poppins text-sm text-white leading-relaxed">
-                    {project.description}
-                  </p>
                 </button>
               );
             })}
