@@ -2,7 +2,7 @@
   "metadata": {
     "home": {
       "title": "Accueil",
-      "description": "DFREE Africa - Renforcer les communautés par la liberté financière et le développement durable à travers le continent africain."
+      "description": "DFREE® Africa - Renforcer les communautés par la liberté financière et le développement durable à travers le continent africain."
     },
     "finfest": {
       "title": "FinFE$T",
@@ -14,7 +14,7 @@
     },
     "projects": {
       "title": "Projets",
-      "description": "Découvrez les projets transformateurs de DFREE Africa au Ghana, en Afrique du Sud, en Ouganda et au Liberia."
+      "description": "Découvrez les projets transformateurs de DFREE® Africa au Ghana, en Afrique du Sud, en Ouganda et au Liberia."
     },
     "project": {
       "title": "Projet",
@@ -22,27 +22,27 @@
     },
     "ghana": {
       "title": "Ghana",
-      "description": "DFREE au Ghana - Liberté financière au travail et à l'église, partenariats et développement communautaire à travers le Ghana."
+      "description": "DFREE® au Ghana - Liberté financière au travail et à l'église, partenariats et développement communautaire à travers le Ghana."
     },
     "southAfrica": {
       "title": "Afrique du Sud",
-      "description": "DFREE en Afrique du Sud - Partenariats, littératie financière et développement communautaire avec la Convention baptiste d'Afrique australe et les organisations locales."
+      "description": "DFREE® en Afrique du Sud - Partenariats, littératie financière et développement communautaire avec la Convention baptiste d'Afrique australe et les organisations locales."
     },
     "uganda": {
       "title": "Ouganda",
-      "description": "DFREE en Ouganda : fourniture d'eau potable, littératie financière et développement communautaire grâce à des partenariats stratégiques."
+      "description": "DFREE® en Ouganda : fourniture d'eau potable, littératie financière et développement communautaire grâce à des partenariats stratégiques."
     },
     "billionDollarChallenge": {
       "title": "Défi du milliard de dollars",
-      "description": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier avec le Défi du milliard de dollars DFREE—une plateforme numérique fondée sur la responsabilité communautaire."
+      "description": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier avec le Défi du milliard de dollars DFREE®—une plateforme numérique fondée sur la responsabilité communautaire."
     },
     "communityCampaigns": {
       "title": "Campagnes communautaires",
-      "description": "Des campagnes communautaires dynamiques qui rassemblent églises, groupes civiques et organisations locales pour des programmes DFREE de renforcement financier synchronisés."
+      "description": "Des campagnes communautaires dynamiques qui rassemblent églises, groupes civiques et organisations locales pour des programmes DFREE® de renforcement financier synchronisés."
     },
     "accessScholarships": {
       "title": "Bourses d'accès",
-      "description": "La Bourse d'accès DFREE offre un accès gratuit aux cours, supports, coaching et événements pour aider les participants à atteindre la stabilité et l'autonomisation financières."
+      "description": "La Bourse d'accès DFREE® offre un accès gratuit aux cours, supports, coaching et événements pour aider les participants à atteindre la stabilité et l'autonomisation financières."
     }
   },
   "common": {
@@ -71,7 +71,7 @@
     "billionDollarChallenge": "Défi Du Milliard De Dollars",
     "globalFoundationInAfrica": "DFREE® En Afrique",
     "communityCampaigns": "Campagnes Communautaires",
-    "dfreeAccessScholarships": "Bourses D'accès DFREE",
+    "dfreeAccessScholarships": "Bourses D'Accès DFREE®",
     "finfest": "FinFE$T",
     "booksMerch": "Livres Et Articles",
     "attendEvents": "Participez Aux Événements",
@@ -98,7 +98,7 @@
     "dfreeAfrica": "DFREE® En Afrique",
     "communityCampaigns": "Campagnes Communautaires",
     "finfest": "FinFE$T",
-    "dfreeAccessScholarships": "Bourses D'Accès DFREE",
+    "dfreeAccessScholarships": "Bourses D'Accès DFREE®",
     "support": "Soutenir",
     "partner": "Partenariat",
     "travelWithUs": "Voyagez Avec Nous",
@@ -147,7 +147,7 @@
         },
         "accessScholarships": {
           "name": "Bourses d'accès DFREE",
-          "description": "Le programme de bourses DFREE offre un soutien basé sur les besoins afin de supprimer les obstacles financiers à l'accès au contenu DFREE – ressources éducatives, apprentissage numérique, formations en direct, conseils financiers gratuits et aide d'urgence limitée – pour aider les membres de notre communauté à réduire leurs dettes et à atteindre une liberté financière durable."
+          "description": "Le programme de bourses DFREE® offre un soutien basé sur les besoins afin de supprimer les obstacles financiers à l'accès au contenu DFREE® – ressources éducatives, apprentissage numérique, formations en direct, conseils financiers gratuits et aide d'urgence limitée – pour aider les membres de notre communauté à réduire leurs dettes et à atteindre une liberté financière durable."
         }
       }
     },
