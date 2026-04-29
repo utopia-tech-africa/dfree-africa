@@ -46,7 +46,7 @@
     }
   },
   "common": {
-    "donate": "Donate",
+    "donate": "Give",
     "contactUs": "Contact us",
     "learnMore": "Learn more",
     "visitStore": "Visit store",
@@ -69,7 +69,7 @@
     "ourVision": "Our vision",
     "ourMission": "Our mission",
     "billionDollarChallenge": "Billion dollar challenge",
-    "globalFoundationInAfrica": "Global Foundation in Africa",
+    "globalFoundationInAfrica": "Foundation in Africa",
     "communityCampaigns": "Community campaigns",
     "finfest": "FinFE$T",
     "dfreeAccessScholarships": "DFREE® Access Scholarships",
@@ -168,13 +168,13 @@
           "label": "Academy graduates"
         },
         "debtCleared": {
-          "value": "2500",
-          "suffix": "$",
-          "label": "Collectively debt paid"
+          "value": "$22",
+          "suffix": "M+",
+          "label": "Debt collectively paid"
         },
         "youngPeopleTrained": {
-          "value": "2500",
-          "suffix": "+",
+          "value": "$2",
+          "suffix": "M+",
           "label": "Collectively saved"
         }
       }
@@ -272,7 +272,7 @@
           }
         },
         "donation": {
-          "badge": "Donation",
+          "badge": "Giving",
           "title": "Giving back to the motherland",
           "location": "New Brunswick, New Jersey",
           "description": "Master practical methods for navigating monetary obstacles.",
@@ -667,7 +667,7 @@
       "title": "Empowering Africa",
       "subtitle": "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
       "cta": {
-        "label": "Donate to a project",
+        "label": "Give to a project",
         "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       }
     },

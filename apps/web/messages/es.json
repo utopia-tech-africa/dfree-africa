@@ -46,7 +46,7 @@
     }
   },
   "common": {
-    "donate": "Donar",
+    "donate": "Dar",
     "contactUs": "Contáctenos",
     "learnMore": "Saber más",
     "visitStore": "Visitar tienda",
@@ -69,7 +69,7 @@
     "ourVision": "Nuestra visión",
     "ourMission": "Nuestra misión",
     "billionDollarChallenge": "Desafío del billón de dólares",
-    "globalFoundationInAfrica": "Fundación global en África",
+    "globalFoundationInAfrica": "Fundación en África",
     "communityCampaigns": "Campañas comunitarias",
     "dfreeAccessScholarships": "Becas de acceso DFREE",
     "finfest": "FinFE$T",
@@ -168,14 +168,14 @@
           "label": "Graduados de la academia"
         },
         "debtCleared": {
-          "value": "2500",
-          "suffix": "$",
+          "value": "$22",
+          "suffix": "M+",
           "label": "Deuda pagada colectivamente"
         },
         "youngPeopleTrained": {
-          "value": "2500",
-          "suffix": "+",
-          "label": "Ahorrados colectivamente"
+          "value": "$2",
+          "suffix": "M+",
+          "label": "Ahorros colectivos"
         }
       }
     },
@@ -272,7 +272,7 @@
           }
         },
         "donation": {
-          "badge": "Donación",
+          "badge": "Dar",
           "title": "Devolver a la tierra madre",
           "location": "Ghana",
           "description": "Domina métodos prácticos para enfrentar los retos financieros.",
@@ -667,7 +667,7 @@
       "title": "Empoderar África",
       "subtitle": "Impulsando la libertad financiera y el desarrollo comunitario sostenible mediante educación, formación y programas económicos.",
       "cta": {
-        "label": "Dona a un proyecto",
+        "label": "Da a un proyecto",
         "href": "#"
       }
     },
