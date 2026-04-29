@@ -6,7 +6,7 @@
     },
     "finfest": {
       "title": "FinFE$T",
-      "description": "FinFE$T est le festival financier gratuit de DFREE pour tous. Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels lors de notre événement communautaire."
+      "description": "FinFE$T est le festival financier gratuit de DFREE® pour tous. Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels lors de notre événement communautaire."
     },
     "africa": {
       "title": "Afrique",
@@ -22,27 +22,27 @@
     },
     "ghana": {
       "title": "Ghana",
-      "description": "DFREE® au Ghana - Liberté financière au travail et à l'église, partenariats et développement communautaire à travers le Ghana."
+      "description": "DFREE au Ghana - Liberté financière au travail et à l'église, partenariats et développement communautaire à travers le Ghana."
     },
     "southAfrica": {
       "title": "Afrique du Sud",
-      "description": "DFREE® en Afrique du Sud - Partenariats, littératie financière et développement communautaire avec la Convention baptiste d'Afrique australe et les organisations locales."
+      "description": "DFREE en Afrique du Sud - Partenariats, littératie financière et développement communautaire avec la Convention baptiste d'Afrique australe et les organisations locales."
     },
     "uganda": {
       "title": "Ouganda",
-      "description": "DFREE® en Ouganda : fourniture d'eau potable, littératie financière et développement communautaire grâce à des partenariats stratégiques."
+      "description": "DFREE en Ouganda : fourniture d'eau potable, littératie financière et développement communautaire grâce à des partenariats stratégiques."
     },
     "billionDollarChallenge": {
       "title": "Défi du milliard de dollars",
-      "description": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier avec le Défi du milliard de dollars DFREE®—une plateforme numérique fondée sur la responsabilité communautaire."
+      "description": "Éliminez les dettes, constituez une épargne et prenez le contrôle de votre avenir financier avec le Défi du milliard de dollars DFREE—une plateforme numérique fondée sur la responsabilité communautaire."
     },
     "communityCampaigns": {
       "title": "Campagnes communautaires",
-      "description": "Des campagnes communautaires dynamiques qui rassemblent églises, groupes civiques et organisations locales pour des programmes DFREE® de renforcement financier synchronisés."
+      "description": "Des campagnes communautaires dynamiques qui rassemblent églises, groupes civiques et organisations locales pour des programmes DFREE de renforcement financier synchronisés."
     },
     "accessScholarships": {
       "title": "Bourses d'accès",
-      "description": "La Bourse d'accès DFREE® offre un accès gratuit aux cours, supports, coaching et événements pour aider les participants à atteindre la stabilité et l'autonomisation financières."
+      "description": "La Bourse d'accès DFREE offre un accès gratuit aux cours, supports, coaching et événements pour aider les participants à atteindre la stabilité et l'autonomisation financières."
     }
   },
   "common": {
@@ -62,46 +62,46 @@
     "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité"
   },
   "nav": {
-    "aboutUs": "À propos",
-    "ourPillars": "Nos piliers",
+    "aboutUs": "À Propos",
+    "ourPillars": "Nos Piliers",
     "getStarted": "Commencer",
-    "ourStory": "Notre histoire",
-    "ourVision": "Notre vision",
-    "ourMission": "Notre mission",
-    "billionDollarChallenge": "Défi du milliard de dollars",
-    "globalFoundationInAfrica": "Fondation en Afrique",
-    "communityCampaigns": "Campagnes communautaires",
-    "dfreeAccessScholarships": "Bourses d'accès DFREE",
+    "ourStory": "Notre Histoire",
+    "ourVision": "Notre Vision",
+    "ourMission": "Notre Mission",
+    "billionDollarChallenge": "Défi Du Milliard De Dollars",
+    "globalFoundationInAfrica": "DFREE® En Afrique",
+    "communityCampaigns": "Campagnes Communautaires",
+    "dfreeAccessScholarships": "Bourses D'accès DFREE",
     "finfest": "FinFE$T",
-    "booksMerch": "Livres et Articles",
-    "attendEvents": "Participez aux événements",
-    "contactUs": "Nous contacter"
+    "booksMerch": "Livres Et Articles",
+    "attendEvents": "Participez Aux Événements",
+    "contactUs": "Nous Contacter"
   },
   "footer": {
-    "about": "À propos",
-    "ourPillars": "Nos piliers",
-    "getInvolved": "S'impliquer",
-    "connectWithUs": "Restez connectés",
-    "subscribeToNewsletter": "Abonnez-vous à la newsletter",
-    "stayConnected": "Restez connecté avec nos dernières actualités et notre travail transformateur",
-    "enterEmail": "Entrez votre adresse e-mail",
-    "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité",
-    "copyright": "© 2024 Fondation DFREE®. Tous droits réservés.",
-    "privacyPolicy": "Politique de confidentialité",
-    "termsOfService": "Conditions d'utilisation",
-    "cookiesSettings": "Paramètres des cookies",
-    "whoWeAre": "Qui nous sommes",
-    "ourMission": "Notre mission",
-    "ourStory": "Notre histoire",
+    "about": "À Propos",
+    "ourPillars": "Nos Piliers",
+    "getInvolved": "S'Impliquer",
+    "connectWithUs": "Restez Connectés",
+    "subscribeToNewsletter": "Abonnez-Vous À La Newsletter",
+    "stayConnected": "Restez Connecté Avec Nos Dernières Actualités Et Notre Travail Transformateur",
+    "enterEmail": "Entrez Votre Adresse E-Mail",
+    "privacyNote": "En Vous Abonnant, Vous Acceptez Notre Politique De Confidentialité",
+    "copyright": "© 2024 Fondation DFREE. Tous Droits Réservés.",
+    "privacyPolicy": "Politique De Confidentialité",
+    "termsOfService": "Conditions D'Utilisation",
+    "cookiesSettings": "Paramètres Des Cookies",
+    "whoWeAre": "Qui Nous Sommes",
+    "ourMission": "Notre Mission",
+    "ourStory": "Notre Histoire",
     "team": "Équipe",
-    "billionDollarChallenge": "Défi du milliard de dollars",
-    "dfreeAfrica": "DFREE Afrique",
-    "communityCampaigns": "Campagnes communautaires",
+    "billionDollarChallenge": "Défi Du Milliard De Dollars",
+    "dfreeAfrica": "DFREE® En Afrique",
+    "communityCampaigns": "Campagnes Communautaires",
     "finfest": "FinFE$T",
-    "dfreeAccessScholarships": "Bourses d'accès DFREE",
+    "dfreeAccessScholarships": "Bourses D'Accès DFREE",
     "support": "Soutenir",
     "partner": "Partenariat",
-    "travelWithUs": "Voyagez avec nous",
+    "travelWithUs": "Voyagez Avec Nous",
     "volunteer": "Bénévolat",
     "submit": "Envoyer"
   },
@@ -119,7 +119,7 @@
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " est un organisme à but non lucratif qui promeut le bien-être financier, l'autonomisation économique et l'autosuffisance dans les communautés mal desservies en offrant des initiatives gratuites et centrées sur la communauté qui aident les familles à bâtir une confiance et une liberté financières durables.",
       "missionTitle": "Mission",
-      "mission": "Le mouvement DFREE® pour la liberté financière promeut une approche du bien-être financier fondée sur des valeurs, encourageant la discipline, la responsabilité et la stabilité à long terme grâce à des stratégies pratiques et à un changement de comportement.",
+      "mission": "Le mouvement DFREE pour la liberté financière promeut une approche du bien-être financier fondée sur des valeurs, encourageant la discipline, la responsabilité et la stabilité à long terme grâce à des stratégies pratiques et à un changement de comportement.",
       "visionTitle": "Vision",
       "vision": "En tant que bras philanthropique du Mouvement, la Fondation mondiale DFREE s'engage à élargir l'accès et l'impact en atteignant les communautés mal desservies, en supprimant les obstacles à l'éducation financière et en connectant les individus aux ressources et au soutien nécessaires pour construire une autonomisation financière durable.",
       "imageGalleryAlt": "Galerie d'images Qui nous sommes"
@@ -130,24 +130,24 @@
       "discoverMoreCta": "Découvrir plus",
       "pillars": {
         "billionDollarChallenge": {
-          "name": "Défi du milliard de dollars",
-          "description": "Le Défi du milliard de dollars (BDC) est une initiative numérique de la Fondation mondiale DFREE® qui aide les particuliers et les organisations à réduire la dette et à constituer une épargne grâce au suivi des objectifs, à la motivation comportementale et à la responsabilité communautaire, tout en offrant aux partenaires un impact mesurable et fondé sur les données."
+          "name": "Défi Du Milliard De Dollars",
+          "description": "Le Défi du milliard de dollars (BDC) est une initiative numérique de la Fondation mondiale DFREE que aide les particuliers et les organisations à réduire la dette et à constituer une épargne grâce au suivi des objectifs, à la motivation comportementale et à la responsabilité communautaire, tout en offrant aux partenaires un impact mesurable et fondé sur les données."
         },
         "dfreeAfrica": {
-          "name": "DFREE® en Afrique",
-          "description": "La Fondation mondiale DFREE® s'engage résolument à promouvoir la littératie financière, le développement du leadership et l'autonomisation des communautés à travers le continent africain par des partenariats stratégiques et des investissements ciblés."
+          "name": "DFREE® En Afrique",
+          "description": "La Fondation mondiale DFREE s'engage résolument à promouvoir la littératie financière, le développement du leadership et l'autonomisation des communautés à travers le continent africain par des partenariats stratégiques et des investissements ciblés."
         },
         "communityCampaigns": {
           "name": "Campagnes communautaires",
-          "description": "La Fondation mondiale DFREE® mène des campagnes communautaires qui rassemblent églises, groupes civiques et organisations locales pour des programmes coordonnés d'autonomisation financière, favorisant l'apprentissage partagé, la responsabilité et une célébration collective lors de lancements structurés, de sessions hebdomadaires et d'événements de remise de diplômes."
+          "description": "La Fondation mondiale DFREE mène des campagnes communautaires qui rassemblent églises, groupes civiques et organisations locales pour des programmes coordonnés d'autonomisation financière, favorisant l'apprentissage partagé, la responsabilité et une célébration collective lors de lancements structurés, de sessions hebdomadaires et d'événements de remise de diplômes."
         },
         "finfest": {
           "name": "FinFE$T® : où la richesse rencontre le bien-être",
-          "description": "FinFe$t® est l'événement phare de la communauté DFREE®. Il allie éducation financière, santé et bien-être à travers des expériences interactives afin de fournir aux participants des outils pratiques pour favoriser un bien-être global et une prospérité durable. C'est 100 % gratuit."
+          "description": "FinFe$t® est l'événement phare de la communauté DFREE. Il allie éducation financière, santé et bien-être à travers des expériences interactives afin de fournir aux participants outils pratiques pour favoriser un bien-être global et une prospérité durable. C'est 100 % gratuit."
         },
         "accessScholarships": {
-          "name": "Bourses d'accès DFREE®",
-          "description": "Le programme de bourses DFREE® offre un soutien basé sur les besoins afin de supprimer les obstacles financiers à l'accès au contenu DFREE® – ressources éducatives, apprentissage numérique, formations en direct, conseils financiers gratuits et aide d'urgence limitée – pour aider les membres de notre communauté à réduire leurs dettes et à atteindre une liberté financière durable."
+          "name": "Bourses d'accès DFREE",
+          "description": "Le programme de bourses DFREE offre un soutien basé sur les besoins afin de supprimer les obstacles financiers à l'accès au contenu DFREE – ressources éducatives, apprentissage numérique, formations en direct, conseils financiers gratuits et aide d'urgence limitée – pour aider les membres de notre communauté à réduire leurs dettes et à atteindre une liberté financière durable."
         }
       }
     },
@@ -197,7 +197,7 @@
         "lloyd": {
           "name": "Lloyd Branch",
           "title": "",
-          "text": "J'ai remboursé mes factures de voiture et de système de chauffage, ventilation et climatisation grâce aux méthodes de DFREE ®."
+          "text": "J'ai remboursé mes factures de voiture et de système de chauffage, ventilation et climatisation grâce aux méthodes de DFREE®."
         },
         "gregory": {
           "name": "Gregory Lawrence",
@@ -298,7 +298,7 @@
       "readMoreCta": "Lire plus",
       "featuredNews": {
         "title": "Actualités et Médias",
-        "subtitle": "Les dernières nouvelles du monde DFREE.",
+        "subtitle": "Les dernières nouvelles du monde DFREE®.",
         "viewAllNewsCta": "Voir toutes les actualités",
         "readMoreCta": "Lire plus",
         "emptyState": {
@@ -375,7 +375,7 @@
           "type": "text",
           "name": "Diana Belle",
           "organization": "Clear View Baptist Church",
-          "content": "\"Je gère mieux mes finances après avoir suivi ce processus. Je travaille maintenant à laisser un héritage à mes filles.\""
+          "content": "\"Je gère mieux mes finances après avoir suivi ce processus DFREE®. Je travaille maintenant à laisser un héritage à mes filles.\""
         },
         {
           "type": "video",
@@ -727,26 +727,26 @@
   },
   "ghana": {
     "pageInfo": {
-      "mainTitle": "DFREE® au Ghana",
+      "mainTitle": "DFREE au Ghana",
       "descTitle": "À propos",
       "descText": "Pour marquer le 10ème anniversaire de sa première visite au Ghana, le Dr Soaries a été intronisé chef par Sa Majesté le Roi d'Akyem Abuakwa, en reconnaissance de son travail en faveur du développement dans tout le royaume et le pays. En tant que Nkosuorhene (chef du développement), il continue de mener des projets qui s'adressent directement à la communauté, notamment dans l'éducation, les moyens de subsistance pour les enfants et les jeunes et le développement communautaire."
     },
     "sections": {
       "workplace": {
-        "title": "DFREE® SUR LE LIEU DE TRAVAIL",
-        "description": "À travers une église locale, le Club DFREE® a lancé une campagne pour inscrire les jeunes au Billion Dollar Challenge (BDC). Ce groupe était composé principalement d'étudiants d'université et de nouveaux diplômés ayant des emplois de début de carrière et quelques prêts étudiants. Au cours de sa première année seulement, le premier groupe a recruté plus de 20 membres qui ont remboursé environ vingt-sept mille cedis de dettes (environ 4 200 $) – un montant substantiel selon les standards ghanéens.\n Les activités DFREE® basées sur l'église ont également touché les commerçants des marchés locaux, principalement des femmes qui font le commerce de biens de consommation courante. Grâce à des engagements mensuels sur leurs lieux de travail, l'objectif du Club était de les aider à comprendre la comptabilité de base et de les encourager à épargner dans des institutions bancaires afin de développer leurs activités et d'améliorer leur niveau de vie."
+        "title": "DFREE SUR LE LIEU DE TRAVAIL",
+        "description": "À travers une église locale, le Club DFREE a lancé une campagne pour inscrire les jeunes au Billion Dollar Challenge (BDC). Ce groupe était composé principalement d'étudiants d'université et de nouveaux diplômés ayant des emplois de début de carrière et quelques prêts étudiants. Au cours de sa première année seulement, le premier groupe a recruté plus de 20 membres qui ont remboursé environ vingt-sept mille cedis de dettes (environ 4 200 $) – un montant substantiel selon les standards ghanéens.\n Les activités DFREE basées sur l'église ont également touché les commerçants des marchés locaux, principalement des femmes qui font le commerce de biens de consommation courante. Grâce à des engagements mensuels sur leurs lieux de travail, l'objectif du Club était de les aider à comprendre la comptabilité de base et de les encourager à épargner dans des institutions bancaires afin de développer leurs activités et d'améliorer leur niveau de vie."
       },
       "church": {
-        "title": "DFREE® À L'ÉGLISE",
-        "description": "Le programme DFREE® a été piloté au Ghana au sein d'une organisation où les prêts sur le lieu de travail étaient monnaie courante. Sans plafond sur le pouvoir d'emprunt des employés, les employeurs capitalisaient sur cette pratique pour laisser la plupart des employés en déficit salarial à la fin du cycle de paie.\n Sous la direction de Mark, plusieurs membres du personnel de l'organisation ont rejoint le club et se sont fixé des objectifs individuels et communautaires pour rembourser leurs dettes en utilisant des stratégies telles que la méthode de la boule de neige enseignée dans le programme. Cela a démarré et s'est transformé en une campagne même sans que les participants n'aient accès aux cahiers d'exercices.\n Plus important encore, ils ont formé un groupe de soutien qui s'est motivé et encouragé mutuellement en partageant des histoires de réussite et des approches personnelles de l'autodiscipline. En bref, un changement de mode de vie et de mentalité autour de l'argent et des dépenses est né."
+        "title": "DFREE À L'ÉGLISE",
+        "description": "Le programme DFREE a été piloté au Ghana au sein d'une organisation où les prêts sur le lieu de travail étaient monnaie courante. Sans plafond sur le pouvoir d'emprunt des employés, les employeurs capitalisaient sur cette pratique pour laisser la plupart des employés en déficit salarial à la fin du cycle de paie.\n Sous la direction de Mark, plusieurs membres du personnel de l'organisation ont rejoint le club et se sont fixé des objectifs individuels et communautaires pour rembourser leurs dettes en utilisant des stratégies telles que la méthode de la boule de neige enseignée dans le programme. Cela a démarré et s'est transformé en une campagne même sans que les participants n'aient accès aux cahiers d'exercices.\n Plus important encore, ils ont formé un groupe de soutien qui s'est motivé et encouragé mutuellement en partageant des histoires de réussite et des approches personnelles de l'autodiscipline. En bref, un changement de mode de vie et de mentalité autour de l'argent et des dépenses est né."
       },
       "partnerships": {
         "title": "PARTENARIATS",
-        "description": "Le Club DFREE® Ghana s'est associé au chapitre Gamma Alpha Sigma Zeta de la sororité Zeta Phi Beta, Inc. (alias Ghana Zetas) pour promouvoir la littératie financière auprès de groupes spécifiques de consommateurs. Cela inclut principalement les femmes et les filles dans les refuges et les maisons de transition, souvent secourues ou fuyant des foyers abusifs. Ils travaillent également avec les pêcheurs et les agriculteurs des communautés rurales, ainsi qu'avec les vendeurs ambulants des zones urbaines.\n Travaillant par l'intermédiaire du Agape Sanctuary de la Victory Bible Church, l'engagement des jeunes dans le Billion Dollar Challenge et la sensibilisation des commerçants du marché ont été des campagnes extrêmement réussies qui ne peuvent que se développer à travers d'autres sanctuaires de l'église."
+        "description": "Le Club DFREE Ghana s'est associé au chapitre Gamma Alpha Sigma Zeta de la sororité Zeta Phi Beta, Inc. (alias Ghana Zetas) para promouvoir la littératie financière auprès de groupes spécifiques de consommateurs. Cela inclut principalement les femmes et les filles dans les refuges et les maisons de transition, souvent secourues ou fuyant des foyers abusifs. Ils travaillent également avec les pêcheurs et les agriculteurs des communautés rurales, ainsi qu'avec les vendeurs ambulants des zones urbaines.\n Travaillant par l'intermédiaire du Agape Sanctuary de la Victory Bible Church, l'engagement des jeunes dans le Billion Dollar Challenge et la sensibilisation des commerçants du marché ont été des campagnes extrêmement réussies qui ne peuvent que se développer à travers d'autres sanctuaires de l'église."
       },
       "challenges": {
         "title": "DÉFIS",
-        "description": "Le Club DFREE® Ghana a lutté pour sa durabilité au fil des ans. Le financement des voyages, l'accès à des ressources telles que les livres et le service internet sont quelques-uns des facteurs affectant les quelques bénévoles qui se sont engagés à faire avancer la cause.\n Dans cette nouvelle phase, l'accent mis sur le travail par l'intermédiaire de l'église, espérons-le, change la donne. Un soutien sous forme de livres et de financement pour organiser des événements, éduquer les commerçants du marché et atteindre plus de bénéficiaires serait le bienvenu."
+        "description": "Le Club DFREE Ghana a lutté pour sa durabilité au fil des ans. Le financement des voyages, l'accès à des ressources telles que les livres et le service internet sont quelques-uns des facteurs affectant les quelques bénévoles qui se sont engagés à faire avancer la cause.\n Dans cette nouvelle phase, l'accent mis sur le travail par l'intermédiaire de l'église, espérons-le, change la donne. Un soutien sous forme de livres et de financement pour organiser des événements, éduquer les commerçants du marché et atteindre plus de bénéficiaires serait le bienvenu."
       },
       "successes": {
         "title": "RÉUSSITES",
@@ -760,14 +760,14 @@
   },
   "southAfrica": {
     "pageInfo": {
-      "mainTitle": "DFREE® en Afrique du Sud",
+      "mainTitle": "DFREE en Afrique du Sud",
       "descText_Quote": "“Nos vies continuent d'être bénies par le travail que nous accomplissons à DFREE®. C'est un honneur que nous chérissons grandement que Dieu puisse nous utiliser pour un mandat aussi important d'aider les gens à vivre dans la liberté financière.” ",
-      "descText_Quote_Author": "Landi et Mali, DFREE® SA."
+      "descText_Quote_Author": "Landi et Mali, DFREE SA."
     },
     "sections": {
       "partnerships": {
         "title": "PARTENARIATS",
-        "description": "Karani Leadership – Il s'agit d'une entreprise prospère appartenant à des Noirs qui propose du coaching commercial et de forces pour les entrepreneurs, ainsi que du coaching exécutif pour les cadres supérieurs. Le partenariat a donné naissance à l'intégration d'un cours DFREE® de 4 semaines dans leur programme pour entrepreneurs.\n\nLucha Lunako – dfree® Afrique du Sud s'est associé à cette organisation de premier plan à but non lucratif pour le développement des jeunes afin d'améliorer leur division d'amélioration du comportement financier, en s'appuyant sur le programme DFREE® Young Money.\n\nPasteur Debbie Bruce et la Convention Baptiste d'Afrique Australe (BCSA) – Ps. Bruce est la vice-présidente de la Convention qui a cultivé une relation pour former les pasteurs et les dirigeants d'église de la Convention. Grâce au partenariat, des sessions de formation de formateurs sont également organisées pour la George East Ministers Fraternity afin qu'ils puissent à leur tour former d'autres dirigeants pour lancer le programme dfree® dans leurs églises."
+        "description": "Karani Leadership – Il s'agit d'une entreprise prospère appartenant à des Noirs qui propose du coaching commercial et de forces pour les entrepreneurs, ainsi que du coaching exécutif pour les cadres supérieurs. Le partenariat a donné naissance à l'intégration d'un cours DFREE de 4 semaines dans leur programme pour entrepreneurs.\n\nLucha Lunako – dfree Afrique du Sud s'est associé à cette organisation de premier plan à but non lucratif pour le développement des jeunes afin d'améliorer leur division d'amélioration du comportement financier, en s'appuyant sur le programme DFREE Young Money.\n\nPasteur Debbie Bruce et la Convention Baptiste d'Afrique Australe (BCSA) – Ps. Bruce est la vice-présidente de la Convention qui a cultivé une relation pour former les pasteurs et les dirigeants d'église de la Convention. Grâce au partenariat, des sessions de formation de formateurs sont également organisées pour la George East Ministers Fraternity afin qu'ils puissent à leur tour former d'autres dirigeants pour lancer le programme dfree dans leurs églises."
       },
       "challenges": {
         "title": "DÉFIS",
@@ -776,7 +776,7 @@
       },
       "successes": {
         "title": "RÉUSSITES",
-        "description": "Quelques jalons notables atteints par DFREE® Afrique du Sud incluent la création de clubs d'épargne, le soutien aux entrepreneurs de subsistance et aux coopératives dans les communautés sud-africaines mal desservies qui ont émergé. Nous croyons en la poursuite et l'extension de la recherche sur la littératie financière comportementale."
+        "description": "Quelques jalons notables atteints par DFREE Afrique du Sud incluent la création de clubs d'épargne, le soutien aux entrepreneurs de subsistance et aux coopératives dans les communautés sud-africaines mal desservies qui ont émergé. Nous croyons en la poursuite et l'extension de la recherche sur la littératie financière comportementale."
       }
     },
     "featuredProjects": {
@@ -786,7 +786,7 @@
   },
   "uganda": {
     "pageInfo": {
-      "mainTitle": "DFREE® en Ouganda",
+      "mainTitle": "DFREE en Ouganda",
       "descTitle": "À propos",
       "descText": "Les initiatives de DFREE® en Ouganda ont débuté en 2019 lorsque le Dr Soaries était l'invité de Son Altesse l'évêque John Chrisostom Wayabire, roi du royaume de Bugwere, et le premier souverain traditionnel africain connu qui est également évêque d'une église chrétienne. Lors du 5e anniversaire du couronnement de Son Altesse Wayabire, le Dr Soaries a eu l'occasion de rencontrer le président du pays et de tenir conseil avec des membres de la communauté, en particulier l'initiative spéciale des femmes de la Reine qui offrait une formation professionnelle et des moyens de subsistance aux femmes et aux filles des communautés défavorisées.\nDFREE® a développé une relation de travail encore plus forte avec le roi Geoffrey Wayabire, qui a succédé à son père en tant que roi en 2023. Le partenariat a donné naissance à 2 projets clés :"
     },
