@@ -2,11 +2,11 @@
   "metadata": {
     "home": {
       "title": "Home",
-      "description": "DFREE Africa - Empowering communities with financial freedom and sustainable development across the African continent."
+      "description": "DFREE® Africa - Empowering communities with financial freedom and sustainable development across the African continent."
     },
     "finfest": {
       "title": "FinFE$T",
-      "description": "FinFE$T is DFREE's free financial festival for everyone. Learn how to make, manage, and build wealth from industry professionals at our community event."
+      "description": "FinFE$T is DFREE®'s free financial festival for everyone. Learn how to make, manage, and build wealth from industry professionals at our community event."
     },
     "africa": {
       "title": "Africa",
@@ -14,35 +14,35 @@
     },
     "projects": {
       "title": "Projects",
-      "description": "Explore DFREE Africa's transformative projects across Ghana, South Africa, Uganda, and Liberia."
+      "description": "Explore DFREE® Africa's transformative projects across Ghana, South Africa, Uganda, and Liberia."
     },
     "project": {
       "title": "Project",
-      "descriptionFallback": "Learn more about this DFREE project."
+      "descriptionFallback": "Learn more about this DFREE® project."
     },
     "ghana": {
       "title": "Ghana",
-      "description": "DFREE in Ghana - Financial freedom in the workplace and church, partnerships, and community development across Ghana."
+      "description": "DFREE® in Ghana - Financial freedom in the workplace and church, partnerships, and community development across Ghana."
     },
     "southAfrica": {
       "title": "South Africa",
-      "description": "DFREE in South Africa - Partnerships, financial literacy, and community development with the Baptist Convention of Southern Africa and local organizations."
+      "description": "DFREE® in South Africa - Partnerships, financial literacy, and community development with the Baptist Convention of Southern Africa and local organizations."
     },
     "uganda": {
       "title": "Uganda",
-      "description": "DFREE in Uganda - Delivering clean water, financial literacy, and community development through strategic partnerships."
+      "description": "DFREE® in Uganda - Delivering clean water, financial literacy, and community development through strategic partnerships."
     },
     "billionDollarChallenge": {
       "title": "Billion Dollar Challenge",
-      "description": "Eliminate debt, build savings, and take control of your financial future through the DFREE Billion Dollar Challenge—a digital platform built on community accountability."
+      "description": "Eliminate debt, build savings, and take control of your financial future through the DFREE® Billion Dollar Challenge—a digital platform built on community accountability."
     },
     "communityCampaigns": {
       "title": "Community Campaigns",
-      "description": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE financial empowerment programs."
+      "description": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs."
     },
     "accessScholarships": {
       "title": "Access Scholarships",
-      "description": "The DFREE Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment."
+      "description": "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment."
     }
   },
   "common": {
@@ -72,7 +72,7 @@
     "globalFoundationInAfrica": "DFREE® In Africa",
     "communityCampaigns": "Community Campaigns",
     "finfest": "FinFE$T",
-    "dfreeAccessScholarships": "DFREE Access Scholarships",
+    "dfreeAccessScholarships": "DFREE® Access Scholarships",
     "booksMerch": "Books & Merch",
     "attendEvents": "Attend Events",
     "contactUs": "Contact Us"
@@ -98,7 +98,7 @@
     "dfreeAfrica": "DFREE® In Africa",
     "communityCampaigns": "Community Campaigns",
     "finfest": "FinFE$T",
-    "dfreeAccessScholarships": "DFREE Access Scholarships",
+    "dfreeAccessScholarships": "DFREE® Access Scholarships",
     "support": "Support",
     "partner": "Partner",
     "travelWithUs": "Travel With Us",
@@ -146,8 +146,8 @@
           "description": "FinFe$t® is DFREE®'s flagship community event that blends financial education, health, and wellness through engaging experiences to equip participants with practical tools to drive holistic well-being and long-term prosperity. It’s 100% free."
         },
         "accessScholarships": {
-          "name": "DFREE Access Scholarships",
-          "description": " The DFREE Scholarship program provides need-based support to remove financial barriers to accessing DFREE content – educational resources, digital learning, live training, free financial counseling and limited emergency assistance to help members of our community pursue debt reduction and lasting financial freedom."
+          "name": "DFREE® Access Scholarships",
+          "description": " The DFREE® Scholarship program provides need-based support to remove financial barriers to accessing DFREE® content – educational resources, digital learning, live training, free financial counseling and limited emergency assistance to help members of our community pursue debt reduction and lasting financial freedom."
         }
       }
     },
@@ -298,7 +298,7 @@
       "readMoreCta": "Read more",
       "featuredNews": {
         "title": "News & Media",
-        "subtitle": "The latest from the DFREE world.",
+        "subtitle": "The latest from the DFREE® world.",
         "viewAllNewsCta": "View all news",
         "readMoreCta": "Read more",
         "emptyState": {
@@ -386,7 +386,7 @@
           "type": "text",
           "name": "Jackie Jackson",
           "organization": "Community Partner",
-          "content": "\"This DFREE course helped me organize my finances, find the leaks and paid off my credit card debt, none of which I could have done on my own!\""
+          "content": "\"This DFREE® course helped me organize my finances, find the leaks and paid off my credit card debt, none of which I could have done on my own!\""
         }
       ]
     },
@@ -476,7 +476,7 @@
   "accessScholarships": {
     "hero": {
       "title": "Unlock Your Financial Freedom Journey",
-      "subtitle": "The DFREE Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment.",
+      "subtitle": "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment.",
       "applyCta": "Apply for Scholarship",
       "becomeSponsorCta": "Become a Sponsor",
       "imageAlt": "Access Scholarships Hero background"
@@ -484,7 +484,7 @@
     "about": {
       "title": "What are Access Scholarships?",
       "subtitle": "About the Program",
-      "description": "The DFREE Access Scholarship program removes financial barriers that prevent individuals and families from participating in DFREE financial freedom education. Access scholarships are essentially fee waivers or financial assistance that cover the costs of DFREE programs, tools, events, and access to financial professionals.\n\nProgramming includes the DFREE Online Academy, 12 Steps to Financial Freedom curriculum, Say Yes to No Debt books and workbooks, podcasts and webinars. Fee assistance is supported by corporate partners (or sponsors).",
+      "description": "The DFREE® Access Scholarship program removes financial barriers that prevent individuals and families from participating in DFREE® financial freedom education. Access scholarships are essentially fee waivers or financial assistance that cover the costs of DFREE® programs, tools, events, and access to financial professionals.\n\nProgramming includes the DFREE® Online Academy, 12 Steps to Financial Freedom curriculum, Say Yes to No Debt books and workbooks, podcasts and webinars. Fee assistance is supported by corporate partners (or sponsors).",
       "imageAlt": "About the Program"
     },
     "whyScholarshipsMatter": {
@@ -492,11 +492,11 @@
       "subtitle": "Expanding Opportunity. Strengthening Impact.",
       "description": "Scholarships enhance financial education access for those facing barriers, supporting communities impacted by debt.",
       "bullets": {
-        "increaseParticipation": "Increase participation in DFREE programming and services",
+        "increaseParticipation": "Increase participation in DFREE® programming and services",
         "supportCommunities": "Support communities disproportionately impacted by debt",
         "strengthenEducation": "Strengthen financial education and long-term behavior change",
         "boostBdc": "Boost participation in the Billion Dollar Challenge",
-        "advanceMission": "Advance the mission of the DFREE Financial Movement"
+        "advanceMission": "Advance the mission of the DFREE® Financial Movement"
       },
       "patternAlt": "Background Pattern",
       "imageAlt": "Person working on a laptop"
@@ -507,11 +507,11 @@
       "programAccess": {
         "title": "Program Access",
         "bullets": {
-          "wealthLab": "DFREE Wealth Lab",
-          "community": "DFREE Community",
-          "coaching": "DFREE Coaching cohorts",
-          "twelveSteps": "DFREE 12 Steps to Financial Freedom",
-          "certification": "DFREE Certification for leaders and facilitators"
+          "wealthLab": "DFREE® Wealth Lab",
+          "community": "DFREE® Community",
+          "coaching": "DFREE® Coaching cohorts",
+          "twelveSteps": "DFREE® 12 Steps to Financial Freedom",
+          "certification": "DFREE® Certification for leaders and facilitators"
         }
       },
       "eventParticipation": {
@@ -528,13 +528,13 @@
       "description": "Designed for All Individuals Ready to Transform Their Financial Future",
       "criteria": {
         "financialNeed": "Financial need or hardship",
-        "commitment": "Commitment to completing DFREE coursework",
+        "commitment": "Commitment to completing DFREE® coursework",
         "desire": "Desire to improve financial habits and reduce debt",
-        "individualEnrollment": "Individual enrollment into the DFREE Community Digital Hub",
+        "individualEnrollment": "Individual enrollment into the DFREE® Community Digital Hub",
         "partnerEnrollment": "Enrollment through a partner organization (church, nonprofit, employer, school)"
       },
       "applyCta": "Apply for Scholarship",
-      "patternAlt": "DFREE Pattern Background",
+      "patternAlt": "DFREE® Pattern Background",
       "imageAlt": "Two women working together on a laptop"
     },
     "howItWorks": {
@@ -548,7 +548,7 @@
         },
         "review": {
           "title": "Review",
-          "description": "DFREE staff or partner organisations review applications using a standardised rubric."
+          "description": "DFREE® staff or partner organisations review applications using a standardised rubric."
         },
         "award": {
           "title": "Award",
@@ -584,7 +584,7 @@
   "communityCampaigns": {
     "hero": {
       "title": "Community Campaigns",
-      "subtitle": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE financial empowerment programs. These campaigns are designed to create a collective impact by promoting shared learning, mutual accountability, and community celebration.",
+      "subtitle": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs. These campaigns are designed to create a collective impact by promoting shared learning, mutual accountability, and community celebration.",
       "ctaLabel": "Connect with us",
       "ctaHref": "#",
       "imageAlt": "Community campaigns background"
@@ -594,11 +594,11 @@
       "description": "Community campaigns bring together entire neighborhoods to tackle financial challenges as one. Unlike isolated programs, these coordinated efforts create momentum, accountability, and lasting transformation."
     },
     "impact": {
-      "title": "DFREE Day of Impact",
+      "title": "DFREE® Day of Impact",
       "subtitle": "A Community Activation Model for Financial Freedom, Collaboration and Collective Action",
-      "description": "The DFREE Day of Impact is a new initiative that features a one-day, multi-touch community engagement experience designed to introduce DFREE® to a local community, deepen relationships with key leaders, and seed long-term collaboration that leads to measurable financial empowerment outcomes. It brings together nonprofits, faith leaders, civic stakeholders, entrepreneurs, and residents into the launch of an ongoing DFREE ecosystem in the host community.",
+      "description": "The DFREE® Day of Impact is a new initiative that features a one-day, multi-touch community engagement experience designed to introduce DFREE® to a local community, deepen relationships with key leaders, and seed long-term collaboration that leads to measurable financial empowerment outcomes. It brings together nonprofits, faith leaders, civic stakeholders, entrepreneurs, and residents into the launch of an ongoing DFREE® ecosystem in the host community.",
       "buttonText": "Learn more",
-      "imageAlt": "DFREE Day of Impact"
+      "imageAlt": "DFREE® Day of Impact"
     },
     "whatWeDo": {
       "title": "What we do",
@@ -674,7 +674,7 @@
     "ourStory": {
       "title": "our story",
       "subtitle": "Transforming financial landscapes across African communities",
-      "description": "Driven by a vision to empower the African diaspora, Dr. DeForest B. Soaries, Jr. founded Dfree Global Foundation, which birthed DFREE Africa, to replace the cycle of poverty with a mindset of wealth and self-sufficiency. This mission is deeply rooted in Dr. Soaries’ long-standing connection to the continent, beginning with his first visit to South Africa in 1990. He has since spent decades forging continental partnerships that champion economic, social, and spiritual growth, dedicating his leadership to building strategic connections across the continent, especially in Ghana, Liberia, Uganda, Botswana, South Africa and several other countries. His work focuses on integrating economic development with educational, spiritual and social progress to create sustainable, higher standards of living for all."
+      "description": "Driven by a vision to empower the African diaspora, Dr. DeForest B. Soaries, Jr. founded Dfree Global Foundation, which birthed DFREE® Africa, to replace the cycle of poverty with a mindset of wealth and self-sufficiency. This mission is deeply rooted in Dr. Soaries’ long-standing connection to the continent, beginning with his first visit to South Africa in 1990. He has since spent decades forging continental partnerships that champion economic, social, and spiritual growth, dedicating his leadership to building strategic connections across the continent, especially in Ghana, Liberia, Uganda, Botswana, South Africa and several other countries. His work focuses on integrating economic development with educational, spiritual and social progress to create sustainable, higher standards of living for all."
     },
     "featuredProjects": {
       "title": "Projects",
@@ -728,7 +728,7 @@
   },
   "ghana": {
     "pageInfo": {
-      "mainTitle": "DFREE in Ghana",
+      "mainTitle": "DFREE® in Ghana",
       "descTitle": "About",
       "descText": "To mark the 10th anniversary of his first visit to Ghana, Dr. Soaries was enstooled a chief by His Majesty the King of Akyem Abuakwa, in recognition of his work towards development throughout the kingdom and the country. As Nkosuorhene (chief of development), he continues to drive projects that directly address community especially in education, livelihoods for children and youth and community development."
     },
@@ -761,7 +761,7 @@
   },
   "southAfrica": {
     "pageInfo": {
-      "mainTitle": "DFREE in South Africa",
+      "mainTitle": "DFREE® in South Africa",
       "descText_Quote": "“Our lives continue to be  blessed by the work we do at DFREE®. It is an honor we cherish greatly  that God can use us for such a big mandate of helping people live in  financial freedom.” ",
       "descText_Quote_Author": "Landi and Mali, DFREE SA."
     },
@@ -787,7 +787,7 @@
   },
   "uganda": {
     "pageInfo": {
-      "mainTitle": "DFREE in Uganda",
+      "mainTitle": "DFREE® in Uganda",
       "descTitle": "About",
       "descText": "DFREE®’s initiatives in Uganda started in 2019 when Dr. Soaries was the guest of His Highness Bishop John Chrisostom Wayabire, king of the Bugwere kingdom, and the first known African traditional ruler who is also the Bishop of a Christian church. At the 5th coronation anniversary of His Highness Wayabire, Dr. Soaries had the opportunity to meet the president of the country and hold council with members of the community, especially the Queen’s special women’s initiative that was providing skills training and livelihoods to women and girls in deprived communities.\nDFREE® has developed an even stronger working relationship with King Geoffrey Wayabire, who succeeded his father as king in 2023. The partnership has birthed 2 key projects:"
     },
