@@ -46,7 +46,7 @@
     }
   },
   "common": {
-    "donate": "Faire un don",
+    "donate": "Donner",
     "contactUs": "Nous contacter",
     "learnMore": "En savoir plus",
     "visitStore": "Visiter la boutique",
@@ -69,7 +69,7 @@
     "ourVision": "Notre vision",
     "ourMission": "Notre mission",
     "billionDollarChallenge": "Défi du milliard de dollars",
-    "globalFoundationInAfrica": "Fondation mondiale en Afrique",
+    "globalFoundationInAfrica": "Fondation en Afrique",
     "communityCampaigns": "Campagnes communautaires",
     "dfreeAccessScholarships": "Bourses d'accès DFREE",
     "finfest": "FinFE$T",
@@ -168,14 +168,14 @@
           "label": "diplômés de l'Académie"
         },
         "debtCleared": {
-          "value": "2500",
-          "suffix": "$",
-          "label": "Dette collectivement remboursée"
+          "value": "$22",
+          "suffix": "M+",
+          "label": "Dette collectivement payée"
         },
         "youngPeopleTrained": {
-          "value": "2500",
-          "suffix": "+",
-          "label": "Sauvés collectivement"
+          "value": "$2",
+          "suffix": "M+",
+          "label": "Économies collectives"
         }
       }
     },
@@ -272,7 +272,7 @@
           }
         },
         "donation": {
-          "badge": "Collecte de dons",
+          "badge": "Générosité",
           "title": "Redonner à la terre mère",
           "location": "Ghana",
           "description": "Maîtrisez des méthodes pratiques pour faire face aux défis financiers.",
@@ -667,7 +667,7 @@
       "title": "Renforcer l'Afrique",
       "subtitle": "Favoriser la liberté financière et le développement communautaire durable par l'éducation, la formation et les programmes économiques.",
       "cta": {
-        "label": "Faites un don à un projet",
+        "label": "Donner à un projet",
         "href": "#"
       }
     },

@@ -45,8 +45,8 @@ export const ASCPartnerWithUs = async () => {
             </p>
           </div>
 
-          {/* Donation Tiers Grid */}
-          <div className="grid grid-cols-2 gap-y-6 lg:gap-y-10 gap-x-2">
+          {/* Giving Tiers Grid */}
+          <div className="grid grid-cols-2 gap-y-6 lg:gap-y-12 gap-x-8">
             {TIER_KEYS.map((tier) => (
               <ImpactStatCard
                 key={tier.key}

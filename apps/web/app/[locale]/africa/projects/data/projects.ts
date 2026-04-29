@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Support for African Community Icons of Change",
     description:
-      "We continue to provide ongoing support for Mad. Evelina Tshabalala and Queenmother Nana Dokua in the form of cash and material donations.",
+      "We continue to provide ongoing support for Mad. Evelina Tshabalala and Queenmother Nana Dokua in the form of cash and material giving.",
     country: "South Africa",
     previewMedia: {
       type: "video",
@@ -35,7 +35,7 @@ export const projects = [
   {
     title: "Medical Equipment for Abuakwa South CHPS Centers",
     description:
-      "DFREE® Africa Foundation donated medical equipment to CHPS centers improving healthcare access.",
+      "DFREE® Africa Foundation gave medical equipment to CHPS centers improving healthcare access.",
     country: "Ghana",
     previewMedia: {
       type: "image",
