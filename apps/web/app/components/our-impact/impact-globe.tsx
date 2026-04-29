@@ -48,14 +48,14 @@ export function ImpactGlobe({ className }: { className?: string }) {
       .attr("cx", size / 2)
       .attr("cy", size / 2)
       .attr("r", projection.scale())
-      .attr("fill", "#fcfcfc");
+      .attr("fill", "#e8e8e8");
 
     // --- Graticule ---
     svg
       .select<SVGPathElement>(".globe-graticule")
       .attr("d", pathGen(graticule) || "")
       .attr("fill", "none")
-      .attr("stroke", "#eeeeee")
+      .attr("stroke", "#c0c0c0")
       .attr("stroke-width", "0.5");
 
     // --- Land ---
@@ -63,9 +63,9 @@ export function ImpactGlobe({ className }: { className?: string }) {
       svg
         .select<SVGPathElement>(".globe-land")
         .attr("d", pathGen(worldRef.current) || "")
-        .attr("fill", "#f2f2f2")
-        .attr("stroke", "#e5e5e5")
-        .attr("stroke-width", "0.5");
+        .attr("fill", "#d4d4d4")
+        .attr("stroke", "#aaaaaa")
+        .attr("stroke-width", "0.8");
     }
 
     // --- Pins ---
