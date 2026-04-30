@@ -7,7 +7,6 @@ export const FOOTER_SECTIONS = [
       { key: "whoWeAre", href: "/#our-story" },
       { key: "ourMission", href: "/#our-story" },
       { key: "ourStory", href: "/#our-story" },
-      { key: "team", href: "#" },
     ],
   },
   {
