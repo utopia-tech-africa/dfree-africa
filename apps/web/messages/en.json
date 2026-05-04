@@ -348,7 +348,8 @@
     "sponsors": {
       "title": "Our sponsors",
       "subtitle": "Together we've done great things",
-      "cta": "Become a sponsor"
+      "cta1": "Become a sponsor",
+      "cta2": "2026 Sponsorship Packages"
     },
     "testimonials": {
       "title": "Testimonials",
