@@ -2,6 +2,7 @@ import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { getTranslations } from "next-intl/server";
 import React from "react";
+import FinfestVideos from "./finfest-videos";
 
 const FinfestMovement = async () => {
   const t = await getTranslations("finfest.movement");
@@ -11,6 +12,7 @@ const FinfestMovement = async () => {
       <p className="font-poppins text-2xl text-neutral-1000 md:text-3xl lg:text-[32px]  font-bold leading-[120%]">
         {t("description")}
       </p>
+      <FinfestVideos />
     </ComponentLayout>
   );
 };
