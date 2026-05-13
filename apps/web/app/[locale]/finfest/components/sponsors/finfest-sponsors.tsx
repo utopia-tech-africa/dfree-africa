@@ -74,16 +74,29 @@ export const FinfestSponsors = async () => {
         </div>
 
         {/* CTA */}
-        <Link
-          href="https://dfree.com/finfest/"
-          target="_blank"
-          className={cn(
-            buttonVariants({ variant: "default", size: "lg" }),
-            "w-fit",
-          )}
-        >
-          {t("cta")}
-        </Link>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 md:gap-10 w-full">
+          <Link
+            href="https://dfree.com/finfest/"
+            target="_blank"
+            className={cn(
+              buttonVariants({ variant: "default", size: "lg" }),
+              "w-fit",
+            )}
+          >
+            {t("cta1")}
+          </Link>
+          <Link
+            // href="https://dfree.com/finfest/"
+            target="_blank"
+            href=""
+            className={cn(
+              buttonVariants({ variant: "default", size: "lg" }),
+              "w-fit",
+            )}
+          >
+            {t("cta2")}
+          </Link>
+        </div>
       </div>
     </section>
   );

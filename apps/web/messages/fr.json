@@ -348,7 +348,8 @@
     "sponsors": {
       "title": "Nos partenaires",
       "subtitle": "Ensemble nous avons accompli de grandes choses",
-      "cta": "Devenir partenaire"
+      "cta1": "Devenir partenaire",
+      "cta2": "Dossiers de partenariat 2026"
     },
     "testimonials": {
       "title": "Témoignages",
