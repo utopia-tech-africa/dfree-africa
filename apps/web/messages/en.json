@@ -465,7 +465,7 @@
       }
     },
     "partners": {
-      "title": "Community &\nInstitutional Partners",
+      "title": "Sponsors",
       "logoAlt": "Partner Logo"
     },
     "banner": {
@@ -668,7 +668,7 @@
       "title": "Empowering Africa",
       "subtitle": "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
       "cta": {
-        "label": "Give to a project",
+        "label": "Support a project",
         "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       }
     },
@@ -685,9 +685,13 @@
     },
     "continentalImpact": {
       "label": "Continental",
-      "title": "Continental Impact",
+      "title": "Impact by Region",
       "subtitle": "Transforming financial landscapes across African communities",
       "learnMore": "Learn more",
+      "button": {
+        "buttonText": "Support a community",
+        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+      },
       "countries": {
         "ghana": {
           "name": "Ghana",

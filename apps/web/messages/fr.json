@@ -448,7 +448,7 @@
     "audience": {
       "title": "Public",
       "subtitle": "Ce défi s'adresse à tous.",
-      "description": "Que vous partiez de zéro ou que vous approchiez de la ligne d'arrivée, il y a une place pour vous ici.",
+      "description": "Que vous partiez de zéro ou que vous vous rapprochiez de la ligne d'arrivée, vous avez votre place ici.",
       "items": {
         "solo": {
           "label": "Solo",
@@ -465,7 +465,7 @@
       }
     },
     "partners": {
-      "title": "Partenaires communautaires\net institutionnels",
+      "title": "Sponsors",
       "logoAlt": "Logo partenaire"
     },
     "banner": {
@@ -668,7 +668,7 @@
       "title": "Renforcer l'Afrique",
       "subtitle": "Favoriser la liberté financière et le développement communautaire durable par l'éducation, la formation et les programmes économiques.",
       "cta": {
-        "label": "Donner à un projet",
+        "label": "Soutenir un projet",
         "href": "#"
       }
     },
@@ -685,9 +685,15 @@
     },
     "continentalImpact": {
       "label": "Continental",
-      "title": "Impact continental",
+      "title": "Impact par région",
       "subtitle": "Transformation des paysages financiers à travers les communautés africaines",
       "learnMore": "En savoir plus",
+
+      "button": {
+        "buttonText": "Soutenir une communauté",
+        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+      },
+
       "countries": {
         "ghana": {
           "name": "Ghana",
@@ -707,6 +713,7 @@
         }
       }
     },
+    "buttonText": "Support a community",
     "projects": {
       "pageTitle": "Tous les projets",
       "showAllCountries": "Afficher tous les pays",
