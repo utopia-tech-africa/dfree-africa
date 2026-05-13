@@ -163,14 +163,14 @@
           "label": "Churches & Organizations"
         },
         "livesImpacted": {
-          "value": "3400",
+          "value": "$890K",
           "suffix": "+",
-          "label": "Academy graduates"
+          "label": "Spent on African Projects"
         },
         "debtCleared": {
           "value": "$22",
           "suffix": "M+",
-          "label": "Debt collectively paid"
+          "label": "Collective debt paid"
         },
         "youngPeopleTrained": {
           "value": "$2",
@@ -320,7 +320,7 @@
     },
     "objective": {
       "title": "The FinFE$T Objective",
-      "description": "FinFE$T empowers you to take actionable steps towards the path to financial freedom by providing content, curriculum, training, and tools.",
+      "description": "FiNFe$t is a community-based event and interactive experience with real tools and opportunities delivered in an engaging and high-energy environment.",
       "items": {
         "makeMoney": {
           "title": "How to make Money",
@@ -455,7 +455,7 @@
           "title": "Take control of your financial story."
         },
         "group": {
-          "label": "Group",
+          "label": "Groups",
           "title": "Peers seeking financial growth."
         },
         "communities": {

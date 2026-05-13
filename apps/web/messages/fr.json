@@ -163,14 +163,14 @@
           "label": "Églises et organisations"
         },
         "livesImpacted": {
-          "value": "3400",
+          "value": "$890K",
           "suffix": "+",
-          "label": "diplômés de l'Académie"
+          "label": "Dépensé dans des projets africains"
         },
         "debtCleared": {
           "value": "$22",
           "suffix": "M+",
-          "label": "Dette collectivement payée"
+          "label": "Dette collective payée"
         },
         "youngPeopleTrained": {
           "value": "$2",
@@ -320,7 +320,7 @@
     },
     "objective": {
       "title": "L'objectif FinFE$T",
-      "description": "FinFE$T vous permet de passer à l'action sur la voie de la liberté financière grâce à du contenu, un programme, des formations et des outils.",
+      "description": "FiNFe$t est un événement communautaire et une expérience interactive avec des outils et des opportunités réels, le tout présenté dans un environnement attrayant et dynamique.",
       "items": {
         "makeMoney": {
           "title": "Comment gagner de l'argent",
@@ -455,7 +455,7 @@
           "title": "Prenez le contrôle de votre histoire financière."
         },
         "group": {
-          "label": "Groupe",
+          "label": "Groupes",
           "title": "Des pairs en quête de croissance financière."
         },
         "communities": {
