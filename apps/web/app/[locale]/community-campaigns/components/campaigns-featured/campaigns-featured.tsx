@@ -4,7 +4,7 @@ import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { CampaignsSlideshow } from "./campaigns-slideshow";
 
 const FEATURED_SUBTEXT_KEYS = ["faithRooted", "realChange"] as const;
 
@@ -51,19 +51,9 @@ export const CampaignsFeatured = async () => {
         </Link>
       </div>
 
-      {/* Image Section - Fixed */}
       <div className="flex-1 w-full">
         <div className="relative w-full h-75 md:h-100 lg:h-full rounded-lg overflow-hidden">
-          <Image
-            src={
-              "https://res.cloudinary.com/dan9camhs/image/upload/v1773225930/f4b3fae2-1a9b-4a63-8314-7f9a982c2bae.webp"
-            }
-            alt={t("imageAlt")}
-            className="object-cover"
-            fill
-            priority
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
-          />
+          <CampaignsSlideshow alt={t("imageAlt")} />
         </div>
       </div>
     </ComponentLayout>

@@ -30,8 +30,10 @@ const NAV_CONFIG: NavItemConfig[] = [
     href: "#",
     subItems: [
       { labelKey: "ourStory", href: "/#our-story", width: "w-[90px]" },
-      { labelKey: "ourVision", href: "/#our-story", width: "w-[95px]" },
+      { labelKey: "ourVision", href: "/#our-story", width: "w-[110px]" },
       { labelKey: "ourMission", href: "/#our-story", width: "w-[110px]" },
+      { labelKey: "leadership", href: "/#leadership", width: "w-[100px]" },
+      { labelKey: "fillings", href: "/#fillings", width: "w-[80px]" },
     ],
   },
   {
