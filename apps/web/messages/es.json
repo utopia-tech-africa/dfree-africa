@@ -46,7 +46,7 @@
     }
   },
   "common": {
-    "donate": "Dar",
+    "donate": "Appuyer",
     "contactUs": "Contáctenos",
     "learnMore": "Saber más",
     "visitStore": "Visitar tienda",
@@ -107,7 +107,7 @@
   },
   "home": {
     "hero": {
-      "title": "Libérate de las limitaciones financieras",
+      "title": "Bienvenido al Movimiento de Libertad Financiera DFREE®",
       "subtitle": "Empodérate con herramientas prácticas y estrategias impulsadas por la comunidad. Transforma tu futuro económico mediante educación, apoyo y acción colectiva.",
       "discoverMoreCta": "Descubrir más",
       "donateNowCta": "Dar al movimiento",
@@ -117,7 +117,7 @@
     "whoWeAre": {
       "title": "Quiénes somos",
       "introHighlight": "DFREE Global Foundation, Inc.",
-      "introRest": " es una organización sin fines de lucro que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desatendidas mediante iniciativas gratuitas y centradas en la comunidad que ayudan a las familias a construir una confianza y libertad financieras duraderas.",
+      "introRest": " es una organización exenta de impuestos, clasificada como 501(c)(3), que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desfavorecidas mediante la implementación de iniciativas gratuitas centradas en la comunidad que ayudan a las familias a construir una confianza y una libertad financiera duraderas.",
       "missionTitle": "Misión",
       "mission": "El Movimiento de Libertad Financiera DFREE promueve un enfoque basado en valores para el bienestar financiero, fomentando la disciplina, la responsabilidad y la estabilidad a largo plazo a través de estrategias prácticas y cambios de comportamiento.",
       "visionTitle": "Visión",
