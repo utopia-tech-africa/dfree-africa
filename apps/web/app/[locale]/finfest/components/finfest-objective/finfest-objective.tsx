@@ -19,7 +19,7 @@ export const FinfestObjective = async () => {
       </div>
 
       <div className="relative z-10">
-        <div className="max-w-160">
+        <div className="max-w-180">
           <h2 className="text-white text-2xl md:text-3xl lg:text-[36px] font-bold font-montserrat">
             {t("title")}
           </h2>

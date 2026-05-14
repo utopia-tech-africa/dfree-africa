@@ -10,7 +10,7 @@ export async function ImpactHeader() {
       </p>
       <h2
         id="our-impact-heading"
-        className="w-full font-montserrat text-[26px] font-bold leading-[1.2] text-neutral-1000 md:max-w-[399px] md:text-[32px]"
+        className="w-full font-montserrat text-[26px] font-bold leading-[1.2] text-neutral-1000 "
       >
         {t("title")}
       </h2>
