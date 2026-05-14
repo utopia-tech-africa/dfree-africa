@@ -41,7 +41,7 @@ export const FeaturedProjects = ({
               src={
                 "https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
               }
-              alt="Hero background"
+              alt="bg pattern"
               className="object-left"
               height={900}
               width={900}

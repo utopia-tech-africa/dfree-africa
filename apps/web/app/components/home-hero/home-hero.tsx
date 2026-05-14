@@ -23,8 +23,8 @@ export const HomeHero = async () => {
       <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/50 to-black/30" />
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-20 pb-16.5 flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-8">
-        <div className="w-full lg:max-w-180 flex flex-col items-start gap-4 lg:gap-8 text-left">
-          <h1 className="text-white text-3xl lg:text-[56px] font-bold leading-[110%] lg:leading-[100%] font-montserrat max-w-180">
+        <div className="w-full lg:max-w-220 flex flex-col items-start gap-4 lg:gap-8 text-left">
+          <h1 className="text-white text-3xl lg:text-[56px] font-bold leading-[110%] lg:leading-[100%] font-montserrat max-w-220">
             {t("title")}
           </h1>
 

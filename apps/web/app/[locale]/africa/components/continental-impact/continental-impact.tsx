@@ -8,9 +8,12 @@ import ComponentLayout from "@/components/component-layout";
 import { ContinentalImpactCard } from "./continental-impact-card";
 import { Title } from "@/components/title-and-subtitle/title";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const ContinentalImpact = () => {
   const t = useTranslations("africa.continentalImpact");
+
   const CONTINENTAL_IMPACT = {
     label: t("label"),
     title: t("title"),
@@ -96,6 +99,13 @@ export const ContinentalImpact = () => {
             />
           ))}
         </div>
+        <Link
+          href={t("button.href")}
+          target="_blank"
+          className="flex items-center justify-center mx-auto mt-8"
+        >
+          <Button size="lg">{t("button.buttonText")}</Button>
+        </Link>
       </ComponentLayout>
     </section>
   );

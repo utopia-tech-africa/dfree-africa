@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -237,10 +237,11 @@ export const Header = () => {
               target="_blank"
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
-                "font-medium",
+                "font-normal",
               )}
             >
               {tCommon("donate")}
+              <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
             </Link>
           </div>
         </div>

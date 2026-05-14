@@ -46,7 +46,7 @@
     }
   },
   "common": {
-    "donate": "Donner",
+    "donate": "Soutenir",
     "contactUs": "Nous contacter",
     "learnMore": "En savoir plus",
     "visitStore": "Visiter la boutique",
@@ -107,7 +107,7 @@
   },
   "home": {
     "hero": {
-      "title": "Libérez-vous des contraintes financières",
+      "title": "Bienvenue au mouvement DFREE® pour la liberté financière",
       "subtitle": "Donnez-vous les moyens d'agir grâce à des outils pratiques et des stratégies portées par la communauté. Transformez votre avenir économique par l'éducation, le soutien et l'action collective.",
       "discoverMoreCta": "Découvrir plus",
       "donateNowCta": "Donner au mouvement",
@@ -117,7 +117,7 @@
     "whoWeAre": {
       "title": "Qui nous sommes",
       "introHighlight": "DFREE Global Foundation, Inc.",
-      "introRest": " est un organisme à but non lucratif qui promeut le bien-être financier, l'autonomisation économique et l'autosuffisance dans les communautés mal desservies en offrant des initiatives gratuites et centrées sur la communauté qui aident les familles à bâtir une confiance et une liberté financières durables.",
+      "introRest": " est une organisation exonérée d'impôt, de type 501C3, qui promeut le bien-être financier, l'autonomisation économique et l'autonomie dans les communautés mal desservies en proposant des initiatives gratuites et axées sur la communauté qui aident les familles à acquérir une confiance et une liberté financières durables.",
       "missionTitle": "Mission",
       "mission": "Le mouvement DFREE pour la liberté financière promeut une approche du bien-être financier fondée sur des valeurs, encourageant la discipline, la responsabilité et la stabilité à long terme grâce à des stratégies pratiques et à un changement de comportement.",
       "visionTitle": "Vision",
@@ -163,14 +163,14 @@
           "label": "Églises et organisations"
         },
         "livesImpacted": {
-          "value": "3400",
+          "value": "$890K",
           "suffix": "+",
-          "label": "diplômés de l'Académie"
+          "label": "Dépensé dans des projets africains"
         },
         "debtCleared": {
           "value": "$22",
           "suffix": "M+",
-          "label": "Dette collectivement payée"
+          "label": "Dette collective payée"
         },
         "youngPeopleTrained": {
           "value": "$2",
@@ -320,7 +320,7 @@
     },
     "objective": {
       "title": "L'objectif FinFE$T",
-      "description": "FinFE$T vous permet de passer à l'action sur la voie de la liberté financière grâce à du contenu, un programme, des formations et des outils.",
+      "description": "FiNFe$t est un événement communautaire et une expérience interactive avec des outils et des opportunités réels, le tout présenté dans un environnement attrayant et dynamique.",
       "items": {
         "makeMoney": {
           "title": "Comment gagner de l'argent",
@@ -448,14 +448,14 @@
     "audience": {
       "title": "Public",
       "subtitle": "Ce défi s'adresse à tous.",
-      "description": "Que vous partiez de zéro ou que vous approchiez de la ligne d'arrivée, il y a une place pour vous ici.",
+      "description": "Que vous partiez de zéro ou que vous vous rapprochiez de la ligne d'arrivée, vous avez votre place ici.",
       "items": {
         "solo": {
           "label": "Solo",
           "title": "Prenez le contrôle de votre histoire financière."
         },
         "group": {
-          "label": "Groupe",
+          "label": "Groupes",
           "title": "Des pairs en quête de croissance financière."
         },
         "communities": {
@@ -465,7 +465,7 @@
       }
     },
     "partners": {
-      "title": "Partenaires communautaires\net institutionnels",
+      "title": "Sponsors",
       "logoAlt": "Logo partenaire"
     },
     "banner": {
@@ -659,7 +659,7 @@
       "title": "Prêt à rejoindre la communauté ?",
       "descriptionLine1": "Parlez-nous de vos objectifs et défis,",
       "descriptionLine2": "nous vous orienterons vers le soutien qui sert le mieux votre parcours.",
-      "buttonText": "Connectez-vous avec nous",
+      "buttonText": "Connectez-vous avec DFREE®",
       "imageAlt": "Communauté en célébration"
     }
   },
@@ -668,7 +668,7 @@
       "title": "Renforcer l'Afrique",
       "subtitle": "Favoriser la liberté financière et le développement communautaire durable par l'éducation, la formation et les programmes économiques.",
       "cta": {
-        "label": "Donner à un projet",
+        "label": "Soutenir un projet",
         "href": "#"
       }
     },
@@ -685,9 +685,15 @@
     },
     "continentalImpact": {
       "label": "Continental",
-      "title": "Impact continental",
+      "title": "Impact par région",
       "subtitle": "Transformation des paysages financiers à travers les communautés africaines",
       "learnMore": "En savoir plus",
+
+      "button": {
+        "buttonText": "Soutenir une communauté",
+        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+      },
+
       "countries": {
         "ghana": {
           "name": "Ghana",
@@ -707,6 +713,7 @@
         }
       }
     },
+    "buttonText": "Support a community",
     "projects": {
       "pageTitle": "Tous les projets",
       "showAllCountries": "Afficher tous les pays",
