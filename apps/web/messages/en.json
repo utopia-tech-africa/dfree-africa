@@ -46,7 +46,7 @@
     }
   },
   "common": {
-    "donate": "Give",
+    "donate": "Support",
     "contactUs": "Contact us",
     "learnMore": "Learn more",
     "visitStore": "Visit store",
@@ -107,7 +107,7 @@
   },
   "home": {
     "hero": {
-      "title": "Welcome to your financial freedom",
+      "title": "Welcome to the DFREE® Financial Freedom Movement",
       "subtitle": "Empower yourself with practical tools and community-driven strategies. Transform your economic future through education, support, and collective action.",
       "discoverMoreCta": "Discover more",
       "donateNowCta": "Give to the movement",
@@ -117,7 +117,7 @@
     "whoWeAre": {
       "title": "Who we are",
       "introHighlight": "DFREE Global Foundation, Inc.",
-      "introRest": " is a national nonprofit advancing financial wellness, economic empowerment, and self-sufficiency in underserved communities by delivering free, community-centered initiatives that help families build lasting financial confidence and freedom.",
+      "introRest": " is a tax exempt, 501C3 organization advancing financial wellness, economic empowerment, and self-sufficiency in underserved communities by delivering free, community-centered initiatives that help families build lasting financial confidence and freedom.",
       "missionTitle": "Mission",
       "mission": "The DFREE Financial Freedom Movement advances a values-based approach to financial wellness, promoting discipline, responsibility, and long-term stability through practical strategies and behavioral change.",
       "visionTitle": "Vision",
@@ -465,7 +465,7 @@
       }
     },
     "partners": {
-      "title": "Community &\nInstitutional Partners",
+      "title": "Sponsors",
       "logoAlt": "Partner Logo"
     },
     "banner": {
@@ -659,7 +659,7 @@
       "title": "Ready to join the community?",
       "descriptionLine1": "Tell us about your goals and challenges,",
       "descriptionLine2": "We'll help guide you to the support that best serves your journey.",
-      "buttonText": "Connect with us",
+      "buttonText": "Connect with DFREE®",
       "imageAlt": "Community celebrating together"
     }
   },
@@ -668,7 +668,7 @@
       "title": "Empowering Africa",
       "subtitle": "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
       "cta": {
-        "label": "Give to a project",
+        "label": "Support a project",
         "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       }
     },
@@ -685,9 +685,13 @@
     },
     "continentalImpact": {
       "label": "Continental",
-      "title": "Continental Impact",
+      "title": "Impact by Region",
       "subtitle": "Transforming financial landscapes across African communities",
       "learnMore": "Learn more",
+      "button": {
+        "buttonText": "Support a community",
+        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+      },
       "countries": {
         "ghana": {
           "name": "Ghana",

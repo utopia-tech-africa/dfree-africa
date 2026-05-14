@@ -30,7 +30,7 @@ export default async function Audience() {
   const t = await getTranslations("bdc.audience");
   return (
     <ComponentLayout className="flex flex-col items-center text-center space-y-4 md:space-y-6">
-      <div className="space-y-1 max-w-[800px]">
+      <div className="space-y-1 max-w-[1000px]">
         <Title text={t("title")} />
         <Subtitle text={t("subtitle")} />
         <p className="text-sm md:text-base lg:text-lg text-neutral-1000">
