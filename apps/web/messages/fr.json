@@ -43,6 +43,10 @@
     "accessScholarships": {
       "title": "Bourses d'accès",
       "description": "La Bourse d'accès DFREE® offre un accès gratuit aux cours, supports, coaching et événements pour aider les participants à atteindre la stabilité et l'autonomisation financières."
+    },
+    "leadershipInstitute": {
+      "title": "Institut de leadership",
+      "description": "Le changement durable émane de la base, et non du sommet."
     }
   },
   "common": {
@@ -121,7 +125,7 @@
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " est une organisation exonérée d'impôt, de type 501C3, qui promeut le bien-être financier, l'autonomisation économique et l'autonomie dans les communautés mal desservies en proposant des initiatives gratuites et axées sur la communauté qui aident les familles à acquérir une confiance et une liberté financières durables.",
       "missionTitle": "Mission",
-      "mission": "La Fondation mondiale DFREE garantit que la liberté financière n'est pas un privilège. En subventionnant l'accès aux outils et au programme éprouvés de DFREE — et par le biais d'initiatives phares telles que FinFe$t, des campagnes communautaires, le Défi du milliard de dollars, le BottomUp Leadership Institute et des projets de développement communautaire en Afrique — la Fondation met les ressources du mouvement DFREE® à la portée de chaque famille, quels que soient ses revenus.",
+      "mission": "La Fondation mondiale DFREE® veille à ce que la liberté financière ne soit pas un privilège. En subventionnant l’accès aux outils et au programme éprouvés de DFREE — et à travers des initiatives phares telles que FinFe$t, des campagnes communautaires, le Billion Dollar Challenge, l’Institut de leadership ascendant, ainsi que des projets de développement communautaire en Afrique — la Fondation rend les ressources du mouvement DFREE® accessibles à chaque famille, quel que soit son revenu.",
       "visionTitle": "Vision",
       "vision": "En tant que bras philanthropique du Mouvement, la Fondation mondiale DFREE s'engage à élargir l'accès et l'impact en atteignant les communautés mal desservies, en supprimant les obstacles à l'éducation financière et en connectant les individus aux ressources et au soutien nécessaires pour construire une autonomisation financière durable.",
       "imageGalleryAlt": "Galerie d'images Qui nous sommes"
@@ -819,6 +823,147 @@
     "featuredProjects": {
       "subtitle": "Projets en vedette",
       "description": "Avec le soutien de partenaires dévoués et de leaders communautaires, nos initiatives génèrent un impact mesurable et créent un changement durable dans tout l'Ouganda."
+    }
+  },
+
+  "leadershipInstitute": {
+    "hero": {
+      "preTitle": "Une initiative de la Fondation DFREE®",
+      "title": "Institut de leadership ascendant DFREE®",
+      "subtitle": "Un changement durable naît de la base, et non du sommet.",
+      "applyCta": "Postuler à l'Institut",
+      "sponsorCta": "Devenir sponsor",
+      "imageAlt": "Image principale de l'Institut de leadership"
+    },
+    "aboutTheInstitute": {
+      "label": "À propos de l'Institut",
+      "title": "Des leaders communautaires équipés pour transformer les vies et les quartiers",
+      "description": "L’Institut de leadership Bottom Up DFREE® identifie des leaders communautaires prêts à créer du changement et leur fournit les connaissances, la stratégie et les outils pour y parvenir. Grâce à un apprentissage en cohorte combinant cours en ligne, retraites immersives et visites de terrain, les participants deviennent des leaders formés avec des plans durables et reproductibles pour leurs communautés. En investissant dans les personnes au niveau communautaire, l’Institut multiplie son impact, préparant une nouvelle génération de formateurs et de leaders à porter la mission DFREE® et à construire une économie plus juste et équitable à partir de la base.",
+      "imageAlt": "Image de la section À propos de l'Institut"
+    },
+    "instituteInfo": {
+      "info1": {
+        "label": "TROIS",
+        "title": "Domaines principaux",
+        "description": "Littératie, autonomisation et justice"
+      },
+      "info2": {
+        "label": "COHORTE",
+        "title": "Apprentissage en groupe",
+        "description": "Se former aux côtés d'une communauté de pairs"
+      },
+      "info3": {
+        "label": "HYBRIDE",
+        "title": "Modes d'apprentissage",
+        "description": "Cours en ligne, retraites et visites d'organisations exemplaires"
+      }
+    },
+    "whoIsAFellow": {
+      "label": "Qui est un Fellow DFREE® ?",
+      "title": "Un leader pleinement équipé pour la communauté",
+      "description": "Chaque leader qui termine l’Institut de leadership Bottom-Up est officiellement reconnu comme Fellow DFREE® — un titre attestant de la maîtrise de la littératie financière, de l’autonomisation financière et de la justice économique. Les Fellows DFREE® sont autorisés à diffuser le programme DFREE® dans leurs communautés, à former d’autres personnes et à servir d’ambassadeurs certifiés de la transformation économique équitable. La désignation de Fellow DFREE® est un gage de rigueur, de confiance et de responsabilité communautaire — reconnu par les institutions partenaires, sponsors et municipalités à l’échelle nationale.",
+      "imageAlt": "Image du Fellow de l'Institut de leadership"
+    },
+    "coreAreas": {
+      "label": "Trois domaines principaux",
+      "title": "Les piliers d'expertise de l'Institut",
+      "description": "Chaque participant développe des connaissances approfondies et applicables dans trois domaines interconnectés — chacun s’appuyant sur le précédent",
+      "pillars": {
+        "pillar1": {
+          "pillarName": "LITTÉRATIE FINANCIÈRE",
+          "pillarTitle": "Construire les bases des connaissances financières",
+          "pillarSubtitle": "Pour les leaders associatifs et micro-entreprises",
+          "pillarDescription": "Compréhension fondamentale de la gestion de l’argent, de l’élimination des dettes, du crédit et des principes de création de richesse — avec un accent particulier sur les leaders associatifs et micro-entreprises.",
+          "imageAlt": "Image du pilier de l'Institut de leadership"
+        },
+        "pillar2": {
+          "pillarName": "AUTONOMISATION FINANCIÈRE",
+          "pillarTitle": "Stratégies pratiques pour le contrôle économique",
+          "pillarSubtitle": "Pour les individus et les familles",
+          "pillarDescription": "Donner aux individus et aux familles des stratégies concrètes pour prendre le contrôle de leur avenir économique — passer de la survie financière à la liberté et à la richesse générationnelle.",
+          "imageAlt": "Image du pilier de l'Institut de leadership"
+        },
+        "pillar3": {
+          "pillarName": "JUSTICE ÉCONOMIQUE",
+          "pillarTitle": "Répondre aux inégalités systémiques",
+          "pillarSubtitle": "Leaders informés et prêts à agir",
+          "pillarDescription": "Préparer des leaders capables d’identifier, d’aborder et de répondre aux inégalités économiques systémiques dans leurs communautés — transformer la prise de conscience en plaidoyer et le plaidoyer en changement structurel durable.",
+          "imageAlt": "Image du pilier de l'Institut de leadership"
+        }
+      }
+    },
+    "developLeaders": {
+      "label": "Comment formons-nous les leaders ?",
+      "title": "Un modèle d'apprentissage hybride et immersif",
+      "description": "L’Institut utilise une approche en cohorte qui plonge les participants dans des contenus éprouvés et des stratégies concrètes — pas seulement de la théorie, mais une transformation en action.",
+      "models": {
+        "model1": {
+          "title": "Cours en ligne et présentations",
+          "description": "Programme numérique structuré couvrant les trois domaines principaux, conçu pour des leaders communautaires ayant une vie bien remplie et engagés dans le changement."
+        },
+        "model2": {
+          "title": "Retraites immersives",
+          "description": "Rencontres approfondies qui renforcent la communauté entre les membres de la cohorte et approfondissent la maîtrise des contenus."
+        },
+        "model3": {
+          "title": "Visites d'organisations exemplaires",
+          "description": "Visites réelles d’organisations modèles en autonomisation financière — connectant les participants à des stratégies éprouvées et des réseaux inspirants."
+        }
+      },
+      "quote": "« En investissant dans les personnes au niveau communautaire, l’Institut multiplie son impact, préparant une nouvelle génération de formateurs et de leaders à porter la mission DFREE® vers l’avenir. »"
+    },
+    "howItWorks": {
+      "label": "Comment ça fonctionne",
+      "title": "Un leader formé. Une communauté transformée.",
+      "subtitle": "L’Institut de leadership Bottom-Up ne se contente pas de renforcer les individus — il multiplie l’impact. Chaque diplômé repart avec des plans durables et la crédibilité pour conduire un changement réel.",
+      "work1": {
+        "title": "Identifier",
+        "description": "Des leaders communautaires engagés et reconnus localement sont identifiés et recrutés dans les programmes de cohorte."
+      },
+      "work2": {
+        "title": "Former",
+        "description": "Les participants suivent le parcours hybride — cours en ligne, retraites et visites — sur la durée du programme."
+      },
+      "work3": {
+        "title": "Diplômé comme Fellow DFREE®",
+        "description": "Les diplômés obtiennent le titre de Fellow DFREE®, repartent avec des plans durables, des outils DFREE® et l’autorité pour former d’autres personnes."
+      },
+      "work4": {
+        "title": "Multiplier",
+        "description": "Chaque leader reproduit le modèle, construisant une économie plus juste et équitable à partir de la base."
+      }
+    },
+    "supportTheInstitute": {
+      "label": "Soutenir l'institut",
+      "title": "Investir dans la prochaine génération de leaders",
+      "description": "Votre partenariat aide à élargir l’accès à la formation, aux ressources et aux expériences concrètes qui créent un changement durable.",
+      "stats": {
+        "stat1": {
+          "value": "$250",
+          "description": "Soutient un participant"
+        },
+        "stat2": {
+          "value": "$2,500",
+          "description": "Soutient une cohorte de 10 personnes"
+        },
+        "stat3": {
+          "value": "$10,000",
+          "description": "Soutient un site partenaire communautaire"
+        },
+        "stat4": {
+          "value": "$25,000",
+          "description": "Soutient un fonds de bourses annuel complet"
+        }
+      },
+      "buttonText": "Devenir sponsor",
+      "imageAlt": "Image de la section de soutien de l'Institut"
+    },
+    "ctaSection": {
+      "title": "Commencez à conduire le changement aujourd'hui",
+      "description": "Rejoignez un mouvement engagé à construire des communautés financièrement autonomes à partir de la base.",
+      "applyCta": "Postuler à l'Institut",
+      "sponsorCta": "Devenir sponsor",
+      "imageAlt": "Image CTA de l'Institut de leadership"
     }
   }
 }
