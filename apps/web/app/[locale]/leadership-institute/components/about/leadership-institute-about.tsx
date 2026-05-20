@@ -12,7 +12,7 @@ export async function LeadershipInstituteAbout() {
       <div className="space-y-4 md:space-y-6">
         <div className="space-y-2">
           <Title text={t("label")} />
-          <Subtitle text={t("title")} />
+          <Subtitle className="max-w-150 leading-none" text={t("title")} />
         </div>
 
         <div className="space-y-4">
@@ -23,7 +23,7 @@ export async function LeadershipInstituteAbout() {
       </div>
 
       {/* Right Column: Image */}
-      <div className="relative w-full aspect-4/3 sm:aspect-video lg:aspect-16/10 lg:min-h-95 rounded-md overflow-hidden shadow-sm">
+      <div className="relative w-full aspect-4/3 sm:aspect-video lg:aspect-16/10 lg:min-h-120 rounded-md overflow-hidden shadow-sm">
         <Image
           src={
             "https://res.cloudinary.com/dan9camhs/image/upload/v1779210304/7cbebd00fd933a4a6a399bcc0b80e00e722b4f72_ovv3e1.webp"

@@ -7,7 +7,7 @@ import ComponentLayout from "@/components/component-layout";
 export async function DfreeFellow() {
   const t = await getTranslations("leadershipInstitute.whoIsAFellow");
   return (
-    <ComponentLayout className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 md:py-30">
+    <ComponentLayout className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center pt-20 md:pt-30">
       {/* Left Column: Text Content */}
       <div className="space-y-4 md:space-y-6">
         <div className="space-y-2">

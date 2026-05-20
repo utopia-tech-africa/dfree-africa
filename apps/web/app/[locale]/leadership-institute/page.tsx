@@ -2,11 +2,13 @@ import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import {
+  DevelopLeaders,
   DfreeFellow,
   InstituteInfo,
   LeadershipInstituteAbout,
   LeadershipInstituteHero,
 } from "./components";
+import CoreAreas from "./components/core-areas/core-areas";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -27,6 +29,8 @@ export default function LeadershipInstitutePage() {
       <LeadershipInstituteAbout />
       <InstituteInfo />
       <DfreeFellow />
+      <CoreAreas />
+      <DevelopLeaders />
     </div>
   );
 }
