@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import {
   DevelopLeaders,
   DfreeFellow,
+  HowItWorks,
   InstituteInfo,
   LeadershipInstituteAbout,
   LeadershipInstituteHero,
@@ -31,6 +32,7 @@ export default function LeadershipInstitutePage() {
       <DfreeFellow />
       <CoreAreas />
       <DevelopLeaders />
+      <HowItWorks />
     </div>
   );
 }

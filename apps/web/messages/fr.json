@@ -914,23 +914,26 @@
     },
     "howItWorks": {
       "label": "Comment ça fonctionne",
-      "title": "Un leader formé. Une communauté transformée.",
+      "title1": "Un leader formé. ",
+      "title2": "Une communauté transformée.",
       "subtitle": "L’Institut de leadership Bottom-Up ne se contente pas de renforcer les individus — il multiplie l’impact. Chaque diplômé repart avec des plans durables et la crédibilité pour conduire un changement réel.",
-      "work1": {
-        "title": "Identifier",
-        "description": "Des leaders communautaires engagés et reconnus localement sont identifiés et recrutés dans les programmes de cohorte."
-      },
-      "work2": {
-        "title": "Former",
-        "description": "Les participants suivent le parcours hybride — cours en ligne, retraites et visites — sur la durée du programme."
-      },
-      "work3": {
-        "title": "Diplômé comme Fellow DFREE®",
-        "description": "Les diplômés obtiennent le titre de Fellow DFREE®, repartent avec des plans durables, des outils DFREE® et l’autorité pour former d’autres personnes."
-      },
-      "work4": {
-        "title": "Multiplier",
-        "description": "Chaque leader reproduit le modèle, construisant une économie plus juste et équitable à partir de la base."
+      "items": {
+        "work1": {
+          "title": "Identifier",
+          "description": "Des leaders communautaires engagés et reconnus localement sont identifiés et recrutés dans les programmes de cohorte."
+        },
+        "work2": {
+          "title": "Former",
+          "description": "Les participants suivent le parcours hybride — cours en ligne, retraites et visites — sur la durée du programme."
+        },
+        "work3": {
+          "title": "Diplômé comme Fellow DFREE®",
+          "description": "Les diplômés obtiennent le titre de Fellow DFREE®, repartent avec des plans durables, des outils DFREE® et l’autorité pour former d’autres personnes."
+        },
+        "work4": {
+          "title": "Multiplier",
+          "description": "Chaque leader reproduit le modèle, construisant une économie plus juste et équitable à partir de la base."
+        }
       }
     },
     "supportTheInstitute": {

@@ -912,23 +912,26 @@
     },
     "howItWorks": {
       "label": "How it works",
-      "title": "One leader trained. A community transformed.",
+      "title1": "One leader trained.",
+      "title2": "A community transformed.",
       "subtitle": "The Bottom-Up Leadership Institute doesn’t just build individual capacity  it multiplies impact. Every graduate returns equipped with sustainable, replicable plans and the credibility to lead real change",
-      "work1": {
-        "title": "Identify",
-        "description": "Community leaders with proven commitment and local trust are identified and recruited into cohort programs."
-      },
-      "work2": {
-        "title": "Train",
-        "description": "Participants complete the blended learning journey online courses, retreats, and site visits over the program term."
-      },
-      "work3": {
-        "title": "Graduate as a DFREE® Fellow",
-        "description": "Graduates earn the DFREE® Fellow designation, return with sustainable plans, DFREE® tools, and the authority to train others in their communities."
-      },
-      "work4": {
-        "title": "Multiply",
-        "description": "Each leader replicates the model, building a more just and equitable economy from the ground up."
+      "items": {
+        "work1": {
+          "title": "Identify",
+          "description": "Community leaders with proven commitment and local trust are identified and recruited into cohort programs."
+        },
+        "work2": {
+          "title": "Train",
+          "description": "Participants complete the blended learning journey online courses, retreats, and site visits over the program term."
+        },
+        "work3": {
+          "title": "Graduate as a DFREE® Fellow",
+          "description": "Graduates earn the DFREE® Fellow designation, return with sustainable plans, DFREE® tools, and the authority to train others in their communities."
+        },
+        "work4": {
+          "title": "Multiply",
+          "description": "Each leader replicates the model, building a more just and equitable economy from the ground up."
+        }
       }
     },
     "supportTheInstitute": {

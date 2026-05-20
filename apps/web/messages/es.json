@@ -910,23 +910,26 @@
     },
     "howItWorks": {
       "label": "Cómo funciona",
-      "title": "Un líder formado. Una comunidad transformada.",
+      "title1": "Un líder formado. ",
+      "title2": "Una comunidad transformada.",
       "subtitle": "El Instituto de Liderazgo Bottom-Up no solo construye capacidad individual — multiplica el impacto. Cada graduado regresa con planes sostenibles y credibilidad para liderar un cambio real.",
-      "work1": {
-        "title": "Identificar",
-        "description": "Se identifican y reclutan líderes comunitarios con compromiso comprobado y confianza local en programas de cohorte."
-      },
-      "work2": {
-        "title": "Formar",
-        "description": "Los participantes completan el recorrido híbrido — cursos en línea, retiros y visitas — durante el programa."
-      },
-      "work3": {
-        "title": "Graduarse como Fellow DFREE®",
-        "description": "Los graduados obtienen la designación de Fellow DFREE®, regresan con planes sostenibles, herramientas DFREE® y autoridad para capacitar a otros."
-      },
-      "work4": {
-        "title": "Multiplicar",
-        "description": "Cada líder replica el modelo, construyendo una economía más justa y equitativa desde la base."
+      "items": {
+        "work1": {
+          "title": "Identificar",
+          "description": "Se identifican y reclutan líderes comunitarios con compromiso comprobado y confianza local en programas de cohorte."
+        },
+        "work2": {
+          "title": "Formar",
+          "description": "Los participantes completan el recorrido híbrido — cursos en línea, retiros y visitas — durante el programa."
+        },
+        "work3": {
+          "title": "Graduarse como Fellow DFREE®",
+          "description": "Los graduados obtienen la designación de Fellow DFREE®, regresan con planes sostenibles, herramientas DFREE® y autoridad para capacitar a otros."
+        },
+        "work4": {
+          "title": "Multiplicar",
+          "description": "Cada líder replica el modelo, construyendo una economía más justa y equitativa desde la base."
+        }
       }
     },
     "supportTheInstitute": {

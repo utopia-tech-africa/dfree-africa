@@ -15,9 +15,9 @@ const DEVELOP_LEADERS_KEYS = [
 export const DevelopLeaders = async () => {
   const t = await getTranslations("leadershipInstitute.developLeaders");
   return (
-    <section className="pb-12 md:pb-16 lg:pb-24 bg-white">
+    <section className="bg-white">
       <ComponentLayout className="flex flex-col space-y-4 md:space-y-6">
-        <div className="space-y-2 max-w-[200">
+        <div className="space-y-2">
           <Title text={t("label")} />
           <Subtitle className="leading-none" text={t("title")} />
           <p className="max-w-[70ch] text-sm md:text-base text-neutral-900">
