@@ -2,6 +2,8 @@ import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import {
+  DfreeFellow,
+  InstituteInfo,
   LeadershipInstituteAbout,
   LeadershipInstituteHero,
 } from "./components";
@@ -23,6 +25,8 @@ export default function LeadershipInstitutePage() {
     <div className="space-y-20 sm:space-y-30">
       <LeadershipInstituteHero />
       <LeadershipInstituteAbout />
+      <InstituteInfo />
+      <DfreeFellow />
     </div>
   );
 }

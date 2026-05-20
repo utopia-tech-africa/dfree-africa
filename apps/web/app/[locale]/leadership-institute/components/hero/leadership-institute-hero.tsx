@@ -31,20 +31,20 @@ export async function LeadershipInstituteHero() {
               {t("preTitle")}
             </h4>
 
-            <h1 className="font-montserrat mb-2 sm:mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold leading-[1.2] text-white">
+            <h1 className="font-montserrat mb-2 sm:mb-3 text-3xl sm:text-[32px] md:text-4xl lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] text-white">
               {t("title")}
             </h1>
 
-            <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-[700px]">
+            <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-60 md:max-w-full">
               {t("subtitle")}
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-2 sm:gap-4">
               <Link
                 href="#"
                 className={cn(
                   buttonVariants({ variant: "default", size: "lg" }),
-                  "text-sm sm:text-base inline-flex",
+                  "text-xs sm:text-base inline-flex flex-1 min-w-30 justify-center px-3 sm:px-4 py-6",
                 )}
               >
                 {t("applyCta")}
@@ -53,7 +53,7 @@ export async function LeadershipInstituteHero() {
                 href="#"
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "lg" }),
-                  "text-sm sm:text-base inline-flex",
+                  "text-xs sm:text-base inline-flex flex-1 min-w-30 justify-center px-3 sm:px-4 py-6",
                 )}
               >
                 {t("sponsorCta")}
