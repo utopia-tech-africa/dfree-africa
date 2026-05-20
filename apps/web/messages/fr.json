@@ -69,7 +69,7 @@
     "ourVision": "Notre Vision",
     "ourMission": "Notre Mission",
     "leadership": "Leadership",
-    "fillings": "Déclarations",
+    "filings": "Déclarations",
     "billionDollarChallenge": "Défi Du Milliard De Dollars",
     "globalFoundationInAfrica": "DFREE® En Afrique",
     "communityCampaigns": "Campagnes Communautaires",
@@ -306,6 +306,94 @@
         "emptyState": {
           "title": "Bientôt disponible",
           "description": "Nous rassemblons actuellement les dernières histoires et mises à jour. Revenez bientôt pour les nouvelles de notre communauté."
+        }
+      },
+      "leadership": {
+        "title": "Direction",
+        "subtitle": "Conseil d'Administration",
+        "members": [
+          {
+            "name": "DeForrest B. Soaries, Jr.",
+            "role": "Fondateur & CEO, CEO chez Strategic Global Foundation, Inc., CEO de Corporate Connections, Inc."
+          },
+          {
+            "name": "Vaughn McKoy",
+            "role": "Fondateur & associé principal, litige commercial, indigence & appel, McKoy & Smith LLP"
+          },
+          {
+            "name": "Martin Soaries",
+            "role": "Fondateur & CEO, Basketball Society"
+          },
+          {
+            "name": "Adanna Davis",
+            "role": "Fondatrice de Brand Revolutions & stratégie chez BizIntl, Moyers Segale"
+          },
+          {
+            "name": "Menia Dunn-Lee",
+            "role": "Parlementaire (non votant, non signataire)"
+          },
+          {
+            "name": "Janeen Uzzell",
+            "role": "CEO & directrice de la National Society of Black Engineers"
+          },
+          {
+            "name": "James Jackson",
+            "role": "Avocat, ancien responsable de la pratique des litiges | directeur mondial du cannabis, Mark Edward Partners"
+          },
+          {
+            "name": "Scott Jeffrey",
+            "role": "Directeur financier (CFO), BROWDE"
+          },
+          {
+            "name": "Carla Classen",
+            "role": "Ancien manager chez Abador LLC"
+          },
+          {
+            "name": "Rev. Dr. Darryl K. Webster",
+            "role": "Pasteur principal, Emmanuel MAC"
+          },
+          {
+            "name": "Tracey Wright-Coombs",
+            "role": "Manager de al., CAAPC"
+          },
+          {
+            "name": "Rev. Dr. Danielle L. Brown",
+            "role": "Pasteur principal, Shiloh Baptist Church"
+          },
+          {
+            "name": "Tonda Green",
+            "role": "Avocate, partenariats de marque"
+          },
+          {
+            "name": "Leslie Anderson",
+            "role": "Ancien vice-président, OTA / Redevelopment Authority"
+          }
+        ],
+        "staff": {
+          "title": "Personnel",
+          "members": [
+            {
+              "name": "DeForrest B. Soaries, Jr.",
+              "role": "Fondateur & CEO",
+              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292469/ImageWithFallback_r70ogm.png"
+            },
+            {
+              "name": "Rev. Trevor Hyde",
+              "role": "Directeur Général",
+              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292491/ImageWithFallback_1_tsewff.png"
+            },
+            {
+              "name": "Rev. Shaunda Sutton",
+              "role": "Liaison Zeta Phi Beta & Hôtesse M&E",
+              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292507/ImageWithFallback_2_uwqs13.png"
+            }
+          ]
+        },
+        "filings": {
+          "title": "Déclarations",
+          "description": "Nos déclarations 990 et dossiers financiers complets sont disponibles via GuideStar, où nous maintenons une transparence totale en tant qu'organisation à but non lucratif certifiée.",
+          "cta1": "Voir toutes les déclarations d'État sur ProPublica",
+          "cta2": "Voir toutes les déclarations fédérales sur GuideStar"
         }
       }
     }
