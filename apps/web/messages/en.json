@@ -69,7 +69,7 @@
     "ourVision": "Our Vision",
     "ourMission": "Our Mission",
     "leadership": "Leadership",
-    "fillings": "Fillings",
+    "filings": "Filings",
     "billionDollarChallenge": "Billion Dollar Challenge",
     "globalFoundationInAfrica": "DFREE® In Africa",
     "communityCampaigns": "Community Campaigns",
@@ -307,6 +307,94 @@
           "title": "Coming Soon",
           "description": "We are currently gathering the latest stories and updates. Check back soon for fresh news from our community."
         }
+      }
+    },
+    "leadership": {
+      "title": "Leadership",
+      "subtitle": "Board of Directors",
+      "members": [
+        {
+          "name": "DeForrest B. Soaries, Jr.",
+          "role": "Founder & CEO, CEO at Strategic Global Foundation, Inc., CEO of Corporate Connections, Inc."
+        },
+        {
+          "name": "Vaughn McKoy",
+          "role": "Founder & Principal, Commercial Litigation, Indigent & Appeal, McKoy & Smith LLP"
+        },
+        {
+          "name": "Martin Soaries",
+          "role": "Founder & CEO, Basketball Society"
+        },
+        {
+          "name": "Adanna Davis",
+          "role": "Founder of Brand Revolutions & Strategy at BizIntl, Moyers Segale"
+        },
+        {
+          "name": "Menia Dunn-Lee",
+          "role": "Parliamentarian (non-voting, non-signatory)"
+        },
+        {
+          "name": "Janeen Uzzell",
+          "role": "CEO & Head of National Society of Black Engineers"
+        },
+        {
+          "name": "James Jackson",
+          "role": "Attorney, Former Litigation Practical Lead | Global Head of Cannabis, Mark Edward Partners"
+        },
+        {
+          "name": "Scott Jeffrey",
+          "role": "Chief Financial Officer, BROWDE"
+        },
+        {
+          "name": "Carla Classen",
+          "role": "Former Manager at Abador LLC"
+        },
+        {
+          "name": "Rev. Dr. Darryl K. Webster",
+          "role": "Senior Pastor, Emmanuel MAC"
+        },
+        {
+          "name": "Tracey Wright-Coombs",
+          "role": "Manager of al., CAAPC"
+        },
+        {
+          "name": "Rev. Dr. Danielle L. Brown",
+          "role": "Sr. Pastor, Shiloh Baptist Church"
+        },
+        {
+          "name": "Tonda Green",
+          "role": "Attorney, Brand Partnerships,"
+        },
+        {
+          "name": "Leslie Anderson",
+          "role": "Former VP, OTA / Redevelopment Authority"
+        }
+      ],
+      "staff": {
+        "title": "Staff",
+        "members": [
+          {
+            "name": "DeForrest B. Soaries, Jr.",
+            "role": "Founder & CEO",
+            "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292469/ImageWithFallback_r70ogm.png"
+          },
+          {
+            "name": "Rev. Trevor Hyde",
+            "role": "Executive Director",
+            "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292491/ImageWithFallback_1_tsewff.png"
+          },
+          {
+            "name": "Rev. Shaunda Sutton",
+            "role": "Zeta Phi Beta Liaison & M&E Host",
+            "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292507/ImageWithFallback_2_uwqs13.png"
+          }
+        ]
+      },
+      "filings": {
+        "title": "Filings",
+        "description": "Our 990 filings and complete financial records are available through GuideStar, where we maintain full transparency as a certified nonprofit.",
+        "cta1": "View all State filings on ProPublica",
+        "cta2": "View all Federal  filings on GuideStar"
       }
     }
   },
