@@ -1,11 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { DfreeLogoWhite } from "@/assets/svg";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import { Input } from "../ui/input";
 import ComponentLayout from "../component-layout";
 import { Mail, Phone } from "lucide-react";
 import { FOOTER_SECTIONS, SOCIAL_LINKS } from "@/constants/footer-items";
+import { cn } from "@/lib/utils";
 
 export const Footer = async () => {
   const t = await getTranslations("footer");
@@ -54,22 +55,38 @@ export const Footer = async () => {
               <span className="text-sm lg:text-base">(844) 693-3733</span>
             </div>
 
-            <div className="flex items-center gap-3">
+            <Link
+              href="mailto:info@dfree.com"
+              className="flex items-center gap-3"
+            >
               <Mail size={20} />
               <span className="text-sm lg:text-base">info@dfree.com</span>
-            </div>
+            </Link>
 
-            <div className="flex items-center gap-3">
-              {SOCIAL_LINKS.map(({ icon: Icon, href, target }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  target={target}
-                  rel={target === "_blank" ? "noopener noreferrer" : undefined}
-                >
-                  <Icon size={20} />
-                </Link>
-              ))}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-3">
+                {SOCIAL_LINKS.map(({ icon: Icon, href, target }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    target={target}
+                    rel={
+                      target === "_blank" ? "noopener noreferrer" : undefined
+                    }
+                  >
+                    <Icon size={20} />
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/contact"
+                className={cn(
+                  buttonVariants({ variant: "secondary" }),
+                  "p-5 w-full max-w-40 sm:max-w-45 font-black",
+                )}
+              >
+                {t("ContactUs")}
+              </Link>
             </div>
           </div>
 
