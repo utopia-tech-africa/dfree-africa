@@ -5,3 +5,5 @@ export * from "./fellow";
 export * from "./core-areas";
 export * from "./develop-leaders";
 export * from "./how-it-works";
+export * from "./support-the-institute";
+export * from "./banner";

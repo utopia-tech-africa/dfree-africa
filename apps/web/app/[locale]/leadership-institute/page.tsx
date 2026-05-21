@@ -8,8 +8,10 @@ import {
   InstituteInfo,
   LeadershipInstituteAbout,
   LeadershipInstituteHero,
+  SupportTheInstitute,
 } from "./components";
 import CoreAreas from "./components/core-areas/core-areas";
+import LeadershipInstitureBanner from "./components/banner/leadership-institute-banner";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -33,6 +35,8 @@ export default function LeadershipInstitutePage() {
       <CoreAreas />
       <DevelopLeaders />
       <HowItWorks />
+      <SupportTheInstitute />
+      <LeadershipInstitureBanner />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import ComponentLayout from "@/components/component-layout";
@@ -16,8 +16,8 @@ export async function LeadershipInstituteHero() {
           }
           alt={t("imageAlt")}
           fill
-          className="object-cover"
-          sizes="100vw"
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           priority
         />
       </div>
@@ -31,32 +31,30 @@ export async function LeadershipInstituteHero() {
               {t("preTitle")}
             </h4>
 
-            <h1 className="font-montserrat mb-2 sm:mb-3 text-3xl sm:text-[32px] md:text-4xl lg:text-[52px] xl:text-[60px] font-bold leading-[1.2] text-white">
+            <h1 className="font-montserrat mb-2 sm:mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold leading-[1.2] text-white">
               {t("title")}
             </h1>
 
-            <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-60 md:max-w-full">
+            <p className="mb-4 sm:mb-5 md:mb-6 lg:mb-8 text-sm md:text-base lg:text-lg leading-relaxed text-white font-poppins font-normal max-w-[700px]">
               {t("subtitle")}
             </p>
 
-            <div className="flex flex-wrap gap-2 sm:gap-4">
-              <Link
-                href="#"
-                className={cn(
-                  buttonVariants({ variant: "default", size: "lg" }),
-                  "text-xs sm:text-base inline-flex flex-1 min-w-30 justify-center px-3 sm:px-4 py-6",
-                )}
-              >
-                {t("applyCta")}
+            <div className="flex flex-row items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
+              <Link href="#" className="flex-1 sm:flex-none">
+                <Button
+                  size="lg"
+                  className="w-full px-2 sm:px-6 lg:px-10 py-3 sm:py-4 lg:py-5 text-white text-xs sm:text-sm lg:text-base font-medium"
+                >
+                  {t("applyCta")}
+                </Button>
               </Link>
-              <Link
-                href="#"
-                className={cn(
-                  buttonVariants({ variant: "ghost", size: "lg" }),
-                  "text-xs sm:text-base inline-flex flex-1 min-w-30 justify-center px-3 sm:px-4 py-6",
-                )}
-              >
-                {t("sponsorCta")}
+              <Link href="#" target="_blank">
+                <Button
+                  size="lg"
+                  className="px-2 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-full bg-white/29 backdrop-blur-[10px] border border-white/20 text-white hover:bg-white/20 text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"
+                >
+                  {t("sponsorCta")}
+                </Button>
               </Link>
             </div>
           </div>

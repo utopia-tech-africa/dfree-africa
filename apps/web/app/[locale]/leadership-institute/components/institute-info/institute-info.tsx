@@ -45,7 +45,7 @@ export const InstituteInfo = async () => {
               key={info.id}
               className="flex-1 gap-2 max-w-90 mx-auto text-center py-2 md:py-3 px-2"
             >
-              <span className="md:mb-1 block text-white text-[60px] lg:text-[46px] font-bold uppercase font-montserrat">
+              <span className="md:mb-1 block text-white text-[56px] lg:text-[46px] font-bold uppercase font-montserrat">
                 {info.label}
               </span>
 
