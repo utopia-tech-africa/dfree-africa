@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { CalendarDays, MapPin } from "lucide-react";
 import { FinfestHeroPattern } from "@/assets/svg/finfest-hero-pattern";
 import { Button } from "@/components/ui/button";
 import ComponentLayout from "@/components/component-layout";
@@ -7,6 +8,7 @@ import Link from "next/link";
 
 export const FinfestHero = async () => {
   const t = await getTranslations("finfest.hero");
+
   return (
     <div className="relative flex min-h-dvh flex-col overflow-hidden mt-6">
       {/* patterns */}
@@ -21,7 +23,7 @@ export const FinfestHero = async () => {
       </div>
 
       <ComponentLayout className="relative flex flex-1 flex-col pt-16">
-        {/* text - takes only what it needs */}
+        {/* text */}
         <div className="mx-auto shrink-0 text-center">
           <h1 className="font-montserrat leading-[120%] font-bold text-neutral-1000 text-3xl md:text-4xl lg:text-[42px]">
             {t("mainTitle")}
@@ -40,17 +42,37 @@ export const FinfestHero = async () => {
           </div>
         </div>
 
-        {/* hero img - takes the rest of the height */}
+        {/* hero img */}
         <div className="mt-12 min-h-0 flex-1">
-          <div className=" w-full overflow-hidden rounded-lg">
+          <div className="relative w-full h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden rounded-lg">
             <Image
-              src="https://res.cloudinary.com/dan9camhs/image/upload/v1773236329/7d47e665-0efa-4358-9b62-3ce55a050c4d.webp"
-              height={600}
-              width={900}
+              src="https://res.cloudinary.com/dan9camhs/image/upload/v1779365746/9d749ac2c7741dab19a68da6078c9e31eb9cfadd_kbsmzi.jpg"
               alt={t("imageAlt")}
               priority
-              className="w-full h-auto object-cover sm:h-[55vh] md:h-[65vh] lg:h-[80vh] xl:h-[90vh]"
+              fill
+              className="object-cover"
             />
+
+            {/* gradient overlay */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
+
+            {/* bottom content */}
+            <div className="absolute bottom-6 left-1/2 w-full -translate-x-1/2 px-4">
+              <div className="flex flex-col items-center gap-4 text-white lg:flex-row lg:justify-center lg:gap-10">
+                <div className="flex min-w-0 items-center gap-1 md:gap-2">
+                  <CalendarDays className="size-4 shrink-0 sm:size-5" />
+                  <p className="font-montserrat text-[clamp(14px,1.8vw,32px)] font-bold whitespace-nowrap leading-none">
+                    {t("eventDate")}
+                  </p>
+                </div>
+                <div className="flex min-w-0 items-center gap-1 md:gap-2">
+                  <MapPin className="size-4 shrink-0 sm:size-5" />
+                  <p className="font-montserrat text-[clamp(14px,1.8vw,32px)] font-bold whitespace-nowrap leading-none">
+                    {t("eventLocation")}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ComponentLayout>
