@@ -1,9 +1,11 @@
-const CampaignsResultsPattern = () => {
+const CampaignsResultsPattern = ({
+  className,
+}: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="599"
-      height="480"
+      className={`w-full h-full ${className ?? ""}`}
       viewBox="0 0 599 480"
+      preserveAspectRatio="xMidYMid slice"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
