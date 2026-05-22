@@ -43,6 +43,10 @@
     "accessScholarships": {
       "title": "Becas de acceso",
       "description": "La Beca de acceso DFREE® ofrece acceso gratuito a cursos, materiales, coaching y eventos para lograr estabilidad y empoderamiento financiero."
+    },
+    "leadershipInstitute": {
+      "title": "Instituto de Liderazgo",
+      "description": "El cambio duradero surge desde abajo, no desde arriba."
     }
   },
   "common": {
@@ -105,14 +109,15 @@
     "partner": "Asociarse",
     "travelWithUs": "Viaja Con Nosotros",
     "volunteer": "Voluntariado",
-    "submit": "Enviar"
+    "submit": "Enviar",
+    "ContactUs": "Contáctanos"
   },
   "home": {
     "hero": {
       "title": "Bienvenido al Movimiento de Libertad Financiera DFREE®",
       "subtitle": "Empodérate con herramientas prácticas y estrategias impulsadas por la comunidad. Transforma tu futuro económico mediante educación, apoyo y acción colectiva.",
       "discoverMoreCta": "Descubrir más",
-      "donateNowCta": "Dar al movimiento",
+      "donateNowCta": "Apoya el movimiento",
       "freshOffThePress": "RECIÉN PUBLICADO",
       "buyNowCta": "Comprar ahora"
     },
@@ -121,7 +126,7 @@
       "introHighlight": "DFREE Global Foundation, Inc.",
       "introRest": " es una organización exenta de impuestos, clasificada como 501(c)(3), que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desfavorecidas mediante la implementación de iniciativas gratuitas centradas en la comunidad que ayudan a las familias a construir una confianza y una libertad financiera duraderas.",
       "missionTitle": "Misión",
-      "mission": "La Fundación Global DFREE garantiza que la libertad financiera no sea un privilegio. Al subsidiar el acceso a las herramientas y el plan de estudios probados de DFREE, y a través de iniciativas emblemáticas que incluyen FinFe$t, campañas comunitarias, el Desafío del Billón de Dólares, el BottomUp Leadership Institute y proyectos de desarrollo comunitario en África, la Fundación pone los recursos del movimiento DFREE® al alcance de cada familia, independientemente de sus ingresos.",
+      "mission": "La Fundación Global DFREE® garantiza que la libertad financiera no sea un privilegio. Al subvencionar el acceso a las herramientas y al plan de estudios comprobados de DFREE — y a través de iniciativas emblemáticas como FinFe$t, campañas comunitarias, el Billion Dollar Challenge, el Instituto de Liderazgo Ascendente, y proyectos de desarrollo comunitario en África — la Fundación acerca los recursos del movimiento DFREE® a cada familia, independientemente de sus ingresos.",
       "visionTitle": "Visión",
       "vision": "Como brazo filantrópico del Movimiento, la Fundación Global DFREE está comprometida con la ampliación del acceso y el impacto, llegando a las comunidades desatendidas, eliminando las barreras a la educación financiera y conectando a las personas con los recursos y el apoyo necesarios para lograr un empoderamiento financiero duradero.",
       "imageGalleryAlt": "Galería de imágenes Quiénes somos"
@@ -406,6 +411,8 @@
       "mainTitle": "FinFE$T, el festival financiero para todos",
       "subtitle": "Aprende a ganar, gestionar y construir riqueza con profesionales. Únete a nuestro evento comunitario gratuito diseñado para impulsar tu futuro financiero.",
       "registerNow": "Registrarse ahora",
+      "eventDate": "13 y 14 de noviembre de 2026",
+      "eventLocation": "Universidad Kean, Union, Nueva Jersey",
       "imageAlt": "Festival financiero FinFest"
     },
     "objective": {
@@ -722,7 +729,7 @@
           "desc": "Las mujeres pasan del estrés financiero a la estabilidad y la construcción de riqueza a largo plazo."
         }
       },
-      "discoverMore": "Descubrir más",
+      "discoverMore": "Conéctate con Dfree",
       "imageAlt": "Imagen de campañas destacadas",
       "href": "#"
     },
@@ -904,6 +911,149 @@
     "featuredProjects": {
       "subtitle": "Proyectos destacados",
       "description": "Con el apoyo de socios dedicados y líderes comunitarios, nuestras iniciativas generan un impacto medible y crean un cambio duradero en toda Uganda."
+    }
+  },
+  "leadershipInstitute": {
+    "hero": {
+      "preTitle": "Una iniciativa de la Fundación DFREE®",
+      "title": "Instituto de Liderazgo Ascendente DFREE®",
+      "subtitle": "El cambio duradero surge desde la base, no desde la cima.",
+      "applyCta": "Solicitar al Instituto",
+      "sponsorCta": "Convertirse en patrocinador",
+      "imageAlt": "Imagen principal del Instituto de Liderazgo"
+    },
+    "aboutTheInstitute": {
+      "label": "Sobre el Instituto",
+      "title": "Líderes comunitarios capacitados para transformar vidas y vecindarios",
+      "description": "El Instituto de Liderazgo Bottom Up DFREE® identifica líderes comunitarios listos para crear cambio y les proporciona el conocimiento, la estrategia y las herramientas para hacerlo. A través de un aprendizaje por cohortes que combina cursos en línea, retiros inmersivos y visitas de campo, los participantes emergen como líderes capacitados con planes sostenibles y replicables para sus comunidades. Al invertir en las personas a nivel comunitario, el Instituto multiplica su impacto, preparando una nueva generación de formadores y líderes para llevar adelante la misión DFREE® y construir una economía más justa y equitativa desde la base.",
+      "imageAlt": "Imagen de la sección Sobre el Instituto"
+    },
+    "instituteInfo": {
+      "info1": {
+        "label": "TRES",
+        "title": "Áreas principales",
+        "description": "Alfabetización, empoderamiento y justicia"
+      },
+      "info2": {
+        "label": "COHORTE",
+        "title": "Aprendizaje basado en grupo",
+        "description": "Entrenar junto a una comunidad de pares"
+      },
+      "info3": {
+        "label": "HÍBRIDO",
+        "title": "Modalidades de aprendizaje",
+        "description": "Cursos en línea, retiros y visitas a organizaciones de referencia"
+      }
+    },
+    "whoIsAFellow": {
+      "label": "¿Quién es un Fellow DFREE®?",
+      "title": "Un líder completamente preparado para la comunidad",
+      "description": "Cada líder que completa el Instituto de Liderazgo Bottom-Up es reconocido formalmente como Fellow DFREE® — una credencial que indica dominio en alfabetización financiera, empoderamiento financiero y justicia económica. Los Fellows DFREE® están autorizados para llevar el currículo DFREE® a sus comunidades, capacitar a otros y servir como embajadores acreditados de la transformación económica equitativa. La designación de Fellow DFREE® es un sello de rigor, confianza y responsabilidad comunitaria — reconocido por instituciones asociadas, patrocinadores y municipalidades a nivel nacional.",
+      "imageAlt": "Imagen del Fellow del Instituto de Liderazgo"
+    },
+    "coreAreas": {
+      "label": "Tres áreas principales",
+      "title": "Los pilares de experiencia del Instituto",
+      "description": "Cada participante desarrolla conocimiento profundo y aplicable en tres dominios interconectados — cada uno construyendo sobre el anterior",
+      "pillars": {
+        "pillar1": {
+          "pillarName": "ALFABETIZACIÓN FINANCIERA",
+          "pillarTitle": "Construyendo la base del conocimiento financiero",
+          "pillarSubtitle": "Para líderes de ONG y microempresas",
+          "pillarDescription": "Comprensión fundamental de la gestión del dinero, eliminación de deudas, crédito y principios de creación de riqueza — con énfasis en líderes de ONG y microempresas que impulsan impacto comunitario.",
+          "imageAlt": "Imagen del pilar del Instituto de Liderazgo"
+        },
+        "pillar2": {
+          "pillarName": "EMPODERAMIENTO FINANCIERO",
+          "pillarTitle": "Estrategias prácticas para el control económico",
+          "pillarSubtitle": "Para individuos y familias",
+          "pillarDescription": "Dotar a individuos y familias de estrategias prácticas para tomar el control de su futuro económico — pasar de la supervivencia financiera a la libertad y la riqueza generacional.",
+          "imageAlt": "Imagen del pilar del Instituto de Liderazgo"
+        },
+        "pillar3": {
+          "pillarName": "JUSTICIA ECONÓMICA",
+          "pillarTitle": "Respondiendo a la desigualdad sistémica",
+          "pillarSubtitle": "Líderes informados y listos para actuar",
+          "pillarDescription": "Preparar líderes capaces de identificar, abordar y responder a las desigualdades económicas sistémicas en sus comunidades — transformando la conciencia en defensa y la defensa en cambio estructural duradero.",
+          "imageAlt": "Imagen del pilar del Instituto de Liderazgo"
+        }
+      }
+    },
+    "developLeaders": {
+      "label": "¿Cómo desarrollamos líderes?",
+      "title": "Un modelo de aprendizaje híbrido e inmersivo",
+      "description": "El Instituto utiliza un enfoque por cohortes que sumerge a los participantes en contenido probado y estrategias del mundo real — no solo teoría, sino transformación en acción.",
+      "models": {
+        "model1": {
+          "title": "Cursos en línea y presentaciones",
+          "description": "Currículo digital estructurado que cubre las tres áreas principales, diseñado para líderes comunitarios con vidas ocupadas y compromiso con el cambio."
+        },
+        "model2": {
+          "title": "Retiros inmersivos",
+          "description": "Encuentros profundos que fortalecen la comunidad entre los miembros de la cohorte y profundizan el dominio del contenido."
+        },
+        "model3": {
+          "title": "Visitas a organizaciones de referencia",
+          "description": "Visitas reales a organizaciones que modelan el empoderamiento financiero exitoso — conectando a los participantes con estrategias probadas y redes inspiradoras."
+        }
+      },
+      "quote": "“Al invertir en las personas a nivel comunitario, el Instituto multiplica su impacto, preparando una nueva generación de formadores y líderes para llevar adelante la misión DFREE®.”"
+    },
+    "howItWorks": {
+      "label": "Cómo funciona",
+      "title1": "Un líder formado. ",
+      "title2": "Una comunidad transformada.",
+      "subtitle": "El Instituto de Liderazgo Bottom-Up no solo construye capacidad individual — multiplica el impacto. Cada graduado regresa con planes sostenibles y credibilidad para liderar un cambio real.",
+      "items": {
+        "work1": {
+          "title": "Identificar",
+          "description": "Se identifican y reclutan líderes comunitarios con compromiso comprobado y confianza local en programas de cohorte."
+        },
+        "work2": {
+          "title": "Formar",
+          "description": "Los participantes completan el recorrido híbrido — cursos en línea, retiros y visitas — durante el programa."
+        },
+        "work3": {
+          "title": "Graduarse como Fellow DFREE®",
+          "description": "Los graduados obtienen la designación de Fellow DFREE®, regresan con planes sostenibles, herramientas DFREE® y autoridad para capacitar a otros."
+        },
+        "work4": {
+          "title": "Multiplicar",
+          "description": "Cada líder replica el modelo, construyendo una economía más justa y equitativa desde la base."
+        }
+      }
+    },
+    "supportTheInstitute": {
+      "label": "Apoyar el instituto",
+      "title": "Invertir en la próxima generación de líderes",
+      "description": "Tu colaboración ayuda a expandir el acceso a formación, recursos y experiencias del mundo real que crean un cambio duradero.",
+      "stats": {
+        "stat1": {
+          "value": "$250",
+          "description": "Apoya a un participante"
+        },
+        "stat2": {
+          "value": "$2,500",
+          "description": "Apoya una cohorte de 10 personas"
+        },
+        "stat3": {
+          "value": "$10,000",
+          "description": "Apoya un sitio socio comunitario"
+        },
+        "stat4": {
+          "value": "$25,000",
+          "description": "Apoya un fondo completo de becas anuales"
+        }
+      },
+      "buttonText": "Convertirse en patrocinador",
+      "imageAlt": "Imagen de la sección de apoyo del Instituto"
+    },
+    "banner": {
+      "title": "Empieza a liderar el cambio hoy",
+      "description": "Únete a un movimiento comprometido con construir comunidades con empoderamiento financiero desde la base.",
+      "applyCta": "Solicitar al Instituto",
+      "sponsorCta": "Convertirse en patrocinador",
+      "imageAlt": "Imagen CTA del Instituto de Liderazgo"
     }
   }
 }

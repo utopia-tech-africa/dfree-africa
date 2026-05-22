@@ -43,6 +43,10 @@
     "accessScholarships": {
       "title": "Access Scholarships",
       "description": "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment."
+    },
+    "leadershipInstitute": {
+      "title": "Leadership Institute",
+      "description": "Lasting change rises from the “bottom up”, not the top down."
     }
   },
   "common": {
@@ -105,14 +109,15 @@
     "partner": "Partner",
     "travelWithUs": "Travel With Us",
     "volunteer": "Volunteer",
-    "submit": "Submit"
+    "submit": "Submit",
+    "ContactUs": "Contact Us"
   },
   "home": {
     "hero": {
       "title": "Welcome to the DFREE® Financial Freedom Movement",
       "subtitle": "Empower yourself with practical tools and community-driven strategies. Transform your economic future through education, support, and collective action.",
       "discoverMoreCta": "Discover more",
-      "donateNowCta": "Give to the movement",
+      "donateNowCta": "Support the movement",
       "freshOffThePress": "HOT OFF THE PRESS",
       "buyNowCta": "Buy now"
     },
@@ -401,11 +406,14 @@
   "about": {
     "hero": {}
   },
+
   "finfest": {
     "hero": {
       "mainTitle": "FinFE$T financial festival for everyone",
       "subtitle": "Learn how to make, manage, and build wealth from industry professionals. Join our free community event designed to empower your financial future.",
       "registerNow": "Register now",
+      "eventDate": " November 13-14, 2026",
+      "eventLocation": "Kean University, Union New Jersey",
       "imageAlt": "FinFest Financial Festival"
     },
     "objective": {
@@ -722,7 +730,7 @@
           "desc": "Women are moving from financial stress toward stability and long-term wealth building."
         }
       },
-      "discoverMore": "Connect with Us",
+      "discoverMore": "Connect with Dfree",
       "imageAlt": "Featured Campaigns Image",
       "href": "#"
     },
@@ -905,6 +913,149 @@
     "featuredProjects": {
       "subtitle": "Featured projects",
       "description": "With the support of dedicated partners and community leaders, our initiatives drive measurable impact and create lasting change across Uganda."
+    }
+  },
+  "leadershipInstitute": {
+    "hero": {
+      "preTitle": "A DFREE ® Foundation Initiative",
+      "title": "DFREE® BottomUp Leadership Institute",
+      "subtitle": "Lasting change rises from \"bottom up\", not the top down.",
+      "applyCta": "Apply to the Institute",
+      "sponsorCta": "Become a Sponsor",
+      "imageAlt": "The Leadership Institute Hero Image"
+    },
+    "aboutTheInstitute": {
+      "label": "About the Institute",
+      "title": "Grassroots leaders equipped to transform lives and neighborhoods",
+      "description": "The DFREE® Bottom Up Leadership Institute identifies community leaders ready to create change and equips them with the knowledge, strategy, and tools to do it. Through cohort based learning that blends online courses, immersive retreats, and real world site visits, participants emerge as trained leaders with sustainable, replicable plans for their communities. By investing in people at the community level, the Institute multiplies impact, preparing a new generation of trainers and leaders to carry the DFREE® mission forward and build a more just and equitable economy from the ground up.",
+      "imageAlt": "The Leadership Institute About Image"
+    },
+    "instituteInfo": {
+      "info1": {
+        "label": "THREE",
+        "title": "Core areas",
+        "description": "Literacy, empowerment & justice"
+      },
+      "info2": {
+        "label": "COHORT",
+        "title": "Based learning",
+        "description": "Train alongside a community of peers"
+      },
+      "info3": {
+        "label": "BLENDED",
+        "title": "Modes of learning",
+        "description": "Online courses, retreats & site visits to best-practice orgs"
+      }
+    },
+    "whoIsAFellow": {
+      "label": "Who is a DFREE® Fellow?",
+      "title": "A leader well equipped for the community",
+      "description": "Every leader who completes the Bottom-Up Leadership Institute is formally recognized as a DFREE® Fellow — a credential signifying mastery across financial literacy, financial empowerment, and economic justice. DFREE® Fellows are authorized to carry the DFREE® curriculum into their communities, train others, and serve as credentialed ambassadors of equitable economic transformation. The DFREE® Fellow designation is a mark of rigor, trust, and community accountability — recognized by partner institutions, sponsors, and municipalities nationwide.",
+      "imageAlt": "The Leadership Institute Fellow Image"
+    },
+    "coreAreas": {
+      "label": "Three Core Areas",
+      "title": "The Institute’s pillars of expertise",
+      "description": "Every participant develops deep, applicable knowledge across three interconnected domains — each building on the last",
+      "pillars": {
+        "pillar1": {
+          "pillarName": "FINANCIAL  LITERACY",
+          "pillarTitle": "Building the foundation of money knowledge",
+          "pillarSubtitle": "For nonprofit & micro-business leaders",
+          "pillarDescription": "Foundational understanding of money management, debt elimination, credit, and wealth-building principles — with targeted emphasis on nonprofit and micro-business leaders driving community impact.",
+          "imageAlt": "The Leadership Institute Pillar Image"
+        },
+        "pillar2": {
+          "pillarName": "FINANCIAL  EMPOWERMENT",
+          "pillarTitle": "Practical strategies for economic control",
+          "pillarSubtitle": "For individuals & families",
+          "pillarDescription": "Equipping individuals and families with actionable strategies to take meaningful control of their economic futures — moving from financial survival to freedom and generational wealth.",
+          "imageAlt": "The Leadership Institute Pillar Image"
+        },
+        "pillar3": {
+          "pillarName": "ECONOMIC JUSTICE",
+          "pillarTitle": "Responding to systemic inequity",
+          "pillarSubtitle": "Informed, action-ready leaders",
+          "pillarDescription": "Preparing leaders who can identify, address, and respond to systemic economic inequities in their communities — transforming awareness into advocacy and advocacy into lasting structural change.",
+          "imageAlt": "The Leadership Institute Pillar Image"
+        }
+      }
+    },
+    "developLeaders": {
+      "label": "How do we develop leaders?",
+      "title": "A blended, immersive learning model",
+      "description": "The Institute uses a cohort-based approach that immerses participants in proven content and real-world strategies — not just theory, but transformation in action.",
+      "models": {
+        "model1": {
+          "title": "Online courses & presentations",
+          "description": "Structured digital curriculum covering all three core areas designed for community leaders balancing full lives and full commitment to change."
+        },
+        "model2": {
+          "title": "Immersive retreats",
+          "description": "Deep-dive gatherings that build community among cohort members and deepen content mastery — creating the relational foundation essential to leadership."
+        },
+        "model3": {
+          "title": "Site visits to best-practice orgs",
+          "description": "Real-world visits to organizations modeling successful financial empowerment work — connecting participants to proven strategies and inspiring networks."
+        }
+      },
+      "quote": "\"By investing in people at the community level, the Institute multiplies impact  preparing a new generation of trainers and leaders to carry the DFREE® mission forward.\""
+    },
+    "howItWorks": {
+      "label": "How it works",
+      "title1": "One leader trained.",
+      "title2": "A community transformed.",
+      "subtitle": "The Bottom-Up Leadership Institute doesn’t just build individual capacity  it multiplies impact. Every graduate returns equipped with sustainable, replicable plans and the credibility to lead real change",
+      "items": {
+        "work1": {
+          "title": "Identify",
+          "description": "Community leaders with proven commitment and local trust are identified and recruited into cohort programs."
+        },
+        "work2": {
+          "title": "Train",
+          "description": "Participants complete the blended learning journey online courses, retreats, and site visits over the program term."
+        },
+        "work3": {
+          "title": "Graduate as a DFREE® Fellow",
+          "description": "Graduates earn the DFREE® Fellow designation, return with sustainable plans, DFREE® tools, and the authority to train others in their communities."
+        },
+        "work4": {
+          "title": "Multiply",
+          "description": "Each leader replicates the model, building a more just and equitable economy from the ground up."
+        }
+      }
+    },
+    "supportTheInstitute": {
+      "label": "Support the  institute",
+      "title": "Invest in the Next Generation of Leaders",
+      "description": "Your partnership helps expand access to training, resources, and real-world experiences that create lasting change.",
+      "stats": {
+        "stat1": {
+          "value": "$250",
+          "description": "Supports one participant"
+        },
+        "stat2": {
+          "value": "$2,500",
+          "description": "Supports a 10-person cohort"
+        },
+        "stat3": {
+          "value": "$10,000",
+          "description": "Supports a community partner site"
+        },
+        "stat4": {
+          "value": "$25,000",
+          "description": "Supports a full-year scholarship fund"
+        }
+      },
+      "buttonText": "Become a sponsor",
+      "imageAlt": "The Leadership Institute Support Section Image"
+    },
+    "banner": {
+      "title": "Start Leading Change Today",
+      "description": "Join a movement committed to building financially empowered communities from the ground up.",
+      "applyCta": "Apply to the Institute",
+      "sponsorCta": "Become a Sponsor",
+      "imageAlt": "The Leadership Institute CTA Image"
     }
   }
 }
