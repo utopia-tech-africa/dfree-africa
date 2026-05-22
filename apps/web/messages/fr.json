@@ -117,7 +117,7 @@
       "title": "Bienvenue au mouvement DFREE® pour la liberté financière",
       "subtitle": "Donnez-vous les moyens d'agir grâce à des outils pratiques et des stratégies portées par la communauté. Transformez votre avenir économique par l'éducation, le soutien et l'action collective.",
       "discoverMoreCta": "Découvrir plus",
-      "donateNowCta": "Donner au mouvement",
+      "donateNowCta": "Soutenez le mouvement",
       "freshOffThePress": "FRAÎCHEMENT PARU",
       "buyNowCta": "Acheter maintenant"
     },
@@ -411,6 +411,8 @@
       "mainTitle": "FinFE$T, le festival financier pour tous",
       "subtitle": "Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels. Rejoignez notre événement communautaire gratuit conçu pour renforcer votre avenir financier.",
       "registerNow": "S'inscrire maintenant",
+      "eventDate": "13-14 novembre 2026",
+      "eventLocation": "Université Kean, Union, New Jersey",
       "imageAlt": "Festival financier FinFest"
     },
     "objective": {
@@ -727,7 +729,7 @@
           "desc": "Les femmes passent du stress financier à la stabilité et à la construction d'un patrimoine à long terme."
         }
       },
-      "discoverMore": "Découvrir plus",
+      "discoverMore": "Connectez-vous avec Dfree",
       "imageAlt": "Image des campagnes à la une",
       "href": "#"
     },

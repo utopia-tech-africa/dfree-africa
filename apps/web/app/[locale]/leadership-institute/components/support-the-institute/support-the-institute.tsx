@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { SupportTheInstitutePattern } from "@/assets";
 import Link from "next/link";
 import { cn } from "@/lib/utils";

@@ -8,8 +8,8 @@ import ComponentLayout from "@/components/component-layout";
 export async function LeadershipInstituteHero() {
   const t = await getTranslations("leadershipInstitute.hero");
   return (
-    <section className="relative w-full min-h-150 h-dvh flex flex-col overflow-hidden">
-      <div className="absolute inset-0">
+    <section className="relative w-screen min-h-150 h-dvh flex flex-col overflow-hidden">
+      <div className="absolute inset-0 w-screen h-full">
         <Image
           src={
             "https://res.cloudinary.com/dan9camhs/image/upload/v1779208610/2f33799cdd21cb3fee9df9129592cc467e474777_draubv.webp"
@@ -17,7 +17,7 @@ export async function LeadershipInstituteHero() {
           alt={t("imageAlt")}
           fill
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          sizes="100vw"
           priority
         />
       </div>
