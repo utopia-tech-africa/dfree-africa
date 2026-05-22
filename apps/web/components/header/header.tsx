@@ -58,9 +58,9 @@ const NAV_CONFIG: NavItemConfig[] = [
       },
       { labelKey: "finfest", href: "/finfest", width: "w-[70px]" },
       {
-        labelKey: "dfreeAccessScholarships",
-        href: "/access-scholarships",
-        width: "w-[126px]",
+        labelKey: "dfreeLeadershipInstitute",
+        href: "/leadership-institute",
+        width: "w-[180px]",
       },
     ],
   },
