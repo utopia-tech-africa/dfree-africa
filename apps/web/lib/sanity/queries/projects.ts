@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc) {
+export const projectsQuery = groq`*[_type == "project" && isActive != false] | order(_createdAt desc) {
   _id,
   title,
   "slug": slug.current,
@@ -15,7 +15,7 @@ export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc)
   }
 }`;
 
-export const featuredProjectsQuery = groq`*[_type == "project" && featured == true] | order(_createdAt desc) {
+export const featuredProjectsQuery = groq`*[_type == "project" && featured == true && isActive != false] | order(_updatedAt desc) {
   _id,
   title,
   "slug": slug.current,
@@ -30,7 +30,7 @@ export const featuredProjectsQuery = groq`*[_type == "project" && featured == tr
   }
 }`;
 
-export const featuredCountryProjectsQuery = groq`*[_type == "project" && country == $country && featured == true] | order(_createdAt desc) {
+export const featuredCountryProjectsQuery = groq`*[_type == "project" && country == $country && featured == true && isActive != false] | order(_createdAt desc) {
   _id,
   title,
   "slug": slug.current,
@@ -52,7 +52,7 @@ export const yearsWithProjectIdsQuery = groq`*[_type == "year"] | order(year des
 }`;
 
 export const projectBySlugQuery = groq`
-  *[_type == "project" && slug.current == $slug][0] {
+  *[_type == "project" && slug.current == $slug && isActive != false][0] {
     _id,
     title,
     "slug": slug.current,

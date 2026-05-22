@@ -118,5 +118,21 @@ export const project = defineType({
       to: [{type: 'gallery'}],
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: 'isActive',
+      title: 'Active',
+      description: 'Toggle this off to hide the project from the website.',
+      type: 'boolean',
+      initialValue: true,
+      validation: (rule) =>
+        rule
+          .custom((isActive) => {
+            if (isActive === false) {
+              return '⚠️ This project is currently hidden from the website.'
+            }
+            return true
+          })
+          .warning(),
+    }),
   ],
 })
