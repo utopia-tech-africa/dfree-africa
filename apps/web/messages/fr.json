@@ -36,28 +36,28 @@
       "description": "FinFE$T est le festival financier gratuit de DFREE® pour tous. Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels lors de notre événement communautaire."
     },
     "africa": {
-      "title": "Afrique",
-      "description": "Renforcer l'Afrique - Liberté financière et développement communautaire durable par l'éducation, la formation et les programmes économiques."
+      "title": "DFREE® Afrique",
+      "description": "DFREE® Afrique étend le mouvement sans dette avec la littératie financière, l'eau potable et des programmes communautaires au Ghana, en Afrique du Sud, en Ouganda et au Liberia."
     },
     "projects": {
-      "title": "Projets",
-      "description": "Découvrez les projets transformateurs de DFREE® Africa au Ghana, en Afrique du Sud, en Ouganda et au Liberia."
+      "title": "Projets en Afrique",
+      "description": "Projets DFREE® Afrique sur le terrain : bien-être financier au travail, partenariats avec les églises, accès à l'eau et formation professionnelle."
     },
     "project": {
       "title": "Projet",
       "descriptionFallback": "En savoir plus sur ce projet DFREE®."
     },
     "ghana": {
-      "title": "Ghana",
-      "description": "DFREE® au Ghana - Liberté financière au travail et à l'église, partenariats et développement communautaire à travers le Ghana."
+      "title": "DFREE® Ghana",
+      "description": "DFREE® Ghana : bien-être financier au travail et à l'église, partenariats locaux et programmes de développement communautaire au Ghana."
     },
     "southAfrica": {
-      "title": "Afrique du Sud",
-      "description": "DFREE® en Afrique du Sud - Partenariats, littératie financière et développement communautaire avec la Convention baptiste d'Afrique australe et les organisations locales."
+      "title": "DFREE® Afrique du Sud",
+      "description": "DFREE® Afrique du Sud s'associe aux églises et aux groupes civiques pour la littératie financière, la formation et le développement communautaire durable."
     },
     "uganda": {
-      "title": "Ouganda",
-      "description": "DFREE® en Ouganda : fourniture d'eau potable, littératie financière et développement communautaire grâce à des partenariats stratégiques."
+      "title": "DFREE® Ouganda",
+      "description": "DFREE® Ouganda fournit de l'eau potable, de la littératie financière et du développement communautaire via des partenariats locaux et confessionnels."
     },
     "billionDollarChallenge": {
       "title": "Défi du milliard de dollars",
@@ -74,6 +74,10 @@
     "leadershipInstitute": {
       "title": "Institut de leadership",
       "description": "Le changement durable émane de la base, et non du sommet."
+    },
+    "leadership": {
+      "title": "Direction",
+      "description": "Découvrez le conseil d'administration et l'équipe de direction de la Fondation DFREE® qui orientent l'autonomisation financière à but non lucratif."
     },
     "events": {
       "title": "Événements",

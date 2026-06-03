@@ -30,6 +30,7 @@ export const Staff = async () => {
                 src={member.image}
                 alt={member.name}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 330px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105 size-full"
               />
             </div>

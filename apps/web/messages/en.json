@@ -36,28 +36,28 @@
       "description": "FinFE$T is DFREE®'s free financial festival for everyone. Learn how to make, manage, and build wealth from industry professionals at our community event."
     },
     "africa": {
-      "title": "Africa",
-      "description": "Empowering Africa - Driving financial freedom and sustainable community development through education, skills training, and economic programs."
+      "title": "DFREE® Africa",
+      "description": "DFREE® Africa extends the debt-free movement with financial literacy, clean water, and community programs in Ghana, South Africa, Uganda, and Liberia."
     },
     "projects": {
-      "title": "Projects",
-      "description": "Explore DFREE® Africa's transformative projects across Ghana, South Africa, Uganda, and Liberia."
+      "title": "Africa Projects",
+      "description": "On-the-ground DFREE® Africa projects: workplace financial wellness, church partnerships, water access, and skills training across the continent."
     },
     "project": {
       "title": "Project",
       "descriptionFallback": "Learn more about this DFREE® project."
     },
     "ghana": {
-      "title": "Ghana",
-      "description": "DFREE® in Ghana - Financial freedom in the workplace and church, partnerships, and community development across Ghana."
+      "title": "DFREE® Ghana",
+      "description": "DFREE® Ghana: workplace and church financial wellness, local partnerships, and community development programs across Ghana."
     },
     "southAfrica": {
-      "title": "South Africa",
-      "description": "DFREE® in South Africa - Partnerships, financial literacy, and community development with the Baptist Convention of Southern Africa and local organizations."
+      "title": "DFREE® South Africa",
+      "description": "DFREE® South Africa partners with churches and civic groups for financial literacy, skills training, and sustainable community development."
     },
     "uganda": {
-      "title": "Uganda",
-      "description": "DFREE® in Uganda - Delivering clean water, financial literacy, and community development through strategic partnerships."
+      "title": "DFREE® Uganda",
+      "description": "DFREE® Uganda delivers clean water, financial literacy, and community development through strategic local and faith-based partnerships."
     },
     "billionDollarChallenge": {
       "title": "Billion Dollar Challenge",

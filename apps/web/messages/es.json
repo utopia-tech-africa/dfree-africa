@@ -36,28 +36,28 @@
       "description": "FinFE$T es el festival financiero gratuito de DFREE® para todos. Aprende a ganar, gestionar y construir riqueza con profesionales en nuestro evento comunitario."
     },
     "africa": {
-      "title": "África",
-      "description": "Empoderando África - Impulsando la libertad financiera y el desarrollo comunitario sostenible mediante educación, formación y programas económicos."
+      "title": "DFREE® África",
+      "description": "DFREE® África extiende el movimiento sin deudas con alfabetización financiera, agua potable y programas comunitarios en Ghana, Sudáfrica, Uganda y Liberia."
     },
     "projects": {
-      "title": "Proyectos",
-      "description": "Explora los proyectos transformadores de DFREE® Africa en Ghana, Sudáfrica, Uganda y Liberia."
+      "title": "Proyectos en África",
+      "description": "Proyectos DFREE® África en el terreno: bienestar financiero laboral, alianzas con iglesias, acceso al agua y formación en habilidades."
     },
     "project": {
       "title": "Proyecto",
       "descriptionFallback": "Conoce más sobre este proyecto DFREE®."
     },
     "ghana": {
-      "title": "Ghana",
-      "description": "DFREE® en Ghana - Libertad financiera en el trabajo y la iglesia, alianzas y desarrollo comunitario en Ghana."
+      "title": "DFREE® Ghana",
+      "description": "DFREE® Ghana: bienestar financiero en el trabajo y la iglesia, alianzas locales y programas de desarrollo comunitario en Ghana."
     },
     "southAfrica": {
-      "title": "Sudáfrica",
-      "description": "DFREE® en Sudáfrica - Alianzas, educación financiera y desarrollo comunitario con la Convención Bautista del Sur de África y organizaciones locales."
+      "title": "DFREE® Sudáfrica",
+      "description": "DFREE® Sudáfrica colabora con iglesias y grupos cívicos en alfabetización financiera, formación y desarrollo comunitario sostenible."
     },
     "uganda": {
-      "title": "Uganda",
-      "description": "DFREE® en Uganda: entrega de agua potable, alfabetización financiera y desarrollo comunitario a través de alianzas estratégicas."
+      "title": "DFREE® Uganda",
+      "description": "DFREE® Uganda ofrece agua potable, alfabetización financiera y desarrollo comunitario mediante alianzas locales y religiosas."
     },
     "billionDollarChallenge": {
       "title": "Desafío del billón de dólares",
@@ -74,6 +74,10 @@
     "leadershipInstitute": {
       "title": "Instituto de Liderazgo",
       "description": "El cambio duradero surge desde abajo, no desde arriba."
+    },
+    "leadership": {
+      "title": "Liderazgo",
+      "description": "Conozca la junta directiva y el equipo de liderazgo de la Fundación DFREE® que impulsa el empoderamiento financiero sin fines de lucro."
     },
     "events": {
       "title": "Eventos",

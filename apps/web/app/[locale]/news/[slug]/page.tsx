@@ -8,12 +8,44 @@ import ComponentLayout from "@/components/component-layout";
 import { customPortableTextComponents } from "@/components/portable-text/custom-portable-text-components";
 import { formatDateWithOrdinal } from "@/lib/utils";
 import { LocaleForTranslation } from "@/lib/sanity";
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 interface NewsPageProps {
   params: Promise<{
     locale: string;
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: NewsPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const news = await getNewsBySlug(slug, locale as LocaleForTranslation);
+
+  if (!news) {
+    return createMetadata({
+      title: t("news.title"),
+      description: t("news.description"),
+      path: `/${locale}/news/${slug}`,
+      noIndex: true,
+    });
+  }
+
+  return createMetadata({
+    title: news.title,
+    description: news.excerpt || t("news.description"),
+    path: `/${locale}/news/${slug}`,
+    image: news.imageUrl || undefined,
+    keywords: [
+      "DFREE news",
+      ...(news.category ? [news.category] : []),
+      "nonprofit press",
+    ],
+  });
 }
 
 export default async function NewsDetailPage({ params }: NewsPageProps) {
@@ -40,6 +72,7 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
               src={news.imageUrl}
               alt={news.title}
               fill
+              sizes="100vw"
               className="object-cover rounded-xl"
             />
           </div>
@@ -56,6 +89,7 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
                     alt={news.authorName || "Author"}
                     width={40}
                     height={40}
+                    sizes="64px"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>

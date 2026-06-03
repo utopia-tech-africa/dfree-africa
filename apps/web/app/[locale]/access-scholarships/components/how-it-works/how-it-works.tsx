@@ -69,6 +69,7 @@ export const AscHowItWorks = async () => {
           src={ASCHowItWorksPattern}
           alt={t("patternAlt")}
           fill
+          sizes="100vw"
           className="object-cover object-bottom"
         />
       </div>

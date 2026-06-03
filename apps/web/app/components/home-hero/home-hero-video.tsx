@@ -1,9 +1,23 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { Pause, Play } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useInViewVideo } from "@/hooks/use-in-view-video";
+
+const HERO_POSTER = "/vid/home-hero-poster.jpg";
+
+const HERO_SOURCES = {
+  desktop: {
+    webm: "/vid/home-hero-vid.webm",
+    mp4: "/vid/home-hero-vid.mp4",
+  },
+  mobile: {
+    webm: "/vid/home-hero-vid-mobile.webm",
+    mp4: "/vid/home-hero-vid-mobile.mp4",
+  },
+} as const;
 
 export function HomeHeroVideo() {
   const t = useTranslations("home.hero");
@@ -11,6 +25,7 @@ export function HomeHeroVideo() {
   const [userPaused, setUserPaused] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const canPlay = useCallback(
     () => !prefersReducedMotion && !userPaused,
@@ -18,9 +33,17 @@ export function HomeHeroVideo() {
   );
 
   useInViewVideo(videoRef, {
-    enabled: !prefersReducedMotion,
+    enabled: !prefersReducedMotion && !isMobile,
     canPlay,
   });
+
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 767px)");
+    const syncMobile = () => setIsMobile(mobileQuery.matches);
+    syncMobile();
+    mobileQuery.addEventListener("change", syncMobile);
+    return () => mobileQuery.removeEventListener("change", syncMobile);
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -34,7 +57,7 @@ export function HomeHeroVideo() {
       video.removeEventListener("play", onPlay);
       video.removeEventListener("pause", onPause);
     };
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -64,18 +87,37 @@ export function HomeHeroVideo() {
     }
   };
 
+  const showPosterOnly = prefersReducedMotion || isMobile;
+
+  if (showPosterOnly) {
+    return (
+      <Image
+        src={HERO_POSTER}
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+        aria-hidden
+      />
+    );
+  }
+
   return (
     <>
       <video
         ref={videoRef}
         className="h-full w-full object-cover"
-        src="/vid/home-hero-vid.mp4"
         muted
         loop
         playsInline
         preload="metadata"
+        poster={HERO_POSTER}
         aria-label={t("videoLabel")}
-      />
+      >
+        <source src={HERO_SOURCES.desktop.webm} type="video/webm" />
+        <source src={HERO_SOURCES.desktop.mp4} type="video/mp4" />
+      </video>
       <button
         type="button"
         onClick={togglePlayback}

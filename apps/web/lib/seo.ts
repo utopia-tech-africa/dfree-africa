@@ -24,6 +24,25 @@ export const siteConfig = {
   ],
 } as const;
 
+/** Shared keywords for DFREE® Africa section routes. */
+export const africaSectionKeywords = [
+  "DFREE Africa",
+  "financial literacy Africa",
+  "community development Africa",
+  "debt-free programs Africa",
+  "Ghana South Africa Uganda Liberia",
+] as const;
+
+const META_DESCRIPTION_MAX = 155;
+
+export function truncateMetaDescription(
+  description: string,
+  maxLength = META_DESCRIPTION_MAX,
+): string {
+  if (description.length <= maxLength) return description;
+  return `${description.slice(0, maxLength - 3).trim()}...`;
+}
+
 export type MetadataParams = {
   title?: string;
   description?: string;
@@ -45,6 +64,7 @@ export function createMetadata({
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const url = `${siteConfig.url}${normalizedPath}`;
   const fullTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
+  const metaDescription = truncateMetaDescription(description);
   const keywords =
     keywordsParam !== undefined
       ? Array.isArray(keywordsParam)
@@ -58,7 +78,7 @@ export function createMetadata({
 
   return {
     title: fullTitle,
-    description,
+    description: metaDescription,
     keywords,
     authors: [{ name: siteConfig.creator, url: siteConfig.url }],
     creator: siteConfig.creator,
@@ -69,7 +89,7 @@ export function createMetadata({
       url,
       siteName: siteConfig.name,
       title: fullTitle,
-      description,
+      description: metaDescription,
       images: [
         {
           url: imageUrl,
@@ -82,7 +102,7 @@ export function createMetadata({
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
-      description,
+      description: metaDescription,
       images: [imageUrl],
     },
     robots: noIndex

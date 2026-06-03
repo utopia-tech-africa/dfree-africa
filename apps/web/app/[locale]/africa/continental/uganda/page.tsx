@@ -1,4 +1,4 @@
-import { createMetadata } from "@/lib/seo";
+import { africaSectionKeywords, createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Hero, PageInfo, SectionCard, SectionCardProps } from "./components";
@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("uganda.title"),
     description: t("uganda.description"),
     path: `/${locale}/africa/continental/uganda`,
+    keywords: [...africaSectionKeywords, "DFREE Uganda"],
   });
 }
 

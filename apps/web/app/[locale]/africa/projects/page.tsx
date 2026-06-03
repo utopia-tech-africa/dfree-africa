@@ -1,6 +1,6 @@
 import ComponentLayout from "@/components/component-layout";
 import { PageTitle } from "@/components/page-title/page-title";
-import { createMetadata } from "@/lib/seo";
+import { africaSectionKeywords, createMetadata } from "@/lib/seo";
 import { getProjects, getYearsWithProjectIds } from "@/lib/sanity";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("projects.title"),
     description: t("projects.description"),
     path: `/${locale}/africa/projects`,
+    keywords: [...africaSectionKeywords, "DFREE Africa projects"],
   });
 }
 

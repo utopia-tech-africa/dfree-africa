@@ -35,6 +35,7 @@ export const Partners = async () => {
                 alt={`${t("logoAlt")} ${index + 1}`}
                 width={500}
                 height={600}
+                sizes="(max-width: 640px) 50vw, 200px"
                 className="w-full h-auto object-contain"
               />
             </div>

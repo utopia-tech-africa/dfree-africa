@@ -37,3 +37,6 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+
+apps/web/public/docs/DFREE_Website_Audit_Report.pdf

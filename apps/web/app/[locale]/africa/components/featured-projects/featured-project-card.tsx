@@ -51,6 +51,7 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
           alt={title}
           width={400}
           height={600}
+          sizes="(max-width: 1024px) 100vw, 50vw"
           className="absolute inset-0 w-full h-full object-cover"
         />
       ) : (

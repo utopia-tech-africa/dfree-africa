@@ -107,6 +107,7 @@ export function PillarCard({
             className="h-10 w-auto md:h-14"
             height={100}
             width={100}
+            sizes="128px"
           />
         </div>
       )}

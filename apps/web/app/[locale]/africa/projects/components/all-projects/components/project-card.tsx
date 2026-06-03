@@ -67,6 +67,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           alt={title}
           width={400}
           height={600}
+          sizes="(max-width: 768px) 100vw, 405px"
           className="absolute inset-0 w-full h-full object-cover"
         />
       ) : (

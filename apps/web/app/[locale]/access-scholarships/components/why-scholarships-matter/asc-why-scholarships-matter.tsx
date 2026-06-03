@@ -26,6 +26,7 @@ export const ASCWhyScholarshipsMatterSection = async () => {
               src={ASCWhyScholarshipsMatterPattern}
               alt={t("patternAlt")}
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -64,6 +65,7 @@ export const ASCWhyScholarshipsMatterSection = async () => {
             }
             alt={t("imageAlt")}
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover object-center grayscale-20 hover:grayscale-0 transition-all duration-700 hover:scale-105"
             priority
           />
