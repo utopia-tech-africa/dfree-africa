@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Image from "next/image";
+import { InViewVideo } from "@/components/in-view-video";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -53,12 +54,10 @@ export const FeaturedProjectCard: React.FC<ProjectCardProps> = ({
           className="absolute inset-0 w-full h-full object-cover"
         />
       ) : (
-        <video
+        <InViewVideo
           src={previewMedia.url}
-          autoPlay
           muted
           loop
-          playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}

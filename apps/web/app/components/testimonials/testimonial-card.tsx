@@ -1,14 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useRef, useState } from "react";
+import { useRef, useState, type RefObject } from "react";
+import { useInViewVideo } from "@/hooks/use-in-view-video";
 import { Volume2, VolumeX } from "lucide-react";
 import type { TestimonialMeta } from "@/lib/testimonials";
 
 type Props = {
   testimonial: TestimonialMeta;
+  playbackRootRef?: RefObject<HTMLElement | null>;
 };
 
-const TestimonialCard = ({ testimonial }: Props) => {
+const TestimonialCard = ({ testimonial, playbackRootRef }: Props) => {
   const t = useTranslations("home.testimonials");
   const baseKey = `items.${testimonial.id}`;
 
@@ -16,6 +20,8 @@ const TestimonialCard = ({ testimonial }: Props) => {
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(true);
+
+  useInViewVideo(videoRef, { rootRef: playbackRootRef });
 
   const toggleMute = () => {
     if (!videoRef.current) return;
@@ -34,10 +40,10 @@ const TestimonialCard = ({ testimonial }: Props) => {
             ref={videoRef}
             src={testimonial.videoUrl}
             className="w-full h-full rounded-lg object-cover"
-            autoPlay
             playsInline
             muted
             loop
+            preload="metadata"
             crossOrigin="anonymous"
           >
             {testimonial.captionsSrc && (
