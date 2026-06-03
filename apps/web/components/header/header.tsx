@@ -74,7 +74,7 @@ const NAV_CONFIG: NavItemConfig[] = [
         href: "https://store.dfree.com/",
         width: "w-[130px]",
       },
-      { labelKey: "attendEvents", href: "", width: "w-[125px]" },
+      { labelKey: "attendEvents", href: "/events", width: "w-[125px]" },
       { labelKey: "contactUs", href: "#footer", width: "w-[105px]" },
     ],
   },

@@ -1,8 +1,35 @@
 {
+  "cookieConsent": {
+    "title": "Cookie preferences",
+    "description": "We use cookies and similar technologies for analytics (Google Tag Manager) to improve your experience. You can accept or reject non-essential cookies. See our",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept all",
+    "reject": "Reject non-essential"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How the DFREE® Foundation collects, uses, and protects your information on this website.",
+      "heading": "Privacy Policy",
+      "body": "This site uses analytics tools (including Google Tag Manager), donation forms (Zeffy), and newsletter sign-up. The information below summarizes how we handle data on this website.",
+      "fullPolicy": "Read the complete policy at",
+      "fullPolicyLink": "dfreefoundation.org/privacy-policy",
+      "backHome": "Back to home"
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "Terms governing use of the DFREE® Foundation website.",
+      "heading": "Terms of Service",
+      "body": "By using this website you agree to the DFREE® Foundation terms of service, including acceptable use of our programs, content, and donation tools.",
+      "fullPolicy": "Read the complete terms at",
+      "fullPolicyLink": "dfreefoundation.org/terms-conditions",
+      "backHome": "Back to home"
+    }
+  },
   "metadata": {
     "home": {
       "title": "Home",
-      "description": "DFREE® Africa - Empowering communities with financial freedom and sustainable development across the African continent."
+      "description": "DFREE® Foundation — 501(c)(3) nonprofit financial education and debt-free programs for underserved US communities."
     },
     "finfest": {
       "title": "FinFE$T",
@@ -34,19 +61,35 @@
     },
     "billionDollarChallenge": {
       "title": "Billion Dollar Challenge",
-      "description": "Eliminate debt, build savings, and take control of your financial future through the DFREE® Billion Dollar Challenge—a digital platform built on community accountability."
+      "description": "Join the DFREE® Billion Dollar Challenge—track debt paid and savings built with community accountability across churches and organizations nationwide."
     },
     "communityCampaigns": {
       "title": "Community Campaigns",
-      "description": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs."
+      "description": "City-wide DFREE® campaigns unite churches and civic partners to deliver coordinated financial empowerment programs with measurable community impact."
     },
     "accessScholarships": {
       "title": "Access Scholarships",
-      "description": "The DFREE® Access Scholarship offers free access to courses, materials, coaching, and events, helping participants achieve financial stability and empowerment."
+      "description": "Free DFREE® courses, coaching, and materials through Access Scholarships—removing cost barriers to debt-free financial education."
     },
     "leadershipInstitute": {
       "title": "Leadership Institute",
-      "description": "Lasting change rises from the “bottom up”, not the top down."
+      "description": "Train grassroots leaders to deliver DFREE® financial freedom programs in churches, nonprofits, and underserved communities."
+    },
+    "leadership": {
+      "title": "Leadership",
+      "description": "Meet the DFREE® Foundation board and leadership team guiding nonprofit financial empowerment nationwide."
+    },
+    "events": {
+      "title": "Events",
+      "description": "Upcoming DFREE® workshops, FinFE$T gatherings, and community financial wellness events across the United States."
+    },
+    "news": {
+      "title": "News & Media",
+      "description": "Press releases, stories, and updates from the DFREE® financial freedom movement."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact the DFREE® Foundation for partnerships, programs, volunteering, and general inquiries."
     }
   },
   "common": {
@@ -63,7 +106,7 @@
     "newsletterCta": "Subscribe to newsletter",
     "placeholderText": "Enter email address",
     "buttonText": "Submit",
-    "privacyNote": "By subscribing, you agree to our privacy policy"
+    "privacyNote": "By subscribing, you agree to receive periodic emails about DFREE® programs, events, and impact (typically monthly). Unsubscribe anytime. See our Privacy Policy."
   },
   "nav": {
     "aboutUs": "About Us",
@@ -92,8 +135,8 @@
     "subscribeToNewsletter": "Subscribe To Newsletter",
     "stayConnected": "Stay Connected With Our Latest Updates And Transformative Work",
     "enterEmail": "Enter Email Address",
-    "privacyNote": "By Subscribing, You Agree To Our Privacy Policy",
-    "copyright": "© 2024 DFREE Foundation. All Rights Reserved.",
+    "privacyNote": "By subscribing, you agree to receive periodic emails about DFREE® programs, events, and impact (typically monthly). Unsubscribe anytime. See our Privacy Policy.",
+    "copyright": "© {year} DFREE Foundation. All Rights Reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms Of Service",
     "cookiesSettings": "Cookies Settings",
@@ -120,7 +163,11 @@
       "discoverMoreCta": "Discover more",
       "donateNowCta": "Support the movement",
       "freshOffThePress": "HOT OFF THE PRESS",
-      "buyNowCta": "Buy now"
+      "buyNowCta": "Buy now",
+      "bookAlt": "DFREE Say Yes to No Debt book cover",
+      "videoLabel": "Background video of the DFREE financial freedom movement",
+      "pauseVideo": "Pause video",
+      "playVideo": "Play video"
     },
     "whoWeAre": {
       "title": "Who we are",
@@ -164,6 +211,8 @@
       "title": "Mapping our impact across communities",
       "description": " Every milestone represents lives transformed and a step closer to financial freedom.",
       "text": "Several community projects undertaken",
+      "dataSource": "As of Q1 2025, Billion Dollar Challenge platform data.",
+      "donationCta": "Help us reach $50M — give today",
       "stats": {
         "completedProjects": {
           "value": "1900",
@@ -191,29 +240,36 @@
       "title": "Testimonials",
       "heading": "Real stories of change",
       "subtitle": "Voices that reveal the power of financial transformation",
+      "muteVideo": "Mute video",
+      "unmuteVideo": "Unmute video",
       "items": {
         "shirley": {
           "name": "Shirley Richard",
+          "imageAlt": "Shirley Richard, Delta Sigma Theta Sorority member and DFREE program participant",
           "title": "Delta Sigma Theta Sorority, Inc",
           "text": "I am retired, however, as a result of the class, I connected with a Financial Advisor to invest for generational wealth for my grandchildren."
         },
         "michele": {
           "name": "Michele Bailey",
+          "imageAlt": "Michele Bailey, Behind Every Door partner and DFREE program participant",
           "title": "Behind Every Door",
           "text": "DFREE ® helped me realize that I was living above my means and now I have been able to downsize, pay off major debts and increase my credit score."
         },
         "lloyd": {
           "name": "Lloyd Branch",
+          "imageAlt": "Lloyd Branch, DFREE program participant",
           "title": "",
           "text": "I paid off my car and HVAC system bills using methods from DFREE ®."
         },
         "gregory": {
           "name": "Gregory Lawrence",
+          "imageAlt": "Gregory Lawrence, DFREE program participant",
           "title": "",
           "text": "I have paid down my credit cards with the snowball effect and I am currently in the process of buying a house by myself."
         },
         "diana": {
           "name": "Diana Belle",
+          "imageAlt": "Diana Belle, Clear View Baptist Church member and DFREE program participant",
           "title": "Clear View Baptist Church",
           "text": "I am a better Steward of my finances having gone through this process. I am now working on leaving a legacy for my daughters."
         },

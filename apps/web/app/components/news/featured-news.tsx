@@ -143,7 +143,7 @@ export const FeaturedNews = ({
   }, [updateScrollArrows, news]);
 
   if (!news.length) {
-    if (!showHeader && !allowEmptyState) return null;
+    if (!allowEmptyState) return null;
     return (
       <ComponentLayout className={cn("py-12", className)}>
         {showHeader && (

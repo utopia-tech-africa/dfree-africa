@@ -119,6 +119,8 @@ export function LocaleSwitcher({
         e.preventDefault();
         const loc = DISPLAY_LOCALES[index];
         if (loc) switchTo(loc);
+      } else if (e.key === "Escape") {
+        (e.currentTarget as HTMLElement).blur();
       }
     },
     [switchTo],

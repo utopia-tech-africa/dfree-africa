@@ -1,4 +1,31 @@
 {
+  "cookieConsent": {
+    "title": "Preferencias de cookies",
+    "description": "Usamos cookies y tecnologías similares para análisis (Google Tag Manager). Puede aceptar o rechazar cookies no esenciales. Consulte nuestra",
+    "privacyLink": "Política de privacidad",
+    "accept": "Aceptar todo",
+    "reject": "Rechazar no esenciales"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de privacidad",
+      "description": "Cómo la Fundación DFREE® recopila y protege su información en este sitio.",
+      "heading": "Política de privacidad",
+      "body": "Este sitio utiliza herramientas de análisis (incluido Google Tag Manager), formularios de donación (Zeffy) y suscripción al boletín.",
+      "fullPolicy": "Lea la política completa en",
+      "fullPolicyLink": "dfreefoundation.org/privacy-policy",
+      "backHome": "Volver al inicio"
+    },
+    "terms": {
+      "title": "Términos de servicio",
+      "description": "Términos de uso del sitio web de la Fundación DFREE®.",
+      "heading": "Términos de servicio",
+      "body": "Al usar este sitio acepta los términos de servicio de la Fundación DFREE®.",
+      "fullPolicy": "Lea los términos completos en",
+      "fullPolicyLink": "dfreefoundation.org/terms-conditions",
+      "backHome": "Volver al inicio"
+    }
+  },
   "metadata": {
     "home": {
       "title": "Inicio",
@@ -47,6 +74,18 @@
     "leadershipInstitute": {
       "title": "Instituto de Liderazgo",
       "description": "El cambio duradero surge desde abajo, no desde arriba."
+    },
+    "events": {
+      "title": "Eventos",
+      "description": "Talleres y eventos de bienestar financiero de DFREE® en Estados Unidos."
+    },
+    "news": {
+      "title": "Noticias y medios",
+      "description": "Noticias y actualizaciones del movimiento DFREE®."
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Contacte a la Fundación DFREE® para alianzas, programas y voluntariado."
     }
   },
   "common": {
@@ -93,7 +132,7 @@
     "stayConnected": "Mantente Conectado Con Nuestras Últimas Actualizaciones Y Trabajo Transformador",
     "enterEmail": "Ingresa Tu Correo Electrónico",
     "privacyNote": "Al Suscribirte, Aceptas Nuestra Política De Privacidad",
-    "copyright": "© 2024 Fundación DFREE. Todos Los Derechos Reservados.",
+    "copyright": "© {year} Fundación DFREE. Todos Los Derechos Reservados.",
     "privacyPolicy": "Política De Privacidad",
     "termsOfService": "Términos De Servicio",
     "cookiesSettings": "Configuración De Cookies",
@@ -120,7 +159,11 @@
       "discoverMoreCta": "Descubrir más",
       "donateNowCta": "Apoya el movimiento",
       "freshOffThePress": "RECIÉN PUBLICADO",
-      "buyNowCta": "Comprar ahora"
+      "buyNowCta": "Comprar ahora",
+      "bookAlt": "Portada del libro DFREE Say Yes to No Debt",
+      "videoLabel": "Video de fondo del movimiento de libertad financiera DFREE",
+      "pauseVideo": "Pausar video",
+      "playVideo": "Reproducir video"
     },
     "whoWeAre": {
       "title": "Quiénes somos",
@@ -164,6 +207,8 @@
       "title": "Visualizar nuestro impacto en las comunidades",
       "description": "Cada logro representa una transformación en la vida de las personas y un paso más cerca de la libertad financiera.",
       "text": "Se han emprendido varios proyectos comunitarios",
+      "dataSource": "A partir del primer trimestre de 2025, datos de la plataforma Billion Dollar Challenge.",
+      "donationCta": "Ayúdanos a alcanzar $50M — dona hoy",
       "stats": {
         "completedProjects": {
           "value": "1900",
@@ -191,29 +236,36 @@
       "title": "Testimonios",
       "heading": "Historias reales de cambio",
       "subtitle": "Voces que revelan el poder de la transformación financiera",
+      "muteVideo": "Silenciar video",
+      "unmuteVideo": "Activar sonido del video",
       "items": {
         "shirley": {
           "name": "Shirley Richard",
+          "imageAlt": "Shirley Richard, miembro de Delta Sigma Theta y participante del programa DFREE",
           "title": "Hermandad Delta Sigma Theta, Inc.",
           "text": "Estoy jubilado, sin embargo, gracias al curso, contacté con un asesor financiero para invertir y crear un patrimonio generacional para mis nietos."
         },
         "michele": {
           "name": "Michele Bailey",
+          "imageAlt": "Michele Bailey, socia de Behind Every Door y participante del programa DFREE",
           "title": "Detrás de Cada Puerta",
           "text": "DFREE® ayudó a darme cuenta de que estaba viviendo por encima de mis posibilidades y ahora he podido reducir mis gastos, saldar mis deudas importantes y mejorar mi puntaje crediticio."
         },
         "lloyd": {
           "name": "Lloyd Branch",
+          "imageAlt": "Lloyd Branch, participante del programa DFREE",
           "title": "",
           "text": "Pagué las facturas de mi coche y del sistema de climatización utilizando los métodos de DFREE®."
         },
         "gregory": {
           "name": "Gregory Lawrence",
+          "imageAlt": "Gregory Lawrence, participante del programa DFREE",
           "title": "",
           "text": "He pagado mis tarjetas de crédito con el método de la bola de nieve y actualmente estoy en proceso de comprar una casa por mi cuenta."
         },
         "diana": {
           "name": "Diana Belle",
+          "imageAlt": "Diana Belle, miembro de Clear View Baptist Church y participante del programa DFREE",
           "title": "Iglesia Bautista Clear View",
           "text": "Ahora administro mejor mis finanzas tras haber pasado por este proceso. Estoy trabajando para dejar un legado a mis hijas."
         },
