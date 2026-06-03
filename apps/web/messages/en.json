@@ -61,9 +61,14 @@
     "subtext": "We always want to hear from you! Feel free to reach out to us and we will get back to you as soon as possible.",
     "contactCta": "Connect with us",
     "newsletterCta": "Subscribe to newsletter",
+    "placeholderName": "Enter full name",
     "placeholderText": "Enter email address",
     "buttonText": "Submit",
-    "privacyNote": "By subscribing, you agree to our privacy policy"
+    "privacyNote": "By subscribing, you agree to our privacy policy",
+    "fullNameLabel": "Full name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "messageLabel": "Leave a message"
   },
   "nav": {
     "aboutUs": "About Us",
@@ -407,7 +412,6 @@
   "about": {
     "hero": {}
   },
-
   "finfest": {
     "hero": {
       "mainTitle": "FinFE$T financial festival for everyone",
@@ -499,6 +503,19 @@
       "title": "FinFE$T over the years",
       "label": "Photo Gallery",
       "subtitle": "Our favourite memories from past events"
+    },
+    "buildWealth": {
+      "title": "<primary>FinFE$T</primary> 2025",
+      "subtitle": "Free Resources to Build Wealth and Protect Your Health!",
+      "imageAlt": "dfree fest",
+      "scheduleBtn": "Event Schedule",
+      "speakersBtn": "Speaker profiles",
+      "partnerBtn": "Partner with DFREE®"
+    },
+    "experience": {
+      "title": "The <primary>FinFE$T</primary> Experience",
+      "paragraph1": "FinFE$T focused on equipping families with valuable financial insights and practical strategies by providing over 60 Free Resources including health screening stations by RWJBarnabas Health (RWJBH), private financial consultations by Prudential’s Financial professionals, credit counseling by GreenPath.",
+      "paragraph2": "Live presentations and breakout sessions by subject matter experts, as well as books and resources from several other partners – real time solutions all under one roof to support the overall well-being of our community. Additionally, FinFE$T featured a Job Fair and Resource Fair that connected attendees with employment opportunities and essential services to help them thrive."
     }
   },
   "bdc": {

@@ -75,7 +75,7 @@ const NAV_CONFIG: NavItemConfig[] = [
         width: "w-[130px]",
       },
       { labelKey: "attendEvents", href: "", width: "w-[125px]" },
-      { labelKey: "contactUs", href: "#footer", width: "w-[105px]" },
+      { labelKey: "contactUs", href: "/contact", width: "w-[105px]" },
     ],
   },
 ];
@@ -167,7 +167,7 @@ export const Header = () => {
             }
       }
     >
-      <ComponentLayout className="flex h-16 items-center justify-between md:h-[72px]">
+      <ComponentLayout className="flex h-16 items-center justify-between md:h-18">
         <div className="flex justify-between w-full">
           <Link
             href="/"
@@ -220,7 +220,7 @@ export const Header = () => {
                       href={subItem.href}
                       className={cn(
                         "inline-flex min-h-12 items-center justify-center rounded-sm px-3 py-2 text-center text-sm font-bold leading-snug whitespace-normal text-neutral-1000 transition-colors hover:bg-neutral-200",
-                        subItem.width || "w-[130px]",
+                        subItem.width || "w-32.5",
                       )}
                     >
                       {t(subItem.labelKey)}
