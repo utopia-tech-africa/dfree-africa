@@ -104,9 +104,14 @@
     "subtext": "Nous sommes toujours ravis de vous lire ! N'hésitez pas à nous contacter et nous vous répondrons dans les plus brefs délais.",
     "contactCta": "Contactez-nous",
     "newsletterCta": "S'abonner à la newsletter",
+    "placeholderName": "Entrez votre nom complet",
     "placeholderText": "Entrez votre adresse e-mail",
     "buttonText": "Envoyer",
-    "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité"
+    "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité",
+    "fullNameLabel": "Nom complet",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "messageLabel": "Laisser un message"
   },
   "nav": {
     "aboutUs": "À Propos",
@@ -554,6 +559,19 @@
       "title": "FinFE$T au fil des années",
       "label": "Galerie photo",
       "subtitle": "Nos plus beaux souvenirs des éditions passées"
+    },
+    "buildWealth": {
+      "title": "<primary>FinFE$T</primary> 2025",
+      "subtitle": "Des ressources gratuites pour créer de la richesse et protéger votre santé !",
+      "imageAlt": "dfree fest",
+      "scheduleBtn": "Programme de l'événement",
+      "speakersBtn": "Profils des conférenciers",
+      "partnerBtn": "Devenir partenaire de DFREE®"
+    },
+    "experience": {
+      "title": "L'Expérience <primary>FinFE$T</primary>",
+      "paragraph1": "FinFE$T s'est concentré sur l'acquisition par les familles de précieuses perspectives financières et de stratégies pratiques en fournissant plus de 60 ressources gratuites, notamment des stations de dépistage de santé par RWJBarnabas Health (RWJBH), des consultations financières privées par des professionnels de Prudential, et des conseils en matière de crédit par GreenPath.",
+      "paragraph2": "Des présentations en direct et des ateliers animés par des experts en la matière, ainsi que des livres et des ressources de plusieurs autres partenaires - des solutions en temps réel sous un même toit pour soutenir le bien-être général de notre communauté. De plus, FinFE$T a proposé un salon de l'emploi et un salon des ressources qui ont mis les participants en contact avec des opportunités d'emploi et des services essentiels pour les aider à s'épanouir."
     }
   },
   "bdc": {
@@ -842,12 +860,10 @@
       "title": "Impact par région",
       "subtitle": "Transformation des paysages financiers à travers les communautés africaines",
       "learnMore": "En savoir plus",
-
       "button": {
         "buttonText": "Soutenir une communauté",
         "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       },
-
       "countries": {
         "ghana": {
           "name": "Ghana",
@@ -973,7 +989,6 @@
       "description": "Avec le soutien de partenaires dévoués et de leaders communautaires, nos initiatives génèrent un impact mesurable et créent un changement durable dans tout l'Ouganda."
     }
   },
-
   "leadershipInstitute": {
     "hero": {
       "preTitle": "Une initiative de la Fondation DFREE®",

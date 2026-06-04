@@ -104,9 +104,14 @@
     "subtext": "¡Siempre nos encanta saber de ti! No dudes en contactarnos y te responderemos lo antes posible.",
     "contactCta": "Contáctanos",
     "newsletterCta": "Suscribirse al boletín",
+    "placeholderName": "Introduce tu nombre completo",
     "placeholderText": "Introduce tu correo electrónico",
     "buttonText": "Enviar",
-    "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad"
+    "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad",
+    "fullNameLabel": "Nombre completo",
+    "emailLabel": "Correo electrónico",
+    "phoneLabel": "Teléfono",
+    "messageLabel": "Dejar un mensaje"
   },
   "nav": {
     "aboutUs": "Sobre Nosotros",
@@ -554,6 +559,19 @@
       "title": "FinFE$T a través de los años",
       "label": "Galería de fotos",
       "subtitle": "Nuestros recuerdos favoritos de eventos pasados"
+    },
+    "buildWealth": {
+      "title": "<primary>FinFE$T</primary> 2025",
+      "subtitle": "¡Recursos gratuitos para generar riqueza y proteger su salud!",
+      "imageAlt": "dfree fest",
+      "scheduleBtn": "Programa del evento",
+      "speakersBtn": "Perfiles de ponentes",
+      "partnerBtn": "Asóciese con DFREE®"
+    },
+    "experience": {
+      "title": "La Experiencia <primary>FinFE$T</primary>",
+      "paragraph1": "FinFE$T se centró en equipar a las familias con valiosos conocimientos financieros y estrategias prácticas mediante el suministro de más de 60 recursos gratuitos, incluyendo estaciones de exámenes de salud de RWJBarnabas Health (RWJBH), consultas financieras privadas por parte de profesionales financieros de Prudential, y asesoría de crédito por GreenPath.",
+      "paragraph2": "Presentaciones en vivo y sesiones de trabajo a cargo de expertos en la materia, así como libros y recursos de otros socios: soluciones en tiempo real bajo un mismo techo para apoyar el bienestar general de nuestra comunidad. Además, FinFE$T contó con una Feria de Empleo y una Feria de Recursos que conectó a los asistentes con oportunidades de trabajo y servicios esenciales para ayudarlos a prosperar."
     }
   },
   "bdc": {
