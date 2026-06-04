@@ -230,7 +230,7 @@ export const Events = ({
             </div>
 
             <div className="mt-4 md:hidden flex justify-center">
-              <Link href={""} className="w-fit">
+              <Link href="/events" className="w-fit">
                 <Button
                   variant="default"
                   size="default"

@@ -50,6 +50,7 @@ export const FinfestHero = async () => {
               alt={t("imageAlt")}
               priority
               fill
+              sizes="100vw"
               className="object-cover"
             />
 

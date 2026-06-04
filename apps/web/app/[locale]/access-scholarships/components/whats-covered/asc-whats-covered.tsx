@@ -36,6 +36,7 @@ export const ASCWhatsCovered = async () => {
               src={CARD_IMAGES[0]}
               alt={t("programAccess.title")}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />
@@ -62,6 +63,7 @@ export const ASCWhatsCovered = async () => {
               src={CARD_IMAGES[1]}
               alt={t("eventParticipation.title")}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />

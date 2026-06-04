@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { CarouselPlaybackRootContext } from "./carousel-playback-context";
 
 const SCROLL_EDGE_THRESHOLD = 10;
 
@@ -117,92 +118,94 @@ export const Carousel = ({
   }, [autoplay, autoplayInterval, activeIndex, totalSlides]);
 
   return (
-    <div className={cn("relative w-full", className)}>
-      <div
-        className={cn(
-          "-mx-4 md:-mx-10 lg:-mx-20 overflow-hidden",
-          viewportClassName,
-        )}
-      >
+    <CarouselPlaybackRootContext.Provider value={scrollContainerRef}>
+      <div className={cn("relative w-full", className)}>
         <div
-          ref={scrollContainerRef}
-          onScroll={updateScrollState}
           className={cn(
-            "flex gap-6 overflow-x-auto overflow-y-hidden px-4 md:px-10 lg:px-20 pb-6 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-            containerClassName,
+            "-mx-4 md:-mx-10 lg:-mx-20 overflow-hidden",
+            viewportClassName,
           )}
-          style={{ msOverflowStyle: "none" }}
         >
-          {React.Children.map(children, (child, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                slideRefs.current[index] = el;
-              }}
-              className={cn(
-                "shrink-0 select-none",
-                slideClassName ||
-                  "min-w-[320px] md:min-w-[360px] lg:min-w-[405px] w-[320px] md:w-[360px] lg:w-[405px]",
-              )}
-            >
-              {child}
+          <div
+            ref={scrollContainerRef}
+            onScroll={updateScrollState}
+            className={cn(
+              "flex gap-6 overflow-x-auto overflow-y-hidden px-4 md:px-10 lg:px-20 pb-6 scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+              containerClassName,
+            )}
+            style={{ msOverflowStyle: "none" }}
+          >
+            {React.Children.map(children, (child, index) => (
+              <div
+                key={index}
+                ref={(el) => {
+                  slideRefs.current[index] = el;
+                }}
+                className={cn(
+                  "shrink-0 select-none",
+                  slideClassName ||
+                    "min-w-[320px] md:min-w-[360px] lg:min-w-[405px] w-[320px] md:w-[360px] lg:w-[405px]",
+                )}
+              >
+                {child}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Navigation */}
+        {showNavigation && (
+          <div className="flex items-center justify-between mt-6">
+            {/* Dots */}
+            <div className="flex items-center gap-2">
+              {(() => {
+                const numDots = Math.min(5, totalSlides);
+                let startDot = Math.max(0, activeIndex - 2);
+                if (startDot + numDots > totalSlides) {
+                  startDot = Math.max(0, totalSlides - numDots);
+                }
+                const visibleDots = Array.from({ length: numDots }).map(
+                  (_, i) => startDot + i,
+                );
+
+                return visibleDots.map((slideIndex) => (
+                  <button
+                    key={slideIndex}
+                    onClick={() => scrollToIndex(slideIndex)}
+                    className={cn(
+                      "h-2 w-2 rounded-full transition-all duration-300",
+                      activeIndex === slideIndex
+                        ? "bg-neutral-900 scale-110"
+                        : "bg-neutral-300 hover:bg-neutral-400",
+                    )}
+                    aria-label={`Go to slide ${slideIndex + 1}`}
+                  />
+                ));
+              })()}
             </div>
-          ))}
-        </div>
+
+            {/* Arrows */}
+            <div className="flex items-center gap-3">
+              <button
+                onClick={goPrev}
+                disabled={!canScrollLeft}
+                className="p-2 transition disabled:pointer-events-none disabled:opacity-40 hover:bg-neutral-100"
+                aria-label="Previous slide"
+              >
+                <FaArrowLeft className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
+              </button>
+              <button
+                onClick={goNext}
+                disabled={!canScrollRight}
+                className="p-2 transition disabled:pointer-events-none disabled:opacity-40 hover:bg-neutral-100"
+                aria-label="Next slide"
+              >
+                <FaArrowRight className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
+              </button>
+            </div>
+          </div>
+        )}
       </div>
-
-      {/* Navigation */}
-      {showNavigation && (
-        <div className="flex items-center justify-between mt-6">
-          {/* Dots */}
-          <div className="flex items-center gap-2">
-            {(() => {
-              const numDots = Math.min(5, totalSlides);
-              let startDot = Math.max(0, activeIndex - 2);
-              if (startDot + numDots > totalSlides) {
-                startDot = Math.max(0, totalSlides - numDots);
-              }
-              const visibleDots = Array.from({ length: numDots }).map(
-                (_, i) => startDot + i,
-              );
-
-              return visibleDots.map((slideIndex) => (
-                <button
-                  key={slideIndex}
-                  onClick={() => scrollToIndex(slideIndex)}
-                  className={cn(
-                    "h-2 w-2 rounded-full transition-all duration-300",
-                    activeIndex === slideIndex
-                      ? "bg-neutral-900 scale-110"
-                      : "bg-neutral-300 hover:bg-neutral-400",
-                  )}
-                  aria-label={`Go to slide ${slideIndex + 1}`}
-                />
-              ));
-            })()}
-          </div>
-
-          {/* Arrows */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={goPrev}
-              disabled={!canScrollLeft}
-              className="p-2 transition disabled:pointer-events-none disabled:opacity-40 hover:bg-neutral-100"
-              aria-label="Previous slide"
-            >
-              <FaArrowLeft className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
-            </button>
-            <button
-              onClick={goNext}
-              disabled={!canScrollRight}
-              className="p-2 transition disabled:pointer-events-none disabled:opacity-40 hover:bg-neutral-100"
-              aria-label="Next slide"
-            >
-              <FaArrowRight className="size-8 text-neutral-900 hover:opacity-80 cursor-pointer" />
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
+    </CarouselPlaybackRootContext.Provider>
   );
 };

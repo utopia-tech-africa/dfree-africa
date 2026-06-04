@@ -50,6 +50,7 @@ export const SupportTheInstitute = async () => {
               alt={t("imageAlt")}
               fill
               priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

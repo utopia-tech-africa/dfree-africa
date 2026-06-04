@@ -1,6 +1,6 @@
 import ComponentLayout from "@/components/component-layout";
 import { PageLayout } from "@/components/page-layout";
-import { createMetadata } from "@/lib/seo";
+import { africaSectionKeywords, createMetadata } from "@/lib/seo";
 import { getProjectBySlug } from "@/lib/sanity/projects";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("project.title"),
       description: t("project.descriptionFallback"),
       path: `/${locale}/africa/projects/${slug}`,
+      keywords: [...africaSectionKeywords],
     });
   }
   const description =
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: project.title,
     description,
     path: `/${locale}/africa/projects/${slug}`,
+    keywords: [...africaSectionKeywords, project.title],
   });
 }
 

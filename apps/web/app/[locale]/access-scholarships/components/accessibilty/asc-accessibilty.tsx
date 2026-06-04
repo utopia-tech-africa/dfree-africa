@@ -24,6 +24,7 @@ export const ASCAccessibilty = async () => {
           }
           alt={t("patternAlt")}
           fill
+          sizes="(max-width: 768px) 100vw, 700px"
           className="object-contain"
           priority
         />
@@ -68,6 +69,7 @@ export const ASCAccessibilty = async () => {
               }
               alt={t("imageAlt")}
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

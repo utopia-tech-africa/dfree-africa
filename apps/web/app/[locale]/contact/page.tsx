@@ -1,29 +1,26 @@
-import Image from "next/image";
-import ComponentLayout from "@/components/component-layout";
-import { ContactInfo, ContactForm } from "./components";
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { ContactPageContent } from "./contact-page-content";
 
-const imageUrl =
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1776351125/031576e6e7fc7d974a347d2ef92814609b299f22_sdvdnm.webp";
+type Props = { params: Promise<{ locale: string }> };
 
-const ContactPage = () => {
-  return (
-    <section className="px-4 md:px-8 pt-18">
-      <div className="relative overflow-hidden rounded-2xl">
-        <Image
-          src={imageUrl}
-          alt="contact background"
-          fill
-          className="object-cover inset-0 w-full h-full"
-        />
-        <div className="absolute inset-0 bg-[#000000B2]" />
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return createMetadata({
+    title: t("contact.title"),
+    description: t("contact.description"),
+    path: `/${locale}/contact`,
+    keywords: [
+      "contact DFREE Foundation",
+      "nonprofit partnerships",
+      "volunteer DFREE",
+      "financial education inquiries",
+    ],
+  });
+}
 
-        <ComponentLayout className="relative z-10 grid gap-10 md:gap-16 lg:grid-cols-2 py-6 md:py-10">
-          <ContactInfo />
-          <ContactForm />
-        </ComponentLayout>
-      </div>
-    </section>
-  );
-};
+const ContactPage = () => <ContactPageContent />;
 
 export default ContactPage;

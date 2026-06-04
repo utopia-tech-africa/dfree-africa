@@ -107,6 +107,7 @@ function YearCard({ imageSrc, year, onClick, className }: YearCardProps) {
                     alt=""
                     width={615}
                     height={343}
+                    sizes="(max-width: 768px) 100vw, 615px"
                     className="absolute inset-0 size-full object-cover"
                     unoptimized={imageSrc.startsWith("https://cdn.sanity.io")}
                   />
@@ -223,6 +224,7 @@ function MediaGalleryViewer({
                         alt={slideItem.caption ?? galleryTitle}
                         width={1160}
                         height={571}
+                        sizes="(max-width: 768px) 100vw, 1160px"
                         className="h-full w-full object-contain"
                         unoptimized={slideItem.url.startsWith(
                           "https://cdn.sanity.io",

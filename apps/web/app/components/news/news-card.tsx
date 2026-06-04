@@ -45,6 +45,7 @@ export const NewsCard: FC<NewsCardProps> = ({
             alt={title}
             width={405}
             height={275}
+            sizes="(max-width: 768px) 100vw, 400px"
             className="h-60 w-full object-cover transition-transform duration-400 group-hover:scale-110 ease-out "
           />
         </div>

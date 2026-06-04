@@ -30,6 +30,7 @@ export const Filings = async () => {
             src="https://res.cloudinary.com/dan9camhs/image/upload/v1779293266/filings_image_logo_tuelip.png"
             alt={t("title")}
             fill
+            sizes="128px"
             className="object-contain"
           />
         </div>

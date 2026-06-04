@@ -1,14 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useRef, useState } from "react";
+import { useRef, useState, type RefObject } from "react";
+import { useInViewVideo } from "@/hooks/use-in-view-video";
 import { Volume2, VolumeX } from "lucide-react";
 import type { TestimonialMeta } from "@/lib/testimonials";
 
 type Props = {
   testimonial: TestimonialMeta;
+  playbackRootRef?: RefObject<HTMLElement | null>;
 };
 
-const TestimonialCard = ({ testimonial }: Props) => {
+const TestimonialCard = ({ testimonial, playbackRootRef }: Props) => {
   const t = useTranslations("home.testimonials");
   const baseKey = `items.${testimonial.id}`;
 
@@ -16,6 +20,8 @@ const TestimonialCard = ({ testimonial }: Props) => {
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(true);
+
+  useInViewVideo(videoRef, { rootRef: playbackRootRef });
 
   const toggleMute = () => {
     if (!videoRef.current) return;
@@ -29,17 +35,27 @@ const TestimonialCard = ({ testimonial }: Props) => {
         className="bg-white p-4 sm:p-6 flex flex-col items-center text-center 
         min-w-[85%] sm:min-w-[60%] md:min-w-100 lg:min-w-112.5"
       >
-        {/* vid testimonial */}
         <div className="w-full aspect-video mb-4 relative">
           <video
             ref={videoRef}
             src={testimonial.videoUrl}
             className="w-full h-full rounded-lg object-cover"
-            autoPlay
             playsInline
             muted
             loop
-          />
+            preload="metadata"
+            crossOrigin="anonymous"
+          >
+            {testimonial.captionsSrc && (
+              <track
+                kind="captions"
+                src={testimonial.captionsSrc}
+                srcLang="en"
+                label="English"
+                default
+              />
+            )}
+          </video>
 
           <div className="absolute inset-0 rounded-lg pointer-events-none bg-[linear-gradient(180deg,rgba(102,102,102,0)_64.65%,rgba(0,0,0,0.52)_85.58%)]" />
 
@@ -48,17 +64,22 @@ const TestimonialCard = ({ testimonial }: Props) => {
           </div>
 
           <button
+            type="button"
             onClick={toggleMute}
             className="absolute top-2 right-2 bg-[#AFAFAF40] text-white p-2 rounded-full"
+            aria-label={muted ? t("unmuteVideo") : t("muteVideo")}
           >
-            {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+            {muted ? (
+              <VolumeX size={18} aria-hidden />
+            ) : (
+              <Volume2 size={18} aria-hidden />
+            )}
           </button>
         </div>
       </div>
     );
   }
 
-  // text testimonial
   return (
     <div
       className="bg-white p-6 sm:p-8 flex flex-col items-center justify-between gap-y-6 text-center 
@@ -77,10 +98,11 @@ const TestimonialCard = ({ testimonial }: Props) => {
         >
           <Image
             src={testimonial.image!}
-            alt={t(`${baseKey}.name`)}
+            alt={t(`${baseKey}.imageAlt`)}
             width={58}
             height={58}
             className="object-cover w-full h-full rounded-full"
+            sizes="64px"
           />
         </div>
 

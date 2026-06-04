@@ -19,6 +19,7 @@ export function OurImpact() {
           className="object-left"
           height={900}
           width={900}
+          sizes="(max-width: 768px) 100vw, 60vw"
           priority
         />
       </div>
@@ -34,6 +35,7 @@ export function OurImpact() {
               src="https://res.cloudinary.com/dan9camhs/image/upload/v1778687575/impact_image_vl1hdu.png"
               alt="Impact Statistics"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
             />
           </div>
