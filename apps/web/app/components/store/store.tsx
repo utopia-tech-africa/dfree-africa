@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { StoreBgPattern } from "@/assets/svg";
 import ComponentLayout from "@/components/component-layout";
+import { StoreProductsJsonLd } from "@/components/structured-data/store-products-json-ld";
 import { LeftPanel, Carousel } from "./components";
 import { getFeaturedStore } from "@/lib/sanity";
 
@@ -9,12 +10,14 @@ export const Store = async () => {
 
   return (
     <section className="relative w-full flex flex-col justify-center overflow-hidden bg-primary-500 py-12 md:py-2 mb-10 md:mb-13 lg:mb-20">
+      <StoreProductsJsonLd />
       {/* Background pattern */}
       <div className="absolute inset-y-0 left-0 w-full pointer-events-none">
         <Image
           src={StoreBgPattern}
           alt=""
           fill
+          sizes="100vw"
           className="object-contain object-left"
         />
       </div>

@@ -7,9 +7,11 @@ import ComponentLayout from "../component-layout";
 import { Mail, Phone } from "lucide-react";
 import { FOOTER_SECTIONS, SOCIAL_LINKS } from "@/constants/footer-items";
 import { cn } from "@/lib/utils";
+import { FooterCookieSettings } from "./footer-cookie-settings";
 
 export const Footer = async () => {
   const t = await getTranslations("footer");
+  const year = new Date().getFullYear();
 
   return (
     <ComponentLayout
@@ -51,7 +53,7 @@ export const Footer = async () => {
             <h4 className="text-lg font-bold">{t("connectWithUs")}</h4>
 
             <div className="flex items-center gap-3">
-              <Phone size={20} />
+              <Phone size={20} aria-hidden />
               <span className="text-sm lg:text-base">(844) 693-3733</span>
             </div>
 
@@ -59,7 +61,7 @@ export const Footer = async () => {
               href="mailto:info@dfree.com"
               className="flex items-center gap-3"
             >
-              <Mail size={20} />
+              <Mail size={20} aria-hidden />
               <span className="text-sm lg:text-base">info@dfree.com</span>
             </Link>
 
@@ -73,6 +75,7 @@ export const Footer = async () => {
                     rel={
                       target === "_blank" ? "noopener noreferrer" : undefined
                     }
+                    aria-label={href}
                   >
                     <Icon size={20} />
                   </Link>
@@ -126,22 +129,12 @@ export const Footer = async () => {
       </div>
 
       <div className="mt-6 flex gap-5 w-full flex-col md:flex-row md:items-center justify-center text-sm">
-        <span className="text-center">{t("copyright")}</span>
+        <span className="text-center">{t("copyright", { year })}</span>
 
         <div className="flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-8 underline text-xs">
-          <Link
-            href="https://dfreefoundation.org/privacy-policy/"
-            target="_blank"
-          >
-            {t("privacyPolicy")}
-          </Link>
-          <Link
-            href="https://dfreefoundation.org/terms-conditions/"
-            target="_blank"
-          >
-            {t("termsOfService")}
-          </Link>
-          <Link href="#">{t("cookiesSettings")}</Link>
+          <Link href="/privacy-policy">{t("privacyPolicy")}</Link>
+          <Link href="/terms-of-service">{t("termsOfService")}</Link>
+          <FooterCookieSettings label={t("cookiesSettings")} />
         </div>
       </div>
     </ComponentLayout>

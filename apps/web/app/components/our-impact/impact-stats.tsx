@@ -1,12 +1,14 @@
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 import { IMPACT_STAT_KEYS } from "@/lib/impact";
 import { ImpactStatCard } from "./impact-stat-card";
+import { Button } from "@/components/ui/button";
 
 export async function ImpactStats() {
   const t = await getTranslations("home.ourImpact");
 
   return (
-    <div>
+    <div className="flex flex-col gap-6">
       <div className="grid w-full max-w-[343px] grid-cols-2 gap-x-8 gap-y-10 md:h-[321px] md:max-w-[408px] lg:max-w-[700px] md:grid-rows-2 md:gap-x-32 md:gap-y-4">
         {IMPACT_STAT_KEYS.map((key) => (
           <ImpactStatCard
@@ -20,6 +22,19 @@ export async function ImpactStats() {
       <p className="font-montserrat font-700 leading-1.2 hidden md:block text-[22px] text-neutral-900 text-nowrap -mt-10 text-center">
         {t("text")}
       </p>
+      <p className="text-xs text-neutral-600 leading-relaxed max-w-lg">
+        {t("dataSource")}
+      </p>
+      <Link
+        href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-fit"
+      >
+        <Button variant="default" size="lg" className="font-semibold">
+          {t("donationCta")}
+        </Button>
+      </Link>
     </div>
   );
 }

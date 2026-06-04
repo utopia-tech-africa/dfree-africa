@@ -17,6 +17,7 @@ export async function BDCImpact() {
           src={BDCImpactPattern}
           alt={t("patternAlt")}
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>

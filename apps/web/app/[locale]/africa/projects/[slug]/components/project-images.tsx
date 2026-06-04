@@ -43,6 +43,7 @@ export const ProjectImages = ({ project }: ProjectImagesProps) => {
                   src={img}
                   alt={`Project image ${index + 1}`}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 66vw"
                   className="object-cover"
                 />
               </div>
@@ -58,6 +59,7 @@ export const ProjectImages = ({ project }: ProjectImagesProps) => {
                 src={img}
                 alt={`Project image ${index + 1}`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>

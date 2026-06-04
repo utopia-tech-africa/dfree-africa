@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ChevronRight, MapPin, Clock } from "lucide-react";
 
 export interface ContentCardProps {
@@ -65,6 +65,7 @@ export const ContentCard = ({
           alt={title}
           width={405}
           height={275}
+          sizes="(max-width: 768px) 100vw, 405px"
           className="h-[240px] w-full object-cover"
         />
 
@@ -101,7 +102,7 @@ export const ContentCard = ({
 
             <div className="flex items-center gap-2">
               <Clock size={16} />
-              <span>09:00 AM - 11:00 AM GMT</span>
+              <span>09:00 AM - 11:00 AM ET</span>
             </div>
           </div>
         )}

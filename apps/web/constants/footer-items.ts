@@ -39,8 +39,7 @@ export const FOOTER_SECTIONS = [
       },
       {
         key: "volunteer",
-        href: "#",
-        // target: "_blank",
+        href: "/contact",
       },
     ],
   },

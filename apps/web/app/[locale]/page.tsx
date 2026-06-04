@@ -34,7 +34,7 @@ const Home = () => {
         <Testimonials />
         <Events />
         <Store />
-        <FeaturedNews compact featured={true} />
+        <FeaturedNews compact featured allowEmptyState={false} />
       </div>
     </>
   );

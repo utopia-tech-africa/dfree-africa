@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import ComponentLayout from "@/components/component-layout";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
+import { createMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import {
   NewsFilter,
@@ -17,10 +19,30 @@ import { routing } from "@/i18n/routing";
 
 const NEWS_PER_PAGE = 12;
 
-const NewsPage = async (props: {
+type PageProps = {
   params: Promise<{ locale: string }>;
   searchParams: Promise<{ category?: string; page?: string }>;
-}) => {
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return createMetadata({
+    title: t("news.title"),
+    description: t("news.description"),
+    path: `/${locale}/news`,
+    keywords: [
+      "DFREE news",
+      "financial empowerment press",
+      "nonprofit updates",
+      "community campaigns news",
+    ],
+  });
+}
+
+const NewsPage = async (props: PageProps) => {
   const { locale } = await props.params;
   const { category, page } = await props.searchParams;
 

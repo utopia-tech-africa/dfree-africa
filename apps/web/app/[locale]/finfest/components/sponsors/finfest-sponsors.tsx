@@ -65,6 +65,7 @@ export const FinfestSponsors = async () => {
                     alt={sponsor.name}
                     height={500}
                     width={500}
+                    sizes="(max-width: 640px) 50vw, 200px"
                     className="w-full h-full object-contain pointer-events-none px-2"
                   />
                 </div>

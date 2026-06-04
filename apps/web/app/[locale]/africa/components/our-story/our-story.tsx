@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import { useInViewVideo } from "@/hooks/use-in-view-video";
 import { Volume2, VolumeX } from "lucide-react";
 import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
@@ -11,6 +12,8 @@ export const OurStory = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMuted, setIsMuted] = useState(true);
   const t = useTranslations("africa.ourStory");
+
+  useInViewVideo(videoRef);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -35,7 +38,6 @@ export const OurStory = () => {
             ref={videoRef}
             className="w-full h-full object-cover rounded-lg"
             src="/vid/our-story-vid.mp4"
-            autoPlay
             muted={isMuted}
             loop
             playsInline

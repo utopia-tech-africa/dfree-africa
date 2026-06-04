@@ -73,6 +73,7 @@ export const CampaignsWhatWeDo = () => {
             alt={t(`items.${key}.title`)}
             fill
             priority={index === 0}
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className={`object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${
               index === activeIndex ? "opacity-100" : "opacity-0"
             }`}

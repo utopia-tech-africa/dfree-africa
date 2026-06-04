@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import { useCarouselPlaybackRoot } from "@/components/carousel/carousel-playback-context";
+import { useInViewVideo } from "@/hooks/use-in-view-video";
 import {
   PiQuotes,
   PiQuotesDuotone,
@@ -23,6 +25,9 @@ export const TestimonialCard = ({
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+  const carouselRoot = useCarouselPlaybackRoot();
+
+  useInViewVideo(videoRef, { rootRef: carouselRoot ?? undefined });
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -38,10 +43,10 @@ export const TestimonialCard = ({
         <video
           ref={videoRef}
           src={testimonial.thumbnail}
-          autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 

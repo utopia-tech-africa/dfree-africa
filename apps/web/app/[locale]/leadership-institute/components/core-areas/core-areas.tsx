@@ -48,6 +48,7 @@ export default async function CoreAreas() {
               src={item.image}
               alt={t(`pillars.${item.key}.imageAlt`)}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
 

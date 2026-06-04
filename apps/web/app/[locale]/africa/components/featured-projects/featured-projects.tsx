@@ -45,6 +45,7 @@ export const FeaturedProjects = ({
               className="object-left"
               height={900}
               width={900}
+              sizes="(max-width: 768px) 100vw, 60vw"
               priority
             />
           </div>

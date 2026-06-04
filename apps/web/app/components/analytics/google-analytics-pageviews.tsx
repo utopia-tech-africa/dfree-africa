@@ -2,6 +2,10 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import {
+  CONSENT_EVENT,
+  getCookieConsent,
+} from "@/components/cookie-consent/cookie-consent";
 
 const GA_MEASUREMENT_ID = "G-TLZZFHYGVW";
 
@@ -22,13 +26,20 @@ export function GoogleAnalyticsPageviews() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (!pathname || typeof window === "undefined" || !window.gtag) return;
-    const query = searchParams.toString();
-    const pagePath = query ? `${pathname}?${query}` : pathname;
+    const trackPageview = () => {
+      if (getCookieConsent() !== "accepted") return;
+      if (!pathname || typeof window === "undefined" || !window.gtag) return;
+      const query = searchParams.toString();
+      const pagePath = query ? `${pathname}?${query}` : pathname;
 
-    window.gtag("config", GA_MEASUREMENT_ID, {
-      page_path: pagePath,
-    });
+      window.gtag("config", GA_MEASUREMENT_ID, {
+        page_path: pagePath,
+      });
+    };
+
+    trackPageview();
+    window.addEventListener(CONSENT_EVENT, trackPageview);
+    return () => window.removeEventListener(CONSENT_EVENT, trackPageview);
   }, [pathname, searchParams]);
 
   return null;

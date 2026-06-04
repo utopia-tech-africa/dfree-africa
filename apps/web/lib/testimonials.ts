@@ -17,6 +17,7 @@ export type TestimonialMeta = {
   id: TestimonialKey;
   image?: StaticImageData | string;
   videoUrl?: string;
+  captionsSrc?: string;
 };
 
 export const TESTIMONIALS: TestimonialMeta[] = [
@@ -49,15 +50,18 @@ export const TESTIMONIALS: TestimonialMeta[] = [
     id: "dee",
     videoUrl:
       "https://res.cloudinary.com/dan9camhs/video/upload/v1776166046/i_am_dfree_Dee_Marshall_wodjae.mp4",
+    captionsSrc: "/captions/dee-marshall.vtt",
   },
   {
     id: "alesia",
     videoUrl:
       "https://res.cloudinary.com/dan9camhs/video/upload/v1776166044/dfree_Testimonial_-_Alesia_Boone_zyfzyv.mp4",
+    captionsSrc: "/captions/alesia-boone.vtt",
   },
   {
     id: "aimy",
     videoUrl:
       "https://res.cloudinary.com/dan9camhs/video/upload/v1776166045/dfree_Testimonial_-_Aimy_Steele_aqhwqu.mp4",
+    captionsSrc: "/captions/aimy-steele.vtt",
   },
 ];

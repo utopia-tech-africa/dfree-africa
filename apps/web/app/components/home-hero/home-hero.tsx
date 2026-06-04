@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { HomeHeroVideo } from "./home-hero-video";
 
 export const HomeHero = async () => {
   const t = await getTranslations("home.hero");
@@ -10,25 +11,18 @@ export const HomeHero = async () => {
   return (
     <section className="relative w-full h-dvh flex items-end overflow-hidden mb-7.5 md:mb-12 lg:mb-23">
       <div className="absolute inset-0">
-        <video
-          className="w-full h-full object-cover"
-          src="/vid/home-hero-vid.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
+        <HomeHeroVideo />
       </div>
 
-      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/50 to-black/30" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/65 to-black/50" />
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-20 pb-16.5 flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-8">
         <div className="w-full lg:max-w-220 flex flex-col items-start gap-4 lg:gap-8 text-left">
-          <h1 className="text-white text-3xl lg:text-[56px] font-bold leading-[110%] lg:leading-[100%] font-montserrat max-w-220">
+          <h1 className="text-white text-3xl lg:text-[56px] font-bold leading-[110%] lg:leading-[100%] font-montserrat max-w-220 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
             {t("title")}
           </h1>
 
-          <p className="text-white text-sm sm:text-base lg:text-lg font-light leading-[140%] lg:leading-[130%] font-poppins max-w-160">
+          <p className="text-white text-sm sm:text-base lg:text-lg font-light leading-[140%] lg:leading-[130%] font-poppins max-w-160 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
             {t("subtitle")}
           </p>
 
@@ -45,6 +39,7 @@ export const HomeHero = async () => {
             <Link
               href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <Button
                 size="lg"
@@ -60,13 +55,12 @@ export const HomeHero = async () => {
           <div className="relative w-70 h-70 flex items-center justify-center">
             <div className="absolute inset-0 rounded-full border-4 border-[#537034] bg-white/20 backdrop-blur-[10px]" />
 
-            {/* curved text */}
             <svg
               viewBox="0 0 280 280"
               className="absolute inset-0 w-full h-full z-20 pointer-events-none"
+              aria-hidden
             >
               <defs>
-                {/* centered top half arc inside circle */}
                 <path
                   id="topArc"
                   d="M 35 140 A 105 105 0 0 1 245 140"
@@ -89,19 +83,22 @@ export const HomeHero = async () => {
 
             <div className="relative z-10 mt-8">
               <Image
-                src={
-                  "https://res.cloudinary.com/dan9camhs/image/upload/v1773225508/22c51328-5a60-4b0b-9281-53025c2bc8b8.webp"
-                }
+                src="https://res.cloudinary.com/dan9camhs/image/upload/v1773225508/22c51328-5a60-4b0b-9281-53025c2bc8b8.webp"
                 width={108}
                 height={140}
-                alt="Book"
+                alt={t("bookAlt")}
                 className="drop-shadow-2xl -rotate-2deg"
                 priority
+                sizes="108px"
               />
             </div>
 
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-10">
-              <Link href={"https://store.dfree.com/"} target="_blank">
+              <Link
+                href="https://store.dfree.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   size="lg"
                   className="hover-bg-primary-600 px-12 py-6 font-poppins font-medium text-lg"

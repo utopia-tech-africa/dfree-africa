@@ -80,7 +80,11 @@ const Testimonials = () => {
             className="flex gap-4 overflow-x-auto px-4 md:px-10 lg:px-20 scrollbar-hide"
           >
             {TESTIMONIALS.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+              <TestimonialCard
+                key={testimonial.id}
+                testimonial={testimonial}
+                playbackRootRef={scrollRef}
+              />
             ))}
           </div>
 
