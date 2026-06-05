@@ -16,14 +16,14 @@ export const FOOTER_SECTIONS = [
       { key: "dfreeAfrica", href: "/africa" },
       { key: "communityCampaigns", href: "/community-campaigns" },
       { key: "finfest", href: "/finfest" },
-      { key: "dfreeAccessScholarships", href: "/access-scholarships" },
+      { key: "dfreeLeadershipInstitute", href: "/leadership-institute" },
     ],
   },
   {
     title: "getInvolved",
     items: [
       {
-        key: "support",
+        key: "eventSponsorship",
         href: "https://dfree.com/sponsorship-inquiry/",
         target: "_blank",
       },
@@ -44,6 +44,7 @@ export const FOOTER_SECTIONS = [
     ],
   },
 ];
+
 export const SOCIAL_LINKS = [
   {
     icon: Facebook,
