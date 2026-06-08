@@ -75,7 +75,7 @@ const NAV_CONFIG: NavItemConfig[] = [
         width: "w-[130px]",
       },
       { labelKey: "attendEvents", href: "", width: "w-[125px]" },
-      { labelKey: "contactUs", href: "#footer", width: "w-[105px]" },
+      { labelKey: "contactUs", href: "/contact", width: "w-[105px]" },
     ],
   },
 ];
