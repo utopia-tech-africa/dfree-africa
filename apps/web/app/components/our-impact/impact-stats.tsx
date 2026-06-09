@@ -22,19 +22,6 @@ export async function ImpactStats() {
       <p className="font-montserrat font-700 leading-1.2 hidden md:block text-[22px] text-neutral-900 text-nowrap -mt-10 text-center">
         {t("text")}
       </p>
-      <p className="text-xs text-neutral-600 leading-relaxed max-w-lg">
-        {t("dataSource")}
-      </p>
-      <Link
-        href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-fit"
-      >
-        <Button variant="default" size="lg" className="font-semibold">
-          {t("donationCta")}
-        </Button>
-      </Link>
     </div>
   );
 }
