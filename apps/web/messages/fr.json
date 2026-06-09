@@ -108,10 +108,8 @@
     "placeholderText": "Entrez votre adresse e-mail",
     "buttonText": "Envoyer",
     "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité",
-    "fullNameLabel": "Nom complet",
-    "emailLabel": "E-mail",
-    "phoneLabel": "Téléphone",
-    "messageLabel": "Laisser un message"
+    "sendEnquiry": "Envoyer une demande",
+    "sendUsAMessage": "Envoyez-nous un message"
   },
   "nav": {
     "aboutUs": "À Propos",
@@ -217,8 +215,7 @@
       "title": "Visualiser notre impact dans les communautés",
       "description": "Chaque étape franchie représente des vies transformées et un pas de plus vers la liberté financière.",
       "text": "Plusieurs projets communautaires entrepris",
-      "dataSource": "Au T1 2025, données de la plateforme Billion Dollar Challenge.",
-      "donationCta": "Aidez-nous à atteindre 50 M$ — faites un don aujourd'hui",
+
       "stats": {
         "completedProjects": {
           "value": "1900",
@@ -473,14 +470,14 @@
     "hero": {
       "mainTitle": "FinFE$T, le festival financier pour tous",
       "subtitle": "Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels. Rejoignez notre événement communautaire gratuit conçu pour renforcer votre avenir financier.",
-      "registerNow": "S'inscrire maintenant",
+      "registerNow": "Inscription gratuite",
       "eventDate": "13-14 novembre 2026",
       "eventLocation": "Université Kean, Union, New Jersey",
       "imageAlt": "Festival financier FinFest"
     },
     "objective": {
       "title": "L'objectif FinFE$T",
-      "description": "FiNFe$t est un événement communautaire et une expérience interactive avec des outils et des opportunités réels, le tout présenté dans un environnement attrayant et dynamique.",
+      "description": "FinFE$T est un événement communautaire et une expérience interactive offrant des outils et des opportunités concrets dans une ambiance dynamique et stimulante. Ces professionnels ont contribué à façonner les discussions autour de la liberté financière et ont partagé leurs connaissances lors de FinFE$T.",
       "items": {
         "makeMoney": {
           "title": "Comment gagner de l'argent",
@@ -759,7 +756,7 @@
     "hero": {
       "title": "Campagnes communautaires",
       "subtitle": "Des campagnes communautaires dynamiques qui rassemblent églises, groupes civiques et organisations locales pour mettre en œuvre des programmes DFREE® d'autonomisation financière synchronisés. Ces campagnes visent à créer un impact collectif en favorisant l'apprentissage partagé, la responsabilité mutuelle et la célébration communautaire.",
-      "ctaLabel": "Connectez-vous avec nous",
+      "ctaLabel": "Connectez-vous avec DFREE®",
       "ctaHref": "#",
       "imageAlt": "Arrière-plan des campagnes communautaires"
     },
