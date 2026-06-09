@@ -38,7 +38,7 @@ export const FinfestBuildWealth = async () => {
 
       {/* <FinfestVideos /> */}
       <div className="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-2 md:gap-8 mt-4 lg:mt-5">
-        <Link href="#" className="mt-2 w-fit">
+        {/* <Link href="#" className="mt-2 w-fit">
           <Button
             variant="default"
             size="default"
@@ -67,8 +67,13 @@ export const FinfestBuildWealth = async () => {
           >
             {t("speakersBtn")}
           </Button>
-        </Link>
-        <Link href="#" className="mt-2 w-fit">
+        </Link> */}
+        <Link
+          href="https://mailchi.mp/6520839722f8/45aknod6id"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 w-fit"
+        >
           <Button
             variant="default"
             size="default"
