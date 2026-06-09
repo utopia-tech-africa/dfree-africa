@@ -108,10 +108,8 @@
     "placeholderText": "Enter email address",
     "buttonText": "Submit",
     "privacyNote": "By subscribing, you agree to receive periodic emails about DFREE® programs, events, and impact (typically monthly). Unsubscribe anytime. See our Privacy Policy.",
-    "fullNameLabel": "Full name",
-    "emailLabel": "Email",
-    "phoneLabel": "Phone",
-    "messageLabel": "Leave a message"
+    "sendEnquiry": "Send enquiry",
+    "sendUsAMessage": "Send us a message"
   },
   "nav": {
     "aboutUs": "About Us",
@@ -217,8 +215,7 @@
       "title": "Mapping our impact across communities",
       "description": " Every milestone represents lives transformed and a step closer to financial freedom.",
       "text": "Several community projects undertaken",
-      "dataSource": "As of Q1 2025, Billion Dollar Challenge platform data.",
-      "donationCta": "Help us reach $50M — give today",
+
       "stats": {
         "completedProjects": {
           "value": "1900",
@@ -473,14 +470,14 @@
     "hero": {
       "mainTitle": "FinFE$T financial festival for everyone",
       "subtitle": "Learn how to make, manage, and build wealth from industry professionals. Join our free community event designed to empower your financial future.",
-      "registerNow": "Register now",
+      "registerNow": "Free Registration",
       "eventDate": " November 13-14, 2026",
       "eventLocation": "Kean University, Union New Jersey",
       "imageAlt": "FinFest Financial Festival"
     },
     "objective": {
       "title": "The FinFE$T Objective",
-      "description": "FiNFe$t is a community-based event and interactive experience with real tools and opportunities delivered in an engaging and high-energy environment.",
+      "description": " FinFE$T is a community-based event and interactive experience with real tools and opportunities delivered in an engaging and high-energy environment. These professionals have shaped conversations around financial freedom and shared their knowledge at FinFE$T.",
       "items": {
         "makeMoney": {
           "title": "How to make Money",
@@ -759,7 +756,7 @@
     "hero": {
       "title": "Community Campaigns",
       "subtitle": "Dynamic community-wide campaigns that unite churches, civic groups, and local organizations to implement synchronized DFREE® financial empowerment programs. These campaigns are designed to create a collective impact by promoting shared learning, mutual accountability, and community celebration.",
-      "ctaLabel": "Connect with us",
+      "ctaLabel": "Connect with DFREE®",
       "ctaHref": "#",
       "imageAlt": "Community campaigns background"
     },
