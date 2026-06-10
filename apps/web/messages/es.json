@@ -108,10 +108,8 @@
     "placeholderText": "Introduce tu correo electrónico",
     "buttonText": "Enviar",
     "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad",
-    "fullNameLabel": "Nombre completo",
-    "emailLabel": "Correo electrónico",
-    "phoneLabel": "Teléfono",
-    "messageLabel": "Dejar un mensaje"
+    "sendEnquiry": "Enviar consulta",
+    "sendUsAMessage": "Envíanos un mensaje"
   },
   "nav": {
     "aboutUs": "Sobre Nosotros",
@@ -139,8 +137,9 @@
     "connectWithUs": "Conéctate Con Nosotros",
     "subscribeToNewsletter": "Suscríbete Al Boletín",
     "stayConnected": "Mantente Conectado Con Nuestras Últimas Actualizaciones Y Trabajo Transformador",
+    "enterFullName": "Ingresa Tu Nombre Completo",
     "enterEmail": "Ingresa Tu Correo Electrónico",
-    "privacyNote": "Al Suscribirte, Aceptas Nuestra Política De Privacidad",
+    "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad",
     "copyright": "© {year} Fundación DFREE. Todos Los Derechos Reservados.",
     "privacyPolicy": "Política De Privacidad",
     "termsOfService": "Términos De Servicio",
@@ -153,8 +152,8 @@
     "dfreeAfrica": "DFREE® En África",
     "communityCampaigns": "Campañas Comunitarias",
     "finfest": "FinFE$T",
-    "dfreeAccessScholarships": "Becas De Acceso DFREE",
-    "support": "Apoyar",
+    "dfreeLeadershipInstitute": "Instituto de Liderazgo Ascendente DFREE",
+    "eventSponsorship": "Patrocinio de eventos",
     "partner": "Asociarse",
     "travelWithUs": "Viaja Con Nosotros",
     "volunteer": "Voluntariado",
@@ -216,8 +215,7 @@
       "title": "Visualizar nuestro impacto en las comunidades",
       "description": "Cada logro representa una transformación en la vida de las personas y un paso más cerca de la libertad financiera.",
       "text": "Se han emprendido varios proyectos comunitarios",
-      "dataSource": "A partir del primer trimestre de 2025, datos de la plataforma Billion Dollar Challenge.",
-      "donationCta": "Ayúdanos a alcanzar $50M — dona hoy",
+
       "stats": {
         "completedProjects": {
           "value": "1900",
@@ -472,14 +470,14 @@
     "hero": {
       "mainTitle": "FinFE$T, el festival financiero para todos",
       "subtitle": "Aprende a ganar, gestionar y construir riqueza con profesionales. Únete a nuestro evento comunitario gratuito diseñado para impulsar tu futuro financiero.",
-      "registerNow": "Registrarse ahora",
+      "registerNow": "Registro gratuito",
       "eventDate": "13 y 14 de noviembre de 2026",
       "eventLocation": "Universidad Kean, Union, Nueva Jersey",
       "imageAlt": "Festival financiero FinFest"
     },
     "objective": {
       "title": "El objetivo de FinFE$T",
-      "description": "FiNFe$t es un evento comunitario y una experiencia interactiva con herramientas y oportunidades reales, presentado en un entorno atractivo y dinámico.",
+      "description": "FinFE$T es un evento comunitario y una experiencia interactiva que ofrece herramientas y oportunidades reales en un entorno dinámico y estimulante. Estos profesionales han contribuido a generar debates sobre la libertad financiera y han compartido sus conocimientos en FinFE$T.",
       "items": {
         "makeMoney": {
           "title": "Cómo ganar dinero",
@@ -758,7 +756,7 @@
     "hero": {
       "title": "Campañas comunitarias",
       "subtitle": "Campañas comunitarias dinámicas que unen iglesias, grupos cívicos y organizaciones locales para implementar programas de empoderamiento financiero DFREE® sincronizados. Estas campañas están diseñadas para crear un impacto colectivo promoviendo el aprendizaje compartido, la responsabilidad mutua y la celebración comunitaria.",
-      "ctaLabel": "Conecta con nosotras",
+      "ctaLabel": "Conéctate con DFREE®",
       "ctaHref": "#",
       "imageAlt": "Fondo de campañas comunitarias"
     },

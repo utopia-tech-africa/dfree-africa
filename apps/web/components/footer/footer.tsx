@@ -18,7 +18,7 @@ export const Footer = async () => {
       id="footer"
       className="mt-20 lg:px-12 w-full max-w-none scroll-mt-24 bg-primary-500 py-10 text-neutral-100 md:scroll-mt-28 lg:py-12"
     >
-      <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] min-w-0">
+      <div className="grid gap-8 lg:grid-cols-[auto_1fr_1fr_1fr_1fr_1fr] min-w-0">
         <Link
           href="/"
           aria-label="dfree home"
@@ -92,22 +92,21 @@ export const Footer = async () => {
               </Link>
             </div>
           </div>
+        </div>
 
-          <div className="flex flex-col gap-4">
-            <h4 className="text-lg hidden md:block font-bold"></h4>
+        {/* Subscribe to newsletter */}
+        <div className="flex flex-col gap-4">
+          <h4 className="text-lg font-bold font-montserrat">
+            {t("subscribeToNewsletter")}
+          </h4>
 
-            <h4 className="text-lg font-bold font-montserrat">
-              {t("subscribeToNewsletter")}
-            </h4>
+          <p className="block md:hidden font-poppins text-sm leading-[120%] text-neutral-100">
+            {t("stayConnected")}
+          </p>
 
-            <p className="block md:hidden font-poppins text-sm leading-[120%] text-neutral-100">
-              {t("stayConnected")}
-            </p>
+          <FooterNewsletterForm />
 
-            <FooterNewsletterForm />
-
-            <p className="text-xs text-neutral-200">{t("privacyNote")}</p>
-          </div>
+          <p className="text-xs text-neutral-200">{t("privacyNote")}</p>
         </div>
       </div>
 
@@ -116,11 +115,14 @@ export const Footer = async () => {
       </div>
 
       <div className="mt-6 flex gap-5 w-full flex-col md:flex-row md:items-center justify-center text-sm">
-        <span className="text-center">{t("copyright", { year })}</span>
-
-        <div className="flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-8 underline text-xs">
-          <Link href="/privacy-policy">{t("privacyPolicy")}</Link>
-          <Link href="/terms-of-service">{t("termsOfService")}</Link>
+        <div className="flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-8  text-xs">
+          <span className="text-center">{t("copyright", { year })}</span>
+          <Link href="/privacy-policy" className="underline">
+            {t("privacyPolicy")}
+          </Link>
+          <Link href="/terms-of-service" className="underline">
+            {t("termsOfService")}
+          </Link>
           <FooterCookieSettings label={t("cookiesSettings")} />
         </div>
       </div>

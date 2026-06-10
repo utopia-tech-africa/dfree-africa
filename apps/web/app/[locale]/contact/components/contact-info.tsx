@@ -7,102 +7,106 @@ import { Mail } from "lucide-react";
 import Image from "next/image";
 import { facebook, instagram, linkedin, youtube, X } from "@/assets/img";
 
-export const ContactInfo = () => {
+export const ContactInfoMain = () => {
   const t = useTranslations("contactUs");
 
   return (
-    <div className="order-2 lg:order-1 flex flex-col text-white max-w-xl">
-      <div className="space-y-5">
-        <h1 className="text-3xl md:text-4xl font-montserrat font-bold leading-[120%] text-neutral-100">
-          {(() => {
-            const words = t("text").split(" ");
-            return (
-              <>
-                {words.slice(0, 2).join(" ")}
-                <br />
-                {words.slice(2).join(" ")}
-              </>
-            );
-          })()}
-        </h1>
-        <p className="font-poppins text-sm md:text-lg text-white leading-[130%]">
-          {t("subtext")}
-        </p>
-        <div className="space-y-3 text-sm">
-          <p className="font-bold font-montserrat text-lg text-neutral-100">
-            {t("contactCta")}
-          </p>
-
-          <div className="flex items-center gap-3">
-            <BsTelephoneFill size={18} />
-            <span>(844) 693-3733</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Mail size={18} />
-            <span>info@dfree.com</span>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <a
-            href="http://facebook.com/thedfreemovement"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-75 transition"
-          >
-            <Image src={facebook} alt="Facebook" width={22} height={22} />
-          </a>
-          <a
-            href="http://instagram.com/dfreemovement"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-75 transition"
-          >
-            <Image src={instagram} alt="Instagram" width={22} height={22} />
-          </a>
-          <a
-            href="https://x.com/dfreemovement?s=11"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-75 transition"
-          >
-            <Image
-              src={X}
-              alt="LinkedIn"
-              className="invert"
-              width={22}
-              height={22}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/dfreemovement/posts/?feedView=all"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-75 transition"
-          >
-            <Image src={linkedin} alt="LinkedIn" width={22} height={22} />
-          </a>
-          <a
-            href="https://youtube.com/@dfreemovement?si=SkjKFWVdqjUp0H47"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-75 transition"
-          >
-            <Image src={youtube} alt="YouTube" width={22} height={22} />
-          </a>
-        </div>
-      </div>
-
-      <div className="mt-8 space-y-3">
+    <div className="space-y-5 text-white max-w-xl">
+      <h1 className="text-3xl md:text-4xl font-montserrat font-bold leading-[120%] text-neutral-100">
+        {(() => {
+          const words = t("text").split(" ");
+          return (
+            <>
+              {words.slice(0, 2).join(" ")}
+              <br />
+              {words.slice(2).join(" ")}
+            </>
+          );
+        })()}
+      </h1>
+      <p className="font-poppins text-sm md:text-lg text-white leading-[130%]">
+        {t("subtext")}
+      </p>
+      <div className="space-y-3 text-sm">
         <p className="font-bold font-montserrat text-lg text-neutral-100">
-          {t("newsletterCta")}
+          {t("contactCta")}
         </p>
 
-        <ContactNewsletterForm />
+        <div className="flex items-center gap-3">
+          <BsTelephoneFill size={18} />
+          <span>(844) 693-3733</span>
+        </div>
 
-        <p className="text-xs text-neutral-300">{t("privacyNote")}</p>
+        <div className="flex items-center gap-3">
+          <Mail size={18} />
+          <span>info@dfree.com</span>
+        </div>
       </div>
+
+      <div className="flex items-center gap-4">
+        <a
+          href="http://facebook.com/thedfreemovement"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-75 transition"
+        >
+          <Image src={facebook} alt="Facebook" width={22} height={22} />
+        </a>
+        <a
+          href="http://instagram.com/dfreemovement"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-75 transition"
+        >
+          <Image src={instagram} alt="Instagram" width={22} height={22} />
+        </a>
+        <a
+          href="https://x.com/dfreemovement?s=11"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-75 transition"
+        >
+          <Image
+            src={X}
+            alt="LinkedIn"
+            className="invert"
+            width={22}
+            height={22}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/dfreemovement/posts/?feedView=all"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-75 transition"
+        >
+          <Image src={linkedin} alt="LinkedIn" width={22} height={22} />
+        </a>
+        <a
+          href="https://youtube.com/@dfreemovement?si=SkjKFWVdqjUp0H47"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-75 transition"
+        >
+          <Image src={youtube} alt="YouTube" width={22} height={22} />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export const ContactNewsletter = () => {
+  const t = useTranslations("contactUs");
+
+  return (
+    <div className="space-y-3 text-white max-w-xl">
+      <p className="font-bold font-montserrat text-lg text-neutral-100">
+        {t("newsletterCta")}
+      </p>
+
+      <ContactNewsletterForm />
+
+      <p className="text-xs text-neutral-300">{t("privacyNote")}</p>
     </div>
   );
 };
