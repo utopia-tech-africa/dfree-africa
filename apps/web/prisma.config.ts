@@ -1,5 +1,5 @@
 import "./lib/load-env";
-import { defineConfig, env } from "prisma/config";
+import { defineConfig } from "prisma/config";
 
 export default defineConfig({
   schema: "prisma/schema.prisma",
@@ -7,6 +7,8 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: env("DATABASE_URL"),
+    // Use process.env (not env()) so `prisma generate` works in CI/Vercel
+    // when DATABASE_URL is not set yet. Migrate/db commands still require it.
+    url: process.env.DATABASE_URL,
   },
 });
