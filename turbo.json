@@ -1,7 +1,19 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
   "ui": "tui",
-  "globalPassThroughEnv": ["SANITY_STUDIO_PROJECT_ID", "SANITY_STUDIO_DATASET"],
+  "globalPassThroughEnv": [
+    "SANITY_STUDIO_PROJECT_ID",
+    "SANITY_STUDIO_DATASET",
+    "DATABASE_URL",
+    "BETTER_AUTH_SECRET",
+    "BETTER_AUTH_URL",
+    "RESEND_API_KEY",
+    "EMAIL_FROM",
+    "BOOTSTRAP_ADMIN_EMAIL",
+    "BOOTSTRAP_ADMIN_PASSWORD",
+    "BOOTSTRAP_ADMIN_NAME",
+    "NODE_ENV"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
