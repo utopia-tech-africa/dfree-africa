@@ -1,8 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { DfreeLogoWhite } from "@/assets/svg";
-import { Button, buttonVariants } from "../ui/button";
-import { Input } from "../ui/input";
+import { FooterNewsletterForm } from "@/components/forms/footer-newsletter-form";
+import { buttonVariants } from "../ui/button";
 import ComponentLayout from "../component-layout";
 import { Mail, Phone } from "lucide-react";
 import { FOOTER_SECTIONS, SOCIAL_LINKS } from "@/constants/footer-items";
@@ -104,20 +104,7 @@ export const Footer = async () => {
               {t("stayConnected")}
             </p>
 
-            <div className="flex w-full flex-col gap-3 md:flex-row md:items-center">
-              <Input
-                type="email"
-                placeholder={t("enterEmail")}
-                className="w-full rounded-[100px] border border-neutral-100 bg-transparent px-2 py-6 placeholder:text-sm placeholder:text-neutral-300 focus:outline-none md:min-w-75 md:flex-1 md:px-5 lg:min-w-62.5"
-              />
-
-              <Button
-                className="w-full py-6 font-bold md:w-auto"
-                variant="secondary"
-              >
-                {t("submit")}
-              </Button>
-            </div>
+            <FooterNewsletterForm />
 
             <p className="text-xs text-neutral-200">{t("privacyNote")}</p>
           </div>

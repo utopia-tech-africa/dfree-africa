@@ -1,11 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth/auth-client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { FormFieldError } from "@/lib/forms/form-field-error";
+import {
+  adminLoginSchema,
+  type AdminLoginValues,
+} from "@/lib/forms/schemas/admin";
 
 type AdminLoginFormProps = {
   callbackUrl?: string;
@@ -13,25 +20,27 @@ type AdminLoginFormProps = {
 
 export function AdminLoginForm({ callbackUrl }: AdminLoginFormProps) {
   const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [serverError, setServerError] = useState<string | null>(null);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setError(null);
-    setIsLoading(true);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<AdminLoginValues>({
+    resolver: zodResolver(adminLoginSchema),
+    defaultValues: { email: "", password: "" },
+  });
+
+  const onSubmit = async (values: AdminLoginValues) => {
+    setServerError(null);
 
     const { error: signInError } = await authClient.signIn.email({
-      email,
-      password,
+      email: values.email,
+      password: values.password,
     });
 
-    setIsLoading(false);
-
     if (signInError) {
-      setError(
+      setServerError(
         signInError.message ?? "Sign in failed. Check your credentials.",
       );
       return;
@@ -42,17 +51,18 @@ export function AdminLoginForm({ callbackUrl }: AdminLoginFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
       <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
         <Input
           id="email"
           type="email"
           autoComplete="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          aria-invalid={Boolean(errors.email)}
+          disabled={isSubmitting}
+          {...register("email")}
         />
+        <FormFieldError message={errors.email?.message} />
       </div>
       <div className="space-y-2">
         <Label htmlFor="password">Password</Label>
@@ -60,18 +70,19 @@ export function AdminLoginForm({ callbackUrl }: AdminLoginFormProps) {
           id="password"
           type="password"
           autoComplete="current-password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          aria-invalid={Boolean(errors.password)}
+          disabled={isSubmitting}
+          {...register("password")}
         />
+        <FormFieldError message={errors.password?.message} />
       </div>
-      {error ? (
+      {serverError ? (
         <p className="text-sm text-tertiary-500" role="alert">
-          {error}
+          {serverError}
         </p>
       ) : null}
-      <Button type="submit" className="w-full" disabled={isLoading}>
-        {isLoading ? "Signing in…" : "Sign in"}
+      <Button type="submit" className="w-full" disabled={isSubmitting}>
+        {isSubmitting ? "Signing in…" : "Sign in"}
       </Button>
     </form>
   );

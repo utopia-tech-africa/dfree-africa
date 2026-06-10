@@ -1,7 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { ContactNewsletterForm } from "@/components/forms/contact-newsletter-form";
 import { useTranslations } from "next-intl";
 import { BsTelephoneFill } from "react-icons/bs";
 import { Mail } from "lucide-react";
@@ -100,26 +99,7 @@ export const ContactInfo = () => {
           {t("newsletterCta")}
         </p>
 
-        <div className="flex flex-col gap-3 w-full">
-          <Input
-            type="text"
-            placeholder={t("placeholderName")}
-            className="w-full rounded-full border border-neutral-100 bg-transparent px-5 py-6 placeholder:text-sm placeholder:text-neutral-300"
-          />
-
-          <Input
-            type="email"
-            placeholder={t("placeholderText")}
-            className="w-full rounded-full border border-neutral-100 bg-transparent px-5 py-6 placeholder:text-sm placeholder:text-neutral-300"
-          />
-
-          <Button
-            className="w-full py-6 font-bold rounded-full bg-white text-neutral-1000 hover:bg-neutral-100 transition"
-            variant="secondary"
-          >
-            {t("buttonText")}
-          </Button>
-        </div>
+        <ContactNewsletterForm />
 
         <p className="text-xs text-neutral-300">{t("privacyNote")}</p>
       </div>
