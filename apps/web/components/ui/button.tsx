@@ -64,22 +64,31 @@ function Button({
   icon,
   children,
   className,
+  asChild = false,
   ...props
 }: React.ComponentProps<typeof DefaultButton> & {
   icon?: React.ReactNode;
 }) {
+  if (asChild) {
+    return (
+      <DefaultButton asChild className={cn("group", className)} {...props}>
+        {children}
+      </DefaultButton>
+    );
+  }
+
   return (
     <DefaultButton {...props} className={cn("group", className)}>
       {children}
 
-      {icon && (
+      {icon ? (
         <span className="relative flex items-center overflow-hidden w-6 h-6">
           <span className="flex -translate-x-1/2 transition-transform duration-300 group-hover:translate-x-0">
             <span className="shrink-0">{icon}</span>
             <span className="shrink-0">{icon}</span>
           </span>
         </span>
-      )}
+      ) : null}
     </DefaultButton>
   );
 }
