@@ -11,19 +11,108 @@
       "title": "Política de privacidad",
       "description": "Cómo la Fundación DFREE® recopila y protege su información en este sitio.",
       "heading": "Política de privacidad",
-      "body": "Este sitio utiliza herramientas de análisis (incluido Google Tag Manager), formularios de donación (Zeffy) y suscripción al boletín.",
-      "fullPolicy": "Lea la política completa en",
-      "fullPolicyLink": "dfreefoundation.org/privacy-policy",
-      "backHome": "Volver al inicio"
+      "effectiveDate": "Fecha de vigencia: 30 de mayo de 2026",
+      "sections": {
+        "whoWeAre": {
+          "title": "Quiénes somos",
+          "p1": "La dirección de nuestro sitio web es: <link>https://dfreefoundation.org</link>."
+        },
+        "informationWeCollect": {
+          "title": "Información que recopilamos y por qué",
+          "p1": "Cuando los visitantes dejan comentarios en el sitio, recopilamos los datos que se muestran en el formulario de comentarios, así como la dirección IP del visitante y la cadena user-agent del navegador para ayudar a detectar spam.",
+          "p2": "Es posible que se proporcione al servicio Gravatar una cadena anónima creada a partir de su dirección de correo electrónico (también llamada hash) para verificar si la está utilizando. La política de privacidad del servicio Gravatar está disponible aquí: <link>https://automattic.com/privacy/</link>. Tras la aprobación de su comentario, su foto de perfil es visible al público en el contexto de su comentario."
+        },
+        "media": {
+          "title": "Medios",
+          "p1": "Si sube imágenes al sitio web, debe evitar subir imágenes con datos de ubicación incrustados (EXIF GPS). Los visitantes del sitio web pueden descargar y extraer cualquier dato de ubicación de las imágenes alojadas en el sitio."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "p1": "Si deja un comentario en nuestro sitio, puede optar por guardar su nombre, dirección de correo electrónico y sitio web en cookies. Esto es para su comodidad, para que no tenga que volver a completar sus datos cuando deje otro comentario. Estas cookies duran un año.",
+          "p2": "Si visita nuestra página de inicio de sesión, estableceremos una cookie temporal para determinar si su navegador acepta cookies. Esta cookie no contiene datos personales y se descarta cuando cierra su navegador.",
+          "p3": "Cuando inicia sesión, también configuraremos varias cookies para guardar su información de inicio de sesión y sus preferencias de pantalla. Las cookies de inicio de sesión duran dos días y las cookies de opciones de pantalla duran un año. Si selecciona \"Recordarme\", su inicio de sesión persistirá durante dos semanas. Si cierra sesión en su cuenta, se eliminarán las cookies de inicio de sesión.",
+          "p4": "Si edita o publica un artículo, se guardará una cookie adicional en su navegador. Esta cookie no incluye datos personales y simplemente indica el ID de la publicación del artículo que acaba de editar. Expira después de 1 día."
+        },
+        "embeddedContent": {
+          "title": "Contenido incrustado de otros sitios web",
+          "p1": "Los artículos de este sitio pueden incluir contenido incrustado (por ejemplo, videos, imágenes, artículos, etc.). El contenido incrustado de otros sitios web se comporta exactamente de la misma manera que si el visitante hubiera visitado el otro sitio web directamente.",
+          "p2": "Estos sitios web pueden recopilar datos sobre usted, usar cookies, incrustar seguimiento adicional de terceros y monitorear su interacción con ese contenido incrustado, incluido el seguimiento de su interacción con el contenido incrustado si tiene una cuenta y ha iniciado sesión en ese sitio web."
+        },
+        "whoWeShare": {
+          "title": "Con quién compartimos sus datos",
+          "p1": "Si solicita un restablecimiento de contraseña, su dirección IP se incluirá en el correo electrónico de restablecimiento."
+        },
+        "howLongWeRetain": {
+          "title": "Cuánto tiempo conservamos sus datos",
+          "p1": "Si deja un comentario, el comentario y sus metadatos se conservan indefinidamente. Esto es para que podamos reconocer y aprobar automáticamente cualquier comentario de seguimiento en lugar de mantenerlo en una cola de moderación.",
+          "p2": "Para los usuarios que se registran en nuestro sitio web (si los hay), también almacenamos la información personal que proporcionan en su perfil de usuario. Todos los usuarios pueden ver, editar o eliminar su información personal en cualquier momento (excepto que no pueden cambiar su nombre de usuario). Los administradores del sitio web también pueden ver y editar esa información."
+        },
+        "yourRights": {
+          "title": "Qué derechos tiene sobre sus datos",
+          "p1": "Si tiene una cuenta en este sitio o ha dejado comentarios, puede solicitar recibir un archivo exportado de los datos personales que tenemos sobre usted, incluidos los datos que nos haya proporcionado. También puede solicitar que eliminemos cualquier dato personal que tengamos sobre usted. Esto no incluye los datos que estamos obligados a conservar por motivos administrativos, legales o de seguridad."
+        },
+        "whereWeSend": {
+          "title": "Dónde enviamos sus datos",
+          "p1": "Los comentarios de los visitantes pueden ser verificados a través de un servicio automatizado de detección de spam."
+        }
+      }
     },
     "terms": {
-      "title": "Términos de servicio",
-      "description": "Términos de uso del sitio web de la Fundación DFREE®.",
-      "heading": "Términos de servicio",
-      "body": "Al usar este sitio acepta los términos de servicio de la Fundación DFREE®.",
-      "fullPolicy": "Lea los términos completos en",
-      "fullPolicyLink": "dfreefoundation.org/terms-conditions",
-      "backHome": "Volver al inicio"
+      "title": "Términos y condiciones",
+      "description": "Términos y condiciones que rigen el uso del sitio web y los servicios de la Fundación DFREE®.",
+      "heading": "Términos y condiciones",
+      "effectiveDate": "Fecha de vigencia: 30 de mayo de 2026",
+      "organization": "DFREE® GLOBAL FOUNDATION, INC.",
+      "intro": {
+        "p1": "La DFREE® Global Foundation, Inc. proporciona sitios web, plataformas, programas y experiencias digitales (colectivamente, los \"Servicios\"). Al hacer clic aquí, usted acepta haber leído el acuerdo a continuación y aceptar sus términos.",
+        "p2": "Estos Términos y Condiciones de Uso (el \"Acuerdo\") constituyen un acuerdo legal entre usted y <bold>DFREE® Global Foundation, Inc.</bold> (en adelante, \"la Fundación\" o \"Propietario del sitio web\"). Al registrarse o utilizar cualquier servicio proporcionado por la Fundación, usted se convierte en cliente (\"Cliente\") y acepta estar sujeto a todos los términos (los \"Términos\") establecidos en este Acuerdo mientras permanezca como Cliente.",
+        "p3": "SI NO ACEPTA LOS TÉRMINOS, NO SE REGISTRE NI UTILICE NINGÚN SERVICIO DE DFREE® GLOBAL FOUNDATION, INC. Los Términos están sujetos a cambios en cualquier momento, con efecto a partir de la notificación.",
+        "p4": "La Fundación se reserva el derecho, con o sin previo aviso, de realizar cambios en los Términos a discreción del Propietario del sitio web. Su uso continuado de cualquier parte de los sitios web o servicios de la Fundación constituye su aceptación de dichos cambios a este Acuerdo. Debe revisar periódicamente este Acuerdo para determinar si se han realizado cambios."
+      },
+      "sections": {
+        "limitations": {
+          "title": "1. Limitaciones de responsabilidad e indemnización",
+          "p1": "Al utilizar cualquier servicio proporcionado por la Fundación, usted acepta que en ningún caso <bold>DFREE® Global Foundation, Inc.</bold>, el Propietario del sitio web, DFREE® Solutions, LLC, Corporate Community Connections, Inc., Dr. DeForest B. Soaries, Jr., y sus directivos, empleados, agentes, afiliados, licenciatarios y servicios de alojamiento web serán responsables de daños directos o indirectos, incidentales, especiales o consecuentes como resultado de su acceso al sitio web y uso de cualquiera de los servicios disponibles.",
+          "p2": "Su único recurso por cualquier incumplimiento o incumplimiento de este Acuerdo por parte de la Fundación o el Propietario del sitio web será la devolución de cualquier tarifa pagada a la Fundación o al Propietario del sitio web por los servicios proporcionados bajo este Acuerdo.",
+          "p3": "Usted indemniza y acepta defender y eximir de responsabilidad a la Fundación, al Propietario del sitio web, sus directivos, empleados, agentes, afiliados, licenciatarios, servicios de alojamiento web y terceros por cualquier pérdida, costo, responsabilidad y gasto (incluidos, entre otros, costos judiciales, honorarios legales, indemnizaciones o acuerdos) relacionados con o derivados de su uso de los servicios o sitios web de la Fundación, incluido cualquier incumplimiento por su parte de los Términos contenidos en este Acuerdo."
+        },
+        "responsibility": {
+          "title": "2. Responsabilidad por el uso del sitio web",
+          "p1": "Usted comprende y acepta que es el único responsable de sus acciones y decisiones derivadas de su uso de los servicios proporcionados por la Fundación. Usted es responsable de cualquier actividad que tenga lugar bajo su nombre de usuario y contraseña. Si tiene conocimiento de cualquier uso no autorizado de su contraseña o cuenta, o de cualquier otra violación de seguridad, comuníquese con la Fundación de inmediato. Depende de usted mantener la confidencialidad de su contraseña y cuenta. La Fundación no es responsable de ninguna pérdida o daño derivado de su incumplimiento de las disposiciones de este Acuerdo."
+        },
+        "doNotRely": {
+          "title": "3. No confíe en dfree® Global Foundation, Inc.",
+          "p1": "Las opiniones, consejos, declaraciones u otros comentarios no deben necesariamente considerarse confiables y no deben interpretarse como asesoramiento profesional de la Fundación o del Propietario del sitio web. Antes de actuar sobre cualquier información, material(es), producto(s), servicio(s) y/o contenido, debe considerar su idoneidad en el contexto de sus objetivos personales, situación financiera y/o necesidades. En particular, debe buscar asesoramiento financiero independiente y leer cualquier declaración relevante de productos y/o servicios antes de tomar una decisión de inversión y/o financiera general. La Fundación y el Propietario del sitio web no garantizan la exactitud o integridad de la información proporcionada y no son responsables de ninguna pérdida resultante de su confianza en dicha información."
+        },
+        "confidentiality": {
+          "title": "4. Confidencialidad",
+          "p1": "Se acuerda que toda la información personal proporcionada a la Fundación o al Propietario del sitio web será mantenida confidencial por la Fundación y el Propietario del sitio web. Para obtener más información sobre su privacidad, visite la <link>Política de privacidad</link>."
+        },
+        "ownership": {
+          "title": "5. Propiedad, derechos de autor, marcas y licencias",
+          "p1": "Usted reconoce y acepta que los sitios web, servicios y cualquier software o programa utilizado con respecto a los servicios de la Fundación contienen información propietaria y confidencial que es propiedad del Propietario del sitio web y sus licenciantes y está protegida por las leyes aplicables de propiedad intelectual y otras leyes. No se le proporciona, transfiere ni asigna ningún derecho o título sobre la información propietaria y confidencial en las plataformas de la Fundación o cualquier software utilizado en relación con cualquiera de sus servicios. Usted acepta no modificar, alquilar, arrendar, prestar, vender, distribuir ni crear obras derivadas basadas en cualquiera de los servicios o software de la Fundación, en su totalidad o en parte. Las marcas comerciales, marcas de servicio, logotipos y obras protegidas por derechos de autor que aparecen en el sitio web son propiedad del Propietario del sitio web. La Fundación conserva todos los derechos con respecto a cualquier propiedad intelectual que aparezca en el sitio web, y no se le transfieren ni asignan derechos sobre dichos materiales."
+        },
+        "noWarranties": {
+          "title": "6. Sin garantías",
+          "p1": "La Fundación y el Propietario del sitio web proporcionan los servicios de la Fundación \"tal cual\" y no ofrecen ninguna garantía, expresa, implícita, limitada u otra con respecto a los servicios proporcionados. Específicamente, la Fundación y el Propietario del sitio web no garantizan que el servicio estará siempre disponible, será ininterrumpido, estará libre de errores, cumplirá con sus requisitos, o que se corregirán los defectos en los servicios."
+        },
+        "severability": {
+          "title": "7. Divisibilidad",
+          "p1": "Si se determina que alguna disposición es inválida, las disposiciones restantes permanecerán en pleno vigor y efecto."
+        },
+        "waiver": {
+          "title": "8. Renuncia",
+          "p1": "El hecho de que la Fundación o el Propietario del sitio web no ejerzan o hagan cumplir cualquier derecho o disposición de este Acuerdo no operará como una renuncia a dicho derecho o disposición. Cualquier renuncia a este Acuerdo por parte de la Fundación o el Propietario del sitio web debe ser por escrito y firmada por un representante autorizado del Propietario del sitio web."
+        },
+        "jurisdiction": {
+          "title": "9. Jurisdicción",
+          "p1": "Este Acuerdo o cualquier disputa que surja de este Acuerdo se rige por las leyes del Estado de Nueva Jersey, sin tener en cuenta las disposiciones sobre conflictos de leyes. Cualquier demanda que surja de o esté relacionada con este Acuerdo se presentará exclusivamente ante el Tribunal de Distrito de los Estados Unidos para el Estado de Nueva Jersey, y usted acepta por la presente la jurisdicción de dicho tribunal."
+        },
+        "entireAgreement": {
+          "title": "10. Acuerdo completo",
+          "p1": "Este Acuerdo constituye su acuerdo completo con <bold>DFREE® Global Foundation, Inc.</bold> y el Propietario del sitio web con respecto a cualquier servicio."
+        }
+      }
     }
   },
   "metadata": {
@@ -142,7 +231,7 @@
     "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad",
     "copyright": "© {year} Fundación DFREE. Todos Los Derechos Reservados.",
     "privacyPolicy": "Política De Privacidad",
-    "termsOfService": "Términos De Servicio",
+    "termsAndConditions": "Términos y condiciones",
     "cookiesSettings": "Configuración De Cookies",
     "whoWeAre": "Quiénes Somos",
     "ourMission": "Nuestra Misión",
