@@ -2,7 +2,7 @@ import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import React from "react";
-import Testimonials from "../components/testimonials/testimonials";
+import { TestimonialsSection } from "../components/testimonials/testimonials-section";
 import WhoWeAre from "../components/who-we-are/who-we-are";
 import Pillars from "../components/pillars/pillars";
 import { HomeHero } from "../components/home-hero";
@@ -31,7 +31,10 @@ const Home = () => {
         <WhoWeAre />
         <Pillars />
         <OurImpact />
-        <Testimonials />
+        <TestimonialsSection
+          page="home"
+          translationNamespace="home.testimonials"
+        />
         <Events />
         <Store />
         <FeaturedNews compact featured allowEmptyState={false} />

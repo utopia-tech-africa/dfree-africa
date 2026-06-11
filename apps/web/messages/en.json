@@ -333,54 +333,7 @@
       "heading": "Real stories of change",
       "subtitle": "Voices that reveal the power of financial transformation",
       "muteVideo": "Mute video",
-      "unmuteVideo": "Unmute video",
-      "items": {
-        "shirley": {
-          "name": "Shirley Richard",
-          "imageAlt": "Shirley Richard, Delta Sigma Theta Sorority member and DFREE program participant",
-          "title": "Delta Sigma Theta Sorority, Inc",
-          "text": "I am retired, however, as a result of the class, I connected with a Financial Advisor to invest for generational wealth for my grandchildren."
-        },
-        "michele": {
-          "name": "Michele Bailey",
-          "imageAlt": "Michele Bailey, Behind Every Door partner and DFREE program participant",
-          "title": "Behind Every Door",
-          "text": "DFREE ® helped me realize that I was living above my means and now I have been able to downsize, pay off major debts and increase my credit score."
-        },
-        "lloyd": {
-          "name": "Lloyd Branch",
-          "imageAlt": "Lloyd Branch, DFREE program participant",
-          "title": "",
-          "text": "I paid off my car and HVAC system bills using methods from DFREE ®."
-        },
-        "gregory": {
-          "name": "Gregory Lawrence",
-          "imageAlt": "Gregory Lawrence, DFREE program participant",
-          "title": "",
-          "text": "I have paid down my credit cards with the snowball effect and I am currently in the process of buying a house by myself."
-        },
-        "diana": {
-          "name": "Diana Belle",
-          "imageAlt": "Diana Belle, Clear View Baptist Church member and DFREE program participant",
-          "title": "Clear View Baptist Church",
-          "text": "I am a better Steward of my finances having gone through this process. I am now working on leaving a legacy for my daughters."
-        },
-        "dee": {
-          "name": "Dee Marshall",
-          "title": "",
-          "text": ""
-        },
-        "alesia": {
-          "name": "Alesia Boone",
-          "title": "",
-          "text": ""
-        },
-        "aimy": {
-          "name": "Aimy Steele",
-          "title": "",
-          "text": ""
-        }
-      }
+      "unmuteVideo": "Unmute video"
     },
     "events": {
       "label": "Community & social gatherings",
@@ -731,6 +684,13 @@
       "title": "Take Control of your goals now",
       "description": "Your journey to financial freedom begins with a simple choice. Start planning your future today.",
       "label": "Join BDC today"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "heading": "Real stories of change",
+      "subtitle": "Voices that reveal the power of financial transformation",
+      "muteVideo": "Mute video",
+      "unmuteVideo": "Unmute video"
     }
   },
   "accessScholarships": {

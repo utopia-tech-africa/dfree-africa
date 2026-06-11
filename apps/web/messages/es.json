@@ -333,54 +333,7 @@
       "heading": "Historias reales de cambio",
       "subtitle": "Voces que revelan el poder de la transformación financiera",
       "muteVideo": "Silenciar video",
-      "unmuteVideo": "Activar sonido del video",
-      "items": {
-        "shirley": {
-          "name": "Shirley Richard",
-          "imageAlt": "Shirley Richard, miembro de Delta Sigma Theta y participante del programa DFREE",
-          "title": "Hermandad Delta Sigma Theta, Inc.",
-          "text": "Estoy jubilado, sin embargo, gracias al curso, contacté con un asesor financiero para invertir y crear un patrimonio generacional para mis nietos."
-        },
-        "michele": {
-          "name": "Michele Bailey",
-          "imageAlt": "Michele Bailey, socia de Behind Every Door y participante del programa DFREE",
-          "title": "Detrás de Cada Puerta",
-          "text": "DFREE® ayudó a darme cuenta de que estaba viviendo por encima de mis posibilidades y ahora he podido reducir mis gastos, saldar mis deudas importantes y mejorar mi puntaje crediticio."
-        },
-        "lloyd": {
-          "name": "Lloyd Branch",
-          "imageAlt": "Lloyd Branch, participante del programa DFREE",
-          "title": "",
-          "text": "Pagué las facturas de mi coche y del sistema de climatización utilizando los métodos de DFREE®."
-        },
-        "gregory": {
-          "name": "Gregory Lawrence",
-          "imageAlt": "Gregory Lawrence, participante del programa DFREE",
-          "title": "",
-          "text": "He pagado mis tarjetas de crédito con el método de la bola de nieve y actualmente estoy en proceso de comprar una casa por mi cuenta."
-        },
-        "diana": {
-          "name": "Diana Belle",
-          "imageAlt": "Diana Belle, miembro de Clear View Baptist Church y participante del programa DFREE",
-          "title": "Iglesia Bautista Clear View",
-          "text": "Ahora administro mejor mis finanzas tras haber pasado por este proceso. Estoy trabajando para dejar un legado a mis hijas."
-        },
-        "dee": {
-          "name": "Dee Marshall",
-          "title": "",
-          "text": ""
-        },
-        "alesia": {
-          "name": "Alesia Boone",
-          "title": "",
-          "text": ""
-        },
-        "aimy": {
-          "name": "Aimy Steele",
-          "title": "",
-          "text": ""
-        }
-      }
+      "unmuteVideo": "Activar sonido del video"
     },
     "events": {
       "label": "Reuniones comunitarias y sociales",
@@ -731,6 +684,13 @@
       "title": "Toma el control de tus metas ahora",
       "description": "Tu camino hacia la libertad financiera comienza con una elección simple. Empieza a planificar tu futuro hoy.",
       "label": "Únete al BDC hoy"
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "heading": "Historias reales de cambio",
+      "subtitle": "Voces que revelan el poder de la transformación financiera",
+      "muteVideo": "Silenciar video",
+      "unmuteVideo": "Activar sonido del video"
     }
   },
   "accessScholarships": {
