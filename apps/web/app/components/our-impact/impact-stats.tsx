@@ -1,8 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
 import { IMPACT_STAT_KEYS } from "@/lib/impact";
 import { ImpactStatCard } from "./impact-stat-card";
-import { Button } from "@/components/ui/button";
 
 export async function ImpactStats() {
   const t = await getTranslations("home.ourImpact");

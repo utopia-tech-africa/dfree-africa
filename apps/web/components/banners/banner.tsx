@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
@@ -58,6 +58,8 @@ export const Banner: React.FC<BannerProps> = ({
             <div className="flex flex-wrap gap-4">
               <Link
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
                   buttonVariants({ variant: "default", size: "lg" }),
                   "w-fit",
@@ -69,6 +71,8 @@ export const Banner: React.FC<BannerProps> = ({
               {secondaryLabel && secondaryHref && (
                 <Link
                   href={secondaryHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "lg" }),
                     "w-fit border border-white/30",
