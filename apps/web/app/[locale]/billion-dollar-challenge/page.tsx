@@ -1,7 +1,7 @@
 import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import Testimonials from "../../components/testimonials/testimonials";
+import { TestimonialsSection } from "../../components/testimonials/testimonials-section";
 import {
   BDCHero,
   AboutBdc,
@@ -33,7 +33,10 @@ export default function BDCPage() {
       <HowItWorks />
       <Audience />
       <Partners />
-      <Testimonials />
+      <TestimonialsSection
+        page="billion-dollar-challenge"
+        translationNamespace="bdc.testimonials"
+      />
       <BDCBanner />
     </div>
   );

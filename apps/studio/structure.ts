@@ -1,5 +1,14 @@
 import type {StructureResolver} from 'sanity/structure'
-import {Folder, ReceiptCent, ShoppingBag, User2} from 'lucide-react' // optional icons for sections
+import {Folder, MessageSquareQuote, ReceiptCent, ShoppingBag} from 'lucide-react'
+
+const testimonialPageFilters = [
+  {title: 'All Testimonials', filter: '_type == "testimonial"'},
+  {title: 'Home Page', filter: '_type == "testimonial" && page == "home"'},
+  {
+    title: 'BDC Page',
+    filter: '_type == "testimonial" && page == "billion-dollar-challenge"',
+  },
+] as const
 
 export const structure: StructureResolver = (S) =>
   S.list()
@@ -19,15 +28,26 @@ export const structure: StructureResolver = (S) =>
             ]),
         ),
 
-      // ---------------- News ----------------
-      // S.listItem()
-      //   .title('News')
-      //   .icon(Book)
-      //   .child(
-      //     S.list()
-      //       .title('News')
-      //       .items([S.documentTypeListItem('news').title('All News')]),
-      //   ),
+      // ---------------- Testimonials ----------------
+      S.listItem()
+        .title('Testimonials')
+        .icon(MessageSquareQuote)
+        .child(
+          S.list()
+            .title('Testimonials')
+            .items(
+              testimonialPageFilters.map(({title, filter}) =>
+                S.listItem()
+                  .title(title)
+                  .child(
+                    S.documentList()
+                      .title(title)
+                      .filter(filter)
+                      .defaultOrdering([{field: '_createdAt', direction: 'asc'}]),
+                  ),
+              ),
+            ),
+        ),
 
       // ---------------- Store ----------------
       S.listItem()
@@ -51,6 +71,9 @@ export const structure: StructureResolver = (S) =>
 
       // ---------------- Other ----------------
       ...S.documentTypeListItems().filter(
-        (id) => !['project', 'gallery', 'year', 'store', 'pastSpeaker'].includes(id.getId() ?? ''),
+        (id) =>
+          !['project', 'gallery', 'year', 'store', 'pastSpeaker', 'testimonial'].includes(
+            id.getId() ?? '',
+          ),
       ),
     ])

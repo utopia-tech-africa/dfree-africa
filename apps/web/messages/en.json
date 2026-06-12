@@ -10,20 +10,109 @@
     "privacy": {
       "title": "Privacy Policy",
       "description": "How the DFREE® Foundation collects, uses, and protects your information on this website.",
-      "heading": "Privacy Policy",
-      "body": "This site uses analytics tools (including Google Tag Manager), donation forms (Zeffy), and newsletter sign-up. The information below summarizes how we handle data on this website.",
-      "fullPolicy": "Read the complete policy at",
-      "fullPolicyLink": "dfreefoundation.org/privacy-policy",
-      "backHome": "Back to home"
+      "heading": "Privacy policy",
+      "effectiveDate": "Effective Date: May 30, 2026",
+      "sections": {
+        "whoWeAre": {
+          "title": "Who we are",
+          "p1": "Our website address is: <link>https://dfreefoundation.org</link>."
+        },
+        "informationWeCollect": {
+          "title": "Information We Collect and Why We Collect It",
+          "p1": "When visitors leave comments on the site, we collect the data shown in the comments form, as well as the visitor's IP address and browser user agent string to assist with spam detection.",
+          "p2": "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to verify if you are using it. The Gravatar service privacy policy is available here: <link>https://automattic.com/privacy/</link>. Upon approval of your comment, your profile picture is visible to the public within the context of your comment."
+        },
+        "media": {
+          "title": "Media",
+          "p1": "If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images hosted on the site."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "p1": "If you leave a comment on our site, you may opt-in to saving your name, email address, and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies last for one year.",
+          "p2": "If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.",
+          "p3": "When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select \"Remember Me\", your login will persist for two weeks. If you log out of your account, the login cookies will be removed.",
+          "p4": "If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day."
+        },
+        "embeddedContent": {
+          "title": "Embedded content from other websites",
+          "p1": "Articles on this site may include embedded content (e.g., videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website directly.",
+          "p2": "These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website."
+        },
+        "whoWeShare": {
+          "title": "Who we share your data with",
+          "p1": "If you request a password reset, your IP address will be included in the reset email."
+        },
+        "howLongWeRetain": {
+          "title": "How long we retain your data",
+          "p1": "If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.",
+          "p2": "For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information."
+        },
+        "yourRights": {
+          "title": "What rights you have over your data",
+          "p1": "If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
+        },
+        "whereWeSend": {
+          "title": "Where we send your data",
+          "p1": "Visitor comments may be checked through an automated spam detection service."
+        }
+      }
     },
     "terms": {
-      "title": "Terms of Service",
-      "description": "Terms governing use of the DFREE® Foundation website.",
-      "heading": "Terms of Service",
-      "body": "By using this website you agree to the DFREE® Foundation terms of service, including acceptable use of our programs, content, and donation tools.",
-      "fullPolicy": "Read the complete terms at",
-      "fullPolicyLink": "dfreefoundation.org/terms-conditions",
-      "backHome": "Back to home"
+      "title": "Terms and conditions",
+      "description": "Terms and conditions governing use of the DFREE® Foundation website and services.",
+      "heading": "Terms and conditions",
+      "effectiveDate": "Effective Date: May 30, 2026",
+      "organization": "DFREE® GLOBAL FOUNDATION, INC.",
+      "intro": {
+        "p1": "The DFREE® Global Foundation, Inc. provides websites, platforms, programs, and digital experiences (collectively, the \"Services\"). By clicking here, you agree that you have read the agreement below and agree to its terms.",
+        "p2": "These Terms and Conditions of Use (\"Agreement\") constitute a legal agreement between you and <bold>DFREE® Global Foundation, Inc.</bold> (hereinafter referred to as \"the Foundation\" or \"Website Owner\"). By registering for or using any service provided by the Foundation, you become a client (\"Client\") and you agree to be bound by all of the terms (the \"Terms\") set forth in this Agreement as long as you remain a Client.",
+        "p3": "IF YOU DO NOT AGREE TO THE TERMS, PLEASE DO NOT REGISTER FOR OR USE ANY DFREE® GLOBAL FOUNDATION, INC. SERVICE. The Terms are subject to change at any time, effective upon notice to you.",
+        "p4": "The Foundation reserves the right, with or without notice, to make changes to the Terms at Website Owner's discretion. Your continued use of any part of the Foundation's websites or services constitutes your acceptance of such changes to this Agreement. You should review this Agreement periodically to determine if any changes have been made."
+      },
+      "sections": {
+        "limitations": {
+          "title": "1. Limitations of Liability and Indemnification",
+          "p1": "By using any services provided by the Foundation, you agree that in no event will <bold>DFREE® Global Foundation, Inc.</bold>, Website Owner, DFREE® Solutions, LLC, Corporate Community Connections, Inc., Dr. DeForest B. Soaries, Jr., and their officers, employees, agents, affiliates, licensees, and web hosting services be liable for any direct or indirect, incidental, special, or consequential damages as a result of your accessing the website and using any of the services available.",
+          "p2": "Your sole remedy for any breach or default of this Agreement by the Foundation or Website Owner shall be a return of any fees paid to the Foundation or Website Owner for any services provided under this Agreement.",
+          "p3": "You indemnify and agree to defend and hold harmless the Foundation, Website Owner, its and their officers, employees, agents, affiliates, licensees, web hosting services, and third parties for any losses, costs, liabilities, and expenses (including but not limited to court costs, legal fees, awards, or settlements) relating to or arising out of your use of the Foundation's services or websites, including any breach by you of the Terms contained in this Agreement."
+        },
+        "responsibility": {
+          "title": "2. Responsibility for Use of Website",
+          "p1": "You understand and agree that you are solely responsible for your actions and decisions arising out of your use of the services provided by the Foundation. You are responsible for any activities that take place under your username and password. If you become aware of any unauthorized use of your password or account, or any other breach of security, please contact the Foundation immediately. It is up to you to maintain the confidentiality of your password and account. The Foundation is not responsible or liable for any loss or damage arising from your failure to comply with the provisions of this Agreement."
+        },
+        "doNotRely": {
+          "title": "3. Do Not Rely on dfree® Global Foundation, Inc.",
+          "p1": "Opinions, advice, statements, or other comments should not necessarily be relied upon and are not to be construed as professional advice from the Foundation or Website Owner. Before acting on any information, material(s), product(s), service(s), and/or content, you should consider its appropriateness within the context of your personal objectives, financial situation, and/or needs. In particular, you should seek independent financial advice and read any relevant product and/or service disclosure statement(s) prior to making an investment and/or general financial decision. The Foundation and Website Owner do not guarantee the accuracy or completeness of any of the information provided and are not responsible for any loss resulting from your reliance on such information."
+        },
+        "confidentiality": {
+          "title": "4. Confidentiality",
+          "p1": "It is agreed that all personal information given to the Foundation or Website Owner will be kept confidential by the Foundation and Website Owner. For more information about your privacy, please visit <link>Privacy Policy</link>."
+        },
+        "ownership": {
+          "title": "5. Ownership, Copyrights, Trademarks, Licenses",
+          "p1": "You acknowledge and agree that the Foundation's websites, services, and any software or programs used with respect to the Foundation's services contain proprietary and confidential information that is the property of Website Owner and its licensors and is protected by applicable intellectual property and other laws. No rights or title to any of the proprietary and confidential information on the Foundation's platforms or any software used in connection with any of its services is provided, transferred, or assigned to you. You agree not to modify, rent, lease, loan, sell, distribute, or create derivative works based on any of the Foundation's services or software, in whole or in part. Trademarks, service marks, logos, and copyrighted works appearing on the website are the property of the Website Owner. The Foundation retains all rights with respect to any intellectual property appearing on the website, and no rights in such materials are transferred or assigned to you."
+        },
+        "noWarranties": {
+          "title": "6. No Warranties",
+          "p1": "The Foundation and Website Owner provide the Foundation's services on an \"as is\" basis and do not make any warranty, express, implied, limited, or other with respect to the services provided. Specifically, the Foundation and Website Owner do not warrant that the service will always be available, be uninterrupted, be error-free, meet your requirements, or that any defects in the services will be corrected."
+        },
+        "severability": {
+          "title": "7. Severability",
+          "p1": "If any provision is found to be invalid, the remaining provisions will be in full force and effect."
+        },
+        "waiver": {
+          "title": "8. Waiver",
+          "p1": "The failure of the Foundation or Website Owner to exercise or enforce any right or provision of this Agreement shall not operate as a waiver of such right or provision. Any waiver of this Agreement by the Foundation or Website Owner must be in writing and signed by an authorized representative of the Website Owner."
+        },
+        "jurisdiction": {
+          "title": "9. Jurisdiction",
+          "p1": "This Agreement or any dispute arising from this Agreement is governed by the laws of the State of New Jersey, without regard to provisions of conflicts of law. Any lawsuit arising from or related to this Agreement shall be brought exclusively before the United States District Court for the State of New Jersey, and you hereby consent to the jurisdiction of any such court."
+        },
+        "entireAgreement": {
+          "title": "10. Entire Agreement",
+          "p1": "This Agreement constitutes your entire Agreement with <bold>DFREE® Global Foundation, Inc.</bold> and Website Owner with respect to any services."
+        }
+      }
     }
   },
   "metadata": {
@@ -142,7 +231,7 @@
     "privacyNote": "By subscribing, you agree to our privacy policy",
     "copyright": "© {year} DFREE Foundation. All Rights Reserved.",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms Of Service",
+    "termsAndConditions": "Terms and conditions",
     "cookiesSettings": "Cookies Settings",
     "whoWeAre": "Who We Are",
     "ourMission": "Our Mission",
@@ -244,54 +333,7 @@
       "heading": "Real stories of change",
       "subtitle": "Voices that reveal the power of financial transformation",
       "muteVideo": "Mute video",
-      "unmuteVideo": "Unmute video",
-      "items": {
-        "shirley": {
-          "name": "Shirley Richard",
-          "imageAlt": "Shirley Richard, Delta Sigma Theta Sorority member and DFREE program participant",
-          "title": "Delta Sigma Theta Sorority, Inc",
-          "text": "I am retired, however, as a result of the class, I connected with a Financial Advisor to invest for generational wealth for my grandchildren."
-        },
-        "michele": {
-          "name": "Michele Bailey",
-          "imageAlt": "Michele Bailey, Behind Every Door partner and DFREE program participant",
-          "title": "Behind Every Door",
-          "text": "DFREE ® helped me realize that I was living above my means and now I have been able to downsize, pay off major debts and increase my credit score."
-        },
-        "lloyd": {
-          "name": "Lloyd Branch",
-          "imageAlt": "Lloyd Branch, DFREE program participant",
-          "title": "",
-          "text": "I paid off my car and HVAC system bills using methods from DFREE ®."
-        },
-        "gregory": {
-          "name": "Gregory Lawrence",
-          "imageAlt": "Gregory Lawrence, DFREE program participant",
-          "title": "",
-          "text": "I have paid down my credit cards with the snowball effect and I am currently in the process of buying a house by myself."
-        },
-        "diana": {
-          "name": "Diana Belle",
-          "imageAlt": "Diana Belle, Clear View Baptist Church member and DFREE program participant",
-          "title": "Clear View Baptist Church",
-          "text": "I am a better Steward of my finances having gone through this process. I am now working on leaving a legacy for my daughters."
-        },
-        "dee": {
-          "name": "Dee Marshall",
-          "title": "",
-          "text": ""
-        },
-        "alesia": {
-          "name": "Alesia Boone",
-          "title": "",
-          "text": ""
-        },
-        "aimy": {
-          "name": "Aimy Steele",
-          "title": "",
-          "text": ""
-        }
-      }
+      "unmuteVideo": "Unmute video"
     },
     "events": {
       "label": "Community & social gatherings",
@@ -642,6 +684,13 @@
       "title": "Take Control of your goals now",
       "description": "Your journey to financial freedom begins with a simple choice. Start planning your future today.",
       "label": "Join BDC today"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "heading": "Real stories of change",
+      "subtitle": "Voices that reveal the power of financial transformation",
+      "muteVideo": "Mute video",
+      "unmuteVideo": "Unmute video"
     }
   },
   "accessScholarships": {
