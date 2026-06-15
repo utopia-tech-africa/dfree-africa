@@ -24,6 +24,15 @@ export const testimonial = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'sortOrder',
+      title: 'Sort Order',
+      type: 'number',
+      description:
+        'Display order on the page (lower numbers appear first). Use this to arrange text and video testimonials (e.g. 1, 2, 3…).',
+      validation: (Rule) => Rule.required().integer().min(0),
+      initialValue: 0,
+    }),
+    defineField({
       name: 'name',
       title: 'Name',
       type: 'string',
@@ -95,6 +104,11 @@ export const testimonial = defineType({
   ],
   orderings: [
     {
+      title: 'Sort Order',
+      name: 'sortOrderAsc',
+      by: [{field: 'sortOrder', direction: 'asc'}],
+    },
+    {
       title: 'Created Date (Oldest First)',
       name: 'createdAtAsc',
       by: [{field: '_createdAt', direction: 'asc'}],
@@ -111,16 +125,17 @@ export const testimonial = defineType({
       role: 'role',
       page: 'page',
       mediaType: 'mediaType',
+      sortOrder: 'sortOrder',
       media: 'profilePhoto',
     },
-    prepare({name, role, page, mediaType, media}) {
+    prepare({name, role, page, mediaType, sortOrder, media}) {
       const pageLabel =
         TESTIMONIAL_PAGE_OPTIONS.find((entry) => entry.value === page)?.title ?? page
       const typeLabel = mediaType === 'video' ? 'Video' : 'Image'
 
       return {
         title: name || 'Untitled testimonial',
-        subtitle: [pageLabel, typeLabel, role].filter(Boolean).join(' • '),
+        subtitle: [`#${sortOrder ?? 0}`, pageLabel, typeLabel, role].filter(Boolean).join(' • '),
         media,
       }
     },
