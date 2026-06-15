@@ -43,7 +43,7 @@ export const structure: StructureResolver = (S) =>
                     S.documentList()
                       .title(title)
                       .filter(filter)
-                      .defaultOrdering([{field: '_createdAt', direction: 'asc'}]),
+                      .defaultOrdering([{field: 'sortOrder', direction: 'asc'}]),
                   ),
               ),
             ),
