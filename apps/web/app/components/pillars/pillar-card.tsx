@@ -113,7 +113,7 @@ export function PillarCard({
       )}
 
       {/* Content - bottom left */}
-      <div className="relative z-10 flex flex-col gap-6 px-4 py-6 md:px-10 md:py-10 lg:max-w-360 lg:px-20">
+      <div className="relative z-10 flex flex-col gap-6 px-4 py-6 md:px-10 md:py-10 lg:max-w-360 lg:px-20 mb-20">
         <div className="flex max-w-[504px] flex-col gap-3 text-white">
           <h2 className="font-montserrat text-[22px] font-bold leading-[1.2] md:text-[32px]">
             {title}

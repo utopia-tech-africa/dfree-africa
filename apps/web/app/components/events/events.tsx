@@ -164,7 +164,7 @@ export const Events = ({
                   ref={(el) => {
                     cardRefsRef.current[index] = el;
                   }}
-                  className="min-w-[320px] md:min-w-90 lg:min-w-101.25 w-[320px] md:w-90 lg:w-101.25 shrink-0 flex"
+                  className="min-w-[320px] md:min-w-[360px] lg:min-w-[405px] w-[320px] md:w-[360px] lg:w-[405px] shrink-0 flex"
                 >
                   <ContentCard
                     variant="event"
@@ -250,7 +250,7 @@ export const Events = ({
         </div>
       ) : (
         // GRID layout
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
           {EVENT_KEYS.map((key) => {
             const meta = EVENTS_META.find((e) => e.id === key);
             if (!meta) return null;
