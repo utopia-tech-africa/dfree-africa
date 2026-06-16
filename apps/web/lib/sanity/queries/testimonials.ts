@@ -1,9 +1,10 @@
 import { groq } from "next-sanity";
 
 export const testimonialsByPageQuery = groq`
-  *[_type == "testimonial" && page == $page] | order(_createdAt asc) {
+  *[_type == "testimonial" && page == $page] | order(coalesce(sortOrder, 9999) asc, _createdAt asc) {
     _id,
     page,
+    sortOrder,
     name,
     role,
     quote,
