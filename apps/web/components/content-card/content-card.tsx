@@ -2,7 +2,9 @@
 
 import Image, { StaticImageData } from "next/image";
 import { Link } from "@/i18n/navigation";
-import { ChevronRight, MapPin, Clock } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { FaCalendarDays } from "react-icons/fa6";
+import { MdLocationPin } from "react-icons/md";
 
 export interface ContentCardProps {
   variant?: "default" | "event";
@@ -76,43 +78,47 @@ export const ContentCard = ({
         )}
       </div>
 
-      <div className="flex flex-col flex-1 p-5 relative bg-white rounded-t-2xl -mt-4">
-        {badge && (
-          <span className="inline-block w-fit px-2 py-1 text-xs font-poppinsrounded-[4px] text-neutral-100 bg-tertiary-600 mb-3">
-            Finfest | {badge}
-          </span>
-        )}
+      <div className="flex flex-col flex-1 justify-between p-4 gap-8 bg-white rounded-t-2xl -mt-4.5 z-10">
+        <div>
+          {badge && (
+            <span className="inline-block w-fit px-2 py-1 text-xs 2xl:text-sm font-poppinsrounded-[4px] text-neutral-100 bg-tertiary-600 mb-3 rounded">
+              Finfest | {badge}
+            </span>
+          )}
 
-        <h5 className="text-[20px] font-semibold leading-[130%] text-neutral-900 mb-2">
-          {title}
-        </h5>
+          <h5 className="text-[20px] font-semibold leading-[130%] text-neutral-900 mb-2">
+            {title}
+          </h5>
 
-        <p className="text-[14px] text-neutral-600 leading-[150%] mb-4 line-clamp-2">
-          {description}
-        </p>
+          <p className="text-neutral-800 leading-6 line-clamp-3">
+            {description}
+          </p>
+        </div>
 
-        {isEvent && (
-          <div className="flex flex-col gap-2 text-sm text-neutral-500 m-3 ">
+        <div className="space-y-3">
+          <div className="flex flex-col gap-y-1 text-sm text-neutral-700">
             {location && (
               <div className="flex items-center gap-2">
-                <MapPin size={16} />
+                <MdLocationPin size={16} />
                 <span>{location}</span>
               </div>
             )}
 
-            <div className="flex items-center gap-2">
-              <Clock size={16} />
-              <span>09:00 AM - 11:00 AM ET</span>
-            </div>
+            {date && (
+              <div className="flex items-center gap-2">
+                <FaCalendarDays size={16} />
+                <span>{"10th August 2026"}</span>
+              </div>
+            )}
           </div>
-        )}
 
-        <Link href={link} className="mt-2">
-          <span className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 ">
-            {ctaLabel ?? "View event"}
-            <ChevronRight size={16} />
-          </span>
-        </Link>
+          <Link href={link}>
+            <span className="inline-flex items-center gap-2  font-semibold text-primary-600 hover:underline">
+              {ctaLabel ?? "View event"}
+              <ChevronRight size={16} />
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   );

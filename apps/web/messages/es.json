@@ -241,7 +241,7 @@
     "dfreeAfrica": "DFREE® En África",
     "communityCampaigns": "Campañas Comunitarias",
     "finfest": "FinFE$T",
-    "dfreeLeadershipInstitute": "Instituto de Liderazgo Ascendente DFREE",
+    "dfreeLeadershipInstitute": "Instituto de Liderazgo DFREE®",
     "eventSponsorship": "Patrocinio de eventos",
     "partner": "Asociarse",
     "travelWithUs": "Viaja Con Nosotros",
@@ -294,8 +294,8 @@
           "description": "FinFe$t® es el evento comunitario insignia de DFREE® que combina educación financiera, salud y bienestar a través de experiencias participativas para brindar a los participantes herramientas prácticas que impulsen el bienestar integral y la prosperidad a largo plazo. Es 100% gratuito."
         },
         "accessScholarships": {
-          "name": "Becas de acceso DFREE",
-          "description": "El programa de becas DFREE® proporciona apoyo basado en las necesidades para eliminar las barreras financieras que impiden el acceso al contenido de DFREE®: recursos educativos, aprendizaje digital, formación en directo, asesoramiento financiero gratuito y asistencia de emergencia limitada para ayudar a los miembros de nuestra comunidad a reducir sus deudas y lograr una libertad financiera duradera."
+          "name": "Instituto de Liderazgo Ascendente DFREE®",
+          "description": "El Instituto de Liderazgo Ascendente DFREE® es un programa de capacitación diseñado para dotar a los líderes comunitarios del dominio en el empoderamiento financiero y la justicia económica. Los graduados obtienen la credencial de DFREE® Fellow, lo que los establece como embajadores de confianza a nivel nacional autorizados para facilitar el plan de estudios de DFREE®, capacitar a otros e impulsar una transformación económica equitativa dentro de sus comunidades locales."
         }
       }
     },
@@ -314,7 +314,7 @@
         "livesImpacted": {
           "value": "$890K",
           "suffix": "+",
-          "label": "Gastado en proyectos africanos"
+          "label": "En proyectos africanos"
         },
         "debtCleared": {
           "value": "$22",
@@ -1076,7 +1076,7 @@
     "coreAreas": {
       "label": "Tres áreas principales",
       "title": "Los pilares de experiencia del Instituto",
-      "description": "Cada participante desarrolla conocimiento profundo y aplicable en tres dominios interconectados — cada uno construyendo sobre el anterior",
+      "description": "Cada participante desarrolla conocimiento profundo y aplicable en tres dominios interconectados <br></br> cada uno construyendo sobre el anterior",
       "pillars": {
         "pillar1": {
           "pillarName": "ALFABETIZACIÓN FINANCIERA",

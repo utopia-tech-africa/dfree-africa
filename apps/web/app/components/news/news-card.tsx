@@ -4,8 +4,7 @@ import { FC, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { cn } from "@/lib/utils";
-import { Calendar, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
@@ -53,16 +52,16 @@ export const NewsCard: FC<NewsCardProps> = ({
       <div className="flex flex-col flex-1 justify-between p-4 gap-8 bg-white rounded-t-2xl -mt-4.5 z-10">
         <div className="">
           {(category || (tags && tags.length > 0)) && (
-            <span className="inline-block w-fit px-2 py-1 text-xs 2xl:text-sm font-poppinsrounded-[4px] text-neutral-100 bg-tertiary-600 mb-6 rounded ">
+            <span className="inline-block w-fit px-2 py-1 text-xs 2xl:text-sm font-poppinsrounded-[4px] text-neutral-100 bg-tertiary-600 mb-3 rounded ">
               {[category, tags?.[0]].filter(Boolean).join(" | ")}
             </span>
           )}
 
-          <div className="">
-            <h3 className="font-bold text-lg mb-3">{title}</h3>
-            <p className="text-neutral-900 text-lg leading-relaxed line-clamp-3">
-              {excerpt}
-            </p>
+          <div className="space-y-3">
+            <h3 className="text-[20px] font-semibold leading-[130%] text-neutral-900">
+              {title}
+            </h3>
+            <p className="text-neutral-800 leading-6 line-clamp-3">{excerpt}</p>
           </div>
         </div>
 

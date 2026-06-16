@@ -241,7 +241,7 @@
     "dfreeAfrica": "DFREE® In Africa",
     "communityCampaigns": "Community Campaigns",
     "finfest": "FinFE$T",
-    "dfreeLeadershipInstitute": "DFREE Bottom-Up leadership Institute",
+    "dfreeLeadershipInstitute": "DFREE® Leadership Institute",
     "eventSponsorship": "Event sponsorship",
     "partner": "Partner",
     "travelWithUs": "Travel With Us",
@@ -294,8 +294,8 @@
           "description": "FinFe$t® is DFREE®'s flagship community event that blends financial education, health, and wellness through engaging experiences to equip participants with practical tools to drive holistic well-being and long-term prosperity. It’s 100% free."
         },
         "accessScholarships": {
-          "name": "DFREE® Access Scholarships",
-          "description": " The DFREE® Scholarship program provides need-based support to remove financial barriers to accessing DFREE® content – educational resources, digital learning, live training, free financial counseling and limited emergency assistance to help members of our community pursue debt reduction and lasting financial freedom."
+          "name": "DFREE® Bottom-Up Leadership Institute",
+          "description": "The DFREE® Bottom-Up Leadership Institute is a training program designed to equip community leaders with mastery in financial empowerment and economic justice. Graduates earn the credential of DFREE® Fellow, establishing them as trusted, nationwide ambassadors authorized to facilitate the DFREE® curriculum, train others, and drive equitable economic transformation within their local communities."
         }
       }
     },
@@ -314,7 +314,7 @@
         "livesImpacted": {
           "value": "$890K",
           "suffix": "+",
-          "label": "Spent on African Projects"
+          "label": "On African Projects"
         },
         "debtCleared": {
           "value": "$22",
@@ -1077,7 +1077,7 @@
     "coreAreas": {
       "label": "Three Core Areas",
       "title": "The Institute’s pillars of expertise",
-      "description": "Every participant develops deep, applicable knowledge across three interconnected domains — each building on the last",
+      "description": "Every participant develops deep, applicable knowledge across three interconnected domains <br></br> each building on the last",
       "pillars": {
         "pillar1": {
           "pillarName": "FINANCIAL  LITERACY",
