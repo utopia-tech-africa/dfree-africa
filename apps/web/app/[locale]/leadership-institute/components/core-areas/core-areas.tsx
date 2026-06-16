@@ -34,7 +34,9 @@ export default async function CoreAreas() {
         <Title text={t("label")} />
         <Subtitle className="leading-none" text={t("title")} />
         <p className="text-sm md:text-base lg:text-lg text-neutral-1000">
-          {t("description")}
+          {t.rich("description", {
+            br: () => <br />,
+          })}
         </p>
       </div>
 
@@ -49,7 +51,7 @@ export default async function CoreAreas() {
               alt={t(`pillars.${item.key}.imageAlt`)}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
 
             <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />

@@ -241,7 +241,7 @@
     "dfreeAfrica": "DFREE® En Afrique",
     "communityCampaigns": "Campagnes Communautaires",
     "finfest": "FinFE$T",
-    "dfreeLeadershipInstitute": "Institut de leadership ascendant DFREE",
+    "dfreeLeadershipInstitute": "Institut de Leadership DFREE®",
     "eventSponsorship": "Sponsorisation d'événements",
     "partner": "Partenariat",
     "travelWithUs": "Voyagez Avec Nous",
@@ -294,8 +294,8 @@
           "description": "FinFe$t® est l'événement phare de la communauté DFREE. Il allie éducation financière, santé et bien-être à travers des expériences interactives afin de fournir aux participants outils pratiques pour favoriser un bien-être global et une prospérité durable. C'est 100 % gratuit."
         },
         "accessScholarships": {
-          "name": "Bourses d'accès DFREE",
-          "description": "Le programme de bourses DFREE® offre un soutien basé sur les besoins afin de supprimer les obstacles financiers à l'accès au contenu DFREE® – ressources éducatives, apprentissage numérique, formations en direct, conseils financiers gratuits et aide d'urgence limitée – pour aider les membres de notre communauté à réduire leurs dettes et à atteindre une liberté financière durable."
+          "name": "Institut de leadership ascendant DFREE®",
+          "description": "L'Institut de leadership ascendant DFREE® est un programme de formation conçu pour doter les leaders communautaires d'une maîtrise de l'autonomisation financière et de la justice économique. Les diplômés obtiennent le titre de DFREE® Fellow, ce qui les établit comme des ambassadeurs de confiance à l'échelle nationale, autorisés à animer le programme DFREE®, à former d'autres personnes et à mener une transformation économique équitable au sein de leurs communautés locales."
         }
       }
     },
@@ -314,7 +314,7 @@
         "livesImpacted": {
           "value": "$890K",
           "suffix": "+",
-          "label": "Dépensé dans des projets africains"
+          "label": "Sur les projets africains"
         },
         "debtCleared": {
           "value": "$22",
@@ -1077,7 +1077,7 @@
     "coreAreas": {
       "label": "Trois domaines principaux",
       "title": "Les piliers d'expertise de l'Institut",
-      "description": "Chaque participant développe des connaissances approfondies et applicables dans trois domaines interconnectés — chacun s’appuyant sur le précédent",
+      "description": "Chaque participant développe des connaissances approfondies et applicables dans trois domaines interconnectés <br></br> chacun s’appuyant sur le précédent",
       "pillars": {
         "pillar1": {
           "pillarName": "LITTÉRATIE FINANCIÈRE",
