@@ -22,20 +22,37 @@ export type SanityImageAssetReference = {
   [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
 };
 
-export type PastSpeaker = {
+export type SanityFileAssetReference = {
+  _ref: string;
+  _type: "reference";
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: "sanity.fileAsset";
+};
+
+export type Testimonial = {
   _id: string;
-  _type: "pastSpeaker";
+  _type: "testimonial";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
+  page?: "home" | "billion-dollar-challenge";
+  sortOrder?: number;
   name?: string;
   role?: string;
-  image?: {
+  quote?: string;
+  mediaType?: "image" | "video";
+  profilePhoto?: {
     asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
+    alt?: string;
     _type: "image";
+  };
+  video?: {
+    asset?: SanityFileAssetReference;
+    media?: unknown;
+    _type: "file";
   };
 };
 
@@ -53,6 +70,23 @@ export type SanityImageHotspot = {
   y?: number;
   height?: number;
   width?: number;
+};
+
+export type PastSpeaker = {
+  _id: string;
+  _type: "pastSpeaker";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  role?: string;
+  image?: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
 };
 
 export type Store = {
@@ -84,9 +118,9 @@ export type Slug = {
   source?: string;
 };
 
-export type Blog = {
+export type News = {
   _id: string;
-  _type: "blog";
+  _type: "news";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -148,7 +182,13 @@ export type Blog = {
       }
   >;
   readTime?: number;
-  tags?: Array<string>;
+  category?:
+    | "BDC"
+    | "Africa"
+    | "FinFE$T"
+    | "Scholarships"
+    | "Community Campaigns";
+  tag?: string;
   featured?: boolean;
   publishedDate?: string;
 };
@@ -172,13 +212,6 @@ export type Year = {
       _key: string;
     } & ProjectReference
   >;
-};
-
-export type SanityFileAssetReference = {
-  _ref: string;
-  _type: "reference";
-  _weak?: boolean;
-  [internalGroqTypeReferenceTo]?: "sanity.fileAsset";
 };
 
 export type GalleryReference = {
@@ -239,9 +272,10 @@ export type Project = {
     _key: string;
   }>;
   country?: string;
-  featured?: boolean;
   isOngoing?: boolean;
+  featured?: boolean;
   gallery?: GalleryReference;
+  isActive?: boolean;
 };
 
 export type Gallery = {
@@ -273,6 +307,32 @@ export type Gallery = {
     _type: "mediaItem";
     _key: string;
   }>;
+};
+
+export type Event = {
+  _id: string;
+  _type: "event";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  category?: string;
+  tag?: string;
+  description?: string;
+  image?: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  };
+  location?: string;
+  eventDate?: string;
+  link?: string;
+  featured?: boolean;
+  sortOrder?: number;
 };
 
 export type SanityImagePaletteSwatch = {
@@ -374,18 +434,20 @@ export type Geopoint = {
 
 export type AllSanitySchemaTypes =
   | SanityImageAssetReference
-  | PastSpeaker
+  | SanityFileAssetReference
+  | Testimonial
   | SanityImageCrop
   | SanityImageHotspot
+  | PastSpeaker
   | Store
   | Slug
-  | Blog
+  | News
   | ProjectReference
   | Year
-  | SanityFileAssetReference
   | GalleryReference
   | Project
   | Gallery
+  | Event
   | SanityImagePaletteSwatch
   | SanityImagePalette
   | SanityImageDimensions
@@ -395,23 +457,132 @@ export type AllSanitySchemaTypes =
   | SanityImageAsset
   | Geopoint;
 
-// Source: ../web/lib/sanity/queries/blogs.ts
-// Variable: blogsQuery
-// Query: *[_type == "blog" && (!defined($currentSlug) || slug.current != $currentSlug)] | order(publishedDate desc) {    _id,    title,    "slug": slug.current,    excerpt,    readTime,    publishedDate,    "mainImage": mainImage.asset->url  }
-export type BlogsQueryResult = Array<{
+// Source: ../web/lib/sanity/queries/events.ts
+// Variable: eventsQuery
+// Query: *[_type == "event"] | order(coalesce(sortOrder, 9999) asc, eventDate desc) {    _id,    title,    "slug": slug.current,    category,    tags,    description,    "imageUrl": image.asset->url,    "imageAlt": image.alt,    location,    eventDate,    link,    featured,    sortOrder  }
+export type EventsQueryResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  category: string | null;
+  tag: string | null;
+  description: string | null;
+  imageUrl: string | null;
+  imageAlt: string | null;
+  location: string | null;
+  eventDate: string | null;
+  link: string | null;
+  featured: boolean | null;
+  sortOrder: number | null;
+}>;
+
+// Source: ../web/lib/sanity/queries/events.ts
+// Variable: featuredEventsQuery
+// Query: *[_type == "event" && featured == true] | order(coalesce(sortOrder, 9999) asc, eventDate desc) {    _id,    title,    "slug": slug.current,    category,    tags,    description,    "imageUrl": image.asset->url,    "imageAlt": image.alt,    location,    eventDate,    link,    featured,    sortOrder  }
+export type FeaturedEventsQueryResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  category: string | null;
+  tag: string | null;
+  description: string | null;
+  imageUrl: string | null;
+  imageAlt: string | null;
+  location: string | null;
+  eventDate: string | null;
+  link: string | null;
+  featured: true;
+  sortOrder: number | null;
+}>;
+
+// Source: ../web/lib/sanity/queries/finfestGallery.ts
+// Variable: finfestGalleryQuery
+// Query: *[_type == "gallery" && slug.current match "finfest*" && defined(year)] | order(year desc) {  _id,  title,  year,  "items": items[] {    type,    useAsThumbnail,    "imageRef": image.asset->,    "videoUrl": video.asset->url,    caption  }}
+export type FinfestGalleryQueryResult = Array<{
+  _id: string;
+  title: string | null;
+  year: number | null;
+  items: Array<{
+    type: "image" | "video" | null;
+    useAsThumbnail: boolean | null;
+    imageRef: {
+      _id: string;
+      _type: "sanity.imageAsset";
+      _createdAt: string;
+      _updatedAt: string;
+      _rev: string;
+      originalFilename?: string;
+      label?: string;
+      title?: string;
+      description?: string;
+      altText?: string;
+      sha1hash?: string;
+      extension?: string;
+      mimeType?: string;
+      size?: number;
+      assetId?: string;
+      uploadId?: string;
+      path?: string;
+      url?: string;
+      metadata?: SanityImageMetadata;
+      source?: SanityAssetSourceData;
+    } | null;
+    videoUrl: string | null;
+    caption: string | null;
+  }> | null;
+}>;
+
+// Source: ../web/lib/sanity/queries/news.ts
+// Variable: newsQuery
+// Query: *[_type == "news" && ($currentSlug == null || slug.current != $currentSlug) && ($featured == null || featured == $featured) && ($category == null || category == $category)] | order(publishedDate desc) [$startIndex...$endIndex] {    _id,    title,    "slug": slug.current,    excerpt,    readTime,    publishedDate,    category,    tags,    "mainImage": mainImage.asset->url  }
+export type NewsQueryResult = Array<{
   _id: string;
   title: string | null;
   slug: string | null;
   excerpt: string | null;
   readTime: number | null;
   publishedDate: string | null;
+  category:
+    | "Africa"
+    | "BDC"
+    | "Community Campaigns"
+    | "FinFE$T"
+    | "Scholarships"
+    | null;
+  tag: string | null;
   mainImage: string | null;
 }>;
 
-// Source: ../web/lib/sanity/queries/blogs.ts
-// Variable: blogBySlugQuery
-// Query: *[_type == "blog" && slug.current == $slug][0] {  _id,  title,  "slug": slug.current,  excerpt,  body,  readTime,  publishedDate,  "mainImage": mainImage.asset->url,  authorName,  "authorImage": authorImage.asset->url}
-export type BlogBySlugQueryResult = {
+// Source: ../web/lib/sanity/queries/news.ts
+// Variable: featuredNewsQuery
+// Query: *[_type == "news" && featured == true] | order(publishedDate desc) [0...12] {    _id,    title,    "slug": slug.current,    excerpt,    readTime,    publishedDate,    category,    tags,    "mainImage": mainImage.asset->url  }
+export type FeaturedNewsQueryResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  excerpt: string | null;
+  readTime: number | null;
+  publishedDate: string | null;
+  category:
+    | "Africa"
+    | "BDC"
+    | "Community Campaigns"
+    | "FinFE$T"
+    | "Scholarships"
+    | null;
+  tag: string | null;
+  mainImage: string | null;
+}>;
+
+// Source: ../web/lib/sanity/queries/news.ts
+// Variable: newsCountQuery
+// Query: count(*[_type == "news" && ($currentSlug == null || slug.current != $currentSlug) && ($featured == null || featured == $featured) && ($category == null || category == $category)])
+export type NewsCountQueryResult = number;
+
+// Source: ../web/lib/sanity/queries/news.ts
+// Variable: newsBySlugQuery
+// Query: *[_type == "news" && slug.current == $slug][0] {  _id,  title,  "slug": slug.current,  excerpt,  body,  readTime,  publishedDate,  category,  tags,  "mainImage": mainImage.asset->url,  authorName,  "authorImage": authorImage.asset->url}
+export type NewsBySlugQueryResult = {
   _id: string;
   title: string | null;
   slug: string | null;
@@ -455,123 +626,25 @@ export type BlogBySlugQueryResult = {
   > | null;
   readTime: number | null;
   publishedDate: string | null;
+  category:
+    | "Africa"
+    | "BDC"
+    | "Community Campaigns"
+    | "FinFE$T"
+    | "Scholarships"
+    | null;
+  tag: string | null;
   mainImage: string | null;
   authorName: string | null;
   authorImage: string | null;
 } | null;
 
-// Source: ../web/lib/sanity/queries/finfestGallery.ts
-// Variable: finfestGalleryQuery
-// Query: *[_type == "gallery" && slug.current match "finfest*" && defined(year)] | order(year desc) {  _id,  title,  year,  "items": items[] {    type,    useAsThumbnail,    "imageRef": image.asset->,    "videoUrl": video.asset->url,    caption  }}
-export type FinfestGalleryQueryResult = Array<{
-  _id: string;
-  title: string | null;
-  year: number | null;
-  items: Array<{
-    type: "image" | "video" | null;
-    useAsThumbnail: boolean | null;
-    imageRef: {
-      _id: string;
-      _type: "sanity.imageAsset";
-      _createdAt: string;
-      _updatedAt: string;
-      _rev: string;
-      originalFilename?: string;
-      label?: string;
-      title?: string;
-      description?: string;
-      altText?: string;
-      sha1hash?: string;
-      extension?: string;
-      mimeType?: string;
-      size?: number;
-      assetId?: string;
-      uploadId?: string;
-      path?: string;
-      url?: string;
-      metadata?: SanityImageMetadata;
-      source?: SanityAssetSourceData;
-    } | null;
-    videoUrl: string | null;
-    caption: string | null;
-  }> | null;
-}>;
-
-// Source: ../web/lib/sanity/queries/store.ts
-// Variable: featuredStoreQuery
-// Query: *[_type == "store" && featured == true] | order(_createdAt desc)[0...6] {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
-export type FeaturedStoreQueryResult = Array<{
-  _id: string;
-  title: string | null;
-  slug: string | null;
-  coverImage: {
-    alt: string | null;
-    asset: {
-      _id: string;
-      _type: "sanity.imageAsset";
-      _createdAt: string;
-      _updatedAt: string;
-      _rev: string;
-      originalFilename?: string;
-      label?: string;
-      title?: string;
-      description?: string;
-      altText?: string;
-      sha1hash?: string;
-      extension?: string;
-      mimeType?: string;
-      size?: number;
-      assetId?: string;
-      uploadId?: string;
-      path?: string;
-      url?: string;
-      metadata?: SanityImageMetadata;
-      source?: SanityAssetSourceData;
-    } | null;
-  } | null;
-  price: number | null;
-  category: string | null;
-  inStock: boolean | null;
-  storeUrl: string | null;
-}>;
-
-// Source: ../web/lib/sanity/queries/store.ts
-// Variable: allStoreQuery
-// Query: *[_type == "store"] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
-export type AllStoreQueryResult = Array<{
-  _id: string;
-  title: string | null;
-  slug: string | null;
-  coverImage: {
-    alt: string | null;
-    asset: {
-      _id: string;
-      _type: "sanity.imageAsset";
-      _createdAt: string;
-      _updatedAt: string;
-      _rev: string;
-      originalFilename?: string;
-      label?: string;
-      title?: string;
-      description?: string;
-      altText?: string;
-      sha1hash?: string;
-      extension?: string;
-      mimeType?: string;
-      size?: number;
-      assetId?: string;
-      uploadId?: string;
-      path?: string;
-      url?: string;
-      metadata?: SanityImageMetadata;
-      source?: SanityAssetSourceData;
-    } | null;
-  } | null;
-  price: number | null;
-  category: string | null;
-  inStock: boolean | null;
-  storeUrl: string | null;
-}>;
+// Source: ../web/lib/sanity/queries/news.ts
+// Variable: newsCategoriesQuery
+// Query: array::unique(*[_type == "news" && defined(category)].category)
+export type NewsCategoriesQueryResult = Array<
+  "Africa" | "BDC" | "Community Campaigns" | "FinFE$T" | "Scholarships"
+>;
 
 // Source: ../web/lib/sanity/queries/past-speaker.ts
 // Variable: pastSpeakersQuery
@@ -653,7 +726,7 @@ export type YearsWithProjectsForGalleryQueryResult = Array<{
 
 // Source: ../web/lib/sanity/queries/projects.ts
 // Variable: projectsQuery
-// Query: *[_type == "project"] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  description,  country,  featured,  "previewMedia": previewMedia {    type,    "imageRef": image.asset->,    "videoUrl": video.asset->url  }}
+// Query: *[_type == "project" && isActive != false] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  description,  country,  featured,  isOngoing,  "previewMedia": previewMedia {    type,    "imageRef": image.asset->,    "videoUrl": video.asset->url  }}
 export type ProjectsQueryResult = Array<{
   _id: string;
   title: string | null;
@@ -692,14 +765,14 @@ export type ProjectsQueryResult = Array<{
 
 // Source: ../web/lib/sanity/queries/projects.ts
 // Variable: featuredProjectsQuery
-// Query: *[_type == "project" && featured == true] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  description,  country,  featured,  "previewMedia": previewMedia {    type,    "imageRef": image.asset->,    "videoUrl": video.asset->url  }}
+// Query: *[_type == "project" && featured == true && isActive != false] | order(_updatedAt desc) {  _id,  title,  "slug": slug.current,  description,  country,  featured,  isOngoing,  "previewMedia": previewMedia {    type,    "imageRef": image.asset->,    "videoUrl": video.asset->url  }}
 export type FeaturedProjectsQueryResult = Array<{
   _id: string;
   title: string | null;
   slug: string | null;
   description: string | null;
   country: string | null;
-  featured: true;
+  featured: boolean | null;
   isOngoing: boolean | null;
   previewMedia: {
     type: "image" | "video" | null;
@@ -731,7 +804,7 @@ export type FeaturedProjectsQueryResult = Array<{
 
 // Source: ../web/lib/sanity/queries/projects.ts
 // Variable: featuredCountryProjectsQuery
-// Query: *[_type == "project" && country == $country && featured == true] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  description,  country,  featured,  "previewMedia": previewMedia {    type,    "imageRef": image.asset->,    "videoUrl": video.asset->url  }}
+// Query: *[_type == "project" && country == $country && featured == true && isActive != false] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  description,  country,  featured,  isOngoing,  "previewMedia": previewMedia {    type,    "imageRef": image.asset->,    "videoUrl": video.asset->url  }}
 export type FeaturedCountryProjectsQueryResult = Array<{
   _id: string;
   title: string | null;
@@ -778,7 +851,7 @@ export type YearsWithProjectIdsQueryResult = Array<{
 
 // Source: ../web/lib/sanity/queries/projects.ts
 // Variable: projectBySlugQuery
-// Query: *[_type == "project" && slug.current == $slug][0] {    _id,    title,    "slug": slug.current,    description,    country,    featured,    "previewMedia": previewMedia {      type,      "imageRef": image.asset->,      "videoUrl": video.asset->url    },    details,    "additionalImages": additionalImages[]{      asset->    },  }
+// Query: *[_type == "project" && slug.current == $slug && isActive != false][0] {    _id,    title,    "slug": slug.current,    description,    country,    featured,    isOngoing,    "previewMedia": previewMedia {      type,      "imageRef": image.asset->,      "videoUrl": video.asset->url    },    details,    "additionalImages": additionalImages[]{      asset->    },  }
 export type ProjectBySlugQueryResult = {
   _id: string;
   title: string | null;
@@ -856,3 +929,95 @@ export type ProjectBySlugQueryResult = {
     } | null;
   }> | null;
 } | null;
+
+// Source: ../web/lib/sanity/queries/store.ts
+// Variable: featuredStoreQuery
+// Query: *[_type == "store" && featured == true] | order(_createdAt desc)[0...6] {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
+export type FeaturedStoreQueryResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  coverImage: {
+    alt: string | null;
+    asset: {
+      _id: string;
+      _type: "sanity.imageAsset";
+      _createdAt: string;
+      _updatedAt: string;
+      _rev: string;
+      originalFilename?: string;
+      label?: string;
+      title?: string;
+      description?: string;
+      altText?: string;
+      sha1hash?: string;
+      extension?: string;
+      mimeType?: string;
+      size?: number;
+      assetId?: string;
+      uploadId?: string;
+      path?: string;
+      url?: string;
+      metadata?: SanityImageMetadata;
+      source?: SanityAssetSourceData;
+    } | null;
+  } | null;
+  price: number | null;
+  category: string | null;
+  inStock: boolean | null;
+  storeUrl: string | null;
+}>;
+
+// Source: ../web/lib/sanity/queries/store.ts
+// Variable: allStoreQuery
+// Query: *[_type == "store"] | order(_createdAt desc) {  _id,  title,  "slug": slug.current,  "coverImage": coverImage {    alt,    "asset": asset->  },  price,  category,  inStock,  storeUrl}
+export type AllStoreQueryResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  coverImage: {
+    alt: string | null;
+    asset: {
+      _id: string;
+      _type: "sanity.imageAsset";
+      _createdAt: string;
+      _updatedAt: string;
+      _rev: string;
+      originalFilename?: string;
+      label?: string;
+      title?: string;
+      description?: string;
+      altText?: string;
+      sha1hash?: string;
+      extension?: string;
+      mimeType?: string;
+      size?: number;
+      assetId?: string;
+      uploadId?: string;
+      path?: string;
+      url?: string;
+      metadata?: SanityImageMetadata;
+      source?: SanityAssetSourceData;
+    } | null;
+  } | null;
+  price: number | null;
+  category: string | null;
+  inStock: boolean | null;
+  storeUrl: string | null;
+}>;
+
+// Source: ../web/lib/sanity/queries/testimonials.ts
+// Variable: testimonialsByPageQuery
+// Query: *[_type == "testimonial" && page == $page] | order(coalesce(sortOrder, 9999) asc, _createdAt asc) {    _id,    page,    sortOrder,    name,    role,    quote,    mediaType,    "videoUrl": video.asset->url,    "profilePhotoUrl": profilePhoto.asset->url,    "profilePhotoAlt": profilePhoto.alt  }
+export type TestimonialsByPageQueryResult = Array<{
+  _id: string;
+  page: "billion-dollar-challenge" | "home" | null;
+  sortOrder: number | null;
+  name: string | null;
+  role: string | null;
+  quote: string | null;
+  mediaType: "image" | "video" | null;
+  videoUrl: string | null;
+  profilePhotoUrl: string | null;
+  profilePhotoAlt: string | null;
+}>;

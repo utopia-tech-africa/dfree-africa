@@ -343,54 +343,14 @@
       "subtitle": "Join us in our mission to transform financial landscapes.",
       "viewAllCta": "View all events",
       "viewEventCta": "View event",
-      "items": {
-        "workshop": {
-          "badge": "Workshop",
-          "title": "Financial freedom masterclass",
-          "location": "New Brunswick, New Jersey",
-          "description": "Learn practical strategies for managing and reducing personal debt.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
-        },
-        "seminar": {
-          "badge": "Seminar",
-          "title": "Community economic empowerment",
-          "location": "New Brunswick, New Jersey",
-          "description": "Discover collaborative approaches to building financial resilience.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
-        },
-        "conference": {
-          "badge": "Conference",
-          "title": "Debt reduction strategies",
-          "location": "New Brunswick, New Jersey",
-          "description": "Explore innovative techniques for overcoming financial challenges.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
-        },
-        "donation": {
-          "badge": "Giving",
-          "title": "Giving back to the motherland",
-          "location": "New Brunswick, New Jersey",
-          "description": "Master practical methods for navigating monetary obstacles.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
+      "featuredEvents": {
+        "label": "Community & social gatherings",
+        "title": "Community gatherings",
+        "subtitle": "Join us in our mission to transform financial landscapes.",
+        "viewAllCta": "View all events",
+        "viewEventCta": "View event",
+        "emptyState": {
+          "description": "No events found right now. Check back soon for upcoming workshops and gatherings."
         }
       }
     },

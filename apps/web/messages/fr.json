@@ -343,54 +343,14 @@
       "subtitle": "Rejoignez-nous dans notre mission de transformer les réalités financières.",
       "viewAllCta": "Voir tous les événements",
       "viewEventCta": "Voir l’événement",
-      "items": {
-        "workshop": {
-          "badge": "Atelier",
-          "title": "Masterclass sur la liberté financière",
-          "location": "New Brunswick, New Jersey",
-          "description": "Découvrez des stratégies concrètes pour gérer et réduire vos dettes personnelles.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
-        },
-        "seminar": {
-          "badge": "Séminaire",
-          "title": "Autonomisation économique des communautés",
-          "location": "Houston",
-          "description": "Découvrez des approches collaboratives pour renforcer la résilience financière.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
-        },
-        "conference": {
-          "badge": "Conférence",
-          "title": "Stratégies de réduction de la dette",
-          "location": "Los Angeles",
-          "description": "Explorez des techniques innovantes pour surmonter les défis financiers.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
-        },
-        "donation": {
-          "badge": "Générosité",
-          "title": "Redonner à la terre mère",
-          "location": "Ghana",
-          "description": "Maîtrisez des méthodes pratiques pour faire face aux défis financiers.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
+      "featuredEvents": {
+        "label": "Réunions communautaires et sociales",
+        "title": "Rencontres à venir",
+        "subtitle": "Rejoignez-nous dans notre mission de transformer les réalités financières.",
+        "viewAllCta": "Voir tous les événements",
+        "viewEventCta": "Voir l’événement",
+        "emptyState": {
+          "description": "Aucun événement trouvé pour le moment. Revenez bientôt pour découvrir les prochains ateliers et rencontres."
         }
       }
     },
