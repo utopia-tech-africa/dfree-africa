@@ -9,18 +9,6 @@ import {
 
 const GA_MEASUREMENT_ID = "G-TLZZFHYGVW";
 
-type GtagFn = (
-  command: "config",
-  targetId: string,
-  config?: { page_path?: string },
-) => void;
-
-declare global {
-  interface Window {
-    gtag?: GtagFn;
-  }
-}
-
 export function GoogleAnalyticsPageviews() {
   const pathname = usePathname();
   const searchParams = useSearchParams();

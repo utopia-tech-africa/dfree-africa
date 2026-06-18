@@ -2,10 +2,12 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FormFieldError } from "@/lib/forms/form-field-error";
+import { subscribeToNewsletter } from "@/lib/forms/subscribe-newsletter";
 import {
   newsletterSignupSchema,
   type NewsletterSignupValues,
@@ -13,6 +15,10 @@ import {
 
 export function FooterNewsletterForm() {
   const t = useTranslations("footer");
+  const [feedback, setFeedback] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
   const {
     register,
@@ -25,12 +31,30 @@ export function FooterNewsletterForm() {
   });
 
   const onSubmit = async (data: NewsletterSignupValues) => {
-    console.log("Newsletter signup:", data);
-    reset();
+    setFeedback(null);
+
+    const result = await subscribeToNewsletter({
+      ...data,
+      source: "footer",
+    });
+
+    if (result.success) {
+      reset();
+      setFeedback({
+        type: "success",
+        message: t("newsletterSuccess"),
+      });
+      return;
+    }
+
+    setFeedback({
+      type: "error",
+      message: t("newsletterError"),
+    });
   };
 
   const inputClassName =
-    "w-full rounded-[100px] border border-neutral-100 bg-transparent px-5 py-6 placeholder:text-neutral-300 focus:outline-none md:min-w-75 md:flex-1 md:py-3 lg:min-w-62.5";
+    "h-auto min-h-14 w-full rounded-[100px] border border-neutral-100 bg-transparent px-5 py-6 text-neutral-100 placeholder:text-sm placeholder:text-neutral-300 focus:outline-none md:min-w-75 md:min-h-10 md:py-3 lg:min-w-62.5";
 
   return (
     <form
@@ -40,26 +64,36 @@ export function FooterNewsletterForm() {
     >
       <div className="space-y-1">
         <Input
+          id="footer-newsletter-name"
           type="text"
+          autoComplete="name"
           placeholder={t("enterFullName")}
           disabled={isSubmitting}
           aria-invalid={Boolean(errors.name)}
           className={inputClassName}
           {...register("name")}
         />
-        <FormFieldError message={errors.name?.message} />
+        <FormFieldError
+          message={errors.name?.message}
+          className="text-sm text-neutral-200"
+        />
       </div>
 
       <div className="space-y-1">
         <Input
+          id="footer-newsletter-email"
           type="email"
+          autoComplete="email"
           placeholder={t("enterEmail")}
           disabled={isSubmitting}
           aria-invalid={Boolean(errors.email)}
           className={inputClassName}
           {...register("email")}
         />
-        <FormFieldError message={errors.email?.message} />
+        <FormFieldError
+          message={errors.email?.message}
+          className="text-sm text-neutral-200"
+        />
       </div>
 
       <Button
@@ -70,6 +104,19 @@ export function FooterNewsletterForm() {
       >
         {isSubmitting ? "…" : t("submit")}
       </Button>
+
+      {feedback ? (
+        <p
+          className={
+            feedback.type === "success"
+              ? "text-sm text-neutral-100"
+              : "text-sm text-neutral-200"
+          }
+          role={feedback.type === "success" ? "status" : "alert"}
+        >
+          {feedback.message}
+        </p>
+      ) : null}
     </form>
   );
 }
