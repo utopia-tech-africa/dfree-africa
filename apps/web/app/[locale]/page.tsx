@@ -7,7 +7,7 @@ import WhoWeAre from "../components/who-we-are/who-we-are";
 import Pillars from "../components/pillars/pillars";
 import { HomeHero } from "../components/home-hero";
 import { OurImpact } from "../components/our-impact";
-import { Events } from "../components/events";
+import { FeaturedEvents } from "../components/events";
 import Store from "../components/store";
 import { FeaturedNews } from "../components/news";
 
@@ -35,7 +35,7 @@ const Home = () => {
           page="home"
           translationNamespace="home.testimonials"
         />
-        <Events />
+        <FeaturedEvents featured allowEmptyState={false} />
         <Store />
         <FeaturedNews compact featured allowEmptyState={false} />
       </div>

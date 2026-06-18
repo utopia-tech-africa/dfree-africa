@@ -1,3 +1,4 @@
+import {event} from './events/event'
 import {news} from './news/news'
 import {gallery} from './projects/gallery'
 import {project} from './projects/project'
@@ -6,4 +7,4 @@ import {store} from './store/store'
 import {pastSpeaker} from './finfest/past-speaker'
 import {testimonial} from './testimonials'
 
-export const schemaTypes = [gallery, project, year, news, store, pastSpeaker, testimonial]
+export const schemaTypes = [event, gallery, project, year, news, store, pastSpeaker, testimonial]

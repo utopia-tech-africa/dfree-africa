@@ -1,5 +1,5 @@
 import type {StructureResolver} from 'sanity/structure'
-import {Folder, MessageSquareQuote, ReceiptCent, ShoppingBag} from 'lucide-react'
+import {CalendarDays, Folder, MessageSquareQuote, ReceiptCent, ShoppingBag} from 'lucide-react'
 
 const testimonialPageFilters = [
   {title: 'All Testimonials', filter: '_type == "testimonial"'},
@@ -69,10 +69,16 @@ export const structure: StructureResolver = (S) =>
             .items([S.documentTypeListItem('pastSpeaker').title('Past Speakers')]),
         ),
 
+      // ---------------- Events ----------------
+      S.listItem()
+        .title('Events')
+        .icon(CalendarDays)
+        .child(S.documentTypeList('event').title('All Events')),
+
       // ---------------- Other ----------------
       ...S.documentTypeListItems().filter(
         (id) =>
-          !['project', 'gallery', 'year', 'store', 'pastSpeaker', 'testimonial'].includes(
+          !['event', 'project', 'gallery', 'year', 'store', 'pastSpeaker', 'testimonial'].includes(
             id.getId() ?? '',
           ),
       ),
