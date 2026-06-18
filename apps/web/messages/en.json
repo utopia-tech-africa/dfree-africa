@@ -164,6 +164,10 @@
       "title": "Leadership Institute",
       "description": "Train grassroots leaders to deliver DFREE® financial freedom programs in churches, nonprofits, and underserved communities."
     },
+    "leadershipInstituteApplication": {
+      "title": "Apply to the Leadership Institute",
+      "description": "Apply to the DFREE® Bottom-Up Leadership Institute and join a cohort of community leaders transforming financial futures."
+    },
     "leadership": {
       "title": "Leadership",
       "description": "Meet the DFREE® Foundation board and leadership team guiding nonprofit financial empowerment nationwide."
@@ -196,6 +200,8 @@
     "placeholderName": "Enter full name",
     "placeholderText": "Enter email address",
     "buttonText": "Submit",
+    "newsletterSuccess": "Thanks for subscribing! Check your inbox to confirm your subscription.",
+    "newsletterError": "We couldn't complete your subscription. Please try again in a moment.",
     "privacyNote": "By subscribing, you agree to receive periodic emails about DFREE® programs, events, and impact (typically monthly). Unsubscribe anytime. See our Privacy Policy.",
     "sendEnquiry": "Send enquiry",
     "sendUsAMessage": "Send us a message"
@@ -247,6 +253,8 @@
     "travelWithUs": "Travel With Us",
     "volunteer": "Volunteer",
     "submit": "Submit",
+    "newsletterSuccess": "Thanks for subscribing! Check your inbox to confirm your subscription.",
+    "newsletterError": "We couldn't complete your subscription. Please try again in a moment.",
     "ContactUs": "Contact Us"
   },
   "home": {
@@ -343,54 +351,14 @@
       "subtitle": "Join us in our mission to transform financial landscapes.",
       "viewAllCta": "View all events",
       "viewEventCta": "View event",
-      "items": {
-        "workshop": {
-          "badge": "Workshop",
-          "title": "Financial freedom masterclass",
-          "location": "New Brunswick, New Jersey",
-          "description": "Learn practical strategies for managing and reducing personal debt.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
-        },
-        "seminar": {
-          "badge": "Seminar",
-          "title": "Community economic empowerment",
-          "location": "New Brunswick, New Jersey",
-          "description": "Discover collaborative approaches to building financial resilience.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
-        },
-        "conference": {
-          "badge": "Conference",
-          "title": "Debt reduction strategies",
-          "location": "New Brunswick, New Jersey",
-          "description": "Explore innovative techniques for overcoming financial challenges.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
-        },
-        "donation": {
-          "badge": "Giving",
-          "title": "Giving back to the motherland",
-          "location": "New Brunswick, New Jersey",
-          "description": "Master practical methods for navigating monetary obstacles.",
-          "date": {
-            "day": "23rd April '26",
-            "dated": "06",
-            "mode": "online",
-            "year": "2024"
-          }
+      "featuredEvents": {
+        "label": "Community & social gatherings",
+        "title": "Community gatherings",
+        "subtitle": "Join us in our mission to transform financial landscapes.",
+        "viewAllCta": "View all events",
+        "viewEventCta": "View event",
+        "emptyState": {
+          "description": "No events found right now. Check back soon for upcoming workshops and gatherings."
         }
       }
     },
@@ -1177,6 +1145,240 @@
       "applyCta": "Apply to the Institute",
       "sponsorCta": "Become a Sponsor",
       "imageAlt": "The Leadership Institute CTA Image"
+    }
+  },
+  "leadershipInstituteApplication": {
+    "steps": {
+      "progressLabel": "Application progress",
+      "aboutYou": "About You & Your Work",
+      "communityImpact": "Community Impact",
+      "deploymentVision": "Deployment Vision",
+      "reviewSubmit": "Review & Submit"
+    },
+    "actions": {
+      "saveExit": "Save & exit",
+      "continue": "Continue",
+      "back": "Back",
+      "submit": "Submit application"
+    },
+    "success": {
+      "title": "Application successful!",
+      "body": "Your application was successfully submitted, our team will review your submission and contact you on next steps of this process",
+      "goBackHome": "Go back home"
+    },
+    "errors": {
+      "submitFailed": "We couldn't submit your application. Please try again in a moment."
+    },
+    "certificationModal": {
+      "title": "Commitment and Certification",
+      "close": "Close",
+      "submit": "Submit application",
+      "covenant": {
+        "title": "DFREE® Fellow Alumni Covenant",
+        "intro": "The DFREE® Fellowship is not a transaction — it is a covenant. As a Fellow, you receive full access to programming, mentorship, and a national network at no cost. In return, the DFREE Foundation asks each Fellow to sustain this mission beyond graduation:",
+        "commitments": {
+          "capstone": "Complete and present your Capstone Community Deployment Project by the cohort's end date.",
+          "alumniNetwork": "Remain active in the DFREE® Fellow Alumni Network for a minimum of two years post-graduation.",
+          "trainCommunity": "Train a minimum of 5 community members in DFREE® financial literacy principles within 12 months of graduation.",
+          "mentorApplicant": "Serve as a reference or mentor for at least one future Fellow applicant from your community.",
+          "annualReport": "Report annually on the reach and impact of your community deployment work to the DFREE Foundation.",
+          "representCredential": "Represent the DFREE® Fellow credential with integrity and in alignment with DFREE® brand and mission values."
+        },
+        "disclaimer": "This covenant is not a legal obligation — it is a shared commitment to the communities we both serve."
+      },
+      "certification": {
+        "title": "Applicant certification & submission",
+        "body": "By signing and submitting this application, I certify that all information is accurate. I understand that misrepresentation may result in disqualification. I accept the terms of the DFREE® Fellow Alumni Covenant and commit, if selected, to fully participate in the program and to deploy what I learn in service to my community."
+      },
+      "fields": {
+        "signature": "Signature",
+        "signatureUpload": "Upload signature",
+        "signatureChange": "Change file",
+        "signatureHint": "PNG, JPG, WEBP, or PDF up to 5MB",
+        "signatureSelected": "{fileName}",
+        "date": "Date"
+      }
+    },
+    "step1": {
+      "title": "About You & Your Work",
+      "subtitle": "Tell us about yourself and the work you do in your community.",
+      "sections": {
+        "personalInformation": "Personal Information",
+        "location": "Location",
+        "professionalInformation": "Professional Information"
+      },
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "city": "City",
+        "state": "State",
+        "mailingAddress": "Mailing address",
+        "currentRole": "Current Role / Title",
+        "organization": "Organization or Affiliation",
+        "organizationType": "Organization Type",
+        "yearsServed": "How long have you served this community?",
+        "communityServed": "Which community do you primarily serve?",
+        "organizationDescription": "Tell us about your organization and the people you serve"
+      },
+      "placeholders": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@mail.com",
+        "currentRole": "Pastor, Executive Director..",
+        "communityServed": "South Side Chicago, Young Adults 18-25...",
+        "organizationDescription": "What does your organization do and who does it serve?",
+        "selectOne": "Select one"
+      },
+      "options": {
+        "organizationType": {
+          "church": "Church",
+          "nonprofit": "Nonprofit",
+          "community_organization": "Community organization",
+          "educational": "Educational institution",
+          "government": "Government",
+          "other": "Other"
+        },
+        "yearsServed": {
+          "less_than_1": "Less than 1 year",
+          "1_to_3": "1–3 years",
+          "3_to_5": "3–5 years",
+          "5_to_10": "5–10 years",
+          "10_plus": "10+ years"
+        }
+      }
+    },
+    "step2": {
+      "title": "Community Impact",
+      "subtitle": "Help us understand your experience and why this work matters to you.",
+      "sections": {
+        "financialLiteracyExperience": "Financial Literacy Experience",
+        "communityChallenges": "Community Challenges",
+        "motivation": "Motivation"
+      },
+      "fields": {
+        "financialLiteracyExperience": "Have you led or participated in financial literacy, wealth-building, or economic empowerment programs?",
+        "programDescription": "What was the program? Who did it serve? What impact did it have?",
+        "communityChallenges": "What financial challenges do people in your community face most often?",
+        "motivation": "Why do you want to become a DFREE® Fellow?"
+      },
+      "placeholders": {
+        "programDescription": "What was the program, who did it reach, and what was the outcome?",
+        "communityChallenges": "Describe the financial barriers, inequities, or needs you observe most frequently."
+      },
+      "options": {
+        "financialLiteracyExperience": {
+          "led_programs": "Led Programs",
+          "participated": "Participated",
+          "both": "Both",
+          "informally_supported": "Informally Supported",
+          "no_prior_experience": "No Prior Experience"
+        }
+      },
+      "encouragement": {
+        "title": "You're halfway there",
+        "body": "This section helps us understand your heart for community transformation."
+      }
+    },
+    "step3": {
+      "title": "Community Deployment Vision",
+      "subtitle": "Every DFREE® Fellow completes a Capstone Community Deployment Project as the culminating requirement of the fellowship. You will design, execute, and present a plan for bringing DFREE® financial literacy and empowerment programming to a defined audience in your community. This section asks for your initial concept—it will be developed fully during the fellowship.",
+      "capstone": {
+        "title": "What is a Capstone Community Deployment Project?",
+        "body": "A structured plan to train 5–25 community members in DFREE® financial literacy and empowerment principles. It includes a defined audience, a delivery method, a timeline, and a simple impact measurement approach. Fellows present their capstone to the cohort and DFREE Foundation at the conclusion of the program."
+      },
+      "sections": {
+        "communityStory": "Community Story",
+        "futureProject": "Your Future Project"
+      },
+      "fields": {
+        "communityStory": "Describe a moment when you witnessed financial hardship or economic injustice in your community.",
+        "whoToTrain": "Who would you like to train?",
+        "peopleToReach": "Approximately how many people would you like to reach?",
+        "setting": "What setting would you use?",
+        "participationHistory": "Have you led or participated in financial literacy, wealth-building, or economic empowerment programs?",
+        "successMetrics": "How would you measure success?",
+        "projectVision": "Briefly describe your project vision."
+      },
+      "placeholders": {
+        "communityStory": "What happened? Who was affected? What did you learn? What would you have liked to do?",
+        "whoToTrain": "e.g. single mothers at my church, youth 18–24, small business owners in my neighborhood",
+        "selectOne": "Select one"
+      },
+      "options": {
+        "setting": {
+          "church": "Church",
+          "community_center": "Community center",
+          "school": "School",
+          "workplace": "Workplace",
+          "online": "Online",
+          "other": "Other"
+        },
+        "participationHistory": {
+          "1_month": "1 Month",
+          "2_to_3_months": "2–3 Months",
+          "4_to_6_months": "4–6 Months",
+          "6_plus_months": "6+ Months"
+        },
+        "successMetrics": {
+          "attendance": "Attendance",
+          "savings_growth": "Savings Growth",
+          "debt_reduction": "Debt Reduction",
+          "program_completion": "Program Completion",
+          "financial_goal_achievement": "Financial Goal Achievement",
+          "improved_financial_confidence": "Improved Financial Confidence",
+          "other": "Other"
+        }
+      }
+    },
+    "step4": {
+      "title": "Review & Submit",
+      "sections": {
+        "references": "References",
+        "availabilityCommitment": "Availability, Commitment & Alumni Covenant"
+      },
+      "reference1": "Reference 1",
+      "reference2": "Reference 2",
+      "fields": {
+        "fullName": "Full name",
+        "relationship": "Relationship",
+        "email": "Email",
+        "phone": "Phone",
+        "organizationTitle": "Organization / Title",
+        "cohortTerm": "Which cohort term are you applying for?",
+        "commitment": "Are you able to commit to the full program?",
+        "schedulingConstraints": "Any scheduling constraints or accommodations needed?",
+        "referralSources": "How did you hear about the institute?"
+      },
+      "options": {
+        "cohortTerm": {
+          "spring": {
+            "title": "Spring Cohort",
+            "description": "applications due Feb 1",
+            "label": "Spring Cohort (applications due Feb 1)"
+          },
+          "fall": {
+            "title": "Fall Cohort",
+            "description": "applications due Aug 1",
+            "label": "Fall Cohort (applications due Aug 1)"
+          }
+        },
+        "commitment": {
+          "full": "Yes — full commitment",
+          "mostly_with_constraints": "Mostly yes, with constraints (explain below)",
+          "unsure": "Unsure"
+        },
+        "referralSources": {
+          "fellow_referral": "DFREE® fellow referral",
+          "website": "Website",
+          "social_media": "Social media",
+          "church": "Church",
+          "organization": "Organization",
+          "academic": "Academic",
+          "other": "Other"
+        }
+      }
     }
   }
 }

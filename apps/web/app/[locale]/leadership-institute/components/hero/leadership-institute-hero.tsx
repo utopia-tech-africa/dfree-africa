@@ -40,7 +40,10 @@ export async function LeadershipInstituteHero() {
             </p>
 
             <div className="flex flex-row items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
-              <Link href="#" className="flex-1 sm:flex-none">
+              <Link
+                href="/leadership-institute/apply"
+                className="flex-1 sm:flex-none"
+              >
                 <Button
                   size="lg"
                   className="w-full px-2 sm:px-6 lg:px-10 py-3 sm:py-4 lg:py-5 text-white text-xs sm:text-sm lg:text-base font-medium"

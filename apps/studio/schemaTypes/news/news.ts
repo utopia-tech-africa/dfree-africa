@@ -100,11 +100,10 @@ export const news = defineType({
     }),
 
     defineField({
-      name: 'tags',
-      title: 'Tags',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {layout: 'tags'},
+      name: 'tag',
+      title: 'Tag',
+      type: 'string',
+      description: 'Shown after the category on the card.',
     }),
 
     defineField({

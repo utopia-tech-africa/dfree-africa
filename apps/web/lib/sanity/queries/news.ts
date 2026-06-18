@@ -9,7 +9,7 @@ export const newsQuery = groq`
     readTime,
     publishedDate,
     category,
-    tags,
+    "tag": coalesce(tag, tags[0]),
     "mainImage": mainImage.asset->url
   }
 `;
@@ -23,7 +23,7 @@ export const featuredNewsQuery = groq`
     readTime,
     publishedDate,
     category,
-    tags,
+    "tag": coalesce(tag, tags[0]),
     "mainImage": mainImage.asset->url
   }
 `;
@@ -42,7 +42,7 @@ export const newsBySlugQuery = groq`
   readTime,
   publishedDate,
   category,
-  tags,
+  "tag": coalesce(tag, tags[0]),
   "mainImage": mainImage.asset->url,
   authorName,
   "authorImage": authorImage.asset->url

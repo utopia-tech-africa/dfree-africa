@@ -1,1 +1,2 @@
-export * from "./events";
+export * from "./featured-events";
+export * from "./event-card";

@@ -15,7 +15,7 @@ export interface NewsCardProps {
   slug: string;
   readTime?: number;
   category?: string;
-  tags?: string[];
+  tag?: string;
 }
 
 export const NewsCard: FC<NewsCardProps> = ({
@@ -25,7 +25,7 @@ export const NewsCard: FC<NewsCardProps> = ({
   slug,
   readTime,
   category,
-  tags,
+  tag,
 }) => {
   const t = useTranslations("home.news");
   const router = useRouter();
@@ -51,9 +51,9 @@ export const NewsCard: FC<NewsCardProps> = ({
       )}
       <div className="flex flex-col flex-1 justify-between p-4 gap-8 bg-white rounded-t-2xl -mt-4.5 z-10">
         <div className="">
-          {(category || (tags && tags.length > 0)) && (
+          {(category || tag) && (
             <span className="inline-block w-fit px-2 py-1 text-xs 2xl:text-sm font-poppinsrounded-[4px] text-neutral-100 bg-tertiary-600 mb-3 rounded ">
-              {[category, tags?.[0]].filter(Boolean).join(" | ")}
+              {[category, tag].filter(Boolean).join(" | ")}
             </span>
           )}
 

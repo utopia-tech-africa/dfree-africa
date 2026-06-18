@@ -11,7 +11,7 @@ export default async function LeadershipInstitureBanner() {
       title={t("title")}
       description={t("description")}
       label={t("applyCta")}
-      href="#"
+      href="/leadership-institute/apply"
       secondaryLabel={t("sponsorCta")}
       secondaryHref="#"
     />

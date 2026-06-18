@@ -14,7 +14,6 @@ export const ADMIN_NAV: AdminNavItem[] = [
   {
     href: "/admin/fellowship-applications",
     label: "Fellowship Applications",
-    disabled: true,
   },
   {
     href: "/admin/fellowship-sponsors",

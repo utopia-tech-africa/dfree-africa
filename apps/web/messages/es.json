@@ -164,6 +164,10 @@
       "title": "Instituto de Liderazgo",
       "description": "El cambio duradero surge desde abajo, no desde arriba."
     },
+    "leadershipInstituteApplication": {
+      "title": "Solicitar al Instituto de Liderazgo",
+      "description": "Solicite al Instituto de Liderazgo Bottom-Up DFREE® y únase a una cohorte de líderes comunitarios."
+    },
     "leadership": {
       "title": "Liderazgo",
       "description": "Conozca la junta directiva y el equipo de liderazgo de la Fundación DFREE® que impulsa el empoderamiento financiero sin fines de lucro."
@@ -196,6 +200,8 @@
     "placeholderName": "Introduce tu nombre completo",
     "placeholderText": "Introduce tu correo electrónico",
     "buttonText": "Enviar",
+    "newsletterSuccess": "¡Gracias por suscribirte! Revisa tu correo para confirmar tu suscripción.",
+    "newsletterError": "No pudimos completar tu suscripción. Inténtalo de nuevo en un momento.",
     "privacyNote": "Al suscribirte, aceptas nuestra política de privacidad",
     "sendEnquiry": "Enviar consulta",
     "sendUsAMessage": "Envíanos un mensaje"
@@ -247,6 +253,8 @@
     "travelWithUs": "Viaja Con Nosotros",
     "volunteer": "Voluntariado",
     "submit": "Enviar",
+    "newsletterSuccess": "¡Gracias por suscribirte! Revisa tu correo para confirmar tu suscripción.",
+    "newsletterError": "No pudimos completar tu suscripción. Inténtalo de nuevo en un momento.",
     "ContactUs": "Contáctanos"
   },
   "home": {
@@ -343,54 +351,14 @@
       "subtitle": "Únete a nuestra misión de transformar las realidades financieras.",
       "viewAllCta": "Ver todos los eventos",
       "viewEventCta": "Ver evento",
-      "items": {
-        "workshop": {
-          "badge": "Taller",
-          "title": "Masterclass de libertad financiera",
-          "location": "New Brunswick, New Jersey",
-          "description": "Aprende estrategias prácticas para gestionar y reducir las deudas personales.",
-          "date": {
-            "day": "23 Abril '26",
-            "dated": "06",
-            "mode": "en línea",
-            "year": "2024"
-          }
-        },
-        "seminar": {
-          "badge": "Seminario",
-          "title": "Empoderamiento económico comunitario",
-          "location": "Houston",
-          "description": "Descubre enfoques colaborativos para construir resiliencia financiera.",
-          "date": {
-            "day": "23 Abril '26",
-            "dated": "06",
-            "mode": "en línea",
-            "year": "2024"
-          }
-        },
-        "conference": {
-          "badge": "Conferencia",
-          "title": "Estrategias de reducción de deudas",
-          "location": "Los Ángeles",
-          "description": "Explora técnicas innovadoras para superar los desafíos financieros.",
-          "date": {
-            "day": "23 Abril '26",
-            "dated": "06",
-            "mode": "en línea",
-            "year": "2024"
-          }
-        },
-        "donation": {
-          "badge": "Dar",
-          "title": "Devolver a la tierra madre",
-          "location": "Ghana",
-          "description": "Domina métodos prácticos para enfrentar los retos financieros.",
-          "date": {
-            "day": "23 Abril '26",
-            "dated": "06",
-            "mode": "en línea",
-            "year": "2024"
-          }
+      "featuredEvents": {
+        "label": "Reuniones comunitarias y sociales",
+        "title": "Próximos encuentros",
+        "subtitle": "Únete a nuestra misión de transformar las realidades financieras.",
+        "viewAllCta": "Ver todos los eventos",
+        "viewEventCta": "Ver evento",
+        "emptyState": {
+          "description": "No hay eventos disponibles por ahora. Vuelve pronto para ver talleres y encuentros próximos."
         }
       }
     },
@@ -1176,6 +1144,240 @@
       "applyCta": "Solicitar al Instituto",
       "sponsorCta": "Convertirse en patrocinador",
       "imageAlt": "Imagen CTA del Instituto de Liderazgo"
+    }
+  },
+  "leadershipInstituteApplication": {
+    "steps": {
+      "progressLabel": "Progreso de la solicitud",
+      "aboutYou": "Sobre usted y su trabajo",
+      "communityImpact": "Impacto comunitario",
+      "deploymentVision": "Visión de despliegue",
+      "reviewSubmit": "Revisión y envío"
+    },
+    "actions": {
+      "saveExit": "Guardar y salir",
+      "continue": "Continuar",
+      "back": "Atrás",
+      "submit": "Enviar solicitud"
+    },
+    "success": {
+      "title": "¡Solicitud exitosa!",
+      "body": "Su solicitud se envió correctamente. Nuestro equipo revisará su envío y se comunicará con usted sobre los próximos pasos de este proceso.",
+      "goBackHome": "Volver al inicio"
+    },
+    "errors": {
+      "submitFailed": "No pudimos enviar su solicitud. Inténtelo de nuevo en un momento."
+    },
+    "certificationModal": {
+      "title": "Compromiso y certificación",
+      "close": "Cerrar",
+      "submit": "Enviar solicitud",
+      "covenant": {
+        "title": "Pacto de Alumni Fellow DFREE®",
+        "intro": "La beca DFREE® no es una transacción — es un pacto. Como Fellow, recibe acceso completo a la programación, mentoría y una red nacional sin costo. A cambio, la Fundación DFREE pide a cada Fellow sostener esta misión más allá de la graduación:",
+        "commitments": {
+          "capstone": "Completar y presentar su Proyecto de Despliegue Comunitario Capstone antes de la fecha de finalización de la cohorte.",
+          "alumniNetwork": "Permanecer activo en la Red de Alumni Fellows DFREE® durante un mínimo de dos años después de la graduación.",
+          "trainCommunity": "Capacitar a un mínimo de 5 miembros de la comunidad en los principios de alfabetización financiera DFREE® dentro de los 12 meses posteriores a la graduación.",
+          "mentorApplicant": "Servir como referencia o mentor para al menos un futuro solicitante Fellow de su comunidad.",
+          "annualReport": "Informar anualmente sobre el alcance y el impacto de su trabajo de despliegue comunitario a la Fundación DFREE.",
+          "representCredential": "Representar la credencial de Fellow DFREE® con integridad y en alineación con los valores de marca y misión de DFREE®."
+        },
+        "disclaimer": "Este pacto no es una obligación legal — es un compromiso compartido con las comunidades que ambos servimos."
+      },
+      "certification": {
+        "title": "Certificación y envío del solicitante",
+        "body": "Al firmar y enviar esta solicitud, certifico que toda la información es precisa. Entiendo que la tergiversación puede resultar en descalificación. Acepto los términos del Pacto de Alumni Fellow DFREE® y me comprometo, si soy seleccionado, a participar plenamente en el programa y a desplegar lo que aprenda al servicio de mi comunidad."
+      },
+      "fields": {
+        "signature": "Firma",
+        "signatureUpload": "Subir firma",
+        "signatureChange": "Cambiar archivo",
+        "signatureHint": "PNG, JPG, WEBP o PDF de hasta 5 MB",
+        "signatureSelected": "{fileName}",
+        "date": "Fecha"
+      }
+    },
+    "step1": {
+      "title": "Sobre usted y su trabajo",
+      "subtitle": "Cuéntenos sobre usted y el trabajo que realiza en su comunidad.",
+      "sections": {
+        "personalInformation": "Información personal",
+        "location": "Ubicación",
+        "professionalInformation": "Información profesional"
+      },
+      "fields": {
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "city": "Ciudad",
+        "state": "Estado",
+        "mailingAddress": "Dirección postal",
+        "currentRole": "Rol / Título actual",
+        "organization": "Organización o afiliación",
+        "organizationType": "Tipo de organización",
+        "yearsServed": "¿Cuánto tiempo ha servido a esta comunidad?",
+        "communityServed": "¿Qué comunidad sirve principalmente?",
+        "organizationDescription": "Cuéntenos sobre su organización y las personas a las que sirve"
+      },
+      "placeholders": {
+        "firstName": "Juan",
+        "lastName": "Pérez",
+        "email": "juan@mail.com",
+        "currentRole": "Pastor, Director ejecutivo..",
+        "communityServed": "South Side Chicago, Jóvenes adultos 18-25...",
+        "organizationDescription": "¿Qué hace su organización y a quién sirve?",
+        "selectOne": "Seleccionar"
+      },
+      "options": {
+        "organizationType": {
+          "church": "Iglesia",
+          "nonprofit": "Sin fines de lucro",
+          "community_organization": "Organización comunitaria",
+          "educational": "Institución educativa",
+          "government": "Gobierno",
+          "other": "Otro"
+        },
+        "yearsServed": {
+          "less_than_1": "Menos de 1 año",
+          "1_to_3": "1–3 años",
+          "3_to_5": "3–5 años",
+          "5_to_10": "5–10 años",
+          "10_plus": "10+ años"
+        }
+      }
+    },
+    "step2": {
+      "title": "Impacto comunitario",
+      "subtitle": "Ayúdenos a comprender su experiencia y por qué este trabajo es importante para usted.",
+      "sections": {
+        "financialLiteracyExperience": "Experiencia en alfabetización financiera",
+        "communityChallenges": "Desafíos comunitarios",
+        "motivation": "Motivación"
+      },
+      "fields": {
+        "financialLiteracyExperience": "¿Ha dirigido o participado en programas de alfabetización financiera, creación de riqueza o empoderamiento económico?",
+        "programDescription": "¿Cuál fue el programa? ¿A quién servía? ¿Qué impacto tuvo?",
+        "communityChallenges": "¿Qué desafíos financieros enfrentan con más frecuencia las personas de su comunidad?",
+        "motivation": "¿Por qué desea convertirse en Fellow DFREE®?"
+      },
+      "placeholders": {
+        "programDescription": "¿Cuál fue el programa, a quién llegó y cuál fue el resultado?",
+        "communityChallenges": "Describa las barreras financieras, desigualdades o necesidades que observa con más frecuencia."
+      },
+      "options": {
+        "financialLiteracyExperience": {
+          "led_programs": "Programas dirigidos",
+          "participated": "Participó",
+          "both": "Ambos",
+          "informally_supported": "Apoyo informal",
+          "no_prior_experience": "Sin experiencia previa"
+        }
+      },
+      "encouragement": {
+        "title": "Ya está a mitad de camino",
+        "body": "Esta sección nos ayuda a comprender su compromiso con la transformación comunitaria."
+      }
+    },
+    "step3": {
+      "title": "Visión de despliegue comunitario",
+      "subtitle": "Cada Fellow DFREE® completa un Proyecto de Despliegue Comunitario Capstone como requisito culminante de la beca. Diseñará, ejecutará y presentará un plan para llevar la programación de alfabetización financiera y empoderamiento DFREE® a un público definido en su comunidad. Esta sección solicita su concepto inicial; se desarrollará completamente durante la beca.",
+      "capstone": {
+        "title": "¿Qué es un Proyecto de Despliegue Comunitario Capstone?",
+        "body": "Un plan estructurado para capacitar a 5–25 miembros de la comunidad en los principios de alfabetización financiera y empoderamiento DFREE®. Incluye un público definido, un método de entrega, un cronograma y un enfoque simple de medición de impacto. Los Fellows presentan su proyecto capstone a la cohorte y a la Fundación DFREE al concluir el programa."
+      },
+      "sections": {
+        "communityStory": "Historia comunitaria",
+        "futureProject": "Su proyecto futuro"
+      },
+      "fields": {
+        "communityStory": "Describa un momento en el que fue testigo de dificultades financieras o injusticia económica en su comunidad.",
+        "whoToTrain": "¿A quién le gustaría capacitar?",
+        "peopleToReach": "¿Aproximadamente a cuántas personas le gustaría llegar?",
+        "setting": "¿Qué entorno utilizaría?",
+        "participationHistory": "¿Ha dirigido o participado en programas de alfabetización financiera, creación de riqueza o empoderamiento económico?",
+        "successMetrics": "¿Cómo mediría el éxito?",
+        "projectVision": "Describa brevemente su visión del proyecto."
+      },
+      "placeholders": {
+        "communityStory": "¿Qué sucedió? ¿Quién fue afectado? ¿Qué aprendió? ¿Qué le hubiera gustado hacer?",
+        "whoToTrain": "ej. madres solteras en mi iglesia, jóvenes 18–24, dueños de pequeños negocios",
+        "selectOne": "Seleccionar"
+      },
+      "options": {
+        "setting": {
+          "church": "Iglesia",
+          "community_center": "Centro comunitario",
+          "school": "Escuela",
+          "workplace": "Lugar de trabajo",
+          "online": "En línea",
+          "other": "Otro"
+        },
+        "participationHistory": {
+          "1_month": "1 mes",
+          "2_to_3_months": "2–3 meses",
+          "4_to_6_months": "4–6 meses",
+          "6_plus_months": "6+ meses"
+        },
+        "successMetrics": {
+          "attendance": "Asistencia",
+          "savings_growth": "Crecimiento del ahorro",
+          "debt_reduction": "Reducción de deuda",
+          "program_completion": "Finalización del programa",
+          "financial_goal_achievement": "Logro de metas financieras",
+          "improved_financial_confidence": "Mayor confianza financiera",
+          "other": "Otro"
+        }
+      }
+    },
+    "step4": {
+      "title": "Revisión y envío",
+      "sections": {
+        "references": "Referencias",
+        "availabilityCommitment": "Disponibilidad, compromiso y pacto de alumni"
+      },
+      "reference1": "Referencia 1",
+      "reference2": "Referencia 2",
+      "fields": {
+        "fullName": "Nombre completo",
+        "relationship": "Relación",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "organizationTitle": "Organización / Título",
+        "cohortTerm": "¿Para qué cohorte solicita?",
+        "commitment": "¿Puede comprometerse con el programa completo?",
+        "schedulingConstraints": "¿Alguna restricción de horario o adaptación necesaria?",
+        "referralSources": "¿Cómo se enteró del instituto?"
+      },
+      "options": {
+        "cohortTerm": {
+          "spring": {
+            "title": "Cohorte de primavera",
+            "description": "Solicitudes hasta el 1 de febrero",
+            "label": "Cohorte de primavera (solicitudes hasta el 1 de febrero)"
+          },
+          "fall": {
+            "title": "Cohorte de otoño",
+            "description": "Solicitudes hasta el 1 de agosto",
+            "label": "Cohorte de otoño (solicitudes hasta el 1 de agosto)"
+          }
+        },
+        "commitment": {
+          "full": "Sí — compromiso completo",
+          "mostly_with_constraints": "Mayormente sí, con restricciones (explicar abajo)",
+          "unsure": "No estoy seguro"
+        },
+        "referralSources": {
+          "fellow_referral": "Referencia de Fellow DFREE®",
+          "website": "Sitio web",
+          "social_media": "Redes sociales",
+          "church": "Iglesia",
+          "organization": "Organización",
+          "academic": "Académico",
+          "other": "Otro"
+        }
+      }
     }
   }
 }
