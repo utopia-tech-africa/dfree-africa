@@ -1,4 +1,6 @@
 import { getAdminSession } from "@/lib/admin/get-admin-session";
+import { getSaveExitStats } from "@/lib/fellowship-applications/get-save-exit-stats";
+import { getFellowshipApplicationCount } from "@/lib/fellowship-applications/get-submissions";
 import { prisma } from "@/lib/db/prisma";
 
 const EXPIRING_SOON_MS = 1000 * 60 * 60 * 48;
@@ -11,6 +13,7 @@ export type DashboardStats = {
   canInvite: boolean;
   fellowshipApplications: number;
   fellowshipSponsors: number;
+  saveExitTotal: number;
 };
 
 export async function getDashboardStats(): Promise<DashboardStats | null> {
@@ -47,6 +50,10 @@ export async function getDashboardStats(): Promise<DashboardStats | null> {
   }).length;
 
   const canInvite = membership.role === "owner" || membership.role === "admin";
+  const [fellowshipApplications, saveExitStats] = await Promise.all([
+    getFellowshipApplicationCount(),
+    getSaveExitStats(),
+  ]);
 
   return {
     organizationName: organization.name,
@@ -54,7 +61,8 @@ export async function getDashboardStats(): Promise<DashboardStats | null> {
     pendingInviteCount: pendingInvitations.length,
     expiringSoonCount,
     canInvite,
-    fellowshipApplications: 0,
+    fellowshipApplications,
     fellowshipSponsors: 0,
+    saveExitTotal: saveExitStats.total,
   };
 }

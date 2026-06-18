@@ -114,3 +114,24 @@ model Invitation {
   @@index([email])
   @@map("invitation")
 }
+
+model FormSubmission {
+  id                    String    @id @default(cuid())
+  type                  String
+  payload               Json
+  createdAt             DateTime  @default(now())
+  acknowledgementSentAt DateTime?
+
+  @@index([type, createdAt])
+  @@map("form_submission")
+}
+
+model ApplicationSaveExitEvent {
+  id        String   @id @default(cuid())
+  step      Int
+  stepKey   String
+  createdAt DateTime @default(now())
+
+  @@index([step, createdAt])
+  @@map("application_save_exit_event")
+}
