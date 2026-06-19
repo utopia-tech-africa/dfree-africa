@@ -569,7 +569,7 @@
       "subtitle": "Our favourite memories from past events"
     },
     "buildWealth": {
-      "title": "<primary>FinFE$T</primary> 2025",
+      "title": "<primary>FinFE$T</primary> 2026",
       "subtitle": "Free Resources to Build Wealth and Protect Your Health!",
       "imageAlt": "dfree fest",
       "scheduleBtn": "Event Schedule",
@@ -858,6 +858,10 @@
         "label": "Support a project",
         "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       }
+    },
+    "travelWithUs": {
+      "label": "Travel with us",
+      "tooltip": "Visit the African Continent with DFREE®"
     },
     "ourStory": {
       "title": "our story",

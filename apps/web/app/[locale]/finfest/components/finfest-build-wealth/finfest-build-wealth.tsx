@@ -1,11 +1,9 @@
 import ComponentLayout from "@/components/component-layout";
-import { Title } from "@/components/title-and-subtitle/title";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { FinfestBuildWealthVideo } from "./finfest-build-wealth-video";
 
 export const FinfestBuildWealth = async () => {
   const t = await getTranslations("finfest.buildWealth");
@@ -25,18 +23,7 @@ export const FinfestBuildWealth = async () => {
         </p>
       </div>
 
-      <div className="relative flex gap-4 aspect-video md:aspect-2.5/1 w-full overflow-hidden rounded-2xl">
-        <Image
-          src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1780403002/040edaf1412af09b49e821b011fee03712ba2c69_yzdodw.png"
-          }
-          alt={t("imageAlt")}
-          fill
-          className="object-cover"
-        />
-      </div>
-
-      {/* <FinfestVideos /> */}
+      <FinfestBuildWealthVideo />
       <div className="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-2 md:gap-8 mt-4 lg:mt-5">
         {/* <Link href="#" className="mt-2 w-fit">
           <Button

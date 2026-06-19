@@ -14,6 +14,8 @@ import { FinfestObjectivePattern } from "./finfest-objective-pattern";
 import DeveopLeadersPattern from "./develop-leaders-pattern";
 import SupportTheInstitutePattern from "./support-the-institute-pattern";
 import { DonateHeroPattern } from "./donate-hero-pattern";
+import AfricaMapSvg from "./africa-map.svg";
+import TravelPlaneIcon from "./travel-plane-icon";
 
 export {
   WorldMapSvg,
@@ -32,4 +34,6 @@ export {
   DeveopLeadersPattern,
   SupportTheInstitutePattern,
   DonateHeroPattern,
+  AfricaMapSvg,
+  TravelPlaneIcon,
 };
