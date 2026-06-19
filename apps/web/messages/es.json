@@ -569,7 +569,7 @@
       "subtitle": "Nuestros recuerdos favoritos de eventos pasados"
     },
     "buildWealth": {
-      "title": "<primary>FinFE$T</primary> 2025",
+      "title": "<primary>FinFE$T</primary> 2026",
       "subtitle": "¡Recursos gratuitos para generar riqueza y proteger su salud!",
       "imageAlt": "dfree fest",
       "scheduleBtn": "Programa del evento",
@@ -858,6 +858,10 @@
         "label": "Apoya un proyecto",
         "href": "#"
       }
+    },
+    "travelWithUs": {
+      "label": "Viaja con nosotros",
+      "tooltip": "Visita el continente africano con DFREE®"
     },
     "ourStory": {
       "title": "nuestra historia",
