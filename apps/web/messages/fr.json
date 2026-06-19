@@ -859,6 +859,10 @@
         "href": "#"
       }
     },
+    "travelWithUs": {
+      "label": "Voyagez avec nous",
+      "tooltip": "Visitez le continent africain avec DFREE®"
+    },
     "ourStory": {
       "title": "notre histoire",
       "subtitle": "Transformer les paysages financiers à travers les communautés africaines",

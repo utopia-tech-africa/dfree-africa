@@ -859,6 +859,10 @@
         "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
       }
     },
+    "travelWithUs": {
+      "label": "Travel with us",
+      "tooltip": "Visit the African Continent with DFREE®"
+    },
     "ourStory": {
       "title": "our story",
       "subtitle": "Transforming financial landscapes across African communities",
