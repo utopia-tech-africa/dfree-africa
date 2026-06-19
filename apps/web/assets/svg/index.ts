@@ -13,6 +13,7 @@ import ASCHowItWorksPattern from "./asc-how-it-works-pattern.svg";
 import { FinfestObjectivePattern } from "./finfest-objective-pattern";
 import DeveopLeadersPattern from "./develop-leaders-pattern";
 import SupportTheInstitutePattern from "./support-the-institute-pattern";
+import { DonateHeroPattern } from "./donate-hero-pattern";
 
 export {
   WorldMapSvg,
@@ -30,4 +31,5 @@ export {
   FinfestObjectivePattern,
   DeveopLeadersPattern,
   SupportTheInstitutePattern,
+  DonateHeroPattern,
 };

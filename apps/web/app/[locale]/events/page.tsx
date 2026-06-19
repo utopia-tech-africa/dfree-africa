@@ -1,14 +1,33 @@
-import { Events } from "@/app/components/events";
+import { Suspense } from "react";
 import ComponentLayout from "@/components/component-layout";
 import { Subtitle } from "@/components/title-and-subtitle/subtitle";
 import { createMetadata } from "@/lib/seo";
 import { siteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import {
+  EventsFilter,
+  EventsGrid,
+  EventsGridSkeleton,
+  EventsPagination,
+} from "./components";
+import {
+  getEventCategories,
+  getEventsCount,
+  LocaleForTranslation,
+} from "@/lib/sanity";
+import { routing } from "@/i18n/routing";
 
-type Props = { params: Promise<{ locale: string }> };
+const EVENTS_PER_PAGE = 12;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+type PageProps = {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ category?: string; page?: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
   return createMetadata({
@@ -43,8 +62,23 @@ const eventsJsonLd = {
   },
 };
 
-const EventsPage = async () => {
+const EventsPage = async (props: PageProps) => {
+  const { locale } = await props.params;
+  const { category, page } = await props.searchParams;
+
   const t = await getTranslations("home.events");
+  const categories = await getEventCategories();
+  const selectedCategory = category || null;
+  const currentPage = parseInt(page || "1") || 1;
+
+  const safeLocale = (
+    (routing.locales as readonly string[]).includes(locale)
+      ? locale
+      : routing.defaultLocale
+  ) as LocaleForTranslation;
+
+  const totalCount = await getEventsCount(selectedCategory);
+  const totalPages = Math.ceil(totalCount / EVENTS_PER_PAGE);
 
   return (
     <div className="flex flex-col my-20 lg:my-20">
@@ -54,9 +88,25 @@ const EventsPage = async () => {
       />
       <ComponentLayout className="flex flex-col items-center text-center mb-10">
         <Subtitle text={t("pageTitle")} />
-        <p className="text-neutral-600 mt-4">{t("sublabel")}</p>
+        <p className="text-neutral-800 text-lg mt-4 max-w-3xl">
+          {t("sublabel")}
+        </p>
       </ComponentLayout>
-      <Events showHeader={false} layout="grid" />
+      <EventsFilter
+        categories={categories}
+        selectedCategory={selectedCategory}
+      />
+      <Suspense
+        key={`${safeLocale}-${selectedCategory}-${currentPage}`}
+        fallback={<EventsGridSkeleton />}
+      >
+        <EventsGrid
+          category={selectedCategory}
+          locale={safeLocale}
+          page={currentPage}
+        />
+      </Suspense>
+      <EventsPagination currentPage={currentPage} totalPages={totalPages} />
     </div>
   );
 };

@@ -2,12 +2,12 @@ import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import React from "react";
-import Testimonials from "../components/testimonials/testimonials";
+import { TestimonialsSection } from "../components/testimonials/testimonials-section";
 import WhoWeAre from "../components/who-we-are/who-we-are";
 import Pillars from "../components/pillars/pillars";
 import { HomeHero } from "../components/home-hero";
 import { OurImpact } from "../components/our-impact";
-import { Events } from "../components/events";
+import { FeaturedEvents } from "../components/events";
 import Store from "../components/store";
 import { FeaturedNews } from "../components/news";
 
@@ -31,8 +31,11 @@ const Home = () => {
         <WhoWeAre />
         <Pillars />
         <OurImpact />
-        <Testimonials />
-        <Events />
+        <TestimonialsSection
+          page="home"
+          translationNamespace="home.testimonials"
+        />
+        <FeaturedEvents featured allowEmptyState={false} />
         <Store />
         <FeaturedNews compact featured allowEmptyState={false} />
       </div>

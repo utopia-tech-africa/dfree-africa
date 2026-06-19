@@ -39,3 +39,16 @@ export {
   type NewsDetailForUI,
   type LocaleForTranslation,
 } from "./news";
+export {
+  getTestimonialsByPage,
+  TESTIMONIAL_PAGES,
+  type TestimonialPage,
+  type TestimonialForUI,
+} from "./testimonials";
+export {
+  getEvents,
+  getFeaturedEvents,
+  getEventsCount,
+  getEventCategories,
+  type EventForUI,
+} from "./events";

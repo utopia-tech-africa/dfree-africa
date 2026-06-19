@@ -1,6 +1,5 @@
 import { translateText, translatePortableText } from "@/lib/translation";
 import { client } from "./client";
-import { urlFor } from "./image";
 import {
   newsQuery,
   featuredNewsQuery,
@@ -19,17 +18,21 @@ export type NewsForUI = {
   readTime?: number;
   publishedDate?: string;
   category?: string;
-  tags?: string[];
+  tag?: string;
   imageUrl: string;
 };
 
 export type NewsDetailForUI = NewsForUI & {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   body: any;
   authorName?: string;
   authorImage?: string;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function mapNewsToUI(news: any): NewsForUI {
+  const tag = news.tag?.trim();
+
   return {
     _id: news._id,
     title: news.title ?? "",
@@ -38,7 +41,7 @@ function mapNewsToUI(news: any): NewsForUI {
     readTime: news.readTime ?? undefined,
     publishedDate: news.publishedDate ?? undefined,
     category: news.category ?? undefined,
-    tags: news.tags ?? [],
+    tag: tag || undefined,
     imageUrl: news.mainImage ?? "",
   };
 }

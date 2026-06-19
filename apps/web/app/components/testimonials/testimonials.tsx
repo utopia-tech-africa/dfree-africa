@@ -1,16 +1,30 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
 import { QuotationMarks } from "@/assets";
 import ComponentLayout from "@/components/component-layout";
-import { TESTIMONIALS } from "@/lib/testimonials";
+import type { TestimonialForUI } from "@/lib/sanity/testimonials";
 import TestimonialCard from "./testimonial-card";
 import { Title } from "@/components/title-and-subtitle/title";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
-const Testimonials = () => {
-  const t = useTranslations("home.testimonials");
+export type TestimonialsProps = {
+  title: string;
+  heading: string;
+  subtitle: string;
+  muteVideoLabel: string;
+  unmuteVideoLabel: string;
+  items: TestimonialForUI[];
+};
+
+const Testimonials = ({
+  title,
+  heading,
+  subtitle,
+  muteVideoLabel,
+  unmuteVideoLabel,
+  items,
+}: TestimonialsProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -20,7 +34,7 @@ const Testimonials = () => {
 
     const handleScroll = () => {
       const cardWidth = container.firstElementChild?.clientWidth || 1;
-      const gap = 16; // gap-4
+      const gap = 16;
       const scrollLeft = container.scrollLeft;
       const index = Math.round(scrollLeft / (cardWidth + gap));
       setActiveIndex(index);
@@ -28,7 +42,7 @@ const Testimonials = () => {
 
     container.addEventListener("scroll", handleScroll);
     return () => container.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [items.length]);
 
   const scrollToIndex = (index: number) => {
     const container = scrollRef.current;
@@ -51,9 +65,11 @@ const Testimonials = () => {
   };
 
   const goNext = () => {
-    if (activeIndex >= TESTIMONIALS.length - 1) return;
+    if (activeIndex >= items.length - 1) return;
     scrollToIndex(activeIndex + 1);
   };
+
+  if (items.length === 0) return null;
 
   return (
     <section className="relative overflow-hidden bg-neutral-100 py-24 md:py-40 mb-10 lg:mb-16">
@@ -63,14 +79,14 @@ const Testimonials = () => {
         <QuotationMarks className="absolute -bottom-10 right-0 w-20 h-20 md:-bottom-40 md:w-47.5 md:h-47.5 rotate-180 pointer-events-none z-10" />
 
         <div className="relative z-10 max-w-3xl mx-auto mb-10 md:mb-6 text-center flex flex-col gap-3 px-4 sm:px-0">
-          <Title className="font-montserrat" text={t("title")} />
+          <Title className="font-montserrat" text={title} />
 
           <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-extrabold text-secondary-600 leading-tight font-montserrat">
-            {t("heading")}
+            {heading}
           </h2>
 
           <p className="font-normal leading-[120%] font-poppins text-neutral-1000 text-base sm:text-lg">
-            {t("subtitle")}
+            {subtitle}
           </p>
         </div>
 
@@ -79,18 +95,18 @@ const Testimonials = () => {
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto px-4 md:px-10 lg:px-20 scrollbar-hide"
           >
-            {TESTIMONIALS.map((testimonial) => (
+            {items.map((testimonial) => (
               <TestimonialCard
                 key={testimonial.id}
                 testimonial={testimonial}
                 playbackRootRef={scrollRef}
+                muteVideoLabel={muteVideoLabel}
+                unmuteVideoLabel={unmuteVideoLabel}
               />
             ))}
           </div>
 
-          {/* controls */}
           <div className="flex items-center justify-between mt-6 px-4 md:px-10 lg:px-20 relative">
-            {/* Arrows LEFT */}
             <div className="flex items-center gap-3">
               <button
                 type="button"
@@ -105,7 +121,7 @@ const Testimonials = () => {
               <button
                 type="button"
                 onClick={goNext}
-                disabled={activeIndex === TESTIMONIALS.length - 1}
+                disabled={activeIndex === items.length - 1}
                 className="p-2 transition disabled:opacity-40 disabled:cursor-not-allowed"
                 aria-label="Next testimonial"
               >
@@ -113,9 +129,8 @@ const Testimonials = () => {
               </button>
             </div>
 
-            {/* Indicators CENTER */}
             <div className="absolute left-1/2 -translate-x-1/2 flex gap-2">
-              {TESTIMONIALS.map((_, index) => (
+              {items.map((_, index) => (
                 <div
                   key={index}
                   className={`h-2 w-2 rounded-full transition-all duration-300 ${

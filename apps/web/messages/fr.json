@@ -11,19 +11,108 @@
       "title": "Politique de confidentialité",
       "description": "Comment la Fondation DFREE® collecte et protège vos informations sur ce site.",
       "heading": "Politique de confidentialité",
-      "body": "Ce site utilise des outils d'analyse (dont Google Tag Manager), des formulaires de don (Zeffy) et l'inscription à la newsletter.",
-      "fullPolicy": "Lire la politique complète sur",
-      "fullPolicyLink": "dfreefoundation.org/privacy-policy",
-      "backHome": "Retour à l'accueil"
+      "effectiveDate": "Date d'entrée en vigueur : 30 mai 2026",
+      "sections": {
+        "whoWeAre": {
+          "title": "Qui sommes-nous",
+          "p1": "L'adresse de notre site web est : <link>https://dfreefoundation.org</link>."
+        },
+        "informationWeCollect": {
+          "title": "Informations que nous collectons et pourquoi",
+          "p1": "Lorsque les visiteurs laissent des commentaires sur le site, nous collectons les données affichées dans le formulaire de commentaires, ainsi que l'adresse IP du visiteur et la chaîne user-agent du navigateur pour aider à la détection du spam.",
+          "p2": "Une chaîne anonymisée créée à partir de votre adresse e-mail (également appelée hash) peut être transmise au service Gravatar pour vérifier si vous l'utilisez. La politique de confidentialité du service Gravatar est disponible ici : <link>https://automattic.com/privacy/</link>. Après approbation de votre commentaire, votre photo de profil est visible publiquement dans le contexte de votre commentaire."
+        },
+        "media": {
+          "title": "Médias",
+          "p1": "Si vous téléversez des images sur le site web, vous devez éviter de téléverser des images contenant des données de localisation intégrées (EXIF GPS). Les visiteurs du site web peuvent télécharger et extraire toute donnée de localisation des images hébergées sur le site."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "p1": "Si vous laissez un commentaire sur notre site, vous pouvez choisir d'enregistrer votre nom, votre adresse e-mail et votre site web dans des cookies. Ceux-ci sont là pour votre confort afin que vous n'ayez pas à remplir vos informations à nouveau lorsque vous laissez un autre commentaire. Ces cookies durent un an.",
+          "p2": "Si vous visitez notre page de connexion, nous définirons un cookie temporaire pour déterminer si votre navigateur accepte les cookies. Ce cookie ne contient aucune donnée personnelle et est supprimé lorsque vous fermez votre navigateur.",
+          "p3": "Lorsque vous vous connectez, nous mettons également en place plusieurs cookies pour enregistrer vos informations de connexion et vos choix d'affichage. Les cookies de connexion durent deux jours et les cookies d'options d'écran durent un an. Si vous sélectionnez « Se souvenir de moi », votre connexion persistera pendant deux semaines. Si vous vous déconnectez de votre compte, les cookies de connexion seront supprimés.",
+          "p4": "Si vous modifiez ou publiez un article, un cookie supplémentaire sera enregistré dans votre navigateur. Ce cookie ne contient aucune donnée personnelle et indique simplement l'identifiant de l'article que vous venez de modifier. Il expire après 1 jour."
+        },
+        "embeddedContent": {
+          "title": "Contenu intégré provenant d'autres sites web",
+          "p1": "Les articles de ce site peuvent inclure du contenu intégré (par exemple, des vidéos, des images, des articles, etc.). Le contenu intégré provenant d'autres sites web se comporte exactement de la même manière que si le visiteur avait visité l'autre site web directement.",
+          "p2": "Ces sites web peuvent collecter des données vous concernant, utiliser des cookies, intégrer un suivi tiers supplémentaire et surveiller votre interaction avec ce contenu intégré, y compris le suivi de votre interaction avec le contenu intégré si vous avez un compte et êtes connecté à ce site web."
+        },
+        "whoWeShare": {
+          "title": "Avec qui nous partageons vos données",
+          "p1": "Si vous demandez une réinitialisation de mot de passe, votre adresse IP sera incluse dans l'e-mail de réinitialisation."
+        },
+        "howLongWeRetain": {
+          "title": "Combien de temps nous conservons vos données",
+          "p1": "Si vous laissez un commentaire, le commentaire et ses métadonnées sont conservés indéfiniment. Cela nous permet de reconnaître et d'approuver automatiquement tout commentaire de suivi au lieu de le conserver dans une file d'attente de modération.",
+          "p2": "Pour les utilisateurs qui s'inscrivent sur notre site web (le cas échéant), nous stockons également les informations personnelles qu'ils fournissent dans leur profil utilisateur. Tous les utilisateurs peuvent voir, modifier ou supprimer leurs informations personnelles à tout moment (sauf qu'ils ne peuvent pas changer leur nom d'utilisateur). Les administrateurs du site web peuvent également voir et modifier ces informations."
+        },
+        "yourRights": {
+          "title": "Quels droits vous avez sur vos données",
+          "p1": "Si vous avez un compte sur ce site ou avez laissé des commentaires, vous pouvez demander à recevoir un fichier exporté des données personnelles que nous détenons à votre sujet, y compris toutes les données que vous nous avez fournies. Vous pouvez également demander que nous effacions toutes les données personnelles que nous détenons à votre sujet. Cela n'inclut pas les données que nous sommes tenus de conserver à des fins administratives, juridiques ou de sécurité."
+        },
+        "whereWeSend": {
+          "title": "Où nous envoyons vos données",
+          "p1": "Les commentaires des visiteurs peuvent être vérifiés via un service automatisé de détection de spam."
+        }
+      }
     },
     "terms": {
-      "title": "Conditions d'utilisation",
-      "description": "Conditions d'utilisation du site de la Fondation DFREE®.",
-      "heading": "Conditions d'utilisation",
-      "body": "En utilisant ce site, vous acceptez les conditions de la Fondation DFREE®.",
-      "fullPolicy": "Lire les conditions complètes sur",
-      "fullPolicyLink": "dfreefoundation.org/terms-conditions",
-      "backHome": "Retour à l'accueil"
+      "title": "Conditions générales",
+      "description": "Conditions générales régissant l'utilisation du site web et des services de la Fondation DFREE®.",
+      "heading": "Conditions générales",
+      "effectiveDate": "Date d'entrée en vigueur : 30 mai 2026",
+      "organization": "DFREE® GLOBAL FOUNDATION, INC.",
+      "intro": {
+        "p1": "La DFREE® Global Foundation, Inc. fournit des sites web, des plateformes, des programmes et des expériences numériques (collectivement, les « Services »). En cliquant ici, vous acceptez d'avoir lu l'accord ci-dessous et d'en accepter les conditions.",
+        "p2": "Les présentes Conditions générales d'utilisation (l'« Accord ») constituent un accord juridique entre vous et <bold>DFREE® Global Foundation, Inc.</bold> (ci-après dénommée « la Fondation » ou « Propriétaire du site web »). En vous inscrivant ou en utilisant tout service fourni par la Fondation, vous devenez un client (« Client ») et vous acceptez d'être lié par l'ensemble des conditions (les « Conditions ») énoncées dans le présent Accord tant que vous restez Client.",
+        "p3": "SI VOUS N'ACCEPTEZ PAS LES CONDITIONS, VEUILLEZ NE PAS VOUS INSCRIRE NI UTILISER UN SERVICE DE DFREE® GLOBAL FOUNDATION, INC. Les Conditions sont susceptibles d'être modifiées à tout moment, avec effet dès notification.",
+        "p4": "La Fondation se réserve le droit, avec ou sans préavis, de modifier les Conditions à la discrétion du Propriétaire du site web. Votre utilisation continue de tout élément des sites web ou services de la Fondation constitue votre acceptation de ces modifications au présent Accord. Vous devez consulter périodiquement le présent Accord pour déterminer si des modifications ont été apportées."
+      },
+      "sections": {
+        "limitations": {
+          "title": "1. Limitations de responsabilité et indemnisation",
+          "p1": "En utilisant les services fournis par la Fondation, vous acceptez qu'en aucun cas <bold>DFREE® Global Foundation, Inc.</bold>, le Propriétaire du site web, DFREE® Solutions, LLC, Corporate Community Connections, Inc., Dr. DeForest B. Soaries, Jr., ainsi que leurs dirigeants, employés, agents, affiliés, licenciés et services d'hébergement web ne soient responsables de tout dommage direct ou indirect, accessoire, spécial ou consécutif résultant de votre accès au site web et de votre utilisation des services disponibles.",
+          "p2": "Votre seul recours en cas de violation ou de manquement au présent Accord par la Fondation ou le Propriétaire du site web sera le remboursement des frais payés à la Fondation ou au Propriétaire du site web pour les services fournis en vertu du présent Accord.",
+          "p3": "Vous vous engagez à indemniser, défendre et dégager de toute responsabilité la Fondation, le Propriétaire du site web, leurs dirigeants, employés, agents, affiliés, licenciés, services d'hébergement web et tiers pour toute perte, coût, responsabilité et dépense (y compris, sans s'y limiter, les frais de justice, honoraires d'avocats, indemnités ou règlements) liés à ou découlant de votre utilisation des services ou sites web de la Fondation, y compris toute violation par vous des Conditions contenues dans le présent Accord."
+        },
+        "responsibility": {
+          "title": "2. Responsabilité d'utilisation du site web",
+          "p1": "Vous comprenez et acceptez que vous êtes seul responsable de vos actions et décisions découlant de votre utilisation des services fournis par la Fondation. Vous êtes responsable de toute activité effectuée sous votre nom d'utilisateur et votre mot de passe. Si vous prenez connaissance d'une utilisation non autorisée de votre mot de passe ou de votre compte, ou de toute autre violation de sécurité, veuillez contacter immédiatement la Fondation. Il vous incombe de maintenir la confidentialité de votre mot de passe et de votre compte. La Fondation n'est pas responsable de toute perte ou dommage résultant de votre non-respect des dispositions du présent Accord."
+        },
+        "doNotRely": {
+          "title": "3. Ne vous fiez pas à dfree® Global Foundation, Inc.",
+          "p1": "Les opinions, conseils, déclarations ou autres commentaires ne doivent pas nécessairement être considérés comme fiables et ne doivent pas être interprétés comme des conseils professionnels de la Fondation ou du Propriétaire du site web. Avant d'agir sur toute information, matériel(s), produit(s), service(s) et/ou contenu, vous devez évaluer sa pertinence dans le contexte de vos objectifs personnels, de votre situation financière et/ou de vos besoins. En particulier, vous devez rechercher des conseils financiers indépendants et lire toute déclaration pertinente relative aux produits et/ou services avant de prendre une décision d'investissement et/ou financière générale. La Fondation et le Propriétaire du site web ne garantissent pas l'exactitude ou l'exhaustivité des informations fournies et ne sont pas responsables de toute perte résultant de votre confiance en ces informations."
+        },
+        "confidentiality": {
+          "title": "4. Confidentialité",
+          "p1": "Il est convenu que toutes les informations personnelles fournies à la Fondation ou au Propriétaire du site web seront traitées de manière confidentielle par la Fondation et le Propriétaire du site web. Pour plus d'informations sur votre vie privée, veuillez consulter la <link>Politique de confidentialité</link>."
+        },
+        "ownership": {
+          "title": "5. Propriété, droits d'auteur, marques et licences",
+          "p1": "Vous reconnaissez et acceptez que les sites web, services et tout logiciel ou programme utilisé dans le cadre des services de la Fondation contiennent des informations propriétaires et confidentielles appartenant au Propriétaire du site web et à ses concédants de licence, protégées par les lois applicables en matière de propriété intellectuelle et autres. Aucun droit ni titre sur les informations propriétaires et confidentielles des plateformes de la Fondation ou tout logiciel utilisé en relation avec ses services ne vous est fourni, transféré ou cédé. Vous acceptez de ne pas modifier, louer, prêter, vendre, distribuer ou créer des œuvres dérivées basées sur les services ou logiciels de la Fondation, en tout ou en partie. Les marques, marques de service, logos et œuvres protégées par le droit d'auteur apparaissant sur le site web sont la propriété du Propriétaire du site web. La Fondation conserve tous les droits relatifs à toute propriété intellectuelle apparaissant sur le site web, et aucun droit sur ces éléments ne vous est transféré ou cédé."
+        },
+        "noWarranties": {
+          "title": "6. Absence de garanties",
+          "p1": "La Fondation et le Propriétaire du site web fournissent les services de la Fondation « en l'état » et n'offrent aucune garantie, expresse, implicite, limitée ou autre concernant les services fournis. Plus précisément, la Fondation et le Propriétaire du site web ne garantissent pas que le service sera toujours disponible, ininterrompu, exempt d'erreurs, conforme à vos exigences, ou que tout défaut des services sera corrigé."
+        },
+        "severability": {
+          "title": "7. Divisibilité",
+          "p1": "Si une disposition est jugée invalide, les dispositions restantes resteront pleinement en vigueur."
+        },
+        "waiver": {
+          "title": "8. Renonciation",
+          "p1": "Le fait pour la Fondation ou le Propriétaire du site web de ne pas exercer ou faire appliquer un droit ou une disposition du présent Accord ne constitue pas une renonciation à ce droit ou à cette disposition. Toute renonciation au présent Accord par la Fondation ou le Propriétaire du site web doit être écrite et signée par un représentant autorisé du Propriétaire du site web."
+        },
+        "jurisdiction": {
+          "title": "9. Juridiction",
+          "p1": "Le présent Accord ou tout litige découlant du présent Accord est régi par les lois de l'État du New Jersey, sans égard aux dispositions relatives aux conflits de lois. Toute action en justice découlant du présent Accord ou s'y rapportant sera intentée exclusivement devant le tribunal de district des États-Unis pour l'État du New Jersey, et vous consentez par les présentes à la juridiction de ce tribunal."
+        },
+        "entireAgreement": {
+          "title": "10. Intégralité de l'accord",
+          "p1": "Le présent Accord constitue l'intégralité de votre accord avec <bold>DFREE® Global Foundation, Inc.</bold> et le Propriétaire du site web concernant les services."
+        }
+      }
     }
   },
   "metadata": {
@@ -148,7 +237,7 @@
     "privacyNote": "En vous abonnant, vous acceptez notre politique de confidentialité",
     "copyright": "© {year} Fondation DFREE. Tous Droits Réservés.",
     "privacyPolicy": "Politique De Confidentialité",
-    "termsOfService": "Conditions D'Utilisation",
+    "termsAndConditions": "Conditions générales",
     "cookiesSettings": "Paramètres Des Cookies",
     "whoWeAre": "Qui Nous Sommes",
     "ourMission": "Notre Mission",
@@ -158,7 +247,7 @@
     "dfreeAfrica": "DFREE® En Afrique",
     "communityCampaigns": "Campagnes Communautaires",
     "finfest": "FinFE$T",
-    "dfreeLeadershipInstitute": "Institut de leadership ascendant DFREE",
+    "dfreeLeadershipInstitute": "Institut de Leadership DFREE®",
     "eventSponsorship": "Sponsorisation d'événements",
     "partner": "Partenariat",
     "travelWithUs": "Voyagez Avec Nous",
@@ -213,8 +302,8 @@
           "description": "FinFe$t® est l'événement phare de la communauté DFREE. Il allie éducation financière, santé et bien-être à travers des expériences interactives afin de fournir aux participants outils pratiques pour favoriser un bien-être global et une prospérité durable. C'est 100 % gratuit."
         },
         "accessScholarships": {
-          "name": "Bourses d'accès DFREE",
-          "description": "Le programme de bourses DFREE® offre un soutien basé sur les besoins afin de supprimer les obstacles financiers à l'accès au contenu DFREE® – ressources éducatives, apprentissage numérique, formations en direct, conseils financiers gratuits et aide d'urgence limitée – pour aider les membres de notre communauté à réduire leurs dettes et à atteindre une liberté financière durable."
+          "name": "Institut de leadership ascendant DFREE®",
+          "description": "L'Institut de leadership ascendant DFREE® est un programme de formation conçu pour doter les leaders communautaires d'une maîtrise de l'autonomisation financière et de la justice économique. Les diplômés obtiennent le titre de DFREE® Fellow, ce qui les établit comme des ambassadeurs de confiance à l'échelle nationale, autorisés à animer le programme DFREE®, à former d'autres personnes et à mener une transformation économique équitable au sein de leurs communautés locales."
         }
       }
     },
@@ -233,7 +322,7 @@
         "livesImpacted": {
           "value": "$890K",
           "suffix": "+",
-          "label": "Dépensé dans des projets africains"
+          "label": "Sur les projets africains"
         },
         "debtCleared": {
           "value": "$22",
@@ -252,54 +341,7 @@
       "heading": "Des histoires de changement bien réelles",
       "subtitle": "Des voix qui révèlent la puissance de la transformation financière",
       "muteVideo": "Couper le son de la vidéo",
-      "unmuteVideo": "Activer le son de la vidéo",
-      "items": {
-        "shirley": {
-          "name": "Shirley Richard",
-          "imageAlt": "Shirley Richard, membre de Delta Sigma Theta et participante au programme DFREE",
-          "title": "Sororité Delta Sigma Theta, Inc.",
-          "text": "Je suis à la retraite, mais grâce à ce cours, j'ai pris contact avec un conseiller financier afin d'investir pour constituer un patrimoine pour mes petits-enfants."
-        },
-        "michele": {
-          "name": "Michele Bailey",
-          "imageAlt": "Michele Bailey, partenaire Derrière Chaque Porte et participante au programme DFREE",
-          "title": "Derrière Chaque Porte",
-          "text": "DFREE® m'a aidé à prendre conscience que je vivais au-dessus de mes moyens et j'ai maintenant pu réduire mon train de vie, rembourser mes principales dettes et améliorer ma cote de crédit."
-        },
-        "lloyd": {
-          "name": "Lloyd Branch",
-          "imageAlt": "Lloyd Branch, participant au programme DFREE",
-          "title": "",
-          "text": "J'ai remboursé mes factures de voiture et de système de chauffage, ventilation et climatisation grâce aux méthodes de DFREE®."
-        },
-        "gregory": {
-          "name": "Gregory Lawrence",
-          "imageAlt": "Gregory Lawrence, participant au programme DFREE",
-          "title": "",
-          "text": "J'ai remboursé mes cartes de crédit grâce à l'effet boule de neige et je suis actuellement en train d'acheter une maison par moi-même."
-        },
-        "diana": {
-          "name": "Diana Belle",
-          "imageAlt": "Diana Belle, membre de l'Église Baptiste Clear View et participante au programme DFREE",
-          "title": "Église Baptiste Clear View",
-          "text": "Ce processus m'a permis de mieux gérer mes finances. Je travaille maintenant à constituer un héritage pour mes filles."
-        },
-        "dee": {
-          "name": "Dee Marshall",
-          "title": "",
-          "text": ""
-        },
-        "alesia": {
-          "name": "Alesia Boone",
-          "title": "",
-          "text": ""
-        },
-        "aimy": {
-          "name": "Aimy Steele",
-          "title": "",
-          "text": ""
-        }
-      }
+      "unmuteVideo": "Activer le son de la vidéo"
     },
     "events": {
       "label": "Réunions communautaires et sociales",
@@ -309,54 +351,14 @@
       "subtitle": "Rejoignez-nous dans notre mission de transformer les réalités financières.",
       "viewAllCta": "Voir tous les événements",
       "viewEventCta": "Voir l’événement",
-      "items": {
-        "workshop": {
-          "badge": "Atelier",
-          "title": "Masterclass sur la liberté financière",
-          "location": "New Brunswick, New Jersey",
-          "description": "Découvrez des stratégies concrètes pour gérer et réduire vos dettes personnelles.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
-        },
-        "seminar": {
-          "badge": "Séminaire",
-          "title": "Autonomisation économique des communautés",
-          "location": "Houston",
-          "description": "Découvrez des approches collaboratives pour renforcer la résilience financière.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
-        },
-        "conference": {
-          "badge": "Conférence",
-          "title": "Stratégies de réduction de la dette",
-          "location": "Los Angeles",
-          "description": "Explorez des techniques innovantes pour surmonter les défis financiers.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
-        },
-        "donation": {
-          "badge": "Générosité",
-          "title": "Redonner à la terre mère",
-          "location": "Ghana",
-          "description": "Maîtrisez des méthodes pratiques pour faire face aux défis financiers.",
-          "date": {
-            "day": "23 Avril '26",
-            "dated": "06",
-            "mode": "en ligne",
-            "year": "2024"
-          }
+      "featuredEvents": {
+        "label": "Réunions communautaires et sociales",
+        "title": "Rencontres à venir",
+        "subtitle": "Rejoignez-nous dans notre mission de transformer les réalités financières.",
+        "viewAllCta": "Voir tous les événements",
+        "viewEventCta": "Voir l’événement",
+        "emptyState": {
+          "description": "Aucun événement trouvé pour le moment. Revenez bientôt pour découvrir les prochains ateliers et rencontres."
         }
       }
     },
@@ -503,7 +505,7 @@
     },
     "movement": {
       "title": "Mouvement",
-      "description": "FinFE$T est l'événement qui vous donne un accès en temps réel à divers professionnels qui vous apportent des solutions et des outils économiques. Des foires aux ressources, masterclasses et ateliers aux forums de l'emploi, FinFE$T vous aide à passer à l'action vers la liberté financière."
+      "description": "FinFE$T vous permet de passer à des actions concrètes sur le chemin vers la liberté financière en vous fournissant du contenu, un curriculum, des formations et des outils."
     },
     "pastSpeakers": {
       "title": "Intervenants passés",
@@ -650,6 +652,13 @@
       "title": "Prenez le contrôle de vos objectifs maintenant",
       "description": "Votre chemin vers la liberté financière commence par un choix simple. Commencez à préparer votre avenir dès aujourd'hui.",
       "label": "Rejoindre le BDC"
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "heading": "Des histoires de changement bien réelles",
+      "subtitle": "Des voix qui révèlent la puissance de la transformation financière",
+      "muteVideo": "Couper le son de la vidéo",
+      "unmuteVideo": "Activer le son de la vidéo"
     }
   },
   "accessScholarships": {
@@ -1036,7 +1045,7 @@
     "coreAreas": {
       "label": "Trois domaines principaux",
       "title": "Les piliers d'expertise de l'Institut",
-      "description": "Chaque participant développe des connaissances approfondies et applicables dans trois domaines interconnectés — chacun s’appuyant sur le précédent",
+      "description": "Chaque participant développe des connaissances approfondies et applicables dans trois domaines interconnectés <br></br> chacun s’appuyant sur le précédent",
       "pillars": {
         "pillar1": {
           "pillarName": "LITTÉRATIE FINANCIÈRE",

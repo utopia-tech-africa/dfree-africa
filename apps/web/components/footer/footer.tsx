@@ -120,8 +120,8 @@ export const Footer = async () => {
           <Link href="/privacy-policy" className="underline">
             {t("privacyPolicy")}
           </Link>
-          <Link href="/terms-of-service" className="underline">
-            {t("termsOfService")}
+          <Link href="/terms-and-conditions" className="underline">
+            {t("termsAndConditions")}
           </Link>
           <FooterCookieSettings label={t("cookiesSettings")} />
         </div>

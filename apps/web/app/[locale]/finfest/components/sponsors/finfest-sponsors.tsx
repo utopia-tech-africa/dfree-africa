@@ -77,8 +77,9 @@ export const FinfestSponsors = async () => {
         {/* CTA */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 md:gap-10 w-full">
           <Link
-            href="https://dfree.com/finfest/"
+            href="https://mailchi.mp/6520839722f8/45aknod6id"
             target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
               "w-fit",
@@ -86,9 +87,10 @@ export const FinfestSponsors = async () => {
           >
             {t("cta1")}
           </Link>
-          <Link
+          {/* <Link
             // href="https://dfree.com/finfest/"
             target="_blank"
+            rel="noopener noreferrer"
             href=""
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
@@ -96,7 +98,7 @@ export const FinfestSponsors = async () => {
             )}
           >
             {t("cta2")}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
