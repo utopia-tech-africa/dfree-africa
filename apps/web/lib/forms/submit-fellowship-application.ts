@@ -9,15 +9,8 @@ type SubmitResult =
 export async function submitFellowshipApplication(
   data: LeadershipInstituteApplicationValues,
 ): Promise<SubmitResult> {
-  const { signature, ...application } = data;
-
-  if (!(signature instanceof File)) {
-    return { success: false, error: "invalid_signature" };
-  }
-
   const formData = new FormData();
-  formData.append("application", JSON.stringify(application));
-  formData.append("signature", signature);
+  formData.append("application", JSON.stringify(data));
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), SUBMISSION_TIMEOUT_MS);

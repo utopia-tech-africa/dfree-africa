@@ -1182,10 +1182,8 @@
       },
       "fields": {
         "signature": "Firma",
-        "signatureUpload": "Subir firma",
-        "signatureChange": "Cambiar archivo",
-        "signatureHint": "PNG, JPG, WEBP o PDF de hasta 5 MB",
-        "signatureSelected": "{fileName}",
+        "signaturePlaceholder": "Escriba su nombre legal completo",
+        "signatureHint": "Debe coincidir con el nombre y apellido del paso 1.",
         "date": "Fecha"
       }
     },

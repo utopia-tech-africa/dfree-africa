@@ -6,25 +6,44 @@ import {
   signatureAcceptedMimeTypes,
 } from "@/lib/forms/schemas/leadership-institute-application";
 
-export const storedSignatureSchema = z.object({
+export const legacyStoredSignatureSchema = z.object({
   fileName: z.string().min(1),
   mimeType: z.enum(signatureAcceptedMimeTypes),
   dataBase64: z.string().min(1),
 });
 
-export type StoredSignature = z.infer<typeof storedSignatureSchema>;
+export type LegacyStoredSignature = z.infer<typeof legacyStoredSignatureSchema>;
+
+export const applicationSignatureSchema = z.union([
+  z.string().min(1),
+  legacyStoredSignatureSchema,
+]);
+
+export type ApplicationSignature = z.infer<typeof applicationSignatureSchema>;
+
+export function isLegacyStoredSignature(
+  signature: ApplicationSignature,
+): signature is LegacyStoredSignature {
+  return typeof signature === "object";
+}
+
+const fellowshipApplicationFieldsSchema =
+  leadershipInstituteApplicationObjectSchema.omit({ signature: true });
 
 export const fellowshipApplicationPayloadSchema =
   applyLeadershipInstituteApplicationRefinements(
-    leadershipInstituteApplicationObjectSchema
-      .omit({ signature: true })
-      .extend({
-        signature: storedSignatureSchema,
-      }),
+    fellowshipApplicationFieldsSchema.extend({
+      signature: z.string().min(1),
+    }),
   );
 
+export const storedFellowshipApplicationPayloadSchema =
+  fellowshipApplicationFieldsSchema.extend({
+    signature: applicationSignatureSchema,
+  });
+
 export type FellowshipApplicationPayload = z.infer<
-  typeof fellowshipApplicationPayloadSchema
+  typeof storedFellowshipApplicationPayloadSchema
 >;
 
 export type FellowshipApplicationSummary = {

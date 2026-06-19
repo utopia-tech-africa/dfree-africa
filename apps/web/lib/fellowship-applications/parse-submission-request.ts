@@ -1,8 +1,4 @@
-import {
-  leadershipInstituteApplicationFieldsSchema,
-  signatureAcceptedMimeTypes,
-  signatureMaxBytes,
-} from "@/lib/forms/schemas/leadership-institute-application";
+import { leadershipInstituteApplicationSchema } from "@/lib/forms/schemas/leadership-institute-application";
 
 import {
   fellowshipApplicationPayloadSchema,
@@ -16,31 +12,16 @@ type ParseSuccess = {
 
 type ParseFailure = {
   ok: false;
-  error: "invalid_form_data" | "validation_error" | "invalid_signature";
+  error: "invalid_form_data" | "validation_error";
   issues?: Record<string, string[]>;
 };
 
 export type ParseSubmissionResult = ParseSuccess | ParseFailure;
 
-function isSignatureFile(value: unknown): value is File {
-  return value instanceof File && value.size > 0;
-}
-
-async function fileToStoredSignature(file: File) {
-  const buffer = Buffer.from(await file.arrayBuffer());
-
-  return {
-    fileName: file.name,
-    mimeType: file.type as (typeof signatureAcceptedMimeTypes)[number],
-    dataBase64: buffer.toString("base64"),
-  };
-}
-
 export async function parseFellowshipSubmissionRequest(
   formData: FormData,
 ): Promise<ParseSubmissionResult> {
   const applicationRaw = formData.get("application");
-  const signatureFile = formData.get("signature");
 
   if (typeof applicationRaw !== "string") {
     return { ok: false, error: "invalid_form_data" };
@@ -55,7 +36,7 @@ export async function parseFellowshipSubmissionRequest(
   }
 
   const parsedApplication =
-    leadershipInstituteApplicationFieldsSchema.safeParse(applicationJson);
+    leadershipInstituteApplicationSchema.safeParse(applicationJson);
 
   if (!parsedApplication.success) {
     return {
@@ -65,28 +46,9 @@ export async function parseFellowshipSubmissionRequest(
     };
   }
 
-  if (!isSignatureFile(signatureFile)) {
-    return { ok: false, error: "invalid_signature" };
-  }
-
-  if (
-    !(signatureAcceptedMimeTypes as readonly string[]).includes(
-      signatureFile.type,
-    )
-  ) {
-    return { ok: false, error: "invalid_signature" };
-  }
-
-  if (signatureFile.size > signatureMaxBytes) {
-    return { ok: false, error: "invalid_signature" };
-  }
-
-  const storedSignature = await fileToStoredSignature(signatureFile);
-
-  const payload = fellowshipApplicationPayloadSchema.safeParse({
-    ...parsedApplication.data,
-    signature: storedSignature,
-  });
+  const payload = fellowshipApplicationPayloadSchema.safeParse(
+    parsedApplication.data,
+  );
 
   if (!payload.success) {
     return {

@@ -9,7 +9,7 @@ import { Controller, useFormContext } from "react-hook-form";
 import { FormFieldLabel } from "@/components/forms/form-field-label";
 import { FormFieldError } from "@/lib/forms/form-field-error";
 import type { LeadershipInstituteApplicationValues } from "@/lib/forms/schemas/leadership-institute-application";
-import { signatureAcceptedMimeTypes } from "@/lib/forms/schemas/leadership-institute-application";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const covenantCommitmentKeys = [
@@ -53,6 +53,7 @@ export function ApplicationCertificationModal({
   } = useFormContext<LeadershipInstituteApplicationValues>();
 
   useEffect(() => {
+    setValue("signature", "", { shouldValidate: false });
     setValue("signatureDate", getLocalDateInputValue(), {
       shouldValidate: true,
     });
@@ -138,41 +139,26 @@ export function ApplicationCertificationModal({
                 <Controller
                   name="signature"
                   control={control}
-                  render={({ field: { onChange, onBlur, ref, value } }) => {
-                    const selectedFile = value instanceof File ? value : null;
-
-                    return (
-                      <>
-                        <div className="flex min-h-14 items-center border-b border-neutral-900 px-[18px]">
-                          <input
-                            id={signatureInputId}
-                            ref={ref}
-                            type="file"
-                            accept={signatureAcceptedMimeTypes.join(",")}
-                            disabled={isSubmitting}
-                            aria-invalid={Boolean(errors.signature)}
-                            className={cn(
-                              "w-full cursor-pointer bg-transparent font-poppins text-sm text-neutral-900 outline-none sm:text-base",
-                              "file:mr-2 file:cursor-pointer file:rounded-full file:border-0 file:bg-primary-500 file:px-3 file:py-1.5 file:font-poppins file:text-xs file:font-medium file:text-neutral-100 hover:file:bg-primary-600 sm:file:mr-3 sm:file:px-4 sm:file:py-2 sm:file:text-sm",
-                              "disabled:cursor-not-allowed disabled:opacity-50",
-                            )}
-                            onBlur={onBlur}
-                            onChange={(event) => {
-                              onChange(event.target.files?.[0] ?? null);
-                            }}
-                          />
-                        </div>
-                        <p className="min-h-5 px-[18px] font-poppins text-xs leading-5 text-neutral-700">
-                          {selectedFile
-                            ? t("fields.signatureSelected", {
-                                fileName: selectedFile.name,
-                              })
-                            : t("fields.signatureHint")}
-                        </p>
-                      </>
-                    );
-                  }}
+                  render={({ field }) => (
+                    <div className="flex min-h-14 items-center border-b border-neutral-900">
+                      <Input
+                        id={signatureInputId}
+                        type="text"
+                        autoComplete="name"
+                        autoFocus
+                        aria-invalid={Boolean(errors.signature)}
+                        placeholder={t("fields.signaturePlaceholder")}
+                        className="h-auto min-h-14 rounded-none border-0 bg-transparent px-[18px] py-0 font-poppins text-sm text-neutral-1000 shadow-none placeholder:text-neutral-500 focus-visible:ring-0 sm:text-base"
+                        {...field}
+                        value={field.value ?? ""}
+                        disabled={false}
+                      />
+                    </div>
+                  )}
                 />
+                <p className="min-h-5 px-[18px] font-poppins text-xs leading-5 text-neutral-700">
+                  {t("fields.signatureHint")}
+                </p>
                 <FormFieldError message={errors.signature?.message} />
               </div>
 
