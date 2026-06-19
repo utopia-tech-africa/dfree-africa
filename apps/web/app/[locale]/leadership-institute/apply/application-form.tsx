@@ -80,7 +80,7 @@ export function LeadershipInstituteApplicationForm() {
       reset({
         ...defaultApplicationValues,
         ...parsed,
-        signature: null,
+        signature: "",
       });
     } catch {
       localStorage.removeItem(APPLICATION_FORM_STORAGE_KEY);

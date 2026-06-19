@@ -2,7 +2,7 @@ import { prisma } from "@/lib/db/prisma";
 
 import { FELLOWSHIP_APPLICATION_TYPE } from "./constants";
 import {
-  fellowshipApplicationPayloadSchema,
+  storedFellowshipApplicationPayloadSchema,
   type FellowshipApplicationPayload,
   type FellowshipApplicationSummary,
 } from "./types";
@@ -36,7 +36,7 @@ export async function getFellowshipApplicationSummaries(): Promise<
   });
 
   return submissions.flatMap((submission) => {
-    const parsed = fellowshipApplicationPayloadSchema.safeParse(
+    const parsed = storedFellowshipApplicationPayloadSchema.safeParse(
       submission.payload,
     );
 
@@ -60,7 +60,7 @@ export async function getFellowshipApplicationById(id: string) {
     return null;
   }
 
-  const parsed = fellowshipApplicationPayloadSchema.safeParse(
+  const parsed = storedFellowshipApplicationPayloadSchema.safeParse(
     submission.payload,
   );
 
@@ -97,7 +97,7 @@ export async function getRecentFellowshipApplicationSummaries(
   });
 
   return submissions.flatMap((submission) => {
-    const parsed = fellowshipApplicationPayloadSchema.safeParse(
+    const parsed = storedFellowshipApplicationPayloadSchema.safeParse(
       submission.payload,
     );
 
