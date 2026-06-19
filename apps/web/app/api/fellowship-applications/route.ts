@@ -20,11 +20,7 @@ export async function POST(request: Request) {
   const parsed = await parseFellowshipSubmissionRequest(formData);
 
   if (!parsed.ok) {
-    const status =
-      parsed.error === "validation_error" ||
-      parsed.error === "invalid_signature"
-        ? 400
-        : 400;
+    const status = parsed.error === "validation_error" ? 400 : 400;
 
     return NextResponse.json(
       {

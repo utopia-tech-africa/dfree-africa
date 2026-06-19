@@ -14,32 +14,6 @@ const requiredSelect = <T extends readonly [string, ...string[]]>(
     message: `${label} is required`,
   });
 
-export const signatureAcceptedMimeTypes = [
-  "image/jpeg",
-  "image/png",
-  "image/webp",
-  "application/pdf",
-] as const;
-
-export const signatureMaxBytes = 5 * 1024 * 1024;
-
-const isSignatureFile = (value: unknown): value is File =>
-  value instanceof File && value.size > 0;
-
-const signatureFileField = z
-  .unknown()
-  .refine(isSignatureFile, "Signature file is required")
-  .refine(
-    (value) =>
-      isSignatureFile(value) &&
-      (signatureAcceptedMimeTypes as readonly string[]).includes(value.type),
-    "Upload a PNG, JPG, WEBP, or PDF file",
-  )
-  .refine(
-    (value) => isSignatureFile(value) && value.size <= signatureMaxBytes,
-    "File must be 5MB or smaller",
-  );
-
 const wordLimited = (maxWords: number, label: string, required = true) => {
   const base = required ? requiredText(label) : z.string();
 
@@ -181,7 +155,7 @@ const leadershipInstituteApplicationShape = {
   referralSources: z
     .array(z.enum(referralSourceValues))
     .min(1, "Select at least one referral source"),
-  signature: signatureFileField,
+  signature: requiredText("Signature"),
   signatureDate: requiredText("Date"),
 } as const;
 
@@ -189,7 +163,13 @@ export const leadershipInstituteApplicationObjectSchema = z.object(
   leadershipInstituteApplicationShape,
 );
 
+const normalizeFullName = (value: string) =>
+  value.trim().replace(/\s+/g, " ").toLowerCase();
+
 type ApplicationRefinementData = {
+  firstName: string;
+  lastName: string;
+  signature: string;
   financialLiteracyExperience: string;
   programDescription: string;
   commitment: string;
@@ -200,6 +180,19 @@ export function applyLeadershipInstituteApplicationRefinements<
   T extends z.ZodType<ApplicationRefinementData>,
 >(schema: T) {
   return schema.superRefine((data, ctx) => {
+    const expectedSignature = normalizeFullName(
+      `${data.firstName} ${data.lastName}`,
+    );
+    const actualSignature = normalizeFullName(data.signature);
+
+    if (actualSignature !== expectedSignature) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Signature must match your first and last name",
+        path: ["signature"],
+      });
+    }
+
     if (
       data.financialLiteracyExperience !== "no_prior_experience" &&
       !data.programDescription.trim()
@@ -224,15 +217,17 @@ export function applyLeadershipInstituteApplicationRefinements<
   });
 }
 
+/** @deprecated Legacy submissions only — new applications store a typed name. */
+export const signatureAcceptedMimeTypes = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "application/pdf",
+] as const;
+
 export const leadershipInstituteApplicationSchema =
   applyLeadershipInstituteApplicationRefinements(
     leadershipInstituteApplicationObjectSchema,
-  );
-
-/** Application fields without the client-side signature file upload. */
-export const leadershipInstituteApplicationFieldsSchema =
-  applyLeadershipInstituteApplicationRefinements(
-    leadershipInstituteApplicationObjectSchema.omit({ signature: true }),
   );
 
 export type LeadershipInstituteApplicationValues = z.input<
@@ -332,6 +327,6 @@ export const defaultApplicationValues: LeadershipInstituteApplicationValues = {
   commitment: "",
   schedulingConstraints: "",
   referralSources: [],
-  signature: null,
+  signature: "",
   signatureDate: "",
 };

@@ -1192,10 +1192,8 @@
       },
       "fields": {
         "signature": "Signature",
-        "signatureUpload": "Upload signature",
-        "signatureChange": "Change file",
-        "signatureHint": "PNG, JPG, WEBP, or PDF up to 5MB",
-        "signatureSelected": "{fileName}",
+        "signaturePlaceholder": "Type your full legal name",
+        "signatureHint": "Must match the first and last name entered in step 1.",
         "date": "Date"
       }
     },

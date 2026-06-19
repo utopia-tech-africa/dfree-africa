@@ -2,7 +2,10 @@ import { Download } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
-import type { FellowshipApplicationPayload } from "@/lib/fellowship-applications/types";
+import {
+  isLegacyStoredSignature,
+  type FellowshipApplicationPayload,
+} from "@/lib/fellowship-applications/types";
 
 type SubmissionDetailProps = {
   payload: FellowshipApplicationPayload;
@@ -72,8 +75,13 @@ function ReferenceBlock({
 }
 
 export function SubmissionDetail({ payload }: SubmissionDetailProps) {
-  const signatureDataUrl = `data:${payload.signature.mimeType};base64,${payload.signature.dataBase64}`;
-  const isImageSignature = payload.signature.mimeType.startsWith("image/");
+  const legacySignature = isLegacyStoredSignature(payload.signature)
+    ? payload.signature
+    : null;
+  const signatureDataUrl = legacySignature
+    ? `data:${legacySignature.mimeType};base64,${legacySignature.dataBase64}`
+    : null;
+  const isImageSignature = legacySignature?.mimeType.startsWith("image/");
 
   return (
     <div className="space-y-8">
@@ -175,27 +183,37 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
         <div className="sm:col-span-2">
           <dt className="text-sm font-medium text-neutral-600">Signature</dt>
           <dd className="mt-2 space-y-2">
-            <p className="text-sm text-neutral-700">
-              {payload.signature.fileName}
-            </p>
-            {isImageSignature ? (
-              // eslint-disable-next-line @next/next/no-img-element -- admin-only data URL preview
-              <img
-                src={signatureDataUrl}
-                alt="Applicant signature"
-                className="max-h-48 rounded border border-neutral-200 bg-white"
-              />
+            {legacySignature ? (
+              <>
+                <p className="text-sm text-neutral-700">
+                  {legacySignature.fileName}
+                </p>
+                {isImageSignature && signatureDataUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element -- admin-only data URL preview
+                  <img
+                    src={signatureDataUrl}
+                    alt="Applicant signature"
+                    className="max-h-48 rounded border border-neutral-200 bg-white"
+                  />
+                ) : signatureDataUrl ? (
+                  <Button asChild variant="outline" size="sm">
+                    <a
+                      href={signatureDataUrl}
+                      download={legacySignature.fileName}
+                      className="inline-flex items-center gap-2"
+                    >
+                      <Download className="size-4" aria-hidden />
+                      Download PDF signature
+                    </a>
+                  </Button>
+                ) : null}
+              </>
             ) : (
-              <Button asChild variant="outline" size="sm">
-                <a
-                  href={signatureDataUrl}
-                  download={payload.signature.fileName}
-                  className="inline-flex items-center gap-2"
-                >
-                  <Download className="size-4" aria-hidden />
-                  Download PDF signature
-                </a>
-              </Button>
+              <p className="font-medium text-neutral-1000">
+                {typeof payload.signature === "string"
+                  ? payload.signature
+                  : "—"}
+              </p>
             )}
           </dd>
         </div>
