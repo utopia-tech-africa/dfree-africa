@@ -2,27 +2,32 @@
 
 import { useId } from "react";
 
+import { Textarea } from "@/components/ui/textarea";
 import { FormFieldError } from "@/lib/forms/form-field-error";
 import { countWords, wordCountMessage } from "@/lib/forms/word-count";
 import { cn } from "@/lib/utils";
 
 import { FormFieldLabel, formFieldGroupClassName } from "./form-field-label";
+import { formLongTextareaClassName } from "./form-field-styles";
 
-export const applicationFieldClassName =
-  "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-1000 placeholder:text-neutral-500 focus-visible:border-primary-500 focus-visible:ring-[3px] focus-visible:ring-primary-500/20 outline-none disabled:opacity-50";
+export type FormTextareaVariant = "default" | "long";
 
 type WordCountTextareaProps = {
   id?: string;
-  label: string;
+  label: React.ReactNode;
   required?: boolean;
   placeholder?: string;
   value: string;
   maxWords: number;
-  rows?: number;
+  variant?: FormTextareaVariant;
   disabled?: boolean;
   error?: string;
   onChange: (value: string) => void;
+  onBlur?: () => void;
   className?: string;
+  textareaClassName?: string;
+  labelClassName?: string;
+  wordCountClassName?: string;
 };
 
 export function WordCountTextarea({
@@ -32,11 +37,15 @@ export function WordCountTextarea({
   placeholder,
   value,
   maxWords,
-  rows = 5,
+  variant = "default",
   disabled = false,
   error,
   onChange,
+  onBlur,
   className,
+  textareaClassName,
+  labelClassName,
+  wordCountClassName,
 }: WordCountTextareaProps) {
   const generatedId = useId();
   const id = idProp ?? generatedId;
@@ -44,19 +53,26 @@ export function WordCountTextarea({
 
   return (
     <div className={cn(formFieldGroupClassName, className)}>
-      <FormFieldLabel htmlFor={id} required={required}>
+      <FormFieldLabel
+        htmlFor={id}
+        required={required}
+        className={labelClassName}
+      >
         {label}
       </FormFieldLabel>
 
-      <textarea
+      <Textarea
         id={id}
-        rows={rows}
         value={value}
         disabled={disabled}
         placeholder={placeholder}
         aria-invalid={Boolean(error)}
+        className={cn(
+          variant === "long" && formLongTextareaClassName,
+          textareaClassName,
+        )}
         onChange={(event) => onChange(event.target.value)}
-        className={cn(applicationFieldClassName, "min-h-28 resize-y")}
+        onBlur={onBlur}
       />
 
       <div className="flex items-start justify-between gap-4">
@@ -64,6 +80,7 @@ export function WordCountTextarea({
         <p
           className={cn(
             "ml-auto shrink-0 text-xs text-neutral-600",
+            wordCountClassName,
             wordCount > maxWords && "text-tertiary-500",
           )}
         >

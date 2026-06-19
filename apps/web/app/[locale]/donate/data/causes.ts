@@ -1,8 +1,16 @@
+import { campaignUrlToEmbedUrl } from "@/lib/zeffy/build-embed-url";
+import { ZEFFY_GENERAL_DONATION_URL } from "@/lib/zeffy/constants";
+import type { ZeffyCampaignType } from "@/lib/zeffy/types";
+
+const GENERAL_EMBED_URL =
+  campaignUrlToEmbedUrl(ZEFFY_GENERAL_DONATION_URL) ??
+  ZEFFY_GENERAL_DONATION_URL;
+
 export type DonateCause = {
   id: string;
   title: string;
   description: string;
-  country: string;
+  country?: string;
   previewMedia: {
     type: "image" | "video";
     url: string;
@@ -10,7 +18,12 @@ export type DonateCause = {
   isOngoing: boolean;
   progressPercent: number;
   goalAmount: number;
+  raisedAmount?: number;
   goalAchieved: boolean;
+  donationUrl: string;
+  embedUrl: string;
+  currency?: string;
+  campaignType?: ZeffyCampaignType;
 };
 
 export const donateCauses: DonateCause[] = [
@@ -27,7 +40,11 @@ export const donateCauses: DonateCause[] = [
     isOngoing: true,
     progressPercent: 100,
     goalAmount: 35000,
+    raisedAmount: 35000,
     goalAchieved: true,
+    donationUrl: ZEFFY_GENERAL_DONATION_URL,
+    embedUrl: GENERAL_EMBED_URL,
+    campaignType: "donation_form",
   },
   {
     id: "clean-water-uganda",
@@ -42,7 +59,11 @@ export const donateCauses: DonateCause[] = [
     isOngoing: true,
     progressPercent: 40,
     goalAmount: 35000,
+    raisedAmount: 14000,
     goalAchieved: false,
+    donationUrl: ZEFFY_GENERAL_DONATION_URL,
+    embedUrl: GENERAL_EMBED_URL,
+    campaignType: "donation_form",
   },
   {
     id: "kibi-deaf-school",
@@ -57,6 +78,10 @@ export const donateCauses: DonateCause[] = [
     isOngoing: true,
     progressPercent: 70,
     goalAmount: 35000,
+    raisedAmount: 24500,
     goalAchieved: false,
+    donationUrl: ZEFFY_GENERAL_DONATION_URL,
+    embedUrl: GENERAL_EMBED_URL,
+    campaignType: "donation_form",
   },
 ];

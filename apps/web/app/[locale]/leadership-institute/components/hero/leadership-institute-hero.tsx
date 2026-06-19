@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
 import ComponentLayout from "@/components/component-layout";
 
 export async function LeadershipInstituteHero() {
@@ -51,7 +50,10 @@ export async function LeadershipInstituteHero() {
                   {t("applyCta")}
                 </Button>
               </Link>
-              <Link href="#" target="_blank">
+              <Link
+                href="/leadership-institute/sponsor"
+                className="flex-1 sm:flex-none"
+              >
                 <Button
                   size="lg"
                   className="px-2 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-full bg-white/29 backdrop-blur-[10px] border border-white/20 text-white hover:bg-white/20 text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"

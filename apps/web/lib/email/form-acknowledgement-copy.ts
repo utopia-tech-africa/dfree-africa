@@ -1,56 +1,23 @@
-export type FormAcknowledgementType =
-  | "contact"
-  | "fellowship-application"
-  | "fellowship-sponsor";
+import { getFormAcknowledgementTemplate } from "@/lib/form-acknowledgements/get-templates";
+import {
+  plainTextToBodyHtml,
+  normalizeBodyTextForDisplay,
+} from "@/lib/form-acknowledgements/format-body-text";
+import { renderAcknowledgementBody } from "@/lib/form-acknowledgements/render-template";
+import type { FormAcknowledgementType } from "@/lib/form-acknowledgements/types";
 
-type AcknowledgementCopy = {
-  subject: string;
-  buildHtml: (submitterName?: string | null) => string;
-};
+export type { FormAcknowledgementType } from "@/lib/form-acknowledgements/types";
 
-const COPY: Record<FormAcknowledgementType, AcknowledgementCopy> = {
-  contact: {
-    subject: "We received your message — DFREE",
-    buildHtml: (submitterName) => {
-      const greeting = submitterName ? `Hi ${submitterName},` : "Hi,";
-      return `
-        <p>${greeting}</p>
-        <p>Thank you for contacting DFREE. We have received your message and will get back to you as soon as we can.</p>
-        <p>— The DFREE team</p>
-      `;
-    },
-  },
-  "fellowship-application": {
-    subject: "Fellowship application received — DFREE",
-    buildHtml: (submitterName) => {
-      const greeting = submitterName ? `Hi ${submitterName},` : "Hi,";
-      return `
-        <p>${greeting}</p>
-        <p>Thank you for submitting your fellowship application. Our team has received it and will review it shortly.</p>
-        <p>— The DFREE team</p>
-      `;
-    },
-  },
-  "fellowship-sponsor": {
-    subject: "Sponsor inquiry received — DFREE",
-    buildHtml: (submitterName) => {
-      const greeting = submitterName ? `Hi ${submitterName},` : "Hi,";
-      return `
-        <p>${greeting}</p>
-        <p>Thank you for your interest in sponsoring the fellowship program. We have received your inquiry and will follow up soon.</p>
-        <p>— The DFREE team</p>
-      `;
-    },
-  },
-};
-
-export function getFormAcknowledgementCopy(
+export async function getFormAcknowledgementCopy(
   formType: FormAcknowledgementType,
   submitterName?: string | null,
-): { subject: string; html: string } {
-  const entry = COPY[formType];
+): Promise<{ subject: string; html: string }> {
+  const template = await getFormAcknowledgementTemplate(formType);
+  const bodyText = normalizeBodyTextForDisplay(template.bodyText);
+  const bodyHtml = plainTextToBodyHtml(bodyText);
+
   return {
-    subject: entry.subject,
-    html: entry.buildHtml(submitterName),
+    subject: template.subject,
+    html: renderAcknowledgementBody(bodyHtml, submitterName),
   };
 }

@@ -219,6 +219,14 @@
     @apply border-border outline-ring/50;
   }
 
+  [data-slot="input"],
+  [data-slot="textarea"] {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-neutral-300);
+    background-color: var(--color-neutral-100);
+  }
+
   body {
     @apply bg-background text-foreground;
   }

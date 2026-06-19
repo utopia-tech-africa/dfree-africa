@@ -4,7 +4,11 @@ import { PrismaClient } from "@/generated/prisma/client";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
+  prismaGeneration: number | undefined;
 };
+
+/** Bump when Prisma schema/client shape changes to avoid stale dev singletons. */
+const PRISMA_CLIENT_GENERATION = 2;
 
 function createPrismaClient(): PrismaClient {
   const connectionString = process.env.DATABASE_URL;
@@ -23,9 +27,18 @@ function createPrismaClient(): PrismaClient {
 }
 
 export function getPrisma(): PrismaClient {
-  if (!globalForPrisma.prisma) {
+  if (
+    !globalForPrisma.prisma ||
+    globalForPrisma.prismaGeneration !== PRISMA_CLIENT_GENERATION
+  ) {
+    if (globalForPrisma.prisma) {
+      void globalForPrisma.prisma.$disconnect().catch(() => undefined);
+    }
+
     globalForPrisma.prisma = createPrismaClient();
+    globalForPrisma.prismaGeneration = PRISMA_CLIENT_GENERATION;
   }
+
   return globalForPrisma.prisma;
 }
 
