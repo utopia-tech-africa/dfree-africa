@@ -2,10 +2,52 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ADMIN_NAV } from "@/lib/admin/constants";
+import {
+  ADMIN_MAIN_NAV,
+  ADMIN_SETTINGS_NAV,
+  type AdminNavItem,
+} from "@/lib/admin/constants";
 import { authClient } from "@/lib/auth/auth-client";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+
+function AdminNavLink({
+  item,
+  pathname,
+}: {
+  item: AdminNavItem;
+  pathname: string;
+}) {
+  const isActive =
+    item.exact === true
+      ? pathname === item.href
+      : pathname.startsWith(item.href);
+
+  if (item.disabled) {
+    return (
+      <span
+        className="cursor-not-allowed rounded-lg px-3 py-2 text-sm text-neutral-500"
+        title="Coming soon"
+      >
+        {item.label}
+      </span>
+    );
+  }
+
+  return (
+    <Link
+      href={item.href}
+      className={cn(
+        "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+        isActive
+          ? "bg-primary-500 text-white"
+          : "text-neutral-900 hover:bg-neutral-200",
+      )}
+    >
+      {item.label}
+    </Link>
+  );
+}
 
 type AdminShellProps = {
   userName: string;
@@ -14,7 +56,7 @@ type AdminShellProps = {
 };
 
 export function AdminShell({ userName, userEmail, children }: AdminShellProps) {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
 
   const handleSignOut = async () => {
     await authClient.signOut();
@@ -31,39 +73,18 @@ export function AdminShell({ userName, userEmail, children }: AdminShellProps) {
           <p className="mt-1 truncate text-xs text-neutral-700">{userEmail}</p>
         </div>
         <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-4">
-          {ADMIN_NAV.map((item) => {
-            const isActive =
-              item.exact === true
-                ? pathname === item.href
-                : pathname.startsWith(item.href);
+          {ADMIN_MAIN_NAV.map((item) => (
+            <AdminNavLink key={item.href} item={item} pathname={pathname} />
+          ))}
 
-            if (item.disabled) {
-              return (
-                <span
-                  key={item.href}
-                  className="cursor-not-allowed rounded-lg px-3 py-2 text-sm text-neutral-500"
-                  title="Coming soon"
-                >
-                  {item.label}
-                </span>
-              );
-            }
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-                  isActive
-                    ? "bg-primary-500 text-white"
-                    : "text-neutral-900 hover:bg-neutral-200",
-                )}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          <div className="mt-6 space-y-1">
+            <p className="px-3 py-2 text-xs font-semibold tracking-wide text-neutral-500 uppercase">
+              Settings
+            </p>
+            {ADMIN_SETTINGS_NAV.map((item) => (
+              <AdminNavLink key={item.href} item={item} pathname={pathname} />
+            ))}
+          </div>
         </nav>
         <div className="shrink-0 border-t border-neutral-200 p-4">
           <Button

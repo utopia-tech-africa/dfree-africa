@@ -6,7 +6,7 @@ import ComponentLayout from "@/components/component-layout";
 import { Title } from "@/components/title-and-subtitle/title";
 import { buttonVariants } from "@/components/ui/button";
 import { SupportTheInstitutePattern } from "@/assets";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 export const SupportTheInstitute = async () => {
@@ -88,7 +88,7 @@ export const SupportTheInstitute = async () => {
 
             <div className="pt-8">
               <Link
-                href="#"
+                href="/leadership-institute/sponsor"
                 className={cn(
                   buttonVariants({ variant: "default", size: "lg" }),
                   "text-xs sm:text-base inline-flex flex-1 min-w-30 justify-center py-6",

@@ -58,18 +58,16 @@ export function LocaleSwitcher({
   const listboxRef = useRef<HTMLDivElement>(null);
   const optionRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  const [optimisticLocale, setOptimisticLocale] = useState<Locale | null>(
-    () => {
-      if (typeof window === "undefined") return null;
-      const pending = sessionStorage.getItem(PENDING_KEY);
-      return pending && LOCALES.includes(pending as Locale)
-        ? (pending as Locale)
-        : null;
-    },
-  );
-  const locale = optimisticLocale ?? currentLocale;
-
+  const [optimisticLocale, setOptimisticLocale] = useState<Locale | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const pending = sessionStorage.getItem(PENDING_KEY);
+    if (pending && LOCALES.includes(pending as Locale)) {
+      setOptimisticLocale(pending as Locale);
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 0);
     handleScroll();
@@ -84,6 +82,8 @@ export function LocaleSwitcher({
       sessionStorage.removeItem(PENDING_KEY);
     }
   }, [currentLocale, optimisticLocale]);
+
+  const locale = optimisticLocale ?? currentLocale;
 
   const switchTo = useCallback(
     (newLocale: Locale) => {

@@ -13,7 +13,7 @@ export default async function LeadershipInstitureBanner() {
       label={t("applyCta")}
       href="/leadership-institute/apply"
       secondaryLabel={t("sponsorCta")}
-      secondaryHref="#"
+      secondaryHref="/leadership-institute/sponsor"
     />
   );
 }

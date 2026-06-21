@@ -168,6 +168,10 @@
       "title": "Apply to the Leadership Institute",
       "description": "Apply to the DFREE® Bottom-Up Leadership Institute and join a cohort of community leaders transforming financial futures."
     },
+    "leadershipInstituteSponsor": {
+      "title": "Become a Leadership Institute Sponsor",
+      "description": "Partner with the DFREE® Leadership Institute to invest in community leaders and expand access to financial empowerment training."
+    },
     "leadership": {
       "title": "Leadership",
       "description": "Meet the DFREE® Foundation board and leadership team guiding nonprofit financial empowerment nationwide."
@@ -1381,6 +1385,191 @@
           "other": "Other"
         }
       }
+    }
+  },
+  "leadershipInstituteSponsor": {
+    "title": "Become a Sponsor",
+    "subtitle": "Your partnership helps expand access to training, resources, and real-world experiences that create lasting change in communities across the country.",
+    "steps": {
+      "progressLabel": "Sponsorship form progress",
+      "sponsorshipDetails": "Sponsorship Details",
+      "sponsorInformation": "Sponsor Information",
+      "recognitionPayment": "Recognition & Payment"
+    },
+    "sections": {
+      "sponsorshipInterest": "Sponsorship interest",
+      "contactInformation": "Contact information",
+      "organization": "Organization",
+      "additionalDetails": "Additional details"
+    },
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "organization": "Organization or Company",
+      "currentRole": "Current Role / Title",
+      "sponsorType": "Sponsor type",
+      "city": "City",
+      "state": "State",
+      "mailingAddress": "Mailing address",
+      "customSponsorshipAmount": "Intended sponsorship amount",
+      "message": "Message (optional)"
+    },
+    "placeholders": {
+      "selectOne": "Select one",
+      "customSponsorshipAmount": "e.g. $5,000",
+      "message": "Share any questions or details about your sponsorship goals"
+    },
+    "options": {
+      "sponsorshipTier": {
+        "community": {
+          "name": "Community",
+          "amount": "$10,500",
+          "fellows": "Funds 1 DFREE® Fellow",
+          "description": "Full access scholarship for one community leader. Named in cohort program materials"
+        },
+        "champion": {
+          "name": "Champion",
+          "amount": "$31,500",
+          "fellows": "Funds 3 DFREE® Fellows",
+          "description": "Cohort listing + logo on digital assets + orientation invitation."
+        },
+        "catalyst": {
+          "name": "Catalyst",
+          "amount": "$52,500",
+          "fellows": "Funds 5 DFREE® Fellows",
+          "description": "Cohort listing + logo on all materials + capstone showcase invitation."
+        },
+        "legacy": {
+          "name": "Legacy",
+          "amount": "$210,500",
+          "fellows": "Funds a full cohort of 20 Fellows",
+          "description": "Cohort named in your honor. Permanent alumni recognition. Annual impact report.",
+          "badge": "Named Cohort"
+        },
+        "custom": {
+          "name": "Custom",
+          "description": "Full access scholarships for the number of fellows you choose. Named in cohort program materials."
+        }
+      },
+      "cohorts": {
+        "fall_2026": {
+          "name": "Fall 2026",
+          "startDate": "Aug 24, 2026",
+          "endDate": "Oct 16, 2026",
+          "duration": "8 weeks",
+          "status": "Accepting sponsors"
+        },
+        "winter_2026": {
+          "name": "Winter 2026",
+          "startDate": "Jan 12, 2027",
+          "endDate": "Mar 6, 2027",
+          "duration": "8 weeks",
+          "status": "Accepting sponsors"
+        },
+        "spring_2027": {
+          "name": "Spring 2027",
+          "startDate": "Apr 6, 2027",
+          "endDate": "May 28, 2027",
+          "duration": "8 weeks",
+          "status": "Accepting sponsors"
+        },
+        "summer_2027": {
+          "name": "Summer 2027",
+          "startDate": "Jul 6, 2027",
+          "endDate": "Aug 27, 2027",
+          "duration": "8 weeks",
+          "status": "Accepting sponsors"
+        }
+      },
+      "sponsorType": {
+        "individual": "Individual",
+        "corporation": "Corporation",
+        "foundation": "Foundation",
+        "nonprofit": "Nonprofit",
+        "faith_based": "Faith-based organization",
+        "government": "Government",
+        "other": "Other"
+      },
+      "publicStatementSharing": {
+        "yes": "Yes",
+        "yes_confidential": "Yes (Keep my name confidential)",
+        "no": "No"
+      }
+    },
+    "actions": {
+      "back": "Back",
+      "continue": "Continue",
+      "submit": "Submit sponsorship inquiry"
+    },
+    "step1": {
+      "title": "Sponsorship Details",
+      "subtitle": "Tell us about yourself and the work you do in your community.",
+      "chooseTier": "Choose your sponsorship tier",
+      "customNumber": "Custom number",
+      "fellowCount": "{count, plural, one {# Fellow} other {# Fellows}}",
+      "totalCommitmentLabel": "Total commitment:",
+      "decreaseFellows": "Decrease fellow count",
+      "increaseFellows": "Increase fellow count",
+      "namedScholarshipTitle": "Named scholarship / Cohort title",
+      "namedScholarshipTitleHint": "(Legacy tier or by request)",
+      "namedScholarshipTitlePlaceholder": "Enter your preferred scholarship or cohort title",
+      "chooseCohort": "Choose a cohort to sponsor",
+      "cohortFields": {
+        "startDate": "Start date",
+        "endDate": "End date",
+        "duration": "Duration",
+        "status": "Status"
+      },
+      "cohortAssignmentNotes": "Cohort assignment notes or preferences",
+      "cohortAssignmentNotesPlaceholder": "e.g. preference for Fellows from a specific region or sector",
+      "imageAlt": "The Leadership Institute Support Section Image"
+    },
+    "step2": {
+      "title": "Sponsor information",
+      "subtitle": "Share the contact and organization details for this sponsorship.",
+      "sections": {
+        "personalInformation": "Personal Information",
+        "location": "Location",
+        "professionalInformation": "Professional Information",
+        "yourWhy": "Your why"
+      },
+      "fields": {
+        "sponsorWhy": "Why do you want to sponsor DFREE® Fellows?",
+        "communitiesToSupport": "Communities You Hope To Support",
+        "publicStatementSharing": "Can we share your statement publicly?"
+      },
+      "placeholders": {
+        "currentRole": "Pastor, Executive Director...",
+        "sponsorWhy": "Share what connects you to this mission.",
+        "communitiesToSupport": "Are there specific communities, regions, or populations you hope your scholarship supports?"
+      }
+    },
+    "step3": {
+      "title": "Recognition & Payment",
+      "subtitle": "Review your sponsorship details and tell us how you would like to be recognized.",
+      "recognitionTitle": "Sponsor recognition",
+      "recognitionDescription": "DFREE® sponsors are recognized across our website, program materials, and annual impact reports. Our team will confirm your preferred recognition level after submission.",
+      "paymentTitle": "Payment",
+      "paymentDescription": "After you submit this form, a member of our team will contact you with payment instructions and partnership next steps.",
+      "summaryTitle": "Sponsorship summary",
+      "summaryTier": "Selected tier",
+      "summaryAmount": "Amount",
+      "summaryFellows": "Fellows funded",
+      "summaryTierDescription": "Benefits",
+      "summaryNamedTitle": "Named scholarship / cohort title",
+      "summaryCohort": "Selected cohort",
+      "summaryCohortNotes": "Cohort assignment notes",
+      "summaryContact": "Primary contact"
+    },
+    "success": {
+      "title": "Thank you for your interest!",
+      "body": "Your sponsorship inquiry was submitted successfully. Our team will review your submission and contact you with next steps.",
+      "goBack": "Back to Leadership Institute"
+    },
+    "errors": {
+      "submitFailed": "We couldn't submit your inquiry. Please try again in a moment."
     }
   }
 }

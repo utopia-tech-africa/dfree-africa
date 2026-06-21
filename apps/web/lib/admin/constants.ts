@@ -6,6 +6,7 @@ export type AdminNavItem = {
   label: string;
   exact?: boolean;
   disabled?: boolean;
+  section?: "settings";
 };
 
 export const ADMIN_NAV: AdminNavItem[] = [
@@ -18,6 +19,15 @@ export const ADMIN_NAV: AdminNavItem[] = [
   {
     href: "/admin/fellowship-sponsors",
     label: "Fellowship Sponsors",
-    disabled: true,
+  },
+  {
+    href: "/admin/auto-responses",
+    label: "Auto Responses",
+    section: "settings",
   },
 ];
+
+export const ADMIN_MAIN_NAV = ADMIN_NAV.filter((item) => !item.section);
+export const ADMIN_SETTINGS_NAV = ADMIN_NAV.filter(
+  (item) => item.section === "settings",
+);

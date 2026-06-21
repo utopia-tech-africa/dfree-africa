@@ -168,6 +168,10 @@
       "title": "Solicitar al Instituto de Liderazgo",
       "description": "Solicite al Instituto de Liderazgo Bottom-Up DFREE® y únase a una cohorte de líderes comunitarios."
     },
+    "leadershipInstituteSponsor": {
+      "title": "Convertirse en patrocinador del Instituto de Liderazgo",
+      "description": "Asóciese con el Instituto de Liderazgo DFREE® para invertir en líderes comunitarios y ampliar el acceso a la capacitación en empoderamiento financiero."
+    },
     "leadership": {
       "title": "Liderazgo",
       "description": "Conozca la junta directiva y el equipo de liderazgo de la Fundación DFREE® que impulsa el empoderamiento financiero sin fines de lucro."
@@ -1380,6 +1384,191 @@
           "other": "Otro"
         }
       }
+    }
+  },
+  "leadershipInstituteSponsor": {
+    "title": "Convertirse en patrocinador",
+    "subtitle": "Su asociación ayuda a ampliar el acceso a capacitación, recursos y experiencias reales que generan un cambio duradero en las comunidades de todo el país.",
+    "steps": {
+      "progressLabel": "Progreso del formulario de patrocinio",
+      "sponsorshipDetails": "Detalles del patrocinio",
+      "sponsorInformation": "Información del patrocinador",
+      "recognitionPayment": "Reconocimiento y pago"
+    },
+    "sections": {
+      "sponsorshipInterest": "Interés de patrocinio",
+      "contactInformation": "Información de contacto",
+      "organization": "Organización",
+      "additionalDetails": "Detalles adicionales"
+    },
+    "fields": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "organization": "Organización o empresa",
+      "currentRole": "Rol / cargo actual",
+      "sponsorType": "Tipo de patrocinador",
+      "city": "Ciudad",
+      "state": "Estado",
+      "mailingAddress": "Dirección postal",
+      "customSponsorshipAmount": "Monto de patrocinio previsto",
+      "message": "Mensaje (opcional)"
+    },
+    "placeholders": {
+      "selectOne": "Seleccione uno",
+      "customSponsorshipAmount": "p. ej. $5,000",
+      "message": "Comparta preguntas o detalles sobre sus objetivos de patrocinio"
+    },
+    "options": {
+      "sponsorshipTier": {
+        "community": {
+          "name": "Community",
+          "amount": "$10,500",
+          "fellows": "Financia 1 Fellow DFREE®",
+          "description": "Beca de acceso completo para un líder comunitario. Nombrado en los materiales del programa de cohorte"
+        },
+        "champion": {
+          "name": "Champion",
+          "amount": "$31,500",
+          "fellows": "Financia 3 Fellows DFREE®",
+          "description": "Listado en cohorte + logo en activos digitales + invitación a orientación."
+        },
+        "catalyst": {
+          "name": "Catalyst",
+          "amount": "$52,500",
+          "fellows": "Financia 5 Fellows DFREE®",
+          "description": "Listado en cohorte + logo en todos los materiales + invitación a la presentación del proyecto final."
+        },
+        "legacy": {
+          "name": "Legacy",
+          "amount": "$210,500",
+          "fellows": "Financia una cohorte completa de 20 Fellows",
+          "description": "Cohorte nombrada en su honor. Reconocimiento permanente de alumni. Informe de impacto anual.",
+          "badge": "Cohorte nombrada"
+        },
+        "custom": {
+          "name": "Personalizado",
+          "description": "Becas de acceso completo para la cantidad de fellows que elija. Nombrado en los materiales del programa de cohorte."
+        }
+      },
+      "cohorts": {
+        "fall_2026": {
+          "name": "Otoño 2026",
+          "startDate": "24 ago 2026",
+          "endDate": "16 oct 2026",
+          "duration": "8 semanas",
+          "status": "Aceptando patrocinadores"
+        },
+        "winter_2026": {
+          "name": "Invierno 2026",
+          "startDate": "12 ene 2027",
+          "endDate": "6 mar 2027",
+          "duration": "8 semanas",
+          "status": "Aceptando patrocinadores"
+        },
+        "spring_2027": {
+          "name": "Primavera 2027",
+          "startDate": "6 abr 2027",
+          "endDate": "28 may 2027",
+          "duration": "8 semanas",
+          "status": "Aceptando patrocinadores"
+        },
+        "summer_2027": {
+          "name": "Verano 2027",
+          "startDate": "6 jul 2027",
+          "endDate": "27 ago 2027",
+          "duration": "8 semanas",
+          "status": "Aceptando patrocinadores"
+        }
+      },
+      "sponsorType": {
+        "individual": "Individual",
+        "corporation": "Corporación",
+        "foundation": "Fundación",
+        "nonprofit": "Sin fines de lucro",
+        "faith_based": "Organización religiosa",
+        "government": "Gobierno",
+        "other": "Otro"
+      },
+      "publicStatementSharing": {
+        "yes": "Sí",
+        "yes_confidential": "Sí (mantener mi nombre confidencial)",
+        "no": "No"
+      }
+    },
+    "actions": {
+      "back": "Atrás",
+      "continue": "Continuar",
+      "submit": "Enviar consulta de patrocinio"
+    },
+    "step1": {
+      "title": "Detalles del patrocinio",
+      "subtitle": "Cuéntenos sobre usted y el trabajo que realiza en su comunidad.",
+      "chooseTier": "Elija su nivel de patrocinio",
+      "customNumber": "Número personalizado",
+      "fellowCount": "{count, plural, one {# Fellow} other {# Fellows}}",
+      "totalCommitmentLabel": "Compromiso total:",
+      "decreaseFellows": "Disminuir cantidad de fellows",
+      "increaseFellows": "Aumentar cantidad de fellows",
+      "namedScholarshipTitle": "Beca nombrada / Título de cohorte",
+      "namedScholarshipTitleHint": "(Nivel Legacy o por solicitud)",
+      "namedScholarshipTitlePlaceholder": "Ingrese el título de beca o cohorte preferido",
+      "chooseCohort": "Elija una cohorte para patrocinar",
+      "cohortFields": {
+        "startDate": "Fecha de inicio",
+        "endDate": "Fecha de finalización",
+        "duration": "Duración",
+        "status": "Estado"
+      },
+      "cohortAssignmentNotes": "Notas o preferencias de asignación de cohorte",
+      "cohortAssignmentNotesPlaceholder": "p. ej., preferencia por Fellows de una región o sector específico",
+      "imageAlt": "Imagen de la sección de apoyo del Instituto de Liderazgo"
+    },
+    "step2": {
+      "title": "Información del patrocinador",
+      "subtitle": "Comparta los datos de contacto y organización de este patrocinio.",
+      "sections": {
+        "personalInformation": "Información personal",
+        "location": "Ubicación",
+        "professionalInformation": "Información profesional",
+        "yourWhy": "Su motivación"
+      },
+      "fields": {
+        "sponsorWhy": "¿Por qué desea patrocinar Fellows de DFREE®?",
+        "communitiesToSupport": "Comunidades que espera apoyar",
+        "publicStatementSharing": "¿Podemos compartir su declaración públicamente?"
+      },
+      "placeholders": {
+        "currentRole": "Pastor, Director ejecutivo...",
+        "sponsorWhy": "Comparta qué lo conecta con esta misión.",
+        "communitiesToSupport": "¿Hay comunidades, regiones o poblaciones específicas que espera que apoye su beca?"
+      }
+    },
+    "step3": {
+      "title": "Reconocimiento y pago",
+      "subtitle": "Revise los detalles de su patrocinio e indíquenos cómo le gustaría ser reconocido.",
+      "recognitionTitle": "Reconocimiento del patrocinador",
+      "recognitionDescription": "Los patrocinadores de DFREE® son reconocidos en nuestro sitio web, materiales del programa e informes de impacto anual. Nuestro equipo confirmará su nivel de reconocimiento preferido después del envío.",
+      "paymentTitle": "Pago",
+      "paymentDescription": "Después de enviar este formulario, un miembro de nuestro equipo se pondrá en contacto con instrucciones de pago y los próximos pasos de la asociación.",
+      "summaryTitle": "Resumen del patrocinio",
+      "summaryTier": "Nivel seleccionado",
+      "summaryAmount": "Monto",
+      "summaryFellows": "Becarios financiados",
+      "summaryTierDescription": "Beneficios",
+      "summaryNamedTitle": "Beca nombrada / título de cohorte",
+      "summaryCohort": "Cohorte seleccionada",
+      "summaryCohortNotes": "Notas de asignación de cohorte",
+      "summaryContact": "Contacto principal"
+    },
+    "success": {
+      "title": "¡Gracias por su interés!",
+      "body": "Su consulta de patrocinio se envió correctamente. Nuestro equipo revisará su solicitud y se pondrá en contacto con los próximos pasos.",
+      "goBack": "Volver al Instituto de Liderazgo"
+    },
+    "errors": {
+      "submitFailed": "No pudimos enviar su consulta. Inténtelo de nuevo en un momento."
     }
   }
 }

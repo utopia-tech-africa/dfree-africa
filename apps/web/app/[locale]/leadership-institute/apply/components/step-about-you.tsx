@@ -16,10 +16,7 @@ import {
 import { FormSelectField } from "@/components/forms/form-select-field";
 import { FormSectionHeading } from "@/components/forms/form-section-heading";
 import { PhoneInputField } from "@/components/forms/phone-input-field";
-import {
-  applicationFieldClassName,
-  WordCountTextarea,
-} from "@/components/forms/word-count-textarea";
+import { WordCountTextarea } from "@/components/forms/word-count-textarea";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
@@ -53,7 +50,6 @@ export function StepAboutYou() {
               placeholder={t("placeholders.firstName")}
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.firstName)}
-              className={applicationFieldClassName}
               {...register("firstName")}
             />
             <FormFieldError message={errors.firstName?.message} />
@@ -68,7 +64,6 @@ export function StepAboutYou() {
               placeholder={t("placeholders.lastName")}
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.lastName)}
-              className={applicationFieldClassName}
               {...register("lastName")}
             />
             <FormFieldError message={errors.lastName?.message} />
@@ -84,7 +79,6 @@ export function StepAboutYou() {
               placeholder={t("placeholders.email")}
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.email)}
-              className={applicationFieldClassName}
               {...register("email")}
             />
             <FormFieldError message={errors.email?.message} />
@@ -119,7 +113,6 @@ export function StepAboutYou() {
               id="city"
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.city)}
-              className={applicationFieldClassName}
               {...register("city")}
             />
             <FormFieldError message={errors.city?.message} />
@@ -133,7 +126,6 @@ export function StepAboutYou() {
               id="state"
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.state)}
-              className={applicationFieldClassName}
               {...register("state")}
             />
             <FormFieldError message={errors.state?.message} />
@@ -147,7 +139,6 @@ export function StepAboutYou() {
               id="mailingAddress"
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.mailingAddress)}
-              className={applicationFieldClassName}
               {...register("mailingAddress")}
             />
             <FormFieldError message={errors.mailingAddress?.message} />
@@ -168,7 +159,6 @@ export function StepAboutYou() {
               placeholder={t("placeholders.currentRole")}
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.currentRole)}
-              className={applicationFieldClassName}
               {...register("currentRole")}
             />
             <FormFieldError message={errors.currentRole?.message} />
@@ -182,7 +172,6 @@ export function StepAboutYou() {
               id="organization"
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.organization)}
-              className={applicationFieldClassName}
               {...register("organization")}
             />
             <FormFieldError message={errors.organization?.message} />
@@ -239,7 +228,6 @@ export function StepAboutYou() {
               placeholder={t("placeholders.communityServed")}
               disabled={isSubmitting}
               aria-invalid={Boolean(errors.communityServed)}
-              className={applicationFieldClassName}
               {...register("communityServed")}
             />
             <FormFieldError message={errors.communityServed?.message} />

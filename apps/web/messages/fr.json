@@ -168,6 +168,10 @@
       "title": "Postuler à l'Institut de leadership",
       "description": "Postulez à l'Institut de leadership Bottom-Up DFREE® et rejoignez une cohorte de leaders communautaires."
     },
+    "leadershipInstituteSponsor": {
+      "title": "Devenir sponsor de l'Institut de leadership",
+      "description": "Associez-vous à l'Institut de leadership DFREE® pour investir dans les leaders communautaires et élargir l'accès à la formation en autonomisation financière."
+    },
     "leadership": {
       "title": "Direction",
       "description": "Découvrez le conseil d'administration et l'équipe de direction de la Fondation DFREE® qui orientent l'autonomisation financière à but non lucratif."
@@ -1381,6 +1385,191 @@
           "other": "Autre"
         }
       }
+    }
+  },
+  "leadershipInstituteSponsor": {
+    "title": "Devenir sponsor",
+    "subtitle": "Votre partenariat aide à élargir l'accès à la formation, aux ressources et aux expériences concrètes qui créent un changement durable dans les communautés à travers le pays.",
+    "steps": {
+      "progressLabel": "Progression du formulaire de parrainage",
+      "sponsorshipDetails": "Détails du parrainage",
+      "sponsorInformation": "Informations du sponsor",
+      "recognitionPayment": "Reconnaissance et paiement"
+    },
+    "sections": {
+      "sponsorshipInterest": "Intérêt de parrainage",
+      "contactInformation": "Coordonnées",
+      "organization": "Organisation",
+      "additionalDetails": "Détails supplémentaires"
+    },
+    "fields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "organization": "Organisation ou entreprise",
+      "currentRole": "Rôle / titre actuel",
+      "sponsorType": "Type de sponsor",
+      "city": "Ville",
+      "state": "État",
+      "mailingAddress": "Adresse postale",
+      "customSponsorshipAmount": "Montant de parrainage prévu",
+      "message": "Message (facultatif)"
+    },
+    "placeholders": {
+      "selectOne": "Sélectionnez une option",
+      "customSponsorshipAmount": "p. ex. 5 000 $",
+      "message": "Partagez vos questions ou détails sur vos objectifs de parrainage"
+    },
+    "options": {
+      "sponsorshipTier": {
+        "community": {
+          "name": "Community",
+          "amount": "$10,500",
+          "fellows": "Finance 1 Fellow DFREE®",
+          "description": "Bourse d'accès complet pour un leader communautaire. Nommé dans les supports du programme de cohorte"
+        },
+        "champion": {
+          "name": "Champion",
+          "amount": "$31,500",
+          "fellows": "Finance 3 Fellows DFREE®",
+          "description": "Inscription à la cohorte + logo sur les supports numériques + invitation à l'orientation."
+        },
+        "catalyst": {
+          "name": "Catalyst",
+          "amount": "$52,500",
+          "fellows": "Finance 5 Fellows DFREE®",
+          "description": "Inscription à la cohorte + logo sur tous les supports + invitation à la vitrine du projet final."
+        },
+        "legacy": {
+          "name": "Legacy",
+          "amount": "$210,500",
+          "fellows": "Finance une cohorte complète de 20 Fellows",
+          "description": "Cohorte nommée en votre honneur. Reconnaissance permanente des alumni. Rapport d'impact annuel.",
+          "badge": "Cohorte nommée"
+        },
+        "custom": {
+          "name": "Personnalisé",
+          "description": "Bourses d'accès complet pour le nombre de fellows que vous choisissez. Nommé dans les supports du programme de cohorte."
+        }
+      },
+      "cohorts": {
+        "fall_2026": {
+          "name": "Automne 2026",
+          "startDate": "24 août 2026",
+          "endDate": "16 oct. 2026",
+          "duration": "8 semaines",
+          "status": "Sponsors acceptés"
+        },
+        "winter_2026": {
+          "name": "Hiver 2026",
+          "startDate": "12 janv. 2027",
+          "endDate": "6 mars 2027",
+          "duration": "8 semaines",
+          "status": "Sponsors acceptés"
+        },
+        "spring_2027": {
+          "name": "Printemps 2027",
+          "startDate": "6 avr. 2027",
+          "endDate": "28 mai 2027",
+          "duration": "8 semaines",
+          "status": "Sponsors acceptés"
+        },
+        "summer_2027": {
+          "name": "Été 2027",
+          "startDate": "6 juil. 2027",
+          "endDate": "27 août 2027",
+          "duration": "8 semaines",
+          "status": "Sponsors acceptés"
+        }
+      },
+      "sponsorType": {
+        "individual": "Individu",
+        "corporation": "Entreprise",
+        "foundation": "Fondation",
+        "nonprofit": "Organisme à but non lucratif",
+        "faith_based": "Organisation religieuse",
+        "government": "Gouvernement",
+        "other": "Autre"
+      },
+      "publicStatementSharing": {
+        "yes": "Oui",
+        "yes_confidential": "Oui (garder mon nom confidentiel)",
+        "no": "Non"
+      }
+    },
+    "actions": {
+      "back": "Retour",
+      "continue": "Continuer",
+      "submit": "Envoyer la demande de parrainage"
+    },
+    "step1": {
+      "title": "Détails du parrainage",
+      "subtitle": "Parlez-nous de vous et du travail que vous accomplissez dans votre communauté.",
+      "chooseTier": "Choisissez votre niveau de parrainage",
+      "customNumber": "Nombre personnalisé",
+      "fellowCount": "{count, plural, one {# Fellow} other {# Fellows}}",
+      "totalCommitmentLabel": "Engagement total :",
+      "decreaseFellows": "Diminuer le nombre de fellows",
+      "increaseFellows": "Augmenter le nombre de fellows",
+      "namedScholarshipTitle": "Bourse nommée / Titre de cohorte",
+      "namedScholarshipTitleHint": "(Niveau Legacy ou sur demande)",
+      "namedScholarshipTitlePlaceholder": "Saisissez le titre de bourse ou de cohorte souhaité",
+      "chooseCohort": "Choisissez une cohorte à parrainer",
+      "cohortFields": {
+        "startDate": "Date de début",
+        "endDate": "Date de fin",
+        "duration": "Durée",
+        "status": "Statut"
+      },
+      "cohortAssignmentNotes": "Notes ou préférences d'attribution de cohorte",
+      "cohortAssignmentNotesPlaceholder": "p. ex., préférence pour des Fellows d'une région ou d'un secteur spécifique",
+      "imageAlt": "Image de la section de soutien de l'Institut de leadership"
+    },
+    "step2": {
+      "title": "Informations du sponsor",
+      "subtitle": "Partagez les coordonnées et les informations sur l'organisation pour ce parrainage.",
+      "sections": {
+        "personalInformation": "Informations personnelles",
+        "location": "Localisation",
+        "professionalInformation": "Informations professionnelles",
+        "yourWhy": "Votre motivation"
+      },
+      "fields": {
+        "sponsorWhy": "Pourquoi souhaitez-vous parrainer des Fellows DFREE® ?",
+        "communitiesToSupport": "Communautés que vous espérez soutenir",
+        "publicStatementSharing": "Pouvons-nous partager votre déclaration publiquement ?"
+      },
+      "placeholders": {
+        "currentRole": "Pasteur, Directeur exécutif...",
+        "sponsorWhy": "Partagez ce qui vous relie à cette mission.",
+        "communitiesToSupport": "Y a-t-il des communautés, régions ou populations spécifiques que vous espérez soutenir avec votre bourse ?"
+      }
+    },
+    "step3": {
+      "title": "Reconnaissance et paiement",
+      "subtitle": "Passez en revue les détails de votre parrainage et indiquez comment vous souhaitez être reconnu.",
+      "recognitionTitle": "Reconnaissance du sponsor",
+      "recognitionDescription": "Les sponsors DFREE® sont reconnus sur notre site web, dans les supports du programme et les rapports d'impact annuels. Notre équipe confirmera votre niveau de reconnaissance préféré après l'envoi.",
+      "paymentTitle": "Paiement",
+      "paymentDescription": "Après l'envoi de ce formulaire, un membre de notre équipe vous contactera avec les instructions de paiement et les prochaines étapes du partenariat.",
+      "summaryTitle": "Résumé du parrainage",
+      "summaryTier": "Niveau sélectionné",
+      "summaryAmount": "Montant",
+      "summaryFellows": "Fellows financés",
+      "summaryTierDescription": "Avantages",
+      "summaryNamedTitle": "Bourse nommée / titre de cohorte",
+      "summaryCohort": "Cohorte sélectionnée",
+      "summaryCohortNotes": "Notes d'attribution de cohorte",
+      "summaryContact": "Contact principal"
+    },
+    "success": {
+      "title": "Merci pour votre intérêt !",
+      "body": "Votre demande de parrainage a été envoyée avec succès. Notre équipe examinera votre soumission et vous contactera pour les prochaines étapes.",
+      "goBack": "Retour à l'Institut de leadership"
+    },
+    "errors": {
+      "submitFailed": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans un instant."
     }
   }
 }
