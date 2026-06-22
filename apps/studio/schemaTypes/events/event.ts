@@ -50,6 +50,13 @@ export const event = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'details',
+      title: 'Details',
+      type: 'array',
+      of: [{type: 'block'}],
+      description: 'Optional rich content shown on the event details page.',
+    }),
+    defineField({
       name: 'image',
       title: 'Cover Image',
       type: 'image',
@@ -72,13 +79,47 @@ export const event = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'additionalImages',
+      title: 'Additional Images',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          options: {hotspot: true},
+          fields: [defineField({name: 'alt', title: 'Alternative Text', type: 'string'})],
+        },
+      ],
+      validation: (Rule) => Rule.max(3),
+      description: 'Optional. Up to 3 images shown on the event details page.',
+    }),
+    defineField({
+      name: 'linkToDetailsPage',
+      title: 'Link to details page',
+      type: 'boolean',
+      initialValue: false,
+      description:
+        'When enabled, the View event action opens the on-site event details page instead of the external link below.',
+    }),
+    defineField({
       name: 'link',
       title: 'Event Link',
       type: 'url',
       description:
-        'External link to the event page or registration. Leave empty to default to /events.',
+        'External link to the event page or registration. Used when "Link to details page" is off.',
+      hidden: ({document}) => document?.linkToDetailsPage === true,
       validation: (Rule) =>
-        Rule.uri({
+        Rule.custom((link, context) => {
+          const linkToDetailsPage = (context.document as {linkToDetailsPage?: boolean})
+            ?.linkToDetailsPage
+
+          if (linkToDetailsPage) return true
+
+          if (!link) {
+            return 'Provide an external link or enable "Link to details page".'
+          }
+
+          return true
+        }).uri({
           allowRelative: true,
           scheme: ['http', 'https'],
         }),
