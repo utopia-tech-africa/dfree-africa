@@ -317,9 +317,32 @@ export type Event = {
   _rev: string;
   title?: string;
   slug?: Slug;
-  category?: string;
+  category?:
+    | "BDC"
+    | "Africa"
+    | "FinFE$T"
+    | "Scholarships"
+    | "Community Campaigns";
   tag?: string;
   description?: string;
+  details?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
   image?: {
     asset?: SanityImageAssetReference;
     media?: unknown;
@@ -330,6 +353,16 @@ export type Event = {
   };
   location?: string;
   eventDate?: string;
+  additionalImages?: Array<{
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+    _key: string;
+  }>;
+  linkToDetailsPage?: boolean;
   link?: string;
   featured?: boolean;
   sortOrder?: number;
@@ -459,12 +492,18 @@ export type AllSanitySchemaTypes =
 
 // Source: ../web/lib/sanity/queries/events.ts
 // Variable: eventsQuery
-// Query: *[_type == "event"] | order(coalesce(sortOrder, 9999) asc, eventDate desc) {    _id,    title,    "slug": slug.current,    category,    tags,    description,    "imageUrl": image.asset->url,    "imageAlt": image.alt,    location,    eventDate,    link,    featured,    sortOrder  }
+// Query: *[_type == "event" && ($category == null || category == $category)] | order(coalesce(sortOrder, 9999) asc, eventDate desc) [$startIndex...$endIndex] {      _id,  title,  "slug": slug.current,  category,  "tag": coalesce(tag, tags[0], badge),  description,  "imageUrl": image.asset->url,  "imageAlt": image.alt,  location,  eventDate,  link,  linkToDetailsPage,  featured,  sortOrder  }
 export type EventsQueryResult = Array<{
   _id: string;
   title: string | null;
   slug: string | null;
-  category: string | null;
+  category:
+    | "Africa"
+    | "BDC"
+    | "Community Campaigns"
+    | "FinFE$T"
+    | "Scholarships"
+    | null;
   tag: string | null;
   description: string | null;
   imageUrl: string | null;
@@ -472,18 +511,25 @@ export type EventsQueryResult = Array<{
   location: string | null;
   eventDate: string | null;
   link: string | null;
+  linkToDetailsPage: boolean | null;
   featured: boolean | null;
   sortOrder: number | null;
 }>;
 
 // Source: ../web/lib/sanity/queries/events.ts
 // Variable: featuredEventsQuery
-// Query: *[_type == "event" && featured == true] | order(coalesce(sortOrder, 9999) asc, eventDate desc) {    _id,    title,    "slug": slug.current,    category,    tags,    description,    "imageUrl": image.asset->url,    "imageAlt": image.alt,    location,    eventDate,    link,    featured,    sortOrder  }
+// Query: *[_type == "event" && featured == true] | order(coalesce(sortOrder, 9999) asc, eventDate desc) [0...12] {      _id,  title,  "slug": slug.current,  category,  "tag": coalesce(tag, tags[0], badge),  description,  "imageUrl": image.asset->url,  "imageAlt": image.alt,  location,  eventDate,  link,  linkToDetailsPage,  featured,  sortOrder  }
 export type FeaturedEventsQueryResult = Array<{
   _id: string;
   title: string | null;
   slug: string | null;
-  category: string | null;
+  category:
+    | "Africa"
+    | "BDC"
+    | "Community Campaigns"
+    | "FinFE$T"
+    | "Scholarships"
+    | null;
   tag: string | null;
   description: string | null;
   imageUrl: string | null;
@@ -491,9 +537,89 @@ export type FeaturedEventsQueryResult = Array<{
   location: string | null;
   eventDate: string | null;
   link: string | null;
+  linkToDetailsPage: boolean | null;
   featured: true;
   sortOrder: number | null;
 }>;
+
+// Source: ../web/lib/sanity/queries/events.ts
+// Variable: eventsCountQuery
+// Query: count(*[_type == "event" && ($category == null || category == $category)])
+export type EventsCountQueryResult = number;
+
+// Source: ../web/lib/sanity/queries/events.ts
+// Variable: eventCategoriesQuery
+// Query: array::unique(*[_type == "event" && defined(category)].category)
+export type EventCategoriesQueryResult = Array<
+  "Africa" | "BDC" | "Community Campaigns" | "FinFE$T" | "Scholarships"
+>;
+
+// Source: ../web/lib/sanity/queries/events.ts
+// Variable: eventBySlugQuery
+// Query: *[_type == "event" && slug.current == $slug][0] {    _id,    title,    "slug": slug.current,    category,    "tag": coalesce(tag, tags[0], badge),    description,    details,    "imageUrl": image.asset->url,    "imageAlt": image.alt,    "additionalImages": additionalImages[]{      asset->    },    location,    eventDate,    link,    linkToDetailsPage,    featured  }
+export type EventBySlugQueryResult = {
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  category:
+    | "Africa"
+    | "BDC"
+    | "Community Campaigns"
+    | "FinFE$T"
+    | "Scholarships"
+    | null;
+  tag: string | null;
+  description: string | null;
+  details: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }> | null;
+  imageUrl: string | null;
+  imageAlt: string | null;
+  additionalImages: Array<{
+    asset: {
+      _id: string;
+      _type: "sanity.imageAsset";
+      _createdAt: string;
+      _updatedAt: string;
+      _rev: string;
+      originalFilename?: string;
+      label?: string;
+      title?: string;
+      description?: string;
+      altText?: string;
+      sha1hash?: string;
+      extension?: string;
+      mimeType?: string;
+      size?: number;
+      assetId?: string;
+      uploadId?: string;
+      path?: string;
+      url?: string;
+      metadata?: SanityImageMetadata;
+      source?: SanityAssetSourceData;
+    } | null;
+  }> | null;
+  location: string | null;
+  eventDate: string | null;
+  link: string | null;
+  linkToDetailsPage: boolean | null;
+  featured: boolean | null;
+} | null;
 
 // Source: ../web/lib/sanity/queries/finfestGallery.ts
 // Variable: finfestGalleryQuery
@@ -534,7 +660,7 @@ export type FinfestGalleryQueryResult = Array<{
 
 // Source: ../web/lib/sanity/queries/news.ts
 // Variable: newsQuery
-// Query: *[_type == "news" && ($currentSlug == null || slug.current != $currentSlug) && ($featured == null || featured == $featured) && ($category == null || category == $category)] | order(publishedDate desc) [$startIndex...$endIndex] {    _id,    title,    "slug": slug.current,    excerpt,    readTime,    publishedDate,    category,    tags,    "mainImage": mainImage.asset->url  }
+// Query: *[_type == "news" && ($currentSlug == null || slug.current != $currentSlug) && ($featured == null || featured == $featured) && ($category == null || category == $category)] | order(publishedDate desc) [$startIndex...$endIndex] {    _id,    title,    "slug": slug.current,    excerpt,    readTime,    publishedDate,    category,    "tag": coalesce(tag, tags[0]),    "mainImage": mainImage.asset->url  }
 export type NewsQueryResult = Array<{
   _id: string;
   title: string | null;
@@ -555,7 +681,7 @@ export type NewsQueryResult = Array<{
 
 // Source: ../web/lib/sanity/queries/news.ts
 // Variable: featuredNewsQuery
-// Query: *[_type == "news" && featured == true] | order(publishedDate desc) [0...12] {    _id,    title,    "slug": slug.current,    excerpt,    readTime,    publishedDate,    category,    tags,    "mainImage": mainImage.asset->url  }
+// Query: *[_type == "news" && featured == true] | order(publishedDate desc) [0...12] {    _id,    title,    "slug": slug.current,    excerpt,    readTime,    publishedDate,    category,    "tag": coalesce(tag, tags[0]),    "mainImage": mainImage.asset->url  }
 export type FeaturedNewsQueryResult = Array<{
   _id: string;
   title: string | null;
@@ -581,7 +707,7 @@ export type NewsCountQueryResult = number;
 
 // Source: ../web/lib/sanity/queries/news.ts
 // Variable: newsBySlugQuery
-// Query: *[_type == "news" && slug.current == $slug][0] {  _id,  title,  "slug": slug.current,  excerpt,  body,  readTime,  publishedDate,  category,  tags,  "mainImage": mainImage.asset->url,  authorName,  "authorImage": authorImage.asset->url}
+// Query: *[_type == "news" && slug.current == $slug][0] {  _id,  title,  "slug": slug.current,  excerpt,  body,  readTime,  publishedDate,  category,  "tag": coalesce(tag, tags[0]),  "mainImage": mainImage.asset->url,  authorName,  "authorImage": authorImage.asset->url}
 export type NewsBySlugQueryResult = {
   _id: string;
   title: string | null;

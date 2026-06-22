@@ -43,10 +43,10 @@ export type PortableTextChild = {
   marks?: string[];
 };
 
-/** Portable Text block. */
+/** Portable Text block from Sanity. */
 export type PortableTextBlock = {
+  _type: string;
   _key?: string;
-  _type?: string;
   children?: PortableTextChild[];
   [key: string]: unknown;
 };

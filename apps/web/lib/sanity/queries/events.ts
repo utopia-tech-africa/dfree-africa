@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-const eventFields = groq`
+const eventFields = `
   _id,
   title,
   "slug": slug.current,
@@ -12,12 +12,13 @@ const eventFields = groq`
   location,
   eventDate,
   link,
+  linkToDetailsPage,
   featured,
   sortOrder
 `;
 
 export const eventsQuery = groq`
-  *[_type == "event" && ($category == null || category == $category)] | order(coalesce(sortOrder, 9999) asc, eventDate desc) [$startIndex...$endIndex] {
+  *[_type == "event" && ($currentSlug == null || slug.current != $currentSlug) && ($category == null || category == $category)] | order(coalesce(sortOrder, 9999) asc, eventDate desc) [$startIndex...$endIndex] {
     ${eventFields}
   }
 `;
@@ -34,4 +35,26 @@ export const eventsCountQuery = groq`
 
 export const eventCategoriesQuery = groq`
   array::unique(*[_type == "event" && defined(category)].category)
+`;
+
+export const eventBySlugQuery = groq`
+  *[_type == "event" && slug.current == $slug][0] {
+    _id,
+    title,
+    "slug": slug.current,
+    category,
+    "tag": coalesce(tag, tags[0], badge),
+    description,
+    details,
+    "imageUrl": image.asset->url,
+    "imageAlt": image.alt,
+    "additionalImages": additionalImages[]{
+      asset->
+    },
+    location,
+    eventDate,
+    link,
+    linkToDetailsPage,
+    featured
+  }
 `;

@@ -180,6 +180,10 @@
       "title": "Events",
       "description": "Upcoming DFREE® workshops, FinFE$T gatherings, and community financial wellness events across the United States."
     },
+    "event": {
+      "title": "Event",
+      "descriptionFallback": "Learn more about this DFREE® event."
+    },
     "news": {
       "title": "News & Media",
       "description": "Press releases, stories, and updates from the DFREE® financial freedom movement."
@@ -355,6 +359,11 @@
       "subtitle": "Join us in our mission to transform financial landscapes.",
       "viewAllCta": "View all events",
       "viewEventCta": "View event",
+      "detail": {
+        "locationLabel": "Location",
+        "dateLabel": "Date",
+        "otherEventsTitle": "Other events"
+      },
       "featuredEvents": {
         "label": "Community & social gatherings",
         "title": "Community gatherings",

@@ -180,6 +180,10 @@
       "title": "Eventos",
       "description": "Talleres y eventos de bienestar financiero de DFREE® en Estados Unidos."
     },
+    "event": {
+      "title": "Evento",
+      "descriptionFallback": "Conoce más sobre este evento DFREE®."
+    },
     "news": {
       "title": "Noticias y medios",
       "description": "Noticias y actualizaciones del movimiento DFREE®."
@@ -355,6 +359,11 @@
       "subtitle": "Únete a nuestra misión de transformar las realidades financieras.",
       "viewAllCta": "Ver todos los eventos",
       "viewEventCta": "Ver evento",
+      "detail": {
+        "locationLabel": "Ubicación",
+        "dateLabel": "Fecha",
+        "otherEventsTitle": "Otros eventos"
+      },
       "featuredEvents": {
         "label": "Reuniones comunitarias y sociales",
         "title": "Próximos encuentros",
