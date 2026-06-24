@@ -50,5 +50,7 @@ export {
   getFeaturedEvents,
   getEventsCount,
   getEventCategories,
+  getEventBySlug,
   type EventForUI,
+  type EventDetailForUI,
 } from "./events";

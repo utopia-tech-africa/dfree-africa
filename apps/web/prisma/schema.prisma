@@ -135,3 +135,14 @@ model ApplicationSaveExitEvent {
   @@index([step, createdAt])
   @@map("application_save_exit_event")
 }
+
+model FormAcknowledgementTemplate {
+  id        String   @id @default(cuid())
+  formType  String   @unique
+  subject   String
+  bodyText  String
+  updatedAt DateTime @updatedAt
+  updatedBy String?
+
+  @@map("form_acknowledgement_template")
+}

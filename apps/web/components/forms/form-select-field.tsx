@@ -12,8 +12,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { FormFieldLabel, formFieldGroupClassName } from "./form-field-label";
-import { applicationFieldClassName } from "./word-count-textarea";
+import { FormFieldLabel } from "./form-field-label";
+import {
+  formFieldGroupClassName,
+  formSelectTriggerClassName,
+} from "./form-field-styles";
 
 export type FormSelectOption = {
   value: string;
@@ -31,6 +34,8 @@ type FormSelectFieldProps = {
   error?: string;
   onChange: (value: string) => void;
   className?: string;
+  triggerClassName?: string;
+  labelClassName?: string;
 };
 
 export function FormSelectField({
@@ -44,13 +49,19 @@ export function FormSelectField({
   error,
   onChange,
   className,
+  triggerClassName,
+  labelClassName,
 }: FormSelectFieldProps) {
   const generatedId = useId();
   const id = idProp ?? generatedId;
 
   return (
     <div className={cn(formFieldGroupClassName, className)}>
-      <FormFieldLabel htmlFor={id} required={required}>
+      <FormFieldLabel
+        htmlFor={id}
+        required={required}
+        className={labelClassName}
+      >
         {label}
       </FormFieldLabel>
 
@@ -62,10 +73,7 @@ export function FormSelectField({
         <SelectTrigger
           id={id}
           aria-invalid={Boolean(error)}
-          className={cn(
-            applicationFieldClassName,
-            "h-auto w-full py-3 shadow-none",
-          )}
+          className={cn("w-full", formSelectTriggerClassName, triggerClassName)}
         >
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>

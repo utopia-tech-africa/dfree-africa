@@ -1,7 +1,9 @@
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 
-export const formFieldGroupClassName = "space-y-2.5";
+import { formFieldGroupClassName } from "./form-field-styles";
+
+export { formFieldGroupClassName };
 
 type FormFieldLabelProps = {
   htmlFor?: string;

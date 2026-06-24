@@ -1,1 +1,5 @@
-export { translateText, translatePortableText } from "./translate";
+export {
+  translateText,
+  translatePortableText,
+  type PortableTextBlock,
+} from "./translate";

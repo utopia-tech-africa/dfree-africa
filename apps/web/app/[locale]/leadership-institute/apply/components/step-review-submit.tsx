@@ -16,10 +16,7 @@ import {
 } from "@/components/forms/form-field-label";
 import { FormSectionHeading } from "@/components/forms/form-section-heading";
 import { PhoneInputField } from "@/components/forms/phone-input-field";
-import {
-  applicationFieldClassName,
-  WordCountTextarea,
-} from "@/components/forms/word-count-textarea";
+import { WordCountTextarea } from "@/components/forms/word-count-textarea";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
@@ -63,7 +60,6 @@ function ReferenceFields({ prefix, title }: ReferenceFieldsProps) {
             id={`${prefix}-fullName`}
             disabled={isSubmitting}
             aria-invalid={Boolean(referenceErrors?.fullName)}
-            className={applicationFieldClassName}
             {...register(`${prefix}.fullName`)}
           />
           <FormFieldError message={referenceErrors?.fullName?.message} />
@@ -77,7 +73,6 @@ function ReferenceFields({ prefix, title }: ReferenceFieldsProps) {
             id={`${prefix}-relationship`}
             disabled={isSubmitting}
             aria-invalid={Boolean(referenceErrors?.relationship)}
-            className={applicationFieldClassName}
             {...register(`${prefix}.relationship`)}
           />
           <FormFieldError message={referenceErrors?.relationship?.message} />
@@ -92,7 +87,6 @@ function ReferenceFields({ prefix, title }: ReferenceFieldsProps) {
             type="email"
             disabled={isSubmitting}
             aria-invalid={Boolean(referenceErrors?.email)}
-            className={applicationFieldClassName}
             {...register(`${prefix}.email`)}
           />
           <FormFieldError message={referenceErrors?.email?.message} />
@@ -121,7 +115,6 @@ function ReferenceFields({ prefix, title }: ReferenceFieldsProps) {
             id={`${prefix}-organizationTitle`}
             disabled={isSubmitting}
             aria-invalid={Boolean(referenceErrors?.organizationTitle)}
-            className={applicationFieldClassName}
             {...register(`${prefix}.organizationTitle`)}
           />
           <FormFieldError

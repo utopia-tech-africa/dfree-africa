@@ -23,7 +23,10 @@ export async function sendFormAcknowledgement({
   formType,
   submitterName,
 }: FormAcknowledgementParams): Promise<{ sent: boolean }> {
-  const { subject, html } = getFormAcknowledgementCopy(formType, submitterName);
+  const { subject, html } = await getFormAcknowledgementCopy(
+    formType,
+    submitterName,
+  );
   const from = process.env.EMAIL_FROM;
   const resend = getResendClient();
 

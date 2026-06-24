@@ -39,22 +39,28 @@ export const ContentCard = ({
   const badgeLabel = [category, tag].filter(Boolean).join(" | ");
   const dateOverlay = eventDate ? parseEventDateOverlay(eventDate) : undefined;
   const dateLabel = eventDate ? formatEventDateLong(eventDate) : undefined;
+  const isExternalLink = /^https?:\/\//i.test(link);
+
+  const ctaContent = (
+    <span className="inline-flex items-center gap-2 font-semibold text-primary-600 hover:underline">
+      {ctaLabel ?? "View event"}
+      <ChevronRight size={16} />
+    </span>
+  );
 
   const renderDateBadge = ({
     day,
     ordinal,
     monthYear,
   }: NonNullable<typeof dateOverlay>) => (
-    <div className="flex flex-col items-start">
+    <div className="flex flex-col items-center">
       <p className="font-montserrat text-[36px] font-bold leading-none tracking-tight">
         {day}
         <sup className="ml-px text-xs font-bold leading-none align-super">
           {ordinal}
         </sup>
       </p>
-      <p className="mt-1 font-montserrat text-sm font-light leading-tight">
-        {monthYear}
-      </p>
+      <p className="mt-1 text-sm font-normal leading-tight">{monthYear}</p>
     </div>
   );
 
@@ -112,12 +118,18 @@ export const ContentCard = ({
             )}
           </div>
 
-          <Link href={link}>
-            <span className="inline-flex items-center gap-2  font-semibold text-primary-600 hover:underline">
-              {ctaLabel ?? "View event"}
-              <ChevronRight size={16} />
-            </span>
-          </Link>
+          {isExternalLink ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit"
+            >
+              {ctaContent}
+            </a>
+          ) : (
+            <Link href={link}>{ctaContent}</Link>
+          )}
         </div>
       </div>
     </div>
