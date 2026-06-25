@@ -121,7 +121,7 @@ export function HomeHeroVideo() {
       <button
         type="button"
         onClick={togglePlayback}
-        className="absolute right-4 top-24 z-20 flex items-center gap-2 rounded-full border border-white/30 bg-black/50 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm hover:bg-black/70 focus-visible:ring-2 focus-visible:ring-white"
+        className="absolute right-4 top-24 z-20 flex items-center gap-2 rounded-full border border-white/30 bg-black/50 px-4 py-2 text-sm font-medium text-white opacity-0 backdrop-blur-sm focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-white"
         aria-pressed={userPaused}
         aria-label={isPlaying ? t("pauseVideo") : t("playVideo")}
       >
