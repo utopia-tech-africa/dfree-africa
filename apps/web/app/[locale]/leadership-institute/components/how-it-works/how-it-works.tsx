@@ -15,7 +15,7 @@ const HOW_IT_WORKS_KEYS = [
 export const HowItWorks = async () => {
   const t = await getTranslations("leadershipInstitute.howItWorks");
   return (
-    <section className="pb-6 md:pb-8 lg:pb-24 bg-white">
+    <section className=" bg-white">
       <ComponentLayout className="flex flex-col space-y-4 md:space-y-6">
         <div className="space-y-2 flex flex-col md:items-center md:justify-center md:text-center">
           <Title text={t("label")} />

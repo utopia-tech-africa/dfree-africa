@@ -14,6 +14,7 @@ type NavSubItemConfig = {
   labelKey: string;
   href: string;
   width?: string;
+  target?: "_blank";
 };
 
 type NavItemConfig = {
@@ -72,9 +73,10 @@ const NAV_CONFIG: NavItemConfig[] = [
       {
         labelKey: "booksMerch",
         href: "https://store.dfree.com/",
+        target: "_blank",
         width: "w-[130px]",
       },
-      { labelKey: "attendEvents", href: "", width: "w-[125px]" },
+      { labelKey: "attendEvents", href: "/events", width: "w-[125px]" },
       { labelKey: "contactUs", href: "/contact", width: "w-[105px]" },
     ],
   },
@@ -218,6 +220,12 @@ export const Header = () => {
                     <Link
                       key={subItem.labelKey}
                       href={subItem.href}
+                      target={subItem.target}
+                      rel={
+                        subItem.target === "_blank"
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                       className={cn(
                         "inline-flex min-h-12 items-center justify-center rounded-sm px-3 py-2 text-center text-sm font-bold leading-snug whitespace-normal text-neutral-1000 transition-colors hover:bg-neutral-200",
                         subItem.width || "w-32.5",
@@ -331,6 +339,12 @@ export const Header = () => {
                             <Link
                               key={subItem.labelKey}
                               href={subItem.href}
+                              target={subItem.target}
+                              rel={
+                                subItem.target === "_blank"
+                                  ? "noopener noreferrer"
+                                  : undefined
+                              }
                               onClick={() => setMobileMenuOpen(false)}
                               className="max-w-full py-2 text-sm font-medium leading-tight text-neutral-900"
                             >
