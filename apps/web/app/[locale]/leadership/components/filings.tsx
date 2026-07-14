@@ -26,19 +26,25 @@ export const Filings = async () => {
 
         {/* Logo*/}
         <div className="relative w-24 h-24 md:w-32 md:h-32 ">
-          <Image
-            src="https://res.cloudinary.com/dan9camhs/image/upload/v1779293266/filings_image_logo_tuelip.png"
-            alt={t("title")}
-            fill
-            sizes="128px"
-            className="object-contain"
-          />
+          <Link
+            href="https://analytics.excellenceingiving.com/overview/dfree-global-foundation/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://res.cloudinary.com/dan9camhs/image/upload/v1779293266/filings_image_logo_tuelip.png"
+              alt={t("title")}
+              fill
+              sizes="128px"
+              className="object-contain"
+            />
+          </Link>
         </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5 w-full">
           <Link
-            href="#"
+            href="https://projects.propublica.org/nonprofits/organizations/454317604/202533219349328778/full"
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
               "w-fit",
@@ -47,7 +53,9 @@ export const Filings = async () => {
             {t("cta1")}
           </Link>
           <Link
-            href="#"
+            href="https://www.guidestar.org/profile/45-4317604"
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               buttonVariants({ variant: "default", size: "lg" }),
               "w-fit",
