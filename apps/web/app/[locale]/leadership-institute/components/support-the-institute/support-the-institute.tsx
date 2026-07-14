@@ -86,7 +86,7 @@ export const SupportTheInstitute = async () => {
               </div>
             </div>
 
-            <div className="pt-8">
+            <div className="pt-8 self-start">
               <Link
                 href="/leadership-institute/sponsor"
                 className={cn(
