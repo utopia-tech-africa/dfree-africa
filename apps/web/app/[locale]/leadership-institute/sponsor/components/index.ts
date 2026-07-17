@@ -1,3 +1,4 @@
+export { SponsorCertificationModal } from "./sponsor-certification-modal";
 export { SponsorFormHeader } from "./sponsor-form-header";
 export { SponsorFormActions } from "./sponsor-form-actions";
 export { SponsorStepper } from "./sponsor-stepper";

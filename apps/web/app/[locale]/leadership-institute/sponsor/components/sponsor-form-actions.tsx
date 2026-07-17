@@ -7,12 +7,14 @@ import { Button } from "@/components/ui/button";
 type SponsorFormActionsProps = {
   isSubmitting?: boolean;
   isLastStep?: boolean;
+  submitLabel?: string;
   onBack?: () => void;
 };
 
 export function SponsorFormActions({
   isSubmitting = false,
   isLastStep = false,
+  submitLabel,
   onBack,
 }: SponsorFormActionsProps) {
   const t = useTranslations("leadershipInstituteSponsor.actions");
@@ -36,7 +38,11 @@ export function SponsorFormActions({
         className="w-full px-5 sm:w-fit"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "…" : isLastStep ? t("submit") : t("continue")}
+        {isSubmitting
+          ? "…"
+          : isLastStep
+            ? (submitLabel ?? t("submit"))
+            : t("continue")}
       </Button>
     </div>
   );

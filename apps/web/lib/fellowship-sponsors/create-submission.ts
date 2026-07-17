@@ -26,9 +26,16 @@ async function sendSubmissionAcknowledgement(
   }
 }
 
+type CreateFellowshipSponsorOptions = {
+  sendAcknowledgement?: boolean;
+};
+
 export async function createFellowshipSponsorSubmission(
   payload: FellowshipSponsorPayload,
+  options: CreateFellowshipSponsorOptions = {},
 ) {
+  const sendAcknowledgement = options.sendAcknowledgement ?? true;
+
   const submission = await prisma.formSubmission.create({
     data: {
       type: FELLOWSHIP_SPONSOR_TYPE,
@@ -36,16 +43,39 @@ export async function createFellowshipSponsorSubmission(
     },
   });
 
-  after(async () => {
-    try {
-      await sendSubmissionAcknowledgement(submission.id, payload);
-    } catch (error) {
-      console.error(
-        "[fellowship-sponsors] Failed to send acknowledgement email:",
-        error,
-      );
-    }
-  });
+  if (sendAcknowledgement) {
+    after(async () => {
+      try {
+        await sendSubmissionAcknowledgement(submission.id, payload);
+      } catch (error) {
+        console.error(
+          "[fellowship-sponsors] Failed to send acknowledgement email:",
+          error,
+        );
+      }
+    });
+  }
 
   return submission;
+}
+
+export async function sendFellowshipSponsorAcknowledgement(
+  submissionId: string,
+  payload: FellowshipSponsorPayload,
+) {
+  const submission = await prisma.formSubmission.findFirst({
+    where: {
+      id: submissionId,
+      type: FELLOWSHIP_SPONSOR_TYPE,
+    },
+    select: {
+      acknowledgementSentAt: true,
+    },
+  });
+
+  if (!submission || submission.acknowledgementSentAt) {
+    return;
+  }
+
+  await sendSubmissionAcknowledgement(submissionId, payload);
 }

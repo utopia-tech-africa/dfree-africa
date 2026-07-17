@@ -6,6 +6,8 @@ import { createPortal } from "react-dom";
 
 import { useRouter } from "@/i18n/navigation";
 
+const SPONSORSHIP_SUCCESS_GIF = "/gif/sponsorship-success-gif.mp4";
+
 type SponsorSuccessModalProps = {
   onGoHome?: () => void;
 };
@@ -36,7 +38,7 @@ export function SponsorSuccessModal({ onGoHome }: SponsorSuccessModalProps) {
       return;
     }
 
-    router.push("/leadership-institute");
+    router.push("/");
   };
 
   if (!isMounted) {
@@ -50,7 +52,18 @@ export function SponsorSuccessModal({ onGoHome }: SponsorSuccessModalProps) {
       aria-modal="true"
       aria-labelledby="sponsor-success-title"
     >
-      <div className="flex max-h-[90vh] w-full max-w-[833px] flex-col items-center gap-5 overflow-y-auto rounded-[20px] border border-secondary-300/20 bg-white px-4 pb-5 pt-10 shadow-xl sm:gap-8 sm:pb-6 sm:pt-16 md:gap-[33px] md:px-8 md:pb-6 md:pt-20">
+      <div className="flex max-h-[90vh] w-full max-w-[833px] flex-col items-center gap-5 overflow-y-auto rounded-[20px] border border-secondary-300/20 bg-white px-4 pb-5 pt-10 shadow-xl sm:gap-8 sm:pb-6 sm:pt-16 md:gap-[33px] md:px-0 md:pb-6 md:pt-28">
+        <div className="relative size-28 shrink-0 overflow-hidden sm:size-36 md:size-[181px] md:h-[184px]">
+          <video
+            src={SPONSORSHIP_SUCCESS_GIF}
+            autoPlay
+            muted
+            playsInline
+            aria-hidden
+            className="size-full object-contain"
+          />
+        </div>
+
         <div className="flex w-full max-w-[801px] flex-col gap-2 text-center sm:gap-3">
           <h2
             id="sponsor-success-title"
@@ -68,7 +81,7 @@ export function SponsorSuccessModal({ onGoHome }: SponsorSuccessModalProps) {
           onClick={handleGoHome}
           className="flex h-12 w-full max-w-[801px] items-center justify-center rounded-full bg-primary-500 font-montserrat text-base font-bold leading-[1.2] text-white shadow-lg shadow-primary-600/10 transition-opacity hover:opacity-95 sm:h-[62px] sm:text-lg"
         >
-          {t("goBack")}
+          {t("goBackHome")}
         </button>
       </div>
     </div>,

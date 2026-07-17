@@ -8,15 +8,22 @@ type SubmitResult =
 
 export async function submitFellowshipSponsor(
   data: LeadershipInstituteSponsorValues,
+  recognitionLogoFile?: File | null,
 ): Promise<SubmitResult> {
+  const formData = new FormData();
+  formData.append("sponsor", JSON.stringify(data));
+
+  if (recognitionLogoFile && recognitionLogoFile.size > 0) {
+    formData.append("recognitionLogo", recognitionLogoFile);
+  }
+
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), SUBMISSION_TIMEOUT_MS);
 
   try {
     const response = await fetch("/api/fellowship-sponsors", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: formData,
       signal: controller.signal,
     });
 
