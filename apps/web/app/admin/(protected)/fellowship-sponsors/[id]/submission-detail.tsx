@@ -2,6 +2,13 @@ import type { ReactNode } from "react";
 
 import { formatSponsorCohort } from "@/lib/fellowship-sponsors/format-cohort";
 import {
+  formatPaymentAmountCents,
+  formatPaymentMethod,
+  formatPaymentStatus,
+} from "@/lib/fellowship-sponsors/format-payment-method";
+import { formatRecognitionPreferences } from "@/lib/fellowship-sponsors/format-recognition";
+import { formatSponsorReferralSource } from "@/lib/fellowship-sponsors/format-referral-source";
+import {
   formatPublicStatementSharing,
   formatSponsorType,
 } from "@/lib/fellowship-sponsors/format-sponsor-profile";
@@ -77,10 +84,71 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
             className="sm:col-span-2"
           />
         ) : null}
-        {payload.message ? (
+      </DetailSection>
+
+      <DetailSection title="Recognition & payment">
+        <DetailField
+          label="Recognition preferences"
+          value={formatRecognitionPreferences(payload.recognitionPreferences)}
+          className="sm:col-span-2"
+        />
+        {payload.recognitionDisplayName ? (
           <DetailField
-            label="Message"
-            value={payload.message}
+            label="Name on recognition materials"
+            value={payload.recognitionDisplayName}
+            className="sm:col-span-2"
+          />
+        ) : null}
+        {payload.recognitionLogo ? (
+          <DetailField
+            label="Recognition logo"
+            value={payload.recognitionLogo.fileName}
+            className="sm:col-span-2"
+          />
+        ) : null}
+        <DetailField
+          label="Payment method"
+          value={formatPaymentMethod(payload.paymentMethod)}
+        />
+        {payload.payment ? (
+          <>
+            <DetailField
+              label="Payment status"
+              value={formatPaymentStatus(payload.payment.status)}
+            />
+            <DetailField
+              label="Amount"
+              value={formatPaymentAmountCents(payload.payment.amountCents)}
+            />
+            {payload.payment.stripeCheckoutSessionId ? (
+              <DetailField
+                label="Stripe checkout session"
+                value={payload.payment.stripeCheckoutSessionId}
+                className="sm:col-span-2"
+              />
+            ) : null}
+            {payload.payment.stripePaymentIntentId ? (
+              <DetailField
+                label="Stripe payment intent"
+                value={payload.payment.stripePaymentIntentId}
+                className="sm:col-span-2"
+              />
+            ) : null}
+            {payload.payment.paidAt ? (
+              <DetailField
+                label="Paid at"
+                value={new Date(payload.payment.paidAt).toLocaleString()}
+              />
+            ) : null}
+          </>
+        ) : null}
+        {payload.checkNumber ? (
+          <DetailField label="Check number" value={payload.checkNumber} />
+        ) : null}
+        {payload.referralSource ? (
+          <DetailField
+            label="How did you hear about us"
+            value={formatSponsorReferralSource(payload.referralSource)}
             className="sm:col-span-2"
           />
         ) : null}

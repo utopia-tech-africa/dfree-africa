@@ -1509,7 +1509,32 @@
     "actions": {
       "back": "Atrás",
       "continue": "Continuar",
-      "submit": "Enviar consulta de patrocinio"
+      "submit": "Enviar consulta de patrocinio",
+      "payWithStripe": "Pagar {amount} con Stripe"
+    },
+    "certificationModal": {
+      "title": "Certificación",
+      "close": "Cerrar",
+      "submit": "Enviar formulario de patrocinio",
+      "authorization": {
+        "title": "Autorización y envío del patrocinador",
+        "body": "Al enviar este formulario, confirmo que la información proporcionada es precisa y que estoy autorizado/a a comprometer los fondos indicados en nombre de mi organización. Entiendo que mi contribución a DFREE Global Foundation, Inc. es deducible de impuestos en la medida permitida por la ley, y que se proporcionará una carta formal de reconocimiento del donativo. Entiendo que la DFREE Foundation aplicará mi donativo al Fellow Access Scholarship Fund para el/los período(s) de cohorte que he seleccionado, y que se respetarán mis preferencias de reconocimiento según lo descrito."
+      },
+      "fields": {
+        "referralSource": "¿Cómo se enteró de nosotros?",
+        "referralSourcePlaceholder": "Seleccione uno"
+      },
+      "options": {
+        "referralSource": {
+          "fellow_referral": "Referencia de un fellow DFREE®",
+          "website": "Sitio web",
+          "social_media": "Redes sociales",
+          "church": "Iglesia",
+          "organization": "Organización",
+          "academic": "Ámbito académico",
+          "other": "Otro"
+        }
+      }
     },
     "step1": {
       "title": "Detalles del patrocinio",
@@ -1556,28 +1581,89 @@
     },
     "step3": {
       "title": "Reconocimiento y pago",
-      "subtitle": "Revise los detalles de su patrocinio e indíquenos cómo le gustaría ser reconocido.",
-      "recognitionTitle": "Reconocimiento del patrocinador",
-      "recognitionDescription": "Los patrocinadores de DFREE® son reconocidos en nuestro sitio web, materiales del programa e informes de impacto anual. Nuestro equipo confirmará su nivel de reconocimiento preferido después del envío.",
+      "subtitle": "Seleccione cómo le gustaría ser reconocido y elija su método de pago preferido.",
+      "recognitionTitle": "¿Cómo le gustaría ser reconocido?",
+      "recognitionMaterialsTitle": "Nombre o logotipo para materiales de reconocimiento",
+      "recognitionDisplayNameLabel": "Nombre",
+      "recognitionDisplayNamePlaceholder": "Ingrese el nombre a mostrar",
+      "recognitionOptions": {
+        "cohort_program_listing": {
+          "title": "Listado del programa de cohorte",
+          "description": "Nombrado en el folleto oficial del programa de cohorte entregado a todos los becarios e invitados."
+        },
+        "website_recognition": {
+          "title": "Reconocimiento en el sitio web",
+          "description": "Listado como patrocinador en el sitio web de DFREE Foundation durante el período de la cohorte."
+        },
+        "social_media_spotlight": {
+          "title": "Destacado en redes sociales",
+          "description": "Destacado en una publicación de patrocinadores de DFREE Foundation en nuestros canales sociales."
+        },
+        "annual_impact_report": {
+          "title": "Informe de impacto anual",
+          "description": "Nombrado en el informe de impacto anual de DFREE Foundation con datos de resultados de los becarios."
+        },
+        "orientation_invitation": {
+          "title": "Invitación a la orientación",
+          "description": "Invitado a asistir al evento de orientación de la cohorte (presencial o virtual)."
+        },
+        "capstone_showcase_invitation": {
+          "title": "Invitación al evento capstone",
+          "description": "Invitado al evento de presentación del Proyecto de Despliegue Comunitario Capstone al cierre del programa."
+        },
+        "fellow_introduction": {
+          "title": "Presentación del becario",
+          "description": "Presentado (con permiso del becario) al becario o becarios que financia su beca."
+        },
+        "logo_placement": {
+          "title": "Colocación de logotipo",
+          "description": "Logotipo de la organización en materiales de la cohorte (nivel Champion y superior)."
+        }
+      },
+      "logoUpload": {
+        "label": "Logotipo (opcional)",
+        "dropzonePrefix": "Suelte sus archivos aquí o",
+        "browse": "explorar",
+        "maxSize": "Tamaño máximo: 20 MB",
+        "errors": {
+          "tooLarge": "El archivo del logotipo debe ser de 20 MB o menos.",
+          "invalidType": "Suba un archivo PNG, JPG, WEBP, SVG o PDF."
+        }
+      },
       "paymentTitle": "Pago",
-      "paymentDescription": "Después de enviar este formulario, un miembro de nuestro equipo se pondrá en contacto con instrucciones de pago y los próximos pasos de la asociación.",
-      "summaryTitle": "Resumen del patrocinio",
-      "summaryTier": "Nivel seleccionado",
-      "summaryAmount": "Monto",
-      "summaryFellows": "Becarios financiados",
-      "summaryTierDescription": "Beneficios",
-      "summaryNamedTitle": "Beca nombrada / título de cohorte",
-      "summaryCohort": "Cohorte seleccionada",
-      "summaryCohortNotes": "Notas de asignación de cohorte",
-      "summaryContact": "Contacto principal"
+      "paymentMethods": {
+        "check_ach": {
+          "tab": "Cheque/ACH",
+          "instructions": "Haga los cheques a nombre de DFREE Global Foundation, Inc. — Memo: Fellow Access Scholarship Fund. Para transferencia ACH/electrónica, contacte a la Fundación para obtener los datos bancarios después de enviar este formulario.",
+          "mailToLabel": "Enviar por correo a",
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Fellow Access Scholarship Fund\n[Dirección — por completar por la Fundación]",
+          "checkNumberLabel": "Número de cheque (si ya está escrito)"
+        },
+        "credit_card": {
+          "tab": "Tarjeta de crédito",
+          "body": "Será redirigido a Stripe Checkout para pagar {amount} de forma segura con tarjeta de crédito. El monto está vinculado al nivel de patrocinio que eligió.",
+          "lockedAmountNote": "El monto del pago no se puede cambiar en el checkout: coincide con el nivel de patrocinio seleccionado."
+        },
+        "wire_transfer": {
+          "tab": "Transferencia bancaria",
+          "body": "Después de enviar este formulario, nuestro equipo le proporcionará instrucciones de transferencia bancaria y datos bancarios."
+        },
+        "pledge_invoice": {
+          "tab": "Compromiso / Factura",
+          "body": "Después de enviar este formulario, nuestro equipo emitirá una factura o acuerdo de compromiso según su compromiso de patrocinio."
+        }
+      }
     },
     "success": {
-      "title": "¡Gracias por su interés!",
-      "body": "Su consulta de patrocinio se envió correctamente. Nuestro equipo revisará su solicitud y se pondrá en contacto con los próximos pasos.",
-      "goBack": "Volver al Instituto de Liderazgo"
+      "title": "¡Envío exitoso!",
+      "body": "Su formulario se envió correctamente. Nuestro equipo revisará su envío y se comunicará con usted sobre los próximos pasos de este proceso",
+      "goBackHome": "Volver al inicio"
     },
     "errors": {
-      "submitFailed": "No pudimos enviar su consulta. Inténtelo de nuevo en un momento."
+      "submitFailed": "No pudimos enviar su consulta. Inténtelo de nuevo en un momento.",
+      "checkoutFailed": "No pudimos iniciar Stripe Checkout. Inténtelo de nuevo en un momento.",
+      "checkoutCancelled": "El checkout se canceló. Sus datos siguen aquí: elija Tarjeta de crédito de nuevo y pulse Pagar cuando esté listo.",
+      "stripeNotConfigured": "Los pagos con tarjeta aún no están disponibles. Elija otro método de pago o inténtelo más tarde."
     }
   }
 }

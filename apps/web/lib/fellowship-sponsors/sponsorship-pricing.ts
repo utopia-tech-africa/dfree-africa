@@ -5,6 +5,9 @@ import type {
 
 export const FELLOW_UNIT_PRICE = 10_500;
 
+/** Upper bound for custom fellow counts to keep Checkout amounts bounded. */
+export const MAX_CUSTOM_FELLOW_COUNT = 100;
+
 export const TIER_FELLOW_COUNTS: Record<PresetSponsorshipTierValue, number> = {
   community: 1,
   champion: 3,
@@ -37,4 +40,11 @@ export function getSponsorshipTotal(
   customFellowCount: number,
 ): number {
   return getFellowCount(tier, customFellowCount) * FELLOW_UNIT_PRICE;
+}
+
+export function getSponsorshipAmountCents(
+  tier: SponsorshipTierValue,
+  customFellowCount: number,
+): number {
+  return getSponsorshipTotal(tier, customFellowCount) * 100;
 }

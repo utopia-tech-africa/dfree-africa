@@ -6,14 +6,28 @@ The admin area lives at `/admin` (locale-free). It uses **Better Auth**, **Prism
 
 Copy `apps/web/.env.example` to `apps/web/.env.local` and set (Prisma CLI reads `.env` then `.env.local` via `prisma.config.ts`):
 
-| Variable             | Notes                                          |
-| -------------------- | ---------------------------------------------- |
-| `DATABASE_URL`       | Neon **pooled** connection string (serverless) |
-| `BETTER_AUTH_SECRET` | `openssl rand -base64 32`                      |
-| `BETTER_AUTH_URL`    | Site origin, e.g. `http://localhost:3000`      |
-| `RESEND_API_KEY`     | From [resend.com](https://resend.com)          |
-| `EMAIL_FROM`         | Verified sender domain in Resend               |
-| `BOOTSTRAP_*`        | Only for the one-time seed script              |
+| Variable                | Notes                                                     |
+| ----------------------- | --------------------------------------------------------- |
+| `DATABASE_URL`          | Neon **pooled** connection string (serverless)            |
+| `BETTER_AUTH_SECRET`    | `openssl rand -base64 32`                                 |
+| `BETTER_AUTH_URL`       | Site origin, e.g. `http://localhost:3000`                 |
+| `RESEND_API_KEY`        | From [resend.com](https://resend.com)                     |
+| `EMAIL_FROM`            | Verified sender domain in Resend                          |
+| `STRIPE_SECRET_KEY`     | Stripe Dashboard → Developers → API keys                  |
+| `STRIPE_WEBHOOK_SECRET` | Stripe webhook signing secret for `/api/stripe/webhook`   |
+| `NEXT_PUBLIC_SITE_URL`  | Canonical site origin used for Stripe success/cancel URLs |
+| `BOOTSTRAP_*`           | Only for the one-time seed script                         |
+
+### Stripe (Leadership Institute sponsorship credit card)
+
+1. Add `STRIPE_SECRET_KEY` (start with `sk_test_…` for testing).
+2. In Stripe Dashboard → Developers → Webhooks, create an endpoint:
+   - URL: `https://<your-domain>/api/stripe/webhook`
+   - Events: `checkout.session.completed`, `checkout.session.expired`
+3. Paste the signing secret into `STRIPE_WEBHOOK_SECRET`.
+4. For local testing: `stripe listen --forward-to localhost:3000/api/stripe/webhook`.
+
+Card payments on the sponsor form use Stripe Checkout with a **server-calculated** amount from the selected tier. General donations remain on Zeffy.
 
 ## 2. Database
 

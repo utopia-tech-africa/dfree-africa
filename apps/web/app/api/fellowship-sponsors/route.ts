@@ -6,18 +6,7 @@ import { parseFellowshipSponsorSubmissionRequest } from "@/lib/fellowship-sponso
 export const maxDuration = 60;
 
 export async function POST(request: Request) {
-  let body: unknown;
-
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json(
-      { success: false, error: "invalid_form_data" },
-      { status: 400 },
-    );
-  }
-
-  const parsed = await parseFellowshipSponsorSubmissionRequest(body);
+  const parsed = await parseFellowshipSponsorSubmissionRequest(request);
 
   if (!parsed.ok) {
     return NextResponse.json(

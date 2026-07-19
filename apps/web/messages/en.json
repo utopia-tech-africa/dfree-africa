@@ -1510,7 +1510,32 @@
     "actions": {
       "back": "Back",
       "continue": "Continue",
-      "submit": "Submit sponsorship inquiry"
+      "submit": "Submit sponsorship inquiry",
+      "payWithStripe": "Pay {amount} with Stripe"
+    },
+    "certificationModal": {
+      "title": "Certification",
+      "close": "Close",
+      "submit": "Submit sponsorship form",
+      "authorization": {
+        "title": "Sponsor authorization & submission",
+        "body": "By submitting this form, I confirm that the information provided is accurate and that I am authorized to commit the stated funds on behalf of my organization. I understand that my contribution to DFREE Global Foundation, Inc. is tax-deductible to the extent permitted by law, and that a formal gift acknowledgment letter will be provided. I understand the DFREE Foundation will apply my gift to the Fellow Access Scholarship Fund for the cohort term(s) I have selected, and that my recognition preferences will be honored as described."
+      },
+      "fields": {
+        "referralSource": "How did you hear about us?",
+        "referralSourcePlaceholder": "Select one"
+      },
+      "options": {
+        "referralSource": {
+          "fellow_referral": "DFREE® fellow referral",
+          "website": "Website",
+          "social_media": "Social media",
+          "church": "Church",
+          "organization": "Organization",
+          "academic": "Academic",
+          "other": "Other"
+        }
+      }
     },
     "step1": {
       "title": "Sponsorship Details",
@@ -1557,28 +1582,89 @@
     },
     "step3": {
       "title": "Recognition & Payment",
-      "subtitle": "Review your sponsorship details and tell us how you would like to be recognized.",
-      "recognitionTitle": "Sponsor recognition",
-      "recognitionDescription": "DFREE® sponsors are recognized across our website, program materials, and annual impact reports. Our team will confirm your preferred recognition level after submission.",
+      "subtitle": "Select how you'd like to be recognized and choose your preferred payment method.",
+      "recognitionTitle": "How would you like to be recognized?",
+      "recognitionMaterialsTitle": "Name or Logo to appear on recognition materials",
+      "recognitionDisplayNameLabel": "Name",
+      "recognitionDisplayNamePlaceholder": "Enter the name to display",
+      "recognitionOptions": {
+        "cohort_program_listing": {
+          "title": "Cohort Program Listing",
+          "description": "Named in the official cohort program booklet given to all Fellows and guests."
+        },
+        "website_recognition": {
+          "title": "Website Recognition",
+          "description": "Listed as a sponsor on the DFREE Foundation website during the cohort term."
+        },
+        "social_media_spotlight": {
+          "title": "Social Media Spotlight",
+          "description": "Featured in a DFREE Foundation sponsor spotlight post across our social channels."
+        },
+        "annual_impact_report": {
+          "title": "Annual Impact Report",
+          "description": "Named in the DFREE Foundation annual impact report with Fellow outcome data."
+        },
+        "orientation_invitation": {
+          "title": "Orientation Invitation",
+          "description": "Invited to attend the cohort orientation event (in-person or virtual)."
+        },
+        "capstone_showcase_invitation": {
+          "title": "Capstone Showcase Invitation",
+          "description": "Invited to the Capstone Community Deployment Showcase at program close."
+        },
+        "fellow_introduction": {
+          "title": "Fellow Introduction",
+          "description": "Introduced (with Fellow's permission) to the Fellow(s) your scholarship funds."
+        },
+        "logo_placement": {
+          "title": "Logo Placement",
+          "description": "Organization logo on cohort materials (Champion tier and above)."
+        }
+      },
+      "logoUpload": {
+        "label": "Logo (optional)",
+        "dropzonePrefix": "Drop your files here or",
+        "browse": "browse",
+        "maxSize": "Maximum size: 20MB",
+        "errors": {
+          "tooLarge": "Logo file must be 20MB or smaller.",
+          "invalidType": "Upload a PNG, JPG, WEBP, SVG, or PDF file."
+        }
+      },
       "paymentTitle": "Payment",
-      "paymentDescription": "After you submit this form, a member of our team will contact you with payment instructions and partnership next steps.",
-      "summaryTitle": "Sponsorship summary",
-      "summaryTier": "Selected tier",
-      "summaryAmount": "Amount",
-      "summaryFellows": "Fellows funded",
-      "summaryTierDescription": "Benefits",
-      "summaryNamedTitle": "Named scholarship / cohort title",
-      "summaryCohort": "Selected cohort",
-      "summaryCohortNotes": "Cohort assignment notes",
-      "summaryContact": "Primary contact"
+      "paymentMethods": {
+        "check_ach": {
+          "tab": "Check/ACH",
+          "instructions": "Make checks payable to DFREE Global Foundation, Inc. — Memo: Fellow Access Scholarship Fund. For ACH/electronic transfer, contact the Foundation for banking details after submitting this form.",
+          "mailToLabel": "Mail to",
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Fellow Access Scholarship Fund\n[Address — to be completed by Foundation]",
+          "checkNumberLabel": "Check number (if already written)"
+        },
+        "credit_card": {
+          "tab": "Credit Card",
+          "body": "You'll be redirected to Stripe Checkout to pay {amount} securely by credit card. The amount is locked to your selected sponsorship tier.",
+          "lockedAmountNote": "The payment amount cannot be changed at checkout — it matches the sponsorship level you chose."
+        },
+        "wire_transfer": {
+          "tab": "Wire Transfer",
+          "body": "After you submit this form, our team will provide wire transfer instructions and banking details."
+        },
+        "pledge_invoice": {
+          "tab": "Pledge / Invoice",
+          "body": "After you submit this form, our team will issue an invoice or pledge agreement based on your sponsorship commitment."
+        }
+      }
     },
     "success": {
-      "title": "Thank you for your interest!",
-      "body": "Your sponsorship inquiry was submitted successfully. Our team will review your submission and contact you with next steps.",
-      "goBack": "Back to Leadership Institute"
+      "title": "Submission successful!",
+      "body": "Your form was successfully submitted, our team will review your submission and contact you on next steps of this process",
+      "goBackHome": "Go back home"
     },
     "errors": {
-      "submitFailed": "We couldn't submit your inquiry. Please try again in a moment."
+      "submitFailed": "We couldn't submit your inquiry. Please try again in a moment.",
+      "checkoutFailed": "We couldn't start Stripe Checkout. Please try again in a moment.",
+      "checkoutCancelled": "Checkout was cancelled. Your details are still here — choose Credit Card again and click Pay when you're ready.",
+      "stripeNotConfigured": "Card payments aren't available yet. Please choose another payment method or try again later."
     }
   }
 }

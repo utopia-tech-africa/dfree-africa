@@ -1510,7 +1510,32 @@
     "actions": {
       "back": "Retour",
       "continue": "Continuer",
-      "submit": "Envoyer la demande de parrainage"
+      "submit": "Envoyer la demande de parrainage",
+      "payWithStripe": "Payer {amount} avec Stripe"
+    },
+    "certificationModal": {
+      "title": "Certification",
+      "close": "Fermer",
+      "submit": "Envoyer le formulaire de parrainage",
+      "authorization": {
+        "title": "Autorisation et soumission du sponsor",
+        "body": "En soumettant ce formulaire, je confirme que les informations fournies sont exactes et que je suis autorisé(e) à engager les fonds indiqués au nom de mon organisation. Je comprends que ma contribution à DFREE Global Foundation, Inc. est déductible d'impôt dans la mesure permise par la loi, et qu'une lettre formelle d'accusé de réception du don sera fournie. Je comprends que la DFREE Foundation appliquera mon don au Fellow Access Scholarship Fund pour la/les période(s) de cohorte que j'ai sélectionnée(s), et que mes préférences de reconnaissance seront respectées comme décrit."
+      },
+      "fields": {
+        "referralSource": "Comment avez-vous entendu parler de nous ?",
+        "referralSourcePlaceholder": "Sélectionnez une option"
+      },
+      "options": {
+        "referralSource": {
+          "fellow_referral": "Recommandation d'un fellow DFREE®",
+          "website": "Site web",
+          "social_media": "Réseaux sociaux",
+          "church": "Église",
+          "organization": "Organisation",
+          "academic": "Milieu universitaire",
+          "other": "Autre"
+        }
+      }
     },
     "step1": {
       "title": "Détails du parrainage",
@@ -1557,28 +1582,89 @@
     },
     "step3": {
       "title": "Reconnaissance et paiement",
-      "subtitle": "Passez en revue les détails de votre parrainage et indiquez comment vous souhaitez être reconnu.",
-      "recognitionTitle": "Reconnaissance du sponsor",
-      "recognitionDescription": "Les sponsors DFREE® sont reconnus sur notre site web, dans les supports du programme et les rapports d'impact annuels. Notre équipe confirmera votre niveau de reconnaissance préféré après l'envoi.",
+      "subtitle": "Sélectionnez comment vous souhaitez être reconnu et choisissez votre mode de paiement préféré.",
+      "recognitionTitle": "Comment souhaitez-vous être reconnu ?",
+      "recognitionMaterialsTitle": "Nom ou logo à afficher sur les supports de reconnaissance",
+      "recognitionDisplayNameLabel": "Nom",
+      "recognitionDisplayNamePlaceholder": "Entrez le nom à afficher",
+      "recognitionOptions": {
+        "cohort_program_listing": {
+          "title": "Liste du programme de cohorte",
+          "description": "Nommé dans le livret officiel du programme de cohorte remis à tous les Fellows et invités."
+        },
+        "website_recognition": {
+          "title": "Reconnaissance sur le site web",
+          "description": "Inscrit comme sponsor sur le site web de la Fondation DFREE pendant la durée de la cohorte."
+        },
+        "social_media_spotlight": {
+          "title": "Mise en avant sur les réseaux sociaux",
+          "description": "Mis en avant dans une publication sponsor de la Fondation DFREE sur nos réseaux sociaux."
+        },
+        "annual_impact_report": {
+          "title": "Rapport d'impact annuel",
+          "description": "Nommé dans le rapport d'impact annuel de la Fondation DFREE avec les données de résultats des Fellows."
+        },
+        "orientation_invitation": {
+          "title": "Invitation à l'orientation",
+          "description": "Invité à assister à l'événement d'orientation de la cohorte (en personne ou virtuel)."
+        },
+        "capstone_showcase_invitation": {
+          "title": "Invitation à la vitrine capstone",
+          "description": "Invité à la vitrine de déploiement communautaire Capstone à la clôture du programme."
+        },
+        "fellow_introduction": {
+          "title": "Présentation du Fellow",
+          "description": "Présenté (avec l'autorisation du Fellow) au ou aux Fellows financés par votre bourse."
+        },
+        "logo_placement": {
+          "title": "Placement du logo",
+          "description": "Logo de l'organisation sur les supports de la cohorte (niveau Champion et supérieur)."
+        }
+      },
+      "logoUpload": {
+        "label": "Logo (facultatif)",
+        "dropzonePrefix": "Déposez vos fichiers ici ou",
+        "browse": "parcourir",
+        "maxSize": "Taille maximale : 20 Mo",
+        "errors": {
+          "tooLarge": "Le fichier logo doit faire 20 Mo ou moins.",
+          "invalidType": "Téléversez un fichier PNG, JPG, WEBP, SVG ou PDF."
+        }
+      },
       "paymentTitle": "Paiement",
-      "paymentDescription": "Après l'envoi de ce formulaire, un membre de notre équipe vous contactera avec les instructions de paiement et les prochaines étapes du partenariat.",
-      "summaryTitle": "Résumé du parrainage",
-      "summaryTier": "Niveau sélectionné",
-      "summaryAmount": "Montant",
-      "summaryFellows": "Fellows financés",
-      "summaryTierDescription": "Avantages",
-      "summaryNamedTitle": "Bourse nommée / titre de cohorte",
-      "summaryCohort": "Cohorte sélectionnée",
-      "summaryCohortNotes": "Notes d'attribution de cohorte",
-      "summaryContact": "Contact principal"
+      "paymentMethods": {
+        "check_ach": {
+          "tab": "Chèque/ACH",
+          "instructions": "Rédigez les chèques à l'ordre de DFREE Global Foundation, Inc. — Mémo : Fellow Access Scholarship Fund. Pour un virement ACH/électronique, contactez la Fondation pour les coordonnées bancaires après l'envoi de ce formulaire.",
+          "mailToLabel": "Envoyer à",
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Fellow Access Scholarship Fund\n[Adresse — à compléter par la Fondation]",
+          "checkNumberLabel": "Numéro de chèque (si déjà rédigé)"
+        },
+        "credit_card": {
+          "tab": "Carte de crédit",
+          "body": "Vous serez redirigé vers Stripe Checkout pour payer {amount} en toute sécurité par carte de crédit. Le montant est lié au niveau de parrainage choisi.",
+          "lockedAmountNote": "Le montant du paiement ne peut pas être modifié lors du paiement — il correspond au niveau de parrainage sélectionné."
+        },
+        "wire_transfer": {
+          "tab": "Virement bancaire",
+          "body": "Après l'envoi de ce formulaire, notre équipe vous fournira les instructions de virement et les coordonnées bancaires."
+        },
+        "pledge_invoice": {
+          "tab": "Engagement / Facture",
+          "body": "Après l'envoi de ce formulaire, notre équipe émettra une facture ou un accord d'engagement selon votre engagement de parrainage."
+        }
+      }
     },
     "success": {
-      "title": "Merci pour votre intérêt !",
-      "body": "Votre demande de parrainage a été envoyée avec succès. Notre équipe examinera votre soumission et vous contactera pour les prochaines étapes.",
-      "goBack": "Retour à l'Institut de leadership"
+      "title": "Soumission réussie !",
+      "body": "Votre formulaire a bien été soumis. Notre équipe examinera votre dossier et vous contactera pour les prochaines étapes de ce processus",
+      "goBackHome": "Retour à l'accueil"
     },
     "errors": {
-      "submitFailed": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans un instant."
+      "submitFailed": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans un instant.",
+      "checkoutFailed": "Nous n'avons pas pu démarrer Stripe Checkout. Veuillez réessayer dans un instant.",
+      "checkoutCancelled": "Le paiement a été annulé. Vos informations sont toujours là — choisissez à nouveau Carte de crédit et cliquez sur Payer quand vous êtes prêt.",
+      "stripeNotConfigured": "Les paiements par carte ne sont pas encore disponibles. Veuillez choisir un autre mode de paiement ou réessayer plus tard."
     }
   }
 }
