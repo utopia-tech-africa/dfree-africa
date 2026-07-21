@@ -3,20 +3,29 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
 import ComponentLayout from "@/components/component-layout";
+import { useRouter } from "@/i18n/navigation";
+import { confirmFellowshipSponsorCheckout } from "@/lib/forms/confirm-fellowship-sponsor-checkout";
+import {
+  SPONSOR_TOTAL_STEPS,
+  sponsorCertificationFields,
+  sponsorStepFieldMap,
+} from "@/lib/forms/leadership-institute-sponsor-steps";
 import {
   defaultSponsorValues,
   leadershipInstituteSponsorSchema,
   type LeadershipInstituteSponsorValues,
 } from "@/lib/forms/schemas/leadership-institute-sponsor";
 import {
-  SPONSOR_TOTAL_STEPS,
-  sponsorCertificationFields,
-  sponsorStepFieldMap,
-} from "@/lib/forms/leadership-institute-sponsor-steps";
+  clearSponsorCheckoutDraft,
+  draftLogoToFile,
+  loadSponsorCheckoutDraft,
+  logoFileToDraft,
+  saveSponsorCheckoutDraft,
+} from "@/lib/forms/sponsor-checkout-draft";
 import { startFellowshipSponsorCheckout } from "@/lib/forms/start-fellowship-sponsor-checkout";
 import { submitFellowshipSponsor } from "@/lib/forms/submit-fellowship-sponsor";
 import { cn } from "@/lib/utils";
@@ -24,6 +33,7 @@ import { cn } from "@/lib/utils";
 import { SponsorCertificationModal } from "./components/sponsor-certification-modal";
 import { SponsorFormActions } from "./components/sponsor-form-actions";
 import { SponsorFormHeader } from "./components/sponsor-form-header";
+import { SponsorStartModal } from "./components/sponsor-start-modal";
 import { SponsorStepper } from "./components/sponsor-stepper";
 import { SponsorSuccessModal } from "./components/sponsor-success-modal";
 import { StepRecognitionPayment } from "./components/step-recognition-payment";
@@ -33,9 +43,13 @@ import { StepSponsorshipDetails } from "./components/step-sponsorship-details";
 function LeadershipInstituteSponsorFormInner() {
   const t = useTranslations("leadershipInstituteSponsor");
   const locale = useLocale();
+  const router = useRouter();
   const searchParams = useSearchParams();
+  const checkoutHandledRef = useRef(false);
   const [currentStep, setCurrentStep] = useState(1);
+  const [hasStarted, setHasStarted] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isConfirmingCheckout, setIsConfirmingCheckout] = useState(false);
   const [isCertificationModalOpen, setIsCertificationModalOpen] =
     useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -53,33 +67,74 @@ function LeadershipInstituteSponsorFormInner() {
     shouldUnregister: false,
   });
 
-  const { trigger, getValues } = methods;
+  const { trigger, getValues, reset } = methods;
 
   useEffect(() => {
+    if (checkoutHandledRef.current) {
+      return;
+    }
+
     const checkout = searchParams.get("checkout");
 
     if (checkout === "success") {
-      setIsSubmitted(true);
+      checkoutHandledRef.current = true;
+      setHasStarted(true);
+      const sessionId = searchParams.get("session_id");
+
       window.history.replaceState({}, "", window.location.pathname);
+
+      if (!sessionId) {
+        setCheckoutNotice(t("errors.checkoutConfirmFailed"));
+        return;
+      }
+
+      setIsConfirmingCheckout(true);
+
+      void confirmFellowshipSponsorCheckout(sessionId).then((result) => {
+        setIsConfirmingCheckout(false);
+
+        if (result.success && result.paid) {
+          clearSponsorCheckoutDraft();
+          setIsSubmitted(true);
+          return;
+        }
+
+        setCheckoutNotice(t("errors.checkoutConfirmFailed"));
+      });
       return;
     }
 
     if (checkout === "cancelled") {
+      checkoutHandledRef.current = true;
+      setHasStarted(true);
       setCheckoutNotice(t("errors.checkoutCancelled"));
       setCurrentStep(SPONSOR_TOTAL_STEPS);
 
+      const draft = loadSponsorCheckoutDraft();
+      if (draft) {
+        reset({
+          ...defaultSponsorValues,
+          ...draft.values,
+        });
+        setCurrentStep(draft.currentStep || SPONSOR_TOTAL_STEPS);
+        if (draft.logo) {
+          setRecognitionLogoFile(draftLogoToFile(draft.logo));
+        }
+      }
+
       const submissionId = searchParams.get("submission_id");
-      if (submissionId) {
+      const cancelToken = searchParams.get("cancel_token");
+      if (submissionId && cancelToken) {
         void fetch("/api/fellowship-sponsors/checkout/cancel", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ submissionId }),
+          body: JSON.stringify({ submissionId, cancelToken }),
         });
       }
 
       window.history.replaceState({}, "", window.location.pathname);
     }
-  }, [searchParams, t]);
+  }, [reset, searchParams, t]);
 
   const handleBack = () => {
     setCurrentStep((step) => Math.max(1, step - 1));
@@ -109,6 +164,16 @@ function LeadershipInstituteSponsorFormInner() {
 
     try {
       if (data.paymentMethod === "credit_card") {
+        const logo = recognitionLogoFile
+          ? await logoFileToDraft(recognitionLogoFile)
+          : undefined;
+
+        saveSponsorCheckoutDraft({
+          values: data,
+          currentStep: SPONSOR_TOTAL_STEPS,
+          ...(logo ? { logo } : {}),
+        });
+
         const result = await startFellowshipSponsorCheckout(data, {
           recognitionLogoFile,
           locale,
@@ -134,6 +199,7 @@ function LeadershipInstituteSponsorFormInner() {
         return;
       }
 
+      clearSponsorCheckoutDraft();
       setIsCertificationModalOpen(false);
       setIsSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -185,8 +251,25 @@ function LeadershipInstituteSponsorFormInner() {
     return <SponsorSuccessModal />;
   }
 
+  if (isConfirmingCheckout) {
+    return (
+      <ComponentLayout className="py-16 md:py-24">
+        <p className="text-center text-neutral-800" role="status">
+          {t("errors.checkoutConfirming")}
+        </p>
+      </ComponentLayout>
+    );
+  }
+
   return (
     <>
+      {!hasStarted ? (
+        <SponsorStartModal
+          onStart={() => setHasStarted(true)}
+          onClose={() => router.push("/leadership-institute")}
+        />
+      ) : null}
+
       <SponsorStepper currentStep={currentStep} />
 
       <ComponentLayout className="py-8 md:py-12">

@@ -8,7 +8,7 @@ import {
 import { getFellowshipApplicationSummaries } from "@/lib/fellowship-applications/get-submissions";
 
 import { FellowshipApplicationsEmptyState } from "./fellowship-applications-empty-state";
-import { SubmissionsTable } from "./submissions-table";
+import { SubmissionsBrowser } from "./submissions-browser";
 
 export default async function FellowshipApplicationsPage() {
   const submissions = await getFellowshipApplicationSummaries();
@@ -34,7 +34,7 @@ export default async function FellowshipApplicationsPage() {
         </CardHeader>
         <CardContent className={submissions.length ? "p-0" : undefined}>
           {submissions.length ? (
-            <SubmissionsTable submissions={submissions} />
+            <SubmissionsBrowser submissions={submissions} />
           ) : (
             <FellowshipApplicationsEmptyState />
           )}

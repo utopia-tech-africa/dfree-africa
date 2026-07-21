@@ -1170,7 +1170,8 @@
       "aboutYou": "About You & Your Work",
       "communityImpact": "Community Impact",
       "deploymentVision": "Deployment Vision",
-      "reviewSubmit": "Review & Submit"
+      "reviewSubmit": "References & Commitment",
+      "review": "Review"
     },
     "actions": {
       "saveExit": "Save & exit",
@@ -1185,6 +1186,27 @@
     },
     "errors": {
       "submitFailed": "We couldn't submit your application. Please try again in a moment."
+    },
+    "startModal": {
+      "title": "DFREE® Fellowship Application",
+      "close": "Close",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Apply to join the next cohort of the Bottom-Up Leadership Institute. Fellows are selected through a competitive process and receive a full access scholarship. Program costs are absorbed by sponsors on behalf of each Fellow.",
+      "benefitsTitle": "What You'll Receive",
+      "benefits": {
+        "scholarship": "Full Access Scholarship",
+        "training": "Leadership training",
+        "deployment": "Community deployment support",
+        "alumni": "National alumni network",
+        "capstone": "Capstone project guidance"
+      },
+      "beforeYouBeginTitle": "Before You Begin",
+      "beforeYouBegin": {
+        "duration": "- Application takes about 15–20 minutes",
+        "saveContinue": "- You can save and continue later",
+        "noFee": "- No application fee"
+      },
+      "start": "Start application"
     },
     "certificationModal": {
       "title": "Commitment and Certification",
@@ -1312,7 +1334,7 @@
         "whoToTrain": "Who would you like to train?",
         "peopleToReach": "Approximately how many people would you like to reach?",
         "setting": "What setting would you use?",
-        "participationHistory": "Have you led or participated in financial literacy, wealth-building, or economic empowerment programs?",
+        "participationHistory": "How long do you plan to run this training project?",
         "successMetrics": "How would you measure success?",
         "projectVision": "Briefly describe your project vision."
       },
@@ -1394,6 +1416,11 @@
           "other": "Other"
         }
       }
+    },
+    "step5": {
+      "title": "Review your application",
+      "subtitle": "Confirm your answers below. You can edit any section before submitting.",
+      "edit": "Edit"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1527,12 +1554,13 @@
       },
       "options": {
         "referralSource": {
-          "fellow_referral": "DFREE® fellow referral",
-          "website": "Website",
+          "fellow_or_alumni": "DFREE® Fellow or alumni",
+          "website": "DFREE Foundation website",
+          "leadership": "Dr. DeForest Soaries / DFREE leadership",
+          "church_or_faith": "Church or faith network",
+          "nonprofit_network": "Nonprofit / foundation network",
           "social_media": "Social media",
-          "church": "Church",
-          "organization": "Organization",
-          "academic": "Academic",
+          "corporate_csr": "Corporate giving / CSR team",
           "other": "Other"
         }
       }
@@ -1637,8 +1665,9 @@
           "tab": "Check/ACH",
           "instructions": "Make checks payable to DFREE Global Foundation, Inc. — Memo: Fellow Access Scholarship Fund. For ACH/electronic transfer, contact the Foundation for banking details after submitting this form.",
           "mailToLabel": "Mail to",
-          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Fellow Access Scholarship Fund\n[Address — to be completed by Foundation]",
-          "checkNumberLabel": "Check number (if already written)"
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Robert Finely\nSuite 2\nSomerset, NJ 08773",
+          "checkNumberLabel": "Check number",
+          "checkNumberOptional": "(if already written)"
         },
         "credit_card": {
           "tab": "Credit Card",
@@ -1647,11 +1676,21 @@
         },
         "wire_transfer": {
           "tab": "Wire Transfer",
-          "body": "After you submit this form, our team will provide wire transfer instructions and banking details."
+          "body": "Wire banking details will be provided within 2 business days of form submission. Please submit this form first and a Foundation representative will follow up with routing and account information.",
+          "anticipatedWireDateLabel": "Anticipated wire date"
         },
         "pledge_invoice": {
           "tab": "Pledge / Invoice",
-          "body": "After you submit this form, our team will issue an invoice or pledge agreement based on your sponsorship commitment."
+          "body": "Submit this form as a pledge and the Foundation will issue a formal invoice to your organization. Pledges are fulfilled within 30 days of the cohort start date unless otherwise arranged.",
+          "invoiceRecipientNameLabel": "Invoice recipient name",
+          "invoiceRecipientNamePlaceholder": "Accounts payable contact",
+          "invoiceEmailLabel": "Invoice email",
+          "invoiceEmailPlaceholder": "ap@organization.org",
+          "purchaseOrderNumberLabel": "Purchase order number",
+          "purchaseOrderNumberPlaceholder": "Optional",
+          "requestedPaymentDateLabel": "Requested payment date",
+          "specialBillingInstructionsLabel": "Special billing instructions",
+          "specialBillingInstructionsPlaceholder": "Any requirements for your accounts payable team"
         }
       }
     },
@@ -1660,10 +1699,34 @@
       "body": "Your form was successfully submitted, our team will review your submission and contact you on next steps of this process",
       "goBackHome": "Go back home"
     },
+    "startModal": {
+      "title": "DFREE® Sponsor Commitment Form",
+      "close": "Close",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Your sponsorship removes the financial barrier entirely. Every dollar you give goes directly toward placing a community leader into the DFREE® Fellows program at no cost to them — through a fully sponsored access scholarship. Each 8-week cohort of the Bottom-Up Leadership Institute (BLI) will train up to 20 fellows.",
+      "impactTitle": "What your sponsorship does:",
+      "impact": {
+        "one": {
+          "stat": "One",
+          "label": "DFREE® Fellow fully funded"
+        },
+        "fiveTen": {
+          "stat": "Five - Ten",
+          "label": "Community members trained by each Fellow"
+        },
+        "dozens": {
+          "stat": "Dozens",
+          "label": "Families reached per cohort cycle"
+        }
+      },
+      "start": "Start sponsorship"
+    },
     "errors": {
       "submitFailed": "We couldn't submit your inquiry. Please try again in a moment.",
       "checkoutFailed": "We couldn't start Stripe Checkout. Please try again in a moment.",
       "checkoutCancelled": "Checkout was cancelled. Your details are still here — choose Credit Card again and click Pay when you're ready.",
+      "checkoutConfirming": "Confirming your payment…",
+      "checkoutConfirmFailed": "We couldn't confirm your payment yet. If you were charged, please contact us and we'll sort it out.",
       "stripeNotConfigured": "Card payments aren't available yet. Please choose another payment method or try again later."
     }
   }

@@ -1170,7 +1170,8 @@
       "aboutYou": "À propos de vous et de votre travail",
       "communityImpact": "Impact communautaire",
       "deploymentVision": "Vision de déploiement",
-      "reviewSubmit": "Révision et soumission"
+      "reviewSubmit": "Références et engagement",
+      "review": "Revue"
     },
     "actions": {
       "saveExit": "Enregistrer et quitter",
@@ -1185,6 +1186,27 @@
     },
     "errors": {
       "submitFailed": "Nous n'avons pas pu soumettre votre candidature. Veuillez réessayer dans un instant."
+    },
+    "startModal": {
+      "title": "Candidature Fellowship DFREE®",
+      "close": "Fermer",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Postulez pour rejoindre la prochaine cohorte du Bottom-Up Leadership Institute. Les Fellows sont sélectionnés via un processus compétitif et reçoivent une bourse d'accès complet. Les coûts du programme sont pris en charge par des sponsors pour chaque Fellow.",
+      "benefitsTitle": "Ce que vous recevrez",
+      "benefits": {
+        "scholarship": "Bourse d'accès complet",
+        "training": "Formation au leadership",
+        "deployment": "Soutien au déploiement communautaire",
+        "alumni": "Réseau national d'alumni",
+        "capstone": "Accompagnement du projet Capstone"
+      },
+      "beforeYouBeginTitle": "Avant de commencer",
+      "beforeYouBegin": {
+        "duration": "- La candidature prend environ 15–20 minutes",
+        "saveContinue": "- Vous pouvez enregistrer et continuer plus tard",
+        "noFee": "- Aucuns frais de candidature"
+      },
+      "start": "Commencer la candidature"
     },
     "certificationModal": {
       "title": "Engagement et certification",
@@ -1312,7 +1334,7 @@
         "whoToTrain": "Qui souhaitez-vous former ?",
         "peopleToReach": "Approximativement combien de personnes souhaitez-vous toucher ?",
         "setting": "Quel cadre utiliseriez-vous ?",
-        "participationHistory": "Avez-vous dirigé ou participé à des programmes de littératie financière, de création de richesse ou d'autonomisation économique ?",
+        "participationHistory": "Combien de temps prévoyez-vous de mener ce projet de formation ?",
         "successMetrics": "Comment mesureriez-vous le succès ?",
         "projectVision": "Décrivez brièvement votre vision du projet."
       },
@@ -1394,6 +1416,11 @@
           "other": "Autre"
         }
       }
+    },
+    "step5": {
+      "title": "Vérifiez votre candidature",
+      "subtitle": "Confirmez vos réponses ci-dessous. Vous pouvez modifier n'importe quelle section avant de soumettre.",
+      "edit": "Modifier"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1527,12 +1554,13 @@
       },
       "options": {
         "referralSource": {
-          "fellow_referral": "Recommandation d'un fellow DFREE®",
-          "website": "Site web",
+          "fellow_or_alumni": "Fellow ou alumni DFREE®",
+          "website": "Site web de la DFREE Foundation",
+          "leadership": "Dr. DeForest Soaries / direction DFREE",
+          "church_or_faith": "Réseau d'église ou de foi",
+          "nonprofit_network": "Réseau d'organisations à but non lucratif / fondations",
           "social_media": "Réseaux sociaux",
-          "church": "Église",
-          "organization": "Organisation",
-          "academic": "Milieu universitaire",
+          "corporate_csr": "Dons d'entreprise / équipe RSE",
           "other": "Autre"
         }
       }
@@ -1637,8 +1665,9 @@
           "tab": "Chèque/ACH",
           "instructions": "Rédigez les chèques à l'ordre de DFREE Global Foundation, Inc. — Mémo : Fellow Access Scholarship Fund. Pour un virement ACH/électronique, contactez la Fondation pour les coordonnées bancaires après l'envoi de ce formulaire.",
           "mailToLabel": "Envoyer à",
-          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Fellow Access Scholarship Fund\n[Adresse — à compléter par la Fondation]",
-          "checkNumberLabel": "Numéro de chèque (si déjà rédigé)"
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Robert Finely\nSuite 2\nSomerset, NJ 08773",
+          "checkNumberLabel": "Numéro de chèque",
+          "checkNumberOptional": "(si déjà rédigé)"
         },
         "credit_card": {
           "tab": "Carte de crédit",
@@ -1647,11 +1676,21 @@
         },
         "wire_transfer": {
           "tab": "Virement bancaire",
-          "body": "Après l'envoi de ce formulaire, notre équipe vous fournira les instructions de virement et les coordonnées bancaires."
+          "body": "Les coordonnées bancaires pour le virement seront fournies dans les 2 jours ouvrables suivant l'envoi du formulaire. Veuillez d'abord soumettre ce formulaire ; un représentant de la Fondation vous enverra ensuite les informations de routage et de compte.",
+          "anticipatedWireDateLabel": "Date de virement prévue"
         },
         "pledge_invoice": {
           "tab": "Engagement / Facture",
-          "body": "Après l'envoi de ce formulaire, notre équipe émettra une facture ou un accord d'engagement selon votre engagement de parrainage."
+          "body": "Soumettez ce formulaire comme un engagement et la Fondation émettra une facture formelle à votre organisation. Les engagements sont honorés dans les 30 jours suivant la date de début de la cohorte, sauf autre arrangement.",
+          "invoiceRecipientNameLabel": "Nom du destinataire de la facture",
+          "invoiceRecipientNamePlaceholder": "Contact comptes fournisseurs",
+          "invoiceEmailLabel": "E-mail de facturation",
+          "invoiceEmailPlaceholder": "ap@organisation.org",
+          "purchaseOrderNumberLabel": "Numéro de bon de commande",
+          "purchaseOrderNumberPlaceholder": "Facultatif",
+          "requestedPaymentDateLabel": "Date de paiement demandée",
+          "specialBillingInstructionsLabel": "Instructions de facturation spéciales",
+          "specialBillingInstructionsPlaceholder": "Toute exigence pour votre équipe comptes fournisseurs"
         }
       }
     },
@@ -1660,10 +1699,34 @@
       "body": "Votre formulaire a bien été soumis. Notre équipe examinera votre dossier et vous contactera pour les prochaines étapes de ce processus",
       "goBackHome": "Retour à l'accueil"
     },
+    "startModal": {
+      "title": "Formulaire d'engagement de parrainage DFREE®",
+      "close": "Fermer",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Votre parrainage élimine entièrement la barrière financière. Chaque dollar que vous donnez contribue directement à placer un leader communautaire dans le programme DFREE® Fellows sans frais pour lui — grâce à une bourse d'accès entièrement sponsorisée. Chaque cohorte de 8 semaines du Bottom-Up Leadership Institute (BLI) formera jusqu'à 20 fellows.",
+      "impactTitle": "Ce que fait votre parrainage :",
+      "impact": {
+        "one": {
+          "stat": "Un",
+          "label": "Fellow DFREE® entièrement financé"
+        },
+        "fiveTen": {
+          "stat": "Cinq - Dix",
+          "label": "Membres de la communauté formés par chaque Fellow"
+        },
+        "dozens": {
+          "stat": "Des dizaines",
+          "label": "Familles touchées par cycle de cohorte"
+        }
+      },
+      "start": "Commencer le parrainage"
+    },
     "errors": {
       "submitFailed": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans un instant.",
       "checkoutFailed": "Nous n'avons pas pu démarrer Stripe Checkout. Veuillez réessayer dans un instant.",
       "checkoutCancelled": "Le paiement a été annulé. Vos informations sont toujours là — choisissez à nouveau Carte de crédit et cliquez sur Payer quand vous êtes prêt.",
+      "checkoutConfirming": "Confirmation de votre paiement…",
+      "checkoutConfirmFailed": "Nous n'avons pas encore pu confirmer votre paiement. Si vous avez été débité, contactez-nous et nous réglerons cela.",
       "stripeNotConfigured": "Les paiements par carte ne sont pas encore disponibles. Veuillez choisir un autre mode de paiement ou réessayer plus tard."
     }
   }

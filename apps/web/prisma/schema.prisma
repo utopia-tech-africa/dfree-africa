@@ -121,8 +121,13 @@ model FormSubmission {
   payload               Json
   createdAt             DateTime  @default(now())
   acknowledgementSentAt DateTime?
+  /// pending | under_review | accepted | rejected | waitlisted
+  reviewStatus          String    @default("pending")
+  reviewedAt            DateTime?
+  reviewedBy            String?
 
   @@index([type, createdAt])
+  @@index([type, reviewStatus])
   @@map("form_submission")
 }
 

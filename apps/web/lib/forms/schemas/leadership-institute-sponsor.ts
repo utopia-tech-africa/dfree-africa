@@ -90,12 +90,13 @@ export const paymentMethodValues = [
 export type PaymentMethodValue = (typeof paymentMethodValues)[number];
 
 export const sponsorReferralSourceValues = [
-  "fellow_referral",
+  "fellow_or_alumni",
   "website",
+  "leadership",
+  "church_or_faith",
+  "nonprofit_network",
   "social_media",
-  "church",
-  "organization",
-  "academic",
+  "corporate_csr",
   "other",
 ] as const;
 
@@ -112,7 +113,7 @@ export const recognitionLogoAcceptedMimeTypes = [
 
 export const recognitionLogoMaxBytes = 20 * 1024 * 1024;
 
-export const leadershipInstituteSponsorSchema = z.object({
+export const leadershipInstituteSponsorObjectSchema = z.object({
   firstName: requiredText("First name"),
   lastName: requiredText("Last name"),
   email: emailField,
@@ -156,14 +157,55 @@ export const leadershipInstituteSponsorSchema = z.object({
     .max(100, "Check number must be 100 characters or fewer")
     .optional()
     .or(z.literal("")),
+  anticipatedWireDate: z.string().optional().or(z.literal("")),
+  invoiceRecipientName: z
+    .string()
+    .max(200, "Name must be 200 characters or fewer")
+    .optional()
+    .or(z.literal("")),
+  invoiceEmail: z.union([z.literal(""), emailField]),
+  purchaseOrderNumber: z
+    .string()
+    .max(100, "Purchase order number must be 100 characters or fewer")
+    .optional()
+    .or(z.literal("")),
+  requestedPaymentDate: z.string().optional().or(z.literal("")),
+  specialBillingInstructions: wordLimited(
+    150,
+    "Special billing instructions",
+    false,
+  ),
   referralSource: requiredSelect(
     sponsorReferralSourceValues,
     "How did you hear about us",
   ),
 });
 
+export const leadershipInstituteSponsorSchema =
+  leadershipInstituteSponsorObjectSchema.superRefine((data, ctx) => {
+    if (data.paymentMethod !== "pledge_invoice") {
+      return;
+    }
+
+    if (!data.invoiceRecipientName?.trim()) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Invoice recipient name is required",
+        path: ["invoiceRecipientName"],
+      });
+    }
+
+    if (!data.invoiceEmail?.trim()) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Invoice email is required",
+        path: ["invoiceEmail"],
+      });
+    }
+  });
+
 export type LeadershipInstituteSponsorValues = z.input<
-  typeof leadershipInstituteSponsorSchema
+  typeof leadershipInstituteSponsorObjectSchema
 >;
 
 export const defaultSponsorValues: LeadershipInstituteSponsorValues = {
@@ -189,5 +231,11 @@ export const defaultSponsorValues: LeadershipInstituteSponsorValues = {
   recognitionDisplayName: "",
   paymentMethod: "check_ach",
   checkNumber: "",
+  anticipatedWireDate: "",
+  invoiceRecipientName: "",
+  invoiceEmail: "",
+  purchaseOrderNumber: "",
+  requestedPaymentDate: "",
+  specialBillingInstructions: "",
   referralSource: "",
 };

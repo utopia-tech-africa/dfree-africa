@@ -1,5 +1,7 @@
+import { Download } from "lucide-react";
 import type { ReactNode } from "react";
 
+import { Button } from "@/components/ui/button";
 import { formatSponsorCohort } from "@/lib/fellowship-sponsors/format-cohort";
 import {
   formatPaymentAmountCents,
@@ -53,6 +55,38 @@ function DetailField({
   );
 }
 
+function RecognitionLogoField({
+  logo,
+}: {
+  logo: NonNullable<FellowshipSponsorPayload["recognitionLogo"]>;
+}) {
+  const dataUrl = `data:${logo.mimeType};base64,${logo.dataBase64}`;
+  const isImage = logo.mimeType.startsWith("image/");
+
+  return (
+    <div className="sm:col-span-2">
+      <dt className="text-sm font-medium text-neutral-600">Recognition logo</dt>
+      <dd className="mt-2 space-y-3">
+        <p className="text-neutral-1000">{logo.fileName}</p>
+        {isImage ? (
+          // eslint-disable-next-line @next/next/no-img-element -- admin preview of stored base64
+          <img
+            src={dataUrl}
+            alt={`Recognition logo: ${logo.fileName}`}
+            className="max-h-48 max-w-full rounded-md border border-neutral-200 bg-white object-contain p-2"
+          />
+        ) : null}
+        <Button asChild variant="outline" size="sm">
+          <a href={dataUrl} download={logo.fileName}>
+            <Download className="size-4" aria-hidden />
+            Download logo
+          </a>
+        </Button>
+      </dd>
+    </div>
+  );
+}
+
 export function SubmissionDetail({ payload }: SubmissionDetailProps) {
   return (
     <div className="space-y-8">
@@ -100,11 +134,7 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
           />
         ) : null}
         {payload.recognitionLogo ? (
-          <DetailField
-            label="Recognition logo"
-            value={payload.recognitionLogo.fileName}
-            className="sm:col-span-2"
-          />
+          <RecognitionLogoField logo={payload.recognitionLogo} />
         ) : null}
         <DetailField
           label="Payment method"
@@ -144,6 +174,40 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
         ) : null}
         {payload.checkNumber ? (
           <DetailField label="Check number" value={payload.checkNumber} />
+        ) : null}
+        {payload.anticipatedWireDate ? (
+          <DetailField
+            label="Anticipated wire date"
+            value={payload.anticipatedWireDate}
+          />
+        ) : null}
+        {payload.invoiceRecipientName ? (
+          <DetailField
+            label="Invoice recipient name"
+            value={payload.invoiceRecipientName}
+          />
+        ) : null}
+        {payload.invoiceEmail ? (
+          <DetailField label="Invoice email" value={payload.invoiceEmail} />
+        ) : null}
+        {payload.purchaseOrderNumber ? (
+          <DetailField
+            label="Purchase order number"
+            value={payload.purchaseOrderNumber}
+          />
+        ) : null}
+        {payload.requestedPaymentDate ? (
+          <DetailField
+            label="Requested payment date"
+            value={payload.requestedPaymentDate}
+          />
+        ) : null}
+        {payload.specialBillingInstructions ? (
+          <DetailField
+            label="Special billing instructions"
+            value={payload.specialBillingInstructions}
+            className="sm:col-span-2"
+          />
         ) : null}
         {payload.referralSource ? (
           <DetailField

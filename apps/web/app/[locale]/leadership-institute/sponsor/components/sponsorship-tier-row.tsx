@@ -1,8 +1,11 @@
 "use client";
 
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, useFormContext, useWatch } from "react-hook-form";
 
-import { TIER_FELLOW_COUNTS } from "@/lib/fellowship-sponsors/sponsorship-pricing";
+import {
+  getPresetTierForFellowCount,
+  TIER_FELLOW_COUNTS,
+} from "@/lib/fellowship-sponsors/sponsorship-pricing";
 import { FormFieldError } from "@/lib/forms/form-field-error";
 import type { LeadershipInstituteSponsorValues } from "@/lib/forms/schemas/leadership-institute-sponsor";
 import { presetSponsorshipTierValues } from "@/lib/forms/schemas/leadership-institute-sponsor";
@@ -15,6 +18,13 @@ export function SponsorshipTierRow() {
     setValue,
     formState: { errors, isSubmitting },
   } = useFormContext<LeadershipInstituteSponsorValues>();
+  const customFellowCount = useWatch({
+    control,
+    name: "customFellowCount",
+  });
+  const matchingTierFromCount = getPresetTierForFellowCount(
+    Number(customFellowCount) || 0,
+  );
 
   return (
     <div className="space-y-3">
@@ -27,19 +37,25 @@ export function SponsorshipTierRow() {
             aria-label="Sponsorship tier"
             className="grid grid-cols-1 gap-6 overflow-visible sm:grid-cols-2 xl:grid-cols-4"
           >
-            {presetSponsorshipTierValues.map((tier) => (
-              <SponsorshipTierCard
-                key={tier}
-                tier={tier}
-                isSelected={field.value === tier}
-                disabled={isSubmitting}
-                onSelect={() => {
-                  field.onChange(tier);
-                  setValue("customFellowCount", TIER_FELLOW_COUNTS[tier]);
-                }}
-                onBlur={field.onBlur}
-              />
-            ))}
+            {presetSponsorshipTierValues.map((tier) => {
+              const isSelected =
+                field.value === tier ||
+                (field.value === "custom" && matchingTierFromCount === tier);
+
+              return (
+                <SponsorshipTierCard
+                  key={tier}
+                  tier={tier}
+                  isSelected={isSelected}
+                  disabled={isSubmitting}
+                  onSelect={() => {
+                    field.onChange(tier);
+                    setValue("customFellowCount", TIER_FELLOW_COUNTS[tier]);
+                  }}
+                  onBlur={field.onBlur}
+                />
+              );
+            })}
           </div>
         )}
       />

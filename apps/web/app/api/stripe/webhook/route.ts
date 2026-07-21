@@ -91,7 +91,9 @@ async function handleCheckoutExpired(session: Stripe.Checkout.Session) {
     return;
   }
 
-  await markFellowshipSponsorCheckoutCancelled(submissionId);
+  await markFellowshipSponsorCheckoutCancelled(submissionId, {
+    bypassToken: true,
+  });
 }
 
 export async function POST(request: Request) {

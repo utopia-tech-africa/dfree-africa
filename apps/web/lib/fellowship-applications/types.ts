@@ -6,6 +6,8 @@ import {
   signatureAcceptedMimeTypes,
 } from "@/lib/forms/schemas/leadership-institute-application";
 
+import type { FellowshipApplicationReviewStatus } from "./review-status";
+
 export const legacyStoredSignatureSchema = z.object({
   fileName: z.string().min(1),
   mimeType: z.enum(signatureAcceptedMimeTypes),
@@ -53,4 +55,7 @@ export type FellowshipApplicationSummary = {
   email: string;
   cohortTerm: string;
   createdAt: Date;
+  acknowledgementSentAt: Date | null;
+  reviewStatus: FellowshipApplicationReviewStatus;
+  reviewedAt: Date | null;
 };

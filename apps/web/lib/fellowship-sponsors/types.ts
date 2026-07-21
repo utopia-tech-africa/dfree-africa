@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 import {
-  leadershipInstituteSponsorSchema,
+  leadershipInstituteSponsorObjectSchema,
   sponsorReferralSourceValues,
 } from "@/lib/forms/schemas/leadership-institute-sponsor";
 
@@ -27,14 +27,14 @@ export const sponsorPaymentSchema = z.object({
   currency: z.literal("usd"),
   stripeCheckoutSessionId: z.string().min(1).optional(),
   stripePaymentIntentId: z.string().min(1).optional(),
+  cancelToken: z.string().min(1).optional(),
   paidAt: z.string().min(1).optional(),
 });
 
 export type SponsorPaymentInfo = z.infer<typeof sponsorPaymentSchema>;
 
-export const fellowshipSponsorPayloadSchema = leadershipInstituteSponsorSchema
-  .omit({ referralSource: true })
-  .extend({
+export const fellowshipSponsorPayloadSchema =
+  leadershipInstituteSponsorObjectSchema.omit({ referralSource: true }).extend({
     recognitionLogo: storedRecognitionLogoSchema.optional(),
     payment: sponsorPaymentSchema.optional(),
     referralSource: z
@@ -54,5 +54,7 @@ export type FellowshipSponsorSummary = {
   organization: string;
   sponsorshipTier: string;
   customFellowCount: number;
+  paymentMethod: string;
+  paymentStatus: SponsorPaymentStatus | null;
   createdAt: Date;
 };

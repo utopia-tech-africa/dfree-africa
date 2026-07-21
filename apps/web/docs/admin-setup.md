@@ -1,6 +1,6 @@
 # Admin dashboard setup
 
-The admin area lives at `/admin` (locale-free). It uses **Better Auth**, **Prisma**, **Neon Postgres**, and **Resend** for invitation emails.
+The admin area lives at `/admin` (locale-free). It uses **Better Auth**, **Prisma**, **Neon Postgres**, and **Amazon SES** for invitation and form acknowledgement emails.
 
 ## 1. Environment variables
 
@@ -11,12 +11,23 @@ Copy `apps/web/.env.example` to `apps/web/.env.local` and set (Prisma CLI reads 
 | `DATABASE_URL`          | Neon **pooled** connection string (serverless)            |
 | `BETTER_AUTH_SECRET`    | `openssl rand -base64 32`                                 |
 | `BETTER_AUTH_URL`       | Site origin, e.g. `http://localhost:3000`                 |
-| `RESEND_API_KEY`        | From [resend.com](https://resend.com)                     |
-| `EMAIL_FROM`            | Verified sender domain in Resend                          |
+| `AWS_REGION`            | SES region, e.g. `us-east-1` (or set `SES_AWS_REGION`)    |
+| `AWS_ACCESS_KEY_ID`     | IAM user/key with `ses:SendEmail` (optional on AWS hosts) |
+| `AWS_SECRET_ACCESS_KEY` | Matching secret key (optional on AWS hosts with IAM role) |
+| `EMAIL_FROM`            | Verified SES sender identity / domain address             |
 | `STRIPE_SECRET_KEY`     | Stripe Dashboard → Developers → API keys                  |
 | `STRIPE_WEBHOOK_SECRET` | Stripe webhook signing secret for `/api/stripe/webhook`   |
 | `NEXT_PUBLIC_SITE_URL`  | Canonical site origin used for Stripe success/cancel URLs |
 | `BOOTSTRAP_*`           | Only for the one-time seed script                         |
+
+### Amazon SES (transactional email)
+
+1. In AWS SES, verify the domain (or email) used for `EMAIL_FROM`.
+2. If the account is still in the SES sandbox, verify recipient addresses too (or request production access).
+3. Create an IAM user/role with `ses:SendEmail` / `ses:SendRawEmail` on the verified identity.
+4. Set `AWS_REGION`, credentials (local/dev), and `EMAIL_FROM` in `.env.local` / hosting env.
+
+Invitations and form acknowledgements both send through `lib/email/send-email.ts`.
 
 ### Stripe (Leadership Institute sponsorship credit card)
 
@@ -64,37 +75,18 @@ In **production**, public sign-up is disabled (`disableSignUp`). Create addition
 
 Add the same env vars to the `web` project. Set `BETTER_AUTH_URL` to your production URL. Ensure `postinstall` / build runs `prisma generate` (configured in `package.json`).
 
-## 6. Form submissions (planned)
+## 6. Form submissions
 
-Public forms (contact, fellowship application, fellowship sponsor) are not wired to the database yet. When they are, use this flow:
+Fellowship **application** and **sponsorship** forms are wired end-to-end:
 
-1. **Validate** input (e.g. Zod) in a route handler or server action.
-2. **Persist** a `FormSubmission` row (future Prisma model), for example:
+1. **Validate** input with Zod in the API route handlers.
+2. **Persist** a `FormSubmission` row (`type`: `fellowship-application` | `fellowship-sponsor`).
+3. **Auto-reply** via `sendFormAcknowledgement` → Amazon SES (`lib/email/send-email.ts`).
+4. **Set** `acknowledgementSentAt` after a successful send (idempotent for retries / Stripe webhooks).
 
-   ```prisma
-   model FormSubmission {
-     id                   String   @id @default(cuid())
-     type                 String   // contact | fellowship-application | fellowship-sponsor
-     payload              Json
-     createdAt            DateTime @default(now())
-     acknowledgementSentAt DateTime?
-   }
-   ```
+Admin list/detail pages live under:
 
-3. **Auto-reply** via `sendFormAcknowledgement` in `lib/email/send-form-acknowledgement.ts` (copy in `lib/email/form-acknowledgement-copy.ts`). Uses the same `RESEND_API_KEY` and `EMAIL_FROM` as invitations.
-4. **Set** `acknowledgementSentAt` after a successful send so webhook retries stay idempotent (skip send if already set).
+- `/admin/fellowship-applications` — search/filter, review status workflow (`pending` → `under_review` → `accepted` / `rejected` / `waitlisted`), CSV export
+- `/admin/fellowship-sponsors` — search/filter by payment status; logo preview/download; Stripe payment badges
 
-Example (future API route):
-
-```ts
-import { sendFormAcknowledgement } from "@/lib/email/send-form-acknowledgement";
-
-const { sent } = await sendFormAcknowledgement({
-  to: email,
-  formType: "fellowship-application",
-  submitterName: name,
-});
-// if (sent) await prisma.formSubmission.update({ acknowledgementSentAt: new Date() })
-```
-
-Admin list pages and dashboard metrics will read from `FormSubmission` once the public forms POST to your API.
+Edit acknowledgement email copy under **Auto-responses** (`/admin/auto-responses`).

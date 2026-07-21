@@ -8,7 +8,7 @@ import {
 import { getFellowshipSponsorSummaries } from "@/lib/fellowship-sponsors/get-submissions";
 
 import { FellowshipSponsorsEmptyState } from "./fellowship-sponsors-empty-state";
-import { SubmissionsTable } from "./submissions-table";
+import { SubmissionsBrowser } from "./submissions-browser";
 
 export default async function FellowshipSponsorsPage() {
   const submissions = await getFellowshipSponsorSummaries();
@@ -35,7 +35,7 @@ export default async function FellowshipSponsorsPage() {
         </CardHeader>
         <CardContent className={submissions.length ? "p-0" : undefined}>
           {submissions.length ? (
-            <SubmissionsTable submissions={submissions} />
+            <SubmissionsBrowser submissions={submissions} />
           ) : (
             <FellowshipSponsorsEmptyState />
           )}

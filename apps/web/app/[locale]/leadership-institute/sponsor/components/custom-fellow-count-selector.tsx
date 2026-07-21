@@ -9,9 +9,9 @@ import {
   FELLOW_UNIT_PRICE,
   formatSponsorshipCurrency,
   getFellowCount,
+  getPresetTierForFellowCount,
   getSponsorshipTotal,
   MAX_CUSTOM_FELLOW_COUNT,
-  TIER_FELLOW_COUNTS,
 } from "@/lib/fellowship-sponsors/sponsorship-pricing";
 import type { LeadershipInstituteSponsorValues } from "@/lib/forms/schemas/leadership-institute-sponsor";
 import {
@@ -114,12 +114,12 @@ export function CustomFellowCountSelector() {
       MAX_CUSTOM_FELLOW_COUNT,
       Math.max(MIN_FELLOW_COUNT, fellowCount + delta),
     );
+    const matchingTier = getPresetTierForFellowCount(nextCount);
+
     setValue("customFellowCount", nextCount, { shouldValidate: true });
-    setValue(
-      "sponsorshipTier",
-      nextCount === TIER_FELLOW_COUNTS.community ? "community" : "custom",
-      { shouldValidate: true },
-    );
+    setValue("sponsorshipTier", matchingTier ?? "custom", {
+      shouldValidate: true,
+    });
   };
 
   return (

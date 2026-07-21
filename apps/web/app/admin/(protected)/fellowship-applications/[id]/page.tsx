@@ -12,7 +12,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { getFellowshipApplicationById } from "@/lib/fellowship-applications/get-submissions";
+import { FELLOWSHIP_APPLICATION_REVIEW_STATUS_LABELS } from "@/lib/fellowship-applications/review-status";
 
+import { ReviewStatusControl } from "./review-status-control";
 import { SubmissionDetail } from "./submission-detail";
 
 type FellowshipApplicationDetailPageProps = {
@@ -34,6 +36,21 @@ function formatCohortTerm(cohortTerm: string) {
   }
 
   return cohortTerm;
+}
+
+function reviewBadgeClassName(status: string) {
+  switch (status) {
+    case "accepted":
+      return "bg-emerald-100 text-emerald-800";
+    case "rejected":
+      return "bg-red-100 text-red-800";
+    case "waitlisted":
+      return "bg-violet-100 text-violet-800";
+    case "under_review":
+      return "bg-sky-100 text-sky-800";
+    default:
+      return "bg-amber-50 text-amber-700 ring-1 ring-amber-200";
+  }
 }
 
 export default async function FellowshipApplicationDetailPage({
@@ -68,6 +85,16 @@ export default async function FellowshipApplicationDetailPage({
           </h1>
           <p className="text-neutral-800">{submission.payload.email}</p>
           <div className="flex flex-wrap items-center gap-2">
+            <Badge
+              variant="secondary"
+              className={reviewBadgeClassName(submission.reviewStatus)}
+            >
+              {
+                FELLOWSHIP_APPLICATION_REVIEW_STATUS_LABELS[
+                  submission.reviewStatus
+                ]
+              }
+            </Badge>
             <Badge variant="default">
               {formatCohortTerm(submission.payload.cohortTerm)}
             </Badge>
@@ -84,6 +111,14 @@ export default async function FellowshipApplicationDetailPage({
           </div>
         </div>
       </div>
+
+      <ReviewStatusControl
+        applicationId={submission.id}
+        initialStatus={submission.reviewStatus}
+        reviewedAt={
+          submission.reviewedAt ? submission.reviewedAt.toISOString() : null
+        }
+      />
 
       <Card className="transition-shadow hover:shadow-md">
         <CardHeader>

@@ -20,6 +20,8 @@ function toSummary(
     organization: payload.organization,
     sponsorshipTier: payload.sponsorshipTier,
     customFellowCount: payload.customFellowCount,
+    paymentMethod: payload.paymentMethod,
+    paymentStatus: payload.payment?.status ?? null,
     createdAt,
   };
 }
