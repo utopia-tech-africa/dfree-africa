@@ -29,19 +29,12 @@ export function buildZeffyEmbedUrl(
 }
 
 /**
- * Checkout URL for the donation modal iframe.
- * Amount prefill only works on the public campaign URL — Zeffy drops `Amount`
- * from `/embed/` routes server-side.
+ * Checkout URL for modal iframes. Always uses Zeffy's `/embed/` route because the
+ * public campaign page is blocked by X-Frame-Options when framed.
  */
 export function buildZeffyCheckoutUrl(
   campaignUrl: string,
   options: BuildZeffyDonationUrlOptions = {},
 ): string {
-  const { amount } = options;
-
-  if (amount != null && amount > 0) {
-    return buildZeffyDonationUrl(campaignUrl, { amount });
-  }
-
-  return buildZeffyEmbedUrl(campaignUrl);
+  return buildZeffyEmbedUrl(campaignUrl, options);
 }

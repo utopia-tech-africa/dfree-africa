@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ZeffyDonationModal } from "@/components/zeffy/zeffy-donation-modal";
 import { buildZeffyCheckoutUrl } from "@/lib/zeffy/build-donation-url";
@@ -40,24 +40,43 @@ export function DonationForm() {
       ? Number.parseFloat(customAmount)
       : selectedAmount;
 
-  const handleContinue = () => {
-    if (!Number.isFinite(resolvedAmount) || resolvedAmount <= 0) {
+  const openCheckout = (amount: number) => {
+    if (!Number.isFinite(amount) || amount <= 0) {
       setAmountError("Enter a valid donation amount to continue.");
       return;
     }
 
-    const amount = Math.round(resolvedAmount);
-    const url = buildZeffyCheckoutUrl(ZEFFY_GENERAL_DONATION_URL, { amount });
+    const roundedAmount = Math.round(amount);
+    const url = buildZeffyCheckoutUrl(ZEFFY_GENERAL_DONATION_URL, {
+      amount: roundedAmount,
+    });
 
     setAmountError(null);
-    setCheckout({ amount, url });
+    setCheckout({ amount: roundedAmount, url });
     setIsModalOpen(true);
+  };
+
+  const handleContinue = () => {
+    openCheckout(resolvedAmount);
+  };
+
+  const handlePresetAmountClick = (amount: number) => {
+    setSelectedAmount(amount);
+    openCheckout(amount);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setCheckout(null);
   };
+
+  const modalTitle = useMemo(() => {
+    if (!checkout) {
+      return "Complete your donation";
+    }
+
+    return `Complete your ${formatSelectedAmount(checkout.amount)} donation`;
+  }, [checkout]);
 
   return (
     <>
@@ -98,10 +117,7 @@ export function DonationForm() {
               <button
                 key={amount}
                 type="button"
-                onClick={() => {
-                  setSelectedAmount(amount);
-                  setAmountError(null);
-                }}
+                onClick={() => handlePresetAmountClick(amount)}
                 className={cn(
                   "relative cursor-pointer rounded-xl border px-3 py-4 text-base font-semibold transition-colors md:text-lg",
                   isSelected
@@ -188,7 +204,8 @@ export function DonationForm() {
           isOpen={isModalOpen}
           onClose={handleCloseModal}
           checkoutUrl={checkout.url}
-          title={`Complete your ${formatSelectedAmount(checkout.amount)} donation`}
+          title={modalTitle}
+          amountLabel={`Selected amount: ${formatSelectedAmount(checkout.amount)}`}
         />
       ) : null}
     </>

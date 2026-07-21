@@ -3,6 +3,7 @@ export const LEADERSHIP_INSTITUTE_APPLICATION_STEPS = [
   "communityImpact",
   "deploymentVision",
   "reviewSubmit",
+  "review",
 ] as const;
 
 export type LeadershipInstituteApplicationStepKey =
@@ -15,7 +16,8 @@ export const LEADERSHIP_INSTITUTE_APPLICATION_STEP_LABELS: Record<
   aboutYou: "About You & Your Work",
   communityImpact: "Community Impact",
   deploymentVision: "Deployment Vision",
-  reviewSubmit: "Review & Submit",
+  reviewSubmit: "References & Commitment",
+  review: "Review",
 };
 
 export function getLeadershipInstituteApplicationStepKey(step: number) {

@@ -26,7 +26,7 @@ function AdminNavLink({
   if (item.disabled) {
     return (
       <span
-        className="cursor-not-allowed rounded-lg px-3 py-2 text-sm text-neutral-500"
+        className="block w-full cursor-not-allowed rounded-lg px-3 py-2 text-sm text-neutral-500"
         title="Coming soon"
       >
         {item.label}
@@ -38,7 +38,7 @@ function AdminNavLink({
     <Link
       href={item.href}
       className={cn(
-        "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+        "block w-full rounded-lg px-3 py-2 text-sm font-medium transition-colors",
         isActive
           ? "bg-primary-500 text-white"
           : "text-neutral-900 hover:bg-neutral-200",

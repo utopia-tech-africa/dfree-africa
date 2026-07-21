@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import { useRouter } from "@/i18n/navigation";
+
+const SCHOLARSHIP_SUCCESS_GIF = "/gif/scholarship-success-gif.mp4";
 
 type ApplicationSuccessModalProps = {
   onGoHome?: () => void;
@@ -37,20 +38,20 @@ export function ApplicationSuccessModal({
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-3 sm:p-4"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 p-3 sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="application-success-title"
     >
       <div className="flex max-h-[90vh] w-full max-w-[833px] flex-col items-center gap-5 overflow-y-auto rounded-[20px] border border-secondary-300/20 bg-white px-4 pb-5 pt-10 shadow-xl sm:gap-8 sm:pb-6 sm:pt-16 md:gap-[33px] md:px-0 md:pb-6 md:pt-28">
-        <div className="relative size-28 shrink-0 sm:size-36 md:size-[181px] md:h-[184px]">
-          <Image
-            src="/images/leadership-institute/application-success.png"
-            alt=""
-            fill
-            className="object-contain"
-            sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 181px"
-            priority
+        <div className="relative size-28 shrink-0 overflow-hidden sm:size-36 md:size-[181px] md:h-[184px]">
+          <video
+            src={SCHOLARSHIP_SUCCESS_GIF}
+            autoPlay
+            muted
+            playsInline
+            aria-hidden
+            className="size-full object-contain"
           />
         </div>
 

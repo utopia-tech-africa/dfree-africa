@@ -35,9 +35,22 @@ export const sponsorStep2Fields = [
   "publicStatementSharing",
 ] as const satisfies ReadonlyArray<keyof LeadershipInstituteSponsorValues>;
 
-export const sponsorStep3Fields = ["message"] as const satisfies ReadonlyArray<
-  keyof LeadershipInstituteSponsorValues
->;
+export const sponsorStep3Fields = [
+  "recognitionPreferences",
+  "recognitionDisplayName",
+  "paymentMethod",
+  "checkNumber",
+  "anticipatedWireDate",
+  "invoiceRecipientName",
+  "invoiceEmail",
+  "purchaseOrderNumber",
+  "requestedPaymentDate",
+  "specialBillingInstructions",
+] as const satisfies ReadonlyArray<keyof LeadershipInstituteSponsorValues>;
+
+export const sponsorCertificationFields = [
+  "referralSource",
+] as const satisfies ReadonlyArray<keyof LeadershipInstituteSponsorValues>;
 
 export const sponsorStepFieldMap = [
   sponsorStep1Fields,

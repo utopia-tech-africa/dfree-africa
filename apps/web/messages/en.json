@@ -280,8 +280,8 @@
     },
     "whoWeAre": {
       "title": "Who we are",
-      "introHighlight": "DFREE Global Foundation, Inc.",
-      "introRest": " is a tax exempt, 501C3 organization advancing financial wellness, economic empowerment, and self-sufficiency in underserved communities by delivering free, community-centered initiatives that help families build lasting financial confidence and freedom.",
+      "introHighlight": "DFREE® Global Foundation, Inc.",
+      "introRest": " is a tax exempt, 501(c)(3) organization advancing financial wellness, economic empowerment, and self-sufficiency in underserved communities by delivering free, community-centered initiatives that help families build lasting financial confidence and freedom.",
       "missionTitle": "Mission",
       "mission": "The DFREE® Global Foundation ensures that financial freedom is not a privilege. By subsidizing access to DFREE's proven tools and curriculum - and through signature initiatives including FinFe$t, community campaigns, the Billion Dollar Challenge, the BottomUp Leadership Institute, and community development projects in Africa - the Foundation brings the resources of the DFREE® movement within reach of every family, regardless of income.",
       "visionTitle": "Vision",
@@ -1170,7 +1170,8 @@
       "aboutYou": "About You & Your Work",
       "communityImpact": "Community Impact",
       "deploymentVision": "Deployment Vision",
-      "reviewSubmit": "Review & Submit"
+      "reviewSubmit": "References & Commitment",
+      "review": "Review"
     },
     "actions": {
       "saveExit": "Save & exit",
@@ -1185,6 +1186,27 @@
     },
     "errors": {
       "submitFailed": "We couldn't submit your application. Please try again in a moment."
+    },
+    "startModal": {
+      "title": "DFREE® Fellowship Application",
+      "close": "Close",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Apply to join the next cohort of the Bottom-Up Leadership Institute. Fellows are selected through a competitive process and receive a full access scholarship. Program costs are absorbed by sponsors on behalf of each Fellow.",
+      "benefitsTitle": "What You'll Receive",
+      "benefits": {
+        "scholarship": "Full Access Scholarship",
+        "training": "Leadership training",
+        "deployment": "Community deployment support",
+        "alumni": "National alumni network",
+        "capstone": "Capstone project guidance"
+      },
+      "beforeYouBeginTitle": "Before You Begin",
+      "beforeYouBegin": {
+        "duration": "- Application takes about 15–20 minutes",
+        "saveContinue": "- You can save and continue later",
+        "noFee": "- No application fee"
+      },
+      "start": "Start application"
     },
     "certificationModal": {
       "title": "Commitment and Certification",
@@ -1312,7 +1334,7 @@
         "whoToTrain": "Who would you like to train?",
         "peopleToReach": "Approximately how many people would you like to reach?",
         "setting": "What setting would you use?",
-        "participationHistory": "Have you led or participated in financial literacy, wealth-building, or economic empowerment programs?",
+        "participationHistory": "How long do you plan to run this training project?",
         "successMetrics": "How would you measure success?",
         "projectVision": "Briefly describe your project vision."
       },
@@ -1394,6 +1416,11 @@
           "other": "Other"
         }
       }
+    },
+    "step5": {
+      "title": "Review your application",
+      "subtitle": "Confirm your answers below. You can edit any section before submitting.",
+      "edit": "Edit"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1510,7 +1537,33 @@
     "actions": {
       "back": "Back",
       "continue": "Continue",
-      "submit": "Submit sponsorship inquiry"
+      "submit": "Submit sponsorship inquiry",
+      "payWithStripe": "Pay {amount} with Stripe"
+    },
+    "certificationModal": {
+      "title": "Certification",
+      "close": "Close",
+      "submit": "Submit sponsorship form",
+      "authorization": {
+        "title": "Sponsor authorization & submission",
+        "body": "By submitting this form, I confirm that the information provided is accurate and that I am authorized to commit the stated funds on behalf of my organization. I understand that my contribution to DFREE Global Foundation, Inc. is tax-deductible to the extent permitted by law, and that a formal gift acknowledgment letter will be provided. I understand the DFREE Foundation will apply my gift to the Fellow Access Scholarship Fund for the cohort term(s) I have selected, and that my recognition preferences will be honored as described."
+      },
+      "fields": {
+        "referralSource": "How did you hear about us?",
+        "referralSourcePlaceholder": "Select one"
+      },
+      "options": {
+        "referralSource": {
+          "fellow_or_alumni": "DFREE® Fellow or alumni",
+          "website": "DFREE Foundation website",
+          "leadership": "Dr. DeForest Soaries / DFREE leadership",
+          "church_or_faith": "Church or faith network",
+          "nonprofit_network": "Nonprofit / foundation network",
+          "social_media": "Social media",
+          "corporate_csr": "Corporate giving / CSR team",
+          "other": "Other"
+        }
+      }
     },
     "step1": {
       "title": "Sponsorship Details",
@@ -1557,28 +1610,124 @@
     },
     "step3": {
       "title": "Recognition & Payment",
-      "subtitle": "Review your sponsorship details and tell us how you would like to be recognized.",
-      "recognitionTitle": "Sponsor recognition",
-      "recognitionDescription": "DFREE® sponsors are recognized across our website, program materials, and annual impact reports. Our team will confirm your preferred recognition level after submission.",
+      "subtitle": "Select how you'd like to be recognized and choose your preferred payment method.",
+      "recognitionTitle": "How would you like to be recognized?",
+      "recognitionMaterialsTitle": "Name or Logo to appear on recognition materials",
+      "recognitionDisplayNameLabel": "Name",
+      "recognitionDisplayNamePlaceholder": "Enter the name to display",
+      "recognitionOptions": {
+        "cohort_program_listing": {
+          "title": "Cohort Program Listing",
+          "description": "Named in the official cohort program booklet given to all Fellows and guests."
+        },
+        "website_recognition": {
+          "title": "Website Recognition",
+          "description": "Listed as a sponsor on the DFREE Foundation website during the cohort term."
+        },
+        "social_media_spotlight": {
+          "title": "Social Media Spotlight",
+          "description": "Featured in a DFREE Foundation sponsor spotlight post across our social channels."
+        },
+        "annual_impact_report": {
+          "title": "Annual Impact Report",
+          "description": "Named in the DFREE Foundation annual impact report with Fellow outcome data."
+        },
+        "orientation_invitation": {
+          "title": "Orientation Invitation",
+          "description": "Invited to attend the cohort orientation event (in-person or virtual)."
+        },
+        "capstone_showcase_invitation": {
+          "title": "Capstone Showcase Invitation",
+          "description": "Invited to the Capstone Community Deployment Showcase at program close."
+        },
+        "fellow_introduction": {
+          "title": "Fellow Introduction",
+          "description": "Introduced (with Fellow's permission) to the Fellow(s) your scholarship funds."
+        },
+        "logo_placement": {
+          "title": "Logo Placement",
+          "description": "Organization logo on cohort materials (Champion tier and above)."
+        }
+      },
+      "logoUpload": {
+        "label": "Logo (optional)",
+        "dropzonePrefix": "Drop your files here or",
+        "browse": "browse",
+        "maxSize": "Maximum size: 20MB",
+        "errors": {
+          "tooLarge": "Logo file must be 20MB or smaller.",
+          "invalidType": "Upload a PNG, JPG, WEBP, SVG, or PDF file."
+        }
+      },
       "paymentTitle": "Payment",
-      "paymentDescription": "After you submit this form, a member of our team will contact you with payment instructions and partnership next steps.",
-      "summaryTitle": "Sponsorship summary",
-      "summaryTier": "Selected tier",
-      "summaryAmount": "Amount",
-      "summaryFellows": "Fellows funded",
-      "summaryTierDescription": "Benefits",
-      "summaryNamedTitle": "Named scholarship / cohort title",
-      "summaryCohort": "Selected cohort",
-      "summaryCohortNotes": "Cohort assignment notes",
-      "summaryContact": "Primary contact"
+      "paymentMethods": {
+        "check_ach": {
+          "tab": "Check/ACH",
+          "instructions": "Make checks payable to DFREE Global Foundation, Inc. — Memo: Fellow Access Scholarship Fund. For ACH/electronic transfer, contact the Foundation for banking details after submitting this form.",
+          "mailToLabel": "Mail to",
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Robert Finely\nSuite 2\nSomerset, NJ 08773",
+          "checkNumberLabel": "Check number",
+          "checkNumberOptional": "(if already written)"
+        },
+        "credit_card": {
+          "tab": "Credit Card",
+          "body": "You'll be redirected to Stripe Checkout to pay {amount} securely by credit card. The amount is locked to your selected sponsorship tier.",
+          "lockedAmountNote": "The payment amount cannot be changed at checkout — it matches the sponsorship level you chose."
+        },
+        "wire_transfer": {
+          "tab": "Wire Transfer",
+          "body": "Wire banking details will be provided within 2 business days of form submission. Please submit this form first and a Foundation representative will follow up with routing and account information.",
+          "anticipatedWireDateLabel": "Anticipated wire date"
+        },
+        "pledge_invoice": {
+          "tab": "Pledge / Invoice",
+          "body": "Submit this form as a pledge and the Foundation will issue a formal invoice to your organization. Pledges are fulfilled within 30 days of the cohort start date unless otherwise arranged.",
+          "invoiceRecipientNameLabel": "Invoice recipient name",
+          "invoiceRecipientNamePlaceholder": "Accounts payable contact",
+          "invoiceEmailLabel": "Invoice email",
+          "invoiceEmailPlaceholder": "ap@organization.org",
+          "purchaseOrderNumberLabel": "Purchase order number",
+          "purchaseOrderNumberPlaceholder": "Optional",
+          "requestedPaymentDateLabel": "Requested payment date",
+          "specialBillingInstructionsLabel": "Special billing instructions",
+          "specialBillingInstructionsPlaceholder": "Any requirements for your accounts payable team"
+        }
+      }
     },
     "success": {
-      "title": "Thank you for your interest!",
-      "body": "Your sponsorship inquiry was submitted successfully. Our team will review your submission and contact you with next steps.",
-      "goBack": "Back to Leadership Institute"
+      "title": "Submission successful!",
+      "body": "Your form was successfully submitted, our team will review your submission and contact you on next steps of this process",
+      "goBackHome": "Go back home"
+    },
+    "startModal": {
+      "title": "DFREE® Sponsor Commitment Form",
+      "close": "Close",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Your sponsorship removes the financial barrier entirely. Every dollar you give goes directly toward placing a community leader into the DFREE® Fellows program at no cost to them — through a fully sponsored access scholarship. Each 8-week cohort of the Bottom-Up Leadership Institute (BLI) will train up to 20 fellows.",
+      "impactTitle": "What your sponsorship does:",
+      "impact": {
+        "one": {
+          "stat": "One",
+          "label": "DFREE® Fellow fully funded"
+        },
+        "fiveTen": {
+          "stat": "Five - Ten",
+          "label": "Community members trained by each Fellow"
+        },
+        "dozens": {
+          "stat": "Dozens",
+          "label": "Families reached per cohort cycle"
+        }
+      },
+      "start": "Start sponsorship"
     },
     "errors": {
-      "submitFailed": "We couldn't submit your inquiry. Please try again in a moment."
+      "submitFailed": "We couldn't submit your inquiry. Please try again in a moment.",
+      "checkoutFailed": "We couldn't start Stripe Checkout. Please try again in a moment.",
+      "checkoutCancelled": "Checkout was cancelled. Your details are still here — choose Credit Card again and click Pay when you're ready.",
+      "checkoutConfirming": "Confirming your payment…",
+      "checkoutConfirmFailed": "We couldn't confirm your payment yet. If you were charged, please contact us and we'll sort it out.",
+      "stripeNotConfigured": "Card payments aren't available yet. Please choose another payment method or try again later."
     }
   }
 }

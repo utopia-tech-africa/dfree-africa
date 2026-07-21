@@ -1,6 +1,15 @@
+import { Download } from "lucide-react";
 import type { ReactNode } from "react";
 
+import { Button } from "@/components/ui/button";
 import { formatSponsorCohort } from "@/lib/fellowship-sponsors/format-cohort";
+import {
+  formatPaymentAmountCents,
+  formatPaymentMethod,
+  formatPaymentStatus,
+} from "@/lib/fellowship-sponsors/format-payment-method";
+import { formatRecognitionPreferences } from "@/lib/fellowship-sponsors/format-recognition";
+import { formatSponsorReferralSource } from "@/lib/fellowship-sponsors/format-referral-source";
 import {
   formatPublicStatementSharing,
   formatSponsorType,
@@ -46,6 +55,38 @@ function DetailField({
   );
 }
 
+function RecognitionLogoField({
+  logo,
+}: {
+  logo: NonNullable<FellowshipSponsorPayload["recognitionLogo"]>;
+}) {
+  const dataUrl = `data:${logo.mimeType};base64,${logo.dataBase64}`;
+  const isImage = logo.mimeType.startsWith("image/");
+
+  return (
+    <div className="sm:col-span-2">
+      <dt className="text-sm font-medium text-neutral-600">Recognition logo</dt>
+      <dd className="mt-2 space-y-3">
+        <p className="text-neutral-1000">{logo.fileName}</p>
+        {isImage ? (
+          // eslint-disable-next-line @next/next/no-img-element -- admin preview of stored base64
+          <img
+            src={dataUrl}
+            alt={`Recognition logo: ${logo.fileName}`}
+            className="max-h-48 max-w-full rounded-md border border-neutral-200 bg-white object-contain p-2"
+          />
+        ) : null}
+        <Button asChild variant="outline" size="sm">
+          <a href={dataUrl} download={logo.fileName}>
+            <Download className="size-4" aria-hidden />
+            Download logo
+          </a>
+        </Button>
+      </dd>
+    </div>
+  );
+}
+
 export function SubmissionDetail({ payload }: SubmissionDetailProps) {
   return (
     <div className="space-y-8">
@@ -77,10 +118,101 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
             className="sm:col-span-2"
           />
         ) : null}
-        {payload.message ? (
+      </DetailSection>
+
+      <DetailSection title="Recognition & payment">
+        <DetailField
+          label="Recognition preferences"
+          value={formatRecognitionPreferences(payload.recognitionPreferences)}
+          className="sm:col-span-2"
+        />
+        {payload.recognitionDisplayName ? (
           <DetailField
-            label="Message"
-            value={payload.message}
+            label="Name on recognition materials"
+            value={payload.recognitionDisplayName}
+            className="sm:col-span-2"
+          />
+        ) : null}
+        {payload.recognitionLogo ? (
+          <RecognitionLogoField logo={payload.recognitionLogo} />
+        ) : null}
+        <DetailField
+          label="Payment method"
+          value={formatPaymentMethod(payload.paymentMethod)}
+        />
+        {payload.payment ? (
+          <>
+            <DetailField
+              label="Payment status"
+              value={formatPaymentStatus(payload.payment.status)}
+            />
+            <DetailField
+              label="Amount"
+              value={formatPaymentAmountCents(payload.payment.amountCents)}
+            />
+            {payload.payment.stripeCheckoutSessionId ? (
+              <DetailField
+                label="Stripe checkout session"
+                value={payload.payment.stripeCheckoutSessionId}
+                className="sm:col-span-2"
+              />
+            ) : null}
+            {payload.payment.stripePaymentIntentId ? (
+              <DetailField
+                label="Stripe payment intent"
+                value={payload.payment.stripePaymentIntentId}
+                className="sm:col-span-2"
+              />
+            ) : null}
+            {payload.payment.paidAt ? (
+              <DetailField
+                label="Paid at"
+                value={new Date(payload.payment.paidAt).toLocaleString()}
+              />
+            ) : null}
+          </>
+        ) : null}
+        {payload.checkNumber ? (
+          <DetailField label="Check number" value={payload.checkNumber} />
+        ) : null}
+        {payload.anticipatedWireDate ? (
+          <DetailField
+            label="Anticipated wire date"
+            value={payload.anticipatedWireDate}
+          />
+        ) : null}
+        {payload.invoiceRecipientName ? (
+          <DetailField
+            label="Invoice recipient name"
+            value={payload.invoiceRecipientName}
+          />
+        ) : null}
+        {payload.invoiceEmail ? (
+          <DetailField label="Invoice email" value={payload.invoiceEmail} />
+        ) : null}
+        {payload.purchaseOrderNumber ? (
+          <DetailField
+            label="Purchase order number"
+            value={payload.purchaseOrderNumber}
+          />
+        ) : null}
+        {payload.requestedPaymentDate ? (
+          <DetailField
+            label="Requested payment date"
+            value={payload.requestedPaymentDate}
+          />
+        ) : null}
+        {payload.specialBillingInstructions ? (
+          <DetailField
+            label="Special billing instructions"
+            value={payload.specialBillingInstructions}
+            className="sm:col-span-2"
+          />
+        ) : null}
+        {payload.referralSource ? (
+          <DetailField
+            label="How did you hear about us"
+            value={formatSponsorReferralSource(payload.referralSource)}
             className="sm:col-span-2"
           />
         ) : null}

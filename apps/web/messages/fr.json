@@ -280,8 +280,8 @@
     },
     "whoWeAre": {
       "title": "Qui nous sommes",
-      "introHighlight": "DFREE Global Foundation, Inc.",
-      "introRest": " est une organisation exonérée d'impôt, de type 501C3, qui promeut le bien-être financier, l'autonomisation économique et l'autonomie dans les communautés mal desservies en proposant des initiatives gratuites et axées sur la communauté qui aident les familles à acquérir une confiance et une liberté financières durables.",
+      "introHighlight": "DFREE® Global Foundation, Inc.",
+      "introRest": " est une organisation exonérée d'impôt, de type 501(c)(3), qui promeut le bien-être financier, l'autonomisation économique et l'autonomie dans les communautés mal desservies en proposant des initiatives gratuites et axées sur la communauté qui aident les familles à acquérir une confiance et une liberté financières durables.",
       "missionTitle": "Mission",
       "mission": "La Fondation mondiale DFREE® veille à ce que la liberté financière ne soit pas un privilège. En subventionnant l’accès aux outils et au programme éprouvés de DFREE — et à travers des initiatives phares telles que FinFe$t, des campagnes communautaires, le Billion Dollar Challenge, l’Institut de leadership ascendant, ainsi que des projets de développement communautaire en Afrique — la Fondation rend les ressources du mouvement DFREE® accessibles à chaque famille, quel que soit son revenu.",
       "visionTitle": "Vision",
@@ -1170,7 +1170,8 @@
       "aboutYou": "À propos de vous et de votre travail",
       "communityImpact": "Impact communautaire",
       "deploymentVision": "Vision de déploiement",
-      "reviewSubmit": "Révision et soumission"
+      "reviewSubmit": "Références et engagement",
+      "review": "Revue"
     },
     "actions": {
       "saveExit": "Enregistrer et quitter",
@@ -1185,6 +1186,27 @@
     },
     "errors": {
       "submitFailed": "Nous n'avons pas pu soumettre votre candidature. Veuillez réessayer dans un instant."
+    },
+    "startModal": {
+      "title": "Candidature Fellowship DFREE®",
+      "close": "Fermer",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Postulez pour rejoindre la prochaine cohorte du Bottom-Up Leadership Institute. Les Fellows sont sélectionnés via un processus compétitif et reçoivent une bourse d'accès complet. Les coûts du programme sont pris en charge par des sponsors pour chaque Fellow.",
+      "benefitsTitle": "Ce que vous recevrez",
+      "benefits": {
+        "scholarship": "Bourse d'accès complet",
+        "training": "Formation au leadership",
+        "deployment": "Soutien au déploiement communautaire",
+        "alumni": "Réseau national d'alumni",
+        "capstone": "Accompagnement du projet Capstone"
+      },
+      "beforeYouBeginTitle": "Avant de commencer",
+      "beforeYouBegin": {
+        "duration": "- La candidature prend environ 15–20 minutes",
+        "saveContinue": "- Vous pouvez enregistrer et continuer plus tard",
+        "noFee": "- Aucuns frais de candidature"
+      },
+      "start": "Commencer la candidature"
     },
     "certificationModal": {
       "title": "Engagement et certification",
@@ -1312,7 +1334,7 @@
         "whoToTrain": "Qui souhaitez-vous former ?",
         "peopleToReach": "Approximativement combien de personnes souhaitez-vous toucher ?",
         "setting": "Quel cadre utiliseriez-vous ?",
-        "participationHistory": "Avez-vous dirigé ou participé à des programmes de littératie financière, de création de richesse ou d'autonomisation économique ?",
+        "participationHistory": "Combien de temps prévoyez-vous de mener ce projet de formation ?",
         "successMetrics": "Comment mesureriez-vous le succès ?",
         "projectVision": "Décrivez brièvement votre vision du projet."
       },
@@ -1394,6 +1416,11 @@
           "other": "Autre"
         }
       }
+    },
+    "step5": {
+      "title": "Vérifiez votre candidature",
+      "subtitle": "Confirmez vos réponses ci-dessous. Vous pouvez modifier n'importe quelle section avant de soumettre.",
+      "edit": "Modifier"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1510,7 +1537,33 @@
     "actions": {
       "back": "Retour",
       "continue": "Continuer",
-      "submit": "Envoyer la demande de parrainage"
+      "submit": "Envoyer la demande de parrainage",
+      "payWithStripe": "Payer {amount} avec Stripe"
+    },
+    "certificationModal": {
+      "title": "Certification",
+      "close": "Fermer",
+      "submit": "Envoyer le formulaire de parrainage",
+      "authorization": {
+        "title": "Autorisation et soumission du sponsor",
+        "body": "En soumettant ce formulaire, je confirme que les informations fournies sont exactes et que je suis autorisé(e) à engager les fonds indiqués au nom de mon organisation. Je comprends que ma contribution à DFREE Global Foundation, Inc. est déductible d'impôt dans la mesure permise par la loi, et qu'une lettre formelle d'accusé de réception du don sera fournie. Je comprends que la DFREE Foundation appliquera mon don au Fellow Access Scholarship Fund pour la/les période(s) de cohorte que j'ai sélectionnée(s), et que mes préférences de reconnaissance seront respectées comme décrit."
+      },
+      "fields": {
+        "referralSource": "Comment avez-vous entendu parler de nous ?",
+        "referralSourcePlaceholder": "Sélectionnez une option"
+      },
+      "options": {
+        "referralSource": {
+          "fellow_or_alumni": "Fellow ou alumni DFREE®",
+          "website": "Site web de la DFREE Foundation",
+          "leadership": "Dr. DeForest Soaries / direction DFREE",
+          "church_or_faith": "Réseau d'église ou de foi",
+          "nonprofit_network": "Réseau d'organisations à but non lucratif / fondations",
+          "social_media": "Réseaux sociaux",
+          "corporate_csr": "Dons d'entreprise / équipe RSE",
+          "other": "Autre"
+        }
+      }
     },
     "step1": {
       "title": "Détails du parrainage",
@@ -1557,28 +1610,124 @@
     },
     "step3": {
       "title": "Reconnaissance et paiement",
-      "subtitle": "Passez en revue les détails de votre parrainage et indiquez comment vous souhaitez être reconnu.",
-      "recognitionTitle": "Reconnaissance du sponsor",
-      "recognitionDescription": "Les sponsors DFREE® sont reconnus sur notre site web, dans les supports du programme et les rapports d'impact annuels. Notre équipe confirmera votre niveau de reconnaissance préféré après l'envoi.",
+      "subtitle": "Sélectionnez comment vous souhaitez être reconnu et choisissez votre mode de paiement préféré.",
+      "recognitionTitle": "Comment souhaitez-vous être reconnu ?",
+      "recognitionMaterialsTitle": "Nom ou logo à afficher sur les supports de reconnaissance",
+      "recognitionDisplayNameLabel": "Nom",
+      "recognitionDisplayNamePlaceholder": "Entrez le nom à afficher",
+      "recognitionOptions": {
+        "cohort_program_listing": {
+          "title": "Liste du programme de cohorte",
+          "description": "Nommé dans le livret officiel du programme de cohorte remis à tous les Fellows et invités."
+        },
+        "website_recognition": {
+          "title": "Reconnaissance sur le site web",
+          "description": "Inscrit comme sponsor sur le site web de la Fondation DFREE pendant la durée de la cohorte."
+        },
+        "social_media_spotlight": {
+          "title": "Mise en avant sur les réseaux sociaux",
+          "description": "Mis en avant dans une publication sponsor de la Fondation DFREE sur nos réseaux sociaux."
+        },
+        "annual_impact_report": {
+          "title": "Rapport d'impact annuel",
+          "description": "Nommé dans le rapport d'impact annuel de la Fondation DFREE avec les données de résultats des Fellows."
+        },
+        "orientation_invitation": {
+          "title": "Invitation à l'orientation",
+          "description": "Invité à assister à l'événement d'orientation de la cohorte (en personne ou virtuel)."
+        },
+        "capstone_showcase_invitation": {
+          "title": "Invitation à la vitrine capstone",
+          "description": "Invité à la vitrine de déploiement communautaire Capstone à la clôture du programme."
+        },
+        "fellow_introduction": {
+          "title": "Présentation du Fellow",
+          "description": "Présenté (avec l'autorisation du Fellow) au ou aux Fellows financés par votre bourse."
+        },
+        "logo_placement": {
+          "title": "Placement du logo",
+          "description": "Logo de l'organisation sur les supports de la cohorte (niveau Champion et supérieur)."
+        }
+      },
+      "logoUpload": {
+        "label": "Logo (facultatif)",
+        "dropzonePrefix": "Déposez vos fichiers ici ou",
+        "browse": "parcourir",
+        "maxSize": "Taille maximale : 20 Mo",
+        "errors": {
+          "tooLarge": "Le fichier logo doit faire 20 Mo ou moins.",
+          "invalidType": "Téléversez un fichier PNG, JPG, WEBP, SVG ou PDF."
+        }
+      },
       "paymentTitle": "Paiement",
-      "paymentDescription": "Après l'envoi de ce formulaire, un membre de notre équipe vous contactera avec les instructions de paiement et les prochaines étapes du partenariat.",
-      "summaryTitle": "Résumé du parrainage",
-      "summaryTier": "Niveau sélectionné",
-      "summaryAmount": "Montant",
-      "summaryFellows": "Fellows financés",
-      "summaryTierDescription": "Avantages",
-      "summaryNamedTitle": "Bourse nommée / titre de cohorte",
-      "summaryCohort": "Cohorte sélectionnée",
-      "summaryCohortNotes": "Notes d'attribution de cohorte",
-      "summaryContact": "Contact principal"
+      "paymentMethods": {
+        "check_ach": {
+          "tab": "Chèque/ACH",
+          "instructions": "Rédigez les chèques à l'ordre de DFREE Global Foundation, Inc. — Mémo : Fellow Access Scholarship Fund. Pour un virement ACH/électronique, contactez la Fondation pour les coordonnées bancaires après l'envoi de ce formulaire.",
+          "mailToLabel": "Envoyer à",
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Robert Finely\nSuite 2\nSomerset, NJ 08773",
+          "checkNumberLabel": "Numéro de chèque",
+          "checkNumberOptional": "(si déjà rédigé)"
+        },
+        "credit_card": {
+          "tab": "Carte de crédit",
+          "body": "Vous serez redirigé vers Stripe Checkout pour payer {amount} en toute sécurité par carte de crédit. Le montant est lié au niveau de parrainage choisi.",
+          "lockedAmountNote": "Le montant du paiement ne peut pas être modifié lors du paiement — il correspond au niveau de parrainage sélectionné."
+        },
+        "wire_transfer": {
+          "tab": "Virement bancaire",
+          "body": "Les coordonnées bancaires pour le virement seront fournies dans les 2 jours ouvrables suivant l'envoi du formulaire. Veuillez d'abord soumettre ce formulaire ; un représentant de la Fondation vous enverra ensuite les informations de routage et de compte.",
+          "anticipatedWireDateLabel": "Date de virement prévue"
+        },
+        "pledge_invoice": {
+          "tab": "Engagement / Facture",
+          "body": "Soumettez ce formulaire comme un engagement et la Fondation émettra une facture formelle à votre organisation. Les engagements sont honorés dans les 30 jours suivant la date de début de la cohorte, sauf autre arrangement.",
+          "invoiceRecipientNameLabel": "Nom du destinataire de la facture",
+          "invoiceRecipientNamePlaceholder": "Contact comptes fournisseurs",
+          "invoiceEmailLabel": "E-mail de facturation",
+          "invoiceEmailPlaceholder": "ap@organisation.org",
+          "purchaseOrderNumberLabel": "Numéro de bon de commande",
+          "purchaseOrderNumberPlaceholder": "Facultatif",
+          "requestedPaymentDateLabel": "Date de paiement demandée",
+          "specialBillingInstructionsLabel": "Instructions de facturation spéciales",
+          "specialBillingInstructionsPlaceholder": "Toute exigence pour votre équipe comptes fournisseurs"
+        }
+      }
     },
     "success": {
-      "title": "Merci pour votre intérêt !",
-      "body": "Votre demande de parrainage a été envoyée avec succès. Notre équipe examinera votre soumission et vous contactera pour les prochaines étapes.",
-      "goBack": "Retour à l'Institut de leadership"
+      "title": "Soumission réussie !",
+      "body": "Votre formulaire a bien été soumis. Notre équipe examinera votre dossier et vous contactera pour les prochaines étapes de ce processus",
+      "goBackHome": "Retour à l'accueil"
+    },
+    "startModal": {
+      "title": "Formulaire d'engagement de parrainage DFREE®",
+      "close": "Fermer",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Votre parrainage élimine entièrement la barrière financière. Chaque dollar que vous donnez contribue directement à placer un leader communautaire dans le programme DFREE® Fellows sans frais pour lui — grâce à une bourse d'accès entièrement sponsorisée. Chaque cohorte de 8 semaines du Bottom-Up Leadership Institute (BLI) formera jusqu'à 20 fellows.",
+      "impactTitle": "Ce que fait votre parrainage :",
+      "impact": {
+        "one": {
+          "stat": "Un",
+          "label": "Fellow DFREE® entièrement financé"
+        },
+        "fiveTen": {
+          "stat": "Cinq - Dix",
+          "label": "Membres de la communauté formés par chaque Fellow"
+        },
+        "dozens": {
+          "stat": "Des dizaines",
+          "label": "Familles touchées par cycle de cohorte"
+        }
+      },
+      "start": "Commencer le parrainage"
     },
     "errors": {
-      "submitFailed": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans un instant."
+      "submitFailed": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans un instant.",
+      "checkoutFailed": "Nous n'avons pas pu démarrer Stripe Checkout. Veuillez réessayer dans un instant.",
+      "checkoutCancelled": "Le paiement a été annulé. Vos informations sont toujours là — choisissez à nouveau Carte de crédit et cliquez sur Payer quand vous êtes prêt.",
+      "checkoutConfirming": "Confirmation de votre paiement…",
+      "checkoutConfirmFailed": "Nous n'avons pas encore pu confirmer votre paiement. Si vous avez été débité, contactez-nous et nous réglerons cela.",
+      "stripeNotConfigured": "Les paiements par carte ne sont pas encore disponibles. Veuillez choisir un autre mode de paiement ou réessayer plus tard."
     }
   }
 }

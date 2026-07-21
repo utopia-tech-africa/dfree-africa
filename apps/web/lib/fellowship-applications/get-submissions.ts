@@ -2,6 +2,10 @@ import { prisma } from "@/lib/db/prisma";
 
 import { FELLOWSHIP_APPLICATION_TYPE } from "./constants";
 import {
+  normalizeFellowshipApplicationReviewStatus,
+  type FellowshipApplicationReviewStatus,
+} from "./review-status";
+import {
   storedFellowshipApplicationPayloadSchema,
   type FellowshipApplicationPayload,
   type FellowshipApplicationSummary,
@@ -10,6 +14,9 @@ import {
 function toSummary(
   id: string,
   createdAt: Date,
+  acknowledgementSentAt: Date | null,
+  reviewStatus: string,
+  reviewedAt: Date | null,
   payload: FellowshipApplicationPayload,
 ): FellowshipApplicationSummary {
   return {
@@ -19,6 +26,9 @@ function toSummary(
     email: payload.email,
     cohortTerm: payload.cohortTerm,
     createdAt,
+    acknowledgementSentAt,
+    reviewStatus: normalizeFellowshipApplicationReviewStatus(reviewStatus),
+    reviewedAt,
   };
 }
 
@@ -32,6 +42,9 @@ export async function getFellowshipApplicationSummaries(): Promise<
       id: true,
       payload: true,
       createdAt: true,
+      acknowledgementSentAt: true,
+      reviewStatus: true,
+      reviewedAt: true,
     },
   });
 
@@ -44,7 +57,16 @@ export async function getFellowshipApplicationSummaries(): Promise<
       return [];
     }
 
-    return [toSummary(submission.id, submission.createdAt, parsed.data)];
+    return [
+      toSummary(
+        submission.id,
+        submission.createdAt,
+        submission.acknowledgementSentAt,
+        submission.reviewStatus,
+        submission.reviewedAt,
+        parsed.data,
+      ),
+    ];
   });
 }
 
@@ -72,6 +94,11 @@ export async function getFellowshipApplicationById(id: string) {
     id: submission.id,
     createdAt: submission.createdAt,
     acknowledgementSentAt: submission.acknowledgementSentAt,
+    reviewStatus: normalizeFellowshipApplicationReviewStatus(
+      submission.reviewStatus,
+    ),
+    reviewedAt: submission.reviewedAt,
+    reviewedBy: submission.reviewedBy,
     payload: parsed.data,
   };
 }
@@ -93,6 +120,9 @@ export async function getRecentFellowshipApplicationSummaries(
       id: true,
       payload: true,
       createdAt: true,
+      acknowledgementSentAt: true,
+      reviewStatus: true,
+      reviewedAt: true,
     },
   });
 
@@ -105,6 +135,65 @@ export async function getRecentFellowshipApplicationSummaries(
       return [];
     }
 
-    return [toSummary(submission.id, submission.createdAt, parsed.data)];
+    return [
+      toSummary(
+        submission.id,
+        submission.createdAt,
+        submission.acknowledgementSentAt,
+        submission.reviewStatus,
+        submission.reviewedAt,
+        parsed.data,
+      ),
+    ];
+  });
+}
+
+export type FellowshipApplicationExportFilters = {
+  reviewStatus?: FellowshipApplicationReviewStatus | "all";
+  cohortTerm?: "spring" | "fall" | "all";
+};
+
+export async function getFellowshipApplicationsForExport(
+  filters: FellowshipApplicationExportFilters = {},
+) {
+  const submissions = await prisma.formSubmission.findMany({
+    where: {
+      type: FELLOWSHIP_APPLICATION_TYPE,
+      ...(filters.reviewStatus && filters.reviewStatus !== "all"
+        ? { reviewStatus: filters.reviewStatus }
+        : {}),
+    },
+    orderBy: { createdAt: "desc" },
+  });
+
+  return submissions.flatMap((submission) => {
+    const parsed = storedFellowshipApplicationPayloadSchema.safeParse(
+      submission.payload,
+    );
+
+    if (!parsed.success) {
+      return [];
+    }
+
+    if (
+      filters.cohortTerm &&
+      filters.cohortTerm !== "all" &&
+      parsed.data.cohortTerm !== filters.cohortTerm
+    ) {
+      return [];
+    }
+
+    return [
+      {
+        id: submission.id,
+        createdAt: submission.createdAt,
+        acknowledgementSentAt: submission.acknowledgementSentAt,
+        reviewStatus: normalizeFellowshipApplicationReviewStatus(
+          submission.reviewStatus,
+        ),
+        reviewedAt: submission.reviewedAt,
+        payload: parsed.data,
+      },
+    ];
   });
 }

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DFREE Platform — Hosting Cost & Sitemap Impact</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        color: #1a1a1a;
+        font-size: 9.5pt;
+        line-height: 1.35;
+        margin: 0;
+      }
+
+      header {
+        border-bottom: 3px solid #1f6b3a;
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        font-size: 18pt;
+        margin: 0 0 3px;
+        color: #123d24;
+      }
+
+      .subtitle {
+        color: #555;
+        margin: 0;
+        font-size: 10pt;
+      }
+
+      h2 {
+        font-size: 11pt;
+        color: #123d24;
+        margin: 14px 0 6px;
+        page-break-after: avoid;
+      }
+
+      p {
+        margin: 0 0 6px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 6px 0 12px;
+        font-size: 8.5pt;
+      }
+
+      table.compact {
+        font-size: 7.5pt;
+      }
+
+      table.compact th,
+      table.compact td {
+        padding: 4px 5px;
+      }
+
+      th,
+      td {
+        border: 1px solid #bbb;
+        padding: 5px 6px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: #f0f7f2;
+        color: #123d24;
+      }
+
+      .num {
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .broken {
+        background: #fdecea;
+        color: #b42318;
+        font-weight: 600;
+      }
+
+      .risk {
+        background: #fff8e6;
+        color: #9a6700;
+        font-weight: 600;
+      }
+
+      .ok {
+        background: #e8f5ec;
+        color: #1f6b3a;
+        font-weight: 600;
+      }
+
+      .route {
+        font-family: ui-monospace, monospace;
+        font-size: 8pt;
+      }
+
+      .legend {
+        display: flex;
+        gap: 14px;
+        font-size: 8pt;
+        margin: 6px 0 10px;
+        flex-wrap: wrap;
+      }
+
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        display: inline-block;
+      }
+
+      .dot-broken {
+        background: #fdecea;
+        border: 1px solid #b42318;
+      }
+
+      .dot-risk {
+        background: #fff8e6;
+        border: 1px solid #9a6700;
+      }
+
+      .note {
+        font-size: 8pt;
+        color: #666;
+        margin-top: 4px;
+      }
+
+      .box {
+        background: #f0f7f2;
+        border-left: 4px solid #1f6b3a;
+        padding: 8px 10px;
+        margin-top: 10px;
+        font-size: 8.5pt;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      footer {
+        margin-top: 10px;
+        font-size: 7.5pt;
+        color: #888;
+        border-top: 1px solid #ddd;
+        padding-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DFREE Platform — Hosting Analysis</h1>
+      <p class="subtitle">Cost comparison &amp; GoDaddy page impact · March 2026</p>
+    </header>
+
+    <!-- SECTION 1: COST ANALYSIS -->
+    <h2>1. Cost analysis — 3 hosting options</h2>
+
+    <p>
+      Estimated monthly totals for <strong>early-stage traffic</strong> (launch
+      through moderate growth). Includes hosting, database, and email. Domain
+      excluded — already owned.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th class="num">Estimated total (monthly)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>AWS Amplify</strong></td>
+          <td class="num"><strong>$15–$70</strong></td>
+          <td>Good AWS fit. Aligns with SES email. Pay-as-you-go.</td>
+        </tr>
+        <tr>
+          <td><strong>GoDaddy VPS</strong></td>
+          <td class="num"><strong>$45–$90</strong></td>
+          <td>Works if server is managed. Higher setup &amp; maintenance.</td>
+        </tr>
+        <tr>
+          <td><strong>Vercel</strong> (1 seat)</td>
+          <td class="num"><strong>$25–$60</strong></td>
+          <td>Best fit for Next.js. Lowest effort.</td>
+        </tr>
+        <tr>
+          <td><strong>GoDaddy shared cPanel</strong></td>
+          <td class="num"><strong>N/A</strong></td>
+          <td>Not compatible with this application.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Cost breakdown (how totals are made up)</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th class="num">Hosting</th>
+          <th class="num">DB + email</th>
+          <th class="num">Estimated total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>AWS Amplify</strong></td>
+          <td class="num">$5–$45</td>
+          <td class="num">$10–$25</td>
+          <td class="num"><strong>$15–$70</strong></td>
+        </tr>
+        <tr>
+          <td><strong>GoDaddy VPS</strong></td>
+          <td class="num">$35–$65</td>
+          <td class="num">$10–$25</td>
+          <td class="num"><strong>$45–$90</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Vercel</strong> (1 seat)</td>
+          <td class="num">$20–$35</td>
+          <td class="num">$5–$25</td>
+          <td class="num"><strong>$25–$60</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">
+      Early-stage traffic typically sits at the lower end. Costs increase with
+      traffic spikes, extra deploys, or additional developer seats (Vercel:
+      +$20/seat).
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="num">Vercel</th>
+          <th class="num">AWS Amplify</th>
+          <th class="num">GoDaddy VPS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Setup effort</td>
+          <td class="num ok">Low</td>
+          <td class="num ok">Low</td>
+          <td class="num risk">High</td>
+        </tr>
+        <tr>
+          <td>Ongoing maintenance</td>
+          <td class="num ok">Low</td>
+          <td class="num ok">Low</td>
+          <td class="num risk">High</td>
+        </tr>
+        <tr>
+          <td>Per-developer seat fee</td>
+          <td class="num">$20/mo</td>
+          <td class="num">None</td>
+          <td class="num">None</td>
+        </tr>
+        <tr>
+          <td>All features work reliably</td>
+          <td class="num ok">Yes</td>
+          <td class="num ok">Yes</td>
+          <td class="num risk">If maintained</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box">
+      <strong>Recommendation:</strong> Host on <strong>Vercel</strong> or
+      <strong>AWS Amplify</strong>.
+    </div>
+
+    <!-- SECTION 2: IMPACT BY PLATFORM -->
+    <h2 class="page-break">2. Impact by hosting option</h2>
+
+    <p>
+      How key <strong>functionality</strong> is affected on each platform. All
+      public routes use <span class="route">/en</span>,
+      <span class="route">/es</span>, or <span class="route">/fr</span>.
+    </p>
+
+    <div class="legend">
+      <span><i class="dot dot-broken"></i> Broken</span>
+      <span><i class="dot dot-risk"></i> At risk</span>
+      <span style="color: #1f6b3a; font-weight: 600">Works</span>
+    </div>
+
+    <h2>Functionality impact summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Functionality</th>
+          <th class="num">Vercel</th>
+          <th class="num">AWS</th>
+          <th class="num">GoDaddy VPS</th>
+          <th class="num">GoDaddy cPanel</th>
+          <th>What may be affected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Public pages (static / marketing)</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Layout, language switching, content updates</td>
+        </tr>
+        <tr>
+          <td>CMS content (news, projects, events)</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Articles, project listings, event filters</td>
+        </tr>
+        <tr>
+          <td>Multi-language (EN / ES / FR)</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Locale routing and translated pages</td>
+        </tr>
+        <tr>
+          <td>Donations (Zeffy)</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Donation amounts, modals, cause cards</td>
+        </tr>
+        <tr>
+          <td>Newsletter signup</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Footer and site-wide newsletter forms</td>
+        </tr>
+        <tr>
+          <td>Fellowship application form</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Multi-step form, uploads, confirmation email</td>
+        </tr>
+        <tr>
+          <td>Sponsorship form</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>3-step form, logo upload, submission email</td>
+        </tr>
+        <tr>
+          <td>Admin dashboard &amp; login</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Authentication, submissions, team management</td>
+        </tr>
+        <tr>
+          <td>Confirmation &amp; invitation emails</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Form acknowledgements, admin invite emails</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">
+      <strong>GoDaddy VPS:</strong> Features work when the server is set up and
+      maintained correctly. They become <span class="risk">at risk</span> if the
+      server is misconfigured, runs out of memory, or fails during a deploy.
+    </p>
+
+    <h2>Page-by-page sitemap</h2>
+    <table class="compact">
+      <thead>
+        <tr>
+          <th>Page</th>
+          <th>Route</th>
+          <th class="num">Vercel</th>
+          <th class="num">AWS</th>
+          <th class="num">VPS</th>
+          <th class="num">cPanel</th>
+          <th>What may be affected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">
+            Home &amp; main
+          </td>
+        </tr>
+        <tr>
+          <td>Homepage</td>
+          <td class="route">/{locale}</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Layout, language switching</td>
+        </tr>
+        <tr>
+          <td>Leadership</td>
+          <td class="route">/{locale}/leadership</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static marketing content</td>
+        </tr>
+        <tr>
+          <td>Contact</td>
+          <td class="route">/{locale}/contact</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Form submission on cPanel/VPS</td>
+        </tr>
+        <tr>
+          <td>Donate</td>
+          <td class="route">/{locale}/donate</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Zeffy modals, cause cards</td>
+        </tr>
+
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">
+            Leadership Institute
+          </td>
+        </tr>
+        <tr>
+          <td>Institute overview</td>
+          <td class="route">/{locale}/leadership-institute</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static marketing content</td>
+        </tr>
+        <tr>
+          <td>Fellowship application</td>
+          <td class="route">/…/apply</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Form, uploads, confirmation email</td>
+        </tr>
+        <tr>
+          <td>Sponsorship form</td>
+          <td class="route">/…/sponsor</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Form, logo upload, confirmation email</td>
+        </tr>
+
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">
+            Programs &amp; campaigns
+          </td>
+        </tr>
+        <tr>
+          <td>Access Scholarships</td>
+          <td class="route">/…/access-scholarships</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static marketing content</td>
+        </tr>
+        <tr>
+          <td>Billion Dollar Challenge</td>
+          <td class="route">/…/billion-dollar-challenge</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static marketing content</td>
+        </tr>
+        <tr>
+          <td>Community Campaigns</td>
+          <td class="route">/…/community-campaigns</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static marketing content</td>
+        </tr>
+        <tr>
+          <td>FinFest</td>
+          <td class="route">/…/finfest</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static marketing content</td>
+        </tr>
+
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">Africa</td>
+        </tr>
+        <tr>
+          <td>Africa overview</td>
+          <td class="route">/{locale}/africa</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>CMS images &amp; project data</td>
+        </tr>
+        <tr>
+          <td>Continental pages</td>
+          <td class="route">/…/continental/*</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Ghana, Uganda, South Africa pages</td>
+        </tr>
+        <tr>
+          <td>All projects</td>
+          <td class="route">/…/projects</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Project listings from CMS</td>
+        </tr>
+        <tr>
+          <td>Project detail</td>
+          <td class="route">/…/projects/[slug]</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Dynamic project content</td>
+        </tr>
+
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">
+            News &amp; events
+          </td>
+        </tr>
+        <tr>
+          <td>News listing</td>
+          <td class="route">/{locale}/news</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Articles from CMS</td>
+        </tr>
+        <tr>
+          <td>News article</td>
+          <td class="route">/…/news/[slug]</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Article content</td>
+        </tr>
+        <tr>
+          <td>Events</td>
+          <td class="route">/{locale}/events</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num risk">At risk</td>
+          <td>Event listings &amp; filters</td>
+        </tr>
+
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">Legal</td>
+        </tr>
+        <tr>
+          <td>Privacy policy</td>
+          <td class="route">/…/privacy-policy</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static legal content</td>
+        </tr>
+        <tr>
+          <td>Terms &amp; conditions</td>
+          <td class="route">/…/terms-and-conditions</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td>Static legal content</td>
+        </tr>
+
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">Admin</td>
+        </tr>
+        <tr>
+          <td>Admin (all pages)</td>
+          <td class="route">/admin/*</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Login, submissions, team, email templates</td>
+        </tr>
+
+        <tr>
+          <td colspan="7" style="background: #eee; font-weight: 600">
+            Backend APIs
+          </td>
+        </tr>
+        <tr>
+          <td>All APIs</td>
+          <td class="route">/api/*</td>
+          <td class="num ok">Works</td>
+          <td class="num ok">Works</td>
+          <td class="num risk">At risk</td>
+          <td class="num broken">Broken</td>
+          <td>Auth, forms, newsletter, content feeds</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box">
+      <strong>Summary:</strong> <strong>Vercel</strong> and
+      <strong>AWS</strong> support the full platform. <strong>GoDaddy VPS</strong>
+      can work but leaves forms, admin, and CMS features
+      <strong>at risk</strong>. <strong>GoDaddy shared cPanel</strong> breaks
+      forms and admin; static pages are only <strong>at risk</strong>.
+    </div>
+
+    <footer>
+      DFREE Platform hosting analysis · March 2026 · USD estimates, launch-phase
+      traffic.
+    </footer>
+  </body>
+</html>

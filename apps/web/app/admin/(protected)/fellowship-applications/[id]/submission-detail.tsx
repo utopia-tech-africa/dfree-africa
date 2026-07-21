@@ -3,6 +3,17 @@ import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
+  formatCohortTerm,
+  formatCommitment,
+  formatDeploymentSetting,
+  formatFinancialLiteracyExperience,
+  formatOrganizationType,
+  formatParticipationHistory,
+  formatReferralSources,
+  formatSuccessMetrics,
+  formatYearsServed,
+} from "@/lib/fellowship-applications/format-fields";
+import {
   isLegacyStoredSignature,
   type FellowshipApplicationPayload,
 } from "@/lib/fellowship-applications/types";
@@ -43,10 +54,6 @@ function DetailField({
       <dd className="mt-1 whitespace-pre-wrap text-neutral-1000">{value}</dd>
     </div>
   );
-}
-
-function formatList(values: string[]) {
-  return values.length ? values.join(", ") : "—";
 }
 
 function ReferenceBlock({
@@ -101,9 +108,12 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
         <DetailField label="Organization" value={payload.organization} />
         <DetailField
           label="Organization type"
-          value={payload.organizationType}
+          value={formatOrganizationType(payload.organizationType)}
         />
-        <DetailField label="Years served" value={payload.yearsServed} />
+        <DetailField
+          label="Years served"
+          value={formatYearsServed(payload.yearsServed)}
+        />
         <DetailField
           label="Community served"
           value={payload.communityServed}
@@ -119,7 +129,9 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
       <DetailSection title="Community impact">
         <DetailField
           label="Financial literacy experience"
-          value={payload.financialLiteracyExperience}
+          value={formatFinancialLiteracyExperience(
+            payload.financialLiteracyExperience,
+          )}
           className="sm:col-span-2"
         />
         <DetailField
@@ -147,14 +159,17 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
         />
         <DetailField label="Who to train" value={payload.whoToTrain} />
         <DetailField label="People to reach" value={payload.peopleToReach} />
-        <DetailField label="Setting" value={payload.setting} />
         <DetailField
-          label="Participation history"
-          value={payload.participationHistory}
+          label="Setting"
+          value={formatDeploymentSetting(payload.setting)}
+        />
+        <DetailField
+          label="Project timeline"
+          value={formatParticipationHistory(payload.participationHistory)}
         />
         <DetailField
           label="Success metrics"
-          value={formatList(payload.successMetrics)}
+          value={formatSuccessMetrics(payload.successMetrics)}
           className="sm:col-span-2"
         />
         <DetailField
@@ -167,8 +182,14 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
       <DetailSection title="Review & submit">
         <ReferenceBlock title="Reference 1" reference={payload.reference1} />
         <ReferenceBlock title="Reference 2" reference={payload.reference2} />
-        <DetailField label="Cohort term" value={payload.cohortTerm} />
-        <DetailField label="Commitment" value={payload.commitment} />
+        <DetailField
+          label="Cohort term"
+          value={formatCohortTerm(payload.cohortTerm)}
+        />
+        <DetailField
+          label="Commitment"
+          value={formatCommitment(payload.commitment)}
+        />
         <DetailField
           label="Scheduling constraints"
           value={payload.schedulingConstraints || "—"}
@@ -176,7 +197,7 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
         />
         <DetailField
           label="Referral sources"
-          value={formatList(payload.referralSources)}
+          value={formatReferralSources(payload.referralSources)}
           className="sm:col-span-2"
         />
         <DetailField label="Signature date" value={payload.signatureDate} />

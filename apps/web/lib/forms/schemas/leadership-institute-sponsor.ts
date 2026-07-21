@@ -1,7 +1,8 @@
 import { z } from "zod";
 
-import { emailField } from "@/lib/forms/schemas/common";
+import { MAX_CUSTOM_FELLOW_COUNT } from "@/lib/fellowship-sponsors/sponsorship-pricing";
 import { sponsorCohortValues } from "@/lib/fellowship-sponsors/sponsor-cohorts";
+import { emailField } from "@/lib/forms/schemas/common";
 import { countWords } from "@/lib/forms/word-count";
 
 const requiredText = (label: string) =>
@@ -65,7 +66,54 @@ export const sponsorshipTierValues = [
 
 export type SponsorshipTierValue = (typeof sponsorshipTierValues)[number];
 
-export const leadershipInstituteSponsorSchema = z.object({
+export const recognitionPreferenceValues = [
+  "cohort_program_listing",
+  "website_recognition",
+  "social_media_spotlight",
+  "annual_impact_report",
+  "orientation_invitation",
+  "capstone_showcase_invitation",
+  "fellow_introduction",
+  "logo_placement",
+] as const;
+
+export type RecognitionPreferenceValue =
+  (typeof recognitionPreferenceValues)[number];
+
+export const paymentMethodValues = [
+  "check_ach",
+  "credit_card",
+  "wire_transfer",
+  "pledge_invoice",
+] as const;
+
+export type PaymentMethodValue = (typeof paymentMethodValues)[number];
+
+export const sponsorReferralSourceValues = [
+  "fellow_or_alumni",
+  "website",
+  "leadership",
+  "church_or_faith",
+  "nonprofit_network",
+  "social_media",
+  "corporate_csr",
+  "other",
+] as const;
+
+export type SponsorReferralSourceValue =
+  (typeof sponsorReferralSourceValues)[number];
+
+export const recognitionLogoAcceptedMimeTypes = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "image/svg+xml",
+  "application/pdf",
+] as const;
+
+export const recognitionLogoMaxBytes = 20 * 1024 * 1024;
+
+export const leadershipInstituteSponsorObjectSchema = z.object({
   firstName: requiredText("First name"),
   lastName: requiredText("Last name"),
   email: emailField,
@@ -80,7 +128,14 @@ export const leadershipInstituteSponsorSchema = z.object({
   communitiesToSupport: wordLimited(150, "Communities to support", false),
   publicStatementSharing: optionalSelect(publicStatementSharingValues),
   sponsorshipTier: requiredSelect(sponsorshipTierValues, "Sponsorship level"),
-  customFellowCount: z.number().int().min(1, "At least 1 fellow is required"),
+  customFellowCount: z
+    .number()
+    .int()
+    .min(1, "At least 1 fellow is required")
+    .max(
+      MAX_CUSTOM_FELLOW_COUNT,
+      `At most ${MAX_CUSTOM_FELLOW_COUNT} fellows are allowed`,
+    ),
   namedScholarshipTitle: z
     .string()
     .max(200, "Title must be 200 characters or fewer")
@@ -88,15 +143,69 @@ export const leadershipInstituteSponsorSchema = z.object({
     .or(z.literal("")),
   sponsorCohort: requiredSelect(sponsorCohortValues, "Cohort"),
   cohortAssignmentNotes: wordLimited(150, "Cohort assignment notes", false),
-  message: z
+  recognitionPreferences: z
+    .array(z.enum(recognitionPreferenceValues))
+    .default([]),
+  recognitionDisplayName: z
     .string()
-    .max(1500, "Message must be 1500 characters or fewer")
+    .max(200, "Name must be 200 characters or fewer")
     .optional()
     .or(z.literal("")),
+  paymentMethod: z.enum(paymentMethodValues).default("check_ach"),
+  checkNumber: z
+    .string()
+    .max(100, "Check number must be 100 characters or fewer")
+    .optional()
+    .or(z.literal("")),
+  anticipatedWireDate: z.string().optional().or(z.literal("")),
+  invoiceRecipientName: z
+    .string()
+    .max(200, "Name must be 200 characters or fewer")
+    .optional()
+    .or(z.literal("")),
+  invoiceEmail: z.union([z.literal(""), emailField]),
+  purchaseOrderNumber: z
+    .string()
+    .max(100, "Purchase order number must be 100 characters or fewer")
+    .optional()
+    .or(z.literal("")),
+  requestedPaymentDate: z.string().optional().or(z.literal("")),
+  specialBillingInstructions: wordLimited(
+    150,
+    "Special billing instructions",
+    false,
+  ),
+  referralSource: requiredSelect(
+    sponsorReferralSourceValues,
+    "How did you hear about us",
+  ),
 });
 
+export const leadershipInstituteSponsorSchema =
+  leadershipInstituteSponsorObjectSchema.superRefine((data, ctx) => {
+    if (data.paymentMethod !== "pledge_invoice") {
+      return;
+    }
+
+    if (!data.invoiceRecipientName?.trim()) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Invoice recipient name is required",
+        path: ["invoiceRecipientName"],
+      });
+    }
+
+    if (!data.invoiceEmail?.trim()) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Invoice email is required",
+        path: ["invoiceEmail"],
+      });
+    }
+  });
+
 export type LeadershipInstituteSponsorValues = z.input<
-  typeof leadershipInstituteSponsorSchema
+  typeof leadershipInstituteSponsorObjectSchema
 >;
 
 export const defaultSponsorValues: LeadershipInstituteSponsorValues = {
@@ -118,5 +227,15 @@ export const defaultSponsorValues: LeadershipInstituteSponsorValues = {
   namedScholarshipTitle: "",
   sponsorCohort: "",
   cohortAssignmentNotes: "",
-  message: "",
+  recognitionPreferences: [],
+  recognitionDisplayName: "",
+  paymentMethod: "check_ach",
+  checkNumber: "",
+  anticipatedWireDate: "",
+  invoiceRecipientName: "",
+  invoiceEmail: "",
+  purchaseOrderNumber: "",
+  requestedPaymentDate: "",
+  specialBillingInstructions: "",
+  referralSource: "",
 };

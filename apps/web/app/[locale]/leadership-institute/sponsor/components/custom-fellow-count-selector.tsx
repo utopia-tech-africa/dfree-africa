@@ -9,8 +9,9 @@ import {
   FELLOW_UNIT_PRICE,
   formatSponsorshipCurrency,
   getFellowCount,
+  getPresetTierForFellowCount,
   getSponsorshipTotal,
-  TIER_FELLOW_COUNTS,
+  MAX_CUSTOM_FELLOW_COUNT,
 } from "@/lib/fellowship-sponsors/sponsorship-pricing";
 import type { LeadershipInstituteSponsorValues } from "@/lib/forms/schemas/leadership-institute-sponsor";
 import {
@@ -105,15 +106,20 @@ export function CustomFellowCountSelector() {
     ? display.totalAmount
     : fellowCount * FELLOW_UNIT_PRICE;
   const isDecreaseDisabled = isSubmitting || fellowCount <= MIN_FELLOW_COUNT;
+  const isIncreaseDisabled =
+    isSubmitting || fellowCount >= MAX_CUSTOM_FELLOW_COUNT;
 
   const handleAdjust = (delta: number) => {
-    const nextCount = Math.max(MIN_FELLOW_COUNT, fellowCount + delta);
-    setValue("customFellowCount", nextCount, { shouldValidate: true });
-    setValue(
-      "sponsorshipTier",
-      nextCount === TIER_FELLOW_COUNTS.community ? "community" : "custom",
-      { shouldValidate: true },
+    const nextCount = Math.min(
+      MAX_CUSTOM_FELLOW_COUNT,
+      Math.max(MIN_FELLOW_COUNT, fellowCount + delta),
     );
+    const matchingTier = getPresetTierForFellowCount(nextCount);
+
+    setValue("customFellowCount", nextCount, { shouldValidate: true });
+    setValue("sponsorshipTier", matchingTier ?? "custom", {
+      shouldValidate: true,
+    });
   };
 
   return (
@@ -140,7 +146,7 @@ export function CustomFellowCountSelector() {
 
           <button
             type="button"
-            {...(isSubmitting ? { disabled: true } : {})}
+            {...(isIncreaseDisabled ? { disabled: true } : {})}
             onClick={() => handleAdjust(1)}
             aria-label={t("increaseFellows")}
             className="shrink-0 transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"

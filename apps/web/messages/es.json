@@ -280,7 +280,7 @@
     },
     "whoWeAre": {
       "title": "Quiénes somos",
-      "introHighlight": "DFREE Global Foundation, Inc.",
+      "introHighlight": "DFREE® Global Foundation, Inc.",
       "introRest": " es una organización exenta de impuestos, clasificada como 501(c)(3), que promueve el bienestar financiero, el empoderamiento económico y la autosuficiencia en comunidades desfavorecidas mediante la implementación de iniciativas gratuitas centradas en la comunidad que ayudan a las familias a construir una confianza y una libertad financiera duraderas.",
       "missionTitle": "Misión",
       "mission": "La Fundación Global DFREE® garantiza que la libertad financiera no sea un privilegio. Al subvencionar el acceso a las herramientas y al plan de estudios comprobados de DFREE — y a través de iniciativas emblemáticas como FinFe$t, campañas comunitarias, el Billion Dollar Challenge, el Instituto de Liderazgo Ascendente, y proyectos de desarrollo comunitario en África — la Fundación acerca los recursos del movimiento DFREE® a cada familia, independientemente de sus ingresos.",
@@ -1169,7 +1169,8 @@
       "aboutYou": "Sobre usted y su trabajo",
       "communityImpact": "Impacto comunitario",
       "deploymentVision": "Visión de despliegue",
-      "reviewSubmit": "Revisión y envío"
+      "reviewSubmit": "Referencias y compromiso",
+      "review": "Revisión"
     },
     "actions": {
       "saveExit": "Guardar y salir",
@@ -1184,6 +1185,27 @@
     },
     "errors": {
       "submitFailed": "No pudimos enviar su solicitud. Inténtelo de nuevo en un momento."
+    },
+    "startModal": {
+      "title": "Solicitud de beca DFREE®",
+      "close": "Cerrar",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Solicite unirse a la próxima cohorte del Bottom-Up Leadership Institute. Los Fellows se seleccionan mediante un proceso competitivo y reciben una beca de acceso completo. Los costos del programa son cubiertos por patrocinadores en nombre de cada Fellow.",
+      "benefitsTitle": "Lo que recibirá",
+      "benefits": {
+        "scholarship": "Beca de acceso completo",
+        "training": "Formación en liderazgo",
+        "deployment": "Apoyo para el despliegue comunitario",
+        "alumni": "Red nacional de alumni",
+        "capstone": "Orientación para el proyecto Capstone"
+      },
+      "beforeYouBeginTitle": "Antes de comenzar",
+      "beforeYouBegin": {
+        "duration": "- La solicitud toma unos 15–20 minutos",
+        "saveContinue": "- Puede guardar y continuar más tarde",
+        "noFee": "- Sin costo de solicitud"
+      },
+      "start": "Comenzar solicitud"
     },
     "certificationModal": {
       "title": "Compromiso y certificación",
@@ -1311,7 +1333,7 @@
         "whoToTrain": "¿A quién le gustaría capacitar?",
         "peopleToReach": "¿Aproximadamente a cuántas personas le gustaría llegar?",
         "setting": "¿Qué entorno utilizaría?",
-        "participationHistory": "¿Ha dirigido o participado en programas de alfabetización financiera, creación de riqueza o empoderamiento económico?",
+        "participationHistory": "¿Durante cuánto tiempo planea ejecutar este proyecto de formación?",
         "successMetrics": "¿Cómo mediría el éxito?",
         "projectVision": "Describa brevemente su visión del proyecto."
       },
@@ -1393,6 +1415,11 @@
           "other": "Otro"
         }
       }
+    },
+    "step5": {
+      "title": "Revise su solicitud",
+      "subtitle": "Confirme sus respuestas a continuación. Puede editar cualquier sección antes de enviar.",
+      "edit": "Editar"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1509,7 +1536,33 @@
     "actions": {
       "back": "Atrás",
       "continue": "Continuar",
-      "submit": "Enviar consulta de patrocinio"
+      "submit": "Enviar consulta de patrocinio",
+      "payWithStripe": "Pagar {amount} con Stripe"
+    },
+    "certificationModal": {
+      "title": "Certificación",
+      "close": "Cerrar",
+      "submit": "Enviar formulario de patrocinio",
+      "authorization": {
+        "title": "Autorización y envío del patrocinador",
+        "body": "Al enviar este formulario, confirmo que la información proporcionada es precisa y que estoy autorizado/a a comprometer los fondos indicados en nombre de mi organización. Entiendo que mi contribución a DFREE Global Foundation, Inc. es deducible de impuestos en la medida permitida por la ley, y que se proporcionará una carta formal de reconocimiento del donativo. Entiendo que la DFREE Foundation aplicará mi donativo al Fellow Access Scholarship Fund para el/los período(s) de cohorte que he seleccionado, y que se respetarán mis preferencias de reconocimiento según lo descrito."
+      },
+      "fields": {
+        "referralSource": "¿Cómo se enteró de nosotros?",
+        "referralSourcePlaceholder": "Seleccione uno"
+      },
+      "options": {
+        "referralSource": {
+          "fellow_or_alumni": "Fellow o alumni DFREE®",
+          "website": "Sitio web de DFREE Foundation",
+          "leadership": "Dr. DeForest Soaries / liderazgo DFREE",
+          "church_or_faith": "Red de iglesia o fe",
+          "nonprofit_network": "Red de organizaciones sin fines de lucro / fundaciones",
+          "social_media": "Redes sociales",
+          "corporate_csr": "Donaciones corporativas / equipo de RSC",
+          "other": "Otro"
+        }
+      }
     },
     "step1": {
       "title": "Detalles del patrocinio",
@@ -1556,28 +1609,124 @@
     },
     "step3": {
       "title": "Reconocimiento y pago",
-      "subtitle": "Revise los detalles de su patrocinio e indíquenos cómo le gustaría ser reconocido.",
-      "recognitionTitle": "Reconocimiento del patrocinador",
-      "recognitionDescription": "Los patrocinadores de DFREE® son reconocidos en nuestro sitio web, materiales del programa e informes de impacto anual. Nuestro equipo confirmará su nivel de reconocimiento preferido después del envío.",
+      "subtitle": "Seleccione cómo le gustaría ser reconocido y elija su método de pago preferido.",
+      "recognitionTitle": "¿Cómo le gustaría ser reconocido?",
+      "recognitionMaterialsTitle": "Nombre o logotipo para materiales de reconocimiento",
+      "recognitionDisplayNameLabel": "Nombre",
+      "recognitionDisplayNamePlaceholder": "Ingrese el nombre a mostrar",
+      "recognitionOptions": {
+        "cohort_program_listing": {
+          "title": "Listado del programa de cohorte",
+          "description": "Nombrado en el folleto oficial del programa de cohorte entregado a todos los becarios e invitados."
+        },
+        "website_recognition": {
+          "title": "Reconocimiento en el sitio web",
+          "description": "Listado como patrocinador en el sitio web de DFREE Foundation durante el período de la cohorte."
+        },
+        "social_media_spotlight": {
+          "title": "Destacado en redes sociales",
+          "description": "Destacado en una publicación de patrocinadores de DFREE Foundation en nuestros canales sociales."
+        },
+        "annual_impact_report": {
+          "title": "Informe de impacto anual",
+          "description": "Nombrado en el informe de impacto anual de DFREE Foundation con datos de resultados de los becarios."
+        },
+        "orientation_invitation": {
+          "title": "Invitación a la orientación",
+          "description": "Invitado a asistir al evento de orientación de la cohorte (presencial o virtual)."
+        },
+        "capstone_showcase_invitation": {
+          "title": "Invitación al evento capstone",
+          "description": "Invitado al evento de presentación del Proyecto de Despliegue Comunitario Capstone al cierre del programa."
+        },
+        "fellow_introduction": {
+          "title": "Presentación del becario",
+          "description": "Presentado (con permiso del becario) al becario o becarios que financia su beca."
+        },
+        "logo_placement": {
+          "title": "Colocación de logotipo",
+          "description": "Logotipo de la organización en materiales de la cohorte (nivel Champion y superior)."
+        }
+      },
+      "logoUpload": {
+        "label": "Logotipo (opcional)",
+        "dropzonePrefix": "Suelte sus archivos aquí o",
+        "browse": "explorar",
+        "maxSize": "Tamaño máximo: 20 MB",
+        "errors": {
+          "tooLarge": "El archivo del logotipo debe ser de 20 MB o menos.",
+          "invalidType": "Suba un archivo PNG, JPG, WEBP, SVG o PDF."
+        }
+      },
       "paymentTitle": "Pago",
-      "paymentDescription": "Después de enviar este formulario, un miembro de nuestro equipo se pondrá en contacto con instrucciones de pago y los próximos pasos de la asociación.",
-      "summaryTitle": "Resumen del patrocinio",
-      "summaryTier": "Nivel seleccionado",
-      "summaryAmount": "Monto",
-      "summaryFellows": "Becarios financiados",
-      "summaryTierDescription": "Beneficios",
-      "summaryNamedTitle": "Beca nombrada / título de cohorte",
-      "summaryCohort": "Cohorte seleccionada",
-      "summaryCohortNotes": "Notas de asignación de cohorte",
-      "summaryContact": "Contacto principal"
+      "paymentMethods": {
+        "check_ach": {
+          "tab": "Cheque/ACH",
+          "instructions": "Haga los cheques a nombre de DFREE Global Foundation, Inc. — Memo: Fellow Access Scholarship Fund. Para transferencia ACH/electrónica, contacte a la Fundación para obtener los datos bancarios después de enviar este formulario.",
+          "mailToLabel": "Enviar por correo a",
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Robert Finely\nSuite 2\nSomerset, NJ 08773",
+          "checkNumberLabel": "Número de cheque",
+          "checkNumberOptional": "(si ya está escrito)"
+        },
+        "credit_card": {
+          "tab": "Tarjeta de crédito",
+          "body": "Será redirigido a Stripe Checkout para pagar {amount} de forma segura con tarjeta de crédito. El monto está vinculado al nivel de patrocinio que eligió.",
+          "lockedAmountNote": "El monto del pago no se puede cambiar en el checkout: coincide con el nivel de patrocinio seleccionado."
+        },
+        "wire_transfer": {
+          "tab": "Transferencia bancaria",
+          "body": "Los datos bancarios para la transferencia se proporcionarán dentro de los 2 días hábiles posteriores al envío del formulario. Envíe este formulario primero y un representante de la Fundación le enviará la información de ruta y cuenta.",
+          "anticipatedWireDateLabel": "Fecha anticipada de transferencia"
+        },
+        "pledge_invoice": {
+          "tab": "Compromiso / Factura",
+          "body": "Envíe este formulario como un compromiso y la Fundación emitirá una factura formal a su organización. Los compromisos se cumplen dentro de los 30 días posteriores a la fecha de inicio de la cohorte, salvo otro acuerdo.",
+          "invoiceRecipientNameLabel": "Nombre del destinatario de la factura",
+          "invoiceRecipientNamePlaceholder": "Contacto de cuentas por pagar",
+          "invoiceEmailLabel": "Correo de facturación",
+          "invoiceEmailPlaceholder": "ap@organizacion.org",
+          "purchaseOrderNumberLabel": "Número de orden de compra",
+          "purchaseOrderNumberPlaceholder": "Opcional",
+          "requestedPaymentDateLabel": "Fecha de pago solicitada",
+          "specialBillingInstructionsLabel": "Instrucciones especiales de facturación",
+          "specialBillingInstructionsPlaceholder": "Cualquier requisito para su equipo de cuentas por pagar"
+        }
+      }
     },
     "success": {
-      "title": "¡Gracias por su interés!",
-      "body": "Su consulta de patrocinio se envió correctamente. Nuestro equipo revisará su solicitud y se pondrá en contacto con los próximos pasos.",
-      "goBack": "Volver al Instituto de Liderazgo"
+      "title": "¡Envío exitoso!",
+      "body": "Su formulario se envió correctamente. Nuestro equipo revisará su envío y se comunicará con usted sobre los próximos pasos de este proceso",
+      "goBackHome": "Volver al inicio"
+    },
+    "startModal": {
+      "title": "Formulario de compromiso de patrocinio DFREE®",
+      "close": "Cerrar",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Su patrocinio elimina por completo la barrera financiera. Cada dólar que aporta se destina directamente a colocar a un líder comunitario en el programa DFREE® Fellows sin costo para ellos — mediante una beca de acceso totalmente patrocinada. Cada cohorte de 8 semanas del Bottom-Up Leadership Institute (BLI) formará hasta 20 fellows.",
+      "impactTitle": "Lo que hace su patrocinio:",
+      "impact": {
+        "one": {
+          "stat": "Uno",
+          "label": "Fellow DFREE® totalmente financiado"
+        },
+        "fiveTen": {
+          "stat": "Cinco - Diez",
+          "label": "Miembros de la comunidad formados por cada Fellow"
+        },
+        "dozens": {
+          "stat": "Decenas",
+          "label": "Familias alcanzadas por ciclo de cohorte"
+        }
+      },
+      "start": "Comenzar patrocinio"
     },
     "errors": {
-      "submitFailed": "No pudimos enviar su consulta. Inténtelo de nuevo en un momento."
+      "submitFailed": "No pudimos enviar su consulta. Inténtelo de nuevo en un momento.",
+      "checkoutFailed": "No pudimos iniciar Stripe Checkout. Inténtelo de nuevo en un momento.",
+      "checkoutCancelled": "El checkout se canceló. Sus datos siguen aquí: elija Tarjeta de crédito de nuevo y pulse Pagar cuando esté listo.",
+      "checkoutConfirming": "Confirmando su pago…",
+      "checkoutConfirmFailed": "Aún no pudimos confirmar su pago. Si se le cobró, contáctenos y lo resolvemos.",
+      "stripeNotConfigured": "Los pagos con tarjeta aún no están disponibles. Elija otro método de pago o inténtelo más tarde."
     }
   }
 }
