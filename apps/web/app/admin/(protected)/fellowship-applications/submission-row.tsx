@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { FELLOWSHIP_APPLICATION_REVIEW_STATUS_LABELS } from "@/lib/fellowship-applications/review-status";
 import type { FellowshipApplicationSummary } from "@/lib/fellowship-applications/types";
 
 type SubmissionRowProps = {
@@ -14,6 +15,10 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   dateStyle: "medium",
   timeStyle: "short",
 });
+
+function toDate(value: Date | string) {
+  return value instanceof Date ? value : new Date(value);
+}
 
 function getInitials(firstName: string, lastName: string, email: string) {
   const name = `${firstName} ${lastName}`.trim();
@@ -43,6 +48,21 @@ function cohortBadgeVariant(cohortTerm: string): "default" | "secondary" {
   return cohortTerm === "fall" ? "secondary" : "default";
 }
 
+function reviewBadgeClassName(status: string) {
+  switch (status) {
+    case "accepted":
+      return "bg-emerald-100 text-emerald-800";
+    case "rejected":
+      return "bg-red-100 text-red-800";
+    case "waitlisted":
+      return "bg-violet-100 text-violet-800";
+    case "under_review":
+      return "bg-sky-100 text-sky-800";
+    default:
+      return "bg-amber-50 text-amber-700 ring-1 ring-amber-200";
+  }
+}
+
 export function SubmissionRow({
   submission,
   variant = "default",
@@ -54,6 +74,9 @@ export function SubmissionRow({
     submission.email,
   );
   const isCompact = variant === "compact";
+  const createdAt = toDate(submission.createdAt);
+  const statusLabel =
+    FELLOWSHIP_APPLICATION_REVIEW_STATUS_LABELS[submission.reviewStatus];
 
   const viewButton = (
     <Button asChild variant="outline" size="sm" className="shrink-0">
@@ -85,14 +108,20 @@ export function SubmissionRow({
         </div>
 
         <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+          <Badge
+            variant="secondary"
+            className={reviewBadgeClassName(submission.reviewStatus)}
+          >
+            {statusLabel}
+          </Badge>
           <Badge variant={cohortBadgeVariant(submission.cohortTerm)}>
             {formatCohortTerm(submission.cohortTerm)}
           </Badge>
           <time
             className="text-sm text-neutral-700"
-            dateTime={submission.createdAt.toISOString()}
+            dateTime={createdAt.toISOString()}
           >
-            {dateFormatter.format(submission.createdAt)}
+            {dateFormatter.format(createdAt)}
           </time>
           {viewButton}
         </div>
@@ -128,12 +157,29 @@ export function SubmissionRow({
       </td>
 
       <td className="px-6 py-4 align-middle">
+        <Badge
+          variant="secondary"
+          className={reviewBadgeClassName(submission.reviewStatus)}
+        >
+          {statusLabel}
+        </Badge>
+      </td>
+
+      <td className="px-6 py-4 align-middle">
         <time
           className="whitespace-nowrap text-sm text-neutral-700"
-          dateTime={submission.createdAt.toISOString()}
+          dateTime={createdAt.toISOString()}
         >
-          {dateFormatter.format(submission.createdAt)}
+          {dateFormatter.format(createdAt)}
         </time>
+      </td>
+
+      <td className="px-6 py-4 align-middle">
+        <Badge
+          variant={submission.acknowledgementSentAt ? "default" : "secondary"}
+        >
+          {submission.acknowledgementSentAt ? "Sent" : "Pending"}
+        </Badge>
       </td>
 
       <td className="px-6 py-4 text-right align-middle">{viewButton}</td>

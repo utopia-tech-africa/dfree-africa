@@ -1170,7 +1170,8 @@
       "aboutYou": "À propos de vous et de votre travail",
       "communityImpact": "Impact communautaire",
       "deploymentVision": "Vision de déploiement",
-      "reviewSubmit": "Révision et soumission"
+      "reviewSubmit": "Références et engagement",
+      "review": "Revue"
     },
     "actions": {
       "saveExit": "Enregistrer et quitter",
@@ -1312,7 +1313,7 @@
         "whoToTrain": "Qui souhaitez-vous former ?",
         "peopleToReach": "Approximativement combien de personnes souhaitez-vous toucher ?",
         "setting": "Quel cadre utiliseriez-vous ?",
-        "participationHistory": "Avez-vous dirigé ou participé à des programmes de littératie financière, de création de richesse ou d'autonomisation économique ?",
+        "participationHistory": "Combien de temps prévoyez-vous de mener ce projet de formation ?",
         "successMetrics": "Comment mesureriez-vous le succès ?",
         "projectVision": "Décrivez brièvement votre vision du projet."
       },
@@ -1394,6 +1395,11 @@
           "other": "Autre"
         }
       }
+    },
+    "step5": {
+      "title": "Vérifiez votre candidature",
+      "subtitle": "Confirmez vos réponses ci-dessous. Vous pouvez modifier n'importe quelle section avant de soumettre.",
+      "edit": "Modifier"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1664,6 +1670,8 @@
       "submitFailed": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer dans un instant.",
       "checkoutFailed": "Nous n'avons pas pu démarrer Stripe Checkout. Veuillez réessayer dans un instant.",
       "checkoutCancelled": "Le paiement a été annulé. Vos informations sont toujours là — choisissez à nouveau Carte de crédit et cliquez sur Payer quand vous êtes prêt.",
+      "checkoutConfirming": "Confirmation de votre paiement…",
+      "checkoutConfirmFailed": "Nous n'avons pas encore pu confirmer votre paiement. Si vous avez été débité, contactez-nous et nous réglerons cela.",
       "stripeNotConfigured": "Les paiements par carte ne sont pas encore disponibles. Veuillez choisir un autre mode de paiement ou réessayer plus tard."
     }
   }

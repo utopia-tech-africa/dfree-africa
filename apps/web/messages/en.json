@@ -1170,7 +1170,8 @@
       "aboutYou": "About You & Your Work",
       "communityImpact": "Community Impact",
       "deploymentVision": "Deployment Vision",
-      "reviewSubmit": "Review & Submit"
+      "reviewSubmit": "References & Commitment",
+      "review": "Review"
     },
     "actions": {
       "saveExit": "Save & exit",
@@ -1312,7 +1313,7 @@
         "whoToTrain": "Who would you like to train?",
         "peopleToReach": "Approximately how many people would you like to reach?",
         "setting": "What setting would you use?",
-        "participationHistory": "Have you led or participated in financial literacy, wealth-building, or economic empowerment programs?",
+        "participationHistory": "How long do you plan to run this training project?",
         "successMetrics": "How would you measure success?",
         "projectVision": "Briefly describe your project vision."
       },
@@ -1394,6 +1395,11 @@
           "other": "Other"
         }
       }
+    },
+    "step5": {
+      "title": "Review your application",
+      "subtitle": "Confirm your answers below. You can edit any section before submitting.",
+      "edit": "Edit"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1664,6 +1670,8 @@
       "submitFailed": "We couldn't submit your inquiry. Please try again in a moment.",
       "checkoutFailed": "We couldn't start Stripe Checkout. Please try again in a moment.",
       "checkoutCancelled": "Checkout was cancelled. Your details are still here — choose Credit Card again and click Pay when you're ready.",
+      "checkoutConfirming": "Confirming your payment…",
+      "checkoutConfirmFailed": "We couldn't confirm your payment yet. If you were charged, please contact us and we'll sort it out.",
       "stripeNotConfigured": "Card payments aren't available yet. Please choose another payment method or try again later."
     }
   }

@@ -1169,7 +1169,8 @@
       "aboutYou": "Sobre usted y su trabajo",
       "communityImpact": "Impacto comunitario",
       "deploymentVision": "Visión de despliegue",
-      "reviewSubmit": "Revisión y envío"
+      "reviewSubmit": "Referencias y compromiso",
+      "review": "Revisión"
     },
     "actions": {
       "saveExit": "Guardar y salir",
@@ -1311,7 +1312,7 @@
         "whoToTrain": "¿A quién le gustaría capacitar?",
         "peopleToReach": "¿Aproximadamente a cuántas personas le gustaría llegar?",
         "setting": "¿Qué entorno utilizaría?",
-        "participationHistory": "¿Ha dirigido o participado en programas de alfabetización financiera, creación de riqueza o empoderamiento económico?",
+        "participationHistory": "¿Durante cuánto tiempo planea ejecutar este proyecto de formación?",
         "successMetrics": "¿Cómo mediría el éxito?",
         "projectVision": "Describa brevemente su visión del proyecto."
       },
@@ -1393,6 +1394,11 @@
           "other": "Otro"
         }
       }
+    },
+    "step5": {
+      "title": "Revise su solicitud",
+      "subtitle": "Confirme sus respuestas a continuación. Puede editar cualquier sección antes de enviar.",
+      "edit": "Editar"
     }
   },
   "leadershipInstituteSponsor": {
@@ -1663,6 +1669,8 @@
       "submitFailed": "No pudimos enviar su consulta. Inténtelo de nuevo en un momento.",
       "checkoutFailed": "No pudimos iniciar Stripe Checkout. Inténtelo de nuevo en un momento.",
       "checkoutCancelled": "El checkout se canceló. Sus datos siguen aquí: elija Tarjeta de crédito de nuevo y pulse Pagar cuando esté listo.",
+      "checkoutConfirming": "Confirmando su pago…",
+      "checkoutConfirmFailed": "Aún no pudimos confirmar su pago. Si se le cobró, contáctenos y lo resolvemos.",
       "stripeNotConfigured": "Los pagos con tarjeta aún no están disponibles. Elija otro método de pago o inténtelo más tarde."
     }
   }

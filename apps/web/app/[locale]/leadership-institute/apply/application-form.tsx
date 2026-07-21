@@ -16,6 +16,7 @@ import {
   step2Fields,
   step3Fields,
   step4Fields,
+  step5Fields,
   type LeadershipInstituteApplicationValues,
 } from "@/lib/forms/schemas/leadership-institute-application";
 import { trackApplicationSaveExit } from "@/lib/analytics/track-event";
@@ -29,18 +30,64 @@ import {
   ApplicationStepper,
   FormActions,
   StepAboutYou,
+  StepApplicationReview,
   StepCommunityImpact,
   StepDeploymentVision,
   StepReviewSubmit,
 } from "./components";
 
-const TOTAL_STEPS = 4;
+const TOTAL_STEPS = 5;
+
+type ApplicationDraftPayload = {
+  currentStep: number;
+  values: Partial<LeadershipInstituteApplicationValues>;
+};
+
+function clampStep(step: unknown): number {
+  if (typeof step !== "number" || !Number.isFinite(step)) {
+    return 1;
+  }
+
+  return Math.min(TOTAL_STEPS, Math.max(1, Math.floor(step)));
+}
+
+function parseApplicationDraft(raw: string): ApplicationDraftPayload | null {
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+
+    if (!parsed || typeof parsed !== "object") {
+      return null;
+    }
+
+    const record = parsed as Record<string, unknown>;
+
+    if (
+      "values" in record &&
+      record.values &&
+      typeof record.values === "object"
+    ) {
+      return {
+        currentStep: clampStep(record.currentStep),
+        values: record.values as Partial<LeadershipInstituteApplicationValues>,
+      };
+    }
+
+    // Legacy drafts stored form values at the top level.
+    return {
+      currentStep: 1,
+      values: record as Partial<LeadershipInstituteApplicationValues>,
+    };
+  } catch {
+    return null;
+  }
+}
 
 const stepFieldMap = [
   step1Fields,
   step2Fields,
   step3Fields,
   step4Fields,
+  step5Fields,
 ] as const;
 
 export function LeadershipInstituteApplicationForm() {
@@ -68,28 +115,42 @@ export function LeadershipInstituteApplicationForm() {
   } = methods;
 
   useEffect(() => {
-    try {
-      const savedDraft = localStorage.getItem(APPLICATION_FORM_STORAGE_KEY);
-      if (!savedDraft) {
-        return;
-      }
-
-      const parsed = JSON.parse(
-        savedDraft,
-      ) as Partial<LeadershipInstituteApplicationValues>;
-      reset({
-        ...defaultApplicationValues,
-        ...parsed,
-        signature: "",
-      });
-    } catch {
-      localStorage.removeItem(APPLICATION_FORM_STORAGE_KEY);
+    const savedDraft = localStorage.getItem(APPLICATION_FORM_STORAGE_KEY);
+    if (!savedDraft) {
+      return;
     }
+
+    const draft = parseApplicationDraft(savedDraft);
+
+    if (!draft) {
+      localStorage.removeItem(APPLICATION_FORM_STORAGE_KEY);
+      return;
+    }
+
+    reset({
+      ...defaultApplicationValues,
+      ...draft.values,
+      signature: "",
+    });
+    setCurrentStep(draft.currentStep);
   }, [reset]);
 
-  const saveDraft = () => {
-    const { signature: _signature, ...draft } = getValues();
-    localStorage.setItem(APPLICATION_FORM_STORAGE_KEY, JSON.stringify(draft));
+  const saveDraft = (step = currentStep) => {
+    const payload: ApplicationDraftPayload = {
+      currentStep: step,
+      values: {
+        ...getValues(),
+        signature: "",
+      },
+    };
+    localStorage.setItem(APPLICATION_FORM_STORAGE_KEY, JSON.stringify(payload));
+  };
+
+  const goToStep = (step: number) => {
+    const nextStep = clampStep(step);
+    setCurrentStep(nextStep);
+    saveDraft(nextStep);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleSaveExit = () => {
@@ -106,8 +167,7 @@ export function LeadershipInstituteApplicationForm() {
   };
 
   const handleBack = () => {
-    setCurrentStep((step) => Math.max(1, step - 1));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    goToStep(currentStep - 1);
   };
 
   const handleStepAdvance = async () => {
@@ -116,15 +176,15 @@ export function LeadershipInstituteApplicationForm() {
       return;
     }
 
-    const isValid = await trigger([...fields]);
+    if (fields.length > 0) {
+      const isValid = await trigger([...fields]);
 
-    if (!isValid) {
-      return;
+      if (!isValid) {
+        return;
+      }
     }
 
-    saveDraft();
-    setCurrentStep((step) => Math.min(TOTAL_STEPS, step + 1));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    goToStep(currentStep + 1);
   };
 
   const onSubmit = async (data: LeadershipInstituteApplicationValues) => {
@@ -148,12 +208,6 @@ export function LeadershipInstituteApplicationForm() {
 
     if (currentStep < TOTAL_STEPS) {
       await handleStepAdvance();
-      return;
-    }
-
-    const isStepValid = await trigger([...step4Fields]);
-
-    if (!isStepValid) {
       return;
     }
 
@@ -198,13 +252,22 @@ export function LeadershipInstituteApplicationForm() {
       <ComponentLayout className="py-8 md:py-12">
         <div className="w-full max-w-4xl space-y-8 text-left">
           <FormProvider {...methods}>
-            <form onSubmit={handleFormSubmit} noValidate>
+            <form onSubmit={handleFormSubmit} className="space-y-8" noValidate>
               <div className="space-y-8">
                 {currentStep === 1 ? <StepAboutYou /> : null}
                 {currentStep === 2 ? <StepCommunityImpact /> : null}
                 {currentStep === 3 ? <StepDeploymentVision /> : null}
                 {currentStep === 4 ? <StepReviewSubmit /> : null}
+                {currentStep === 5 ? (
+                  <StepApplicationReview onEditStep={goToStep} />
+                ) : null}
               </div>
+
+              {submitError && !isCertificationModalOpen ? (
+                <p className="text-sm text-red-600" role="alert">
+                  {submitError}
+                </p>
+              ) : null}
 
               <FormActions
                 isSubmitting={isSubmitting || isSaving}

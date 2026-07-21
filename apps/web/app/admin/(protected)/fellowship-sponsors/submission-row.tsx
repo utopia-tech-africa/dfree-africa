@@ -3,8 +3,16 @@ import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  formatPaymentMethod,
+  formatPaymentStatus,
+} from "@/lib/fellowship-sponsors/format-payment-method";
 import { formatSponsorshipTier } from "@/lib/fellowship-sponsors/format-tier";
-import type { FellowshipSponsorSummary } from "@/lib/fellowship-sponsors/types";
+import type {
+  FellowshipSponsorSummary,
+  SponsorPaymentStatus,
+} from "@/lib/fellowship-sponsors/types";
+import type { PaymentMethodValue } from "@/lib/forms/schemas/leadership-institute-sponsor";
 
 type SubmissionRowProps = {
   submission: FellowshipSponsorSummary;
@@ -15,6 +23,10 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   dateStyle: "medium",
   timeStyle: "short",
 });
+
+function toDate(value: Date | string) {
+  return value instanceof Date ? value : new Date(value);
+}
 
 function getInitials(firstName: string, lastName: string, email: string) {
   const name = `${firstName} ${lastName}`.trim();
@@ -28,6 +40,39 @@ function getInitials(firstName: string, lastName: string, email: string) {
   return source.slice(0, 2).toUpperCase();
 }
 
+function paymentBadgeClassName(status: SponsorPaymentStatus | null) {
+  switch (status) {
+    case "paid":
+      return "bg-emerald-100 text-emerald-800";
+    case "cancelled":
+      return "bg-red-100 text-red-800";
+    case "pending":
+      return "bg-amber-50 text-amber-700 ring-1 ring-amber-200";
+    default:
+      return "bg-neutral-200 text-neutral-800";
+  }
+}
+
+function paymentLabel(
+  status: SponsorPaymentStatus | null,
+  paymentMethod: string,
+) {
+  if (status) {
+    return formatPaymentStatus(status);
+  }
+
+  if (
+    paymentMethod === "check_ach" ||
+    paymentMethod === "wire_transfer" ||
+    paymentMethod === "pledge_invoice" ||
+    paymentMethod === "credit_card"
+  ) {
+    return formatPaymentMethod(paymentMethod as PaymentMethodValue);
+  }
+
+  return "Submitted";
+}
+
 export function SubmissionRow({
   submission,
   variant = "default",
@@ -39,9 +84,14 @@ export function SubmissionRow({
     submission.email,
   );
   const isCompact = variant === "compact";
+  const createdAt = toDate(submission.createdAt);
   const tierLabel = formatSponsorshipTier(
     submission.sponsorshipTier,
     submission.customFellowCount,
+  );
+  const statusLabel = paymentLabel(
+    submission.paymentStatus,
+    submission.paymentMethod,
   );
 
   const viewButton = (
@@ -74,12 +124,18 @@ export function SubmissionRow({
         </div>
 
         <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+          <Badge
+            variant="secondary"
+            className={paymentBadgeClassName(submission.paymentStatus)}
+          >
+            {statusLabel}
+          </Badge>
           <Badge variant="secondary">{tierLabel}</Badge>
           <time
             className="text-sm text-neutral-700"
-            dateTime={submission.createdAt.toISOString()}
+            dateTime={createdAt.toISOString()}
           >
-            {dateFormatter.format(submission.createdAt)}
+            {dateFormatter.format(createdAt)}
           </time>
           {viewButton}
         </div>
@@ -119,11 +175,20 @@ export function SubmissionRow({
       </td>
 
       <td className="px-6 py-4 align-middle">
+        <Badge
+          variant="secondary"
+          className={paymentBadgeClassName(submission.paymentStatus)}
+        >
+          {statusLabel}
+        </Badge>
+      </td>
+
+      <td className="px-6 py-4 align-middle">
         <time
           className="whitespace-nowrap text-sm text-neutral-700"
-          dateTime={submission.createdAt.toISOString()}
+          dateTime={createdAt.toISOString()}
         >
-          {dateFormatter.format(submission.createdAt)}
+          {dateFormatter.format(createdAt)}
         </time>
       </td>
 

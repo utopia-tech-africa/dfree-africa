@@ -3,7 +3,11 @@ import { NextResponse } from "next/server";
 import { createFellowshipSponsorSubmission } from "@/lib/fellowship-sponsors/create-submission";
 import { prisma } from "@/lib/db/prisma";
 import { parseFellowshipSponsorSubmissionRequest } from "@/lib/fellowship-sponsors/parse-submission-request";
-import { buildPendingSponsorPayment } from "@/lib/fellowship-sponsors/payment";
+import {
+  buildPendingSponsorPayment,
+  cleanupAbandonedSponsorCheckouts,
+  createSponsorCheckoutCancelToken,
+} from "@/lib/fellowship-sponsors/payment";
 import {
   formatSponsorshipCurrency,
   getFellowCount,
@@ -104,14 +108,22 @@ export async function POST(request: Request) {
   }
 
   try {
+    void cleanupAbandonedSponsorCheckouts().catch((error) => {
+      console.error(
+        "[fellowship-sponsors/checkout] Abandoned checkout cleanup failed:",
+        error,
+      );
+    });
+
     const submission = await createFellowshipSponsorSubmission(payload, {
       sendAcknowledgement: false,
     });
 
     const stripe = getStripeClient();
     const origin = siteUrl.replace(/\/$/, "");
+    const cancelToken = createSponsorCheckoutCancelToken();
     const successUrl = `${origin}/${locale}/leadership-institute/sponsor?checkout=success&session_id={CHECKOUT_SESSION_ID}`;
-    const cancelUrl = `${origin}/${locale}/leadership-institute/sponsor?checkout=cancelled&submission_id=${submission.id}`;
+    const cancelUrl = `${origin}/${locale}/leadership-institute/sponsor?checkout=cancelled&submission_id=${submission.id}&cancel_token=${cancelToken}`;
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -162,6 +174,7 @@ export async function POST(request: Request) {
           payment: buildPendingSponsorPayment({
             amountCents,
             stripeCheckoutSessionId: session.id,
+            cancelToken,
           }),
         },
       },

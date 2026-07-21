@@ -141,7 +141,7 @@ const leadershipInstituteApplicationShape = {
   setting: requiredSelect(deploymentSettingValues, "Setting"),
   participationHistory: requiredSelect(
     participationHistoryValues,
-    "Participation history",
+    "Project timeline",
   ),
   successMetrics: z
     .array(z.enum(successMetricValues))
@@ -275,6 +275,10 @@ export const step4Fields = [
   "schedulingConstraints",
   "referralSources",
 ] as const satisfies readonly (keyof LeadershipInstituteApplicationValues)[];
+
+/** Step 5 is a read-only review — no fields to validate. */
+export const step5Fields =
+  [] as const satisfies readonly (keyof LeadershipInstituteApplicationValues)[];
 
 export const certificationFields = [
   "signature",

@@ -5,6 +5,7 @@ import { markFellowshipSponsorCheckoutCancelled } from "@/lib/fellowship-sponsor
 
 const cancelSchema = z.object({
   submissionId: z.string().min(1),
+  cancelToken: z.string().min(1),
 });
 
 export async function POST(request: Request) {
@@ -29,7 +30,19 @@ export async function POST(request: Request) {
   }
 
   try {
-    await markFellowshipSponsorCheckoutCancelled(parsed.data.submissionId);
+    const result = await markFellowshipSponsorCheckoutCancelled(
+      parsed.data.submissionId,
+      { cancelToken: parsed.data.cancelToken },
+    );
+
+    if (!result.ok) {
+      const status = result.error === "unauthorized" ? 403 : 404;
+      return NextResponse.json(
+        { success: false, error: result.error },
+        { status },
+      );
+    }
+
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(

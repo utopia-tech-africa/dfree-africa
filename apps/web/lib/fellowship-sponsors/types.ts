@@ -27,6 +27,7 @@ export const sponsorPaymentSchema = z.object({
   currency: z.literal("usd"),
   stripeCheckoutSessionId: z.string().min(1).optional(),
   stripePaymentIntentId: z.string().min(1).optional(),
+  cancelToken: z.string().min(1).optional(),
   paidAt: z.string().min(1).optional(),
 });
 
@@ -54,5 +55,7 @@ export type FellowshipSponsorSummary = {
   organization: string;
   sponsorshipTier: string;
   customFellowCount: number;
+  paymentMethod: string;
+  paymentStatus: SponsorPaymentStatus | null;
   createdAt: Date;
 };
