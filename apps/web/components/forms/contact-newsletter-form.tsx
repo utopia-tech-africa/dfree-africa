@@ -54,7 +54,7 @@ export function ContactNewsletterForm() {
   };
 
   const inputClassName =
-    "h-auto min-h-14 w-full rounded-full border border-neutral-100 bg-transparent px-5 py-6 text-neutral-100 placeholder:text-sm placeholder:text-neutral-300";
+    "h-auto min-h-14 w-full rounded-full border border-neutral-100 bg-transparent px-5 py-2 text-neutral-100 placeholder:text-neutral-300";
 
   return (
     <form

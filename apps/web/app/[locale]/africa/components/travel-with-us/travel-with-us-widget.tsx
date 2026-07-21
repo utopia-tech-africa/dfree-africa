@@ -80,7 +80,7 @@ export function TravelWithUsWidget() {
           onFocus={() => setExpanded(true)}
           onBlur={() => setExpanded(false)}
           className={cn(
-            "flex items-center overflow-hidden rounded-full bg-primary-500 text-white transition-all duration-300 ease-out",
+            "flex items-center overflow-hidden rounded-full bg-primary-500 text-white transition-all duration-300 ease-out border border-neutral-100/10",
             expanded ? "h-[57px] w-[238px] pl-6" : "size-[57px] justify-center",
           )}
         >

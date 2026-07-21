@@ -3,12 +3,7 @@ import { getFeaturedProjects, getPhotoGallery } from "@/lib/sanity";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import React from "react";
-import {
-  ContinentalImpact,
-  FeaturedProjects,
-  Hero,
-  TravelWithUsWidget,
-} from "./components";
+import { ContinentalImpact, FeaturedProjects, Hero } from "./components";
 import { OurStory } from "./components/our-story";
 import { PhotoGallery } from "./continental/components";
 
@@ -37,7 +32,6 @@ const AfricaPage = async ({ params }: Props) => {
   return (
     <div>
       <Hero />
-      <TravelWithUsWidget />
       <OurStory />
       <ContinentalImpact />
       <FeaturedProjects

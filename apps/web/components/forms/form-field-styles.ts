@@ -1,7 +1,7 @@
 export const formFieldGroupClassName = "space-y-2.5";
 
 export const formFieldClassName =
-  "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-1000 placeholder:text-neutral-500 outline-none focus-visible:border-primary-500 focus-visible:ring-[3px] focus-visible:ring-primary-500/20 disabled:opacity-50";
+  "w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-1000 placeholder:text-neutral-500 outline-none focus-visible:border-neutral-100 focus-visible:ring-[3px] focus-visible:ring-primary-500/80 disabled:opacity-50";
 
 export const formSelectTriggerClassName =
   "h-auto w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm text-neutral-1000 shadow-none data-[size=default]:h-auto data-[placeholder]:text-neutral-500 outline-none focus-visible:border-primary-500 focus-visible:ring-[3px] focus-visible:ring-primary-500/20 disabled:opacity-50";
