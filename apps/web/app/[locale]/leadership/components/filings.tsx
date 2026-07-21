@@ -49,6 +49,8 @@ export const Filings = async () => {
               buttonVariants({ variant: "default", size: "lg" }),
               "w-fit",
             )}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {t("cta1")}
           </Link>
