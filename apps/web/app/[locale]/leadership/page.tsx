@@ -4,7 +4,7 @@ import { Title } from "@/components/title-and-subtitle/title";
 import { createMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
-import { BoardOfDirectors, Filings, Staff } from "./components";
+import { BoardOfDirectors, Filings } from "./components";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -34,7 +34,7 @@ const LeadershipPage = async () => {
         <Subtitle text={t("subtitle")} />
       </div>
       <BoardOfDirectors />
-      <Staff />
+
       <Filings />
     </ComponentLayout>
   );
