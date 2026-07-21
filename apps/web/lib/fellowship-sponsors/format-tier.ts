@@ -15,6 +15,13 @@ const tierLabels: Record<PresetSponsorshipTierValue, string> = {
   legacy: "Legacy — $210,500",
 };
 
+const shortTierLabels: Record<PresetSponsorshipTierValue, string> = {
+  community: "Community",
+  champion: "Champion",
+  catalyst: "Catalyst",
+  legacy: "Legacy",
+};
+
 export function formatSponsorshipTier(
   tier: string,
   customFellowCount = 1,
@@ -29,6 +36,18 @@ export function formatSponsorshipTier(
 
   if (tier in tierLabels) {
     return tierLabels[tier as PresetSponsorshipTierValue];
+  }
+
+  return tier;
+}
+
+export function formatSponsorshipTierName(tier: string): string {
+  if (tier === "custom") {
+    return "Custom";
+  }
+
+  if (tier in shortTierLabels) {
+    return shortTierLabels[tier as PresetSponsorshipTierValue];
   }
 
   return tier;

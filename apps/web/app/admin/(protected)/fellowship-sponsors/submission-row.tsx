@@ -7,12 +7,19 @@ import {
   formatPaymentMethod,
   formatPaymentStatus,
 } from "@/lib/fellowship-sponsors/format-payment-method";
-import { formatSponsorshipTier } from "@/lib/fellowship-sponsors/format-tier";
+import {
+  formatSponsorshipAmount,
+  formatSponsorshipTierName,
+} from "@/lib/fellowship-sponsors/format-tier";
+import { getFellowCount } from "@/lib/fellowship-sponsors/sponsorship-pricing";
 import type {
   FellowshipSponsorSummary,
   SponsorPaymentStatus,
 } from "@/lib/fellowship-sponsors/types";
-import type { PaymentMethodValue } from "@/lib/forms/schemas/leadership-institute-sponsor";
+import type {
+  PaymentMethodValue,
+  SponsorshipTierValue,
+} from "@/lib/forms/schemas/leadership-institute-sponsor";
 
 type SubmissionRowProps = {
   submission: FellowshipSponsorSummary;
@@ -73,6 +80,30 @@ function paymentLabel(
   return "Submitted";
 }
 
+function SponsorshipCell({
+  tier,
+  customFellowCount,
+}: {
+  tier: string;
+  customFellowCount: number;
+}) {
+  const resolvedTier = tier as SponsorshipTierValue;
+  const count = getFellowCount(resolvedTier, customFellowCount);
+  const fellowLabel = count === 1 ? "1 fellow" : `${count} fellows`;
+
+  return (
+    <div className="min-w-[7.5rem] space-y-0.5">
+      <p className="font-medium text-neutral-1000">
+        {formatSponsorshipTierName(tier)}
+      </p>
+      <p className="whitespace-nowrap text-sm text-neutral-800">
+        {formatSponsorshipAmount(resolvedTier, customFellowCount)}
+      </p>
+      <p className="text-xs text-neutral-600">{fellowLabel}</p>
+    </div>
+  );
+}
+
 export function SubmissionRow({
   submission,
   variant = "default",
@@ -85,10 +116,6 @@ export function SubmissionRow({
   );
   const isCompact = variant === "compact";
   const createdAt = toDate(submission.createdAt);
-  const tierLabel = formatSponsorshipTier(
-    submission.sponsorshipTier,
-    submission.customFellowCount,
-  );
   const statusLabel = paymentLabel(
     submission.paymentStatus,
     submission.paymentMethod,
@@ -130,7 +157,9 @@ export function SubmissionRow({
           >
             {statusLabel}
           </Badge>
-          <Badge variant="secondary">{tierLabel}</Badge>
+          <span className="text-sm text-neutral-800">
+            {formatSponsorshipTierName(submission.sponsorshipTier)}
+          </span>
           <time
             className="text-sm text-neutral-700"
             dateTime={createdAt.toISOString()}
@@ -164,14 +193,17 @@ export function SubmissionRow({
         </div>
       </td>
 
-      <td className="px-6 py-4 align-middle">
+      <td className="max-w-[10rem] px-6 py-4 align-middle">
         <p className="truncate text-sm text-neutral-800">
           {submission.organization}
         </p>
       </td>
 
       <td className="px-6 py-4 align-middle">
-        <Badge variant="secondary">{tierLabel}</Badge>
+        <SponsorshipCell
+          tier={submission.sponsorshipTier}
+          customFellowCount={submission.customFellowCount}
+        />
       </td>
 
       <td className="px-6 py-4 align-middle">

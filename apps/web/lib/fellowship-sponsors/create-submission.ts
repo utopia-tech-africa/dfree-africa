@@ -62,6 +62,7 @@ export async function createFellowshipSponsorSubmission(
 export async function sendFellowshipSponsorAcknowledgement(
   submissionId: string,
   payload: FellowshipSponsorPayload,
+  options: { force?: boolean } = {},
 ) {
   const submission = await prisma.formSubmission.findFirst({
     where: {
@@ -73,9 +74,14 @@ export async function sendFellowshipSponsorAcknowledgement(
     },
   });
 
-  if (!submission || submission.acknowledgementSentAt) {
-    return;
+  if (!submission) {
+    return { sent: false, reason: "not_found" as const };
+  }
+
+  if (submission.acknowledgementSentAt && !options.force) {
+    return { sent: false, reason: "already_sent" as const };
   }
 
   await sendSubmissionAcknowledgement(submissionId, payload);
+  return { sent: true as const };
 }

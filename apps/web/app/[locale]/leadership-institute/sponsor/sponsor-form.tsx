@@ -7,6 +7,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
 import ComponentLayout from "@/components/component-layout";
+import { useRouter } from "@/i18n/navigation";
 import { confirmFellowshipSponsorCheckout } from "@/lib/forms/confirm-fellowship-sponsor-checkout";
 import {
   SPONSOR_TOTAL_STEPS,
@@ -32,6 +33,7 @@ import { cn } from "@/lib/utils";
 import { SponsorCertificationModal } from "./components/sponsor-certification-modal";
 import { SponsorFormActions } from "./components/sponsor-form-actions";
 import { SponsorFormHeader } from "./components/sponsor-form-header";
+import { SponsorStartModal } from "./components/sponsor-start-modal";
 import { SponsorStepper } from "./components/sponsor-stepper";
 import { SponsorSuccessModal } from "./components/sponsor-success-modal";
 import { StepRecognitionPayment } from "./components/step-recognition-payment";
@@ -41,9 +43,11 @@ import { StepSponsorshipDetails } from "./components/step-sponsorship-details";
 function LeadershipInstituteSponsorFormInner() {
   const t = useTranslations("leadershipInstituteSponsor");
   const locale = useLocale();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const checkoutHandledRef = useRef(false);
   const [currentStep, setCurrentStep] = useState(1);
+  const [hasStarted, setHasStarted] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isConfirmingCheckout, setIsConfirmingCheckout] = useState(false);
   const [isCertificationModalOpen, setIsCertificationModalOpen] =
@@ -74,6 +78,7 @@ function LeadershipInstituteSponsorFormInner() {
 
     if (checkout === "success") {
       checkoutHandledRef.current = true;
+      setHasStarted(true);
       const sessionId = searchParams.get("session_id");
 
       window.history.replaceState({}, "", window.location.pathname);
@@ -101,6 +106,7 @@ function LeadershipInstituteSponsorFormInner() {
 
     if (checkout === "cancelled") {
       checkoutHandledRef.current = true;
+      setHasStarted(true);
       setCheckoutNotice(t("errors.checkoutCancelled"));
       setCurrentStep(SPONSOR_TOTAL_STEPS);
 
@@ -257,6 +263,13 @@ function LeadershipInstituteSponsorFormInner() {
 
   return (
     <>
+      {!hasStarted ? (
+        <SponsorStartModal
+          onStart={() => setHasStarted(true)}
+          onClose={() => router.push("/leadership-institute")}
+        />
+      ) : null}
+
       <SponsorStepper currentStep={currentStep} />
 
       <ComponentLayout className="py-8 md:py-12">

@@ -175,6 +175,40 @@ export function SubmissionDetail({ payload }: SubmissionDetailProps) {
         {payload.checkNumber ? (
           <DetailField label="Check number" value={payload.checkNumber} />
         ) : null}
+        {payload.anticipatedWireDate ? (
+          <DetailField
+            label="Anticipated wire date"
+            value={payload.anticipatedWireDate}
+          />
+        ) : null}
+        {payload.invoiceRecipientName ? (
+          <DetailField
+            label="Invoice recipient name"
+            value={payload.invoiceRecipientName}
+          />
+        ) : null}
+        {payload.invoiceEmail ? (
+          <DetailField label="Invoice email" value={payload.invoiceEmail} />
+        ) : null}
+        {payload.purchaseOrderNumber ? (
+          <DetailField
+            label="Purchase order number"
+            value={payload.purchaseOrderNumber}
+          />
+        ) : null}
+        {payload.requestedPaymentDate ? (
+          <DetailField
+            label="Requested payment date"
+            value={payload.requestedPaymentDate}
+          />
+        ) : null}
+        {payload.specialBillingInstructions ? (
+          <DetailField
+            label="Special billing instructions"
+            value={payload.specialBillingInstructions}
+            className="sm:col-span-2"
+          />
+        ) : null}
         {payload.referralSource ? (
           <DetailField
             label="How did you hear about us"

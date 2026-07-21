@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 import {
-  leadershipInstituteSponsorSchema,
+  leadershipInstituteSponsorObjectSchema,
   sponsorReferralSourceValues,
 } from "@/lib/forms/schemas/leadership-institute-sponsor";
 
@@ -33,9 +33,8 @@ export const sponsorPaymentSchema = z.object({
 
 export type SponsorPaymentInfo = z.infer<typeof sponsorPaymentSchema>;
 
-export const fellowshipSponsorPayloadSchema = leadershipInstituteSponsorSchema
-  .omit({ referralSource: true })
-  .extend({
+export const fellowshipSponsorPayloadSchema =
+  leadershipInstituteSponsorObjectSchema.omit({ referralSource: true }).extend({
     recognitionLogo: storedRecognitionLogoSchema.optional(),
     payment: sponsorPaymentSchema.optional(),
     referralSource: z

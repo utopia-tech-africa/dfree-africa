@@ -26,6 +26,7 @@ import { submitFellowshipApplication } from "@/lib/forms/submit-fellowship-appli
 
 import {
   ApplicationCertificationModal,
+  ApplicationStartModal,
   ApplicationSuccessModal,
   ApplicationStepper,
   FormActions,
@@ -94,6 +95,7 @@ export function LeadershipInstituteApplicationForm() {
   const t = useTranslations("leadershipInstituteApplication");
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
+  const [hasStarted, setHasStarted] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCertificationModalOpen, setIsCertificationModalOpen] =
     useState(false);
@@ -133,6 +135,7 @@ export function LeadershipInstituteApplicationForm() {
       signature: "",
     });
     setCurrentStep(draft.currentStep);
+    setHasStarted(true);
   }, [reset]);
 
   const saveDraft = (step = currentStep) => {
@@ -247,6 +250,13 @@ export function LeadershipInstituteApplicationForm() {
 
   return (
     <>
+      {!hasStarted ? (
+        <ApplicationStartModal
+          onStart={() => setHasStarted(true)}
+          onClose={() => router.push("/leadership-institute")}
+        />
+      ) : null}
+
       <ApplicationStepper currentStep={currentStep} />
 
       <ComponentLayout className="py-8 md:py-12">

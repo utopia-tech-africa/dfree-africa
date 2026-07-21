@@ -1186,6 +1186,27 @@
     "errors": {
       "submitFailed": "No pudimos enviar su solicitud. Inténtelo de nuevo en un momento."
     },
+    "startModal": {
+      "title": "Solicitud de beca DFREE®",
+      "close": "Cerrar",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Solicite unirse a la próxima cohorte del Bottom-Up Leadership Institute. Los Fellows se seleccionan mediante un proceso competitivo y reciben una beca de acceso completo. Los costos del programa son cubiertos por patrocinadores en nombre de cada Fellow.",
+      "benefitsTitle": "Lo que recibirá",
+      "benefits": {
+        "scholarship": "Beca de acceso completo",
+        "training": "Formación en liderazgo",
+        "deployment": "Apoyo para el despliegue comunitario",
+        "alumni": "Red nacional de alumni",
+        "capstone": "Orientación para el proyecto Capstone"
+      },
+      "beforeYouBeginTitle": "Antes de comenzar",
+      "beforeYouBegin": {
+        "duration": "- La solicitud toma unos 15–20 minutos",
+        "saveContinue": "- Puede guardar y continuar más tarde",
+        "noFee": "- Sin costo de solicitud"
+      },
+      "start": "Comenzar solicitud"
+    },
     "certificationModal": {
       "title": "Compromiso y certificación",
       "close": "Cerrar",
@@ -1532,12 +1553,13 @@
       },
       "options": {
         "referralSource": {
-          "fellow_referral": "Referencia de un fellow DFREE®",
-          "website": "Sitio web",
+          "fellow_or_alumni": "Fellow o alumni DFREE®",
+          "website": "Sitio web de DFREE Foundation",
+          "leadership": "Dr. DeForest Soaries / liderazgo DFREE",
+          "church_or_faith": "Red de iglesia o fe",
+          "nonprofit_network": "Red de organizaciones sin fines de lucro / fundaciones",
           "social_media": "Redes sociales",
-          "church": "Iglesia",
-          "organization": "Organización",
-          "academic": "Ámbito académico",
+          "corporate_csr": "Donaciones corporativas / equipo de RSC",
           "other": "Otro"
         }
       }
@@ -1642,8 +1664,9 @@
           "tab": "Cheque/ACH",
           "instructions": "Haga los cheques a nombre de DFREE Global Foundation, Inc. — Memo: Fellow Access Scholarship Fund. Para transferencia ACH/electrónica, contacte a la Fundación para obtener los datos bancarios después de enviar este formulario.",
           "mailToLabel": "Enviar por correo a",
-          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Fellow Access Scholarship Fund\n[Dirección — por completar por la Fundación]",
-          "checkNumberLabel": "Número de cheque (si ya está escrito)"
+          "mailToAddress": "DFREE Global Foundation, Inc.\nAttn: Robert Finely\nSuite 2\nSomerset, NJ 08773",
+          "checkNumberLabel": "Número de cheque",
+          "checkNumberOptional": "(si ya está escrito)"
         },
         "credit_card": {
           "tab": "Tarjeta de crédito",
@@ -1652,11 +1675,21 @@
         },
         "wire_transfer": {
           "tab": "Transferencia bancaria",
-          "body": "Después de enviar este formulario, nuestro equipo le proporcionará instrucciones de transferencia bancaria y datos bancarios."
+          "body": "Los datos bancarios para la transferencia se proporcionarán dentro de los 2 días hábiles posteriores al envío del formulario. Envíe este formulario primero y un representante de la Fundación le enviará la información de ruta y cuenta.",
+          "anticipatedWireDateLabel": "Fecha anticipada de transferencia"
         },
         "pledge_invoice": {
           "tab": "Compromiso / Factura",
-          "body": "Después de enviar este formulario, nuestro equipo emitirá una factura o acuerdo de compromiso según su compromiso de patrocinio."
+          "body": "Envíe este formulario como un compromiso y la Fundación emitirá una factura formal a su organización. Los compromisos se cumplen dentro de los 30 días posteriores a la fecha de inicio de la cohorte, salvo otro acuerdo.",
+          "invoiceRecipientNameLabel": "Nombre del destinatario de la factura",
+          "invoiceRecipientNamePlaceholder": "Contacto de cuentas por pagar",
+          "invoiceEmailLabel": "Correo de facturación",
+          "invoiceEmailPlaceholder": "ap@organizacion.org",
+          "purchaseOrderNumberLabel": "Número de orden de compra",
+          "purchaseOrderNumberPlaceholder": "Opcional",
+          "requestedPaymentDateLabel": "Fecha de pago solicitada",
+          "specialBillingInstructionsLabel": "Instrucciones especiales de facturación",
+          "specialBillingInstructionsPlaceholder": "Cualquier requisito para su equipo de cuentas por pagar"
         }
       }
     },
@@ -1664,6 +1697,28 @@
       "title": "¡Envío exitoso!",
       "body": "Su formulario se envió correctamente. Nuestro equipo revisará su envío y se comunicará con usted sobre los próximos pasos de este proceso",
       "goBackHome": "Volver al inicio"
+    },
+    "startModal": {
+      "title": "Formulario de compromiso de patrocinio DFREE®",
+      "close": "Cerrar",
+      "headline": "Bottom-Up Leadership Institute",
+      "body": "Su patrocinio elimina por completo la barrera financiera. Cada dólar que aporta se destina directamente a colocar a un líder comunitario en el programa DFREE® Fellows sin costo para ellos — mediante una beca de acceso totalmente patrocinada. Cada cohorte de 8 semanas del Bottom-Up Leadership Institute (BLI) formará hasta 20 fellows.",
+      "impactTitle": "Lo que hace su patrocinio:",
+      "impact": {
+        "one": {
+          "stat": "Uno",
+          "label": "Fellow DFREE® totalmente financiado"
+        },
+        "fiveTen": {
+          "stat": "Cinco - Diez",
+          "label": "Miembros de la comunidad formados por cada Fellow"
+        },
+        "dozens": {
+          "stat": "Decenas",
+          "label": "Familias alcanzadas por ciclo de cohorte"
+        }
+      },
+      "start": "Comenzar patrocinio"
     },
     "errors": {
       "submitFailed": "No pudimos enviar su consulta. Inténtelo de nuevo en un momento.",

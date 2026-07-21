@@ -15,6 +15,23 @@ export const TIER_FELLOW_COUNTS: Record<PresetSponsorshipTierValue, number> = {
   legacy: 20,
 };
 
+export function getPresetTierForFellowCount(
+  fellowCount: number,
+): PresetSponsorshipTierValue | null {
+  const entries = Object.entries(TIER_FELLOW_COUNTS) as [
+    PresetSponsorshipTierValue,
+    number,
+  ][];
+
+  for (const [tier, count] of entries) {
+    if (count === fellowCount) {
+      return tier;
+    }
+  }
+
+  return null;
+}
+
 export function formatSponsorshipCurrency(amount: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",

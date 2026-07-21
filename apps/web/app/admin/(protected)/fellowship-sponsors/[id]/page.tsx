@@ -12,10 +12,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { formatPaymentStatus } from "@/lib/fellowship-sponsors/format-payment-method";
-import { formatSponsorshipTier } from "@/lib/fellowship-sponsors/format-tier";
+import {
+  formatSponsorshipAmount,
+  formatSponsorshipTierName,
+} from "@/lib/fellowship-sponsors/format-tier";
 import { getFellowshipSponsorById } from "@/lib/fellowship-sponsors/get-submissions";
 import type { SponsorPaymentStatus } from "@/lib/fellowship-sponsors/types";
+import type { SponsorshipTierValue } from "@/lib/forms/schemas/leadership-institute-sponsor";
 
+import { SendAcknowledgementButton } from "./send-acknowledgement-button";
 import { SubmissionDetail } from "./submission-detail";
 
 type FellowshipSponsorDetailPageProps = {
@@ -53,6 +58,7 @@ export default async function FellowshipSponsorDetailPage({
   const sponsorName =
     `${submission.payload.firstName} ${submission.payload.lastName}`.trim();
   const paymentStatus = submission.payload.payment?.status;
+  const tier = submission.payload.sponsorshipTier as SponsorshipTierValue;
 
   return (
     <div className="space-y-6">
@@ -82,8 +88,11 @@ export default async function FellowshipSponsorDetailPage({
               </Badge>
             ) : null}
             <Badge variant="default">
-              {formatSponsorshipTier(
-                submission.payload.sponsorshipTier,
+              {formatSponsorshipTierName(submission.payload.sponsorshipTier)}
+            </Badge>
+            <Badge variant="secondary">
+              {formatSponsorshipAmount(
+                tier,
                 submission.payload.customFellowCount,
               )}
             </Badge>
@@ -100,6 +109,11 @@ export default async function FellowshipSponsorDetailPage({
           </div>
         </div>
       </div>
+
+      <SendAcknowledgementButton
+        submissionId={submission.id}
+        alreadySent={Boolean(submission.acknowledgementSentAt)}
+      />
 
       <Card className="transition-shadow hover:shadow-md">
         <CardHeader>

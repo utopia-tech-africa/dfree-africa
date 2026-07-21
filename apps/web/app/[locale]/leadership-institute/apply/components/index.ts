@@ -1,4 +1,5 @@
 export { ApplicationCertificationModal } from "./application-certification-modal";
+export { ApplicationStartModal } from "./application-start-modal";
 export { ApplicationSuccessModal } from "./application-success-modal";
 export { ApplicationStepper } from "./application-stepper";
 export { FormActions } from "./form-actions";

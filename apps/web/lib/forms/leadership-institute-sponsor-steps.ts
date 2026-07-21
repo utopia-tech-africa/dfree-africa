@@ -40,6 +40,12 @@ export const sponsorStep3Fields = [
   "recognitionDisplayName",
   "paymentMethod",
   "checkNumber",
+  "anticipatedWireDate",
+  "invoiceRecipientName",
+  "invoiceEmail",
+  "purchaseOrderNumber",
+  "requestedPaymentDate",
+  "specialBillingInstructions",
 ] as const satisfies ReadonlyArray<keyof LeadershipInstituteSponsorValues>;
 
 export const sponsorCertificationFields = [

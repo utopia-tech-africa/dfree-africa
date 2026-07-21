@@ -12,7 +12,7 @@ const headerCellClassName =
 export function SubmissionsTable({ submissions }: SubmissionsTableProps) {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full min-w-[52rem] border-collapse">
+      <table className="w-full min-w-[56rem] border-collapse">
         <thead>
           <tr className="border-b border-neutral-200 bg-neutral-50">
             <th scope="col" className={headerCellClassName}>
@@ -22,7 +22,7 @@ export function SubmissionsTable({ submissions }: SubmissionsTableProps) {
               Organization
             </th>
             <th scope="col" className={headerCellClassName}>
-              Sponsorship
+              Level
             </th>
             <th scope="col" className={headerCellClassName}>
               Payment
