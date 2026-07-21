@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { TravelWithUsWidget } from "./africa/components";
 
 type Props = {
   children: React.ReactNode;
@@ -24,6 +25,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <>
       <Header />
+      <TravelWithUsWidget />
       {children}
       <Footer />
     </>
