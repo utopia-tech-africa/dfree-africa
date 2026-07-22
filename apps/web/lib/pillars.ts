@@ -33,7 +33,7 @@ export const PILLARS_DATA: Record<PillarKey, PillarData> = {
     bgImage:
       "https://res.cloudinary.com/dan9camhs/image/upload/v1776182122/4a78e47474569357f6bcf5de958ef8f31159175b_ulgt5a.jpg",
     bgImageMobile:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1773147830/bb0ffce1-62df-48d1-a6d2-28ff3807bbcf.webp",
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1776182122/4a78e47474569357f6bcf5de958ef8f31159175b_ulgt5a.jpg",
     logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773147090/5a53b87a-0019-4653-b832-7db0069659fc.webp",
     imagePositionClassName: "object-[center_28%] md:object-center",
   },
@@ -58,7 +58,7 @@ export const PILLARS_DATA: Record<PillarKey, PillarData> = {
     bgImage:
       "https://res.cloudinary.com/dan9camhs/image/upload/v1776182346/baa58ff9d2a36004894d1316d3d5698a16f38671_m6n11w.jpg",
     bgImageMobile:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1773148188/88d34c7a-1893-415b-b188-6014cf91c1b6.webp",
+      "https://res.cloudinary.com/dan9camhs/image/upload/v1784720408/pillars_buttom_up_mobile_wyz4ti.jpg",
     imagePositionClassName: "object-[center_24%] md:object-center",
   },
 };

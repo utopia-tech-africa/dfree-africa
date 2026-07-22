@@ -22,7 +22,11 @@ const LeftPanel = () => {
 
       <p className="text-neutral-400 leading-relaxed">{t("description")}</p>
 
-      <Link href={"https://store.dfree.com/"}>
+      <Link
+        href={"https://store.dfree.com/"}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Button
           variant="secondary"
           size="lg"
