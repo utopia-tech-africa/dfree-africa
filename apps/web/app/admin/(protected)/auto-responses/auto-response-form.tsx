@@ -38,6 +38,8 @@ import {
 
 type AutoResponseFormProps = {
   template: FormAcknowledgementTemplateClient;
+  /** When true, omit the outer card (used inside the fellowship tabs). */
+  embedded?: boolean;
 };
 
 function formatUpdatedAt(updatedAt: string | null) {
@@ -56,7 +58,10 @@ function formatUpdatedAt(updatedAt: string | null) {
   }).format(date);
 }
 
-export function AutoResponseForm({ template }: AutoResponseFormProps) {
+export function AutoResponseForm({
+  template,
+  embedded = false,
+}: AutoResponseFormProps) {
   const router = useRouter();
   const [message, setMessage] = useState<string | null>(null);
   const [serverError, setServerError] = useState<string | null>(null);
@@ -119,6 +124,113 @@ export function AutoResponseForm({ template }: AutoResponseFormProps) {
     router.refresh();
   };
 
+  const form = (
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+      <input type="hidden" {...register("formType")} />
+
+      {embedded ? (
+        <div className="space-y-2">
+          <div className="flex flex-wrap items-center gap-3">
+            <p className="text-sm font-medium text-neutral-900">
+              {labels.title}
+            </p>
+            <Badge variant={template.isCustom ? "default" : "secondary"}>
+              {template.isCustom ? "Custom" : "Default"}
+            </Badge>
+          </div>
+          <p className="text-sm text-neutral-600">{labels.description}</p>
+          {template.updatedAt ? (
+            <p className="text-xs text-neutral-600">
+              Last updated {formatUpdatedAt(template.updatedAt)}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
+
+      <div className={formFieldGroupClassName}>
+        <FormFieldLabel htmlFor={`${template.formType}-subject`}>
+          Email subject
+        </FormFieldLabel>
+        <Input
+          id={`${template.formType}-subject`}
+          aria-invalid={Boolean(errors.subject)}
+          disabled={isSubmitting || isResetting}
+          {...register("subject")}
+        />
+        <FormFieldError message={errors.subject?.message} />
+      </div>
+
+      <div className={formFieldGroupClassName}>
+        <FormFieldLabel htmlFor={`${template.formType}-body`}>
+          Message
+        </FormFieldLabel>
+        <Textarea
+          id={`${template.formType}-body`}
+          aria-invalid={Boolean(errors.bodyText)}
+          disabled={isSubmitting || isResetting}
+          {...register("bodyText")}
+        />
+        <p className="text-xs text-neutral-600">
+          Write the email in plain text. Use a blank line between paragraphs.
+          Include{" "}
+          <code className="rounded bg-neutral-200 px-1 py-0.5 text-[11px]">
+            {NAME_PLACEHOLDER}
+          </code>{" "}
+          where the submitter&apos;s name should appear.
+        </p>
+        <FormFieldError message={errors.bodyText?.message} />
+      </div>
+
+      <div className="flex flex-wrap items-center gap-3">
+        <Button
+          type="submit"
+          disabled={isSubmitting || isResetting || !isDirty}
+        >
+          {isSubmitting ? "Saving…" : "Save changes"}
+        </Button>
+        <Button
+          type="button"
+          variant="outline"
+          disabled={isSubmitting || isResetting || !template.isCustom}
+          onClick={handleReset}
+        >
+          {isResetting ? "Resetting…" : "Reset to default"}
+        </Button>
+      </div>
+
+      <AnimatePresence mode="wait">
+        {message ? (
+          <motion.p
+            key="success"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="text-sm text-primary-600"
+            role="status"
+          >
+            {message}
+          </motion.p>
+        ) : null}
+        {serverError ? (
+          <motion.p
+            key="error"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="text-sm text-tertiary-500"
+            role="alert"
+          >
+            {serverError}
+          </motion.p>
+        ) : null}
+      </AnimatePresence>
+    </form>
+  );
+
+  if (embedded) {
+    return form;
+  }
+
   return (
     <Card className="transition-shadow hover:shadow-md">
       <CardHeader className="gap-3">
@@ -135,93 +247,7 @@ export function AutoResponseForm({ template }: AutoResponseFormProps) {
           </p>
         ) : null}
       </CardHeader>
-      <CardContent>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="space-y-5"
-          noValidate
-        >
-          <input type="hidden" {...register("formType")} />
-
-          <div className={formFieldGroupClassName}>
-            <FormFieldLabel htmlFor={`${template.formType}-subject`}>
-              Email subject
-            </FormFieldLabel>
-            <Input
-              id={`${template.formType}-subject`}
-              aria-invalid={Boolean(errors.subject)}
-              disabled={isSubmitting || isResetting}
-              {...register("subject")}
-            />
-            <FormFieldError message={errors.subject?.message} />
-          </div>
-
-          <div className={formFieldGroupClassName}>
-            <FormFieldLabel htmlFor={`${template.formType}-body`}>
-              Message
-            </FormFieldLabel>
-            <Textarea
-              id={`${template.formType}-body`}
-              aria-invalid={Boolean(errors.bodyText)}
-              disabled={isSubmitting || isResetting}
-              {...register("bodyText")}
-            />
-            <p className="text-xs text-neutral-600">
-              Write the email in plain text. Use a blank line between
-              paragraphs. Include{" "}
-              <code className="rounded bg-neutral-200 px-1 py-0.5 text-[11px]">
-                {NAME_PLACEHOLDER}
-              </code>{" "}
-              where the submitter&apos;s name should appear.
-            </p>
-            <FormFieldError message={errors.bodyText?.message} />
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3">
-            <Button
-              type="submit"
-              disabled={isSubmitting || isResetting || !isDirty}
-            >
-              {isSubmitting ? "Saving…" : "Save changes"}
-            </Button>
-            <Button
-              type="button"
-              variant="outline"
-              disabled={isSubmitting || isResetting || !template.isCustom}
-              onClick={handleReset}
-            >
-              {isResetting ? "Resetting…" : "Reset to default"}
-            </Button>
-          </div>
-
-          <AnimatePresence mode="wait">
-            {message ? (
-              <motion.p
-                key="success"
-                initial={{ opacity: 0, y: -4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="text-sm text-primary-600"
-                role="status"
-              >
-                {message}
-              </motion.p>
-            ) : null}
-            {serverError ? (
-              <motion.p
-                key="error"
-                initial={{ opacity: 0, y: -4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="text-sm text-tertiary-500"
-                role="alert"
-              >
-                {serverError}
-              </motion.p>
-            ) : null}
-          </AnimatePresence>
-        </form>
-      </CardContent>
+      <CardContent>{form}</CardContent>
     </Card>
   );
 }

@@ -11,6 +11,11 @@ const acknowledgementTitles: Record<FormAcknowledgementType, string> = {
   contact: "We received your message",
   "fellowship-application": "Your fellowship application was received",
   "fellowship-sponsor": "Your sponsorship inquiry was received",
+  "fellowship-application-pending": "Application status update",
+  "fellowship-application-under-review": "Your application is under review",
+  "fellowship-application-accepted": "Congratulations — you’re accepted",
+  "fellowship-application-rejected": "Application update",
+  "fellowship-application-waitlisted": "You’re on the waitlist",
 };
 
 function toParagraphs(bodyText: string): string[] {
