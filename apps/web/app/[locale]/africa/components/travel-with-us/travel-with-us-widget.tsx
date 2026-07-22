@@ -7,13 +7,38 @@ import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-const TRAVEL_HREF = "#";
+const TRAVEL_HREF = "https://firststeptours.com/dfree/";
 
 export function TravelWithUsWidget() {
   const t = useTranslations("africa.travelWithUs");
   const [expanded, setExpanded] = useState(false);
+  const [canHover, setCanHover] = useState(true);
   const [popoverAbove, setPopoverAbove] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const hoverQuery = window.matchMedia("(hover: hover)");
+    const syncHover = () => setCanHover(hoverQuery.matches);
+    syncHover();
+    hoverQuery.addEventListener("change", syncHover);
+    return () => hoverQuery.removeEventListener("change", syncHover);
+  }, []);
+
+  useEffect(() => {
+    if (!expanded || canHover) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setExpanded(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [expanded, canHover]);
 
   const updatePopoverPosition = useCallback(() => {
     const container = containerRef.current;
@@ -39,12 +64,27 @@ export function TravelWithUsWidget() {
     };
   }, [expanded, updatePopoverPosition]);
 
+  const handleMouseEnter = () => {
+    if (canHover) setExpanded(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (canHover) setExpanded(false);
+  };
+
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!canHover && !expanded) {
+      event.preventDefault();
+      setExpanded(true);
+    }
+  };
+
   return (
     <div
       ref={containerRef}
       className="fixed bottom-6 left-4 z-50 md:bottom-8 md:left-8"
-      onMouseEnter={() => setExpanded(true)}
-      onMouseLeave={() => setExpanded(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="relative">
         {expanded && (
@@ -74,11 +114,13 @@ export function TravelWithUsWidget() {
 
         <Link
           href={TRAVEL_HREF}
-          // target="_blank"
-          // rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label={t("label")}
-          onFocus={() => setExpanded(true)}
-          onBlur={() => setExpanded(false)}
+          aria-expanded={expanded}
+          onClick={handleLinkClick}
+          onFocus={() => canHover && setExpanded(true)}
+          onBlur={() => canHover && setExpanded(false)}
           className={cn(
             "flex items-center overflow-hidden rounded-full bg-primary-500 text-white transition-all duration-300 ease-out border border-neutral-100/10",
             expanded ? "h-[57px] w-[238px] pl-6" : "size-[57px] justify-center",
