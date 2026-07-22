@@ -89,7 +89,7 @@ Fellowship **application** and **sponsorship** forms are wired end-to-end:
 
 Admin list/detail pages live under:
 
-- `/admin/fellowship-applications` — search/filter, review status workflow (`pending` → `under_review` → `accepted` / `rejected` / `waitlisted`), CSV export
+- `/admin/fellowship-applications` — search/filter, review status workflow (`pending` → `under_review` → `accepted` / `rejected` / `waitlisted`), CSV export. Changing review status emails the applicant.
 - `/admin/fellowship-sponsors` — search/filter by payment status; logo preview/download; Stripe payment badges
 
-Edit acknowledgement email copy under **Auto-responses** (`/admin/auto-responses`).
+Edit acknowledgement and status-update email copy under **Auto-responses** (`/admin/auto-responses`). Each review status has its own editable template.
