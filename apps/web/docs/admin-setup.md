@@ -6,19 +6,20 @@ The admin area lives at `/admin` (locale-free). It uses **Better Auth**, **Prism
 
 Copy `apps/web/.env.example` to `apps/web/.env.local` and set (Prisma CLI reads `.env` then `.env.local` via `prisma.config.ts`):
 
-| Variable                | Notes                                                     |
-| ----------------------- | --------------------------------------------------------- |
-| `DATABASE_URL`          | Neon **pooled** connection string (serverless)            |
-| `BETTER_AUTH_SECRET`    | `openssl rand -base64 32`                                 |
-| `BETTER_AUTH_URL`       | Site origin, e.g. `http://localhost:3000`                 |
-| `AWS_REGION`            | SES region, e.g. `us-east-1` (or set `SES_AWS_REGION`)    |
-| `AWS_ACCESS_KEY_ID`     | IAM user/key with `ses:SendEmail` (optional on AWS hosts) |
-| `AWS_SECRET_ACCESS_KEY` | Matching secret key (optional on AWS hosts with IAM role) |
-| `EMAIL_FROM`            | Verified SES sender identity / domain address             |
-| `STRIPE_SECRET_KEY`     | Stripe Dashboard → Developers → API keys                  |
-| `STRIPE_WEBHOOK_SECRET` | Stripe webhook signing secret for `/api/stripe/webhook`   |
-| `NEXT_PUBLIC_SITE_URL`  | Canonical site origin used for Stripe success/cancel URLs |
-| `BOOTSTRAP_*`           | Only for the one-time seed script                         |
+| Variable                      | Notes                                                                                                                                                             |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `DATABASE_URL`                | Neon **pooled** connection string (serverless)                                                                                                                    |
+| `BETTER_AUTH_SECRET`          | `openssl rand -base64 32`                                                                                                                                         |
+| `BETTER_AUTH_URL`             | Exact site origin you open in the browser. Local: `http://localhost:3000`. Production: `https://www.dfreefoundation.org` (not `localhost`; apex redirects to www) |
+| `BETTER_AUTH_TRUSTED_ORIGINS` | Optional comma-separated extra origins (custom domains, previews). Apex + www for dfreefoundation.org are included in code.                                       |
+| `NEXT_PUBLIC_SITE_URL`        | Canonical public origin (Stripe URLs + Better Auth fallback). Production: `https://www.dfreefoundation.org`                                                       |
+| `AWS_REGION`                  | SES region, e.g. `us-east-1` (or set `SES_AWS_REGION`)                                                                                                            |
+| `AWS_ACCESS_KEY_ID`           | IAM user/key with `ses:SendEmail` (optional on AWS hosts)                                                                                                         |
+| `AWS_SECRET_ACCESS_KEY`       | Matching secret key (optional on AWS hosts with IAM role)                                                                                                         |
+| `EMAIL_FROM`                  | Verified SES sender identity / domain address                                                                                                                     |
+| `STRIPE_SECRET_KEY`           | Stripe Dashboard → Developers → API keys                                                                                                                          |
+| `STRIPE_WEBHOOK_SECRET`       | Stripe webhook signing secret for `/api/stripe/webhook`                                                                                                           |
+| `BOOTSTRAP_*`                 | Only for the one-time seed script                                                                                                                                 |
 
 ### Amazon SES (transactional email)
 
@@ -73,7 +74,9 @@ In **production**, public sign-up is disabled (`disableSignUp`). Create addition
 
 ## 5. Vercel
 
-Add the same env vars to the `web` project. Set `BETTER_AUTH_URL` to your production URL. Ensure `postinstall` / build runs `prisma generate` (configured in `package.json`).
+Add the same env vars to the `web` project. Set both `BETTER_AUTH_URL` and `NEXT_PUBLIC_SITE_URL` to `https://www.dfreefoundation.org` (apex `dfreefoundation.org` redirects to www). If either is left as `http://localhost:3000`, admin login fails with **Invalid origin**. Ensure `postinstall` / build runs `prisma generate` (configured in `package.json`).
+
+Transactional emails (admin invitations + form acknowledgements) are built with **React Email** templates under `emails/` and sent through Amazon SES (`lib/email/send-email.ts`).
 
 ## 6. Form submissions
 
