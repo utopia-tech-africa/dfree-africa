@@ -1,23 +1,14 @@
-function escapeHtml(value: string): string {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-export function renderAcknowledgementBody(
-  bodyHtml: string,
+export function renderAcknowledgementPlainText(
+  bodyText: string,
   submitterName?: string | null,
 ): string {
   const trimmedName = submitterName?.trim();
 
   if (trimmedName) {
-    return bodyHtml.replaceAll("{{name}}", escapeHtml(trimmedName));
+    return bodyText.replaceAll("{{name}}", trimmedName);
   }
 
-  return bodyHtml
+  return bodyText
     .replaceAll(/Hi \{\{name\}\},/g, "Hi,")
     .replaceAll(/Hi \{\{name\}\}/g, "Hi")
     .replaceAll("{{name}}", "");
