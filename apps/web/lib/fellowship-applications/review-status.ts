@@ -20,6 +20,18 @@ export const FELLOWSHIP_APPLICATION_REVIEW_STATUS_LABELS: Record<
   waitlisted: "Waitlisted",
 };
 
+/** Maps each review status to its editable auto-response email template. */
+export const FELLOWSHIP_APPLICATION_STATUS_EMAIL_TYPES = {
+  pending: "fellowship-application-pending",
+  under_review: "fellowship-application-under-review",
+  accepted: "fellowship-application-accepted",
+  rejected: "fellowship-application-rejected",
+  waitlisted: "fellowship-application-waitlisted",
+} as const satisfies Record<
+  FellowshipApplicationReviewStatus,
+  import("@/lib/form-acknowledgements/types").FormAcknowledgementType
+>;
+
 export function isFellowshipApplicationReviewStatus(
   value: unknown,
 ): value is FellowshipApplicationReviewStatus {

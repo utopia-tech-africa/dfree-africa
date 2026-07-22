@@ -62,7 +62,11 @@ export function ReviewStatusControl({
       setStatus(result.reviewStatus);
       setSavedStatus(result.reviewStatus);
       setLastReviewedAt(result.reviewedAt);
-      setMessage("Review status updated.");
+      setMessage(
+        result.emailSent
+          ? "Review status updated and applicant notified by email."
+          : "Review status updated. Applicant email was not sent (check SES / EMAIL_FROM).",
+      );
       router.refresh();
     });
   };
@@ -75,7 +79,8 @@ export function ReviewStatusControl({
         </h2>
         <p className="mt-1 text-sm text-neutral-700">
           Move this application through pending, under review, accepted,
-          rejected, or waitlisted.
+          rejected, or waitlisted. Changing status emails the applicant using
+          the matching template under Auto-responses.
         </p>
       </div>
 
