@@ -13,6 +13,7 @@ import {
   eventBySlugQuery,
 } from "./queries/events";
 import type { LocaleForTranslation } from "./news";
+import { getExternalUrl, isExternalUrl } from "@/lib/utils";
 
 export type EventForUI = {
   _id: string;
@@ -73,11 +74,17 @@ type SanityEventDetail = SanityEvent & {
 function resolveEventLink(
   event: Pick<SanityEvent, "slug" | "link" | "linkToDetailsPage">,
 ): string {
+  const externalLink = event.link?.trim();
+
+  if (externalLink && isExternalUrl(externalLink)) {
+    return getExternalUrl(externalLink);
+  }
+
   if (event.linkToDetailsPage && event.slug) {
     return `/events/${event.slug}`;
   }
 
-  return event.link || "/events";
+  return externalLink || "/events";
 }
 
 function mapEventToUI(event: SanityEvent): EventForUI {
