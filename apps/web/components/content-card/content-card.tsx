@@ -9,6 +9,7 @@ import {
   formatEventDateLong,
   parseEventDateOverlay,
 } from "@/lib/format-event-date";
+import { getExternalUrl, isExternalUrl } from "@/lib/utils";
 
 export interface ContentCardProps {
   variant?: "default" | "event";
@@ -39,10 +40,10 @@ export const ContentCard = ({
   const badgeLabel = [category, tag].filter(Boolean).join(" | ");
   const dateOverlay = eventDate ? parseEventDateOverlay(eventDate) : undefined;
   const dateLabel = eventDate ? formatEventDateLong(eventDate) : undefined;
-  const isExternalLink = /^https?:\/\//i.test(link);
+  const externalHref = isExternalUrl(link) ? getExternalUrl(link) : null;
 
   const ctaContent = (
-    <span className="inline-flex items-center gap-2 font-semibold text-primary-600 hover:underline">
+    <span className="inline-flex items-center gap-2 font-semibold text-primary-600 group-hover:underline">
       {ctaLabel ?? "View event"}
       <ChevronRight size={16} />
     </span>
@@ -64,8 +65,11 @@ export const ContentCard = ({
     </div>
   );
 
-  return (
-    <div className="group flex flex-col h-full rounded-[8px] border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-all overflow-hidden">
+  const cardClassName =
+    "group flex flex-col h-full rounded-[8px] border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-all overflow-hidden";
+
+  const cardContent = (
+    <>
       {/* IMAGE */}
       <div className="relative">
         <Image
@@ -118,20 +122,28 @@ export const ContentCard = ({
             )}
           </div>
 
-          {isExternalLink ? (
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit"
-            >
-              {ctaContent}
-            </a>
-          ) : (
-            <Link href={link}>{ctaContent}</Link>
-          )}
+          <span className="inline-flex w-fit">{ctaContent}</span>
         </div>
       </div>
-    </div>
+    </>
+  );
+
+  if (externalHref) {
+    return (
+      <a
+        href={externalHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cardClassName}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={link} className={cardClassName}>
+      {cardContent}
+    </Link>
   );
 };
