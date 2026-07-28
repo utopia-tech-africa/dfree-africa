@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import { Montserrat, Poppins, Space_Grotesk } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { createMetadata } from "@/lib/seo";
 import { siteUrl } from "@/lib/site-url";
 import { GoogleAnalyticsPageviews } from "@/app/components/analytics/google-analytics-pageviews";
 import { ConsentGatedAnalytics } from "@/components/analytics/consent-gated-analytics";
 import { CookieConsent } from "@/components/cookie-consent/cookie-consent";
+import { NextIntlProvider } from "@/components/providers/next-intl-provider";
 import { OrganizationJsonLd } from "@/components/structured-data/organization-json-ld";
 
 const montserrat = Montserrat({
@@ -48,12 +49,13 @@ export default async function RootLayout({
       <body
         className={`${montserrat.variable} ${poppins.variable} ${spaceGrotesk.variable} font-poppins antialiased overflow-x-hidden`}
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlProvider messages={messages}>
           <ConsentGatedAnalytics />
           <GoogleAnalyticsPageviews />
+          <Analytics />
           {children}
           <CookieConsent />
-        </NextIntlClientProvider>
+        </NextIntlProvider>
       </body>
     </html>
   );
