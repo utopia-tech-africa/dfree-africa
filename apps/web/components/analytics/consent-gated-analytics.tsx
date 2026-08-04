@@ -10,7 +10,7 @@ import {
 
 const GTM_ID = "GTM-PHZNQZB";
 const GA_MEASUREMENT_ID = "G-TLZZFHYGVW";
-const SMARTLOOK_KEY = "55d5f25e7de0dc6ba8a0de4e034fbf4ed60af631";
+const HOTJAR_SCRIPT_URL = "https://t.contentsquare.net/uxa/4ba5b6ef3704f.js";
 
 export function ConsentGatedAnalytics() {
   const [consent, setConsent] = useState<CookieConsentValue | null>(null);
@@ -48,14 +48,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}');`}
       </Script>
-      <Script id="smartlook-script" strategy="afterInteractive">
-        {`window.smartlook||(function(d) {
-  var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-  var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-  c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
-})(document);
-smartlook('init', '${SMARTLOOK_KEY}', { region: 'eu' });`}
-      </Script>
+      <Script src={HOTJAR_SCRIPT_URL} strategy="afterInteractive" />
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
