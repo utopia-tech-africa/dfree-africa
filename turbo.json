@@ -23,16 +23,7 @@
     "BOOTSTRAP_ADMIN_EMAIL",
     "BOOTSTRAP_ADMIN_PASSWORD",
     "BOOTSTRAP_ADMIN_NAME",
-    "NODE_ENV",
-    "NEXT_RUNTIME",
-    "NEXT_PUBLIC_SENTRY_DSN",
-    "SENTRY_DSN",
-    "SENTRY_ORG",
-    "SENTRY_PROJECT",
-    "SENTRY_AUTH_TOKEN",
-    "VERCEL_ENV",
-    "NEXT_PUBLIC_VERCEL_ENV",
-    "CI"
+    "NODE_ENV"
   ],
   "tasks": {
     "build": {
