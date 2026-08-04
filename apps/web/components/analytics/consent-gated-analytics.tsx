@@ -10,6 +10,7 @@ import {
 
 const GTM_ID = "GTM-PHZNQZB";
 const GA_MEASUREMENT_ID = "G-TLZZFHYGVW";
+const HOTJAR_SCRIPT_URL = "https://t.contentsquare.net/uxa/4ba5b6ef3704f.js";
 
 export function ConsentGatedAnalytics() {
   const [consent, setConsent] = useState<CookieConsentValue | null>(null);
@@ -47,6 +48,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}');`}
       </Script>
+      <Script src={HOTJAR_SCRIPT_URL} strategy="afterInteractive" />
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
