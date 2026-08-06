@@ -21,7 +21,7 @@ const LOCALE_NAMES: Record<Locale, string> = {
 };
 
 const LOCALES = routing.locales as readonly Locale[];
-const DISPLAY_LOCALES = ["en", "es", "fr"].filter((loc): loc is Locale =>
+const DISPLAY_LOCALES = ["en", "es" /*, "fr"*/].filter((loc): loc is Locale =>
   LOCALES.includes(loc as Locale),
 );
 const PENDING_KEY = "locale-switcher-pending";
