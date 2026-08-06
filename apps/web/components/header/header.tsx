@@ -247,7 +247,7 @@ export const Header = () => {
               target="_blank"
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
-                "font-normal",
+                "hidden font-normal md:inline-flex",
               )}
             >
               {tCommon("donate")}
@@ -296,6 +296,19 @@ export const Header = () => {
           </div>
 
           <nav className="flex flex-1 flex-col overflow-y-auto px-6 pb-6">
+            <Link
+              href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className={cn(
+                buttonVariants({ variant: "default", size: "lg" }),
+                "mb-4 w-full justify-center font-normal",
+              )}
+            >
+              {tCommon("donate")}
+              <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
+            </Link>
             {NAV_CONFIG.map((item, index) => {
               const isExpanded = expandedMobileSectionId === item.id;
               const label = t(item.labelKey);
