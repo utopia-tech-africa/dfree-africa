@@ -33,12 +33,36 @@ export const FinfestHero = async () => {
             {t("subtitle")}
           </p>
 
-          <div className="mt-6 flex justify-center">
-            <Link href="https://dfree.com/finfest/" target="_blank">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <Link href="https://dfree.xyz/FF2026" target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="lg" className="rounded-full px-8">
                 {t("registerNow")}
               </Button>
             </Link>
+            <Button
+              type="button"
+              variant="secondary"
+              size="lg"
+              className="rounded-full border border-primary-500 bg-transparent px-8 text-primary-500 hover:bg-primary-500/10"
+            >
+              {t("speakers")}
+            </Button>
+            <Button
+              type="button"
+              variant="secondary"
+              size="lg"
+              className="rounded-full border border-primary-500 bg-transparent px-8 text-primary-500 hover:bg-primary-500/10"
+            >
+              {t("agenda")}
+            </Button>
+            <Button
+              type="button"
+              variant="secondary"
+              size="lg"
+              className="rounded-full border border-primary-500 bg-transparent px-8 text-primary-500 hover:bg-primary-500/10"
+            >
+              {t("sponsors")}
+            </Button>
           </div>
         </div>
 
@@ -46,7 +70,7 @@ export const FinfestHero = async () => {
         <div className="mt-12 min-h-0 flex-1">
           <div className="relative w-full h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden rounded-lg">
             <Image
-              src="https://res.cloudinary.com/dan9camhs/image/upload/v1779365746/9d749ac2c7741dab19a68da6078c9e31eb9cfadd_kbsmzi.jpg"
+              src="https://res.cloudinary.com/dan9camhs/image/upload/v1786980759/FinfestHB_qjriws.jpg"
               alt={t("imageAlt")}
               priority
               fill

@@ -121,8 +121,8 @@
       "description": "DFREE® Africa - Empoderando comunidades con libertad financiera y desarrollo sostenible en el continente africano."
     },
     "finfest": {
-      "title": "FinFE$T",
-      "description": "FinFE$T es el festival financiero gratuito de DFREE® para todos. Aprende a ganar, gestionar y construir riqueza con profesionales en nuestro evento comunitario."
+      "title": "FinFe$t",
+      "description": "FinFe$t es el festival financiero gratuito de DFREE® para todos. Aprende a ganar, gestionar y construir riqueza con profesionales en nuestro evento comunitario."
     },
     "africa": {
       "title": "DFREE® África",
@@ -228,7 +228,7 @@
     "communityCampaigns": "Campañas Comunitarias",
     "dfreeAccessScholarships": "Becas De Acceso DFREE",
     "dfreeLeadershipInstitute": "Instituto de Liderazgo DFREE®",
-    "finfest": "FinFE$T",
+    "finfest": "FinFe$t",
     "booksMerch": "Libros Y Mercancía",
     "attendEvents": "Asiste A Eventos",
     "contactUs": "Contáctenos"
@@ -254,7 +254,7 @@
     "billionDollarChallenge": "Desafío Del Billón De Dólares",
     "dfreeAfrica": "DFREE® En África",
     "communityCampaigns": "Campañas Comunitarias",
-    "finfest": "FinFE$T",
+    "finfest": "FinFe$t",
     "dfreeLeadershipInstitute": "Instituto de Liderazgo DFREE®",
     "eventSponsorship": "Patrocinio de eventos",
     "partner": "Asociarse",
@@ -306,7 +306,7 @@
           "description": "La Fundación Global DFREE lidera campañas comunitarias que unen iglesias, grupos cívicos y organizaciones locales para ofrecer programas coordinados de empoderamiento financiero, fomentando el aprendizaje compartido, la responsabilidad y la celebración colectiva mediante lanzamientos estructurados, sesiones semanales y eventos de graduación."
         },
         "finfest": {
-          "name": "FinFE$T®: Donde la riqueza se encuentra con el bienestar",
+          "name": "FinFe$t®: Donde la riqueza se encuentra con el bienestar",
           "description": "FinFe$t® es el evento comunitario insignia de DFREE® que combina educación financiera, salud y bienestar a través de experiencias participativas para brindar a los participantes herramientas prácticas que impulsen el bienestar integral y la prosperidad a largo plazo. Es 100% gratuito."
         },
         "accessScholarships": {
@@ -491,16 +491,19 @@
   },
   "finfest": {
     "hero": {
-      "mainTitle": "FinFE$T, el festival financiero para todos",
+      "mainTitle": "FinFe$t, el festival financiero para todos",
       "subtitle": "Aprende a ganar, gestionar y construir riqueza con profesionales. Únete a nuestro evento comunitario gratuito diseñado para impulsar tu futuro financiero.",
       "registerNow": "Registro gratuito",
+      "speakers": "Ponentes",
+      "agenda": "Agenda",
+      "sponsors": "Patrocinadores",
       "eventDate": "13 y 14 de noviembre de 2026",
       "eventLocation": "Universidad Kean, Union, Nueva Jersey",
-      "imageAlt": "Festival financiero FinFest"
+      "imageAlt": "Festival financiero FinFe$t"
     },
     "objective": {
-      "title": "El objetivo de FinFE$T",
-      "description": "FinFE$T es un evento comunitario y una experiencia interactiva que ofrece herramientas y oportunidades reales en un entorno dinámico y estimulante. Estos profesionales han contribuido a generar debates sobre la libertad financiera y han compartido sus conocimientos en FinFE$T.",
+      "title": "El objetivo de FinFe$t",
+      "description": "FinFe$t es un evento comunitario y una experiencia interactiva que ofrece herramientas y oportunidades reales en un entorno dinámico y estimulante. Estos profesionales han contribuido a generar debates sobre la libertad financiera y han compartido sus conocimientos en FinFe$t.",
       "items": {
         "makeMoney": {
           "title": "Cómo ganar dinero",
@@ -518,12 +521,12 @@
     },
     "movement": {
       "title": "Movimiento",
-      "description": "FinFE$T te empodera para dar pasos concretos en el camino hacia la libertad financiera al proporcionarte contenido, currículo, capacitación y herramientas."
+      "description": "FinFe$t te empodera para dar pasos concretos en el camino hacia la libertad financiera al proporcionarte contenido, currículo, capacitación y herramientas."
     },
     "pastSpeakers": {
       "title": "Ponentes anteriores",
       "subtitle": "Aprende de los expertos",
-      "description": "Estos profesionales han moldeado las conversaciones sobre libertad financiera y compartido su conocimiento en FinFE$T."
+      "description": "Estos profesionales han moldeado las conversaciones sobre libertad financiera y compartido su conocimiento en FinFe$t."
     },
     "sponsors": {
       "title": "Nuestros patrocinadores",
@@ -534,7 +537,7 @@
     "testimonials": {
       "title": "Testimonios",
       "subtitle": "Lo que dicen nuestros participantes",
-      "description": "No te quedes con nuestra palabra; esto es lo que asistentes pasados dijeron sobre FinFE$T.",
+      "description": "No te quedes con nuestra palabra; esto es lo que asistentes pasados dijeron sobre FinFe$t.",
       "items": [
         {
           "type": "video",
@@ -572,17 +575,17 @@
       ]
     },
     "banner": {
-      "title": "Únete al próximo FinFE$T",
+      "title": "Únete al próximo FinFe$t",
       "description": "Tu camino hacia la libertad financiera comienza con una elección simple. Empieza a planificar tu futuro hoy.",
       "label": "Registrarse hoy"
     },
     "gallery": {
-      "title": "FinFE$T a través de los años",
+      "title": "FinFe$t a través de los años",
       "label": "Galería de fotos",
       "subtitle": "Nuestros recuerdos favoritos de eventos pasados"
     },
     "buildWealth": {
-      "title": "<primary>FinFE$T</primary> 2026",
+      "title": "<primary>FinFe$t</primary> 2026",
       "subtitle": "¡Recursos gratuitos para generar riqueza y proteger su salud!",
       "imageAlt": "dfree fest",
       "scheduleBtn": "Programa del evento",
@@ -590,9 +593,9 @@
       "partnerBtn": "Asóciese con DFREE®"
     },
     "experience": {
-      "title": "La Experiencia <primary>FinFE$T</primary>",
-      "paragraph1": "FinFE$T se centró en equipar a las familias con valiosos conocimientos financieros y estrategias prácticas mediante el suministro de más de 60 recursos gratuitos, incluyendo estaciones de exámenes de salud de RWJBarnabas Health (RWJBH), consultas financieras privadas por parte de profesionales financieros de Prudential, y asesoría de crédito por GreenPath.",
-      "paragraph2": "Presentaciones en vivo y sesiones de trabajo a cargo de expertos en la materia, así como libros y recursos de otros socios: soluciones en tiempo real bajo un mismo techo para apoyar el bienestar general de nuestra comunidad. Además, FinFE$T contó con una Feria de Empleo y una Feria de Recursos que conectó a los asistentes con oportunidades de trabajo y servicios esenciales para ayudarlos a prosperar."
+      "title": "La Experiencia <primary>FinFe$t</primary>",
+      "paragraph1": "FinFe$t se centró en equipar a las familias con valiosos conocimientos financieros y estrategias prácticas mediante el suministro de más de 60 recursos gratuitos, incluyendo estaciones de exámenes de salud de RWJBarnabas Health (RWJBH), consultas financieras privadas por parte de profesionales financieros de Prudential, y asesoría de crédito por GreenPath.",
+      "paragraph2": "Presentaciones en vivo y sesiones de trabajo a cargo de expertos en la materia, así como libros y recursos de otros socios: soluciones en tiempo real bajo un mismo techo para apoyar el bienestar general de nuestra comunidad. Además, FinFe$t contó con una Feria de Empleo y una Feria de Recursos que conectó a los asistentes con oportunidades de trabajo y servicios esenciales para ayudarlos a prosperar."
     }
   },
   "bdc": {

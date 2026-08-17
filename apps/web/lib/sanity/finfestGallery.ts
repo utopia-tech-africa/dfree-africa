@@ -89,7 +89,7 @@ export async function getFinfestGallery(): Promise<FinfestGalleryForUI | null> {
 
     years.push({
       year,
-      title: row.title ?? `Finfest ${year}`,
+      title: row.title ?? `FinFe$t ${year}`,
       thumbnailUrl: getYearCardThumbnailUrl(rawItems),
       items,
     });
@@ -98,7 +98,7 @@ export async function getFinfestGallery(): Promise<FinfestGalleryForUI | null> {
   if (years.length === 0) return null;
 
   return {
-    title: "FinFE$T over the years",
+    title: "FinFe$t over the years",
     years,
   };
 }
