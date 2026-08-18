@@ -121,8 +121,8 @@
       "description": "DFREE® Foundation — 501(c)(3) nonprofit financial education and debt-free programs for underserved US communities."
     },
     "finfest": {
-      "title": "FinFE$T",
-      "description": "FinFE$T is DFREE®'s free financial festival for everyone. Learn how to make, manage, and build wealth from industry professionals at our community event."
+      "title": "FinFe$t",
+      "description": "FinFe$t is DFREE®'s free financial festival for everyone. Learn how to make, manage, and build wealth from industry professionals at our community event."
     },
     "africa": {
       "title": "DFREE® Africa",
@@ -178,7 +178,7 @@
     },
     "events": {
       "title": "Events",
-      "description": "Upcoming DFREE® workshops, FinFE$T gatherings, and community financial wellness events across the United States."
+      "description": "Upcoming DFREE® workshops, FinFe$t gatherings, and community financial wellness events across the United States."
     },
     "event": {
       "title": "Event",
@@ -226,7 +226,7 @@
     "billionDollarChallenge": "Billion Dollar Challenge",
     "globalFoundationInAfrica": "DFREE® In Africa",
     "communityCampaigns": "Community Campaigns",
-    "finfest": "FinFE$T",
+    "finfest": "FinFe$t",
     "dfreeAccessScholarships": "DFREE® Access Scholarships",
     "dfreeLeadershipInstitute": "DFREE® Leadership Institute",
     "booksMerch": "Books & Merch",
@@ -254,7 +254,7 @@
     "billionDollarChallenge": "Billion Dollar Challenge",
     "dfreeAfrica": "DFREE® In Africa",
     "communityCampaigns": "Community Campaigns",
-    "finfest": "FinFE$T",
+    "finfest": "FinFe$t",
     "dfreeLeadershipInstitute": "DFREE® Leadership Institute",
     "eventSponsorship": "Event sponsorship",
     "partner": "Partner",
@@ -306,7 +306,7 @@
           "description": "The DFREE Global Foundation leads community-wide campaigns that unite churches, civic groups, and local organizations to deliver coordinated financial empowerment programs, fostering shared learning, accountability, and collective celebration through structured launches, weekly sessions, and culminating graduation events."
         },
         "finfest": {
-          "name": "FinFE$T®: Where Wealth Meets Wellness",
+          "name": "FinFe$t®: Where Wealth Meets Wellness",
           "description": "FinFe$t® is DFREE®'s flagship community event that blends financial education, health, and wellness through engaging experiences to equip participants with practical tools to drive holistic well-being and long-term prosperity. It’s 100% free."
         },
         "accessScholarships": {
@@ -491,16 +491,19 @@
   },
   "finfest": {
     "hero": {
-      "mainTitle": "FinFE$T financial festival for everyone",
+      "mainTitle": "FinFe$t financial festival for everyone",
       "subtitle": "Learn how to make, manage, and build wealth from industry professionals. Join our free community event designed to empower your financial future.",
       "registerNow": "Free Registration",
+      "speakers": "Speakers",
+      "agenda": "Agenda",
+      "sponsors": "Sponsors",
       "eventDate": " November 13-14, 2026",
       "eventLocation": "Kean University, Union New Jersey",
-      "imageAlt": "FinFest Financial Festival"
+      "imageAlt": "FinFe$t Financial Festival"
     },
     "objective": {
-      "title": "The FinFE$T Objective",
-      "description": " FinFE$T is a community-based event and interactive experience with real tools and opportunities delivered in an engaging and high-energy environment. These professionals have shaped conversations around financial freedom and shared their knowledge at FinFE$T.",
+      "title": "The FinFe$t Objective",
+      "description": " FinFe$t is a community-based event and interactive experience with real tools and opportunities delivered in an engaging and high-energy environment. These professionals have shaped conversations around financial freedom and shared their knowledge at FinFe$t.",
       "items": {
         "makeMoney": {
           "title": "How to make Money",
@@ -518,12 +521,12 @@
     },
     "movement": {
       "title": "Movement",
-      "description": "FinFE$T empowers you to take actionable steps towards the path to financial freedom by providing content, curriculum, training, and tools."
+      "description": "FinFe$t empowers you to take actionable steps towards the path to financial freedom by providing content, curriculum, training, and tools."
     },
     "pastSpeakers": {
       "title": "Past Speakers",
       "subtitle": "Learn from the experts",
-      "description": "These professionals have shaped conversations around financial freedom and shared their knowledge at FinFE$T"
+      "description": "These professionals have shaped conversations around financial freedom and shared their knowledge at FinFe$t"
     },
     "sponsors": {
       "title": "Our sponsors",
@@ -534,7 +537,7 @@
     "testimonials": {
       "title": "Testimonials",
       "subtitle": "What Our Clients Are Saying",
-      "description": "Don't just take our word for it; here's what past attendees said about FinFE$T.",
+      "description": "Don't just take our word for it; here's what past attendees said about FinFe$t.",
       "items": [
         {
           "type": "video",
@@ -572,17 +575,17 @@
       ]
     },
     "banner": {
-      "title": "Join us at the next FinFE$T",
+      "title": "Join us at the next FinFe$t",
       "description": "Your journey to financial freedom begins with a simple choice. Start planning your future today.",
       "label": "Register today"
     },
     "gallery": {
-      "title": "FinFE$T over the years",
+      "title": "FinFe$t over the years",
       "label": "Photo Gallery",
       "subtitle": "Our favourite memories from past events"
     },
     "buildWealth": {
-      "title": "<primary>FinFE$T</primary> 2026",
+      "title": "<primary>FinFe$t</primary> 2026",
       "subtitle": "Free Resources to Build Wealth and Protect Your Health!",
       "imageAlt": "dfree fest",
       "scheduleBtn": "Event Schedule",
@@ -590,9 +593,9 @@
       "partnerBtn": "Partner with DFREE®"
     },
     "experience": {
-      "title": "The <primary>FinFE$T</primary> Experience",
-      "paragraph1": "FinFE$T focused on equipping families with valuable financial insights and practical strategies by providing over 60 Free Resources including health screening stations by RWJBarnabas Health (RWJBH), private financial consultations by Prudential’s Financial professionals, credit counseling by GreenPath.",
-      "paragraph2": "Live presentations and breakout sessions by subject matter experts, as well as books and resources from several other partners – real time solutions all under one roof to support the overall well-being of our community. Additionally, FinFE$T featured a Job Fair and Resource Fair that connected attendees with employment opportunities and essential services to help them thrive."
+      "title": "The <primary>FinFe$t</primary> Experience",
+      "paragraph1": "FinFe$t focused on equipping families with valuable financial insights and practical strategies by providing over 60 Free Resources including health screening stations by RWJBarnabas Health (RWJBH), private financial consultations by Prudential’s Financial professionals, credit counseling by GreenPath.",
+      "paragraph2": "Live presentations and breakout sessions by subject matter experts, as well as books and resources from several other partners – real time solutions all under one roof to support the overall well-being of our community. Additionally, FinFe$t featured a Job Fair and Resource Fair that connected attendees with employment opportunities and essential services to help them thrive."
     }
   },
   "bdc": {
