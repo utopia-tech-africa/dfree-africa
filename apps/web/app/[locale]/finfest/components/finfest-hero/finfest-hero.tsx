@@ -33,9 +33,18 @@ export const FinfestHero = async () => {
             {t("subtitle")}
           </p>
 
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <Link href="https://dfree.xyz/FF2026" target="_blank" rel="noopener noreferrer">
-              <Button variant="default" size="lg" className="rounded-full px-8">
+          <div className="mt-6 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <Link
+              href="https://dfree.xyz/FF2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                variant="default"
+                size="lg"
+                className="w-full rounded-full px-8 sm:w-auto"
+              >
                 {t("registerNow")}
               </Button>
             </Link>
@@ -43,7 +52,7 @@ export const FinfestHero = async () => {
               type="button"
               variant="secondary"
               size="lg"
-              className="rounded-full border border-primary-500 bg-transparent px-8 text-primary-500 hover:bg-primary-500/10"
+              className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
             >
               {t("speakers")}
             </Button>
@@ -51,7 +60,7 @@ export const FinfestHero = async () => {
               type="button"
               variant="secondary"
               size="lg"
-              className="rounded-full border border-primary-500 bg-transparent px-8 text-primary-500 hover:bg-primary-500/10"
+              className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
             >
               {t("agenda")}
             </Button>
@@ -59,7 +68,7 @@ export const FinfestHero = async () => {
               type="button"
               variant="secondary"
               size="lg"
-              className="rounded-full border border-primary-500 bg-transparent px-8 text-primary-500 hover:bg-primary-500/10"
+              className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
             >
               {t("sponsors")}
             </Button>
