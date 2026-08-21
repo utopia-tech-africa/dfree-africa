@@ -872,7 +872,7 @@
       "subtitle": "Driving financial freedom and sustainable community development through education, skills training and economic programs.",
       "cta": {
         "label": "Support a project",
-        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+        "href": "https://www.zeffy.com/en-US/ticketing/donations-9"
       }
     },
     "travelWithUs": {
@@ -897,7 +897,7 @@
       "learnMore": "Learn more",
       "button": {
         "buttonText": "Support a community",
-        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+        "href": "https://www.zeffy.com/en-US/ticketing/donations-9"
       },
       "countries": {
         "ghana": {
@@ -935,7 +935,11 @@
       "title": "Let's create financial empowerment",
       "description": "By investing in education, clean water for a village, or skills training for the youth, you make a significant contribution to empowering whole generations to be independent and to have better quality of life.",
       "label": "Learn how you can support",
-      "ctaRef": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+      "ctaRef": "https://www.zeffy.com/en-US/ticketing/donations-9"
+    },
+    "supportAfrica": {
+      "label": "Support Africa",
+      "href": "https://www.zeffy.com/en-US/ticketing/donations-9"
     }
   },
   "ghana": {
