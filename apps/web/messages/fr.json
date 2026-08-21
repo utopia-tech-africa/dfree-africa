@@ -872,7 +872,7 @@
       "subtitle": "Favoriser la liberté financière et le développement communautaire durable par l'éducation, la formation et les programmes économiques.",
       "cta": {
         "label": "Soutenir un projet",
-        "href": "#"
+        "href": "https://www.zeffy.com/en-US/ticketing/donations-9"
       }
     },
     "travelWithUs": {
@@ -897,7 +897,7 @@
       "learnMore": "En savoir plus",
       "button": {
         "buttonText": "Soutenir une communauté",
-        "href": "https://www.zeffy.com/en-US/donation-form/general-donations-101"
+        "href": "https://www.zeffy.com/en-US/ticketing/donations-9"
       },
       "countries": {
         "ghana": {
@@ -935,7 +935,12 @@
     "banner": {
       "title": "Créons l'autonomie financière",
       "description": "En investissant dans l'éducation, l'eau potable pour un village, ou la formation des jeunes, vous apportez une contribution significative à l'autonomisation de générations entières pour qu'elles soient indépendantes et aient une meilleure qualité de vie.",
-      "label": "Apprenez comment vous pouvez soutenir"
+      "label": "Apprenez comment vous pouvez soutenir",
+      "ctaRef": "https://www.zeffy.com/en-US/ticketing/donations-9"
+    },
+    "supportAfrica": {
+      "label": "Soutenir l'Afrique",
+      "href": "https://www.zeffy.com/en-US/ticketing/donations-9"
     }
   },
   "ghana": {
