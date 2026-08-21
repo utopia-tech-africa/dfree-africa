@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Hero, PageInfo, SectionCard, SectionCardProps } from "./components";
 import { cn } from "@/lib/utils";
 import { FeaturedProjects } from "../../components";
+import { SupportAfricaCta } from "../components";
 import { getFeaturedProjects } from "@/lib/sanity";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -58,6 +59,8 @@ const SouthAfricaPage = async ({ params }: Props) => {
       />
 
       <PageInfo />
+
+      <SupportAfricaCta />
 
       {southAfricaPageData.map(
         (data: SectionCardProps[number], index: number) => {

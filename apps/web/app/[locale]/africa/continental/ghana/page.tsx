@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Hero, PageInfo, SectionCard, SectionCardProps } from "./components";
 import { cn } from "@/lib/utils";
 import { FeaturedProjects } from "../../components";
+import { SupportAfricaCta } from "../components";
 import { getFeaturedProjects } from "@/lib/sanity";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -63,6 +64,8 @@ const GhanaPage = async ({ params }: Props) => {
         descTitle={t("pageInfo.descTitle")}
         descText={t("pageInfo.descText")}
       />
+
+      <SupportAfricaCta />
 
       {ghanaPageData.map((data, index: number) => {
         const isLast = index % 2 === 0;
