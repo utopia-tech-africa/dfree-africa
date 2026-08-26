@@ -39,7 +39,7 @@ export const FinfestSponsors = async () => {
   ];
 
   return (
-    <section className="bg-white overflow-hidden">
+    <section id="sponsors" className="scroll-mt-20 bg-white overflow-hidden">
       <div className="flex flex-col items-center space-y-12">
         {/* Header */}
         <div className="flex flex-col items-center text-center space-y-2 relative w-full">
