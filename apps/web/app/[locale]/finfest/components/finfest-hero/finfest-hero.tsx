@@ -48,30 +48,16 @@ export const FinfestHero = async () => {
                 {t("registerNow")}
               </Button>
             </Link>
-            <Button
-              type="button"
-              variant="secondary"
-              size="lg"
-              className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
-            >
-              {t("speakers")}
-            </Button>
-            <Button
-              type="button"
-              variant="secondary"
-              size="lg"
-              className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
-            >
-              {t("agenda")}
-            </Button>
-            <Button
-              type="button"
-              variant="secondary"
-              size="lg"
-              className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
-            >
-              {t("sponsors")}
-            </Button>
+            <Link href="#sponsors" className="w-full sm:w-auto">
+              <Button
+                type="button"
+                variant="secondary"
+                size="lg"
+                className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
+              >
+                {t("sponsors")}
+              </Button>
+            </Link>
           </div>
         </div>
 
