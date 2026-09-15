@@ -1,6 +1,10 @@
 export const ZEFFY_API_BASE_URL = "https://api.zeffy.com";
 
-/** Default general-donation form used in the hero and site-wide CTAs. */
+/** Organization page used by nav and home-hero Support The Movement CTAs. */
+export const ZEFFY_ORGANIZATION_URL =
+  "https://www.zeffy.com/en-US/organizations/dfree-global-foundation-inc";
+
+/** Default general-donation form used on the donate page. */
 export const ZEFFY_GENERAL_DONATION_URL =
   "https://www.zeffy.com/en-US/donation-form/general-donations-101";
 

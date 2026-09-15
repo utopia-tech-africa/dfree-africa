@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { HomeHeroVideo } from "./home-hero-video";
+import { ZEFFY_ORGANIZATION_URL } from "@/lib/zeffy/constants";
 
 export const HomeHero = async () => {
   const t = await getTranslations("home.hero");
@@ -36,18 +37,19 @@ export const HomeHero = async () => {
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
               </Button>
             </Link>
-            <Link
-              href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button
+              asChild
+              size="lg"
+              className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-full bg-white/29 backdrop-blur-[10px] border border-white/20 text-white hover:bg-white/20 text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"
             >
-              <Button
-                size="lg"
-                className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5 rounded-full bg-white/29 backdrop-blur-[10px] border border-white/20 text-white hover:bg-white/20 text-xs sm:text-sm lg:text-base font-medium flex-1 sm:flex-none"
+              <a
+                href={ZEFFY_ORGANIZATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("donateNowCta")}
-              </Button>
-            </Link>
+              </a>
+            </Button>
           </div>
         </div>
 

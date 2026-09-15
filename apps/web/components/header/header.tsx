@@ -9,6 +9,7 @@ import ComponentLayout from "@/components/component-layout";
 import { DfreeLogo } from "@/assets/svg";
 import { Link } from "@/i18n/navigation";
 import { LocaleSwitcher } from "@/components/locale-switcher";
+import { ZEFFY_ORGANIZATION_URL } from "@/lib/zeffy/constants";
 
 type NavSubItemConfig = {
   labelKey: string;
@@ -243,8 +244,9 @@ export const Header = () => {
               <LocaleSwitcher variant="desktop" />
             </div>
             <Link
-              href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
+              href={ZEFFY_ORGANIZATION_URL}
               target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ variant: "default", size: "lg" }),
                 "hidden font-normal md:inline-flex",
@@ -297,7 +299,7 @@ export const Header = () => {
 
           <nav className="flex flex-1 flex-col overflow-y-auto px-6 pb-6">
             <Link
-              href="https://www.zeffy.com/en-US/donation-form/general-donations-101"
+              href={ZEFFY_ORGANIZATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
