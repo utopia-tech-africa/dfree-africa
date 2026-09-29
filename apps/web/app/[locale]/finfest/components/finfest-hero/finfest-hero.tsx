@@ -65,7 +65,7 @@ export const FinfestHero = async () => {
         <div className="mt-12 min-h-0 flex-1">
           <div className="relative w-full h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden rounded-lg">
             <Image
-              src="https://res.cloudinary.com/dan9camhs/image/upload/v1786980759/FinfestHB_qjriws.jpg"
+              src="https://res.cloudinary.com/dan9camhs/image/upload/v1790614157/FF26_Hero_Banner_2_jji2v8.jpg"
               alt={t("imageAlt")}
               priority
               fill
