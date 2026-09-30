@@ -8,9 +8,10 @@ import Image, { StaticImageData } from "next/image";
 interface BannerProps {
   backgroundImage: string | StaticImageData;
   title: string;
-  description: string;
+  description: React.ReactNode;
   label: string;
   className?: string;
+  contentClassName?: string;
   href: string;
   secondaryLabel?: string;
   secondaryHref?: string;
@@ -23,6 +24,7 @@ export const Banner: React.FC<BannerProps> = ({
   label,
   href,
   className,
+  contentClassName,
   secondaryLabel,
   secondaryHref,
 }) => {
@@ -43,14 +45,19 @@ export const Banner: React.FC<BannerProps> = ({
 
         {/* Content Container */}
         <div className="relative z-10 h-full flex items-end sm:items-center justify-center sm:justify-start p-6 sm:px-12">
-          <div className="w-full sm:w-1/2 sm:h-full text-white text-left flex flex-col gap-2 sm:gap-4">
+          <div
+            className={cn(
+              "w-full sm:w-1/2 sm:h-full text-white text-left flex flex-col gap-2 sm:gap-4",
+              contentClassName,
+            )}
+          >
             {/* Title */}
             <h1 className="font-bold font-montserrat text-[22px] sm:text-[46px] leading-tight">
               {title}
             </h1>
 
             {/* Description */}
-            <p className="text-[14px] sm:text-[18px] text-white/90 leading-5  sm:leading-6 sm:font-medium tracking-wide">
+            <p className="whitespace-pre-line text-[14px] sm:text-[18px] text-white/90 leading-5  sm:leading-6 sm:font-medium tracking-wide">
               {description}
             </p>
 
