@@ -62,7 +62,7 @@ export function FinfestBuildWealthVideo() {
   };
 
   return (
-    <div className="group relative flex aspect-video w-full overflow-hidden rounded-2xl bg-neutral-900 md:aspect-2.5/1">
+    <div className="group relative flex aspect-video w-full overflow-hidden rounded-2xl bg-neutral-900 md:aspect-2/1">
       <video
         ref={videoRef}
         src={BUILD_WEALTH_VIDEO_SRC}
