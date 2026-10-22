@@ -278,6 +278,10 @@
       "pauseVideo": "Mettre la vidéo en pause",
       "playVideo": "Lire la vidéo"
     },
+    "finfestVignette": {
+      "imageAlt": "Découvrez FinFe$t. Le thème de cette année, AI 4 U$, les 13 et 14 novembre à l'Université Kean, Union, NJ. Inscrivez-vous aujourd'hui.",
+      "close": "Fermer"
+    },
     "whoWeAre": {
       "title": "Qui nous sommes",
       "introHighlight": "DFREE® Global Foundation, Inc.",
@@ -493,7 +497,10 @@
     "hero": {
       "mainTitle": "FinFe$t, le festival financier pour tous",
       "subtitle": "Apprenez à gagner, gérer et construire votre patrimoine avec des professionnels. Rejoignez notre événement communautaire gratuit conçu pour renforcer votre avenir financier.",
-      "registerNow": "INSCRIPTION GRATUITE",
+      "registerNow": "INSCRIPTION",
+      "speakers": "Conférenciers",
+      "agenda": "Programme",
+      "hotel": "Hôtel",
       "sponsors": "Sponsors",
       "eventDate": "13-14 novembre 2026",
       "eventLocation": "Université Kean, Union, NJ",
