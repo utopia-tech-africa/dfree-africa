@@ -43,6 +43,7 @@ const NAV_CONFIG: NavItemConfig[] = [
     labelKey: "ourPillars",
     href: "#",
     subItems: [
+      { labelKey: "finfest", href: "/finfest", width: "w-[70px]" },
       {
         labelKey: "billionDollarChallenge",
         href: "/billion-dollar-challenge",
@@ -58,7 +59,6 @@ const NAV_CONFIG: NavItemConfig[] = [
         href: "/community-campaigns",
         width: "w-[120px]",
       },
-      { labelKey: "finfest", href: "/finfest", width: "w-[70px]" },
       {
         labelKey: "dfreeLeadershipInstitute",
         href: "/leadership-institute",

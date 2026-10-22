@@ -10,6 +10,7 @@ import { OurImpact } from "../components/our-impact";
 import { FeaturedEvents } from "../components/events";
 import Store from "../components/store";
 import { FeaturedNews } from "../components/news";
+import { FinfestVignette } from "../components/finfest-vignette/finfest-vignette";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const Home = () => {
   return (
     <>
+      <FinfestVignette />
       <div className="grid min-h-dvh">
         <HomeHero />
         <WhoWeAre />
