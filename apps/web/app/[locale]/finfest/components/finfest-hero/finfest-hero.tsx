@@ -34,38 +34,40 @@ export const FinfestHero = async () => {
           </p>
 
           <div className="mt-6 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-            <Link
-              href="https://dfree.xyz/FF2026"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button
-                variant="default"
-                size="lg"
-                className="w-full rounded-full px-8 sm:w-auto"
-              >
-                {t("registerNow")}
-              </Button>
-            </Link>
             {(
               [
                 {
                   href: "https://whova.com/embedded/speakers/XsVSzIBghFQk0QxdXfdm7PHCpD7xPtM-D7xVxokoEmQ%3D/?utc_source=ems",
                   label: t("speakers"),
                   external: true,
+                  buttonVariant: "secondary",
                 },
                 {
                   href: "https://whova.com/embedded/event/TTaQgapraankzJFUOFFNTNUIXoEBqx%40Xg%40lbf6DNP3k%3D/?utc_source=ems",
                   label: t("agenda"),
                   external: true,
+                  buttonVariant: "secondary",
                 },
+                {
+                  href: "https://dfree.xyz/FF2026",
+                  label: t("registerNow"),
+                  external: true,
+                  buttonVariant: "default",
+                },
+               
+               
                 {
                   href: "https://www.marriott.com/en-gb/event-reservations/reservation-link.mi?id=1792445997733&key=GRP&app=resvlink&_branch_match_id=1628888251607145530&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7LPTLE1NLc0MjExtbQ0Nzc2VstOrbR1DwpQSywosAWpysnMy1arK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQCcDSu8YQAAAA%3D%3D",
                   label: t("hotel"),
                   external: true,
+                  buttonVariant: "secondary",
                 },
-                { href: "#sponsors", label: t("sponsors"), external: false },
+                {
+                  href: "#sponsors",
+                  label: t("sponsors"),
+                  external: false,
+                  buttonVariant: "secondary",
+                },
               ] as const
             ).map((item) => (
               <Link
@@ -78,9 +80,13 @@ export const FinfestHero = async () => {
               >
                 <Button
                   type="button"
-                  variant="secondary"
+                  variant={item.buttonVariant}
                   size="lg"
-                  className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
+                  className={
+                    item.buttonVariant === "default"
+                      ? "w-full rounded-full px-8 sm:w-auto"
+                      : "w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
+                  }
                 >
                   {item.label}
                 </Button>
