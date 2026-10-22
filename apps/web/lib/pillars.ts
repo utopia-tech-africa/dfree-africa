@@ -1,10 +1,10 @@
 import type { StaticImageData } from "next/image";
 
 export const PILLAR_KEYS = [
+  "finfest",
   "billionDollarChallenge",
   "dfreeAfrica",
   "communityCampaigns",
-  "finfest",
   "accessScholarships",
 ] as const;
 

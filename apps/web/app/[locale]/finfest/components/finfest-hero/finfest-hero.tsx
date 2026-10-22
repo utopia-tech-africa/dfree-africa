@@ -48,16 +48,44 @@ export const FinfestHero = async () => {
                 {t("registerNow")}
               </Button>
             </Link>
-            <Link href="#sponsors" className="w-full sm:w-auto">
-              <Button
-                type="button"
-                variant="secondary"
-                size="lg"
-                className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
+            {(
+              [
+                {
+                  href: "https://whova.com/embedded/speakers/XsVSzIBghFQk0QxdXfdm7PHCpD7xPtM-D7xVxokoEmQ%3D/?utc_source=ems",
+                  label: t("speakers"),
+                  external: true,
+                },
+                {
+                  href: "https://whova.com/embedded/event/TTaQgapraankzJFUOFFNTNUIXoEBqx%40Xg%40lbf6DNP3k%3D/?utc_source=ems",
+                  label: t("agenda"),
+                  external: true,
+                },
+                {
+                  href: "https://www.marriott.com/en-gb/event-reservations/reservation-link.mi?id=1792445997733&key=GRP&app=resvlink&_branch_match_id=1628888251607145530&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7LPTLE1NLc0MjExtbQ0Nzc2VstOrbR1DwpQSywosAWpysnMy1arK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQCcDSu8YQAAAA%3D%3D",
+                  label: t("hotel"),
+                  external: true,
+                },
+                { href: "#sponsors", label: t("sponsors"), external: false },
+              ] as const
+            ).map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="w-full sm:w-auto"
+                {...(item.external
+                  ? { target: "_blank" as const, rel: "noopener noreferrer" }
+                  : {})}
               >
-                {t("sponsors")}
-              </Button>
-            </Link>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  size="lg"
+                  className="w-full rounded-full border border-primary-500 bg-white px-8 text-primary-500 hover:bg-primary-500/10 sm:w-auto"
+                >
+                  {item.label}
+                </Button>
+              </Link>
+            ))}
           </div>
         </div>
 
