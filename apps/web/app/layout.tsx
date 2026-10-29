@@ -8,6 +8,10 @@ import { createMetadata } from "@/lib/seo";
 import { siteUrl } from "@/lib/site-url";
 import { GoogleAnalyticsPageviews } from "@/app/components/analytics/google-analytics-pageviews";
 import { ConsentGatedAnalytics } from "@/components/analytics/consent-gated-analytics";
+import {
+  GoogleTagManagerBody,
+  GoogleTagManagerHead,
+} from "@/components/analytics/google-tag-manager";
 import { CookieConsent } from "@/components/cookie-consent/cookie-consent";
 import { OrganizationJsonLd } from "@/components/structured-data/organization-json-ld";
 
@@ -42,6 +46,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GoogleTagManagerHead />
         <link
           rel="preconnect"
           href="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev"
@@ -50,11 +55,14 @@ export default async function RootLayout({
           rel="dns-prefetch"
           href="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev"
         />
+        {/* <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" /> */}
         <OrganizationJsonLd />
       </head>
       <body
         className={`${montserrat.variable} ${poppins.variable} ${spaceGrotesk.variable} font-poppins antialiased overflow-x-hidden`}
       >
+        <GoogleTagManagerBody />
         <NextIntlClientProvider messages={messages}>
           <ConsentGatedAnalytics />
           <Suspense fallback={null}>

@@ -97,7 +97,7 @@ export const HomeHero = async () => {
 
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-10">
               <Link
-                href="https://store.dfree.com/"
+                href="https://dfree.xyz/FF2026"
                 target="_blank"
                 rel="noopener noreferrer"
               >
