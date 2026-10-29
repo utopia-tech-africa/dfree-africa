@@ -52,7 +52,7 @@ export const CampaignsImpact = async () => {
           <div className="relative lg:col-span-3 w-full aspect-4/3 lg:aspect-auto lg:h-auto rounded-lg overflow-hidden">
             <Image
               src={
-                "https://res.cloudinary.com/dan9camhs/image/upload/v1773226697/71042cb3-075a-40e4-a352-b9807e51561a.webp"
+                "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/71042cb3-075a-40e4-a352-b9807e51561a.webp"
               }
               alt={t("imageAlt")}
               fill

@@ -47,8 +47,16 @@ export default async function RootLayout({
     <html lang="en">
       <head>
         <GoogleTagManagerHead />
-        <link rel="preconnect" href="https://res.cloudinary.com" />
-        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link
+          rel="preconnect"
+          href="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev"
+        />
+        {/* <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" /> */}
         <OrganizationJsonLd />
       </head>
       <body

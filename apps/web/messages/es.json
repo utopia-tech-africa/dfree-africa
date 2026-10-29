@@ -271,8 +271,8 @@
       "subtitle": "Empodérate con herramientas prácticas y estrategias impulsadas por la comunidad. Transforma tu futuro económico mediante educación, apoyo y acción colectiva.",
       "discoverMoreCta": "Descubrir más",
       "donateNowCta": "Apoya el Movimiento",
-      "freshOffThePress": "RECIÉN PUBLICADO",
-      "buyNowCta": "Comprar ahora",
+      "freshOffThePress": "APRENDE IA PARA EL USO DIARIO",
+      "buyNowCta": "REGISTRO GRATUITO",
       "bookAlt": "Portada del libro DFREE Say Yes to No Debt",
       "videoLabel": "Video de fondo del movimiento de libertad financiera DFREE",
       "pauseVideo": "Pausar video",
@@ -405,12 +405,12 @@
         "subtitle": "Junta Directiva",
         "members": [
           {
-            "name": "DeForrest B. Soaries, Jr.",
-            "role": "Fundador y CEO, CEO en Strategic Global Foundation, Inc., CEO de Corporate Connections, Inc."
+            "name": "DeForest B. Soaries, Jr.",
+            "role": "Presidente"
           },
           {
             "name": "Vaughn McKoy",
-            "role": "Fundador y director, litigios comerciales, indigentes y apelaciones, McKoy & Smith LLP"
+            "role": "Vicepresidente"
           },
           {
             "name": "Martin Soaries",
@@ -418,7 +418,7 @@
           },
           {
             "name": "Adanna Davis",
-            "role": "Fundadora de Brand Revolutions y estrategia en BizIntl, Moyers Segale"
+            "role": "Secretaria"
           },
           {
             "name": "Menia Dunn-Lee",
@@ -445,8 +445,8 @@
             "role": "Pastor principal, Emmanuel MAC"
           },
           {
-            "name": "Tracey Wright-Coombs",
-            "role": "Gerente de al., CAAPC"
+            "name": "Tracey Wingo Campbell",
+            "role": "Tesorera"
           },
           {
             "name": "Rev. Dr. Danielle L. Brown",
@@ -461,26 +461,6 @@
             "role": "Exvicepresidente, OTA / Redevelopment Authority"
           }
         ],
-        "staff": {
-          "title": "Personal",
-          "members": [
-            {
-              "name": "DeForrest B. Soaries, Jr.",
-              "role": "Fundador y CEO",
-              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292469/ImageWithFallback_r70ogm.png"
-            },
-            {
-              "name": "Rev. Trevor Hyde",
-              "role": "Director Ejecutivo",
-              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292491/ImageWithFallback_1_tsewff.png"
-            },
-            {
-              "name": "Rev. Shaunda Sutton",
-              "role": "Enlace de Zeta Phi Beta y Anfitriona de M&E",
-              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292507/ImageWithFallback_2_uwqs13.png"
-            }
-          ]
-        },
         "filings": {
           "title": "Declaraciones",
           "description": "Nuestras declaraciones 990 y registros financieros completos están disponibles a través de GuideStar, donde mantenemos total transparencia como una organización sin fines de lucro certificada.",

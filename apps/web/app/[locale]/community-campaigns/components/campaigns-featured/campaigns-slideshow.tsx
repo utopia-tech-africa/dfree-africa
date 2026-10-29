@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const IMAGES = [
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1778764535/Featured_Campaigns_image_2_vnivex.jpg",
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1778764536/Featured_Campaigns_image_4_c9vaip.jpg",
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1778764535/Featured_Campaigns_image_1_xrrpcr.jpg",
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1778764534/Featured_Campaigns_image_3_ag8de4.jpg",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/Featured_Campaigns_image_2_vnivex.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/Featured_Campaigns_image_4_c9vaip.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/Featured_Campaigns_image_1_xrrpcr.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/Featured_Campaigns_image_3_ag8de4.webp",
 ];
 
 interface CampaignsSlideshowProps {

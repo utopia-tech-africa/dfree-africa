@@ -271,8 +271,8 @@
       "subtitle": "Empower yourself with practical tools and community-driven strategies. Transform your economic future through education, support, and collective action.",
       "discoverMoreCta": "Discover more",
       "donateNowCta": "Support the Movement",
-      "freshOffThePress": "HOT OFF THE PRESS",
-      "buyNowCta": "Buy now",
+      "freshOffThePress": "LEARN AI FOR EVERY DAY USE",
+      "buyNowCta": "FREE REGISTRATION",
       "bookAlt": "DFREE Say Yes to No Debt book cover",
       "videoLabel": "Background video of the DFREE financial freedom movement",
       "pauseVideo": "Pause video",
@@ -406,12 +406,12 @@
       "subtitle": "Board of Directors",
       "members": [
         {
-          "name": "DeForrest B. Soaries, Jr.",
-          "role": "Founder & CEO, CEO at Strategic Global Foundation, Inc., CEO of Corporate Connections, Inc."
+          "name": "DeForest B. Soaries, Jr.",
+          "role": "Chair"
         },
         {
           "name": "Vaughn McKoy",
-          "role": "Founder & Principal, Commercial Litigation, Indigent & Appeal, McKoy & Smith LLP"
+          "role": "Vice Chair"
         },
         {
           "name": "Martin Soaries",
@@ -419,7 +419,7 @@
         },
         {
           "name": "Adanna Davis",
-          "role": "Founder of Brand Revolutions & Strategy at BizIntl, Moyers Segale"
+          "role": "Secretary"
         },
         {
           "name": "Menia Dunn-Lee",
@@ -446,8 +446,8 @@
           "role": "Senior Pastor, Emmanuel MAC"
         },
         {
-          "name": "Tracey Wright-Coombs",
-          "role": "Manager of al., CAAPC"
+          "name": "Tracey Wingo Campbell",
+          "role": "Treasurer"
         },
         {
           "name": "Rev. Dr. Danielle L. Brown",
@@ -462,26 +462,6 @@
           "role": "Former VP, OTA / Redevelopment Authority"
         }
       ],
-      "staff": {
-        "title": "Staff",
-        "members": [
-          {
-            "name": "DeForrest B. Soaries, Jr.",
-            "role": "Founder & CEO",
-            "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292469/ImageWithFallback_r70ogm.png"
-          },
-          {
-            "name": "Rev. Trevor Hyde",
-            "role": "Executive Director",
-            "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292491/ImageWithFallback_1_tsewff.png"
-          },
-          {
-            "name": "Rev. Shaunda Sutton",
-            "role": "Zeta Phi Beta Liaison & M&E Host",
-            "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292507/ImageWithFallback_2_uwqs13.png"
-          }
-        ]
-      },
       "filings": {
         "title": "Filings",
         "description": "Our 990 filings and complete financial records are available through GuideStar, where we maintain full transparency as a certified nonprofit.",

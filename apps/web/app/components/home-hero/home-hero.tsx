@@ -73,7 +73,7 @@ export const HomeHero = async () => {
               <text
                 fill="#ffffff"
                 fontSize="20"
-                letterSpacing="4"
+                letterSpacing="0.5"
                 fontWeight="700"
                 fontFamily="montserrat"
               >
@@ -85,7 +85,7 @@ export const HomeHero = async () => {
 
             <div className="relative z-10 mt-8">
               <Image
-                src="https://res.cloudinary.com/dan9camhs/image/upload/v1773225508/22c51328-5a60-4b0b-9281-53025c2bc8b8.webp"
+                src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/FinFe%24t_working_flyer-1.png"
                 width={108}
                 height={140}
                 alt={t("bookAlt")}
@@ -97,7 +97,7 @@ export const HomeHero = async () => {
 
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-10">
               <Link
-                href="https://store.dfree.com/"
+                href="https://dfree.xyz/FF2026"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -1,5 +1,5 @@
 import { CampaignsCtaPattern } from "@/assets/svg/campaigns-cta-pattern";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
@@ -42,7 +42,7 @@ export const CampaignsCta = async () => {
             <div className="relative w-full aspect-640/506 lg:aspect-auto lg:h-full">
               <Image
                 src={
-                  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226832/45eb08a3-7898-428e-a400-f2e2989808e7.webp"
+                  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/45eb08a3-7898-428e-a400-f2e2989808e7.webp"
                 }
                 alt="Community celebrating together"
                 fill

@@ -39,7 +39,7 @@ export async function AboutBdc() {
       <div className="w-full overflow-hidden">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1773227130/5a53b2d4-97ca-4e19-92ff-eeff3330a9db.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/5a53b2d4-97ca-4e19-92ff-eeff3330a9db.webp"
           }
           alt={t("imageAlt")}
           sizes="100vw"

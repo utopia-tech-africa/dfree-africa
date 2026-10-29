@@ -54,8 +54,7 @@ export const FinfestHero = async () => {
                   external: true,
                   buttonVariant: "default",
                 },
-               
-               
+
                 {
                   href: "https://www.marriott.com/en-gb/event-reservations/reservation-link.mi?id=1792445997733&key=GRP&app=resvlink&_branch_match_id=1628888251607145530&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7LPTLE1NLc0MjExtbQ0Nzc2VstOrbR1DwpQSywosAWpysnMy1arK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQCcDSu8YQAAAA%3D%3D",
                   label: t("hotel"),
@@ -99,7 +98,7 @@ export const FinfestHero = async () => {
         <div className="mt-12 min-h-0 flex-1">
           <div className="relative w-full h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden rounded-lg">
             <Image
-              src="https://res.cloudinary.com/dan9camhs/image/upload/v1790614157/FF26_Hero_Banner_2_jji2v8.jpg"
+              src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/FF26_Hero_Banner_2_jji2v8.webp"
               alt={t("imageAlt")}
               priority
               fill

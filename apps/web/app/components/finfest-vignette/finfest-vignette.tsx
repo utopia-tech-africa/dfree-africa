@@ -9,7 +9,7 @@ import { Link } from "@/i18n/navigation";
 const VIGNETTE_DELAY_MS = 2000;
 const VIGNETTE_SEEN_KEY = "dfree-finfest-vignette-seen";
 const VIGNETTE_IMAGE =
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1792663495/Image12_t7feyd.png";
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/Image12_t7feyd.webp";
 
 export function FinfestVignette() {
   const t = useTranslations("home.finfestVignette");

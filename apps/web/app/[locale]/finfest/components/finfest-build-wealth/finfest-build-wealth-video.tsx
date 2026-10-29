@@ -7,7 +7,7 @@ import { useInViewVideo } from "@/hooks/use-in-view-video";
 import { cn } from "@/lib/utils";
 
 const BUILD_WEALTH_VIDEO_SRC =
-  "https://res.cloudinary.com/dan9camhs/video/upload/v1791202194/FINFEST_KREDITVERSE_PROMO_FINAL_lfqtul.mp4";
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/videos/AI_Money__Your_Future__FinFet_2026_FREE_Event_in_NJ.mp4";
 
 export function FinfestBuildWealthVideo() {
   const t = useTranslations("home.testimonials");

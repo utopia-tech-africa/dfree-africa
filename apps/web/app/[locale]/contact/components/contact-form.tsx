@@ -13,7 +13,7 @@ export const ContactForm = () => {
       <div className="flex flex-col items-center justify-between h-full animate-in fade-in zoom-in-95 duration-300">
         <div className="relative w-full aspect-4/3 mx-auto overflow-hidden">
           <Image
-            src="https://res.cloudinary.com/dan9camhs/image/upload/v1781017217/defree_contact_t19mbd.gif"
+            src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/defree_contact_gif.gif"
             alt="Send us a message"
             fill
             className="object-contain"

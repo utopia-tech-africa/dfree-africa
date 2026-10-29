@@ -12,17 +12,17 @@ const CORE_AREAS_ITEMS: ReadonlyArray<{
   {
     key: "pillar1",
     image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1779279443/wimluhufynfo5djqd60x_hlfs9o.webp",
+      "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/wimluhufynfo5djqd60x_hlfs9o.webp",
   },
   {
     key: "pillar2",
     image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1779279443/xgacevhbt3tejiwt0a84_hihs53.webp",
+      "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/xgacevhbt3tejiwt0a84_hihs53.webp",
   },
   {
     key: "pillar3",
     image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1779279440/agvf9dclwjgchaomujs0_ximn74.webp",
+      "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/agvf9dclwjgchaomujs0_ximn74.webp",
   },
 ];
 

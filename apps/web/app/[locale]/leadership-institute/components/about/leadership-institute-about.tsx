@@ -26,7 +26,7 @@ export async function LeadershipInstituteAbout() {
       <div className="relative w-full aspect-4/3 sm:aspect-video lg:aspect-16/10 lg:min-h-120 rounded-md overflow-hidden shadow-sm">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1779210304/7cbebd00fd933a4a6a399bcc0b80e00e722b4f72_ovv3e1.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/7cbebd00fd933a4a6a399bcc0b80e00e722b4f72_ovv3e1.webp"
           }
           alt={t("imageAlt")}
           fill

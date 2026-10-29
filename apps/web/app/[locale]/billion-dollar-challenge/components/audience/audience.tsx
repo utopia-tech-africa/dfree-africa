@@ -12,17 +12,17 @@ const AUDIENCE_ITEMS: ReadonlyArray<{
   {
     key: "solo",
     image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1773227325/b5c5a330-0e6a-4df9-bc29-8e8ba8161896.webp",
+      "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/b5c5a330-0e6a-4df9-bc29-8e8ba8161896.webp",
   },
   {
     key: "group",
     image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1773227411/image_qqjpk7.webp",
+      "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/image_qqjpk7.webp",
   },
   {
     key: "communities",
     image:
-      "https://res.cloudinary.com/dan9camhs/image/upload/v1773227517/image_1_o8rgbx.webp",
+      "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/image_1_o8rgbx.webp",
   },
 ];
 

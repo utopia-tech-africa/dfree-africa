@@ -12,29 +12,29 @@ export const FinfestSponsors = async () => {
   const sponsors = [
     {
       name: "Independence Realty Trust",
-      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238090/7ed995e5-39e3-45e5-be98-a40662f863ff.webp",
+      logo: "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/7ed995e5-39e3-45e5-be98-a40662f863ff.webp",
     },
 
     {
       name: "NJIDA",
-      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238298/f53b1159-3f54-4190-9f15-776464abe2da.webp",
+      logo: "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/f53b1159-3f54-4190-9f15-776464abe2da.webp",
     },
     {
       name: "Prudential",
-      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238234/d1570521-d65f-4a54-a455-12f3008bffff.webp",
+      logo: "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/d1570521-d65f-4a54-a455-12f3008bffff.webp",
     },
     {
       name: "Valley",
-      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238528/0546e2fb-6d47-4aa7-a155-23490c97d75f.webp",
+      logo: "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/0546e2fb-6d47-4aa7-a155-23490c97d75f.webp",
     },
     {
       name: "RWJBarnabas Health",
-      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773238376/41f22c93-268a-4c2b-9c77-f51339179b35.webp",
+      logo: "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/41f22c93-268a-4c2b-9c77-f51339179b35.webp",
     },
 
     {
       name: "Onity",
-      logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1773237529/76b925f2-45d4-4a87-9306-775dcf55f686.webp",
+      logo: "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/76b925f2-45d4-4a87-9306-775dcf55f686.webp",
     },
   ];
 

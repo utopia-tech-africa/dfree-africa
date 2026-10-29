@@ -15,7 +15,7 @@ export const Hero = async () => {
       <div className="absolute inset-0 md:hidden">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1773145601/e6308848-6b5b-424c-b9c0-de4f3d434460.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/e6308848-6b5b-424c-b9c0-de4f3d434460.webp"
           }
           alt=""
           fill
@@ -29,7 +29,7 @@ export const Hero = async () => {
       <div className="absolute inset-0 hidden md:block">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1773145296/598147d8-bd38-4ac1-9157-8c726a58017c.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/598147d8-bd38-4ac1-9157-8c726a58017c.webp"
           }
           alt=""
           fill
