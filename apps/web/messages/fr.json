@@ -271,8 +271,8 @@
       "subtitle": "Donnez-vous les moyens d'agir grâce à des outils pratiques et des stratégies portées par la communauté. Transformez votre avenir économique par l'éducation, le soutien et l'action collective.",
       "discoverMoreCta": "Découvrir plus",
       "donateNowCta": "Soutenez le Mouvement",
-      "freshOffThePress": "FRAÎCHEMENT PARU",
-      "buyNowCta": "Acheter maintenant",
+      "freshOffThePress": "APPRENEZ L'IA POUR UN USAGE QUOTIDIEN",
+      "buyNowCta": "INSCRIPTION GRATUITE",
       "bookAlt": "Couverture du livre DFREE Say Yes to No Debt",
       "videoLabel": "Vidéo d'arrière-plan du mouvement de liberté financière DFREE",
       "pauseVideo": "Mettre la vidéo en pause",
@@ -461,26 +461,6 @@
             "role": "Ancien vice-président, OTA / Redevelopment Authority"
           }
         ],
-        "staff": {
-          "title": "Personnel",
-          "members": [
-            {
-              "name": "DeForrest B. Soaries, Jr.",
-              "role": "Fondateur & CEO",
-              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292469/ImageWithFallback_r70ogm.png"
-            },
-            {
-              "name": "Rev. Trevor Hyde",
-              "role": "Directeur Général",
-              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292491/ImageWithFallback_1_tsewff.png"
-            },
-            {
-              "name": "Rev. Shaunda Sutton",
-              "role": "Liaison Zeta Phi Beta & Hôtesse M&E",
-              "image": "https://res.cloudinary.com/dan9camhs/image/upload/v1779292507/ImageWithFallback_2_uwqs13.png"
-            }
-          ]
-        },
         "filings": {
           "title": "Déclarations",
           "description": "Nos déclarations 990 et dossiers financiers complets sont disponibles via GuideStar, où nous maintenons une transparence totale en tant qu'organisation à but non lucratif certifiée.",

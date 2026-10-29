@@ -12,7 +12,7 @@ export async function BDCHero() {
       <div className="absolute inset-0">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1773227016/image_1_fsziuv.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/image_1_fsziuv.webp"
           }
           alt={t("imageAlt")}
           fill

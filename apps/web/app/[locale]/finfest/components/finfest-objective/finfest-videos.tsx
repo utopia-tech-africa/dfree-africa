@@ -94,11 +94,11 @@ const FinfestVideos = () => {
   return (
     <section className="flex flex-col md:flex-row gap-4 md:gap-10 w-full">
       <FinfestVideoPlayer
-        src="https://res.cloudinary.com/dan9camhs/video/upload/v1777898923/Video_-_FinFe_t_Prudential_Partner_Portia_bidjen.mp4"
+        src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/videos/Video%20RWJ%20Barnabas%20Health.mp4"
         autoPlayDefault={true}
       />
       <FinfestVideoPlayer
-        src="https://res.cloudinary.com/dan9camhs/video/upload/v1777899145/Video_RWJ_Barnabas_Health_k78x7e.mp4"
+        src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/videos/Video%20-%20FinFe%24t%2C%20Prudential%20Partner%20(Portia).mp4"
         autoPlayDefault={false}
       />
     </section>

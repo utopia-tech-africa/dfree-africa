@@ -5,10 +5,10 @@ import { ImpactStats } from "./impact-stats";
 // import { ImpactGlobe } from "./impact-globe";
 
 const IMPACT_IMAGES = [
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1781610142/826e0a2cb74de7510e70f82b4eb7669b64ebb062_v5flkz.jpg",
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1781610100/d459cafe882e628fc42b070b9047933c682bd474_ctc4v7.jpg",
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1781610204/d41ab9086b478d5c11c4145d1bcb90aa2bdc29b8_sarflv.jpg",
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1781610239/f3c95ad65f13f952d7bc83d25b713163c54b8111_xctcng.jpg",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/826e0a2cb74de7510e70f82b4eb7669b64ebb062_v5flkz.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/d459cafe882e628fc42b070b9047933c682bd474_ctc4v7.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/d41ab9086b478d5c11c4145d1bcb90aa2bdc29b8_sarflv.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/f3c95ad65f13f952d7bc83d25b713163c54b8111_xctcng.webp",
 ];
 
 export function OurImpact() {
@@ -20,7 +20,7 @@ export function OurImpact() {
       <div className="absolute top-0 -left-50 -z-10 md:w-[60%]">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
           }
           alt="bg pattern"
           className="object-left"

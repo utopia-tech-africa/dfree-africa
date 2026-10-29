@@ -11,10 +11,10 @@ const WHAT_WE_DO_ITEM_KEYS = [
 ] as const;
 
 const WHAT_WE_DO_IMAGES = [
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226259/image_ln68b0.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/image_ln68b0.webp",
 
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226394/image_qr08pn.webp",
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1773226487/image_idzdsd.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/image_qr08pn.webp",
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/image_idzdsd.webp",
 ] as const;
 
 export const CampaignsWhatWeDo = () => {

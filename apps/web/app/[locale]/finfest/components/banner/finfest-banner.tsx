@@ -6,7 +6,7 @@ export default async function FinfestBanner() {
   return (
     <Banner
       backgroundImage={
-        "https://res.cloudinary.com/dan9camhs/image/upload/v1790614285/FinFe_t_Banner_uzqdv1.png"
+        "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/FinFe_t_Banner_uzqdv1.webp"
       }
       title={t("title")}
       description={t.rich("description", {

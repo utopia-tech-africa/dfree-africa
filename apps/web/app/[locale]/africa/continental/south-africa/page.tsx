@@ -39,9 +39,9 @@ const SouthAfricaPage = async ({ params }: Props) => {
       video: {
         label: t("sections.challenges.videoLabel"),
         href: "https://drive.google.com/file/d/16DhkQHupkLPNWiAnOW2tis_VHyKFrKSI/preview",
-        // logo: "https://res.cloudinary.com/dan9camhs/image/upload/v1776345929/yt_logo_zarb2n.webp",
+        // logo: "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/yt_logo_zarb2n.webp",
         thumbnail:
-          "https://res.cloudinary.com/dan9camhs/image/upload/v1776346397/south_africa_yt_thumbnail_wd70qc.webp",
+          "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/south_africa_yt_thumbnail_vddacx.webp",
       },
     },
     {
@@ -54,7 +54,7 @@ const SouthAfricaPage = async ({ params }: Props) => {
     <div className="flex flex-col gap-5 w-full">
       <Hero
         bgImage={
-          "https://res.cloudinary.com/dan9camhs/image/upload/v1773146514/5c184ee3-66f3-4c20-8a5a-1e4f18f775f7.webp"
+          "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/5c184ee3-66f3-4c20-8a5a-1e4f18f775f7.webp"
         }
       />
 

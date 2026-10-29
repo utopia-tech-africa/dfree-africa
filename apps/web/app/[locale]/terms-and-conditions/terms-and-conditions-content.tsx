@@ -58,7 +58,7 @@ export async function TermsAndConditionsContent() {
     <section className="relative isolate w-full overflow-hidden bg-neutral-100 pb-16 md:pb-24">
       <div className="pointer-events-none absolute top-1/3 -left-50 z-0 w-full md:w-[60%]">
         <Image
-          src="https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
+          src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
           alt=""
           aria-hidden
           className="object-left"

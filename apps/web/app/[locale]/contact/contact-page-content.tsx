@@ -5,7 +5,7 @@ import ComponentLayout from "@/components/component-layout";
 import { ContactInfoMain, ContactNewsletter, ContactForm } from "./components";
 
 const imageUrl =
-  "https://res.cloudinary.com/dan9camhs/image/upload/v1776351125/031576e6e7fc7d974a347d2ef92814609b299f22_sdvdnm.webp";
+  "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/031576e6e7fc7d974a347d2ef92814609b299f22_sdvdnm.webp";
 
 export function ContactPageContent() {
   return (

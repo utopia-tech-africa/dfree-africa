@@ -46,7 +46,7 @@ export const SupportTheInstitute = async () => {
           {/* Image */}
           <div className="relative overflow-hidden rounded-lg min-h-58 sm:min-h-72 lg:min-h-105 h-full">
             <Image
-              src="https://res.cloudinary.com/dan9camhs/image/upload/v1779292426/72c20e7763ade68f84cd9a55ba4c079cdfa43c44_wxha1f.webp"
+              src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/72c20e7763ade68f84cd9a55ba4c079cdfa43c44_wxha1f.webp"
               alt={t("imageAlt")}
               fill
               priority

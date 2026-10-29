@@ -32,7 +32,7 @@ export const Filings = async () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="https://res.cloudinary.com/dan9camhs/image/upload/v1779293266/filings_image_logo_tuelip.png"
+              src="https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/filings_image_logo_tuelip.webp"
               alt={t("title")}
               fill
               sizes="128px"

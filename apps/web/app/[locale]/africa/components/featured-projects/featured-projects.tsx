@@ -39,7 +39,7 @@ export const FeaturedProjects = ({
           <div className="absolute -z-10 md:-left-10 w-full md:w-[60%]">
             <Image
               src={
-                "https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
+                "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
               }
               alt="bg pattern"
               className="object-left"

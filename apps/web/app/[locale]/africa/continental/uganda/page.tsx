@@ -49,7 +49,7 @@ const UgandaPage = async ({ params }: Props) => {
     <div className="flex flex-col gap-5 w-full">
       <Hero
         bgImage={
-          "https://res.cloudinary.com/dan9camhs/image/upload/v1776422905/Uganda_flag_uv1aee.webp"
+          "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/aff4a462-8fa5-4ef2-8a8b-bed650e90ca5.webp"
         }
       />
 

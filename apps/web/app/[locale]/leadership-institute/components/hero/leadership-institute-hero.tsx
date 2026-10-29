@@ -11,7 +11,7 @@ export async function LeadershipInstituteHero() {
       <div className="absolute inset-0 w-screen h-full">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1779208610/2f33799cdd21cb3fee9df9129592cc467e474777_draubv.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/2f33799cdd21cb3fee9df9129592cc467e474777_draubv.webp"
           }
           alt={t("imageAlt")}
           fill

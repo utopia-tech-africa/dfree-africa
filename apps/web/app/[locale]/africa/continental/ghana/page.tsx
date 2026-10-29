@@ -55,7 +55,7 @@ const GhanaPage = async ({ params }: Props) => {
     <div className="flex flex-col gap-5 w-full">
       <Hero
         bgImage={
-          "https://res.cloudinary.com/dan9camhs/image/upload/v1773145980/8c40374f-96b4-452c-801d-b20c258fa69f.webp"
+          "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/8c40374f-96b4-452c-801d-b20c258fa69f.webp"
         }
       />
 
