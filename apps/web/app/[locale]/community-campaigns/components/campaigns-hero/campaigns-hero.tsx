@@ -21,7 +21,7 @@ export const CampaignsHero = async () => {
       <div className="absolute inset-0">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1773147892/57b6d58e-b3d4-4a96-bb5d-58341b71c924.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/57b6d58e-b3d4-4a96-bb5d-58341b71c924.webp"
           }
           alt={t("imageAlt")}
           fill

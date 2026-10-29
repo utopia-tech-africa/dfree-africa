@@ -26,7 +26,7 @@ export async function DfreeFellow() {
       <div className="relative w-full aspect-4/3 sm:aspect-video lg:aspect-16/10 lg:min-h-95 rounded-md overflow-hidden shadow-sm">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1779277763/0f5ab251153a50209640cedb62e31ca5f1743b96_f5omzx.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/0f5ab251153a50209640cedb62e31ca5f1743b96_f5omzx.webp"
           }
           alt={t("imageAlt")}
           fill

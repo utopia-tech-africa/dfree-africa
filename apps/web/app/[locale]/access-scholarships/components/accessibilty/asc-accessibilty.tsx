@@ -20,7 +20,7 @@ export const ASCAccessibilty = async () => {
       <div className="absolute top-0 left-0 w-[500px] h-[500px] md:w-[700px] md:h-[700px] pointer-events-none select-none">
         <Image
           src={
-            "https://res.cloudinary.com/dan9camhs/image/upload/v1773224828/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
+            "https://pub-36311e041fc14d379b0a69461c1c2a10.r2.dev/images/6ea76738-7c0b-4a59-9ff9-5a2b3d706604.webp"
           }
           alt={t("patternAlt")}
           fill
